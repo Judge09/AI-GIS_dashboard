@@ -1,10 +1,13 @@
-# Normalize line endings; let git handle checkout per-platform.
+# Normalize line endings for source; let git handle checkout per-platform.
 * text=auto
 
-# Explicitly treat binary/model/data assets as binary (no EOL conversion, no diff)
+# Treat model/data assets as binary: no EOL conversion, no diff.
 *.keras binary
 *.pkl   binary
 *.npz   binary
 *.png   binary
 *.jpg   binary
-*.log   binary
+
+# Runtime data files: keep byte-for-byte, don't convert line endings.
+dashboard/data/honeypot_final.log binary
+dashboard/data/prepared/rf_train_v2.csv binary

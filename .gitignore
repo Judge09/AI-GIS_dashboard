@@ -23,12 +23,12 @@ dashboard/venv/
 .DS_Store
 Thumbs.db
 
-# ---- Large data artifacts (regenerable via scripts/, see README) ----
-# Trained models in dashboard/models/ ARE committed so the app runs after clone.
-dashboard/data/honeypot_final.log
+# ---- Large data artifacts (regenerable via scripts/, see dashboard/data/README.md) ----
+# Ignore all prepared splits and logs...
 dashboard/data/prepared/*.csv
 dashboard/data/prepared/*.npz
-
-# ---- Logs ----
 *.log
-!dashboard/data/prepared/split_manifest.json
+
+# ...but keep the two files the app needs at runtime:
+!dashboard/data/prepared/rf_train_v2.csv
+!dashboard/data/honeypot_final.log
