@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Dataset Browser — AI-GIS{% endblock %}
+{% block content %}
+<h1 class="page-title">Dataset browser</h1>
+<p class="page-sub">Sample rows straight from the generated honeypot log (40 of each class shown).</p>
+
+<h2 class="section-title">Malicious samples</h2>
+<div class="card">
+  <table>
+    <tr><th>Family</th><th>Method</th><th>URI</th><th>Body</th></tr>
+    {% for row in samples.malicious %}
+    <tr class="malicious">
+      <td>{{ row.attack_family }}</td>
+      <td>{{ row.method }}</td>
+      <td class="mono">{{ row.uri[:50] }}</td>
+      <td class="mono">{{ row.request_body[:50] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<h2 class="section-title">Benign samples</h2>
+<div class="card">
+  <table>
+    <tr><th>Method</th><th>URI</th><th>Body</th></tr>
+    {% for row in samples.benign %}
+    <tr class="benign">
+      <td>{{ row.method }}</td>
+      <td class="mono">{{ row.uri[:50] }}</td>
+      <td class="mono">{{ row.request_body[:50] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

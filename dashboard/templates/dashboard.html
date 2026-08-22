@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — AI-GIS{% endblock %}
+{% block content %}
+<h1 class="page-title">AI-GIS Detection Pipeline</h1>
+<p class="page-sub">Live dashboard for the trained RF v2 + LSTM + meta-learner stacked system.</p>
+
+<div class="grid-4">
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.total) }}</div><div class="l">Total entries</div></div>
+  <div class="card stat"><div class="n">1:1</div><div class="l">Malicious : benign</div></div>
+  <div class="card stat"><div class="n">1:1</div><div class="l">SQLi : XSS</div></div>
+  <div class="card stat"><div class="n">100%</div><div class="l">Zero duplicate payloads</div></div>
+</div>
+
+<h2 class="section-title">Clean test set performance</h2>
+<div class="card">
+  <canvas id="cleanChart" height="90"></canvas>
+</div>
+
+<h2 class="section-title">Stress test — evasion attacks &amp; hard-benign text</h2>
+<div class="card">
+  <canvas id="stressChart" height="90"></canvas>
+  <p style="font-size:13px;color:var(--ink-soft);margin-top:14px;">
+    23 evasion-style attacks + 15 legitimate sentences the models never trained on.
+    <a href="/evasion" style="color:var(--teal);font-weight:600;">See full breakdown →</a>
+  </p>
+</div>
+
+<h2 class="section-title">Dataset split</h2>
+<div class="grid-2">
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.train) }}</div><div class="l">Train rows</div></div>
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.val) }}</div><div class="l">Validation rows</div></div>
+</div>
+
+<script>
+new Chart(document.getElementById('cleanChart'), {
+  type: 'bar',
+  data: {
+    labels: ['RF v1', 'RF v2', 'LSTM', 'Stacked'],
+    datasets: [{
+      label: 'AUC-ROC',
+      data: [{{ clean_test['RF v1'].auc }}, {{ clean_test['RF v2'].auc }}, {{ clean_test['LSTM'].auc }}, {{ clean_test['Stacked'].auc }}],
+      backgroundColor: ['#C0432C','#D9A441','#2A7F7E','#2E7D5B'],
+      borderRadius: 6,
+    }]
+  },
+  options: { scales: { y: { min: 0.99, max: 1.001 } }, plugins: { legend: { display: false } } }
+});
+
+new Chart(document.getElementById('stressChart'), {
+  type: 'bar',
+  data: {
+    labels: ['RF v1', 'RF v2', 'LSTM', 'Stacked'],
+    datasets: [
+      {
+        label: 'Evasion caught %',
+        data: [
+          {{ (stress_test['RF v1'].evasion_caught / stress_test['RF v1'].evasion_total * 100) | round(1) }},
+          {{ (stress_test['RF v2'].evasion_caught / stress_test['RF v2'].evasion_total * 100) | round(1) }},
+          {{ (stress_test['LSTM'].evasion_caught / stress_test['LSTM'].evasion_total * 100) | round(1) }},
+          {{ (stress_test['Stacked'].evasion_caught / stress_test['Stacked'].evasion_total * 100) | round(1) }}
+        ],
+        backgroundColor: '#2A7F7E', borderRadius: 6,
+      },
+      {
+        label: 'False positive %',
+        data: [
+          {{ (stress_test['RF v1'].false_positives / stress_test['RF v1'].benign_total * 100) | round(1) }},
+          {{ (stress_test['RF v2'].false_positives / stress_test['RF v2'].benign_total * 100) | round(1) }},
+          {{ (stress_test['LSTM'].false_positives / stress_test['LSTM'].benign_total * 100) | round(1) }},
+          {{ (stress_test['Stacked'].false_positives / stress_test['Stacked'].benign_total * 100) | round(1) }}
+        ],
+        backgroundColor: '#C0432C', borderRadius: 6,
+      }
+    ]
+  },
+  options: { scales: { y: { min: 0, max: 100 } } }
+});
+</script>
+{% endblock %}

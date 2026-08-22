@@ -1,0 +1,10 @@
+# Normalize line endings; let git handle checkout per-platform.
+* text=auto
+
+# Explicitly treat binary/model/data assets as binary (no EOL conversion, no diff)
+*.keras binary
+*.pkl   binary
+*.npz   binary
+*.png   binary
+*.jpg   binary
+*.log   binary

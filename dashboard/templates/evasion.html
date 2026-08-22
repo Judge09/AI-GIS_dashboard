@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Evasion Results — AI-GIS{% endblock %}
+{% block content %}
+<h1 class="page-title">Evasion test results</h1>
+<p class="page-sub">
+  Real hand-built stress test: {{ real_evasion_count }} evasion attacks + {{ real_benign_count }} hard-benign sentences.
+  Plus <strong>temporary mock results</strong> (placeholder, not real LLM output — see the scripts' docstrings) simulating
+  a "normal" vs "polymorphic" attacker profile at larger scale.
+</p>
+
+<h2 class="section-title">Mock attacker profiles — 150 payloads each</h2>
+<div class="card">
+  <canvas id="mockChart" height="80"></canvas>
+  <p style="font-size:12.5px;color:var(--ink-soft);margin-top:14px;">
+    Placeholder data — approximates the stylistic difference between a "normal" code model and an "abliterated
+    polymorphic" model using the same public technique pool already in this project. Not real CodeLlama/DeepSeek output.
+  </p>
+</div>
+
+<h2 class="section-title">By attack family — polymorphic profile</h2>
+<div class="card">
+  <table class="family-table">
+    <tr><th>Family</th><th>Caught</th><th>Rate</th></tr>
+    {% for fam, v in mock_poly.by_family.items() %}
+    <tr>
+      <td>{{ fam }}</td>
+      <td>{{ v.stacked_caught }}/{{ v.n }}</td>
+      <td>
+        {% set pct = (v.stacked_caught / v.n * 100) | round(1) %}
+        <span class="badge {{ 'good' if pct == 100 else 'bad' }}">{{ pct }}%</span>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<h2 class="section-title">Missed examples (polymorphic profile)</h2>
+<div class="card">
+  <table>
+    <tr><th>Family</th><th>RF</th><th>LSTM</th><th>Stacked</th><th>Payload</th></tr>
+    {% for ex in mock_poly.per_example %}
+      {% if ex.stacked_proba < 0.5 %}
+      <tr class="malicious">
+        <td>{{ ex.family }}</td>
+        <td class="mono">{{ ex.rf_proba }}</td>
+        <td class="mono">{{ ex.lstm_proba }}</td>
+        <td class="mono">{{ ex.stacked_proba }}</td>
+        <td class="mono">{{ ex.payload[:70] }}</td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </table>
+</div>
+
+<script>
+new Chart(document.getElementById('mockChart'), {
+  type: 'bar',
+  data: {
+    labels: ['RF v2', 'LSTM', 'Stacked'],
+    datasets: [
+      {
+        label: 'Normal profile',
+        data: [
+          {{ (mock_normal.rf_caught / mock_normal.n * 100) | round(1) }},
+          {{ (mock_normal.lstm_caught / mock_normal.n * 100) | round(1) }},
+          {{ (mock_normal.stacked_caught / mock_normal.n * 100) | round(1) }}
+        ],
+        backgroundColor: '#2A7F7E', borderRadius: 6,
+      },
+      {
+        label: 'Polymorphic profile',
+        data: [
+          {{ (mock_poly.rf_caught / mock_poly.n * 100) | round(1) }},
+          {{ (mock_poly.lstm_caught / mock_poly.n * 100) | round(1) }},
+          {{ (mock_poly.stacked_caught / mock_poly.n * 100) | round(1) }}
+        ],
+        backgroundColor: '#D9A441', borderRadius: 6,
+      }
+    ]
+  },
+  options: { scales: { y: { min: 90, max: 100 } } }
+});
+</script>
+{% endblock %}

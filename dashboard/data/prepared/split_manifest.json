@@ -1,0 +1,93 @@
+{
+  "train": {
+    "rows": 24819,
+    "sessions": 8552,
+    "distinct_payload_texts": 23885,
+    "label_balance": {
+      "0": 12660,
+      "1": 12159
+    },
+    "attack_family_counts": {
+      "benign": 12660,
+      "stored": 2657,
+      "reflected": 1995,
+      "dom_based": 1850,
+      "tautology": 935,
+      "boolean_blind": 920,
+      "stacked_query": 835,
+      "time_based_blind": 819,
+      "union_based": 757,
+      "auth_bypass": 714,
+      "error_based": 677
+    },
+    "rf_rows_after_smote": 25320
+  },
+  "val": {
+    "rows": 5562,
+    "sessions": 1833,
+    "distinct_payload_texts": 5378,
+    "label_balance": {
+      "1": 2797,
+      "0": 2765
+    },
+    "attack_family_counts": {
+      "benign": 2765,
+      "stored": 545,
+      "reflected": 386,
+      "dom_based": 336,
+      "tautology": 277,
+      "boolean_blind": 260,
+      "stacked_query": 217,
+      "union_based": 209,
+      "auth_bypass": 195,
+      "error_based": 189,
+      "time_based_blind": 183
+    }
+  },
+  "test": {
+    "rows": 5983,
+    "sessions": 1833,
+    "distinct_payload_texts": 5787,
+    "label_balance": {
+      "1": 3226,
+      "0": 2757
+    },
+    "attack_family_counts": {
+      "benign": 2757,
+      "stored": 571,
+      "reflected": 391,
+      "dom_based": 360,
+      "boolean_blind": 318,
+      "stacked_query": 291,
+      "tautology": 272,
+      "auth_bypass": 260,
+      "time_based_blind": 259,
+      "union_based": 257,
+      "error_based": 247
+    }
+  },
+  "payload_content_leakage_check": {
+    "train_val": 8,
+    "train_test": 9,
+    "val_test": 5
+  },
+  "config": {
+    "max_payload_len": 200,
+    "seed": 42,
+    "smote_applied_to_rf_train": true,
+    "vocab": "ordinal ASCII 0-127, 0=PAD, 1=UNK",
+    "rf_feature_cols": [
+      "payload_len",
+      "entropy",
+      "num_special_chars",
+      "num_digits",
+      "num_uppercase",
+      "param_count",
+      "is_post",
+      "has_sqli_keyword",
+      "has_xss_keyword",
+      "quote_count",
+      "comment_token_count"
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+AI-GIS Dashboard payload test list
+=================================
+
+How to use:
+- Paste one payload at a time into the /tester page.
+- The app checks stacked_proba >= 0.5.
+- If true -> verdict = MALICIOUS
+- If false -> verdict = benign
+
+General expected behavior:
+- SQLi and XSS payloads should usually come back as MALICIOUS.
+- Benign-looking text with quotes, SQL-like words, code fragments, or punctuation may be scored as benign, but can sometimes trigger false positives if they appear "malicious-like".
+- Polymorphic payloads are designed to look obfuscated, mutated, or encoded while still being malicious.
+
+SECTION 1: Clearly malicious payloads
+------------------------------------
+1) "' OR 1=1--"
+   Expected: MALICIOUS; stacked_proba likely > 0.8
+
+2) "1';DROP TABLE `users`;--"
+   Expected: MALICIOUS; stacked_proba likely > 0.8
+
+3) "1 UNION SELECT 0x61646d696e,0x70617373776f7264--"
+   Expected: MALICIOUS
+
+4) "' OR 0x31=0x31--"
+   Expected: MALICIOUS
+
+5) "'/**/UN/**/ION/**/SEL/**/ECT/**/1,2,3--"
+   Expected: MALICIOUS
+
+6) "1;SELECT CASE WHEN (1=1) THEN 1 ELSE (SELECT 1 UNION SELECT 2) END--"
+   Expected: MALICIOUS
+
+7) "<script>alert(document.cookie)</script>"
+   Expected: MALICIOUS
+
+8) "<script>eval(atob('YWxlcnQoMSk='))</script>"
+   Expected: MALICIOUS
+
+9) "<svg><animate onbegin=alert(1) attributeName=x>"
+   Expected: MALICIOUS
+
+10) "&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;"
+    Expected: MALICIOUS
+
+11) "<img src=x oNeRRor=/**/(alert)(1)>"
+    Expected: MALICIOUS
+
+12) "<a href=\"jav&#97;script:alert(1)\">x</a>"
+    Expected: MALICIOUS
+
+SECTION 2: Polymorphic / obfuscated malicious payloads
+------------------------------------------------------
+These are the kinds of strings that should still be detected as malicious even when they look mutated or encoded.
+
+13) "1'%09OR%091=1%09--%09-"
+    Expected: MALICIOUS; likely still caught despite whitespace tricks
+
+14) "1'%0aAND%0a1=1%0a#"
+    Expected: MALICIOUS
+
+15) "'%0d%0aOR%0d%0a'a'='a"
+    Expected: MALICIOUS
+
+16) "1 AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT(0x7e,(SELECT version()))x FROM information_schema.tables GROUP BY x)a)"
+    Expected: MALICIOUS
+
+17) "1)) OR (('1')=('1"
+    Expected: MALICIOUS
+
+18) "'+UN'+'ION+SEL'+'ECT+1--"
+    Expected: MALICIOUS
+
+19) "<script>String.fromCharCode(97,108,101,114,116,40,49,41)</script>"
+    Expected: MALICIOUS
+
+20) "<script>/*comment*/alert`1`</script>"
+    Expected: MALICIOUS
+
+21) "'\"><img src=x id=dmFyIGE9YWxlcnQoMSk=onerror=eval(atob(this.id))>"
+    Expected: MALICIOUS
+
+22) "<iframe srcdoc=\"&lt;script&gt;alert(1)&lt;/script&gt;\">"
+    Expected: MALICIOUS
+
+23) "1'%09OR%091=1%09--%09-;DROP TABLE users"
+    Expected: MALICIOUS
+
+24) "<x contenteditable onfocus=alert(1) autofocus>"
+    Expected: MALICIOUS
+
+25) "<template><script>alert(1)</script></template>"
+    Expected: MALICIOUS
+
+SECTION 3: Benign-looking text that may still be considered benign
+-----------------------------------------------------------------
+These should usually come back as benign, even though they contain punctuation, SQL-like words, code fragments, or business formatting.
+
+26) "Smith & Sons Law Firm LLC"
+    Expected: benign
+
+27) "SELECT is a reserved keyword in most SQL dialects."
+    Expected: benign (this is a classic hard-benign trap)
+
+28) "Error code: 500 (Internal Server Error) -- see logs for details."
+    Expected: benign
+
+29) "Product SKU# ABC-123; Category: Electronics & Gadgets"
+    Expected: benign
+
+30) "Meeting notes 10/25: discussed Q3 <-> Q4 transition plan."
+    Expected: benign
+
+31) "cost = qty * unit_price; if (cost > budget) { flag(); }"
+    Expected: benign
+
+32) "Contact us at support@company.com or call (555) 123-4567."
+    Expected: benign
+
+33) "Address: 42 O'Malley Ave, Apt #7, (near the park)"
+    Expected: benign
+
+34) "My favorite quote: \"to be or not to be\" -- Shakespeare"
+    Expected: benign
+
+35) "Discount code SAVE20% applies to orders over $50."
+    Expected: benign
+
+36) "Recipe: mix 2 cups flour w/ 1 tsp salt; bake @ 350F for 20 min."
+    Expected: benign
+
+37) "git commit -m \"fix: resolve null pointer in auth module\""
+    Expected: benign
+
+38) "Rated 4.5/5 stars -- \"great product, fast shipping!\""
+    Expected: benign
+
+39) "Please review section 3.2(a) of the contract, re: pricing."
+    Expected: benign
+
+40) "123 O'Connell St, Dublin"
+    Expected: benign
+
+SECTION 4: Mixed / deceptive benigns that look malicious
+--------------------------------------------------------
+These are the best tests for false positives.
+
+41) "SELECT * FROM users WHERE id = 1; -- business data export script"
+    Expected: usually benign, but may trigger suspicion because of SQL wording
+
+42) "Error code: 500 (Internal Server Error) -- SQL injection test not reproduced"
+    Expected: benign*
+
+43) "The SQL statement: SELECT is a keyword, not an attack."
+    Expected: benign
+
+44) "Demo payload: <script> example only, not executable code in prod "
+    Expected: benign, but could be close to a false positive
+
+45) "customer note: alert(1) appears in pricing example, not in browser code"
+    Expected: benign
+
+46) "<img> tag used in a HTML tutorial snippet, not actual active XSS"
+    Expected: benign
+
+47) "script = 'not a real exploit'; if (flag) { alert('demo'); }"
+    Expected: benign
+
+48) "This product has a user id='123' and a price > 50; not a vulnerability"
+    Expected: benign
+
+49) "Review the query: SELECT * FROM orders WHERE status='open'; not malicious context"
+    Expected: benign
+
+50) "Example code snippet: <svg onload=alert(1)> for documentation only"
+    Expected: benign, but a risky near-miss for naive models
+
+Quick summary:
+- If it contains SQLi/XSS semantics with quotes, operators, or script tags -> MALICIOUS
+- If it merely mentions SQL, JS, or code-like snippets without being executable -> usually benign
+- If it is heavily obfuscated or encoded but still contains attack structure -> MALICIOUS
+
+Model threshold from app code:
+- verdict = "MALICIOUS" if stacked_proba >= 0.5
+- verdict = "benign" otherwise

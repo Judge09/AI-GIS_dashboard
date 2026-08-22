@@ -1,0 +1,34 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---- Virtual environments ----
+venv/
+.venv/
+env/
+ENV/
+dashboard/venv/
+
+# ---- IDE / OS ----
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- Large data artifacts (regenerable via scripts/, see README) ----
+# Trained models in dashboard/models/ ARE committed so the app runs after clone.
+dashboard/data/honeypot_final.log
+dashboard/data/prepared/*.csv
+dashboard/data/prepared/*.npz
+
+# ---- Logs ----
+*.log
+!dashboard/data/prepared/split_manifest.json

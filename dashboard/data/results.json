@@ -1,0 +1,320 @@
+{
+  "clean_test": {
+    "RF v1": {
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "RF v2": {
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "LSTM": {
+      "accuracy": 0.9997,
+      "f1": 0.9997,
+      "auc": 1.0
+    },
+    "Stacked": {
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    }
+  },
+  "stress_test": {
+    "RF v1": {
+      "evasion_caught": 23,
+      "evasion_total": 23,
+      "false_positives": 11,
+      "benign_total": 15
+    },
+    "RF v2": {
+      "evasion_caught": 23,
+      "evasion_total": 23,
+      "false_positives": 10,
+      "benign_total": 15
+    },
+    "LSTM": {
+      "evasion_caught": 22,
+      "evasion_total": 23,
+      "false_positives": 3,
+      "benign_total": 15
+    },
+    "Stacked": {
+      "evasion_caught": 23,
+      "evasion_total": 23,
+      "false_positives": 3,
+      "benign_total": 15
+    }
+  },
+  "per_example_evasion": [
+    {
+      "text": "1'%09OR%091=1%09--%09-",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 1.0,
+      "lstm_proba": 0.9996,
+      "stacked_proba": 0.9981
+    },
+    {
+      "text": "1'%0aAND%0a1=1%0a#",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 0.9843,
+      "lstm_proba": 0.9995,
+      "stacked_proba": 0.9978
+    },
+    {
+      "text": "'%0d%0aOR%0d%0a'a'='a",
+      "rf_v1_proba": 0.895,
+      "rf_v2_proba": 0.975,
+      "lstm_proba": 0.9998,
+      "stacked_proba": 0.9977
+    },
+    {
+      "text": "1`;DROP TABLE `users`;--",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 0.985,
+      "lstm_proba": 0.9988,
+      "stacked_proba": 0.9978
+    },
+    {
+      "text": "` OR `1`=`1",
+      "rf_v1_proba": 0.575,
+      "rf_v2_proba": 0.8853,
+      "lstm_proba": 0.9603,
+      "stacked_proba": 0.9949
+    },
+    {
+      "text": "1 UNION SELECT 0x61646d696e,0x70617373776f7264--",
+      "rf_v1_proba": 0.91,
+      "rf_v2_proba": 0.97,
+      "lstm_proba": 0.0004,
+      "stacked_proba": 0.5612
+    },
+    {
+      "text": "' OR 0x31=0x31--",
+      "rf_v1_proba": 0.99,
+      "rf_v2_proba": 1.0,
+      "lstm_proba": 0.9969,
+      "stacked_proba": 0.998
+    },
+    {
+      "text": "1 AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT(0x7e,(SELECT version()))x FROM information_schema.tables GROUP BY x)a)",
+      "rf_v1_proba": 0.99,
+      "rf_v2_proba": 0.925,
+      "lstm_proba": 0.9957,
+      "stacked_proba": 0.9968
+    },
+    {
+      "text": "1)) OR (('1')=('1",
+      "rf_v1_proba": 0.89,
+      "rf_v2_proba": 0.965,
+      "lstm_proba": 0.9998,
+      "stacked_proba": 0.9976
+    },
+    {
+      "text": "'/**/UN/**/ION/**/SEL/**/ECT/**/1,2,3--",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 1.0,
+      "lstm_proba": 0.9998,
+      "stacked_proba": 0.9981
+    },
+    {
+      "text": "'+UN'+'ION+SEL'+'ECT+1--",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 1.0,
+      "lstm_proba": 0.9998,
+      "stacked_proba": 0.9981
+    },
+    {
+      "text": "1;SELECT CASE WHEN (1=1) THEN 1 ELSE (SELECT 1 UNION SELECT 2) END--",
+      "rf_v1_proba": 0.955,
+      "rf_v2_proba": 0.975,
+      "lstm_proba": 0.9997,
+      "stacked_proba": 0.9977
+    },
+    {
+      "text": "<script>eval(atob('YWxlcnQoMSk='))</script>",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 1.0,
+      "lstm_proba": 0.9997,
+      "stacked_proba": 0.9981
+    },
+    {
+      "text": "<script>String.fromCharCode(97,108,101,114,116,40,49,41)</script>",
+      "rf_v1_proba": 0.93,
+      "rf_v2_proba": 0.955,
+      "lstm_proba": 0.9995,
+      "stacked_proba": 0.9974
+    },
+    {
+      "text": "<img src=x oNeRRor=/**/(alert)(1)>",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 0.995,
+      "lstm_proba": 0.9998,
+      "stacked_proba": 0.998
+    },
+    {
+      "text": "<a href=\"jav&#97;script:alert(1)\">x</a>",
+      "rf_v1_proba": 0.995,
+      "rf_v2_proba": 0.995,
+      "lstm_proba": 0.9997,
+      "stacked_proba": 0.998
+    },
+    {
+      "text": "<svg><animate onbegin=alert(1) attributeName=x>",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 0.975,
+      "lstm_proba": 0.9971,
+      "stacked_proba": 0.9977
+    },
+    {
+      "text": "<template><script>alert(1)</script></template>",
+      "rf_v1_proba": 0.955,
+      "rf_v2_proba": 1.0,
+      "lstm_proba": 0.9992,
+      "stacked_proba": 0.9981
+    },
+    {
+      "text": "<x contenteditable onfocus=alert(1) autofocus>",
+      "rf_v1_proba": 0.925,
+      "rf_v2_proba": 0.89,
+      "lstm_proba": 0.9809,
+      "stacked_proba": 0.9956
+    },
+    {
+      "text": "<script>/*comment*/alert`1`</script>",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 1.0,
+      "lstm_proba": 0.999,
+      "stacked_proba": 0.998
+    },
+    {
+      "text": "'\"><img src=x id=dmFyIGE9YWxlcnQoMSk=onerror=eval(atob(this.id))>",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 0.98,
+      "lstm_proba": 0.9992,
+      "stacked_proba": 0.9978
+    },
+    {
+      "text": "<iframe srcdoc=\"&lt;script&gt;alert(1)&lt;/script&gt;\">",
+      "rf_v1_proba": 1.0,
+      "rf_v2_proba": 0.97,
+      "lstm_proba": 0.9988,
+      "stacked_proba": 0.9976
+    },
+    {
+      "text": "&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;",
+      "rf_v1_proba": 0.985,
+      "rf_v2_proba": 0.99,
+      "lstm_proba": 0.9989,
+      "stacked_proba": 0.9979
+    }
+  ],
+  "per_example_hardbenign": [
+    {
+      "text": "123 O'Connell St, Dublin",
+      "rf_v1_proba": 0.535,
+      "rf_v2_proba": 0.5393,
+      "lstm_proba": 0.0024,
+      "stacked_proba": 0.0728
+    },
+    {
+      "text": "Smith & Sons Law Firm LLC",
+      "rf_v1_proba": 0.655,
+      "rf_v2_proba": 0.3803,
+      "lstm_proba": 0.1454,
+      "stacked_proba": 0.0601
+    },
+    {
+      "text": "Please review section 3.2(a) of the contract, re: pricing.",
+      "rf_v1_proba": 0.705,
+      "rf_v2_proba": 0.4508,
+      "lstm_proba": 0.7459,
+      "stacked_proba": 0.7677
+    },
+    {
+      "text": "SELECT is a reserved keyword in most SQL dialects.",
+      "rf_v1_proba": 0.775,
+      "rf_v2_proba": 0.8402,
+      "lstm_proba": 0.0013,
+      "stacked_proba": 0.356
+    },
+    {
+      "text": "My favorite quote: \"to be or not to be\" -- Shakespeare",
+      "rf_v1_proba": 0.805,
+      "rf_v2_proba": 0.8089,
+      "lstm_proba": 0.0013,
+      "stacked_proba": 0.3107
+    },
+    {
+      "text": "Error code: 500 (Internal Server Error) -- see logs for details.",
+      "rf_v1_proba": 0.7,
+      "rf_v2_proba": 0.6104,
+      "lstm_proba": 0.0007,
+      "stacked_proba": 0.1099
+    },
+    {
+      "text": "cost = qty * unit_price; if (cost > budget) { flag(); }",
+      "rf_v1_proba": 0.665,
+      "rf_v2_proba": 0.5955,
+      "lstm_proba": 0.9203,
+      "stacked_proba": 0.9589
+    },
+    {
+      "text": "Contact us at support@company.com or call (555) 123-4567.",
+      "rf_v1_proba": 0.335,
+      "rf_v2_proba": 0.3157,
+      "lstm_proba": 0.0004,
+      "stacked_proba": 0.0178
+    },
+    {
+      "text": "Meeting notes 10/25: discussed Q3 <-> Q4 transition plan.",
+      "rf_v1_proba": 0.56,
+      "rf_v2_proba": 0.5456,
+      "lstm_proba": 0.0075,
+      "stacked_proba": 0.0777
+    },
+    {
+      "text": "Product SKU# ABC-123; Category: Electronics & Gadgets",
+      "rf_v1_proba": 0.91,
+      "rf_v2_proba": 0.5305,
+      "lstm_proba": 0.009,
+      "stacked_proba": 0.0715
+    },
+    {
+      "text": "Recipe: mix 2 cups flour w/ 1 tsp salt; bake @ 350F for 20 min.",
+      "rf_v1_proba": 0.27,
+      "rf_v2_proba": 0.3009,
+      "lstm_proba": 0.0007,
+      "stacked_proba": 0.0162
+    },
+    {
+      "text": "git commit -m \"fix: resolve null pointer in auth module\"",
+      "rf_v1_proba": 0.46,
+      "rf_v2_proba": 0.5902,
+      "lstm_proba": 0.0014,
+      "stacked_proba": 0.0981
+    },
+    {
+      "text": "Rated 4.5/5 stars -- \"great product, fast shipping!\"",
+      "rf_v1_proba": 0.82,
+      "rf_v2_proba": 0.6945,
+      "lstm_proba": 0.005,
+      "stacked_proba": 0.1796
+    },
+    {
+      "text": "Address: 42 O'Malley Ave, Apt #7, (near the park)",
+      "rf_v1_proba": 0.88,
+      "rf_v2_proba": 0.5155,
+      "lstm_proba": 0.9759,
+      "stacked_proba": 0.9503
+    },
+    {
+      "text": "Discount code SAVE20% applies to orders over $50.",
+      "rf_v1_proba": 0.115,
+      "rf_v2_proba": 0.2006,
+      "lstm_proba": 0.0006,
+      "stacked_proba": 0.0085
+    }
+  ]
+}
