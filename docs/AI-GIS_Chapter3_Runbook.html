@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-GIS &middot; Chapter 3 Execution Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0F17; --panel:#121826; --panel2:#0E141F; --border:#212B3B; --border-soft:#1A2332;
+  --text:#DCE3ED; --text-dim:#8896AA; --text-faint:#5A6578;
+  --navy:#5B8DC7; --navy-deep:#3B6EA5;
+  --amber:#F0A93B; --amber-dim:#7A5A22;
+  --red:#E5566B; --red-dim:#4A2530;
+  --green:#4CC38A; --green-dim:#1E3B2E;
+  --teal:#38B6C4;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:'IBM Plex Sans',system-ui,sans-serif; font-size:15px; line-height:1.65;
+}
+code, .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+
+/* ---------- layout ---------- */
+.shell{display:flex; min-height:100vh}
+.sidebar{
+  width:280px; flex-shrink:0; background:var(--panel2); border-right:1px solid var(--border);
+  position:sticky; top:0; height:100vh; overflow-y:auto; padding:22px 18px;
+}
+.main{flex:1; min-width:0; padding:36px 44px 80px; max-width:920px}
+@media (max-width:900px){
+  .shell{flex-direction:column}
+  .sidebar{width:100%; height:auto; position:relative; border-right:none; border-bottom:1px solid var(--border)}
+  .main{padding:24px 20px 60px}
+}
+
+/* ---------- sidebar ---------- */
+.brand{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+.brand-badge{width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,var(--navy-deep),var(--teal));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#08101C;flex-shrink:0}
+.brand-name{font-weight:700; font-size:14.5px; letter-spacing:.02em}
+.brand-sub{font-size:11px; color:var(--text-faint); margin-bottom:20px; padding-left:40px; margin-top:-2px}
+
+.status-strip{
+  background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:12px 14px; margin-bottom:22px;
+}
+.status-row{display:flex; justify-content:space-between; align-items:center; font-size:11px; color:var(--text-dim); margin-bottom:8px}
+.status-row:last-child{margin-bottom:0}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green); display:inline-block; margin-right:6px; box-shadow:0 0 6px var(--green); animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.progress-track{height:6px; background:var(--border-soft); border-radius:4px; overflow:hidden; margin-top:8px}
+.progress-fill{height:100%; background:linear-gradient(90deg,var(--teal),var(--green)); width:0%; transition:width .35s ease}
+.progress-label{font-size:20px; font-weight:700; color:var(--text)}
+
+nav.toc{display:flex; flex-direction:column; gap:2px}
+nav.toc a{
+  color:var(--text-dim); text-decoration:none; font-size:13px; padding:8px 10px;
+  border-radius:7px; display:flex; align-items:center; gap:9px; transition:background .15s, color .15s;
+}
+nav.toc a:hover{background:var(--panel); color:var(--text)}
+nav.toc a.active{background:var(--panel); color:var(--navy); font-weight:600}
+nav.toc .num{
+  width:20px;height:20px;border-radius:5px;background:var(--border-soft);color:var(--text-faint);
+  font-size:10.5px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+nav.toc a.active .num{background:var(--navy-deep); color:#08101C}
+
+/* ---------- header ---------- */
+.hero{margin-bottom:34px}
+.hero-eyebrow{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); font-weight:600; margin-bottom:10px}
+.hero h1{font-size:30px; font-weight:700; margin:0 0 8px; letter-spacing:-.01em}
+.hero p.lede{color:var(--text-dim); font-size:15px; max-width:640px; margin:0}
+.meta-chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:16px}
+.chip{font-size:11px; padding:5px 10px; border-radius:20px; border:1px solid var(--border); color:var(--text-dim); font-family:'IBM Plex Mono',monospace}
+
+/* ---------- sections ---------- */
+section.doc-sec{margin-bottom:48px; scroll-margin-top:24px}
+.sec-head{display:flex; align-items:baseline; gap:12px; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid var(--border)}
+.sec-badge{
+  font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#08101C;
+  background:var(--navy); border-radius:6px; padding:3px 9px; flex-shrink:0;
+}
+.sec-head h2{font-size:20px; margin:0; font-weight:700}
+h3.sub{font-size:15.5px; font-weight:600; color:var(--text); margin:26px 0 10px}
+h4.subsub{font-size:13.5px; font-weight:600; color:var(--navy); margin:18px 0 8px}
+p{color:var(--text); margin:0 0 12px}
+p.dim{color:var(--text-dim)}
+
+/* ---------- callout boxes ---------- */
+.box{border-radius:var(--radius); padding:14px 16px; margin:14px 0; border:1px solid; font-size:13.5px; line-height:1.6}
+.box strong.box-label{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin-bottom:6px; font-weight:700}
+.box.info{background:rgba(56,182,196,.07); border-color:rgba(56,182,196,.35)}
+.box.info strong{color:var(--teal)}
+.box.warn{background:rgba(240,169,59,.08); border-color:rgba(240,169,59,.4)}
+.box.warn strong{color:var(--amber)}
+.box.flag{background:rgba(229,86,107,.09); border-color:rgba(229,86,107,.4)}
+.box.flag strong{color:var(--red)}
+.box.ok{background:rgba(76,195,138,.08); border-color:rgba(76,195,138,.4)}
+.box.ok strong{color:var(--green)}
+
+/* ---------- checklist ---------- */
+.checklist{list-style:none; margin:12px 0; padding:0; display:flex; flex-direction:column; gap:2px}
+.checklist li{display:flex; align-items:flex-start; gap:11px; padding:9px 10px; border-radius:8px; transition:background .15s}
+.checklist li:hover{background:var(--panel)}
+.checklist input[type=checkbox]{
+  appearance:none; -webkit-appearance:none; width:18px; height:18px; flex-shrink:0; margin-top:1.5px;
+  border:1.5px solid var(--border); border-radius:5px; background:var(--panel2); cursor:pointer; position:relative;
+  transition:all .15s;
+}
+.checklist input[type=checkbox]:hover{border-color:var(--navy)}
+.checklist input[type=checkbox]:checked{background:var(--green); border-color:var(--green)}
+.checklist input[type=checkbox]:checked::after{
+  content:''; position:absolute; left:5px; top:1px; width:5px; height:9px;
+  border:solid #08101C; border-width:0 2px 2px 0; transform:rotate(45deg);
+}
+.checklist label{cursor:pointer; font-size:13.5px; color:var(--text); flex:1}
+.checklist input[type=checkbox]:checked ~ label{color:var(--text-faint); text-decoration:line-through}
+.checklist .step-desc{font-size:12.5px; color:var(--text-dim); margin-top:3px; text-decoration:none !important}
+
+ul.plain{margin:10px 0; padding-left:20px; color:var(--text)}
+ul.plain li{margin-bottom:7px; font-size:13.5px; line-height:1.6}
+ul.plain li::marker{color:var(--teal)}
+
+/* ---------- code ---------- */
+pre{
+  background:#080B12; border:1px solid var(--border); border-radius:9px; padding:14px 16px;
+  overflow-x:auto; margin:12px 0; position:relative;
+}
+pre .term-bar{display:flex; gap:5px; margin-bottom:10px}
+pre .dot{width:9px;height:9px;border-radius:50%}
+pre code{font-size:12.5px; color:#B9E6D6; line-height:1.7; white-space:pre}
+.copy-btn{
+  position:absolute; top:10px; right:10px; background:var(--panel); border:1px solid var(--border);
+  color:var(--text-dim); font-size:10.5px; padding:4px 9px; border-radius:6px; cursor:pointer;
+  font-family:'IBM Plex Mono',monospace;
+}
+.copy-btn:hover{color:var(--text); border-color:var(--navy)}
+
+/* ---------- tables ---------- */
+.tbl-wrap{overflow-x:auto; margin:14px 0; border-radius:9px; border:1px solid var(--border)}
+table{width:100%; border-collapse:collapse; font-size:12.8px}
+th{background:var(--panel2); color:var(--text-dim); text-align:left; padding:10px 12px; font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; border-bottom:1px solid var(--border)}
+td{padding:10px 12px; border-bottom:1px solid var(--border-soft); color:var(--text); vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--panel)}
+td.dim{color:var(--text-dim)}
+.badge{display:inline-block; font-size:10.5px; font-weight:600; padding:2px 8px; border-radius:20px; font-family:'IBM Plex Mono',monospace}
+.badge.current{background:var(--red-dim); color:var(--red)}
+.badge.required{background:var(--green-dim); color:var(--green)}
+
+/* stage cards */
+.stage-flow{display:flex; gap:10px; align-items:center; margin:18px 0; flex-wrap:wrap}
+.stage-card{background:var(--panel); border:1px solid var(--border); border-radius:9px; padding:12px 14px; flex:1; min-width:180px}
+.stage-card .k{font-size:10px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.06em}
+.stage-card .v{font-size:13px; font-weight:600; margin-top:3px}
+.stage-arrow{color:var(--text-faint); font-size:18px; flex-shrink:0}
+
+hr.div{border:none; border-top:1px solid var(--border); margin:32px 0}
+
+/* ---------- flowchart panel ---------- */
+.flow-panel{
+  background:var(--panel); border:1px solid var(--border); border-radius:14px;
+  padding:22px 24px 18px; margin-bottom:28px;
+}
+.flow-panel-head{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:14px}
+.flow-panel-head h2{font-size:17px; margin:0; font-weight:700}
+.legend{display:flex; gap:16px; flex-wrap:wrap}
+.legend-item{display:flex; align-items:center; gap:6px; font-size:11px; color:var(--text-dim); margin-right:14px}
+.swatch{width:13px; height:13px; border-radius:4px; border:1.4px solid; display:inline-block; margin-right:6px}
+.swatch.dashed{background:transparent; border-style:dashed}
+.flow-svg-wrap{background:var(--panel2); border:1px solid var(--border-soft); border-radius:10px; padding:14px 10px; overflow-x:auto}
+.flow-caption{font-size:12px; color:var(--text-faint); margin:12px 2px 0; line-height:1.6}
+
+footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--border); font-size:11.5px; color:var(--text-faint)}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-badge">AG</div>
+      <div class="brand-name">AI-GIS Runbook</div>
+    </div>
+    <div class="brand-sub">Chapter 3 Execution Guide</div>
+
+    <div class="status-strip">
+      <div class="status-row"><span><span class="live-dot"></span>Checklist progress</span><span id="pct-text">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="status-row" style="margin-top:10px"><span>Items checked</span><span id="count-text" class="mono">0 / 0</span></div>
+    </div>
+
+    <nav class="toc" id="toc">
+      <a href="#overview"><span class="num">1</span>Pipeline Overview</a>
+      <a href="#prereqs"><span class="num">2</span>Prerequisites</a>
+      <a href="#stage1"><span class="num">3</span>Stage 1 — Honeypot Log</a>
+      <a href="#stage2"><span class="num">4</span>Stage 2 — Prepare Data</a>
+      <a href="#mapping"><span class="num">5</span>Chapter 3 Mapping</a>
+      <a href="#modsec"><span class="num">6</span>ModSecurity Setup</a>
+      <a href="#integration"><span class="num">7</span>Integration Contracts</a>
+      <a href="#current"><span class="num">8</span>Current System &amp; Fixes</a>
+      <a href="#troubleshoot"><span class="num">9</span>Troubleshooting</a>
+      <a href="#appendix"><span class="num">10</span>Appendix</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="hero">
+      <div class="hero-eyebrow">AI-GIS &middot; Team Pseudoers &middot; Thesis 2</div>
+      <h1>Chapter 3 Execution Guide</h1>
+      <p class="lede">Honeypot training-data pipeline, ModSecurity baseline setup, integration contracts, and conformance checklist for the current thesis system — with checkboxes so your groupmate can track exactly what's done.</p>
+      <div class="meta-chips">
+        <span class="chip">webids23_to_honeypot_log_v4.py</span>
+        <span class="chip">prepare_honeypot_for_training.py</span>
+        <span class="chip">ModSecurity + CRS 4.3.0</span>
+        <span class="chip">aigis_pipeline / aigis_api</span>
+      </div>
+    </div>
+
+    <section class="flow-panel">
+      <div class="flow-panel-head">
+        <h2>Pipeline at a Glance</h2>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background:rgba(56,182,196,.18);border-color:#38B6C4"></span>Documented in this guide</span>
+          <span class="legend-item"><span class="swatch dashed" style="border-color:#F0A93B"></span>Not built yet</span>
+          <span class="legend-item"><span class="swatch dashed" style="border-color:#E5566B"></span>Separate, pending script</span>
+        </div>
+      </div>
+      <div class="flow-svg-wrap"><svg viewBox="0 0 800 785" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
+<defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#5A6578"/>
+      </marker>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#8A5A62"/>
+      </marker>
+    </defs>
+<path d="M190.0,66 L190.0,90" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M190.0,154 L190.0,178" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M190.0,228 L190.0,252" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M190.0,316 C190.0,332.5 115.0,332.5 115.0,340" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M190.0,316 C190.0,332.5 265.0,332.5 265.0,340" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M115.0,392 L115.0,414" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M265.0,392 L265.0,414" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M115.0,470 C115.0,487.6 190.0,487.6 190.0,496" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M265.0,470 C265.0,487.6 190.0,487.6 190.0,496" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M190.0,554 L190.0,580" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M610.0,66 L610.0,90" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M610.0,154 L610.0,178" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M470,294.0 C 385,294.0 385,43.0 468,43.0" stroke="#8A5A62" stroke-width="1.6" stroke-dasharray="4 3" fill="none" marker-end="url(#arrow-red)"/>
+<path d="M190.0,632 C190.0,672.8 285.2,672.8 285.2,694" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<path d="M610.0,230 C610.0,418.0 434.79999999999995,418.0 434.79999999999995,694" stroke="#3A4356" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="50" y="20" width="280" height="46" rx="9" fill="rgba(91,141,199,.10)" stroke="#5B8DC7" stroke-width="1.4" />
+<text x="190.0" y="39.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">WEB-IDS23 CSVs</text>
+<text x="190.0" y="55.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">flow metadata + labels</text>
+<rect x="50" y="96" width="280" height="58" rx="9" fill="rgba(56,182,196,.10)" stroke="#38B6C4" stroke-width="1.4" />
+<text x="190.0" y="121.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">Stage 1 — Honeypot Log Generator</text>
+<text x="190.0" y="137.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">webids23_to_honeypot_log_v4.py</text>
+<rect x="50" y="184" width="280" height="44" rx="9" fill="rgba(91,141,199,.10)" stroke="#5B8DC7" stroke-width="1.4" />
+<text x="190.0" y="202.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">Honeypot JSONL Log</text>
+<text x="190.0" y="218.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">synthetic payloads + labels</text>
+<rect x="50" y="258" width="280" height="58" rx="9" fill="rgba(56,182,196,.10)" stroke="#38B6C4" stroke-width="1.4" />
+<text x="190.0" y="283.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">Stage 2 — Prepare Training Data</text>
+<text x="190.0" y="299.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">prepare_honeypot_for_training.py</text>
+<rect x="50" y="346" width="130" height="46" rx="9" fill="rgba(91,141,199,.10)" stroke="#5B8DC7" stroke-width="1.4" />
+<text x="115.0" y="365.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">RF branch</text>
+<text x="115.0" y="381.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">rf_*.csv</text>
+<rect x="200" y="346" width="130" height="46" rx="9" fill="rgba(91,141,199,.10)" stroke="#5B8DC7" stroke-width="1.4" />
+<text x="265.0" y="365.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">LSTM branch</text>
+<text x="265.0" y="381.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">lstm_*.npz</text>
+<rect x="50" y="420" width="130" height="50" rx="9" fill="rgba(240,169,59,.09)" stroke="#F0A93B" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="115.0" y="441.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">RF Trainer</text>
+<text x="115.0" y="457.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">not built yet</text>
+<rect x="200" y="420" width="130" height="50" rx="9" fill="rgba(240,169,59,.09)" stroke="#F0A93B" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="265.0" y="441.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">LSTM Trainer</text>
+<text x="265.0" y="457.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">not built yet</text>
+<rect x="50" y="502" width="280" height="52" rx="9" fill="rgba(240,169,59,.09)" stroke="#F0A93B" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="190.0" y="524.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">Meta-Learner — Logistic Regression</text>
+<text x="190.0" y="540.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">trained on val-set probs · not built yet</text>
+<rect x="50" y="586" width="280" height="46" rx="9" fill="rgba(240,169,59,.09)" stroke="#F0A93B" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="190.0" y="605.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">AI-GIS Inference</text>
+<text x="190.0" y="621.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">combined P(malicious) · not built yet</text>
+<rect x="470" y="20" width="280" height="46" rx="9" fill="rgba(91,141,199,.10)" stroke="#5B8DC7" stroke-width="1.4" />
+<text x="610.0" y="39.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">Held-out Benign + Attack Requests</text>
+<text x="610.0" y="55.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">frozen evaluation set</text>
+<rect x="470" y="96" width="280" height="58" rx="9" fill="rgba(56,182,196,.10)" stroke="#38B6C4" stroke-width="1.4" />
+<text x="610.0" y="121.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">ModSecurity + OWASP CRS</text>
+<text x="610.0" y="137.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">Section 6 · PL2 · DetectionOnly</text>
+<rect x="470" y="184" width="280" height="46" rx="9" fill="rgba(91,141,199,.10)" stroke="#5B8DC7" stroke-width="1.4" />
+<text x="610.0" y="203.0" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">Audit Log → Anomaly Score</text>
+<text x="610.0" y="219.0" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">detected / not-detected per request</text>
+<rect x="470" y="262" width="280" height="64" rx="9" fill="rgba(229,86,107,.09)" stroke="#E5566B" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="610.0" y="283.5" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">LLM Evasion Payload Generator</text>
+<text x="610.0" y="299.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">Ollama · DeepSeek-R1 14B · Code Llama 13B</text>
+<text x="610.0" y="312.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">pending — separate script</text>
+<rect x="190" y="700" width="340" height="68" rx="9" fill="rgba(240,169,59,.09)" stroke="#F0A93B" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="360.0" y="723.5" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" font-weight="600" fill="#DCE3ED">Evaluation &amp; Comparison</text>
+<text x="360.0" y="739.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">F1 · AUC-ROC · FPR · bootstrap CI</text>
+<text x="360.0" y="752.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8896AA">McNemar&#x27;s · not built yet</text>
+</svg></div>
+      <p class="flow-caption">Two tracks run independently on the same frozen held-out set &mdash; the AI-GIS model track (left) and the ModSecurity baseline track (right) &mdash; and converge only at the comparison step, so neither system influences the other's output. Jump to any stage using the sidebar.</p>
+    </section>
+
+    <div class="box flag">
+      <strong class="box-label">Scope of this document</strong>
+      Sections 1&ndash;5 cover the WEB-IDS23 &rarr; combinatorial honeypot log generator &rarr; RF/LSTM training-data pipeline. Section 6 covers ModSecurity/OWASP CRS setup. Section 7 defines integration interface contracts. Section 8 documents the <strong>current</strong> thesis system and exactly what must change for it to conform to the confirmed Chapter 3 / Table 13 architecture &mdash; it currently uses a hardcoded weighted RF+BiLSTM blend, not the required trained Logistic Regression meta-learner, among other gaps. This document does <strong>not</strong> cover the local-LLM (Ollama / DeepSeek-R1 14B abliterated / Code Llama 13B) evasion payload generator &mdash; that's a separate script, pending.
+    </div>
+
+    <!-- ================= SECTION 1 ================= -->
+    <section class="doc-sec" id="overview">
+      <div class="sec-head"><span class="sec-badge">01</span><h2>Pipeline Overview</h2></div>
+      <p>This pipeline turns WEB-IDS23 flow-level CSVs (ground-truth labels, no payload text) into labeled, leakage-free training data for both base learners in the confirmed architecture: Random Forest (engineered features) and the plain unidirectional stacked LSTM (character sequence).</p>
+
+      <h3 class="sub">Two-stage flow</h3>
+      <div class="stage-flow">
+        <div class="stage-card"><div class="k">Stage 1</div><div class="v">webids23_to_honeypot_log_v4.py</div></div>
+        <div class="stage-arrow">&rarr;</div>
+        <div class="stage-card"><div class="k">Output</div><div class="v">Honeypot JSONL log</div></div>
+        <div class="stage-arrow">&rarr;</div>
+        <div class="stage-card"><div class="k">Stage 2</div><div class="v">prepare_honeypot_for_training.py</div></div>
+        <div class="stage-arrow">&rarr;</div>
+        <div class="stage-card"><div class="k">Output</div><div class="v">RF/LSTM train-val-test tensors</div></div>
+      </div>
+
+      <div class="box info">
+        <strong class="box-label">Methodological note — must appear in Chapter 3 disclosure</strong>
+        WEB-IDS23 provides flow-level metadata and ground-truth labels only, not raw payload text. Payload content is synthetically generated per flow using documented, parameterized attack-pattern generators. Source/destination IPs are also synthetic. Disclose this the same way Resecurity telemetry is disclosed — as synthetically generated, not raw captured logs.
+      </div>
+
+      <h3 class="sub">Why this design</h3>
+      <ul class="plain">
+        <li><strong>Combinatorial generation, not a fixed bank:</strong> earlier versions drew from ~14 SQLi / ~14 XSS literal strings — a model trained on that mostly memorizes strings instead of learning structure. v4 composes payloads from components across 7 SQLi + 3 XSS families, yielding tens of thousands of distinct strings.</li>
+        <li><strong>Session-grouped splitting</strong> (by session_id, not row) prevents the model from learning session-level artifacts instead of payload structure.</li>
+        <li><strong>SMOTE on RF train split only</strong>, after the split is finalized — matches the confirmed leakage-prevention rule.</li>
+      </ul>
+    </section>
+
+    <!-- ================= SECTION 2 ================= -->
+    <section class="doc-sec" id="prereqs">
+      <div class="sec-head"><span class="sec-badge">02</span><h2>Prerequisites</h2></div>
+
+      <h3 class="sub">Environment</h3>
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code># Python 3.9+ recommended
+pip install pandas numpy scikit-learn --break-system-packages
+pip install imbalanced-learn --break-system-packages   # required for --smote</code></pre>
+
+      <div class="box warn">
+        <strong class="box-label">If imbalanced-learn is missing</strong>
+        Stage 2 prints a warning and skips SMOTE rather than failing. Check the console output and <code>split_manifest.json</code> (look for <code>rf_rows_after_smote</code>) to confirm SMOTE actually ran before assuming it did.
+      </div>
+
+      <h3 class="sub">Required input files (Stage 1)</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="p1"><label for="p1">--sqli-http — SQLi-labeled flows over HTTP<div class="step-desc">At least one attack CSV, or --benign alone</div></label></li>
+        <li><input type="checkbox" id="p2"><label for="p2">--sqli-https — SQLi-labeled flows over HTTPS <span style="color:var(--text-faint)">(optional)</span></label></li>
+        <li><input type="checkbox" id="p3"><label for="p3">--xss-http — XSS-labeled flows over HTTP <span style="color:var(--text-faint)">(optional)</span></label></li>
+        <li><input type="checkbox" id="p4"><label for="p4">--xss-https — XSS-labeled flows over HTTPS <span style="color:var(--text-faint)">(optional)</span></label></li>
+        <li><input type="checkbox" id="p5"><label for="p5">--benign — benign-labeled flows<div class="step-desc">Needed to generate label=0 rows</div></label></li>
+      </ul>
+      <p class="dim">Each CSV must contain: <code>uid, ts, id.orig_h, id.resp_h, service, attack_type</code> — the only columns the script reads.</p>
+    </section>
+
+    <!-- ================= SECTION 3 ================= -->
+    <section class="doc-sec" id="stage1">
+      <div class="sec-head"><span class="sec-badge">03</span><h2>Stage 1 — Generate the Honeypot Log</h2></div>
+      <p><code>webids23_to_honeypot_log_v4.py</code></p>
+
+      <h3 class="sub">What it does internally</h3>
+      <ul class="plain">
+        <li>Counts natural row counts per CSV, computes SQLi/XSS/benign targets per <code>--strategy</code>.</li>
+        <li>Reservoir-samples flows up to target count (memory-safe streaming).</li>
+        <li>Per attack flow: uniformly selects an attack family, calls that family's combinatorial generator.</li>
+        <li>With probability <code>--obfuscate-prob</code>: applies WAF-evasion obfuscation (case randomization, whitespace&rarr;comment, URL-encoding).</li>
+        <li>Groups requests into synthetic sessions via 120-second time buckets per source IP; assigns synthetic public IP + consistent user-agent.</li>
+        <li>Writes one JSON object per line with full request/session/label metadata.</li>
+        <li>Prints a distribution report: totals, label balance, family breakdown, distinct payload strings, duplicate %.</li>
+      </ul>
+
+      <div class="tbl-wrap"><table>
+        <tr><th>SQLi families (7)</th><th>XSS families (3)</th></tr>
+        <tr><td>tautology, union_based, time_based_blind, boolean_blind, error_based, stacked_query, auth_bypass</td><td>reflected, stored, dom_based</td></tr>
+      </table></div>
+
+      <h3 class="sub">Command</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>--strategy</th><th>Effect</th></tr>
+        <tr><td class="mono">match_min</td><td>SQLi/XSS targets both = min(natural counts). <strong style="color:var(--green)">Recommended default.</strong></td></tr>
+        <tr><td class="mono">match_max</td><td>Both = max(...) — heavy synthetic duplication of the smaller class.</td></tr>
+        <tr><td class="mono">custom</td><td>Set --custom-sqli-count / --custom-xss-count explicitly.</td></tr>
+      </table></div>
+
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code>python3 webids23_to_honeypot_log_v4.py \
+  --sqli-http   webids23_sqli_http.csv \
+  --sqli-https  webids23_sqli_https.csv \
+  --xss-http    webids23_xss_http.csv \
+  --xss-https   webids23_xss_https.csv \
+  --benign      webids23_benign.csv \
+  --strategy match_min \
+  --benign-ratio 1.0 \
+  --obfuscate-prob 0.4 \
+  --seed 42 \
+  -o honeypot_from_webids23.log</code></pre>
+
+      <h3 class="sub">Verify before moving to Stage 2</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="s1a"><label for="s1a">label=1 vs label=0 ratio close to what --benign-ratio requested</label></li>
+        <li><input type="checkbox" id="s1b"><label for="s1b">attack_family breakdown roughly even within SQLi and within XSS<div class="step-desc">Large skew signals a bug, not expected variance</div></label></li>
+        <li><input type="checkbox" id="s1c"><label for="s1c">Synthetic duplicate % checked<div class="step-desc">&gt;40% means target counts exceeded natural flow availability — flag to the paper side before training</div></label></li>
+      </ul>
+
+      <h3 class="sub">Output schema (one JSON object per line)</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Field</th><th>Meaning</th></tr>
+        <tr><td class="mono">time</td><td>ISO-8601 timestamp from source flow</td></tr>
+        <tr><td class="mono">source_ip / host</td><td>Synthetic public IPs</td></tr>
+        <tr><td class="mono">method, uri, request_body</td><td>Where the payload was placed</td></tr>
+        <tr><td class="mono">session_id, session_seq</td><td>120s time-bucketed session grouping</td></tr>
+        <tr><td class="mono">label</td><td>1 = attack, 0 = benign</td></tr>
+        <tr><td class="mono">attack_family</td><td>One of 10 families, or "benign"</td></tr>
+        <tr><td class="mono">obfuscated</td><td>true if WAF-evasion obfuscation applied</td></tr>
+        <tr><td class="mono">synthetic_duplicate</td><td>true if re-randomized duplicate</td></tr>
+      </table></div>
+    </section>
+
+    <!-- ================= SECTION 4 ================= -->
+    <section class="doc-sec" id="stage2">
+      <div class="sec-head"><span class="sec-badge">04</span><h2>Stage 2 — Prepare Training Data</h2></div>
+      <p><code>prepare_honeypot_for_training.py</code></p>
+
+      <h3 class="sub">What it does internally</h3>
+      <ul class="plain">
+        <li>Loads JSONL, reconstructs payload text (query + body), engineers <strong>11 RF features</strong> (length, entropy, special-char/digit/uppercase counts, param count, POST flag, SQLi/XSS keyword flags, quote count, comment-token count).</li>
+        <li>Splits by session_id via GroupShuffleSplit — <strong>70/15/15</strong>, no session crosses a boundary.</li>
+        <li>If <code>--smote</code>: fits on the RF train split <em>only</em>, after split is finalized. Never touches LSTM sequences. Synthetic rows marked <code>_session_id = "SMOTE_SYNTHETIC"</code>.</li>
+        <li>Ordinal-encodes payload text for LSTM: ASCII 0&ndash;127, 0=PAD, 1=UNK, fixed length <code>max_payload_len</code> (default 200).</li>
+        <li>Writes <code>lstm_{train,val,test}.npz</code>, <code>rf_{train,val,test}.csv</code>, <code>split_manifest.json</code>.</li>
+      </ul>
+
+      <div class="box warn">
+        <strong class="box-label">Naming note — from prior adviser feedback</strong>
+        The parameter is <code>--max-payload-len</code> throughout, corrected from the original <code>sequence_len</code> bug (which collided session windowing with payload character tokenization). Keep this name consistent downstream.
+      </div>
+
+      <h3 class="sub">Command</h3>
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code>python3 prepare_honeypot_for_training.py \
+  --input honeypot_from_webids23.log \
+  --outdir prepared_data \
+  --max-payload-len 200 \
+  --seed 42 \
+  --smote</code></pre>
+      <p class="dim">Omit <code>--smote</code> to leave RF train at natural balance — e.g. for the ablation study's non-SMOTE condition.</p>
+
+      <h3 class="sub">Reference manifest — check your run against this</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Split</th><th>Rows</th><th>Sessions</th><th>Label 0 / Label 1</th></tr>
+        <tr><td>train</td><td>24,819</td><td>8,552</td><td>12,660 / 12,159</td></tr>
+        <tr><td>val</td><td>5,562</td><td>1,833</td><td>2,765 / 2,797</td></tr>
+        <tr><td>test</td><td>5,983</td><td>1,833</td><td>2,757 / 3,226</td></tr>
+      </table></div>
+
+      <ul class="checklist">
+        <li><input type="checkbox" id="s2a"><label for="s2a">rf_train.csv row count matches rf_rows_after_smote in manifest<div class="step-desc">25,320 in reference run, vs. 24,819 pre-SMOTE</div></label></li>
+        <li><input type="checkbox" id="s2b"><label for="s2b">lstm_train.npz row count matches the PRE-SMOTE train count<div class="step-desc">24,819 in reference run — SMOTE must never touch the LSTM branch</div></label></li>
+        <li><input type="checkbox" id="s2c"><label for="s2c">No attack_family is empty or wildly disproportionate per split</label></li>
+      </ul>
+
+      <h3 class="sub">Output files — who consumes what</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>File</th><th>Consumed by</th></tr>
+        <tr><td class="mono">lstm_*.npz</td><td>LSTM training script — <code>np.load(path)</code>, X/y keys</td></tr>
+        <tr><td class="mono">rf_*.csv</td><td>Random Forest training script — <code>pandas.read_csv</code></td></tr>
+        <tr><td class="mono">split_manifest.json</td><td>Chapter 3 reporting + reproducibility audit trail</td></tr>
+      </table></div>
+    </section>
+
+    <!-- ================= SECTION 5 ================= -->
+    <section class="doc-sec" id="mapping">
+      <div class="sec-head"><span class="sec-badge">05</span><h2>How This Maps to the Chapter 3 SOP Structure</h2></div>
+      <p>Per the confirmed four-phase / four-SOP structure ("how not why" — justification lives in Chapter 2):</p>
+      <div class="tbl-wrap"><table>
+        <tr><th>Chapter 3 phase</th><th>Covered by</th></tr>
+        <tr><td>Data acquisition / preparation SOP</td><td>Stage 1 + Stage 2 (this doc)</td></tr>
+        <tr><td>Model training SOP</td><td>Interface contracts in §7 — trainers not yet built</td></tr>
+        <tr><td>WAF baseline (ModSecurity/OWASP CRS) SOP</td><td>Section 6</td></tr>
+        <tr><td>Evaluation SOP (bootstrap CI, McNemar's, ablation)</td><td>Comparison-point contract in §7 — script not yet built</td></tr>
+      </table></div>
+
+      <div class="box flag">
+        <strong class="box-label">Pending — separate pipeline, separate document section</strong>
+        The held-out evasion test set (LLM-generated SQLi/XSS via DeepSeek-R1 14B abliterated and Code Llama 13B through Ollama) is a distinct pipeline. It must remain structurally separate from this training data — that separation is what makes the evasion-resistance evaluation valid. Send that script when ready.
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6 ================= -->
+    <section class="doc-sec" id="modsec">
+      <div class="sec-head"><span class="sec-badge">06</span><h2>ModSecurity + OWASP CRS Setup</h2></div>
+      <p>Generic, publicly documented WAF baseline setup — not tied to any specific version of the thesis system codebase.</p>
+
+      <div class="box info">
+        <strong class="box-label">Confirmed configuration — do not deviate without adviser sign-off</strong>
+        Docker image <code>owasp/modsecurity-crs:4.3.0-nginx</code> &middot; Paranoia Level 2 (PL2) &middot; DetectionOnly mode &middot; default inbound anomaly threshold of 5. Record exact ModSecurity version, CRS version, enabled rules, threshold, exclusions, and image digest at execution time — a stated Chapter 3 reproducibility requirement.
+      </div>
+
+      <h3 class="sub">6.1 Prerequisites</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="m1"><label for="m1">Docker installed and running <span class="mono step-desc">(docker --version)</span></label></li>
+        <li><input type="checkbox" id="m2"><label for="m2">Target application ready for ModSecurity to sit in front of</label></li>
+      </ul>
+
+      <h3 class="sub">6.2 Install and run the WAF container</h3>
+      <p><strong>Step 1</strong> — pull the confirmed CRS image:</p>
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code>docker pull owasp/modsecurity-crs:4.3.0-nginx</code></pre>
+
+      <p><strong>Step 2</strong> — run in DetectionOnly mode:</p>
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code>docker run -d --name modsec-crs \
+  -p 8080:8080 \
+  -e PARANOIA=2 \
+  -e DETECTION_PARANOIA=2 \
+  -e ANOMALY_INBOUND=5 \
+  -e BLOCKING_PARANOIA=2 \
+  -e MODSEC_RULE_ENGINE=DetectionOnly \
+  -e PROXY=1 \
+  -e BACKEND=http://host.docker.internal:5000 \
+  owasp/modsecurity-crs:4.3.0-nginx</code></pre>
+      <p class="dim"><code>BACKEND</code> should point at whatever target app is serving traffic — adjust host/port. <code>PARANOIA=2</code>, <code>MODSEC_RULE_ENGINE=DetectionOnly</code>, and <code>ANOMALY_INBOUND=5</code> must match Chapter 3; <code>BACKEND</code> is environment-specific.</p>
+
+      <p><strong>Step 3</strong> — confirm and record the image digest:</p>
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code>docker ps
+docker inspect --format='{{.Image}}' modsec-crs
+docker exec modsec-crs nginx -V 2>&1 | head -1</code></pre>
+
+      <h3 class="sub">6.3 Submit test requests and read results</h3>
+      <p>Send the held-out payload set through port 8080 (the ModSecurity container), not directly at the backend.</p>
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code>curl "http://localhost:8080/search?q=1' OR '1'='1"
+# repeat programmatically for the full held-out set,
+# logging each request_id alongside the payload sent</code></pre>
+      <ul class="plain">
+        <li>Audit log records matched rules + cumulative anomaly score per request.</li>
+        <li>A request is flagged malicious if score &ge; 5 (CRS default threshold).</li>
+        <li>Parse to per-request detected/not-detected + raw score, for comparison against AI-GIS.</li>
+      </ul>
+
+      <h3 class="sub">6.4 Preserve for reproducibility</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="m3"><label for="m3">Docker image digest saved</label></li>
+        <li><input type="checkbox" id="m4"><label for="m4">Full audit log for the held-out run saved</label></li>
+        <li><input type="checkbox" id="m5"><label for="m5">Any exclusions / rule overrides documented</label></li>
+        <li><input type="checkbox" id="m6"><label for="m6">ModSecurity + nginx version banner recorded (matches Table 15)</label></li>
+      </ul>
+    </section>
+
+    <!-- ================= SECTION 7 ================= -->
+    <section class="doc-sec" id="integration">
+      <div class="sec-head"><span class="sec-badge">07</span><h2>Integrating Everything Into the Thesis System</h2></div>
+      <p>Defines how artifacts from §1&ndash;6 fit together at an architecture level — what needs to consume what, in what format — without naming specific files or a specific repo. That mapping is up to whoever integrates it, based on the current system state.</p>
+
+      <h3 class="sub">7.1 The full data-to-decision chain</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Stage</th><th>Produces</th><th>Consumed by</th></tr>
+        <tr><td>1. Honeypot log generator</td><td>JSONL log</td><td>Stage 2</td></tr>
+        <tr><td>2. Training data prep</td><td>lstm_*.npz / rf_*.csv</td><td>RF trainer, LSTM trainer</td></tr>
+        <tr><td>3. RF trainer <span class="badge current">not built</span></td><td>Trained RF model + val-set probabilities</td><td>Meta-learner</td></tr>
+        <tr><td>4. LSTM trainer <span class="badge current">not built</span></td><td>Trained LSTM model + val-set probabilities</td><td>Meta-learner</td></tr>
+        <tr><td>5. Meta-learner <span class="badge current">not built</span></td><td>Trained Logistic Regression + threshold</td><td>AI-GIS inference</td></tr>
+        <tr><td>6. ModSecurity baseline</td><td>Audit log &rarr; detected/not + anomaly score</td><td>Evaluation script</td></tr>
+        <tr><td>7. AI-GIS inference <span class="badge current">not built</span></td><td>Per-request P(malicious)</td><td>Evaluation script</td></tr>
+      </table></div>
+
+      <h3 class="sub">7.2 Interface contracts</h3>
+      <h4 class="subsub">RF and LSTM trainers</h4>
+      <ul class="plain">
+        <li>Input: the exact Stage 2 files, no reshaping/re-encoding inside the trainer.</li>
+        <li>Output: predicted probabilities on the <strong>validation</strong> split specifically — the meta-learner trains on these, not train-split predictions.</li>
+      </ul>
+      <h4 class="subsub">Meta-learner</h4>
+      <ul class="plain">
+        <li>Input: RF + LSTM validation-set probabilities, row-aligned.</li>
+        <li>Must be a trained Logistic Regression — not a fixed weighted average. This is the exact mismatch flagged in §8; do not substitute a hardcoded blend even as a placeholder.</li>
+        <li>Output: combined probability + threshold chosen on validation data before test exposure.</li>
+      </ul>
+      <h4 class="subsub">AI-GIS vs. ModSecurity — the comparison point</h4>
+      <ul class="plain">
+        <li>Both systems run independently on the SAME frozen held-out set — neither sees the other's output first.</li>
+        <li>Same output shape: one row per request, binary decision + continuous score.</li>
+        <li>Evaluation script (bootstrap CI, McNemar's, F1/FPR/AUC-ROC) ties both together by request ID, agnostic to how each score was produced.</li>
+      </ul>
+
+      <h3 class="sub">7.3 Fixed vs. environment-specific</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Fixed by the thesis</th><th>Environment-specific</th></tr>
+        <tr><td>Stacking uses validation-set predictions</td><td>Where model artifacts are stored</td></tr>
+        <tr><td>Meta-learner is trained Logistic Regression</td><td>How trainers are invoked</td></tr>
+        <tr><td>SMOTE only on RF branch, train split only</td><td>How the audit log is parsed/stored</td></tr>
+        <tr><td>max_payload_len = 200, ordinal ASCII encoding</td><td>How the comparison script is triggered</td></tr>
+        <tr><td>ModSecurity: PL2, DetectionOnly, threshold 5</td><td>Intermediate hand-off file formats</td></tr>
+      </table></div>
+    </section>
+
+    <!-- ================= SECTION 8 ================= -->
+    <section class="doc-sec" id="current">
+      <div class="sec-head"><span class="sec-badge">08</span><h2>The Current Thesis System — What It Is, What Needs to Change</h2></div>
+      <p>The current implementation (AI-GIS console: <code>aigis_api</code> / <code>aigis_pipeline</code> / <code>aigis_clean</code> / <code>modules</code>, FastAPI + uvicorn, port 5100) is in use as the working system for now. It's functional and well-structured, but its detection architecture predates the adviser-reviewed Chapter 3 design locked into Table 13.</p>
+
+      <h3 class="sub">8.1 Current package layout</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Package</th><th>Responsibility</th></tr>
+        <tr><td class="mono">aigis_api</td><td>FastAPI server, background task runner, live data feeds, session storage, ModSecurity comparison</td></tr>
+        <tr><td class="mono">aigis_pipeline</td><td>Dataset building/versioning, model evaluation, diagnosis thresholds, settings</td></tr>
+        <tr><td class="mono">aigis_clean</td><td>Log parsers, schema definitions, normalizer, type inference, cleaner</td></tr>
+        <tr><td class="mono">modules</td><td>Ollama-backed attack payload generator</td></tr>
+      </table></div>
+      <p class="dim">Decision-engine logic most likely lives in <code>aigis_pipeline</code>, served through <code>aigis_api</code>. Confirm exact file locations once you have source access — this works from README-stated responsibilities.</p>
+
+      <h3 class="sub">8.2 Conformance checklist</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Area</th><th>Current</th><th>Required</th><th>Fix</th></tr>
+        <tr>
+          <td>Decision engine</td>
+          <td><span class="badge current">0.5&times;RF + 0.5&times;BiLSTM</span></td>
+          <td><span class="badge required">Trained LogReg</span></td>
+          <td>Replace fixed-weight combination with Logistic Regression fit on RF+LSTM validation-set probabilities. Remove rf_weight/lstm_weight constants.</td>
+        </tr>
+        <tr>
+          <td>LSTM direction</td>
+          <td><span class="badge current">Bidirectional</span></td>
+          <td><span class="badge required">Unidirectional 64&rarr;32</span></td>
+          <td>Swap Bidirectional(LSTM(...)) for plain LSTM(64,return_sequences=True) &rarr; Dropout(.3) &rarr; LSTM(32) &rarr; Dropout(.3) &rarr; Dense(sigmoid).</td>
+        </tr>
+        <tr>
+          <td>Decision threshold</td>
+          <td><span class="badge current">Fixed 0.55</span></td>
+          <td><span class="badge required">Validation-selected</span></td>
+          <td>Run a threshold sweep on validation (threshold_analysis.json may already exist), select per documented criterion, freeze for test.</td>
+        </tr>
+        <tr>
+          <td>Dataset recs</td>
+          <td><span class="badge current">CSIC/CICIDS/Zenodo/WEB-IDS23</span></td>
+          <td><span class="badge required">Resecurity + WEB-IDS23 gen.</span></td>
+          <td>Stop presenting CSIC 2010 etc. as live options — see §8.4 for the full swap.</td>
+        </tr>
+        <tr>
+          <td>Baselines</td>
+          <td><span class="badge current">4 systems</span></td>
+          <td><span class="badge required">AI-GIS vs. ModSecurity</span></td>
+          <td>Drop "WAF Simulated"/"ML Only" from the headline comparison, or clearly mark as supplementary.</td>
+        </tr>
+        <tr>
+          <td>Feature set</td>
+          <td><span class="badge current">8 features</span></td>
+          <td><span class="badge required">30-dim (Table 11)</span></td>
+          <td>Extend RF feature engineering to the full schema, or reconcile with adviser if 8 is final (Table 11 needs revision then).</td>
+        </tr>
+      </table></div>
+
+      <div class="box flag">
+        <strong class="box-label">This is a checklist, not a completed fix</strong>
+        None of these changes have been made yet. The feature-set and baseline-count gaps in particular are worth raising with Ms. Roselle or Sir Gon before investing implementation time — they affect what Table 11 and the Chapter 4 results tables are allowed to claim.
+      </div>
+
+      <h3 class="sub">8.3 What's already correctly aligned</h3>
+      <ul class="plain">
+        <li>Reproducibility artifacts (evaluation_results.json, rf_results.json, lstm_results.json, feature_importance.json, threshold_analysis.json, modsec_comparison.json, run_manifest.jsonl) match the spirit of Table 15 — keep as-is.</li>
+        <li>Tracked JSON outputs vs. untracked binaries/datasets split is good practice.</li>
+        <li>ModSecurity comparison already has a home (aigis_api) + output artifact — §6 should plug directly in.</li>
+        <li>The Ollama payload generator (modules) is the natural home for the real DeepSeek-R1/Code Llama evasion generator once finalized.</li>
+      </ul>
+
+      <h3 class="sub">8.4 Replacing the Dataset Pipeline</h3>
+      <p>The current system treats "which dataset" as an open choice. Per the confirmed methodology this needs to become a <strong>fixed pipeline</strong>: WEB-IDS23 &rarr; combinatorial generator &rarr; prepared tensors, with Resecurity as primary once access is confirmed.</p>
+
+      <ul class="checklist">
+        <li><input type="checkbox" id="d1"><label for="d1"><strong>Step 1</strong> — Generate the fixed dataset using §3&ndash;4, not the system's own loader<div class="step-desc">Produces prepared_data/ with lstm_*.npz, rf_*.csv, split_manifest.json. No auto-label detection needed — label is already clean 0/1.</div></label></li>
+        <li><input type="checkbox" id="d2"><label for="d2"><strong>Step 2</strong> — Point aigis_pipeline's dataset loading at these fixed files<div class="step-desc">Update config.py's DATA_DIR / dataset-path constants to prepared_data/ instead of accepting arbitrary uploads.</div></label></li>
+        <li><input type="checkbox" id="d3"><label for="d3"><strong>Step 3</strong> — Retire the generic multi-dataset options, don't just add to them<div class="step-desc">Remove CSIC 2010, CICIDS 2017, Zenodo from any recommended-dataset list/dropdown/README. Keep WEB-IDS23 but scoped correctly as the generator's input.</div></label></li>
+        <li><input type="checkbox" id="d4"><label for="d4"><strong>Step 4</strong> — Verify the swap before training anything<div class="step-desc">Row counts match split_manifest.json. No silent auto-schema-detection still active. Feature count matches whichever schema you settled on below.</div></label></li>
+      </ul>
+
+      <div class="box flag">
+        <strong class="box-label">Flag — three different RF feature schemas are now in play</strong>
+        <strong>(1)</strong> This doc's Stage 2 output: 11 columns (payload_len, entropy, num_special_chars, num_digits, num_uppercase, param_count, is_post, has_sqli_keyword, has_xss_keyword, quote_count, comment_token_count).
+        <strong>(2)</strong> Current system's built-in engineering: 8 columns (url_score, payload_len, entropy, req_freq, method_score, param_count, path_depth, header_score).
+        <strong>(3)</strong> Table 11's target: 30 dimensions.
+        These are NOT the same features under different names — <code>req_freq</code>/<code>header_score</code> don't exist in Stage 2's output; <code>has_sqli_keyword</code>/<code>has_xss_keyword</code> don't exist in the system's extractor. Decide explicitly whether Stage 2's engineering replaces the system's extractor or both merge into the full 30-dim set, before wiring rf_train.csv into the RF trainer. Silently swapping the CSV either breaks the trainer (column mismatch) or silently trains on the wrong definition — raise this with your adviser if unclear.
+      </div>
+    </section>
+
+    <!-- ================= SECTION 9 ================= -->
+    <section class="doc-sec" id="troubleshoot">
+      <div class="sec-head"><span class="sec-badge">09</span><h2>Troubleshooting</h2></div>
+      <div class="tbl-wrap"><table>
+        <tr><th>Symptom</th><th>Likely cause / fix</th></tr>
+        <tr><td>"No input CSVs given" at Stage 1 start</td><td>None of --sqli-http/--sqli-https/--xss-http/--xss-https/--benign passed. At least one required.</td></tr>
+        <tr><td>"imbalanced-learn not installed" warning, Stage 2 continues</td><td><code>pip install imbalanced-learn --break-system-packages</code>, re-run with --smote.</td></tr>
+        <tr><td>"not enough minority samples for SMOTE; skipping"</td><td>Train split's minority class &lt;2 samples after grouped split — check upstream class balance from Stage 1.</td></tr>
+        <tr><td>rf_train.csv row count doesn't match manifest</td><td>Check whether --smote was used; it only affects RF branch train split.</td></tr>
+        <tr><td>Malformed line warnings during Stage 2 load</td><td>Stage 2 skips and logs — check Stage 1 output wasn't truncated/corrupted if count is non-trivial.</td></tr>
+        <tr><td>LSTM X shape has different second dimension than expected</td><td>max_payload_len differs between your run and model config — must match exactly (reference used 200).</td></tr>
+      </table></div>
+    </section>
+
+    <!-- ================= SECTION 10 ================= -->
+    <section class="doc-sec" id="appendix">
+      <div class="sec-head"><span class="sec-badge">10</span><h2>Appendix — Quick Reference</h2></div>
+
+      <h3 class="sub">Full two-stage command sequence</h3>
+      <pre><div class="term-bar"><div class="dot" style="background:#E5566B"></div><div class="dot" style="background:#F0A93B"></div><div class="dot" style="background:#4CC38A"></div></div><button class="copy-btn" onclick="copyCode(this)">copy</button><code># Stage 1
+python3 webids23_to_honeypot_log_v4.py \
+  --sqli-http webids23_sqli_http.csv \
+  --xss-http webids23_xss_http.csv \
+  --benign webids23_benign.csv \
+  --strategy match_min --benign-ratio 1.0 \
+  --obfuscate-prob 0.4 --seed 42 \
+  -o honeypot_from_webids23.log
+
+# Stage 2
+python3 prepare_honeypot_for_training.py \
+  --input honeypot_from_webids23.log \
+  --outdir prepared_data \
+  --max-payload-len 200 --seed 42 --smote</code></pre>
+
+      <h3 class="sub">RF engineered feature columns (11)</h3>
+      <p class="mono dim">payload_len, entropy, num_special_chars, num_digits, num_uppercase, param_count, is_post, has_sqli_keyword, has_xss_keyword, quote_count, comment_token_count</p>
+
+      <h3 class="sub">LSTM encoding scheme</h3>
+      <ul class="plain">
+        <li>Vocabulary: ordinal ASCII 0&ndash;127</li>
+        <li>0 = PAD, 1 = UNK (out-of-range characters)</li>
+        <li>Fixed sequence length = max_payload_len (default 200), truncated/padded per row</li>
+      </ul>
+    </section>
+
+    <footer>
+      Prepared for internal team use — Team Pseudoers, AI-GIS capstone. Verify all commands against your own environment before execution. Checkbox state is local to this browser tab and resets on reload — this is a working checklist, not a synced tracker.
+    </footer>
+  </main>
+</div>
+
+<script>
+// progress tracking
+function updateProgress(){
+  const boxes = document.querySelectorAll('.checklist input[type=checkbox]');
+  const checked = document.querySelectorAll('.checklist input[type=checkbox]:checked');
+  const total = boxes.length, done = checked.length;
+  const pct = total ? Math.round((done/total)*100) : 0;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('pct-text').textContent = pct + '%';
+  document.getElementById('count-text').textContent = done + ' / ' + total;
+}
+document.querySelectorAll('.checklist input[type=checkbox]').forEach(cb=>{
+  cb.addEventListener('change', updateProgress);
+});
+updateProgress();
+
+// copy buttons
+function copyCode(btn){
+  const code = btn.parentElement.querySelector('code').innerText;
+  navigator.clipboard.writeText(code).then(()=>{
+    const orig = btn.textContent;
+    btn.textContent = 'copied';
+    setTimeout(()=>btn.textContent = orig, 1200);
+  });
+}
+
+// scrollspy for sidebar nav
+const sections = document.querySelectorAll('section.doc-sec');
+const navLinks = document.querySelectorAll('nav.toc a');
+const spy = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(l=>l.classList.toggle('active', l.getAttribute('href') === '#'+id));
+    }
+  });
+}, {rootMargin: '-15% 0px -75% 0px'});
+sections.forEach(s=>spy.observe(s));
+</script>
+
+</body>
+</html>

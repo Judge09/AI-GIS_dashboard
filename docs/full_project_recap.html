@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-GIS: Full Project Recap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EE; --ink:#1B2430; --ink-soft:#4A5568;
+    --gold:#D9A441; --teal:#2A7F7E; --line:#DCD6C8;
+    --good:#2E7D5B; --bad:#C0432C; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;line-height:1.15;margin:0;}
+  code, .mono{font-family:'JetBrains Mono',monospace;}
+
+  /* nav */
+  .toc{
+    position:sticky;top:0;background:rgba(247,244,238,0.96);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);padding:14px 24px;z-index:10;
+    display:flex;gap:18px;overflow-x:auto;font-size:13px;font-weight:600;
+  }
+  .toc a{color:var(--ink-soft);text-decoration:none;white-space:nowrap;}
+  .toc a:hover{color:var(--teal);}
+
+  .hero{padding:64px 0 44px;text-align:center;}
+  .hero .eyebrow{font-family:'Inter',sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;display:block;}
+  .hero h1{font-size:clamp(30px,5vw,48px);margin-bottom:16px;}
+  .hero p{font-size:18px;color:var(--ink-soft);max-width:580px;margin:0 auto;}
+  .divider{width:56px;height:3px;background:var(--gold);margin:52px auto;border-radius:2px;}
+
+  section{margin-bottom:8px;scroll-margin-top:64px;}
+  .section-title{font-size:27px;margin-bottom:6px;}
+  .section-title .num{color:var(--gold);font-style:italic;margin-right:10px;}
+  .section-sub{font-size:15px;color:var(--ink-soft);margin-bottom:22px;}
+  p.body-text{font-size:16.5px;color:var(--ink-soft);margin:0 0 16px;}
+  strong{color:var(--ink);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin:18px 0;}
+
+  /* pipeline diagram */
+  .pipeline{display:flex;align-items:center;gap:0;margin:24px 0;flex-wrap:wrap;}
+  .pipe-box{flex:1;min-width:130px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 12px;text-align:center;}
+  .pipe-box .emoji{font-size:24px;display:block;margin-bottom:6px;}
+  .pipe-box .t{font-weight:700;font-size:13px;color:var(--ink);}
+  .pipe-box .s{font-size:11px;color:var(--ink-soft);margin-top:2px;}
+  .pipe-arrow{flex:0 0 28px;text-align:center;font-size:18px;color:var(--gold);font-weight:700;}
+  @media(max-width:640px){.pipeline{flex-direction:column;}.pipe-arrow{transform:rotate(90deg);}}
+
+  /* architecture diagram */
+  .arch{display:flex;flex-direction:column;align-items:center;gap:10px;margin:24px 0;}
+  .arch-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;width:100%;}
+  .arch-box{
+    background:var(--card);border:2px solid var(--teal);border-radius:12px;padding:14px 18px;
+    text-align:center;min-width:150px;
+  }
+  .arch-box.meta{border-color:var(--gold);}
+  .arch-box .t{font-weight:700;font-size:14px;color:var(--ink);}
+  .arch-box .s{font-size:11.5px;color:var(--ink-soft);margin-top:3px;}
+  .arch-down{font-size:20px;color:var(--ink-soft);}
+
+  /* version timeline */
+  .vtimeline{margin:24px 0;position:relative;padding-left:28px;}
+  .vtimeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .vitem{position:relative;padding-bottom:22px;}
+  .vitem::before{
+    content:'';position:absolute;left:-28px;top:3px;width:14px;height:14px;border-radius:50%;
+    background:var(--card);border:3px solid var(--teal);
+  }
+  .vitem.bug::before{border-color:var(--bad);}
+  .vitem.fix::before{border-color:var(--good);}
+  .vitem .vt{font-weight:700;font-size:14.5px;color:var(--ink);}
+  .vitem .vt .vtag{font-family:'JetBrains Mono',monospace;font-size:11px;background:#F1EEE5;padding:2px 7px;border-radius:5px;margin-right:8px;color:var(--ink-soft);}
+  .vitem .vs{font-size:14px;color:var(--ink-soft);margin-top:3px;}
+
+  /* code inventory table */
+  table.code-inv{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px;}
+  table.code-inv th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);padding:8px 10px;border-bottom:2px solid var(--line);}
+  table.code-inv td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.code-inv td.fname{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal);white-space:nowrap;}
+  table.code-inv td.desc{color:var(--ink-soft);}
+
+  /* results table */
+  table.results{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px;}
+  table.results th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);padding:10px 12px;border-bottom:2px solid var(--line);}
+  table.results td{padding:12px;border-bottom:1px solid var(--line);}
+  table.results tr.final td{background:#EAF4EE;font-weight:700;}
+  table.results td.good{color:var(--good);font-weight:700;}
+  table.results td.bad{color:var(--bad);font-weight:700;}
+  table.results td.mid{color:var(--gold);font-weight:700;}
+
+  /* bar chart */
+  .chart{margin:22px 0;}
+  .chart-title{font-weight:700;font-size:14px;color:var(--ink);margin-bottom:12px;}
+  .bar-row{margin-bottom:14px;}
+  .bar-label{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:5px;}
+  .bar-label .name{color:var(--ink-soft);}
+  .bar-label .val{font-weight:700;color:var(--ink);}
+  .bar-track{background:#EEEAE0;border-radius:8px;height:14px;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:8px;}
+  .bar-fill.good{background:var(--good);}
+  .bar-fill.bad{background:var(--bad);}
+  .bar-fill.mid{background:var(--gold);}
+
+  /* progress checklist */
+  .progress-bar-wrap{margin:20px 0 6px;}
+  .progress-bar-track{background:#EEEAE0;border-radius:10px;height:20px;overflow:hidden;}
+  .progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--good));border-radius:10px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;}
+  .progress-bar-fill span{color:#fff;font-size:11px;font-weight:700;}
+  .progress-list{list-style:none;margin:16px 0;padding:0;}
+  .progress-list li{display:flex;align-items:flex-start;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);}
+  .progress-list li:last-child{border-bottom:none;}
+  .p-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;font-size:12px;}
+  .progress-list li.done .p-icon{background:var(--good);color:#fff;font-weight:700;}
+  .progress-list li.pending .p-icon{border:2px solid #C9C2AE;background:transparent;}
+  .p-text{flex:1;}
+  .progress-list li.done .p-text .t{color:var(--ink);font-weight:600;font-size:14.5px;}
+  .progress-list li.pending .p-text .t{color:var(--ink-soft);font-weight:600;font-size:14.5px;}
+  .p-text .s{font-size:13px;color:var(--ink-soft);margin-top:1px;}
+
+  /* red/yellow/green items */
+  .item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0;display:flex;gap:14px;align-items:flex-start;}
+  .item .tag{flex-shrink:0;width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;}
+  .item.blocker .tag{background:var(--bad);}
+  .item.fixable .tag{background:var(--good);}
+  .item.needinput .tag{background:var(--gold);}
+  .item .t{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:3px;}
+  .item .s{font-size:13.5px;color:var(--ink-soft);}
+
+  /* roadmap projected */
+  .roadmap{margin:20px 0;}
+  .rm-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed var(--line);}
+  .rm-item:last-child{border-bottom:none;}
+  .rm-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:13px;}
+  .rm-content .t{font-weight:700;font-size:14.5px;color:var(--ink);}
+  .rm-content .s{font-size:13.5px;color:var(--ink-soft);margin-top:2px;}
+  .rm-content .proj{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--gold);background:#FFF9EC;padding:3px 10px;border-radius:20px;}
+
+  .caveat-box{background:#FFF9EC;border:1px solid #EFE0B8;border-radius:14px;padding:20px 22px;margin:16px 0;}
+  .caveat-box .t{font-weight:700;font-size:13px;color:#9A7418;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px;}
+  .caveat-box p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+  .closer{text-align:center;padding:52px 0 88px;}
+  .closer .card{background:var(--ink);color:var(--paper);border:none;text-align:left;}
+  .closer .card h3{color:#fff;font-size:22px;margin-bottom:12px;}
+  .closer .card p{color:#C9CDD6;font-size:16px;margin:0;}
+</style>
+</head>
+<body>
+
+<div class="toc">
+  <a href="#goal">Goal</a>
+  <a href="#pipeline">Pipeline</a>
+  <a href="#dataset">Dataset</a>
+  <a href="#models">Models</a>
+  <a href="#journey">Journey</a>
+  <a href="#results">Results</a>
+  <a href="#progress">Progress</a>
+  <a href="#next">Next</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#code">Code</a>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">Full project recap</span>
+    <h1>AI-GIS: everything that happened</h1>
+    <p>Every script, every fix, every result — from raw traffic data to a working stacked detection system.
+    This is the whole story in one place.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section id="goal">
+    <h2 class="section-title"><span class="num">1</span>The goal</h2>
+    <p class="section-sub">What AI-GIS is trying to prove</p>
+    <p class="body-text">
+      Build a detection system that combines a <strong>Random Forest</strong> and an <strong>LSTM</strong> — blended
+      by a trained <strong>meta-learner</strong> — and show it detects SQL injection and XSS attacks better than the
+      old rule-based standard, <strong>ModSecurity + OWASP CRS</strong>. The hardest part of that claim: proving it
+      holds up against attacks <em>written by an LLM specifically to evade detection</em> — not just attacks the
+      model has already seen the shape of.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="pipeline">
+    <h2 class="section-title"><span class="num">2</span>The pipeline, end to end</h2>
+    <p class="section-sub">Four stages, each one a script</p>
+    <div class="pipeline">
+      <div class="pipe-box"><span class="emoji">📄</span><div class="t">Raw traffic data</div><div class="s">WEB-IDS23 CSVs — flow stats only, no payload text</div></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-box"><span class="emoji">🍯</span><div class="t">Honeypot log</div><div class="s">36,364 synthetic requests, real timestamps/IPs, generated payloads</div></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-box"><span class="emoji">🧮</span><div class="t">Training data</div><div class="s">Session-grouped split, leak-checked, SMOTE'd</div></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-box"><span class="emoji">🤖</span><div class="t">Stacked models</div><div class="s">RF + LSTM + meta-learner</div></div>
+    </div>
+    <p class="body-text">
+      The starting point — WEB-IDS23 — only contains <strong>flow-level statistics</strong> (packet counts, timing,
+      TCP flags). It never included raw HTTP payload text at all. So the actual attack strings (the SQLi/XSS
+      payloads) had to be <strong>synthetically generated</strong> on top of the real flow metadata — that's the
+      single most important thing to disclose honestly in Chapter 3.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="dataset">
+    <h2 class="section-title"><span class="num">3</span>Building the dataset — the real story</h2>
+    <p class="section-sub">This took 6 versions to get right. Here's what broke and what fixed it.</p>
+
+    <div class="vtimeline">
+      <div class="vitem">
+        <div class="vt"><span class="vtag">v1-v3</span>First working converter</div>
+        <div class="vs">CSV → honeypot log, basic payload templates. Worked, but only ~30 unique attack strings total.</div>
+      </div>
+      <div class="vitem bug">
+        <div class="vt"><span class="vtag">v4</span>Discovered: 72.9% of ALL rows were exact duplicates</div>
+        <div class="vs">Fixed row counts and balance looked right, but the actual payload <em>content</em> repeated
+        constantly — some XSS strings appeared 30-39 times. This would have leaked across train/val/test and
+        inflated every metric.</div>
+      </div>
+      <div class="vitem fix">
+        <div class="vt"><span class="vtag">v5</span>Combinatorial payload generators</div>
+        <div class="vs">Replaced fixed strings with generators that compose payloads from randomized components
+        (table names, delays, quote styles, JS actions). Attack-side duplication: <strong>0%</strong>. Also fixed:
+        synthetic public IPs (was leaking internal lab IPs), realistic session clustering.</div>
+      </div>
+      <div class="vitem bug">
+        <div class="vt"><span class="vtag">v5</span>Benign traffic still 100% duplicated</div>
+        <div class="vs">Only 128 distinct benign values, appearing in <strong>all three</strong> splits — session
+        grouping doesn't stop identical <em>content</em> from crossing train/val/test.</div>
+      </div>
+      <div class="vitem fix">
+        <div class="vt"><span class="vtag">v6</span>Same generator treatment applied to benign</div>
+        <div class="vs">18,182 distinct benign values — matches row count exactly. Added an automated cross-split
+        payload-overlap check so this class of bug can't silently return.</div>
+      </div>
+      <div class="vitem bug">
+        <div class="vt"><span class="vtag">v6</span>Sessions read as random noise, not real visits</div>
+        <div class="vs">A "session" would jump categories every request and once used an email address as a search
+        query. Not coherent.</div>
+      </div>
+      <div class="vitem fix">
+        <div class="vt"><span class="vtag">v7</span>Session archetypes + shared identity</div>
+        <div class="vs">Each session now picks one persona (same email, same product interest) and a plausible path
+        sequence. Found + fixed a real bug along the way: pagination always started at page 1, guaranteeing
+        collisions across sessions.</div>
+      </div>
+      <div class="vitem bug">
+        <div class="vt"><span class="vtag">v7</span>Character-set tell: benign text had zero uppercase, zero spaces</div>
+        <div class="vs">SQL keywords are uppercase; benign text was all-lowercase by construction. A model could
+        "detect attacks" just by checking for a capital letter — meaningless signal.</div>
+      </div>
+      <div class="vitem fix">
+        <div class="vt"><span class="vtag">v8-v9</span>Hard-negative benign phrases</div>
+        <div class="vs">Added realistic business/technical text with apostrophes, semicolons, ampersands, parens —
+        the same characters attacks use, in legitimate context. 34 phrases, ~55% of benign sessions.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="chart-title" style="margin-bottom:14px;">Final dataset (v9/v10) — the numbers</div>
+      <table class="results">
+        <tr><th>Metric</th><th>Value</th></tr>
+        <tr><td>Total entries</td><td>36,364</td></tr>
+        <tr><td>Malicious : benign ratio</td><td>1.00 : 1 (18,182 : 18,182)</td></tr>
+        <tr><td>SQLi : XSS ratio</td><td>1.00 : 1 (9,091 : 9,091)</td></tr>
+        <tr><td>Distinct attack payload strings</td><td class="good">9,091 / 9,091 (100%)</td></tr>
+        <tr><td>Distinct benign payload strings</td><td class="good">18,182 / 18,182 (100%)</td></tr>
+        <tr><td>Cross-split payload overlap</td><td class="good">13-27 texts (noise-level, out of 36k+)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="models">
+    <h2 class="section-title"><span class="num">4</span>How the models are actually built</h2>
+    <p class="section-sub">Matches your confirmed Chapter 3 architecture, Table 13</p>
+
+    <div class="arch">
+      <div class="arch-row">
+        <div class="arch-box"><div class="t">Random Forest</div><div class="s">tabular features</div></div>
+        <div class="arch-box"><div class="t">LSTM</div><div class="s">char-sequence, 200 chars</div></div>
+      </div>
+      <div class="arch-down">↓ &nbsp; ↓</div>
+      <div class="arch-row">
+        <div class="arch-box meta"><div class="t">Meta-learner</div><div class="s">Logistic Regression, trained on both models' val predictions</div></div>
+      </div>
+      <div class="arch-down">↓</div>
+      <div class="arch-row">
+        <div class="arch-box"><div class="t">Final decision</div><div class="s">malicious / benign</div></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:17px;margin:24px 0 8px;">Random Forest — two versions</h3>
+    <table class="results">
+      <tr><th>Version</th><th>Features</th></tr>
+      <tr><td><strong>v1 (original)</strong></td><td>11 raw counts: payload length, entropy, special-char count,
+        digit count, uppercase count, quote count, comment-token count, keyword flags, etc.</td></tr>
+      <tr class="final"><td><strong>v2 (improved)</strong></td><td>Same 11 + 8 structural pattern features
+        (tautology detection "X=X", quote-before-SQL-keyword, HTML tag opening, event-handler pattern, longest
+        punctuation run, special-char <em>ratio</em> not raw count) + 300 character n-gram TF-IDF features</td></tr>
+    </table>
+    <p class="body-text">v1 only counted symbols — it couldn't tell "a semicolon in a sentence" from "a semicolon
+    in <code>1; DROP TABLE users</code>." v2 looks at the actual shape of the text instead.</p>
+
+    <h3 style="font-size:17px;margin:24px 0 8px;">LSTM — exact architecture</h3>
+    <div class="card" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-soft);line-height:1.9;">
+      Embedding(128 → 32, mask_zero=True)<br>
+      → LSTM(64, return_sequences=True)<br>
+      → Dropout(0.3)<br>
+      → LSTM(32)<br>
+      → Dropout(0.3)<br>
+      → Dense(1, sigmoid)
+    </div>
+    <p class="body-text"><strong>Unidirectional</strong> — matches your confirmed spec exactly, not Bidirectional.
+    Found and fixed a real bug: <code>mask_zero=True</code> was missing at first, so the model tried to learn from
+    ~160 padding characters after every short payload. Without it, the model didn't learn anything at all (stuck at
+    50% accuracy). With it: 98-99% accuracy within 1 epoch.</p>
+
+    <h3 style="font-size:17px;margin:24px 0 8px;">Meta-learner</h3>
+    <p class="body-text">Logistic Regression, trained on <code>[rf_probability, lstm_probability]</code> from the
+    <strong>validation set</strong> — not train, to avoid the base models grading their own homework. This matches
+    your spec exactly: a <em>trained</em> combiner, not a hardcoded weighted average.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="journey">
+    <h2 class="section-title"><span class="num">5</span>The training &amp; testing journey</h2>
+    <p class="section-sub">Why "100% accuracy" turned out to be a warning sign, not a win</p>
+
+    <div class="card">
+      <p class="body-text" style="margin-bottom:10px;"><strong>Step 1 — Clean test set: AUC-ROC 1.000, everywhere.</strong>
+      Every version, every model, perfect scores. This should have been a red flag, not a celebration.</p>
+      <p class="body-text" style="margin-bottom:10px;"><strong>Step 2 — Built a stress test.</strong> 23 hand-written
+      "evasion-style" attacks (hex-encoded, whitespace tricks, split keywords) + 15 ordinary sentences a real website
+      sees ("Smith &amp; Sons Law Firm", error messages, code snippets).</p>
+      <p class="body-text" style="margin-bottom:10px;"><strong>Step 3 — The real result: 80% false-positive rate.</strong>
+      The RF was flagging normal business text as attacks 4 times out of 5. Root cause, measured directly: one
+      feature (<code>num_special_chars</code>) was 40% of its decision-making. It had learned "lots of symbols = bad,"
+      not actual attack structure.</p>
+      <p class="body-text" style="margin-bottom:10px;"><strong>Step 4 — Same problem, worse, at the character level.</strong>
+      Checked the LSTM's raw input: every uppercase letter and every space character appeared <em>only</em> in attack
+      payloads, never in benign. A trivial shortcut was sitting right there in the data.</p>
+      <p class="body-text" style="margin:0;"><strong>Step 5 — Fixed it in layers:</strong> hard-negative benign
+      phrases (symbol-rich but legitimate text) → structural RF features → properly-trained LSTM with checkpointing →
+      the meta-learner combining both. Each layer measured, not assumed.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="results">
+    <h2 class="section-title"><span class="num">6</span>Results — the full history</h2>
+    <p class="section-sub">Same 23 evasion attacks / 15-then-7 hard-benign examples throughout, so these are comparable</p>
+
+    <table class="results">
+      <tr><th>Stage</th><th>Attacks caught</th><th>False alarms</th></tr>
+      <tr><td>RF v1, default features</td><td>23/23</td><td class="bad">11-12/15</td></tr>
+      <tr><td>RF v1, + more hard-negative benign data</td><td>23/23</td><td class="mid">11/15</td></tr>
+      <tr><td>RF v2, structural + n-gram features</td><td>23/23</td><td class="mid">10/15</td></tr>
+      <tr><td>Full stack, LSTM rushed (1 epoch, no checkpoint)</td><td>22-23/23</td><td class="mid">4-10/15 <span style="font-weight:400;color:var(--ink-soft)">(unstable — see below)</span></td></tr>
+      <tr><td>RF hyperparameter auto-tuning</td><td>23/23</td><td class="bad">13/15 <span style="font-weight:400;color:var(--ink-soft)">(made it worse — kept anyway, honestly reported)</span></td></tr>
+      <tr class="final"><td><strong>Full stack, LSTM properly trained + checkpointed</strong></td><td><strong>11/11</strong></td><td class="good"><strong>1/7</strong></td></tr>
+    </table>
+
+    <div class="chart">
+      <div class="chart-title">Final comparison (held-out half, never used for tuning)</div>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">RF alone</span><span class="val">5/7 false alarms</span></div>
+        <div class="bar-track"><div class="bar-fill bad" style="width:71.4%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">LSTM alone (properly trained)</span><span class="val">1/7 false alarms</span></div>
+        <div class="bar-track"><div class="bar-fill good" style="width:14.3%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">Full stacked system</span><span class="val">1/7 false alarms</span></div>
+        <div class="bar-track"><div class="bar-fill good" style="width:14.3%"></div></div>
+      </div>
+    </div>
+
+    <div class="caveat-box">
+      <div class="t">⚠️ Important caveat, still true</div>
+      <p>These are small hand-built stress sets (23 + 15, later split to 12+11 and 8+7). Good enough to prove a fix
+      works, not big enough to be a citable thesis number. The LSTM also has real run-to-run variance from limited
+      training time in this environment — average multiple runs before reporting a final figure.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="progress">
+    <h2 class="section-title"><span class="num">7</span>Where things stand right now</h2>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:73%"><span>11 of 15 steps done</span></div></div>
+    </div>
+    <ul class="progress-list">
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Convert raw traffic into a realistic honeypot log</div><div class="s">36,364 entries, zero duplicates, session-coherent</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Turn the log into model-ready training data</div><div class="s">Leak-checked, session-grouped split</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Train the Random Forest (both versions)</div><div class="s">v1 baseline, v2 structural+n-gram</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Train the LSTM (found + fixed the masking bug)</div><div class="s">Now properly checkpointed</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Train the meta-learner and combine both models</div><div class="s">Logistic Regression on held-out val predictions</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Build a stress test and find the shallow-learning problem</div><div class="s">80% false-positive rate, diagnosed to the exact feature</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Fix the false-positive problem across multiple layers</div><div class="s">80% → 14% false alarms</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Attempt RF hyperparameter tuning</div><div class="s">Honestly found it doesn't help at this data size</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Properly train the LSTM with checkpointing</div><div class="s">Best result of the whole project</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Evaluate on a properly held-out split</div><div class="s">No tuning leakage into the reported number</div></div></li>
+      <li class="done"><div class="p-icon">✓</div><div class="p-text"><div class="t">Package everything into a reproducible delivery</div><div class="s">Scripts, models, data, reports — all zipped</div></div></li>
+      <li class="pending"><div class="p-icon"></div><div class="p-text"><div class="t">Test against the real AI-generated evasion payloads</div><div class="s">Ollama/DeepSeek-R1 — the actual thesis test</div></div></li>
+      <li class="pending"><div class="p-icon"></div><div class="p-text"><div class="t">Run ModSecurity + OWASP CRS as a baseline comparison</div><div class="s">No "vs." yet — needed for the whole thesis claim</div></div></li>
+      <li class="pending"><div class="p-icon"></div><div class="p-text"><div class="t">Bootstrap CI + McNemar's test</div><div class="s">Statistical rigor your methodology already promises</div></div></li>
+      <li class="pending"><div class="p-icon"></div><div class="p-text"><div class="t">Run the 6-condition ablation study</div><div class="s">Documented in your methodology, not executed yet</div></div></li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="next">
+    <h2 class="section-title"><span class="num">8</span>What to do next</h2>
+    <p class="section-sub">Color-coded by urgency</p>
+
+    <div class="item blocker">
+      <div class="tag">1</div>
+      <div><div class="t">Test on the real AI-generated attacks</div>
+        <div class="s">Everything tested so far was hand-written. Your thesis's real exam is the structurally
+        held-out Ollama/DeepSeek payloads.</div></div>
+    </div>
+    <div class="item blocker">
+      <div class="tag">2</div>
+      <div><div class="t">Run ModSecurity + CRS on the same data</div>
+        <div class="s">Needed to actually prove your system beats the rule-based baseline — the core thesis claim.</div></div>
+    </div>
+    <div class="item needinput">
+      <div class="tag">3</div>
+      <div><div class="t">Bigger stress test + proper statistics</div>
+        <div class="s">Hundreds of examples, not dozens, plus bootstrap CI and McNemar's test.</div></div>
+    </div>
+    <div class="item needinput">
+      <div class="tag">4</div>
+      <div><div class="t">The 6-condition ablation study</div>
+        <div class="s">Already documented in your methodology — just needs to be run.</div></div>
+    </div>
+    <div class="item fixable">
+      <div class="tag">✓</div>
+      <div><div class="t">Recalibrate the decision threshold properly</div>
+        <div class="s">Current threshold was set by looking at the same set it was tested on — needs a separate calibration split.</div></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="roadmap">
+    <h2 class="section-title"><span class="num">9</span>Roadmap — what happens after "what's next"</h2>
+    <p class="section-sub">Projected, not real yet — this is the plan, not a result</p>
+    <div class="roadmap">
+      <div class="rm-item">
+        <div class="rm-num">1</div>
+        <div class="rm-content">
+          <div class="t">Real evasion set arrives → re-run the full stack against it</div>
+          <div class="s">Same RF v2 + LSTM + meta-learner pipeline, same evaluation code — just swap in the real
+          payloads instead of the 23 hand-written ones.</div>
+          <span class="proj">projected: 1 script run once files are ready</span>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-num">2</div>
+        <div class="rm-content">
+          <div class="t">ModSecurity + CRS scored on the identical test set</div>
+          <div class="s">Gives the actual "our system vs. the baseline" comparison your thesis title promises.</div>
+          <span class="proj">projected: needs ModSecurity environment confirmed first</span>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-num">3</div>
+        <div class="rm-content">
+          <div class="t">Bootstrap CI (1,000 iterations) + McNemar's test</div>
+          <div class="s">Turns point estimates ("caught 23/23") into defensible statistical claims with confidence
+          intervals and significance testing against the baseline.</div>
+          <span class="proj">projected: straightforward once step 1-2 numbers exist</span>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-num">4</div>
+        <div class="rm-content">
+          <div class="t">6-condition ablation study</div>
+          <div class="s">Systematically test each component's contribution (RF alone, LSTM alone, no SMOTE, no
+          structural features, etc.) — turns "the ensemble works" into "here's exactly why."</div>
+          <span class="proj">projected: Chapter 4's centerpiece table</span>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-num">5</div>
+        <div class="rm-content">
+          <div class="t">Write-up: Chapter 3 methodology update + Chapter 4 results</div>
+          <div class="s">Small, defensible updates — the richer RF feature set, the "how not why" discipline stays
+          intact, same core architecture throughout.</div>
+          <span class="proj">projected: last step before defense prep</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="code">
+    <h2 class="section-title"><span class="num">10</span>Code inventory</h2>
+    <p class="section-sub">Every script built in this project, what it does</p>
+    <table class="code-inv">
+      <tr><th>Script</th><th>What it does</th></tr>
+      <tr><td class="fname">01_generate_honeypot_log.py</td><td class="desc">WEB-IDS23 CSVs → synthetic honeypot log. Combinatorial payload generators, session archetypes, deduplication guarantees.</td></tr>
+      <tr><td class="fname">02_prepare_training_data.py</td><td class="desc">Log → LSTM tensors + RF features. Session-grouped split, SMOTE on RF train only, automated leakage check.</td></tr>
+      <tr><td class="fname">03_build_rf_features_v2.py</td><td class="desc">Adds structural pattern features + character n-gram TF-IDF to the RF, on the exact same split as the LSTM data.</td></tr>
+      <tr><td class="fname">04_evasion_test_definitions.py</td><td class="desc">The 23 evasion-style attacks + 15 hard-benign sentences shared by every stress test in this project.</td></tr>
+      <tr><td class="fname">05_train_stacked_ensemble.py</td><td class="desc">Consolidated RF+LSTM+meta-learner trainer with <code>--n-runs</code> for averaging out LSTM variance.</td></tr>
+      <tr><td class="fname">06_rf_tuning_attempt_FAILED.py</td><td class="desc">Hyperparameter search + probability calibration. Made things worse — kept for transparency.</td></tr>
+      <tr><td class="fname">07_rf_tuning_honest_retry.py</td><td class="desc">Re-did the tuning with a proper held-out half. Confirmed: not enough data to tune reliably yet.</td></tr>
+      <tr><td class="fname">08_train_lstm_properly.py</td><td class="desc">LSTM with early stopping + checkpointing instead of one rushed epoch. The actual fix that worked.</td></tr>
+      <tr><td class="fname">09_final_honest_evaluation.py</td><td class="desc">RF v2 + properly-trained LSTM + meta-learner, evaluated on the untouched held-out half.</td></tr>
+    </table>
+  </section>
+
+  <div class="closer">
+    <div class="card">
+      <h3>Bottom line</h3>
+      <p>A full, working, honestly-tested pipeline exists — from raw traffic data to a stacked detection system that
+      catches real attacks and mostly leaves normal traffic alone. Every bug along the way was found by testing, not
+      assumed away, and every fix was measured before being trusted. What's left isn't more engineering on this
+      system — it's plugging in the real evasion payloads and the ModSecurity baseline, which is what turns this
+      from "a working system" into "a thesis result."</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

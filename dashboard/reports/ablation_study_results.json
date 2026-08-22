@@ -1,0 +1,188 @@
+{
+  "Cond_1_RF_Alone": {
+    "Combined": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "Combined_at_best_threshold": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "threshold": 0.09
+    },
+    "SQLi_Only": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "XSS_Only": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "Cond_2_LSTM_Alone": {
+    "Combined": {
+      "f1": 0.9997,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.9994
+    },
+    "Combined_at_best_threshold": {
+      "f1": 0.9998,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.9997,
+      "threshold": 0.13
+    },
+    "SQLi_Only": {
+      "f1": 0.9997,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.9995
+    },
+    "XSS_Only": {
+      "f1": 0.9996,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.9992
+    }
+  },
+  "Cond_3_LR_11_Base_Feats": {
+    "Combined": {
+      "f1": 0.9888,
+      "fpr": 0.0087,
+      "auc_roc": 0.9991,
+      "precision": 0.9925,
+      "recall": 0.9851
+    },
+    "Combined_at_best_threshold": {
+      "f1": 0.9896,
+      "fpr": 0.0112,
+      "auc_roc": 0.9991,
+      "precision": 0.9904,
+      "recall": 0.9888,
+      "threshold": 0.41
+    },
+    "SQLi_Only": {
+      "f1": 0.9834,
+      "fpr": 0.0087,
+      "auc_roc": 0.999,
+      "precision": 0.9873,
+      "recall": 0.9795
+    },
+    "XSS_Only": {
+      "f1": 0.9876,
+      "fpr": 0.0087,
+      "auc_roc": 0.9992,
+      "precision": 0.982,
+      "recall": 0.9932
+    }
+  },
+  "Cond_4_RF_Plus_Meta_No_LSTM": {
+    "Combined": {
+      "f1": 0.9969,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.9938
+    },
+    "Combined_at_best_threshold": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "threshold": 0.01
+    },
+    "SQLi_Only": {
+      "f1": 0.9958,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.9916
+    },
+    "XSS_Only": {
+      "f1": 0.9985,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.997
+    }
+  },
+  "Cond_5_LSTM_Plus_Meta_No_RF": {
+    "Combined": {
+      "f1": 0.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "Combined_at_best_threshold": {
+      "f1": 0.9998,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 0.9997,
+      "threshold": 0.01
+    },
+    "SQLi_Only": {
+      "f1": 0.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "XSS_Only": {
+      "f1": 0.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  },
+  "Cond_6_Full_Stacked_Ensemble": {
+    "Combined": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "Combined_at_best_threshold": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "threshold": 0.01
+    },
+    "SQLi_Only": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "XSS_Only": {
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auc_roc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  }
+}

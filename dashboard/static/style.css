@@ -10,14 +10,14 @@ code, .mono{font-family:'JetBrains Mono',monospace;}
 a{color:inherit;}
 
 .topnav{background:var(--ink);position:sticky;top:0;z-index:10;}
-.topnav-inner{max-width:1000px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:36px;}
+.topnav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
 .brand{font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:18px;text-decoration:none;}
-.navlinks{display:flex;gap:22px;}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap;}
 .navlinks a{color:#B8BFC9;text-decoration:none;font-size:14px;font-weight:600;padding:4px 0;border-bottom:2px solid transparent;}
 .navlinks a:hover{color:#fff;}
 .navlinks a.active{color:var(--gold);border-bottom-color:var(--gold);}
 
-.wrap{max-width:1000px;margin:0 auto;padding:36px 24px 72px;}
+.wrap{max-width:1180px;margin:0 auto;padding:36px 24px 72px;}
 
 .page-title{font-size:30px;margin-bottom:6px;}
 .page-sub{font-size:15px;color:var(--ink-soft);margin-bottom:28px;}
@@ -77,3 +77,34 @@ button.primary:disabled{opacity:0.5;cursor:not-allowed;}
 .prob-bar-fill{height:100%;border-radius:8px;background:var(--teal);transition:width 0.4s ease;}
 
 .family-table td:first-child{font-weight:600;}
+
+
+/* ---- Added for the evaluation pages (baseline / statistics / ablation / llm) ---- */
+
+/* Shown when a reports/*.json artifact hasn't been generated yet. */
+.notice{background:#FFF8E6;border:1px solid var(--gold);border-left:4px solid var(--gold);
+  border-radius:12px;padding:18px 22px;margin:16px 0;}
+.notice h3{margin:0 0 8px;font-size:15px;}
+.notice p{margin:6px 0;font-size:14px;color:var(--ink-soft);}
+.notice code{font-family:'JetBrains Mono',monospace;font-size:13px;background:#fff;
+  padding:2px 6px;border-radius:5px;border:1px solid var(--line);}
+
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+
+/* Verdict pills for significance / win-loss cells */
+.pill{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;padding:3px 10px;border-radius:999px;}
+.pill-good{background:#E3F1E9;color:#1F6B47;}
+.pill-bad{background:#FBE6E2;color:#983020;}
+.pill-warn{background:#FBF0D9;color:#8A6314;}
+.pill-neutral{background:#ECEEF1;color:var(--ink-soft);}
+
+.win{color:#1F6B47;font-weight:700;}
+.lose{color:#983020;font-weight:700;}
+
+/* Tables on the eval pages scroll rather than squashing the layout */
+.table-scroll{overflow-x:auto;}
+.table-scroll table{min-width:560px;}
+
+.metric-note{font-size:13px;color:var(--ink-soft);margin-top:14px;}
+.mono{font-family:'JetBrains Mono',monospace;font-size:13px;}

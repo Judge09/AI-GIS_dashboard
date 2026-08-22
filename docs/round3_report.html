@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What happened this round</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EE; --ink:#1B2430; --ink-soft:#4A5568;
+    --gold:#D9A441; --teal:#2A7F7E; --line:#DCD6C8;
+    --good:#2E7D5B; --bad:#C0432C; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;line-height:1.15;margin:0;}
+  .hero{padding:80px 0 48px;text-align:center;}
+  .hero .eyebrow{font-family:'Inter',sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;display:block;}
+  .hero h1{font-size:clamp(30px,5vw,46px);margin-bottom:16px;}
+  .hero p{font-size:18px;color:var(--ink-soft);max-width:540px;margin:0 auto;}
+  .divider{width:56px;height:3px;background:var(--gold);margin:52px auto;border-radius:2px;}
+  section{margin-bottom:8px;}
+  .section-title{font-size:25px;margin-bottom:16px;}
+  .section-title .num{color:var(--gold);font-style:italic;margin-right:10px;}
+  p.body-text{font-size:16.5px;color:var(--ink-soft);margin:0 0 16px;}
+  strong{color:var(--ink);}
+
+  .timeline{margin:22px 0;}
+  .tl-item{
+    display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);
+  }
+  .tl-item:last-child{border-bottom:none;}
+  .tl-badge{
+    flex-shrink:0;width:70px;text-align:center;padding:6px 4px;border-radius:10px;
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;height:fit-content;
+  }
+  .tl-badge.tried{background:#F1EEE5;color:var(--ink-soft);}
+  .tl-badge.failed{background:#FBEAE5;color:var(--bad);}
+  .tl-badge.worked{background:#EAF4EE;color:var(--good);}
+  .tl-content .t{font-weight:700;font-size:16px;color:var(--ink);margin-bottom:6px;}
+  .tl-content .s{font-size:15px;color:var(--ink-soft);}
+  .tl-content .s b{color:var(--ink);}
+
+  .headline-stat{
+    display:flex;align-items:center;justify-content:center;gap:30px;
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:32px 24px;margin:22px 0;flex-wrap:wrap;
+  }
+  .hs-item{text-align:center;}
+  .hs-item .n{font-family:'Fraunces',serif;font-weight:700;font-size:40px;line-height:1;}
+  .hs-item.before .n{color:var(--bad);}
+  .hs-item.after .n{color:var(--good);}
+  .hs-item .l{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-top:8px;max-width:140px;}
+  .hs-arrow{font-size:26px;color:var(--gold);}
+
+  table.results{width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px;}
+  table.results th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);
+    padding:10px 12px;border-bottom:2px solid var(--line);}
+  table.results td{padding:12px;border-bottom:1px solid var(--line);}
+  table.results tr:last-child td{border-bottom:none;background:#EAF4EE;font-weight:700;}
+  table.results td.good{color:var(--good);font-weight:700;}
+  table.results td.bad{color:var(--bad);font-weight:700;}
+
+  .caveat-box{
+    background:#FFF9EC;border:1px solid #EFE0B8;border-radius:14px;padding:22px 24px;margin:18px 0;
+  }
+  .caveat-box .t{font-weight:700;font-size:14px;color:#9A7418;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
+  .caveat-box p{margin:0;font-size:15px;color:var(--ink-soft);}
+
+  .closer{text-align:center;padding:52px 0 88px;}
+  .closer .card{background:var(--ink);color:var(--paper);border:none;text-align:left;border-radius:16px;padding:26px 28px;}
+  .closer .card h3{color:#fff;font-size:22px;margin-bottom:12px;}
+  .closer .card p{color:#C9CDD6;font-size:16px;margin:0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">What happened this round</span>
+    <h1>Tried 2 things. 1 failed honestly. 1 worked.</h1>
+    <p>You asked "can we improve the model itself?" Here's exactly what I tried, including the part that didn't work — and the part that gave the best result yet.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="section-title"><span class="num">1</span>What I tried, in order</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-badge failed">didn't work</div>
+        <div class="tl-content">
+          <div class="t">Auto-search for better Random Forest settings</div>
+          <div class="s">I let the computer try lots of different RF settings and pick the "best" one automatically.
+          Problem: the way it judged "best" was on the easy practice test — where <b>almost every setting scores
+          a perfect 100%</b>. So it couldn't actually tell a good setting from a bad one. Result: it picked a setting
+          that looked perfect on paper and did <b>worse</b> in real testing.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-badge failed">made it worse</div>
+        <div class="tl-content">
+          <div class="t">Tried to "smooth out" the model's confidence scores</div>
+          <div class="s">A common trick to make confidence scores more trustworthy. Here it backfired — false alarms
+          went from 10 out of 15 up to <b>13 out of 15</b>. I didn't hide this — it's a real result, it just didn't help.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-badge tried">tried honestly</div>
+        <div class="tl-content">
+          <div class="t">Re-did the RF search the honest way</div>
+          <div class="s">Split the test examples in half — used one half to search for good settings, saved the
+          other half untouched, to check afterward if it actually worked. It didn't: the "improved" version scored
+          <b>exactly the same</b> as the plain version on the untouched half. Just not enough test examples yet to
+          reliably tune anything — confirms something already flagged as a to-do.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-badge worked">this one worked</div>
+        <div class="tl-content">
+          <div class="t">Trained the LSTM model properly instead of rushing it</div>
+          <div class="s">Earlier, the LSTM only got one quick, incomplete training pass — that's why its score kept
+          jumping around between tests. This time: trained it with a "save your best work" checkpoint, so it doesn't
+          lose progress. Result: the <b>best score of the entire project so far.</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="section-title"><span class="num">2</span>The headline result</h2>
+    <p class="body-text">False alarms, tested on completely untouched examples (never used to tune anything):</p>
+    <div class="headline-stat">
+      <div class="hs-item before"><div class="n">5/7</div><div class="l">Random Forest alone</div></div>
+      <div class="hs-arrow">→</div>
+      <div class="hs-item after"><div class="n">1/7</div><div class="l">Full team (RF + LSTM + meta-learner)</div></div>
+    </div>
+    <p class="body-text">
+      And it still caught <strong>100% of the attacks</strong> (11 out of 11) while doing it. This is the best
+      balance of "catches attacks" vs. "doesn't cry wolf" we've had in the whole project.
+    </p>
+
+    <table class="results">
+      <tr><th>Model</th><th>Attacks caught</th><th>False alarms</th></tr>
+      <tr><td>Random Forest alone</td><td>11/11</td><td class="bad">5/7</td></tr>
+      <tr><td>LSTM — properly trained this time</td><td>10/11</td><td class="good">1/7</td></tr>
+      <tr><td>Full team together</td><td>11/11</td><td class="good">1/7</td></tr>
+    </table>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="section-title"><span class="num">3</span>The real lesson here</h2>
+    <p class="body-text">
+      Fiddling with the Random Forest's settings didn't help — <strong>the model wasn't the problem, rushed training
+      was.</strong> The LSTM was never bad at its job; it just never got a proper chance to learn. Giving it that
+      chance mattered more than any amount of setting-tweaking.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="section-title"><span class="num">4</span>Don't get too excited yet</h2>
+    <div class="caveat-box">
+      <div class="t">⚠️ Still true</div>
+      <p><strong>7 examples is still a tiny test.</strong> "1 out of 7" could easily be "1 out of 70" or "3 out of 70"
+      with more data — this proves the <em>fix works</em>, it's not yet a number you can put in your thesis. The real
+      test is still your AI-generated attack files, and still nobody's run ModSecurity for comparison. Those two are
+      still the big blockers — this round just made everything else stronger while we wait on them.</p>
+    </div>
+  </section>
+
+  <div class="closer">
+    <div class="card">
+      <h3>Bottom line</h3>
+      <p>Tried the obvious "tune the settings" approach first — it didn't work, and I said so. What actually worked
+      was slowing down and training the LSTM properly instead of rushing it. That's now the best-performing version
+      of the system so far: catches everything, rarely cries wolf. Saved and ready to build on.</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

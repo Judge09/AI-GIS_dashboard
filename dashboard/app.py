@@ -11,6 +11,10 @@ Routes:
   /predict     POST endpoint used by the tester (JSON in, JSON out)
   /evasion     browse the real (23+15) and mock (150+150) evasion results
   /dataset     browse sample rows from the honeypot log
+  /baseline    ModSecurity + OWASP CRS baseline vs AI-GIS
+  /statistics  bootstrap 95% CIs + McNemar's test (Chapter 3 rigour)
+  /ablation    6-condition ablation study
+  /llm         results against the LLM-generated evasion corpus
 """
 
 import json
@@ -53,6 +57,28 @@ with open(BASE / "data" / "results.json") as f:
     RESULTS = json.load(f)
 with open(BASE / "data" / "mock_attacker_results.json") as f:
     MOCK_RESULTS = json.load(f)
+
+# ---------------------------------------------------------------------------
+# Evaluation artifacts produced by scripts/11-14.
+# These are optional: each page renders a "not generated yet" state instead of
+# crashing, so the app still runs on a fresh clone before the pipeline is run.
+# ---------------------------------------------------------------------------
+REPORTS = BASE / "reports"
+
+
+def load_report(name):
+    """Return parsed JSON from reports/<name>, or None if it hasn't been generated."""
+    path = REPORTS / name
+    if not path.exists():
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            # NaN appears in the ModSec report (AUC is undefined for binary output).
+            return json.loads(f.read().replace("NaN", "null"))
+    except (json.JSONDecodeError, OSError) as exc:
+        print(f"[warn] could not read {path.name}: {exc}")
+        return None
+
 
 print("Models loaded. Ready.")
 
@@ -154,6 +180,57 @@ def dataset():
             if len(samples["malicious"]) >= 40 and len(samples["benign"]) >= 40:
                 break
     return render_template("dataset.html", samples=samples, active="dataset")
+
+
+@app.route("/baseline")
+def baseline():
+    """ModSecurity + OWASP CRS baseline vs the AI-GIS stacked ensemble."""
+    modsec = load_report("modsec_baseline_results.json")
+    return render_template(
+        "baseline.html",
+        modsec=modsec,
+        ai_clean=RESULTS["clean_test"]["Stacked"],
+        ai_stress=RESULTS["stress_test"]["Stacked"],
+        active="baseline",
+    )
+
+
+@app.route("/statistics")
+def statistics():
+    """Bootstrap 95% confidence intervals and McNemar's test."""
+    return render_template(
+        "statistics.html",
+        stats=load_report("statistical_significance.json"),
+        active="statistics",
+    )
+
+
+@app.route("/ablation")
+def ablation():
+    """6-condition ablation study: what each component actually contributes."""
+    raw = load_report("ablation_study_results.json")
+    conditions = None
+    if raw:
+        # Keys look like "Cond_3_LR_11_Base_Feats" -> "LR 11 Base Feats"
+        conditions = [
+            {"key": k,
+             "label": " ".join(k.split("_")[2:]),
+             "metrics": v.get("Combined", {})}
+            for k, v in raw.items()
+        ]
+    return render_template("ablation.html", conditions=conditions, active="ablation")
+
+
+@app.route("/llm")
+def llm():
+    """Detection results against the LLM-generated evasion corpus."""
+    modsec = load_report("modsec_baseline_results.json")
+    return render_template(
+        "llm.html",
+        report=load_report("llm_corpus_results.json"),
+        modsec_llm=(modsec or {}).get("llm_corpus"),
+        active="llm",
+    )
 
 
 if __name__ == "__main__":

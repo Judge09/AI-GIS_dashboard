@@ -32,3 +32,8 @@ dashboard/data/prepared/*.npz
 # ...but keep the two files the app needs at runtime:
 !dashboard/data/prepared/rf_train_v2.csv
 !dashboard/data/honeypot_final.log
+
+# ---- Evaluation artifacts (regenerable via scripts/11-15) ----
+# Committed: they are the numbers the dashboard reports and the thesis cites.
+!dashboard/reports/*.json
+!dashboard/data/llm_evasion_corpus.csv

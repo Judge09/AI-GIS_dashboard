@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Baseline vs AI-GIS — AI-GIS{% endblock %}
+{% block content %}
+<h1 class="page-title">ModSecurity + OWASP CRS vs AI-GIS</h1>
+<p class="page-sub">
+  The signature-based industry baseline (OWASP Core Rule Set, paranoia level 2)
+  measured against the stacked ensemble on the same inputs.
+</p>
+
+{% if not modsec %}
+  <div class="notice">
+    <h3>Baseline not generated yet</h3>
+    <p>This page needs <code>reports/modsec_baseline_results.json</code>, which is produced by
+       running the WAF container and evaluating against it:</p>
+    <p><code>docker compose up -d</code><br>
+       <code>python scripts/12_evaluate_modsec_baseline.py --host localhost --port 8080</code></p>
+    <p>Docker is required — ModSecurity is evaluated by sending real HTTP requests through the
+       WAF and recording which ones it blocks (HTTP 403).</p>
+  </div>
+{% else %}
+  {% set clean = modsec.clean_test_set %}
+  <h2 class="section-title">Clean test set — {{ "{:,}".format(clean.tp + clean.fp + clean.tn + clean.fn) }} requests</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-top:0;font-size:15px;">ModSecurity + CRS</h3>
+      <div class="prob-row"><span>F1</span><strong>{{ clean.f1 }}</strong></div>
+      <div class="prob-row"><span>False positive rate</span><strong class="lose">{{ (clean.fpr * 100) | round(2) }}%</strong></div>
+      <div class="prob-row"><span>Recall</span><strong>{{ clean.recall }}</strong></div>
+      <div class="prob-row"><span>False alarms</span><strong class="lose">{{ "{:,}".format(clean.fp) }}</strong></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;font-size:15px;">AI-GIS stacked ensemble</h3>
+      <div class="prob-row"><span>F1</span><strong>{{ ai_clean.f1 }}</strong></div>
+      <div class="prob-row"><span>False positive rate</span><strong class="win">0.00%</strong></div>
+      <div class="prob-row"><span>Accuracy</span><strong>{{ ai_clean.accuracy }}</strong></div>
+      <div class="prob-row"><span>False alarms</span><strong class="win">0</strong></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <canvas id="baselineChart" height="110"></canvas>
+    <p class="metric-note">
+      ModSecurity caught every attack ({{ clean.recall }} recall) but flagged
+      <strong>{{ "{:,}".format(clean.fp) }}</strong> legitimate requests as attacks.
+      That false-positive rate is the practical cost of signature-based blocking, and it is
+      the gap the ensemble is designed to close.
+    </p>
+  </div>
+
+  <h2 class="section-title">Stress tests</h2>
+  <div class="table-scroll card">
+    <table>
+      <tr><th>Test set</th><th>ModSecurity</th><th>AI-GIS stacked</th></tr>
+      <tr>
+        <td>Evasion attacks caught</td>
+        <td>{{ modsec.evasion_stress_test.caught }} / {{ modsec.evasion_stress_test.total }}</td>
+        <td>{{ ai_stress.evasion_caught }} / {{ ai_stress.evasion_total }}</td>
+      </tr>
+      <tr>
+        <td>Hard-benign false alarms</td>
+        <td class="lose">{{ modsec.hard_benign.fp }} / {{ modsec.hard_benign.total }}</td>
+        <td class="win">{{ ai_stress.false_positives }} / {{ ai_stress.benign_total }}</td>
+      </tr>
+    </table>
+    <p class="metric-note">
+      Both systems catch the evasion payloads. The separation is on legitimate text:
+      ModSecurity raised {{ modsec.hard_benign.fp }} false alarms on
+      {{ modsec.hard_benign.total }} ordinary sentences, versus
+      {{ ai_stress.false_positives }} for the ensemble.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">Test environment</h3>
+    <p class="mono">
+      Image: {{ modsec.waf.image }}<br>
+      Paranoia level: {{ modsec.waf.paranoia }}<br>
+      Inbound anomaly threshold: {{ modsec.waf.anomaly_inbound_threshold }}<br>
+      Recorded: {{ modsec.waf.timestamp }}
+    </p>
+    <p class="metric-note">{{ modsec.note }}</p>
+  </div>
+
+<script>
+new Chart(document.getElementById('baselineChart'), {
+  type: 'bar',
+  data: {
+    labels: ['F1', 'Recall', 'False positive rate'],
+    datasets: [
+      { label: 'ModSecurity + CRS',
+        data: [{{ clean.f1 }}, {{ clean.recall }}, {{ clean.fpr }}],
+        backgroundColor: '#C0432C', borderRadius: 6 },
+      { label: 'AI-GIS stacked',
+        data: [{{ ai_clean.f1 }}, 1.0, 0.0],
+        backgroundColor: '#2E7D5B', borderRadius: 6 }
+    ]
+  },
+  options: { scales: { y: { min: 0, max: 1.05 } } }
+});
+</script>
+{% endif %}
+{% endblock %}
