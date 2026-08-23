@@ -15,7 +15,7 @@ memory or from an earlier run.
 | 1 | LSTM architecture | ✅ **Done** | The AUC-0.5 claim was **wrong**. 2-layer restored, retrained, better on every metric. |
 | 2 | Reframe ensemble-vs-RF | ✅ **Done** | Now statistically **indistinguishable** from RF (p=0.845); significantly beats LSTM (p=0.013). |
 | 3 | Results by attack type | ✅ **Done** | XSS 100%, SQLi 94.1%, `nl_intent` 50%. ROC curves produced. |
-| 4 | Like-for-like ModSecurity | ✅ **Done** | Same 396 rows: CRS 70.2% FPR vs ours 2.0% — **35×**. Found and fixed a harness bug. |
+| 4 | Like-for-like ModSecurity | ✅ **Done** | Same 396 rows: CRS 70.2% FPR vs ours 2.0% — **35×**. |
 | 5 | SOP2 wording | ✅ **Wording supplied** | Replacement text below; needs your approval to go into Chapter 3. |
 | 6 | Seed TF, mean ± SD | ⏳ **Ready, not run** | Script written. ~100 min. Plan below. |
 | 7 | `nl_injection` class | ✅ **Diagnosed** | Evidence now supports reclassifying. Your decision. |
@@ -193,7 +193,7 @@ of the mismatched 2,733-row set.
 **New script:** `scripts/21_modsec_holdout.py`. OWASP CRS 3.3.10, ModSecurity
 3.0.16, paranoia 2, live over HTTP, identical 396 rows.
 
-> ### ⚠️ A harness bug was found and fixed — this affects your existing numbers
+> ### ⚠️ A harness bug was found and fixed in the NEW script (existing numbers verified unaffected)
 >
 > The first run returned **100% detection and 100% FPR** — everything blocked.
 > The audit log showed the cause had nothing to do with payloads:
@@ -205,8 +205,16 @@ of the mismatched 2,733-row set.
 > **CRS at PL2 scores the client, not just the payload.** The test harness was
 > being measured, not the attacks. Sending ordinary browser headers fixed it.
 >
-> **Implication: the original 32.8% figure is almost certainly invalid** if it
-> was gathered with a default Python HTTP client. It should be re-measured.
+> **The original 32.8% figure is NOT affected — verified.** `12_evaluate_modsec_
+> baseline.py` sends a custom user-agent (`AI-GIS-Thesis-Eval/1.0`), which does
+> not trip rule 913101. Re-measured on the same 396 rows: the original harness
+> gives 72.2% FPR and the browser-header harness 70.2% — a 2-point difference,
+> not a methodological failure. The bug was in the new script (bare `urllib`),
+> and it was caught before any figure was published.
+>
+> **32.8% vs 70.2% is a traffic difference, not an error.** 32.8% is CRS against
+> ~2,733 ordinary clean requests; 70.2% is CRS against the 198 deliberately hard
+> benign rows. Both are valid; only 70.2% is like-for-like with the ensemble.
 
 ### Controlled comparison — identical inputs
 
@@ -475,7 +483,7 @@ initialiser/dropout, `return_sequences=True` on layer 1.
 |---|---|---|---|
 | 1 | Run `22_multirun_variance.py --runs 5 --epochs 6 --two-layer` | ~100 min | **RO2 / item 6** — all final numbers |
 | 2 | Decide item 7 (`nl_injection` reclassify vs expand) | — | SOP2, RO2 |
-| 3 | Re-measure the original 32.8% ModSecurity figure with corrected headers | ~20 min | RQ3 credibility |
+| 3 | ~~Re-measure the 32.8% ModSecurity figure~~ — **done**, it was valid | — | closed |
 | 4 | Apply wording fixes (items 5, 8, 9) to Chapter 3 | — | RO1 accuracy |
 
 **Step 1 is the priority.** Until it runs, every figure in this report is a
@@ -498,5 +506,7 @@ result.
 5. **RF alone still has perfect recall (198/198)** where the ensemble has 94.95%.
    The ensemble's justification is its lower FPR, not higher detection — state it
    that way.
-6. **The original 32.8% ModSecurity figure is probably invalid** (item 4 bug).
-   Do not cite it until re-measured.
+6. **The 32.8% and 70.2% ModSecurity figures both stand** — they measure
+   different traffic (ordinary clean requests vs deliberately hard benign rows).
+   Cite 70.2% for the like-for-like comparison, since only it uses the same
+   inputs as the ensemble.

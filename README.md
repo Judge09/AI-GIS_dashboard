@@ -177,11 +177,17 @@ Read this before presenting the project anywhere.
 - **The LLM evasion corpus is weak evidence.** 23 payloads from a 1.5B-parameter
   local model (`qwen2.5-coder:1.5b`); 91% came back using one obfuscation
   technique, and several generations are near-identical to their inputs.
-- **A previously reported 32.8% ModSecurity false-positive rate is likely
-  invalid.** CRS at paranoia 2 scores the *client*, not just the payload: a
-  default Python HTTP client trips the scanner-detection rule and the missing
-  `Accept` header, exceeding the block threshold before the payload is
-  evaluated. The 70.2% figure above was measured with browser headers.
+- **The 32.8% and 70.2% ModSecurity false-positive rates are both valid — they
+  measure different traffic.** 32.8% is CRS against ~2,733 ordinary clean
+  requests; 70.2% is CRS against the 198 deliberately hard benign rows (source
+  code, apostrophe surnames, angle brackets in prose). Only the 70.2% figure is
+  like-for-like with the ensemble's 2.0%, because only it uses identical inputs.
+  Note that CRS at paranoia 2 also scores the *client*: a default Python HTTP
+  client trips scanner-detection (rule 913101) and the missing `Accept` header
+  (920300), which alone exceeds the block threshold. Both measurements above
+  avoid this — the original harness sends a custom user-agent, and the
+  like-for-like harness sends full browser headers (re-measured: 72.2% vs 70.2%,
+  a 2-point difference).
 - **`mock_attacker_results.json` and the mock `.jsonl` profiles are
   placeholders**, not real model output. Do not cite them.
 - This runs on Flask's development server — **do not expose it to the internet

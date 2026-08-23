@@ -199,10 +199,18 @@ the ensemble is scored on.
 > - Anomaly score **7 ≥ 5** → blocked in phase 2, before payload evaluation
 >
 > **CRS at PL2 scores the client, not just the payload.** The harness was being
-> measured, not the attacks. Sending ordinary browser headers fixed it. Any
-> earlier ModSecurity number gathered with a default Python client is
-> **invalid** and should be re-measured — this likely affects the original
-> 32.8% figure too.
+> measured, not the attacks. Sending ordinary browser headers fixed it.
+>
+> **The original 32.8% figure is NOT affected — verified by re-measurement.**
+> `12_evaluate_modsec_baseline.py` sends a custom user-agent
+> (`AI-GIS-Thesis-Eval/1.0`) which does not trip rule 913101. Re-run on the same
+> 396 rows: original harness **72.2%** FPR vs browser-header harness **70.2%** —
+> a 2-point difference, not a methodological failure. The bug was in the new
+> script only (bare `urllib`), and was caught before any figure was published.
+>
+> **32.8% vs 70.2% is a traffic difference, not an error.** 32.8% is CRS against
+> ~2,733 ordinary clean requests; 70.2% is CRS against the 198 deliberately hard
+> benign rows. Both are valid; only 70.2% is like-for-like with the ensemble.
 
 ### Like-for-like result — identical 396 rows
 
@@ -433,6 +441,8 @@ Obfuscation is a solved problem for this detector; **semantics is not.**
    estimate, not a final number.
 2. **Decide item 7** (`nl_injection`) — the per-type evidence supports
    reclassifying it as evaluation-only.
-3. **Re-measure the original 32.8% ModSecurity figure** with the corrected
-   browser headers — the old number is almost certainly a harness artefact.
+3. ~~Re-measure the 32.8% ModSecurity figure~~ — **done; it was valid.**
+   Original harness 72.2% vs browser-header 70.2% on identical rows. The 32.8%
+   figure measures different traffic (ordinary clean requests), not a broken
+   harness. Cite 70.2% for the like-for-like claim.
 4. Apply the wording fixes (items 5, 8, 9) to Chapter 3.
