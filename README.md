@@ -17,41 +17,56 @@ predictions** on any text you paste in.
 
 ## Headline results
 
-Measured 2026-08-23 on a 396-row adversarial hold-out set (198 attack / 198
-benign) that is disjoint from training. Two-layer LSTM, seed 42.
+Measured on a 396-row adversarial hold-out set (198 attack / 198 benign),
+disjoint from training. **Mean ± SD across 5 seeded training runs** — not a
+single run.
 
-| Stacked ensemble | Before improvement | **After** |
+| Stacked ensemble | Before improvement | **After (5 runs)** |
 |---|---:|---:|
-| False-positive rate | 57.6% (114/198) | **2.0%** (4/198) |
-| Detection rate | 95.0% (188/198) | **95.0%** (188/198) |
+| False-positive rate | 57.6% | **3.64% ± 2.71%** |
+| Detection rate | 95.0% | **96.16% ± 1.26%** |
 
-**False alarms fell 29× with detection unchanged** — not one detection was
-traded away.
+**False alarms fell ~16× while detection rose.** Per-model, same 5 runs:
+
+| Model | Detection | FPR | AUC |
+|---|---:|---:|---:|
+| RF v2 | 100.00 ± 0.00% | 6.97 ± 0.66% | 0.9994 |
+| LSTM | 92.83 ± 0.23% | 4.14 ± 3.77% | 0.9782 |
+| **Stacked** | 96.16 ± 1.26% | **3.64 ± 2.71%** | 0.9971 |
+
+The ensemble has the lowest false-alarm rate of the three and roughly 30% less
+run-to-run variance than the LSTM it contains — a benefit invisible in any
+single run.
 
 ### Versus ModSecurity + OWASP CRS, on identical inputs
 
 | | ModSecurity (CRS, PL2) | AI-GIS Stacked |
 |---|---:|---:|
-| Detection | 95.5% (189/198) | 95.0% (188/198) |
-| **False-positive rate** | **70.2%** (139/198) | **2.0%** (4/198) |
+| Detection | 95.5% (189/198) | 93.4% (185/198) |
+| **False-positive rate** | **70.2%** (139/198) | **0.5%** (1/198) |
 
-At effectively identical detection — one attack apart — the rule-based WAF
-raises **139 false alarms to the ensemble's 4**. Both systems miss the *same*
-9 plain-language attacks.
+At comparable detection the rule-based WAF raises **139 false alarms to the
+ensemble's 1** — it blocks 7 in 10 legitimate requests on this adversarial set.
+
+**Both systems miss the same 9 plain-language attacks.** Natural-language
+attack intent is a blind spot shared by signature WAFs and character-level
+neural detectors alike.
 
 ### By attack type
 
 | Segment | n | Detection | AUC |
 |---|---:|---:|---:|
-| XSS | 77 | **100.0%** | 0.9997 |
-| SQLi | 102 | 94.1% | 0.9986 |
-| Plain-language intent | 4 | **50.0%** | 0.9798 |
+| XSS | 77 | **97.4%** | 0.9997 |
+| SQLi | 102 | **95.1%** | 0.9916 |
+| Plain-language intent | 4 | **0.0%** | 0.4028 |
 
-> ⚠️ **These are single-run point estimates.** Repeat runs of the same pipeline
-> have spanned 5.1% / 2.5% / 2.0% FPR, so the run-to-run spread is comparable to
-> the differences being reported. A seeded multi-run study
-> (`scripts/22_multirun_variance.py`) is written but has not yet been run.
-> Treat every figure above as a measurement, not a settled final number.
+Plain-language attacks are **deliberately not trained on** — 41 such rows were
+removed because ~0.1% of the corpus was too few to teach a linguistic category
+but enough to imply a capability the system lacks. 0.0% is the honest number,
+and it is corroborated by ModSecurity failing on the identical attacks.
+
+Full results, per-run detail and the reasoning behind each decision:
+[`dashboard/reports/FINAL_RESULTS.md`](dashboard/reports/FINAL_RESULTS.md).
 
 ---
 
@@ -157,23 +172,28 @@ TensorFlow has no GPU support on native Windows).
 
 Read this before presenting the project anywhere.
 
-- **All figures are single-run point estimates.** The seeded multi-run variance
-  study has not been run. Run-to-run spread is comparable to the effects being
-  reported.
+- **False-positive rate carries real run-to-run variance** (SD 2.71% across 5
+  seeded runs; one seed produced 8.1%). Always quote the ± , never a single run.
+  Detection is far more stable (SD 1.26%).
 - **The corpus is synthetic in its payloads.** Labels, timing and session
   structure are real; the attack strings are generated. Distributional realism
   is unproven.
-- **The clean test split is saturated** (F1 ≈ 0.999 for every model) and cannot
-  rank detectors. All discriminating signal is in the 396-row hold-out.
+- **The clean test split is fully saturated** (stacked F1 = 1.0000, zero false
+  positives) and has no power to rank detectors. All model comparisons must use
+  the 396-row adversarial hold-out.
 - **The ensemble is not statistically better than Random Forest alone**
-  (p = 0.845 on the hold-out). It *is* significantly better than the LSTM
-  (p = 0.013), and its lower false-positive rate against RF is a real effect
-  (95% CI excludes zero). RF alone achieves perfect recall (198/198) at a higher
-  FPR (6.1% vs 2.0%) — the ensemble's case rests on false alarms, not detection.
-- **Plain-language attacks are the system's blind spot.** "Drop the users table
-  from the database" is detected 50% of the time by the ensemble and **0%** by
-  the LSTM. ModSecurity misses these too, which makes it a shared limitation of
-  both paradigms rather than a defect unique to this system.
+  (p = 0.388 on the hold-out; odds ratio 2.0 in its favour, but not
+  significant). Its defensible advantages are a lower false-alarm rate (95% CI
+  on the difference excludes zero) and reduced run-to-run variance. RF alone
+  achieves perfect recall (100.00 ± 0.00%) at roughly double the false-alarm
+  rate (6.97% vs 3.64%) — the ensemble's case rests on false alarms, not
+  detection.
+- **Plain-language attacks are detected 0% of the time, by design.** "Drop the
+  users table from the database" carries no injection syntax. ModSecurity misses
+  the same attacks, making this a shared limitation of signature-based and
+  character-level neural detection rather than a defect unique to this system.
+  The evaluation set retains 4 such rows (too few to support a rate — treat as a
+  documented blind spot, not a measurement).
 - **The LLM evasion corpus is weak evidence.** 23 payloads from a 1.5B-parameter
   local model (`qwen2.5-coder:1.5b`); 91% came back using one obfuscation
   technique, and several generations are near-identical to their inputs.

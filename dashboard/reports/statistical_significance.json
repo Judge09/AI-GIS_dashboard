@@ -4,16 +4,16 @@
     "model": "Stacked Ensemble",
     "iterations": 1000,
     "f1": {
-      "mean": 0.999,
-      "lower": 0.9982,
-      "upper": 0.9997,
-      "margin": 0.0008
+      "mean": 1.0,
+      "lower": 1.0,
+      "upper": 1.0,
+      "margin": 0.0
     },
     "fpr": {
-      "mean": 0.0007,
+      "mean": 0.0,
       "lower": 0.0,
-      "upper": 0.0018,
-      "margin": 0.0011
+      "upper": 0.0,
+      "margin": 0.0
     },
     "auc_roc": {
       "mean": 1.0,
@@ -24,17 +24,17 @@
   },
   "mcnemars_test_alpha_0_05": {
     "stacked_vs_rf": {
-      "chi2": 1.125,
-      "p_value": 0.2888443663464847,
+      "chi2": 0.0,
+      "p_value": 1.0,
       "significant": false,
-      "b": 2,
-      "c": 6
+      "b": 1,
+      "c": 0
     },
     "stacked_vs_lstm": {
-      "chi2": 6.125,
-      "p_value": 0.013328328780817578,
-      "significant": true,
-      "b": 8,
+      "chi2": 1.3333,
+      "p_value": 0.24821307898992362,
+      "significant": false,
+      "b": 3,
       "c": 0
     }
   }

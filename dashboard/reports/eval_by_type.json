@@ -9,194 +9,194 @@
   "rf": {
     "overall": {
       "n": 396,
-      "tp": 198,
-      "fn": 0,
-      "fp": 12,
-      "tn": 186,
-      "detection_rate": 1.0,
-      "fpr": 0.0606,
-      "auc": 0.9994,
-      "pr_auc": 0.9994
+      "tp": 188,
+      "fn": 10,
+      "fp": 8,
+      "tn": 190,
+      "detection_rate": 0.9495,
+      "fpr": 0.0404,
+      "auc": 0.9764,
+      "pr_auc": 0.9854
     },
     "SQLi": {
       "n": 300,
-      "tp": 102,
-      "fn": 0,
-      "fp": 12,
-      "tn": 186,
-      "detection_rate": 1.0,
-      "fpr": 0.0606,
-      "auc": 0.9996,
-      "pr_auc": 0.9993
+      "tp": 98,
+      "fn": 4,
+      "fp": 8,
+      "tn": 190,
+      "detection_rate": 0.9608,
+      "fpr": 0.0404,
+      "auc": 0.9919,
+      "pr_auc": 0.9886
     },
     "XSS": {
       "n": 275,
       "tp": 77,
       "fn": 0,
-      "fp": 12,
-      "tn": 186,
+      "fp": 8,
+      "tn": 190,
       "detection_rate": 1.0,
-      "fpr": 0.0606,
-      "auc": 1.0,
-      "pr_auc": 1.0
-    },
-    "nl_intent": {
-      "n": 202,
-      "tp": 4,
-      "fn": 0,
-      "fp": 12,
-      "tn": 186,
-      "detection_rate": 1.0,
-      "fpr": 0.0606,
-      "auc": 0.9962,
-      "pr_auc": 0.8929
-    },
-    "other": {
-      "n": 213,
-      "tp": 15,
-      "fn": 0,
-      "fp": 12,
-      "tn": 186,
-      "detection_rate": 1.0,
-      "fpr": 0.0606,
-      "auc": 0.996,
-      "pr_auc": 0.9603
-    }
-  },
-  "lstm": {
-    "overall": {
-      "n": 396,
-      "tp": 185,
-      "fn": 13,
-      "fp": 4,
-      "tn": 194,
-      "detection_rate": 0.9343,
-      "fpr": 0.0202,
-      "auc": 0.9807,
-      "pr_auc": 0.987
-    },
-    "SQLi": {
-      "n": 300,
-      "tp": 96,
-      "fn": 6,
-      "fp": 4,
-      "tn": 194,
-      "detection_rate": 0.9412,
-      "fpr": 0.0202,
-      "auc": 0.9703,
-      "pr_auc": 0.9728
-    },
-    "XSS": {
-      "n": 275,
-      "tp": 76,
-      "fn": 1,
-      "fp": 4,
-      "tn": 194,
-      "detection_rate": 0.987,
-      "fpr": 0.0202,
-      "auc": 0.9938,
-      "pr_auc": 0.9906
+      "fpr": 0.0404,
+      "auc": 0.9999,
+      "pr_auc": 0.9997
     },
     "nl_intent": {
       "n": 202,
       "tp": 0,
       "fn": 4,
-      "fp": 4,
-      "tn": 194,
+      "fp": 8,
+      "tn": 190,
       "detection_rate": 0.0,
-      "fpr": 0.0202,
-      "auc": 0.9545,
-      "pr_auc": 0.2056
+      "fpr": 0.0404,
+      "auc": 0.404,
+      "pr_auc": 0.0301
     },
     "other": {
       "n": 213,
       "tp": 13,
       "fn": 2,
-      "fp": 4,
-      "tn": 194,
+      "fp": 8,
+      "tn": 190,
       "detection_rate": 0.8667,
-      "fpr": 0.0202,
-      "auc": 0.9906,
-      "pr_auc": 0.9096
+      "fpr": 0.0404,
+      "auc": 0.9037,
+      "pr_auc": 0.8801
     }
   },
-  "stacked": {
+  "lstm": {
     "overall": {
       "n": 396,
-      "tp": 188,
-      "fn": 10,
-      "fp": 4,
-      "tn": 194,
-      "detection_rate": 0.9495,
-      "fpr": 0.0202,
-      "auc": 0.9985,
-      "pr_auc": 0.9985
+      "tp": 184,
+      "fn": 14,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.9293,
+      "fpr": 0.0051,
+      "auc": 0.9491,
+      "pr_auc": 0.9707
     },
     "SQLi": {
       "n": 300,
       "tp": 96,
       "fn": 6,
-      "fp": 4,
-      "tn": 194,
+      "fp": 1,
+      "tn": 197,
       "detection_rate": 0.9412,
-      "fpr": 0.0202,
-      "auc": 0.9986,
-      "pr_auc": 0.9973
+      "fpr": 0.0051,
+      "auc": 0.9489,
+      "pr_auc": 0.9626
     },
     "XSS": {
       "n": 275,
-      "tp": 77,
-      "fn": 0,
-      "fp": 4,
-      "tn": 194,
-      "detection_rate": 1.0,
-      "fpr": 0.0202,
-      "auc": 0.9997,
-      "pr_auc": 0.9994
+      "tp": 75,
+      "fn": 2,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.974,
+      "fpr": 0.0051,
+      "auc": 0.9944,
+      "pr_auc": 0.9909
     },
     "nl_intent": {
       "n": 202,
-      "tp": 2,
-      "fn": 2,
-      "fp": 4,
-      "tn": 194,
-      "detection_rate": 0.5,
-      "fpr": 0.0202,
-      "auc": 0.9798,
-      "pr_auc": 0.3655
+      "tp": 0,
+      "fn": 4,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.0,
+      "fpr": 0.0051,
+      "auc": 0.2715,
+      "pr_auc": 0.0165
     },
     "other": {
       "n": 213,
       "tp": 13,
       "fn": 2,
-      "fp": 4,
-      "tn": 194,
+      "fp": 1,
+      "tn": 197,
       "detection_rate": 0.8667,
-      "fpr": 0.0202,
-      "auc": 0.9963,
-      "pr_auc": 0.9634
+      "fpr": 0.0051,
+      "auc": 0.8987,
+      "pr_auc": 0.8686
+    }
+  },
+  "stacked": {
+    "overall": {
+      "n": 396,
+      "tp": 185,
+      "fn": 13,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.9343,
+      "fpr": 0.0051,
+      "auc": 0.9762,
+      "pr_auc": 0.9852
+    },
+    "SQLi": {
+      "n": 300,
+      "tp": 97,
+      "fn": 5,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.951,
+      "fpr": 0.0051,
+      "auc": 0.9916,
+      "pr_auc": 0.9883
+    },
+    "XSS": {
+      "n": 275,
+      "tp": 75,
+      "fn": 2,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.974,
+      "fpr": 0.0051,
+      "auc": 0.9997,
+      "pr_auc": 0.9993
+    },
+    "nl_intent": {
+      "n": 202,
+      "tp": 0,
+      "fn": 4,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.0,
+      "fpr": 0.0051,
+      "auc": 0.4028,
+      "pr_auc": 0.0284
+    },
+    "other": {
+      "n": 213,
+      "tp": 13,
+      "fn": 2,
+      "fp": 1,
+      "tn": 197,
+      "detection_rate": 0.8667,
+      "fpr": 0.0051,
+      "auc": 0.904,
+      "pr_auc": 0.8801
     }
   },
   "obfuscation_split": {
     "obfuscated": {
-      "n": 4751,
-      "tp": 2014,
-      "fn": 4,
-      "fp": 2,
-      "tn": 2731,
-      "detection_rate": 0.998,
-      "fpr": 0.0007,
+      "n": 5079,
+      "tp": 2282,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2797,
+      "detection_rate": 1.0,
+      "fpr": 0.0,
       "auc": 1.0,
       "pr_auc": 1.0
     },
     "clean": {
-      "n": 3813,
-      "tp": 1080,
+      "n": 4275,
+      "tp": 1478,
       "fn": 0,
-      "fp": 2,
-      "tn": 2731,
+      "fp": 0,
+      "tn": 2797,
       "detection_rate": 1.0,
-      "fpr": 0.0007,
+      "fpr": 0.0,
       "auc": 1.0,
       "pr_auc": 1.0
     }
