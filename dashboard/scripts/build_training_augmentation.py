@@ -117,6 +117,26 @@ def benign_texts():
 
 
 # ── ATTACK generators (Task 5) — plain language + Unicode ────────────────────
+#
+# ADVISER ITEM 7. The plain-language rows are EXCLUDED from training by default.
+#
+# Rationale: 41 plain-language rows are ~0.1% of a 36k corpus -- far too few to
+# teach a linguistic category, but enough to imply a capability the system does
+# not have. Measured detection on that segment was 50% (LSTM 0%), i.e. a coin
+# flip. They are far more valuable as an EVALUATION category: ModSecurity misses
+# the same attacks, which makes plain-language intent a documented blind spot
+# shared by signature WAFs and character-level neural models alike, rather than
+# a weak trained class a panel can pick apart.
+#
+# The Unicode/homoglyph rows are KEPT. They are a different phenomenon --
+# character-level obfuscation, not natural language -- and they are the class
+# the NFKC normalisation pipeline exists to defeat. Removing them would undo a
+# fix that demonstrably works (the fullwidth tautology is caught at 0.997).
+#
+# Set INCLUDE_PLAIN_LANGUAGE_ATTACKS = True to restore the previous behaviour.
+INCLUDE_PLAIN_LANGUAGE_ATTACKS = False
+
+
 def attack_texts():
     plain = [
         "show me the users table where the password equals anything",
@@ -160,7 +180,12 @@ def attack_texts():
         "admin‘ OR ‘1‘=‘1",
         "＇ ＵＮＩＯＮ ＳＥＬＥＣＴ ｐａｓｓｗｏｒｄ ＦＲＯＭ ｕｓｅｒｓ －－",
     ]
-    return plain + templated + unicode_att
+    if INCLUDE_PLAIN_LANGUAGE_ATTACKS:
+        return plain + templated + unicode_att
+    # Item 7: Unicode/homoglyph obfuscation only. The plain-language rows above
+    # are retained in the source so the hold-out builder and red-team can still
+    # draw on them as an evaluation-only category.
+    return unicode_att
 
 
 def load_holdout_texts():
