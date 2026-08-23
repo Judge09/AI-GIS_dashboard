@@ -112,8 +112,11 @@ before presenting this anywhere. Current state, after the evaluation pipeline wa
   not degrade clean performance while improving stress-test robustness.
 - **Ablation — done.** Only the "LR on 11 base features" condition degrades
   (F1 0.9888), which supports the *feature engineering*, not the stacking.
-- **ModSecurity baseline — not run here.** Requires Docker, which was not
-  installed on this machine. `docker-compose.yml` and the script are ready.
+- **ModSecurity baseline — done.** The OWASP CRS WAF (paranoia level 2) was run
+  live in Docker and ~5,800 clean requests fired through it. ModSecurity blocked
+  895 of 2,733 legitimate requests (**32.8% false-positive rate**) versus the
+  ensemble's 2.5% — a ~13× reduction at comparable detection. This is the
+  external comparison the project previously lacked.
 - **The mock attacker data** (`mock_attacker_results.json`) is still a
   placeholder, superseded by the real LLM corpus above.
 - This runs on Flask's development server — **do not expose it to the internet

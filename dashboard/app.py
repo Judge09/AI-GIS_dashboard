@@ -33,6 +33,7 @@ from evasion_resistance_check import (  # noqa: E402
     EVASION_ATTACKS, HARD_BENIGN, engineer_rf_features,
 )
 from build_rf_features_v2 import structural_features  # noqa: E402
+from text_normalize import normalize_text  # noqa: E402
 
 app = Flask(__name__)
 
@@ -102,6 +103,9 @@ def build_v2_features(texts):
 
 
 def predict_one(text: str):
+    # Same Unicode/homoglyph folding the models were trained with. MUST match
+    # scripts/18_train_stacked.py — both call normalize_text() before features.
+    text = normalize_text(text)
     Xv2 = build_v2_features([text])
     Xlstm = np.stack([ordinal_encode(text)])
     rf_proba = float(RF.predict_proba(Xv2)[:, 1][0])
