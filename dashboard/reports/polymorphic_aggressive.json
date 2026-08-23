@@ -1,0 +1,108 @@
+{
+  "total": 22,
+  "caught": 2,
+  "catch_rate": 0.0909,
+  "families": {
+    "semantic_sqli": {
+      "n": 10,
+      "caught": 0,
+      "catch_rate": 0.0,
+      "evaded": [
+        {
+          "text": "1 or 1 between 1 and 1",
+          "stacked": 0.0041
+        },
+        {
+          "text": "1 or 2 like 2",
+          "stacked": 0.0039
+        },
+        {
+          "text": "1 or 'a' greatest 'a'",
+          "stacked": 0.1116
+        },
+        {
+          "text": "give me all rows where the password is never checked",
+          "stacked": 0.0056
+        },
+        {
+          "text": "return every account ignoring the login condition",
+          "stacked": 0.0029
+        },
+        {
+          "text": "1 or 5000=5000",
+          "stacked": 0.02
+        },
+        {
+          "text": "1 or 0x41=0x41",
+          "stacked": 0.0201
+        },
+        {
+          "text": "admin where true",
+          "stacked": 0.01
+        },
+        {
+          "text": "1 union all select null null from users",
+          "stacked": 0.0157
+        },
+        {
+          "text": "select everything from the accounts table please",
+          "stacked": 0.0102
+        }
+      ]
+    },
+    "semantic_xss": {
+      "n": 8,
+      "caught": 2,
+      "catch_rate": 0.25,
+      "evaded": [
+        {
+          "text": "run a script that reads the cookie and sends it away",
+          "stacked": 0.0186
+        },
+        {
+          "text": "make an image tag whose error handler pops an alert",
+          "stacked": 0.0026
+        },
+        {
+          "text": "load javascript from an external site when the page opens",
+          "stacked": 0.0081
+        },
+        {
+          "text": "String['fromCharCode'](60,115,99,114,105,112,116,62)",
+          "stacked": 0.1951
+        },
+        {
+          "text": "set an onmouseover handler that steals the session",
+          "stacked": 0.019
+        },
+        {
+          "text": "embed an iframe pointing at a javascript url",
+          "stacked": 0.0809
+        }
+      ]
+    },
+    "past_window": {
+      "n": 4,
+      "caught": 0,
+      "catch_rate": 0.0,
+      "evaded": [
+        {
+          "text": "Thank you for contacting support regarding your recent order. Our team has reviewed the details you provided and we appreciate your patience while we processed this request for you today. ' OR '1'='1",
+          "stacked": 0.0869
+        },
+        {
+          "text": "Thank you for contacting support regarding your recent order. Our team has reviewed the details you provided and we appreciate your patience while we processed this request for you today. <script>alert(1)</script>",
+          "stacked": 0.0921
+        },
+        {
+          "text": "Thank you for contacting support regarding your recent order. Our team has reviewed the details you provided and we appreciate your patience while we processed this request for you today. '; DROP TABLE users--",
+          "stacked": 0.1398
+        },
+        {
+          "text": "Thank you for contacting support regarding your recent order. Our team has reviewed the details you provided and we appreciate your patience while we processed this request for you today. <img src=x onerror=alert(1)>",
+          "stacked": 0.1302
+        }
+      ]
+    }
+  }
+}
