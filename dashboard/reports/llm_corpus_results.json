@@ -12,35 +12,35 @@
       "caught": 23,
       "missed": 0,
       "detection_rate": 1.0,
-      "mean_confidence": 0.9486
+      "mean_confidence": 0.9107
     },
     "lstm": {
       "model": "LSTM",
       "total": 23,
-      "caught": 22,
-      "missed": 1,
-      "detection_rate": 0.9565,
-      "mean_confidence": 0.9458
+      "caught": 21,
+      "missed": 2,
+      "detection_rate": 0.913,
+      "mean_confidence": 0.9121
     },
     "stacked": {
       "model": "Stacked",
       "total": 23,
-      "caught": 23,
-      "missed": 0,
-      "detection_rate": 1.0,
-      "mean_confidence": 0.9774
+      "caught": 21,
+      "missed": 2,
+      "detection_rate": 0.913,
+      "mean_confidence": 0.9505
     }
   },
   "per_technique": {
     "comment_insertion": {
       "total": 1,
-      "caught": 1,
-      "detection_rate": 1.0
+      "caught": 0,
+      "detection_rate": 0.0
     },
     "hex_encoding": {
       "total": 21,
-      "caught": 21,
-      "detection_rate": 1.0
+      "caught": 20,
+      "detection_rate": 0.9524
     },
     "unicode_escape_sequences": {
       "total": 1,
@@ -53,81 +53,81 @@
       "source_payload": "1'%09OR%091=1%09--%09-",
       "generated_payload": "1%09OR%091=1%09--%09-",
       "technique": "hex_encoding",
-      "rf_proba": 0.9553,
-      "lstm_proba": 0.9995,
-      "stacked_proba": 0.9974,
+      "rf_proba": 0.935,
+      "lstm_proba": 0.9999,
+      "stacked_proba": 0.9967,
       "caught": true
     },
     {
       "source_payload": "1'%0aAND%0a1=1%0a#",
       "generated_payload": "1%0aAND%0a1=1%0a#",
       "technique": "hex_encoding",
-      "rf_proba": 0.701,
-      "lstm_proba": 0.9994,
-      "stacked_proba": 0.9865,
+      "rf_proba": 0.6623,
+      "lstm_proba": 0.9999,
+      "stacked_proba": 0.9811,
       "caught": true
     },
     {
       "source_payload": "'%0d%0aOR%0d%0a'a'='a",
       "generated_payload": "%0d%0aOR%0d%0a'a'='a",
       "technique": "hex_encoding",
-      "rf_proba": 0.975,
-      "lstm_proba": 0.9998,
-      "stacked_proba": 0.9977,
+      "rf_proba": 0.8675,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9949,
       "caught": true
     },
     {
       "source_payload": "1`;DROP TABLE `users`;--",
       "generated_payload": "1%253bDROP%20TABLE%20`users`%253b--",
       "technique": "hex_encoding",
-      "rf_proba": 0.995,
-      "lstm_proba": 0.9991,
-      "stacked_proba": 0.998,
+      "rf_proba": 1.0,
+      "lstm_proba": 0.9999,
+      "stacked_proba": 0.9978,
       "caught": true
     },
     {
       "source_payload": "` OR `1`=`1",
       "generated_payload": "OR%201%3D1",
       "technique": "hex_encoding",
-      "rf_proba": 0.7452,
-      "lstm_proba": 0.9987,
-      "stacked_proba": 0.9898,
+      "rf_proba": 0.7447,
+      "lstm_proba": 0.9998,
+      "stacked_proba": 0.9888,
       "caught": true
     },
     {
       "source_payload": "1 UNION SELECT 0x61646d696e,0x70617373776f7264--",
       "generated_payload": "1 UNION SELECT 0x61646d696e,0x70617373776f7264--",
       "technique": "hex_encoding",
-      "rf_proba": 0.97,
-      "lstm_proba": 0.0004,
-      "stacked_proba": 0.5612,
-      "caught": true
+      "rf_proba": 0.935,
+      "lstm_proba": 0.0,
+      "stacked_proba": 0.4761,
+      "caught": false
     },
     {
       "source_payload": "' OR 0x31=0x31--",
       "generated_payload": "OR 0x31=0x31--",
       "technique": "hex_encoding",
-      "rf_proba": 1.0,
-      "lstm_proba": 0.9493,
-      "stacked_proba": 0.9974,
+      "rf_proba": 0.9998,
+      "lstm_proba": 0.9995,
+      "stacked_proba": 0.9978,
       "caught": true
     },
     {
       "source_payload": "1 AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT(0x7e,(SELECT version()))x FROM information_schema.tables GROUP BY x)a)",
       "generated_payload": "1 AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT(0x7e,(SELECT version()))x FROM information_schema.tables GROUP BY x)a)",
       "technique": "hex_encoding",
-      "rf_proba": 0.925,
-      "lstm_proba": 0.9957,
-      "stacked_proba": 0.9968,
+      "rf_proba": 0.79,
+      "lstm_proba": 0.9996,
+      "stacked_proba": 0.9916,
       "caught": true
     },
     {
       "source_payload": "1)) OR (('1')=('1",
       "generated_payload": "1)) OR (('1')=('1",
       "technique": "hex_encoding",
-      "rf_proba": 0.965,
-      "lstm_proba": 0.9998,
-      "stacked_proba": 0.9976,
+      "rf_proba": 0.8525,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9944,
       "caught": true
     },
     {
@@ -135,125 +135,125 @@
       "generated_payload": "/**/UN/**/ION/**/SEL/**/ECT/**/1,2,3--",
       "technique": "hex_encoding",
       "rf_proba": 1.0,
-      "lstm_proba": 0.9998,
-      "stacked_proba": 0.9981,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9978,
       "caught": true
     },
     {
       "source_payload": "'+UN'+'ION+SEL'+'ECT+1--",
       "generated_payload": "+UN\"ION+SEL\"ECT+1--",
       "technique": "hex_encoding",
-      "rf_proba": 1.0,
-      "lstm_proba": 0.9997,
-      "stacked_proba": 0.9981,
+      "rf_proba": 0.995,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9978,
       "caught": true
     },
     {
       "source_payload": "1;SELECT CASE WHEN (1=1) THEN 1 ELSE (SELECT 1 UNION SELECT 2) END--",
       "generated_payload": "1;SELECT CASE WHEN (1=1) THEN 1 ELSE (SELECT 1 UNION SELECT 2) END--",
       "technique": "hex_encoding",
-      "rf_proba": 0.975,
-      "lstm_proba": 0.9997,
-      "stacked_proba": 0.9977,
+      "rf_proba": 0.985,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9976,
       "caught": true
     },
     {
       "source_payload": "<script>eval(atob('YWxlcnQoMSk='))</script>",
       "generated_payload": "eval(atob('YWxlcnQoMSk='))",
       "technique": "hex_encoding",
-      "rf_proba": 0.98,
-      "lstm_proba": 0.9996,
-      "stacked_proba": 0.9978,
+      "rf_proba": 0.825,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9933,
       "caught": true
     },
     {
       "source_payload": "<script>String.fromCharCode(97,108,101,114,116,40,49,41)</script>",
       "generated_payload": "/*/**/String.fromCharCode(97,108,101,114,116,40,49,41)",
       "technique": "comment_insertion",
-      "rf_proba": 0.925,
-      "lstm_proba": 0.9991,
-      "stacked_proba": 0.9968,
-      "caught": true
+      "rf_proba": 0.945,
+      "lstm_proba": 0.0,
+      "stacked_proba": 0.4922,
+      "caught": false
     },
     {
       "source_payload": "<img src=x oNeRRor=/**/(alert)(1)>",
       "generated_payload": "img src=x oNeRRor=/**/(alert)(1)",
       "technique": "hex_encoding",
-      "rf_proba": 0.985,
-      "lstm_proba": 0.9997,
-      "stacked_proba": 0.9979,
+      "rf_proba": 0.9548,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9971,
       "caught": true
     },
     {
       "source_payload": "<a href=\"jav&#97;script:alert(1)\">x</a>",
       "generated_payload": "jav&#97;script:alert(1)",
       "technique": "hex_encoding",
-      "rf_proba": 1.0,
-      "lstm_proba": 0.8886,
-      "stacked_proba": 0.9963,
+      "rf_proba": 0.98,
+      "lstm_proba": 0.9995,
+      "stacked_proba": 0.9975,
       "caught": true
     },
     {
       "source_payload": "<svg><animate onbegin=alert(1) attributeName=x>",
       "generated_payload": "<svg><animate onbegin=\"alert(1)\" attributeName=\"x\">",
       "technique": "hex_encoding",
-      "rf_proba": 0.98,
-      "lstm_proba": 0.9997,
-      "stacked_proba": 0.9978,
+      "rf_proba": 0.925,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9965,
       "caught": true
     },
     {
       "source_payload": "<template><script>alert(1)</script></template>",
       "generated_payload": "<template><script>alert(1)</script></template>",
       "technique": "hex_encoding",
-      "rf_proba": 1.0,
-      "lstm_proba": 0.9992,
-      "stacked_proba": 0.9981,
+      "rf_proba": 0.96,
+      "lstm_proba": 0.9999,
+      "stacked_proba": 0.9972,
       "caught": true
     },
     {
       "source_payload": "<x contenteditable onfocus=alert(1) autofocus>",
       "generated_payload": "x contenteditable onfocus=alert(1) autofocus",
       "technique": "hex_encoding",
-      "rf_proba": 0.7901,
-      "lstm_proba": 0.9298,
-      "stacked_proba": 0.9887,
+      "rf_proba": 0.72,
+      "lstm_proba": 0.9802,
+      "stacked_proba": 0.9854,
       "caught": true
     },
     {
       "source_payload": "<script>/*comment*/alert`1`</script>",
       "generated_payload": "<script>/*comment*/alert`1`</script>",
       "technique": "unicode_escape_sequences",
-      "rf_proba": 1.0,
-      "lstm_proba": 0.999,
-      "stacked_proba": 0.998,
+      "rf_proba": 0.9745,
+      "lstm_proba": 0.9999,
+      "stacked_proba": 0.9974,
       "caught": true
     },
     {
       "source_payload": "'\"<img src=x id=dmFyIGE9YWxlcnQoMSk=onerror=eval(atob(this.id))>",
       "generated_payload": "\"<img src=x id=dmFyIGE9YWxlcnQoMSk=onerror=eval(atob(this.id))>",
       "technique": "hex_encoding",
-      "rf_proba": 0.985,
-      "lstm_proba": 0.9992,
-      "stacked_proba": 0.9979,
+      "rf_proba": 0.965,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9973,
       "caught": true
     },
     {
       "source_payload": "<iframe srcdoc=\"&lt;script&gt;alert(1)&lt;/script&gt;\">",
       "generated_payload": "<iframe srcdoc=\"&lt;script&gt;alert(1)&lt;/script&gt;\"></iframe>",
       "technique": "hex_encoding",
-      "rf_proba": 0.975,
-      "lstm_proba": 0.9994,
-      "stacked_proba": 0.9977,
+      "rf_proba": 0.945,
+      "lstm_proba": 1.0,
+      "stacked_proba": 0.9969,
       "caught": true
     },
     {
       "source_payload": "&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;",
       "generated_payload": "&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;",
       "technique": "hex_encoding",
-      "rf_proba": 0.99,
-      "lstm_proba": 0.9989,
-      "stacked_proba": 0.9979,
+      "rf_proba": 0.985,
+      "lstm_proba": 0.9999,
+      "stacked_proba": 0.9976,
       "caught": true
     }
   ]

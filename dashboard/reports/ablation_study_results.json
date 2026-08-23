@@ -1,126 +1,126 @@
 {
   "Cond_1_RF_Alone": {
     "Combined": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.9997,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
+      "precision": 0.9994,
       "recall": 1.0
     },
     "Combined_at_best_threshold": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.9998,
+      "fpr": 0.0004,
       "auc_roc": 1.0,
-      "precision": 1.0,
+      "precision": 0.9997,
       "recall": 1.0,
-      "threshold": 0.09
+      "threshold": 0.57
     },
     "SQLi_Only": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.9993,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
+      "precision": 0.9987,
       "recall": 1.0
     },
     "XSS_Only": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.9994,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
+      "precision": 0.9987,
       "recall": 1.0
     }
   },
   "Cond_2_LSTM_Alone": {
     "Combined": {
-      "f1": 0.9997,
-      "fpr": 0.0,
+      "f1": 0.9977,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
-      "recall": 0.9994
+      "precision": 0.9994,
+      "recall": 0.9961
     },
     "Combined_at_best_threshold": {
-      "f1": 0.9998,
-      "fpr": 0.0,
+      "f1": 0.9985,
+      "fpr": 0.0015,
       "auc_roc": 1.0,
-      "precision": 1.0,
-      "recall": 0.9997,
-      "threshold": 0.13
+      "precision": 0.9987,
+      "recall": 0.9984,
+      "threshold": 0.2
     },
     "SQLi_Only": {
-      "f1": 0.9997,
-      "fpr": 0.0,
+      "f1": 0.999,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
-      "recall": 0.9995
+      "precision": 0.9987,
+      "recall": 0.9993
     },
     "XSS_Only": {
-      "f1": 0.9996,
-      "fpr": 0.0,
+      "f1": 0.9994,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
-      "recall": 0.9992
+      "precision": 0.9987,
+      "recall": 1.0
     }
   },
   "Cond_3_LR_11_Base_Feats": {
     "Combined": {
-      "f1": 0.9888,
-      "fpr": 0.0087,
-      "auc_roc": 0.9991,
-      "precision": 0.9925,
-      "recall": 0.9851
+      "f1": 0.9836,
+      "fpr": 0.0135,
+      "auc_roc": 0.9953,
+      "precision": 0.988,
+      "recall": 0.9793
     },
     "Combined_at_best_threshold": {
-      "f1": 0.9896,
-      "fpr": 0.0112,
-      "auc_roc": 0.9991,
-      "precision": 0.9904,
-      "recall": 0.9888,
-      "threshold": 0.41
+      "f1": 0.985,
+      "fpr": 0.015,
+      "auc_roc": 0.9953,
+      "precision": 0.9867,
+      "recall": 0.9832,
+      "threshold": 0.44
     },
     "SQLi_Only": {
-      "f1": 0.9834,
-      "fpr": 0.0087,
-      "auc_roc": 0.999,
-      "precision": 0.9873,
-      "recall": 0.9795
+      "f1": 0.9718,
+      "fpr": 0.0135,
+      "auc_roc": 0.9977,
+      "precision": 0.9757,
+      "recall": 0.968
     },
     "XSS_Only": {
-      "f1": 0.9876,
-      "fpr": 0.0087,
-      "auc_roc": 0.9992,
-      "precision": 0.982,
-      "recall": 0.9932
+      "f1": 0.9869,
+      "fpr": 0.0135,
+      "auc_roc": 0.9995,
+      "precision": 0.9767,
+      "recall": 0.9974
     }
   },
   "Cond_4_RF_Plus_Meta_No_LSTM": {
     "Combined": {
-      "f1": 0.9969,
+      "f1": 0.9938,
       "fpr": 0.0,
       "auc_roc": 1.0,
       "precision": 1.0,
-      "recall": 0.9938
+      "recall": 0.9877
     },
     "Combined_at_best_threshold": {
-      "f1": 1.0,
+      "f1": 0.9998,
+      "fpr": 0.0004,
+      "auc_roc": 1.0,
+      "precision": 0.9997,
+      "recall": 1.0,
+      "threshold": 0.08
+    },
+    "SQLi_Only": {
+      "f1": 0.9954,
       "fpr": 0.0,
       "auc_roc": 1.0,
       "precision": 1.0,
-      "recall": 1.0,
-      "threshold": 0.01
+      "recall": 0.9909
     },
-    "SQLi_Only": {
+    "XSS_Only": {
       "f1": 0.9958,
       "fpr": 0.0,
       "auc_roc": 1.0,
       "precision": 1.0,
       "recall": 0.9916
-    },
-    "XSS_Only": {
-      "f1": 0.9985,
-      "fpr": 0.0,
-      "auc_roc": 1.0,
-      "precision": 1.0,
-      "recall": 0.997
     }
   },
   "Cond_5_LSTM_Plus_Meta_No_RF": {
@@ -132,11 +132,11 @@
       "recall": 0.0
     },
     "Combined_at_best_threshold": {
-      "f1": 0.9998,
-      "fpr": 0.0,
+      "f1": 0.9979,
+      "fpr": 0.0011,
       "auc_roc": 1.0,
-      "precision": 1.0,
-      "recall": 0.9997,
+      "precision": 0.999,
+      "recall": 0.9968,
       "threshold": 0.01
     },
     "SQLi_Only": {
@@ -156,32 +156,32 @@
   },
   "Cond_6_Full_Stacked_Ensemble": {
     "Combined": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.999,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
-      "recall": 1.0
+      "precision": 0.9994,
+      "recall": 0.9987
     },
     "Combined_at_best_threshold": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.9994,
+      "fpr": 0.0015,
       "auc_roc": 1.0,
-      "precision": 1.0,
+      "precision": 0.9987,
       "recall": 1.0,
-      "threshold": 0.01
+      "threshold": 0.02
     },
     "SQLi_Only": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.9993,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
+      "precision": 0.9987,
       "recall": 1.0
     },
     "XSS_Only": {
-      "f1": 1.0,
-      "fpr": 0.0,
+      "f1": 0.9994,
+      "fpr": 0.0007,
       "auc_roc": 1.0,
-      "precision": 1.0,
+      "precision": 0.9987,
       "recall": 1.0
     }
   }
