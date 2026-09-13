@@ -1197,9 +1197,13 @@ with stage(
               "RF and LSTM test splits describe the SAME rows (%d vs %d) - a "
               "mismatch means they came from different runs"
               % (n_rf_te, lstm_te["X"].shape[0]))
-        check(rf_te.shape[1] - 1 == 319,
-              "RF feature width is 319 (19 structural + 300 n-gram); got %d"
-              % (rf_te.shape[1] - 1))
+        # 519 = 19 structural + 300 char n-gram + 200 word-level.
+        # 319 is the pre-word-feature width, still accepted so a model trained
+        # before that change can be validated without re-preparing the splits.
+        _w = rf_te.shape[1] - 1
+        check(_w in (519, 319),
+              "RF feature width is 519 (19 structural + 300 n-gram + 200 word) "
+              "or legacy 319; got %d" % _w)
 
         if not (fresh and same_n):
             skip("Refusing to run: prepared splits do not match the current models. "

@@ -35,7 +35,26 @@ from evasion_resistance_check import engineer_rf_features
 from build_rf_features_v2 import structural_features
 
 
-def ordinal_encode(text, max_len=200):
+# Set by each script once its Keras model is loaded; ordinal_encode() reads it
+# so the encoding width always matches the model actually being scored.
+_LSTM_FOR_MAXLEN = None
+
+
+def _lstm_maxlen(default=400):
+    m = _LSTM_FOR_MAXLEN
+    if m is not None:
+        try:
+            return int(m.input_shape[1])
+        except Exception:
+            pass
+    return default
+
+def ordinal_encode(text, max_len=None):
+    # Width comes from the loaded model (lstm.input_shape[1]) via _lstm_maxlen();
+    # it used to be a hardcoded 200 duplicated in every eval script, so raising
+    # MAXLEN in the trainer would have silently fed 200-wide arrays to a wider model.
+    if max_len is None:
+        max_len = _lstm_maxlen()
     arr = np.zeros(max_len, dtype=np.int32)
     for i, c in enumerate(text[:max_len]):
         code = ord(c)
@@ -51,7 +70,7 @@ def build_v2_features(texts, v2_cols, vectorizer):
     struct_df = pd.DataFrame([structural_features(t) for t in texts])
     agg_df = pd.DataFrame([engineer_rf_features(t, "GET") for t in texts])
     ngram_df = pd.DataFrame(vectorizer.transform(texts).toarray(),
-                             columns=[f"ngram_{i}" for i in range(300)])
+                             columns=[f"ngram_{i}" for i in range(len(vectorizer.get_feature_names_out()))])
     combined = pd.concat([agg_df.reset_index(drop=True), struct_df.reset_index(drop=True),
                            ngram_df.reset_index(drop=True)], axis=1)
     return combined[v2_cols]
@@ -107,6 +126,8 @@ def main():
     with open(args.models_dir / "meta.pkl", "rb") as f:
         meta = pickle.load(f)
     lstm = keras.models.load_model(args.models_dir / "lstm_best.keras")
+    global _LSTM_FOR_MAXLEN
+    _LSTM_FOR_MAXLEN = lstm
     with open(args.data_dir / "ngram_vectorizer.pkl", "rb") as f:
         vectorizer = pickle.load(f)
     v2_cols = list(pd.read_csv(args.data_dir / "rf_train_v2.csv").drop(columns=["label"]).columns)

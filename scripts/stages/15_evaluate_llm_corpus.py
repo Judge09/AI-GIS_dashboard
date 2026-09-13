@@ -38,11 +38,34 @@ REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 CORPUS_PATH = DATA_CORPUS / "llm_evasion_corpus.csv"
 OUTPUT_PATH = REPORTS_DIR / "llm_corpus_results.json"
 
+from rf_inference import build_rf_frame, load_word_vectorizer, rf_feature_columns  # noqa: E402
 from evasion_resistance_check import engineer_rf_features  # noqa: E402
 from build_rf_features_v2 import structural_features       # noqa: E402
 
 
-def ordinal_encode(text, max_len=200):
+# Set by each script once its Keras model is loaded; ordinal_encode() reads it
+# so the encoding width always matches the model actually being scored.
+_LSTM_FOR_MAXLEN = None
+
+
+_WORD_VEC = None
+
+
+def _lstm_maxlen(default=400):
+    m = _LSTM_FOR_MAXLEN
+    if m is not None:
+        try:
+            return int(m.input_shape[1])
+        except Exception:
+            pass
+    return default
+
+def ordinal_encode(text, max_len=None):
+    # Width comes from the loaded model (lstm.input_shape[1]) via _lstm_maxlen();
+    # it used to be a hardcoded 200 duplicated in every eval script, so raising
+    # MAXLEN in the trainer would have silently fed 200-wide arrays to a wider model.
+    if max_len is None:
+        max_len = _lstm_maxlen()
     arr = np.zeros(max_len, dtype=np.int32)
     for i, c in enumerate(text[:max_len]):
         code = ord(c)
@@ -72,21 +95,18 @@ def main():
 
     from tensorflow import keras
     lstm = keras.models.load_model(MODELS_DIR / "lstm_best.keras")
+    global _WORD_VEC
+    _WORD_VEC = load_word_vectorizer(MODELS_DIR)
+    global _LSTM_FOR_MAXLEN
+    _LSTM_FOR_MAXLEN = lstm
 
-    v2_cols = list(pd.read_csv(DATA_DIR / "prepared" / "rf_train_v2.csv")
-                   .drop(columns=["label"]).columns)
+    v2_cols = rf_feature_columns(rf, DATA_DIR / "prepared" / "rf_train_v2.csv")
 
     print("[2/3] Scoring corpus ...")
     df = pd.read_csv(CORPUS_PATH)
     texts = df["generated_payload"].astype(str).tolist()
 
-    struct = pd.DataFrame([structural_features(t) for t in texts])
-    agg    = pd.DataFrame([engineer_rf_features(t, "GET") for t in texts])
-    ngram  = pd.DataFrame(vec.transform(texts).toarray(),
-                          columns=[f"ngram_{i}" for i in range(300)])
-    X = pd.concat([agg.reset_index(drop=True),
-                   struct.reset_index(drop=True),
-                   ngram.reset_index(drop=True)], axis=1)[v2_cols]
+    X = build_rf_frame(texts, vec, v2_cols, word_vec=_WORD_VEC)
 
     rf_proba   = rf.predict_proba(X)[:, 1]
     lstm_proba = lstm.predict(np.stack([ordinal_encode(t) for t in texts]),

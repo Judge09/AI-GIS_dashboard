@@ -70,7 +70,7 @@ class Bundle:
         struct = pd.DataFrame([structural_features(t) for t in texts])
         agg = pd.DataFrame([engineer_rf_features(t, "GET") for t in texts])
         ng = pd.DataFrame(self.vec.transform(texts).toarray(),
-                          columns=[f"ngram_{i}" for i in range(300)])
+                          columns=[f"ngram_{i}" for i in range(len(self.vec.get_feature_names_out()))])
         combined = pd.concat([agg.reset_index(drop=True),
                               struct.reset_index(drop=True),
                               ng.reset_index(drop=True)], axis=1)

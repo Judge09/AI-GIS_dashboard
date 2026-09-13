@@ -57,14 +57,30 @@ with open(MODELS_CURRENT / "rf2.pkl", "rb") as f:
     RF = pickle.load(f)
 with open(MODELS_CURRENT / "meta.pkl", "rb") as f:
     META = pickle.load(f)
+# Word-level vectorizer, added alongside the char n-grams. Optional so a model
+# trained before this change still loads: if the file is absent, no word_* columns
+# are produced and V2_COLS (read off the training header) will not ask for any.
+WORD_VECTORIZER = None
+_wv_path = MODELS_CURRENT / "word_vectorizer.pkl"
+if _wv_path.exists():
+    with open(_wv_path, "rb") as f:
+        WORD_VECTORIZER = pickle.load(f)
+
 with open(MODELS_CURRENT / "ngram_vectorizer.pkl", "rb") as f:
     VECTORIZER = pickle.load(f)
 
 from tensorflow import keras  # noqa: E402
 LSTM = keras.models.load_model(MODELS_CURRENT / "lstm_best.keras")
 
-V2_COLS = list(pd.read_csv(DATA_PREPARED / "rf_train_v2.csv")
-               .drop(columns=["label"]).columns)
+# Column contract comes from the fitted RF, not from rf_train_v2.csv. The CSV is
+# a separate artifact written by the feature builder, so after a retrain that
+# adds features the two disagree and every prediction dies on a feature-name
+# mismatch. RF.feature_names_in_ is by definition what the live model expects.
+if hasattr(RF, "feature_names_in_"):
+    V2_COLS = list(RF.feature_names_in_)
+else:  # RF fitted on a bare ndarray (older checkpoints)
+    V2_COLS = list(pd.read_csv(DATA_PREPARED / "rf_train_v2.csv")
+                   .drop(columns=["label"]).columns)
 
 with open(DATA_CORPUS / "results.json") as f:
     RESULTS = json.load(f)
@@ -96,7 +112,15 @@ def load_report(name):
 print("Models loaded. Ready.")
 
 
-def ordinal_encode(text, max_len=200):
+# Read the character window off the loaded model instead of hardcoding it.
+# It was previously a literal 200 duplicated from the trainer, which meant
+# changing MAXLEN there would silently desync the app from the model it serves.
+LSTM_MAXLEN = int(LSTM.input_shape[1])
+
+
+def ordinal_encode(text, max_len=None):
+    if max_len is None:
+        max_len = LSTM_MAXLEN
     arr = np.zeros(max_len, dtype=np.int32)
     for i, c in enumerate(text[:max_len]):
         code = ord(c)
@@ -107,10 +131,17 @@ def ordinal_encode(text, max_len=200):
 def build_v2_features(texts):
     struct_df = pd.DataFrame([structural_features(t) for t in texts])
     agg_df = pd.DataFrame([engineer_rf_features(t, "GET") for t in texts])
-    ngram_df = pd.DataFrame(VECTORIZER.transform(texts).toarray(),
-                             columns=[f"ngram_{i}" for i in range(300)])
-    combined = pd.concat([agg_df.reset_index(drop=True), struct_df.reset_index(drop=True),
-                           ngram_df.reset_index(drop=True)], axis=1)
+    ngram_arr = VECTORIZER.transform(texts).toarray()
+    ngram_df = pd.DataFrame(ngram_arr,
+                             columns=[f"ngram_{i}" for i in range(ngram_arr.shape[1])])
+    parts = [agg_df.reset_index(drop=True), struct_df.reset_index(drop=True),
+             ngram_df.reset_index(drop=True)]
+    if WORD_VECTORIZER is not None:
+        word_arr = WORD_VECTORIZER.transform(texts).toarray()
+        parts.append(pd.DataFrame(
+            word_arr,
+            columns=[f"word_{i}" for i in range(word_arr.shape[1])]).reset_index(drop=True))
+    combined = pd.concat(parts, axis=1)
     return combined[V2_COLS]
 
 

@@ -91,6 +91,8 @@ def main():
     ap.add_argument("--outdir", type=Path, required=True)
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--ngram-features", type=int, default=300)
+    ap.add_argument("--word-features", type=int, default=200,
+                    help="word-level TF-IDF features added ALONGSIDE the char n-grams")
     args = ap.parse_args()
 
     args.outdir.mkdir(parents=True, exist_ok=True)
@@ -113,6 +115,20 @@ def main():
     vectorizer.fit(train_df["_payload_text"])
     ngram_cols = [f"ngram_{i}" for i in range(len(vectorizer.get_feature_names_out()))]
 
+    # --- word-level TF-IDF, fit on TRAIN TEXT ONLY, ADDED alongside the char
+    # n-grams (not replacing them). The char features key on symbol shapes
+    # (' -- < >), so payloads written in words with no punctuation --
+    # "admin where true", "1 union all select null null null" -- present almost
+    # nothing for them to fire on. Word tokens give the RF a handle on those.
+    # sublinear_tf dampens repeated tokens ("null null null").
+    print(f"Fitting word-level TF-IDF (top {args.word_features} features) on train text only...")
+    word_vectorizer = TfidfVectorizer(analyzer="word", ngram_range=(1, 2),
+                                      max_features=args.word_features,
+                                      lowercase=True, sublinear_tf=True,
+                                      token_pattern=r"(?u)\b\w+\b")
+    word_vectorizer.fit(train_df["_payload_text"])
+    word_cols = [f"word_{i}" for i in range(len(word_vectorizer.get_feature_names_out()))]
+
     rf_feature_cols = ["payload_len", "entropy", "num_special_chars", "num_digits",
                         "num_uppercase", "param_count", "is_post", "has_sqli_keyword",
                         "has_xss_keyword", "quote_count", "comment_token_count",
@@ -124,12 +140,16 @@ def main():
     for name, split_df in [("train", train_df), ("val", val_df), ("test", test_df)]:
         ngram_matrix = vectorizer.transform(split_df["_payload_text"]).toarray()
         ngram_df = pd.DataFrame(ngram_matrix, columns=ngram_cols, index=split_df.index)
+        word_matrix = word_vectorizer.transform(split_df["_payload_text"]).toarray()
+        word_df = pd.DataFrame(word_matrix, columns=word_cols, index=split_df.index)
         out = pd.concat([split_df[rf_feature_cols].reset_index(drop=True),
-                          ngram_df.reset_index(drop=True)], axis=1)
+                          ngram_df.reset_index(drop=True),
+                          word_df.reset_index(drop=True)], axis=1)
         out["label"] = split_df["label"].values
         out.to_csv(args.outdir / f"rf_{name}_v2.csv", index=False)
         print(f"  rf_{name}_v2.csv: {out.shape[0]} rows x {out.shape[1]-1} features "
-              f"({len(rf_feature_cols)} structural + {len(ngram_cols)} n-gram)")
+              f"({len(rf_feature_cols)} structural + {len(ngram_cols)} n-gram "
+              f"+ {len(word_cols)} word)")
 
     import pickle
     with open(args.outdir / "ngram_vectorizer.pkl", "wb") as f:

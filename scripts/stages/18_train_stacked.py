@@ -8,7 +8,7 @@ models/ngram_vectorizer.pkl.
 
 Reconstructed to match the committed models exactly:
   RF v2  : RandomForest(n_estimators=200, max_depth=20, class_weight="balanced")
-           on 19 structural features + 300 char n-gram TF-IDF = 319 features.
+           on 19 structural + 300 char n-gram + 200 word-level TF-IDF = 519 features.
   LSTM   : Embedding(128,32) -> LSTM(64,seq) -> Dropout -> LSTM(32) -> Dropout
            -> Dense(1, sigmoid), on ordinal-encoded text (len 200, vocab 128).
   Meta   : LogisticRegression on [rf_proba, lstm_proba] from the VAL split
@@ -66,7 +66,12 @@ RF_COLS = ["payload_len", "entropy", "num_special_chars", "num_digits",
            "has_event_handler_pattern", "longest_special_run",
            "special_char_ratio", "quote_ratio"]
 NGRAM_N = 300
-MAXLEN = 200
+WORD_N = 200
+# Character window the LSTM reads. Raised 200 -> 400 because late-injection
+# payloads (benign prose with the attack appended past index 200) truncated to
+# harmless text and scored ~0.0008. app.py reads this length off the saved
+# model rather than hardcoding it, so the two cannot drift apart.
+MAXLEN = 400
 
 
 def ordinal_encode(text, max_len=MAXLEN):
@@ -77,13 +82,18 @@ def ordinal_encode(text, max_len=MAXLEN):
     return arr
 
 
-def rf_matrix(texts, vec):
+def rf_matrix(texts, vec, word_vec=None):
     st = pd.DataFrame([structural_features(t) for t in texts])
     ag = pd.DataFrame([engineer_rf_features(t, "GET") for t in texts])
     ng = pd.DataFrame(vec.transform(texts).toarray(),
                       columns=[f"ngram_{i}" for i in range(NGRAM_N)])
     base = pd.concat([ag.reset_index(drop=True), st.reset_index(drop=True)], axis=1)
-    return pd.concat([base[RF_COLS], ng.reset_index(drop=True)], axis=1)
+    parts = [base[RF_COLS], ng.reset_index(drop=True)]
+    if word_vec is not None:
+        wd = pd.DataFrame(word_vec.transform(texts).toarray(),
+                          columns=[f"word_{i}" for i in range(WORD_N)])
+        parts.append(wd.reset_index(drop=True))
+    return pd.concat(parts, axis=1)
 
 
 def build_bilstm(seed=42):
@@ -198,10 +208,19 @@ def main():
                           max_features=NGRAM_N, lowercase=False)
     vec.fit(tr_txt)
 
-    print("[3/6] Training RandomForest v2 (319 features) ...")
-    Xtr = rf_matrix(tr_txt, vec)
-    Xva = rf_matrix(va_txt, vec)
-    Xte = rf_matrix(te_txt, vec)
+    # Word-level TF-IDF ADDED alongside the char n-grams (not replacing them).
+    # Char features key on symbol shapes, so word-shaped payloads with no
+    # punctuation ("admin where true") give them almost nothing to fire on.
+    print("[2b/6] Fitting word-level TF-IDF on train text only ...")
+    word_vec = TfidfVectorizer(analyzer="word", ngram_range=(1, 2),
+                               max_features=WORD_N, lowercase=True,
+                               sublinear_tf=True, token_pattern=r"(?u)\b\w+\b")
+    word_vec.fit(tr_txt)
+
+    Xtr = rf_matrix(tr_txt, vec, word_vec)
+    Xva = rf_matrix(va_txt, vec, word_vec)
+    Xte = rf_matrix(te_txt, vec, word_vec)
+    print(f"[3/6] Training RandomForest v2 ({Xtr.shape[1]} features) ...")
     rf = RandomForestClassifier(n_estimators=200, max_depth=20,
                                 class_weight="balanced",
                                 random_state=args.seed, n_jobs=-1)
@@ -237,6 +256,8 @@ def main():
         pickle.dump(meta, f)
     with open(MODELS / "ngram_vectorizer.pkl", "wb") as f:
         pickle.dump(vec, f)
+    with open(MODELS / "word_vectorizer.pkl", "wb") as f:
+        pickle.dump(word_vec, f)
     # data/prepared/ is SHARED state that the app and eval scripts 13/14 read.
     # An --out-dir run is a side experiment, so it must not touch it, or an A/B
     # comparison silently overwrites the baseline's splits and vectorizer.

@@ -18,19 +18,21 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 from paths import ROOT as _ROOT  # noqa: E402
 ROOT = _ROOT
+from rf_inference import build_rf_frame, load_word_vectorizer, rf_feature_columns  # noqa: E402
 from evasion_resistance_check import engineer_rf_features  # noqa: E402
 from build_rf_features_v2 import structural_features       # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
 
-with open(ROOT / "models/rf2.pkl", "rb") as f:
+with open(ROOT / "models/current/rf2.pkl", "rb") as f:
     RF = pickle.load(f)
-with open(ROOT / "models/meta.pkl", "rb") as f:
+with open(ROOT / "models/current/meta.pkl", "rb") as f:
     META = pickle.load(f)
-with open(ROOT / "models/ngram_vectorizer.pkl", "rb") as f:
+with open(ROOT / "models/current/ngram_vectorizer.pkl", "rb") as f:
     VEC = pickle.load(f)
 from tensorflow import keras  # noqa: E402
-LSTM = keras.models.load_model(ROOT / "models/lstm_best.keras")
-V2 = list(pd.read_csv(ROOT / "data/prepared/rf_train_v2.csv").drop(columns=["label"]).columns)
+LSTM = keras.models.load_model(ROOT / "models/current/lstm_best.keras")
+_WORD_VEC = load_word_vectorizer(ROOT / "models" / "current")
+V2 = rf_feature_columns(RF, ROOT / "data/prepared/rf_train_v2.csv")
 
 CASES = json.load(open(ROOT / "scripts/redteam_cases.json", encoding="utf-8"))
 
@@ -48,7 +50,7 @@ def score(t):
     st = pd.DataFrame([structural_features(t)])
     ag = pd.DataFrame([engineer_rf_features(t, "GET")])
     ng = pd.DataFrame(VEC.transform([t]).toarray(),
-                      columns=[f"ngram_{i}" for i in range(300)])
+                      columns=[f"ngram_{i}" for i in range(len(VEC.get_feature_names_out()))])
     X = pd.concat([ag, st, ng], axis=1)[V2]
     rf = float(RF.predict_proba(X)[:, 1][0])
     ls = float(LSTM.predict(np.stack([enc(t)]), verbose=0).flatten()[0])

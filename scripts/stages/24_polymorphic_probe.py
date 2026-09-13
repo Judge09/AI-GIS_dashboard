@@ -37,6 +37,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 from paths import ROOT as _ROOT  # noqa: E402
 ROOT = _ROOT
+from rf_inference import build_rf_frame, load_word_vectorizer, rf_feature_columns  # noqa: E402
 from evasion_resistance_check import engineer_rf_features   # noqa: E402
 from build_rf_features_v2 import structural_features        # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
@@ -62,6 +63,9 @@ BASE_ATTACKS = [
 
 
 # ── mutation operators (function-preserving) ────────────────────────────────
+_WORD_VEC = None
+
+
 def mut_case(s):
     return "".join(c.upper() if random.random() < 0.5 else c.lower() for c in s)
 
@@ -113,20 +117,42 @@ def mutate(base):
 
 
 def load_models():
-    with open(ROOT / "models/rf2.pkl", "rb") as f:
+    with open(ROOT / "models/current/rf2.pkl", "rb") as f:
         rf = pickle.load(f)
-    with open(ROOT / "models/meta.pkl", "rb") as f:
+    with open(ROOT / "models/current/meta.pkl", "rb") as f:
         meta = pickle.load(f)
-    with open(ROOT / "models/ngram_vectorizer.pkl", "rb") as f:
+    with open(ROOT / "models/current/ngram_vectorizer.pkl", "rb") as f:
         vec = pickle.load(f)
     from tensorflow import keras
-    lstm = keras.models.load_model(ROOT / "models/lstm_best.keras")
-    v2 = list(pd.read_csv(ROOT / "data/prepared/rf_train_v2.csv")
-              .drop(columns=["label"]).columns)
+    lstm = keras.models.load_model(ROOT / "models/current/lstm_best.keras")
+    global _WORD_VEC
+    _WORD_VEC = load_word_vectorizer(ROOT / "models" / "current")
+    global _LSTM_FOR_MAXLEN
+    _LSTM_FOR_MAXLEN = lstm
+    v2 = rf_feature_columns(rf, ROOT / "data/prepared/rf_train_v2.csv")
     return rf, meta, vec, lstm, v2
 
 
-def ordinal_encode(text, max_len=200):
+# Set by each script once its Keras model is loaded; ordinal_encode() reads it
+# so the encoding width always matches the model actually being scored.
+_LSTM_FOR_MAXLEN = None
+
+
+def _lstm_maxlen(default=400):
+    m = _LSTM_FOR_MAXLEN
+    if m is not None:
+        try:
+            return int(m.input_shape[1])
+        except Exception:
+            pass
+    return default
+
+def ordinal_encode(text, max_len=None):
+    # Width comes from the loaded model (lstm.input_shape[1]) via _lstm_maxlen();
+    # it used to be a hardcoded 200 duplicated in every eval script, so raising
+    # MAXLEN in the trainer would have silently fed 200-wide arrays to a wider model.
+    if max_len is None:
+        max_len = _lstm_maxlen()
     arr = np.zeros(max_len, dtype=np.int32)
     for i, c in enumerate(text[:max_len]):
         code = ord(c)
@@ -136,12 +162,7 @@ def ordinal_encode(text, max_len=200):
 
 def score_batch(texts, rf, meta, vec, lstm, v2):
     norm = [normalize_text(t) for t in texts]
-    st = pd.DataFrame([structural_features(t) for t in norm])
-    ag = pd.DataFrame([engineer_rf_features(t, "GET") for t in norm])
-    ng = pd.DataFrame(vec.transform(norm).toarray(),
-                      columns=[f"ngram_{i}" for i in range(300)])
-    X = pd.concat([ag.reset_index(drop=True), st.reset_index(drop=True),
-                   ng.reset_index(drop=True)], axis=1)[v2]
+    X = build_rf_frame(norm, vec, v2, word_vec=_WORD_VEC)
     rf_p = rf.predict_proba(X)[:, 1]
     E = np.stack([ordinal_encode(t) for t in norm])
     ls_p = lstm.predict(E, verbose=0).flatten()
@@ -271,12 +292,7 @@ def run_aggressive():
     out = {}
     for fam, payloads in AGGRESSIVE.items():
         norm = [normalize_text(t) for t in payloads]
-        st = pd.DataFrame([structural_features(t) for t in norm])
-        ag = pd.DataFrame([engineer_rf_features(t, "GET") for t in norm])
-        ng = pd.DataFrame(vec.transform(norm).toarray(),
-                          columns=[f"ngram_{i}" for i in range(300)])
-        X = pd.concat([ag.reset_index(drop=True), st.reset_index(drop=True),
-                       ng.reset_index(drop=True)], axis=1)[v2]
+        X = build_rf_frame(norm, vec, v2, word_vec=_WORD_VEC)
         rf_p = rf.predict_proba(X)[:, 1]
         E = np.stack([ordinal_encode(t) for t in norm])
         ls_p = lstm.predict(E, verbose=0).flatten()
