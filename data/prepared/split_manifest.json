@@ -1,0 +1,96 @@
+{
+  "train": {
+    "rows": 25902,
+    "sessions": 10113,
+    "distinct_payload_texts": 24977,
+    "label_balance": {
+      "0": 13998,
+      "1": 11904
+    },
+    "attack_family_counts": {
+      "benign": 13998,
+      "stored": 2678,
+      "reflected": 1986,
+      "dom_based": 1802,
+      "boolean_blind": 875,
+      "tautology": 831,
+      "stacked_query": 757,
+      "time_based_blind": 719,
+      "union_based": 671,
+      "auth_bypass": 654,
+      "error_based": 646,
+      "lowsym_sqli": 283,
+      "nl_injection": 2
+    }
+  },
+  "val": {
+    "rows": 6659,
+    "sessions": 2167,
+    "distinct_payload_texts": 6455,
+    "label_balance": {
+      "1": 3625,
+      "0": 3034
+    },
+    "attack_family_counts": {
+      "benign": 3034,
+      "stored": 528,
+      "reflected": 399,
+      "tautology": 384,
+      "dom_based": 368,
+      "boolean_blind": 367,
+      "stacked_query": 333,
+      "union_based": 313,
+      "time_based_blind": 310,
+      "auth_bypass": 305,
+      "error_based": 259,
+      "lowsym_sqli": 59
+    }
+  },
+  "test": {
+    "rows": 6033,
+    "sessions": 2168,
+    "distinct_payload_texts": 5852,
+    "label_balance": {
+      "1": 3055,
+      "0": 2978
+    },
+    "attack_family_counts": {
+      "benign": 2978,
+      "stored": 567,
+      "reflected": 387,
+      "dom_based": 376,
+      "tautology": 269,
+      "boolean_blind": 256,
+      "stacked_query": 253,
+      "union_based": 239,
+      "time_based_blind": 232,
+      "auth_bypass": 210,
+      "error_based": 208,
+      "lowsym_sqli": 58
+    }
+  },
+  "payload_content_leakage_check": {
+    "train_val": 7,
+    "train_test": 17,
+    "val_test": 2
+  },
+  "config": {
+    "max_payload_len": 400,
+    "seed": 42,
+    "smote_applied_to_rf_train": false,
+    "vocab": "ordinal ASCII 0-127, 0=PAD, 1=UNK",
+    "rf_feature_cols": [
+      "payload_len",
+      "entropy",
+      "num_special_chars",
+      "num_digits",
+      "num_uppercase",
+      "param_count",
+      "is_post",
+      "has_sqli_keyword",
+      "has_xss_keyword",
+      "quote_count",
+      "comment_token_count"
+    ]
+  }
+}
