@@ -1,0 +1,21 @@
+{
+  "assembled_utc": "2026-08-25T06:43:08.890514+00:00",
+  "TEMP_PLACEHOLDER": true,
+  "provenance": "SYNTHETIC template payloads - NOT Code Llama / DeepSeek output. Pipeline dry-run only.",
+  "total_rows": 1798,
+  "attacks": 1600,
+  "benign": 198,
+  "benign_target": 600,
+  "benign_shortfall": 402,
+  "by_generator": {
+    "codellama": 1000,
+    "deepseek-r1": 600,
+    "held_out_benign": 198
+  },
+  "attacks_by_generator_type": {
+    "codellama/sqli": 500,
+    "codellama/xss": 500,
+    "deepseek-r1/sqli": 300,
+    "deepseek-r1/xss": 300
+  }
+}

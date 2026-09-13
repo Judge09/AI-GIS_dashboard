@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "attacks_total": 16,
+    "attacks_caught": 12,
+    "attacks_missed": 4,
+    "benign_total": 8,
+    "false_positives": 1,
+    "detection_rate": 0.75,
+    "fpr": 0.125
+  },
+  "cases": [
+    {
+      "label": 1,
+      "tag": "sqli/whitespace",
+      "text": "SELECT/*!50000*/password/**/FROM/**/users/**/WHERE/**/id=1",
+      "rf": 0.9999,
+      "lstm": 0.9999,
+      "stacked": 0.9981,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "sqli/no-quotes",
+      "text": "admin' OR 0x61=0x61 -- -",
+      "rf": 0.9949,
+      "lstm": 0.9957,
+      "stacked": 0.998,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "sqli/scientific",
+      "text": "1 OR 1e0=1e0",
+      "rf": 0.5643,
+      "lstm": 0.1083,
+      "stacked": 0.1336,
+      "flagged": false
+    },
+    {
+      "label": 1,
+      "tag": "sqli/nested",
+      "text": "1 AND (SELECT(SELECT(1)FROM(SELECT 1)x))=1",
+      "rf": 0.9248,
+      "lstm": 0.9999,
+      "stacked": 0.9969,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "sqli/unicode",
+      "text": "１＇ ＯＲ ＇１＇＝＇１",
+      "rf": 0.8698,
+      "lstm": 0.9997,
+      "stacked": 0.9956,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "sqli/natural",
+      "text": "show me the users table where the password equals anything",
+      "rf": 0.1401,
+      "lstm": 0.0006,
+      "stacked": 0.0056,
+      "flagged": false
+    },
+    {
+      "label": 1,
+      "tag": "sqli/case",
+      "text": "SeLeCt VeRsIoN() fRoM DuAl",
+      "rf": 0.609,
+      "lstm": 0.9969,
+      "stacked": 0.9777,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "sqli/concat",
+      "text": "'||(SELECT pass FROM users LIMIT 1)||'",
+      "rf": 0.885,
+      "lstm": 0.9998,
+      "stacked": 0.996,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "xss/svg",
+      "text": "<svg/onload=confirm`1`>",
+      "rf": 0.9296,
+      "lstm": 0.9972,
+      "stacked": 0.997,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "xss/entity",
+      "text": "&#60;script&#62;alert(1)&#60;/script&#62;",
+      "rf": 0.9494,
+      "lstm": 0.9993,
+      "stacked": 0.9973,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "xss/nomarkup",
+      "text": "javascript:/*--></title></style></textarea></script><svg onload=alert(1)>",
+      "rf": 0.965,
+      "lstm": 0.9998,
+      "stacked": 0.9976,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "xss/data",
+      "text": "<iframe src=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>",
+      "rf": 0.745,
+      "lstm": 0.9997,
+      "stacked": 0.9905,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "xss/backtick",
+      "text": "<img src=x onerror=`alert\\x281\\x29`>",
+      "rf": 0.9097,
+      "lstm": 0.0007,
+      "stacked": 0.4125,
+      "flagged": false
+    },
+    {
+      "label": 1,
+      "tag": "xss/newline",
+      "text": "<a href=\"jav\tascript:alert(1)\">x</a>",
+      "rf": 0.9849,
+      "lstm": 0.9999,
+      "stacked": 0.9979,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "xss/casemix",
+      "text": "<ScRiPt>ALeRt(document.domain)</sCrIpT>",
+      "rf": 0.99,
+      "lstm": 0.9999,
+      "stacked": 0.9979,
+      "flagged": true
+    },
+    {
+      "label": 1,
+      "tag": "xss/prose",
+      "text": "insert a script tag that pops an alert box saying one",
+      "rf": 0.3334,
+      "lstm": 0.0006,
+      "stacked": 0.0186,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/sql-talk",
+      "text": "The SELECT statement retrieves rows; use WHERE to filter them.",
+      "rf": 0.2597,
+      "lstm": 0.0011,
+      "stacked": 0.0118,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/code",
+      "text": "if (user.role == 'admin' || user.id == 1) { grantAccess(); }",
+      "rf": 0.4308,
+      "lstm": 0.0049,
+      "stacked": 0.0345,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/regex",
+      "text": "Pattern: ^[a-z]+@[a-z]+\\.(com|org)$ matches most emails.",
+      "rf": 0.4054,
+      "lstm": 0.0012,
+      "stacked": 0.0289,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/html-doc",
+      "text": "Use the <table> and <tr> tags to build a layout in HTML.",
+      "rf": 0.2702,
+      "lstm": 0.002,
+      "stacked": 0.0127,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/quote",
+      "text": "She said \"1=1 is always true\" during the logic lecture.",
+      "rf": 0.2951,
+      "lstm": 0.0005,
+      "stacked": 0.0146,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/path",
+      "text": "Navigate to C:\\Users\\Admin\\scripts\\ and run setup.bat",
+      "rf": 0.7398,
+      "lstm": 0.0008,
+      "stacked": 0.1949,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/math",
+      "text": "Given x' = dx/dt, solve for OR-gate logic where A OR B = 1.",
+      "rf": 0.5244,
+      "lstm": 0.0048,
+      "stacked": 0.0604,
+      "flagged": false
+    },
+    {
+      "label": 0,
+      "tag": "benign/name",
+      "text": "Contact O'Brien & O'Malley LLP re: contract <draft v2>.",
+      "rf": 0.67,
+      "lstm": 0.9971,
+      "stacked": 0.9847,
+      "flagged": true
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "input": "llm_holdout_full.csv",
+  "rows": 276,
+  "rf": {
+    "attacks_total": 78,
+    "attacks_caught": 74,
+    "attacks_missed": 4,
+    "benign_total": 198,
+    "false_positives": 8,
+    "detection_rate": 0.9487,
+    "fpr": 0.0404
+  },
+  "lstm": {
+    "attacks_total": 78,
+    "attacks_caught": 60,
+    "attacks_missed": 18,
+    "benign_total": 198,
+    "false_positives": 1,
+    "detection_rate": 0.7692,
+    "fpr": 0.0051
+  },
+  "stacked": {
+    "attacks_total": 78,
+    "attacks_caught": 67,
+    "attacks_missed": 11,
+    "benign_total": 198,
+    "false_positives": 1,
+    "detection_rate": 0.859,
+    "fpr": 0.0051
+  },
+  "missed_attacks": [
+    "Let me start by recalling the basic structure. For example, using ' onclick=\"alert('XSS')\";' as a payload. That's a good one. I can vary the quotes and the structure to create different examples.",
+    "The first one could be ' onclick=\"alert('XSS')\";' which is straightforward.",
+    "Next, I can vary the quote type, so maybe \" onclick='alert(\"XSS\")';\".",
+    "Then, I can use a different event, like onmouseover, so ' onmouseover=\"alert('XSS')\";'.",
+    "Another one could be using a different HTML element, like span: ' <span onclick=\"alert('XSS')\";>'.",
+    "I can also include a self-closing tag: ' <img src=\"test\" onclick=\"alert('XSS')\"/>;'.",
+    "Maybe using a different quote structure: ' onclick='alert(\"XSS\");'.",
+    "Another one could be using a different event, like onfocus: ' onfocus=\"alert('XSS')\";'.",
+    "I can vary the quote types again: \" onclick=alert('XSS')\".",
+    "Let me think of another one, perhaps using a different HTML element: ' <a onclick=\"alert('XSS')\"; href=\"#\">'.",
+    "Lastly, I can use a different event like oninput: ' oninput=\"alert('XSS')\";'."
+  ],
+  "false_alarms": [
+    "Address: 42 O'Malley Ave, Apt #7, (near the park)"
+  ]
+}

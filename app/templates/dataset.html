@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% block title %}Dataset Browser — AI-GIS{% endblock %}
+{% block content %}
+<h1 class="page-title">Dataset browser</h1>
+<p class="page-sub">
+  Explore any dataset in the project, filter and search it, and score each row live
+  with AI-GIS — and side-by-side with ModSecurity when the WAF container is running.
+</p>
+
+<div class="card">
+  <div class="ds-controls">
+    <label>
+      <span class="ctrl-label">Dataset</span>
+      <select id="ds-select">
+        {% for d in catalog %}
+        <option value="{{ d.key }}" {{ 'selected' if d.key==default_key else '' }}>{{ d.label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>
+      <span class="ctrl-label">Class</span>
+      <select id="ds-class">
+        <option value="all">All rows</option>
+        <option value="attack">Attacks only</option>
+        <option value="benign">Benign only</option>
+      </select>
+    </label>
+    <label>
+      <span class="ctrl-label">Attack family</span>
+      <select id="ds-family"><option value="all">All families</option></select>
+    </label>
+    <label style="flex:1;min-width:220px;">
+      <span class="ctrl-label">Search payload text</span>
+      <input type="text" id="ds-search" class="ds-input" placeholder="e.g. UNION, onerror, DROP…">
+    </label>
+  </div>
+  <div class="ds-controls" style="margin-top:14px;align-items:center;">
+    <label class="modsec-toggle" style="margin:0;">
+      <input type="checkbox" id="ds-score" checked>
+      <span>Score rows live with AI-GIS</span>
+    </label>
+    <label class="modsec-toggle" style="margin:0;">
+      <input type="checkbox" id="ds-modsec">
+      <span>Also run ModSecurity (CRS PL2)</span>
+      <span class="pill pill-neutral" id="ds-ms-status">checking…</span>
+    </label>
+    <span class="dim" id="ds-note" style="flex:1;font-size:12.5px;"></span>
+  </div>
+</div>
+
+<div class="grid-4" id="ds-summary">
+  <div class="card stat"><div class="n" id="sum-total">—</div><div class="l">Total rows</div></div>
+  <div class="card stat"><div class="n" id="sum-attacks" style="color:var(--bad)">—</div><div class="l">Attack rows</div></div>
+  <div class="card stat"><div class="n" id="sum-benign" style="color:var(--good)">—</div><div class="l">Benign rows</div></div>
+  <div class="card stat"><div class="n" id="sum-shown">—</div><div class="l">Matching filter</div></div>
+</div>
+
+<div class="card">
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:44px">#</th>
+          <th>Payload text</th>
+          <th style="width:88px">Truth</th>
+          <th style="width:110px">Family</th>
+          <th class="score-col" style="width:70px">AI-GIS</th>
+          <th class="score-col" style="width:96px">Verdict</th>
+          <th class="ms-col" style="width:96px">ModSec</th>
+        </tr>
+      </thead>
+      <tbody id="ds-body">
+        <tr><td colspan="7" class="empty-row">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ds-pager">
+    <button class="primary ghost" id="ds-prev" onclick="ds.page--,loadRows()">← Prev</button>
+    <span class="dim" id="ds-pageinfo">—</span>
+    <button class="primary ghost" id="ds-next" onclick="ds.page++,loadRows()">Next →</button>
+    <select id="ds-size" style="margin-left:auto;">
+      <option value="20" selected>20 / page</option>
+      <option value="50">50 / page</option>
+    </select>
+  </div>
+</div>
+
+<script>
+const ds = {page:0};
+let debounce;
+
+function pill(kind,text){return '<span class="pill pill-'+kind+'">'+text+'</span>';}
+
+async function probeMs(){
+  try{const r=await fetch('/session/modsec_status');const d=await r.json();
+    const el=document.getElementById('ds-ms-status');const box=document.getElementById('ds-modsec');
+    if(d.alive){el.textContent='container up';el.className='pill pill-good';box.disabled=false;}
+    else{el.textContent='not running';el.className='pill pill-warn';box.disabled=true;box.checked=false;}
+  }catch(e){}
+}
+
+async function loadRows(){
+  const size=parseInt(document.getElementById('ds-size').value,10);
+  const payload={
+    dataset:document.getElementById('ds-select').value,
+    cls:document.getElementById('ds-class').value,
+    family:document.getElementById('ds-family').value,
+    q:document.getElementById('ds-search').value,
+    page:Math.max(0,ds.page), size:size,
+    score:document.getElementById('ds-score').checked,
+    modsec:document.getElementById('ds-modsec').checked,
+  };
+  const res=await fetch('/dataset/rows',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  const d=await res.json();
+
+  // summary
+  document.getElementById('sum-total').textContent   = d.summary.total.toLocaleString();
+  document.getElementById('sum-attacks').textContent = d.summary.attacks.toLocaleString();
+  document.getElementById('sum-benign').textContent  = d.summary.benign.toLocaleString();
+  document.getElementById('sum-shown').textContent   = d.total.toLocaleString();
+
+  // family options (only refill when dataset changed)
+  const fsel=document.getElementById('ds-family');
+  if(fsel.dataset.for !== payload.dataset){
+    fsel.innerHTML='<option value="all">All families</option>'+
+      d.family_options.map(f=>'<option value="'+f+'">'+f+'</option>').join('');
+    fsel.dataset.for=payload.dataset;
+  }
+
+  // score columns visibility
+  document.querySelectorAll('.score-col').forEach(e=>e.style.display=payload.score?'':'none');
+  document.querySelectorAll('.ms-col').forEach(e=>e.style.display=d.modsec_used?'':'none');
+  document.getElementById('ds-note').textContent =
+    payload.modsec && !d.modsec_used ? 'ModSecurity container not reachable — showing AI-GIS only.' : '';
+
+  // rows
+  const body=document.getElementById('ds-body');
+  if(!d.rows.length){body.innerHTML='<tr><td colspan="7" class="empty-row">No rows match this filter.</td></tr>';}
+  else{
+    body.innerHTML='';
+    d.rows.forEach((r,i)=>{
+      const tr=document.createElement('tr');
+      const idx=d.page*d.size+i+1;
+      let scoreCells='';
+      if(payload.score){
+        const wrong=(r.label===1&&r.ai_verdict===0)||(r.label===0&&r.ai_verdict===1);
+        if(wrong) tr.className='malicious';
+        scoreCells=
+          '<td class="mono score-col"><b>'+(r.stacked_proba!=null?r.stacked_proba.toFixed(3):'—')+'</b></td>'+
+          '<td class="score-col">'+pill(r.ai_verdict?'bad':'good',r.ai_verdict?'attack':'benign')+'</td>';
+      }
+      let msCell='';
+      if(d.modsec_used){
+        if(r.modsec==null) msCell='<td class="ms-col"><span class="dim">—</span></td>';
+        else msCell='<td class="ms-col">'+pill(r.modsec?'bad':'good',r.modsec?'403 block':'200 pass')+'</td>';
+      }
+      tr.innerHTML=
+        '<td class="mono">'+idx+'</td>'+
+        '<td class="mono payload-cell"></td>'+
+        '<td>'+pill(r.label?'bad':'good',r.label?'attack':'benign')+'</td>'+
+        '<td class="mono" style="font-size:12px">'+r.family+'</td>'+
+        scoreCells+msCell;
+      tr.querySelector('.payload-cell').textContent=r.text;   // textContent: payloads are XSS by design
+      body.appendChild(tr);
+    });
+  }
+
+  // pager
+  document.getElementById('ds-pageinfo').textContent =
+    d.total ? ('Page '+(d.page+1)+' of '+Math.max(1,d.pages)+'  ·  '+d.total.toLocaleString()+' rows') : '0 rows';
+  document.getElementById('ds-prev').disabled = d.page<=0;
+  document.getElementById('ds-next').disabled = d.page>=d.pages-1;
+  ds.page=d.page;
+}
+
+// wire controls
+['ds-select','ds-class','ds-family','ds-size'].forEach(id=>
+  document.getElementById(id).addEventListener('change',()=>{ds.page=0;loadRows();}));
+['ds-score','ds-modsec'].forEach(id=>
+  document.getElementById(id).addEventListener('change',()=>loadRows()));
+document.getElementById('ds-search').addEventListener('input',()=>{
+  clearTimeout(debounce);debounce=setTimeout(()=>{ds.page=0;loadRows();},280);});
+
+probeMs();
+loadRows();
+</script>
+{% endblock %}

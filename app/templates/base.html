@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}AI-GIS Dashboard{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="{{ url_for('static', filename='chart.umd.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="/" class="brand">AI-GIS</a>
+    <div class="navlinks">
+      <a href="/" class="{{ 'active' if active=='dashboard' else '' }}">Dashboard</a>
+      <a href="/tester" class="{{ 'active' if active=='tester' else '' }}">Try a Payload</a>
+      <a href="/session" class="{{ 'active' if active=='session' else '' }}">Attack Session</a>
+      <a href="/evasion" class="{{ 'active' if active=='evasion' else '' }}">Evasion Results</a>
+      <a href="/dataset" class="{{ 'active' if active=='dataset' else '' }}">Dataset Browser</a>
+      <a href="/baseline" class="{{ 'active' if active=='baseline' else '' }}">Baseline vs AI-GIS</a>
+      <a href="/statistics" class="{{ 'active' if active=='statistics' else '' }}">Statistics</a>
+      <a href="/ablation" class="{{ 'active' if active=='ablation' else '' }}">Ablation</a>
+      <a href="/llm" class="{{ 'active' if active=='llm' else '' }}">LLM Corpus</a>
+    </div>
+  </div>
+</nav>
+<main class="wrap">
+  {% block content %}{% endblock %}
+</main>
+</body>
+</html>

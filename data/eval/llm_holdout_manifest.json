@@ -1,0 +1,29 @@
+{
+  "assembled_utc": "2026-08-25T01:56:50.848183+00:00",
+  "total_rows": 276,
+  "attacks": 78,
+  "benign": 198,
+  "benign_target": 600,
+  "benign_shortfall": 402,
+  "by_generator": {
+    "codellama": 40,
+    "deepseek-r1": 38,
+    "held_out_benign": 198
+  },
+  "attacks_by_generator_type": {
+    "codellama/sqli": 20,
+    "codellama/xss": 20,
+    "deepseek-r1/sqli": 20,
+    "deepseek-r1/xss": 18
+  },
+  "target_composition_section_3_5": {
+    "codellama_sqli": 500,
+    "codellama_xss": 500,
+    "deepseek_sqli": 300,
+    "deepseek_xss": 300,
+    "benign": 600,
+    "total": 2200
+  },
+  "output_csv": "C:\\Users\\Lloyd\\Downloads\\AI-GIS_dashboard (9)\\dashboard\\data\\eval\\llm_holdout_full.csv",
+  "note": "Generator label retained on every attack row so Chapter 4 can report Code Llama and DeepSeek separately (Section 3.5)."
+}

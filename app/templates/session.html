@@ -1,0 +1,542 @@
+{% extends "base.html" %}
+{% block title %}Attack Session — AI-GIS{% endblock %}
+{% block content %}
+<h1 class="page-title">Attack session</h1>
+<p class="page-sub">
+  Run a simulated attacker against the live models, one request at a time.
+  Every other page reports finished numbers; this one lets you watch the
+  ensemble decide — and watch it miss.
+</p>
+
+<div class="card">
+  <div class="session-controls">
+    <label>
+      <span class="ctrl-label">Attacker profile</span>
+      <select id="mode">
+        <option value="paper" selected>LLM Deepseek & Code Llama with Benign (1700)</option>
+        <option value="claude">Claude red-team — adversarial attacks + hard benign</option>
+        <option value="all">▶ ALL — every corpus we have (~1,846 requests)</option>
+        <option value="all_hard">▶ ALL (hard) — obfuscated variant of the 1,600</option>
+        <option value="mixed">Mixed traffic — attacks + hard benign (realistic log)</option>
+        <option value="classic">Classic attacks — textbook SQLi / XSS</option>
+        <option value="evasion">Evasion attacks — techniques not in training</option>
+        <option value="benign">Hard benign — legitimate but attack-shaped text</option>
+        <option value="llm_real">LLM holdout (real, 276) — genuine model output</option>
+      </select>
+    </label>
+    <label>
+      <span class="ctrl-label">Request delay</span>
+      <select id="speed">
+        <option value="450">Slow — readable</option>
+        <option value="150">Normal</option>
+        <option value="0" selected>Fast — no pause</option>
+      </select>
+    </label>
+    <label>
+      <span class="ctrl-label">Compare against</span>
+      <span class="modsec-toggle">
+        <input type="checkbox" id="use-modsec">
+        <span id="modsec-label">ModSecurity (CRS PL2)</span>
+        <span class="pill pill-neutral" id="modsec-status">checking…</span>
+      </span>
+    </label>
+    <button class="primary" id="run-btn" onclick="toggleSession()">Start session</button>
+    <button class="primary ghost" id="reset-btn" onclick="resetSession()">Reset</button>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+  <div class="session-status" id="status">Idle — pick a profile and start.</div>
+</div>
+
+<div class="notice" id="synthetic-warning" style="display:none;">
+  <h3>⚠ This pool contains synthetic placeholder payloads</h3>
+  <p>
+    The full-scale corpora (<code>*_TEMP.csv</code>) are template-generated payloads from a
+    pipeline dry-run — <b>not</b> real Code Llama / DeepSeek output. Their own manifest marks
+    them <code>"TEMP_PLACEHOLDER": true</code>. Use this run to exercise the pipeline at scale
+    and to see where the ensemble breaks; do <b>not</b> quote these numbers as a Chapter 4
+    result. The <i>LLM holdout (real, 276)</i> profile is the genuine generator output.
+  </p>
+</div>
+
+<div class="grid-4">
+  <div class="card stat"><div class="n" id="s-requests">0</div><div class="l">Requests</div></div>
+  <div class="card stat"><div class="n" id="s-detected" style="color:var(--good)">0</div><div class="l">Attacks detected</div></div>
+  <div class="card stat"><div class="n" id="s-evaded" style="color:var(--bad)">0</div><div class="l">Attacks evaded</div></div>
+  <div class="card stat"><div class="n" id="s-false" style="color:var(--gold)">0</div><div class="l">False alarms</div></div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <h3 class="chart-title">Confidence over the session</h3>
+    <p class="chart-note">Stacked-ensemble score per request. The dashed line is the 0.5 decision threshold — attack points below it evaded, benign points above it are false alarms.</p>
+    <div class="chart-box"><canvas id="chart-timeline"></canvas></div>
+  </div>
+  <div class="card">
+    <h3 class="chart-title">Running detection rate</h3>
+    <p class="chart-note">Recall on attacks and specificity on benign traffic, recomputed after every request.</p>
+    <div class="chart-box"><canvas id="chart-rate"></canvas></div>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <h3 class="chart-title">Session outcomes</h3>
+    <p class="chart-note">Where each request landed in the confusion matrix.</p>
+    <div class="chart-box"><canvas id="chart-outcomes"></canvas></div>
+  </div>
+  <div class="card">
+    <h3 class="chart-title">Model agreement</h3>
+    <p class="chart-note">Mean score each base model assigned, split by whether the request was actually an attack. A gap between RF and LSTM on the same class is where the meta-learner earns its place.</p>
+    <div class="chart-box"><canvas id="chart-models"></canvas></div>
+  </div>
+</div>
+
+<div class="card" id="modsec-card" style="display:none;">
+  <h3 class="chart-title">AI-GIS vs ModSecurity (OWASP CRS, PL2)</h3>
+  <p class="chart-note">
+    Same payloads, same session, scored by both. ModSecurity returns a binary
+    block/pass (HTTP 403 vs 200), so it has no confidence score to plot — the
+    comparison is on counts.
+  </p>
+  <p class="chart-note">
+    <b>Probe fidelity:</b> requests are sent with browser-like
+    <code>Accept</code> / <code>Accept-Language</code> headers. Without them CRS
+    rule 920300 (<i>missing Accept header</i>) scores every request and
+    ModSecurity appears to block 100% of traffic — a measurement artifact, not a
+    WAF result. <code>scripts/12_evaluate_modsec_baseline.py</code> sends only a
+    User-Agent and is affected; align it before quoting its specificity.
+  </p>
+  <div class="chart-box" style="height:280px;"><canvas id="chart-modsec"></canvas></div>
+  <div class="grid-4" style="margin-top:18px;">
+    <div class="stat"><div class="n" id="ms-recall">—</div><div class="l">ModSec recall</div></div>
+    <div class="stat"><div class="n" id="ms-spec">—</div><div class="l">ModSec specificity</div></div>
+    <div class="stat"><div class="n" id="ai-recall">—</div><div class="l">AI-GIS recall</div></div>
+    <div class="stat"><div class="n" id="ai-spec">—</div><div class="l">AI-GIS specificity</div></div>
+  </div>
+  <p class="metric-note" id="ms-agree"></p>
+</div>
+
+<div class="card" id="breakdown-card">
+  <h3 class="chart-title">Detection rate by generator and attack type</h3>
+  <p class="chart-note">Recall within each slice of the corpus, so Code Llama vs DeepSeek and SQLi vs XSS can be compared directly. Only slices with at least one attack are shown.</p>
+  <div class="chart-box" style="height:300px;"><canvas id="chart-breakdown"></canvas></div>
+</div>
+
+<div class="card">
+  <h3 class="chart-title">Request log</h3>
+  <p class="chart-note">Newest first, most recent 300 kept. Rows shaded red are misses — an attack the ensemble let through, or benign text it flagged. On a full ALL run, use the misses filter to jump straight to the failures.</p>
+  <div style="margin-bottom:12px;">
+    <label style="font-size:13px;color:var(--ink-soft);">
+      <input type="checkbox" id="misses-only" onchange="redrawLog()"> Show misses only
+    </label>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th style="width:44px">#</th><th>Payload</th><th style="width:92px">Truth</th>
+            <th style="width:110px">Outcome</th><th style="width:70px">RF</th>
+            <th style="width:70px">LSTM</th><th style="width:80px">Stacked</th>
+            <th style="width:96px" class="ms-col">ModSec</th></tr>
+      </thead>
+      <tbody id="log-body">
+        <tr><td colspan="8" class="empty-row">No requests yet.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const INK='#1B2430', INKSOFT='#4A5568', GOLD='#D9A441', TEAL='#2A7F7E',
+      GOOD='#2E7D5B', BAD='#C0432C', LINE='#DCD6C8';
+
+let running=false, seed=0, offset=0, total=0, events=[], charts={};
+let BREAKDOWN = {};   // "codellama / sqli" -> {det, ev}
+
+// Running tallies. Kept incrementally so a 1,800-request run does not rescan
+// the whole events array on every single row.
+let TALLY = {detected:0, evaded:0, allowed:0, false_alarm:0};
+let MS = {detected:0, evaded:0, allowed:0, false_alarm:0, n:0, agree:0};
+let SUMS  = {atk:{rf:0,lstm:0,st:0,n:0}, ben:{rf:0,lstm:0,st:0,n:0}};
+
+// A full ALL run is ~1.8k requests. Pull larger batches (fewer round-trips)
+// and stop re-rendering every chart on every single row, or the browser
+// spends all its time in Chart.update() instead of showing results.
+function batchSize(){
+  const mode = document.getElementById('mode').value;
+  return (mode === 'all' || mode === 'all_hard') ? 120 : 5;
+}
+const LOG_CAP = 300;
+
+// ---- charts -------------------------------------------------------------
+const baseOpts = {
+  responsive:true, maintainAspectRatio:false, animation:{duration:250},
+  plugins:{legend:{labels:{font:{family:'Inter',size:11},color:INKSOFT,boxWidth:12}}},
+  scales:{
+    x:{grid:{color:LINE},ticks:{color:INKSOFT,font:{family:'Inter',size:10}}},
+    y:{grid:{color:LINE},ticks:{color:INKSOFT,font:{family:'Inter',size:10}}}
+  }
+};
+
+function buildCharts(){
+  charts.timeline = new Chart(document.getElementById('chart-timeline'), {
+    type:'scatter',
+    data:{datasets:[
+      {label:'Attack',  data:[], backgroundColor:BAD,  pointRadius:4},
+      {label:'Benign',  data:[], backgroundColor:GOOD, pointRadius:4},
+      {label:'Threshold 0.5', data:[], type:'line', borderColor:INKSOFT,
+       borderDash:[5,4], borderWidth:1.5, pointRadius:0, fill:false}
+    ]},
+    options:{...baseOpts, scales:{
+      x:{...baseOpts.scales.x, title:{text:'Request #',display:true,color:INKSOFT,font:{size:11}}},
+      y:{...baseOpts.scales.y, min:0, max:1,
+         title:{text:'Stacked score',display:true,color:INKSOFT,font:{size:11}}}
+    }, plugins:{...baseOpts.plugins, tooltip:{callbacks:{label:c=>
+        c.raw.payload.slice(0,70)+'  →  '+c.raw.y.toFixed(3)}}}}
+  });
+
+  charts.rate = new Chart(document.getElementById('chart-rate'), {
+    type:'line',
+    data:{labels:[],datasets:[
+      {label:'Recall (attacks caught)', data:[], borderColor:TEAL, backgroundColor:TEAL,
+       tension:.25, pointRadius:0, borderWidth:2},
+      {label:'Specificity (benign passed)', data:[], borderColor:GOLD, backgroundColor:GOLD,
+       tension:.25, pointRadius:0, borderWidth:2}
+    ]},
+    options:{...baseOpts, scales:{
+      x:{...baseOpts.scales.x, title:{text:'Request #',display:true,color:INKSOFT,font:{size:11}}},
+      y:{...baseOpts.scales.y, min:0, max:1}
+    }}
+  });
+
+  charts.outcomes = new Chart(document.getElementById('chart-outcomes'), {
+    type:'bar',
+    data:{labels:['Detected','Evaded','Allowed','False alarm'],
+      datasets:[{label:'Requests', data:[0,0,0,0],
+        backgroundColor:[GOOD,BAD,TEAL,GOLD], borderRadius:6}]},
+    options:{...baseOpts, plugins:{legend:{display:false}},
+      scales:{...baseOpts.scales, y:{...baseOpts.scales.y, beginAtZero:true,
+        ticks:{...baseOpts.scales.y.ticks, precision:0}}}}
+  });
+
+  charts.breakdown = new Chart(document.getElementById('chart-breakdown'), {
+    type:'bar',
+    data:{labels:[],datasets:[
+      {label:'Detected', data:[], backgroundColor:GOOD, borderRadius:4, stack:'s'},
+      {label:'Evaded',   data:[], backgroundColor:BAD,  borderRadius:4, stack:'s'}
+    ]},
+    options:{...baseOpts, indexAxis:'y',
+      scales:{
+        x:{...baseOpts.scales.x, stacked:true, beginAtZero:true,
+           ticks:{...baseOpts.scales.x.ticks, precision:0}},
+        y:{...baseOpts.scales.y, stacked:true}
+      },
+      plugins:{...baseOpts.plugins, tooltip:{callbacks:{afterBody:items=>{
+        const g = charts.breakdown.data.labels[items[0].dataIndex];
+        const st = BREAKDOWN[g];
+        return st ? 'recall ' + (st.det/(st.det+st.ev)*100).toFixed(1) + '%' : '';
+      }}}}}
+  });
+
+  charts.modsec = new Chart(document.getElementById('chart-modsec'), {
+    type:'bar',
+    data:{labels:['Attacks caught','Attacks missed','Benign passed','Benign flagged'],
+      datasets:[
+        {label:'AI-GIS',      data:[0,0,0,0], backgroundColor:TEAL, borderRadius:5},
+        {label:'ModSecurity', data:[0,0,0,0], backgroundColor:GOLD, borderRadius:5}
+      ]},
+    options:{...baseOpts, scales:{...baseOpts.scales,
+      y:{...baseOpts.scales.y, beginAtZero:true,
+         ticks:{...baseOpts.scales.y.ticks, precision:0}}}}
+  });
+
+  charts.models = new Chart(document.getElementById('chart-models'), {
+    type:'bar',
+    data:{labels:['RF v2','LSTM','Stacked'],datasets:[
+      {label:'Mean score on attacks', data:[0,0,0], backgroundColor:BAD, borderRadius:6},
+      {label:'Mean score on benign',  data:[0,0,0], backgroundColor:GOOD, borderRadius:6}
+    ]},
+    options:{...baseOpts, scales:{...baseOpts.scales,
+      y:{...baseOpts.scales.y, min:0, max:1}}}
+  });
+}
+
+// ---- session ------------------------------------------------------------
+function toggleSession(){
+  if(running){ running=false; setBtn(); setStatus('Paused at request '+events.length+'.'); return; }
+  if(events.length===0){ seed=Math.floor(Math.random()*100000); offset=0; }
+  running=true; setBtn(); runLoop();
+}
+
+function setModsecStatus(alive){
+  const pill = document.getElementById('modsec-status');
+  const box  = document.getElementById('use-modsec');
+  if(alive){
+    pill.textContent='container up'; pill.className='pill pill-good';
+    box.disabled=false;
+  } else {
+    pill.textContent='not running';  pill.className='pill pill-warn';
+    box.disabled=true; box.checked=false;
+    document.getElementById('modsec-label').title =
+      'Start it with:  docker compose up -d   (PL2 on port 8080)';
+  }
+}
+
+async function probeModsec(){
+  try{
+    const r = await fetch('/session/modsec_status');
+    const d = await r.json();
+    setModsecStatus(d.alive);
+  }catch(e){ setModsecStatus(false); }
+}
+
+function setBtn(){
+  document.getElementById('run-btn').textContent = running ? 'Pause' : (events.length ? 'Resume' : 'Start session');
+  document.getElementById('mode').disabled = events.length>0;
+  // Locking mid-run keeps one session's numbers internally consistent.
+  document.getElementById('use-modsec').disabled =
+    running || events.length>0 ||
+    document.getElementById('modsec-status').textContent === 'not running';
+}
+
+function setStatus(t){ document.getElementById('status').textContent = t; }
+
+function resetSession(){
+  running=false; events=[]; offset=0; total=0;
+  BREAKDOWN={};
+  TALLY={detected:0, evaded:0, allowed:0, false_alarm:0};
+  MS={detected:0, evaded:0, allowed:0, false_alarm:0, n:0, agree:0};
+  document.getElementById('modsec-card').style.display='none';
+  SUMS={atk:{rf:0,lstm:0,st:0,n:0}, ben:{rf:0,lstm:0,st:0,n:0}};
+  document.getElementById('synthetic-warning').style.display='none';
+  ['timeline','rate','outcomes','models','breakdown','modsec'].forEach(k=>charts[k].destroy());
+  buildCharts();
+  document.getElementById('log-body').innerHTML =
+    '<tr><td colspan="8" class="empty-row">No requests yet.</td></tr>';
+  document.getElementById('progress').style.width='0%';
+  ['s-requests','s-detected','s-evaded','s-false'].forEach(i=>
+    document.getElementById(i).textContent='0');
+  setBtn(); setStatus('Idle — pick a profile and start.');
+}
+
+async function runLoop(){
+  const mode = document.getElementById('mode').value;
+  const delay = parseInt(document.getElementById('speed').value,10);
+
+  while(running){
+    setStatus('Sending requests… ' + events.length + (total ? ' of ' + total : ''));
+    let data;
+    try{
+      const res = await fetch('/session/batch',{
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({mode, offset, size:batchSize(), seed,
+                             modsec: document.getElementById('use-modsec').checked})
+      });
+      data = await res.json();
+    }catch(e){
+      running=false; setBtn(); setStatus('Error contacting the model server: '+e);
+      return;
+    }
+    total = data.total;
+    offset += data.events.length;
+    document.getElementById('synthetic-warning').style.display =
+      data.synthetic ? 'block' : 'none';
+
+    if(document.getElementById('use-modsec').checked){
+      if(data.modsec_alive === false){
+        // container went away (or never was up) -- say so instead of showing
+        // an empty comparison panel that looks like a real result.
+        setModsecStatus(false);
+        document.getElementById('use-modsec').checked = false;
+        setStatus('ModSecurity unreachable — continuing with AI-GIS only.');
+      } else {
+        document.getElementById('modsec-card').style.display='block';
+      }
+    }
+
+    for(let k=0; k<data.events.length; k++){
+      if(!running) break;
+      const ev = data.events[k];
+      events.push(ev);
+      accumulate(ev);
+      // With no delay the run is a bulk scoring job, so only repaint at the
+      // end of each batch; otherwise repaint per request so it reads as live.
+      const last = (k === data.events.length - 1);
+      if(delay || last) redrawCharts();
+      appendLogRow(ev);
+      if(delay) await new Promise(r=>setTimeout(r,delay));
+    }
+
+    if(data.done){
+      running=false; setBtn();
+      setStatus('Session complete — ' + events.length + ' requests scored. ' + summary());
+      return;
+    }
+  }
+  setBtn();
+}
+
+function summary(){
+  const ev = events.filter(e=>e.outcome==='evaded').length;
+  const fa = events.filter(e=>e.outcome==='false_alarm').length;
+  if(!ev && !fa) return 'No misses.';
+  return ev + ' attack(s) evaded, ' + fa + ' false alarm(s).';
+}
+
+function slice_key(ev){
+  const g = (ev.generator || 'curated');
+  const t = (ev.attack_type || 'mixed');
+  return g + ' / ' + t;
+}
+
+function accumulate(ev){
+  TALLY[ev.outcome]++;
+
+  const bucket = ev.true_label ? SUMS.atk : SUMS.ben;
+  bucket.rf += ev.rf_proba; bucket.lstm += ev.lstm_proba;
+  bucket.st += ev.stacked_proba; bucket.n++;
+
+  if(ev.modsec_outcome){
+    MS[ev.modsec_outcome]++; MS.n++;
+    if(ev.modsec === ev.predicted) MS.agree++;
+  }
+
+  if(ev.true_label === 1){
+    const k = slice_key(ev);
+    if(!BREAKDOWN[k]) BREAKDOWN[k] = {det:0, ev:0};
+    if(ev.outcome === 'detected') BREAKDOWN[k].det++; else BREAKDOWN[k].ev++;
+  }
+
+  // timeline: cap points so a full run stays responsive
+  const pt = {x:events.length, y:ev.stacked_proba, payload:ev.text};
+  const ds = charts.timeline.data.datasets[ev.true_label ? 0 : 1];
+  ds.data.push(pt);
+  if(ds.data.length > 1200) ds.data.shift();
+
+  // running rate series
+  const atkN = SUMS.atk.n, benN = SUMS.ben.n;
+  charts.rate.data.labels.push(events.length);
+  charts.rate.data.datasets[0].data.push(
+    atkN ? TALLY.detected/atkN : null);
+  charts.rate.data.datasets[1].data.push(
+    benN ? TALLY.allowed/benN : null);
+}
+
+function redrawCharts(){
+  const i = events.length;
+
+  document.getElementById('s-requests').textContent = i;
+  document.getElementById('s-detected').textContent = TALLY.detected;
+  document.getElementById('s-evaded').textContent   = TALLY.evaded;
+  document.getElementById('s-false').textContent    = TALLY.false_alarm;
+
+  charts.timeline.data.datasets[2].data = [{x:1,y:0.5},{x:Math.max(i,2),y:0.5}];
+  charts.timeline.update('none');
+  charts.rate.update('none');
+
+  charts.outcomes.data.datasets[0].data =
+    [TALLY.detected, TALLY.evaded, TALLY.allowed, TALLY.false_alarm];
+  charts.outcomes.update('none');
+
+  const m=(b,k)=> b.n ? b[k]/b.n : 0;
+  charts.models.data.datasets[0].data =
+    [m(SUMS.atk,'rf'), m(SUMS.atk,'lstm'), m(SUMS.atk,'st')];
+  charts.models.data.datasets[1].data =
+    [m(SUMS.ben,'rf'), m(SUMS.ben,'lstm'), m(SUMS.ben,'st')];
+  charts.models.update('none');
+
+  // breakdown, worst recall first so failures sort to the top
+  const keys = Object.keys(BREAKDOWN).sort((a,b)=>{
+    const ra = BREAKDOWN[a].det/(BREAKDOWN[a].det+BREAKDOWN[a].ev);
+    const rb = BREAKDOWN[b].det/(BREAKDOWN[b].det+BREAKDOWN[b].ev);
+    return ra-rb;
+  });
+  charts.breakdown.data.labels = keys;
+  charts.breakdown.data.datasets[0].data = keys.map(k=>BREAKDOWN[k].det);
+  charts.breakdown.data.datasets[1].data = keys.map(k=>BREAKDOWN[k].ev);
+  charts.breakdown.update('none');
+
+  // ModSec comparison panel
+  if(MS.n){
+    const atkN = SUMS.atk.n, benN = SUMS.ben.n;
+    charts.modsec.data.datasets[0].data =
+      [TALLY.detected, TALLY.evaded, TALLY.allowed, TALLY.false_alarm];
+    charts.modsec.data.datasets[1].data =
+      [MS.detected, MS.evaded, MS.allowed, MS.false_alarm];
+    charts.modsec.update('none');
+
+    const pct = (a,b)=> b ? (a/b*100).toFixed(1)+'%' : '—';
+    const msAtk = MS.detected + MS.evaded, msBen = MS.allowed + MS.false_alarm;
+    document.getElementById('ms-recall').textContent = pct(MS.detected, msAtk);
+    document.getElementById('ms-spec').textContent   = pct(MS.allowed, msBen);
+    document.getElementById('ai-recall').textContent = pct(TALLY.detected, atkN);
+    document.getElementById('ai-spec').textContent   = pct(TALLY.allowed, benN);
+    document.getElementById('ms-agree').textContent =
+      'The two systems agreed on ' + (MS.agree/MS.n*100).toFixed(1) +
+      '% of ' + MS.n + ' scored requests.';
+  }
+
+  if(total) document.getElementById('progress').style.width = (i/total*100)+'%';
+}
+
+const OUTCOME_LABEL = {detected:'Detected', evaded:'Evaded',
+                       allowed:'Allowed', false_alarm:'False alarm'};
+
+function isMiss(ev){ return ev.outcome==='evaded' || ev.outcome==='false_alarm'; }
+
+function msCell(ev){
+  if(ev.modsec === null || ev.modsec === undefined) return '<span class="dim">—</span>';
+  const blocked = ev.modsec === 1;
+  const wrong = (ev.modsec_outcome === 'evaded' || ev.modsec_outcome === 'false_alarm');
+  return '<span class="pill '+(wrong?'pill-bad':'pill-good')+'">'+
+         (blocked?'403 block':'200 pass')+'</span>';
+}
+
+function makeRow(ev, idx){
+  const miss = isMiss(ev);
+  const tr = document.createElement('tr');
+  if(miss) tr.className='malicious';
+  tr.innerHTML =
+    '<td class="mono">'+idx+'</td>'+
+    '<td class="mono payload-cell"></td>'+
+    '<td><span class="badge '+(ev.true_label?'bad':'good')+'">'+
+        (ev.true_label?'attack':'benign')+'</span></td>'+
+    '<td><span class="pill '+(miss?'pill-bad':'pill-good')+'">'+
+        OUTCOME_LABEL[ev.outcome]+'</span></td>'+
+    '<td class="mono">'+ev.rf_proba.toFixed(3)+'</td>'+
+    '<td class="mono">'+ev.lstm_proba.toFixed(3)+'</td>'+
+    '<td class="mono"><b>'+ev.stacked_proba.toFixed(3)+'</b></td>'+
+    '<td class="ms-col">'+msCell(ev)+'</td>';
+  // textContent, not innerHTML: payloads are XSS strings by design.
+  tr.querySelector('.payload-cell').textContent = ev.text;
+  return tr;
+}
+
+function appendLogRow(ev){
+  if(document.getElementById('misses-only').checked && !isMiss(ev)) return;
+  const body = document.getElementById('log-body');
+  if(body.querySelector('.empty-row')) body.innerHTML='';
+  body.prepend(makeRow(ev, events.length));
+  while(body.children.length > LOG_CAP) body.lastChild.remove();
+}
+
+function redrawLog(){
+  const only = document.getElementById('misses-only').checked;
+  const body = document.getElementById('log-body');
+  const rows = [];
+  for(let i=events.length-1; i>=0 && rows.length<LOG_CAP; i--){
+    if(only && !isMiss(events[i])) continue;
+    rows.push(makeRow(events[i], i+1));
+  }
+  body.innerHTML='';
+  if(!rows.length){
+    body.innerHTML='<tr><td colspan="8" class="empty-row">'+
+      (only ? 'No misses so far.' : 'No requests yet.')+'</td></tr>';
+    return;
+  }
+  rows.forEach(r=>body.appendChild(r));
+}
+
+buildCharts();
+probeModsec();
+</script>
+{% endblock %}

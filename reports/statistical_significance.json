@@ -1,0 +1,41 @@
+{
+  "description": "Chapter 3 Statistical Significance Results",
+  "bootstrap_95_ci": {
+    "model": "Stacked Ensemble",
+    "iterations": 1000,
+    "f1": {
+      "mean": 1.0,
+      "lower": 1.0,
+      "upper": 1.0,
+      "margin": 0.0
+    },
+    "fpr": {
+      "mean": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "margin": 0.0
+    },
+    "auc_roc": {
+      "mean": 1.0,
+      "lower": 1.0,
+      "upper": 1.0,
+      "margin": 0.0
+    }
+  },
+  "mcnemars_test_alpha_0_05": {
+    "stacked_vs_rf": {
+      "chi2": 0.0,
+      "p_value": 1.0,
+      "significant": false,
+      "b": 1,
+      "c": 0
+    },
+    "stacked_vs_lstm": {
+      "chi2": 1.3333,
+      "p_value": 0.24821307898992362,
+      "significant": false,
+      "b": 3,
+      "c": 0
+    }
+  }
+}

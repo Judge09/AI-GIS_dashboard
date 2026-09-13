@@ -1,0 +1,156 @@
+{
+  "a": "models",
+  "b": "models_bilstm",
+  "params": {
+    "models": 41377,
+    "models_bilstm": 95041
+  },
+  "suites": {
+    "llm_holdout_real": {
+      "models": {
+        "seq": {
+          "recall": 0.9487179487179487,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "f1": 0.9736842105263158,
+          "tp": 74,
+          "tn": 198,
+          "fp": 0,
+          "fn": 4,
+          "n": 276
+        },
+        "stacked": {
+          "recall": 0.9487179487179487,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "f1": 0.9736842105263158,
+          "tp": 74,
+          "tn": 198,
+          "fp": 0,
+          "fn": 4,
+          "n": 276
+        }
+      },
+      "models_bilstm": {
+        "seq": {
+          "recall": 0.9615384615384616,
+          "specificity": 0.98989898989899,
+          "precision": 0.974025974025974,
+          "f1": 0.967741935483871,
+          "tp": 75,
+          "tn": 196,
+          "fp": 2,
+          "fn": 3,
+          "n": 276
+        },
+        "stacked": {
+          "recall": 0.9615384615384616,
+          "specificity": 0.9949494949494949,
+          "precision": 0.9868421052631579,
+          "f1": 0.974025974025974,
+          "tp": 75,
+          "tn": 197,
+          "fp": 1,
+          "fn": 3,
+          "n": 276
+        }
+      }
+    },
+    "evasion_curated": {
+      "models": {
+        "seq": {
+          "recall": 0.9565217391304348,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "f1": 0.9777777777777777,
+          "tp": 22,
+          "tn": 15,
+          "fp": 0,
+          "fn": 1,
+          "n": 38
+        },
+        "stacked": {
+          "recall": 0.9565217391304348,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "f1": 0.9777777777777777,
+          "tp": 22,
+          "tn": 15,
+          "fp": 0,
+          "fn": 1,
+          "n": 38
+        }
+      },
+      "models_bilstm": {
+        "seq": {
+          "recall": 0.9565217391304348,
+          "specificity": 0.9333333333333333,
+          "precision": 0.9565217391304348,
+          "f1": 0.9565217391304348,
+          "tp": 22,
+          "tn": 14,
+          "fp": 1,
+          "fn": 1,
+          "n": 38
+        },
+        "stacked": {
+          "recall": 0.9565217391304348,
+          "specificity": 0.9333333333333333,
+          "precision": 0.9565217391304348,
+          "f1": 0.9565217391304348,
+          "tp": 22,
+          "tn": 14,
+          "fp": 1,
+          "fn": 1,
+          "n": 38
+        }
+      }
+    }
+  },
+  "padding": {
+    "models": {
+      "bare": {
+        "seq_detected": 74,
+        "stacked_detected": 74,
+        "n": 78
+      },
+      "trailing_40_spaces": {
+        "seq_detected": 2,
+        "stacked_detected": 2,
+        "n": 78
+      },
+      "leading_40_spaces": {
+        "seq_detected": 8,
+        "stacked_detected": 8,
+        "n": 78
+      },
+      "both_20_spaces": {
+        "seq_detected": 1,
+        "stacked_detected": 1,
+        "n": 78
+      }
+    },
+    "models_bilstm": {
+      "bare": {
+        "seq_detected": 75,
+        "stacked_detected": 75,
+        "n": 78
+      },
+      "trailing_40_spaces": {
+        "seq_detected": 2,
+        "stacked_detected": 6,
+        "n": 78
+      },
+      "leading_40_spaces": {
+        "seq_detected": 65,
+        "stacked_detected": 66,
+        "n": 78
+      },
+      "both_20_spaces": {
+        "seq_detected": 1,
+        "stacked_detected": 5,
+        "n": 78
+      }
+    }
+  }
+}

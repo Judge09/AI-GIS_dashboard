@@ -14,7 +14,7 @@ venv/
 .venv/
 env/
 ENV/
-dashboard/venv/
+app/venv/
 
 # ---- IDE / OS ----
 .ipynb_checkpoints/
@@ -23,24 +23,24 @@ dashboard/venv/
 .DS_Store
 Thumbs.db
 
-# ---- Large data artifacts (regenerable via scripts/, see dashboard/data/README.md) ----
+# ---- Large data artifacts (regenerable via scripts/, see data/README_LAYOUT.md) ----
 # Ignore all prepared splits and logs...
-dashboard/data/prepared/*.csv
-dashboard/data/prepared/*.npz
+data/prepared/*.csv
+data/prepared/*.npz
 *.log
 
 # ...but keep the two files the app needs at runtime:
-!dashboard/data/prepared/rf_train_v2.csv
-!dashboard/data/honeypot_final.log
+!data/prepared/rf_train_v2.csv
+!data/corpus/honeypot_final.log
 
 # ---- Evaluation artifacts (regenerable via scripts/11-15) ----
 # Committed: they are the numbers the dashboard reports and the thesis cites.
-!dashboard/reports/*.json
-!dashboard/data/llm_evasion_corpus.csv
+!reports/*.json
+!data/corpus/llm_evasion_corpus.csv
 
 # ---- Local-only model backups (superseded architectures / pre-augmentation) ----
 # METHODOLOGY.md documents these as local-only. Do not commit.
-dashboard/models/_backup_*/
+models/_backup_*/
 
 # ---- Thesis manuscript (large binary, tracked outside git) ----
 *.docx
@@ -50,3 +50,6 @@ artifacts/submission_resecurity.zip
 artifacts/handoff/honeypot_bundle.zip
 
 # ---- Superseded intermediate eval runs (1-layer; kept locally for reference) ----
+
+# Raw WEB-IDS23 source CSVs (large; re-download from the dataset)
+data/raw/*.csv

@@ -1,0 +1,429 @@
+text,label,category
+if (x != y && z > 0) { throw new Error('x'); },0,code_cond
+if (x != y && z > 0) { log.info('ok'); },0,code_cond
+if (x != y && z > 0) { queue.push(item); },0,code_cond
+if (x != y && z > 0) { return true; },0,code_cond
+if (x != y && z > 0) { continue; },0,code_cond
+if (x != y && z > 0) { break; },0,code_cond
+if (x != y && z > 0) { yield item; },0,code_cond
+if (x != y && z > 0) { cache[k] = v; },0,code_cond
+if (x != y && z > 0) { await save(row); },0,code_cond
+if (x != y && z > 0) { raise ValueError('bad') },0,code_cond
+if (x != y && z > 0) { return -1; },0,code_cond
+if (x != y && z > 0) { counter += 1; },0,code_cond
+if (x != y && z > 0) { self.close(); },0,code_cond
+"if (x != y && z > 0) { emit('done', payload); }",0,code_cond
+if (x != y && z > 0) { db.commit(); },0,code_cond
+if (a['key'] == b['key']) { throw new Error('x'); },0,code_cond
+if (a['key'] == b['key']) { log.info('ok'); },0,code_cond
+if (a['key'] == b['key']) { queue.push(item); },0,code_cond
+if (a['key'] == b['key']) { return true; },0,code_cond
+if (a['key'] == b['key']) { continue; },0,code_cond
+if (a['key'] == b['key']) { break; },0,code_cond
+if (a['key'] == b['key']) { yield item; },0,code_cond
+if (a['key'] == b['key']) { cache[k] = v; },0,code_cond
+if (a['key'] == b['key']) { await save(row); },0,code_cond
+if (a['key'] == b['key']) { raise ValueError('bad') },0,code_cond
+if (a['key'] == b['key']) { return -1; },0,code_cond
+if (a['key'] == b['key']) { counter += 1; },0,code_cond
+if (a['key'] == b['key']) { self.close(); },0,code_cond
+"if (a['key'] == b['key']) { emit('done', payload); }",0,code_cond
+if (a['key'] == b['key']) { db.commit(); },0,code_cond
+if (count >= 10 || retry) { throw new Error('x'); },0,code_cond
+if (count >= 10 || retry) { log.info('ok'); },0,code_cond
+if (count >= 10 || retry) { queue.push(item); },0,code_cond
+if (count >= 10 || retry) { return true; },0,code_cond
+if (count >= 10 || retry) { continue; },0,code_cond
+if (count >= 10 || retry) { break; },0,code_cond
+if (count >= 10 || retry) { yield item; },0,code_cond
+if (count >= 10 || retry) { cache[k] = v; },0,code_cond
+if (count >= 10 || retry) { await save(row); },0,code_cond
+if (count >= 10 || retry) { raise ValueError('bad') },0,code_cond
+if (count >= 10 || retry) { return -1; },0,code_cond
+if (count >= 10 || retry) { counter += 1; },0,code_cond
+if (count >= 10 || retry) { self.close(); },0,code_cond
+"if (count >= 10 || retry) { emit('done', payload); }",0,code_cond
+if (count >= 10 || retry) { db.commit(); },0,code_cond
+if (user.role == 'admin') { throw new Error('x'); },0,code_cond
+if (user.role == 'admin') { log.info('ok'); },0,code_cond
+if (user.role == 'admin') { queue.push(item); },0,code_cond
+if (user.role == 'admin') { return true; },0,code_cond
+if (user.role == 'admin') { continue; },0,code_cond
+if (user.role == 'admin') { break; },0,code_cond
+if (user.role == 'admin') { yield item; },0,code_cond
+if (user.role == 'admin') { cache[k] = v; },0,code_cond
+if (user.role == 'admin') { await save(row); },0,code_cond
+if (user.role == 'admin') { raise ValueError('bad') },0,code_cond
+if (user.role == 'admin') { return -1; },0,code_cond
+if (user.role == 'admin') { counter += 1; },0,code_cond
+if (user.role == 'admin') { self.close(); },0,code_cond
+"if (user.role == 'admin') { emit('done', payload); }",0,code_cond
+if (user.role == 'admin') { db.commit(); },0,code_cond
+if (status == 200) { throw new Error('x'); },0,code_cond
+if (status == 200) { log.info('ok'); },0,code_cond
+if (status == 200) { queue.push(item); },0,code_cond
+if (status == 200) { return true; },0,code_cond
+if (status == 200) { continue; },0,code_cond
+if (status == 200) { break; },0,code_cond
+if (status == 200) { yield item; },0,code_cond
+if (status == 200) { cache[k] = v; },0,code_cond
+if (status == 200) { await save(row); },0,code_cond
+if (status == 200) { raise ValueError('bad') },0,code_cond
+if (status == 200) { return -1; },0,code_cond
+if (status == 200) { counter += 1; },0,code_cond
+if (status == 200) { self.close(); },0,code_cond
+"if (status == 200) { emit('done', payload); }",0,code_cond
+if (status == 200) { db.commit(); },0,code_cond
+if (flag & MASK) { throw new Error('x'); },0,code_cond
+if (flag & MASK) { log.info('ok'); },0,code_cond
+if (flag & MASK) { queue.push(item); },0,code_cond
+if (flag & MASK) { return true; },0,code_cond
+if (flag & MASK) { continue; },0,code_cond
+if (flag & MASK) { break; },0,code_cond
+if (flag & MASK) { yield item; },0,code_cond
+if (flag & MASK) { cache[k] = v; },0,code_cond
+if (flag & MASK) { await save(row); },0,code_cond
+if (flag & MASK) { raise ValueError('bad') },0,code_cond
+if (flag & MASK) { return -1; },0,code_cond
+if (flag & MASK) { counter += 1; },0,code_cond
+if (flag & MASK) { self.close(); },0,code_cond
+"if (flag & MASK) { emit('done', payload); }",0,code_cond
+if (flag & MASK) { db.commit(); },0,code_cond
+if (i < len && buf[i]) { throw new Error('x'); },0,code_cond
+if (i < len && buf[i]) { log.info('ok'); },0,code_cond
+if (i < len && buf[i]) { queue.push(item); },0,code_cond
+if (i < len && buf[i]) { return true; },0,code_cond
+if (i < len && buf[i]) { continue; },0,code_cond
+if (i < len && buf[i]) { break; },0,code_cond
+if (i < len && buf[i]) { yield item; },0,code_cond
+if (i < len && buf[i]) { cache[k] = v; },0,code_cond
+if (i < len && buf[i]) { await save(row); },0,code_cond
+if (i < len && buf[i]) { raise ValueError('bad') },0,code_cond
+if (i < len && buf[i]) { return -1; },0,code_cond
+if (i < len && buf[i]) { counter += 1; },0,code_cond
+if (i < len && buf[i]) { self.close(); },0,code_cond
+"if (i < len && buf[i]) { emit('done', payload); }",0,code_cond
+if (i < len && buf[i]) { db.commit(); },0,code_cond
+if (opts?.timeout ?? 30) { throw new Error('x'); },0,code_cond
+if (opts?.timeout ?? 30) { log.info('ok'); },0,code_cond
+if (opts?.timeout ?? 30) { queue.push(item); },0,code_cond
+if (opts?.timeout ?? 30) { return true; },0,code_cond
+if (opts?.timeout ?? 30) { continue; },0,code_cond
+"function parse(a,b){ return a.id - b.id; }",0,code_func
+"const q = db.query('SELECT id FROM orders WHERE id = ?', [id]);",0,code_func
+rows = [r for r in sessions if r['id'] is not None],0,code_func
+"def parse(s): return s.strip().split(',')  # invoices.id",0,code_func
+"def parse(s): return s.strip().split(',')  # accounts.id",0,code_func
+"def parse(s): return s.strip().split(',')  # products.id",0,code_func
+"function parse(a,b){ return a.name - b.name; }",0,code_func
+"def parse(s): return s.strip().split(',')  # orders.name",0,code_func
+"const q = db.query('SELECT name FROM sessions WHERE id = ?', [id]);",0,code_func
+"def parse(s): return s.strip().split(',')  # invoices.name",0,code_func
+"def parse(s): return s.strip().split(',')  # accounts.name",0,code_func
+rows = [r for r in products if r['name'] is not None],0,code_func
+rows = [r for r in users if r['email'] is not None],0,code_func
+"def parse(s): return s.strip().split(',')  # orders.email",0,code_func
+"const q = db.query('SELECT email FROM sessions WHERE id = ?', [id]);",0,code_func
+"def parse(s): return s.strip().split(',')  # invoices.email",0,code_func
+rows = [r for r in accounts if r['email'] is not None],0,code_func
+"def parse(s): return s.strip().split(',')  # products.email",0,code_func
+"def parse(s): return s.strip().split(',')  # users.status",0,code_func
+"const q = db.query('SELECT status FROM orders WHERE id = ?', [id]);",0,code_func
+"def parse(s): return s.strip().split(',')  # sessions.status",0,code_func
+rows = [r for r in invoices if r['status'] is not None],0,code_func
+"def parse(s): return s.strip().split(',')  # accounts.status",0,code_func
+"const q = db.query('SELECT status FROM products WHERE id = ?', [id]);",0,code_func
+"def parse(s): return s.strip().split(',')  # users.created_at",0,code_func
+"const q = db.query('SELECT created_at FROM orders WHERE id = ?', [id]);",0,code_func
+"function parse(a,b){ return a.created_at - b.created_at; }",0,code_func
+rows = [r for r in invoices if r['created_at'] is not None],0,code_func
+"const q = db.query('SELECT created_at FROM accounts WHERE id = ?', [id]);",0,code_func
+"def parse(s): return s.strip().split(',')  # products.created_at",0,code_func
+"function parse(a,b){ return a.total - b.total; }",0,code_func
+"const q = db.query('SELECT total FROM orders WHERE id = ?', [id]);",0,code_func
+"def parse(s): return s.strip().split(',')  # sessions.total",0,code_func
+"const q = db.query('SELECT total FROM invoices WHERE id = ?', [id]);",0,code_func
+"def parse(s): return s.strip().split(',')  # products.total",0,code_func
+"def normalize(s): return s.strip().split(',')  # users.id",0,code_func
+"def normalize(s): return s.strip().split(',')  # orders.id",0,code_func
+"const q = db.query('SELECT id FROM sessions WHERE id = ?', [id]);",0,code_func
+rows = [r for r in invoices if r['id'] is not None],0,code_func
+rows = [r for r in accounts if r['id'] is not None],0,code_func
+"function normalize(a,b){ return a.id - b.id; }",0,code_func
+rows = [r for r in users if r['name'] is not None],0,code_func
+rows = [r for r in orders if r['name'] is not None],0,code_func
+"function normalize(a,b){ return a.name - b.name; }",0,code_func
+"const q = db.query('SELECT name FROM accounts WHERE id = ?', [id]);",0,code_func
+"const q = db.query('SELECT name FROM products WHERE id = ?', [id]);",0,code_func
+"const q = db.query('SELECT email FROM users WHERE id = ?', [id]);",0,code_func
+"def normalize(s): return s.strip().split(',')  # orders.email",0,code_func
+"function normalize(a,b){ return a.email - b.email; }",0,code_func
+rows = [r for r in invoices if r['email'] is not None],0,code_func
+rows = [r for r in products if r['email'] is not None],0,code_func
+"function normalize(a,b){ return a.status - b.status; }",0,code_func
+"def normalize(s): return s.strip().split(',')  # orders.status",0,code_func
+"def normalize(s): return s.strip().split(',')  # sessions.status",0,code_func
+"const q = db.query('SELECT status FROM accounts WHERE id = ?', [id]);",0,code_func
+"const q = db.query('SELECT created_at FROM users WHERE id = ?', [id]);",0,code_func
+rows = [r for r in orders if r['created_at'] is not None],0,code_func
+rows = [r for r in sessions if r['created_at'] is not None],0,code_func
+"def normalize(s): return s.strip().split(',')  # invoices.created_at",0,code_func
+"def normalize(s): return s.strip().split(',')  # accounts.created_at",0,code_func
+"function normalize(a,b){ return a.created_at - b.created_at; }",0,code_func
+"function normalize(a,b){ return a.total - b.total; }",0,code_func
+rows = [r for r in sessions if r['total'] is not None],0,code_func
+rows = [r for r in invoices if r['total'] is not None],0,code_func
+"def normalize(s): return s.strip().split(',')  # accounts.total",0,code_func
+"def normalize(s): return s.strip().split(',')  # products.total",0,code_func
+"function toSlug(a,b){ return a.id - b.id; }",0,code_func
+rows = [r for r in orders if r['id'] is not None],0,code_func
+"def toSlug(s): return s.strip().split(',')  # sessions.id",0,code_func
+"def toSlug(s): return s.strip().split(',')  # invoices.id",0,code_func
+rows = [r for r in products if r['id'] is not None],0,code_func
+"function toSlug(a,b){ return a.name - b.name; }",0,code_func
+"def toSlug(s): return s.strip().split(',')  # invoices.name",0,code_func
+rows = [r for r in accounts if r['name'] is not None],0,code_func
+"def toSlug(s): return s.strip().split(',')  # orders.email",0,code_func
+rows = [r for r in sessions if r['email'] is not None],0,code_func
+"def toSlug(s): return s.strip().split(',')  # invoices.email",0,code_func
+"const q = db.query('SELECT email FROM accounts WHERE id = ?', [id]);",0,code_func
+"function toSlug(a,b){ return a.email - b.email; }",0,code_func
+"const q = db.query('SELECT status FROM users WHERE id = ?', [id]);",0,code_func
+rows = [r for r in sessions if r['status'] is not None],0,code_func
+rows = [r for r in accounts if r['status'] is not None],0,code_func
+"def toSlug(s): return s.strip().split(',')  # products.status",0,code_func
+"function toSlug(a,b){ return a.created_at - b.created_at; }",0,code_func
+rows = [r for r in products if r['created_at'] is not None],0,code_func
+"function toSlug(a,b){ return a.total - b.total; }",0,code_func
+rows = [r for r in orders if r['total'] is not None],0,code_func
+"const q = db.query('SELECT total FROM accounts WHERE id = ?', [id]);",0,code_func
+"const q = db.query('SELECT total FROM products WHERE id = ?', [id]);",0,code_func
+"def hashKey(s): return s.strip().split(',')  # users.id",0,code_func
+"const q = db.query('SELECT id FROM invoices WHERE id = ?', [id]);",0,code_func
+"const q = db.query('SELECT id FROM accounts WHERE id = ?', [id]);",0,code_func
+"def hashKey(s): return s.strip().split(',')  # products.id",0,code_func
+"const q = db.query('SELECT name FROM orders WHERE id = ?', [id]);",0,code_func
+"function hashKey(a,b){ return a.name - b.name; }",0,code_func
+"def hashKey(s): return s.strip().split(',')  # accounts.name",0,code_func
+"function hashKey(a,b){ return a.email - b.email; }",0,code_func
+"const q = db.query('SELECT email FROM invoices WHERE id = ?', [id]);",0,code_func
+"def hashKey(s): return s.strip().split(',')  # accounts.email",0,code_func
+rows = [r for r in users if r['status'] is not None],0,code_func
+rows = [r for r in orders if r['status'] is not None],0,code_func
+"def hashKey(s): return s.strip().split(',')  # accounts.status",0,code_func
+rows = [r for r in products if r['status'] is not None],0,code_func
+rows = [r for r in users if r['created_at'] is not None],0,code_func
+"def hashKey(s): return s.strip().split(',')  # orders.created_at",0,code_func
+"const q = db.query('SELECT created_at FROM sessions WHERE id = ?', [id]);",0,code_func
+"def hashKey(s): return s.strip().split(',')  # invoices.created_at",0,code_func
+"const q = db.query('SELECT total FROM users WHERE id = ?', [id]);",0,code_func
+"def hashKey(s): return s.strip().split(',')  # orders.total",0,code_func
+"function hashKey(a,b){ return a.total - b.total; }",0,code_func
+find /var/log/app.log -name '*.py' -exec black {} +,0,shell
+ssh user@api.x.io 'cat src/ | tail -50',0,shell
+ssh user@api.x.io 'cat /etc/nginx | tail -50',0,shell
+ssh user@api.x.io 'cat .config | tail -50',0,shell
+grep -rn 'TODO' src/ | wc -l,0,shell
+find /etc/nginx -name '*.py' -exec black {} +,0,shell
+ssh user@db01 'cat .config | tail -50',0,shell
+curl -s https://cache.internal/v1/users?limit=10 | jq '.data[]',0,shell
+find src/ -name '*.py' -exec black {} +,0,shell
+ssh user@cache.internal 'cat /etc/nginx | tail -50',0,shell
+ssh user@cache.internal 'cat .config | tail -50',0,shell
+grep -rn 'TODO' /var/log/app.log | wc -l,0,shell
+"git commit -m ""fix: null check in /etc/nginx loader""",0,shell
+grep -rn 'TODO' .config | wc -l,0,shell
+2026-08-25 10:40:00 INFO  [auth] user='u0' code=200 path=/api/v1/auth?id=0 miss,0,logs
+2026-08-25 10:41:01 INFO  [auth] user='u1' code=201 path=/api/v1/auth?id=1 miss,0,logs
+2026-08-25 10:42:02 INFO  [auth] user='u2' code=202 path=/api/v1/auth?id=2 miss,0,logs
+2026-08-25 10:43:03 INFO  [auth] user='u3' code=203 path=/api/v1/auth?id=3 timeout,0,logs
+2026-08-25 10:44:04 INFO  [auth] user='u4' code=204 path=/api/v1/auth?id=4 ok,0,logs
+2026-08-25 10:45:05 INFO  [auth] user='u5' code=205 path=/api/v1/auth?id=5 ok,0,logs
+2026-08-25 10:40:00 INFO  [db] user='u0' code=200 path=/api/v1/db?id=0 timeout,0,logs
+2026-08-25 10:41:01 INFO  [db] user='u1' code=201 path=/api/v1/db?id=1 timeout,0,logs
+2026-08-25 10:42:02 INFO  [db] user='u2' code=202 path=/api/v1/db?id=2 timeout,0,logs
+2026-08-25 10:43:03 INFO  [db] user='u3' code=203 path=/api/v1/db?id=3 timeout,0,logs
+2026-08-25 10:44:04 INFO  [db] user='u4' code=204 path=/api/v1/db?id=4 miss,0,logs
+2026-08-25 10:45:05 INFO  [db] user='u5' code=205 path=/api/v1/db?id=5 ok,0,logs
+2026-08-25 10:40:00 INFO  [cache] user='u0' code=200 path=/api/v1/cache?id=0 retry,0,logs
+2026-08-25 10:41:01 INFO  [cache] user='u1' code=201 path=/api/v1/cache?id=1 ok,0,logs
+2026-08-25 10:42:02 INFO  [cache] user='u2' code=202 path=/api/v1/cache?id=2 miss,0,logs
+2026-08-25 10:43:03 INFO  [cache] user='u3' code=203 path=/api/v1/cache?id=3 miss,0,logs
+2026-08-25 10:44:04 INFO  [cache] user='u4' code=204 path=/api/v1/cache?id=4 timeout,0,logs
+2026-08-25 10:45:05 INFO  [cache] user='u5' code=205 path=/api/v1/cache?id=5 retry,0,logs
+2026-08-25 10:40:00 INFO  [http] user='u0' code=200 path=/api/v1/http?id=0 ok,0,logs
+2026-08-25 10:41:01 INFO  [http] user='u1' code=201 path=/api/v1/http?id=1 retry,0,logs
+2026-08-25 10:42:02 INFO  [http] user='u2' code=202 path=/api/v1/http?id=2 miss,0,logs
+2026-08-25 10:43:03 INFO  [http] user='u3' code=203 path=/api/v1/http?id=3 retry,0,logs
+2026-08-25 10:44:04 INFO  [http] user='u4' code=204 path=/api/v1/http?id=4 ok,0,logs
+2026-08-25 10:45:05 INFO  [http] user='u5' code=205 path=/api/v1/http?id=5 miss,0,logs
+2026-08-25 10:40:00 INFO  [worker] user='u0' code=200 path=/api/v1/worker?id=0 ok,0,logs
+2026-08-25 10:41:01 INFO  [worker] user='u1' code=201 path=/api/v1/worker?id=1 miss,0,logs
+2026-08-25 10:42:02 INFO  [worker] user='u2' code=202 path=/api/v1/worker?id=2 miss,0,logs
+2026-08-25 10:43:03 INFO  [worker] user='u3' code=203 path=/api/v1/worker?id=3 retry,0,logs
+2026-08-25 10:44:04 INFO  [worker] user='u4' code=204 path=/api/v1/worker?id=4 miss,0,logs
+2026-08-25 10:45:05 INFO  [worker] user='u5' code=205 path=/api/v1/worker?id=5 retry,0,logs
+2026-08-25 10:40:00 WARN  [auth] user='u0' code=200 path=/api/v1/auth?id=0 miss,0,logs
+2026-08-25 10:41:01 WARN  [auth] user='u1' code=201 path=/api/v1/auth?id=1 retry,0,logs
+2026-08-25 10:42:02 WARN  [auth] user='u2' code=202 path=/api/v1/auth?id=2 retry,0,logs
+2026-08-25 10:43:03 WARN  [auth] user='u3' code=203 path=/api/v1/auth?id=3 retry,0,logs
+2026-08-25 10:44:04 WARN  [auth] user='u4' code=204 path=/api/v1/auth?id=4 timeout,0,logs
+2026-08-25 10:45:05 WARN  [auth] user='u5' code=205 path=/api/v1/auth?id=5 retry,0,logs
+2026-08-25 10:40:00 WARN  [db] user='u0' code=200 path=/api/v1/db?id=0 retry,0,logs
+2026-08-25 10:41:01 WARN  [db] user='u1' code=201 path=/api/v1/db?id=1 timeout,0,logs
+2026-08-25 10:42:02 WARN  [db] user='u2' code=202 path=/api/v1/db?id=2 miss,0,logs
+2026-08-25 10:43:03 WARN  [db] user='u3' code=203 path=/api/v1/db?id=3 ok,0,logs
+2026-08-25 10:44:04 WARN  [db] user='u4' code=204 path=/api/v1/db?id=4 ok,0,logs
+2026-08-25 10:45:05 WARN  [db] user='u5' code=205 path=/api/v1/db?id=5 miss,0,logs
+2026-08-25 10:40:00 WARN  [cache] user='u0' code=200 path=/api/v1/cache?id=0 timeout,0,logs
+2026-08-25 10:41:01 WARN  [cache] user='u1' code=201 path=/api/v1/cache?id=1 miss,0,logs
+2026-08-25 10:42:02 WARN  [cache] user='u2' code=202 path=/api/v1/cache?id=2 retry,0,logs
+2026-08-25 10:43:03 WARN  [cache] user='u3' code=203 path=/api/v1/cache?id=3 miss,0,logs
+2026-08-25 10:44:04 WARN  [cache] user='u4' code=204 path=/api/v1/cache?id=4 timeout,0,logs
+2026-08-25 10:45:05 WARN  [cache] user='u5' code=205 path=/api/v1/cache?id=5 miss,0,logs
+2026-08-25 10:40:00 WARN  [http] user='u0' code=200 path=/api/v1/http?id=0 miss,0,logs
+2026-08-25 10:41:01 WARN  [http] user='u1' code=201 path=/api/v1/http?id=1 ok,0,logs
+2026-08-25 10:42:02 WARN  [http] user='u2' code=202 path=/api/v1/http?id=2 retry,0,logs
+2026-08-25 10:43:03 WARN  [http] user='u3' code=203 path=/api/v1/http?id=3 ok,0,logs
+2026-08-25 10:44:04 WARN  [http] user='u4' code=204 path=/api/v1/http?id=4 retry,0,logs
+2026-08-25 10:45:05 WARN  [http] user='u5' code=205 path=/api/v1/http?id=5 timeout,0,logs
+2026-08-25 10:40:00 WARN  [worker] user='u0' code=200 path=/api/v1/worker?id=0 retry,0,logs
+2026-08-25 10:41:01 WARN  [worker] user='u1' code=201 path=/api/v1/worker?id=1 miss,0,logs
+2026-08-25 10:42:02 WARN  [worker] user='u2' code=202 path=/api/v1/worker?id=2 retry,0,logs
+2026-08-25 10:43:03 WARN  [worker] user='u3' code=203 path=/api/v1/worker?id=3 timeout,0,logs
+2026-08-25 10:44:04 WARN  [worker] user='u4' code=204 path=/api/v1/worker?id=4 ok,0,logs
+2026-08-25 10:45:05 WARN  [worker] user='u5' code=205 path=/api/v1/worker?id=5 timeout,0,logs
+2026-08-25 10:40:00 ERROR [auth] user='u0' code=200 path=/api/v1/auth?id=0 miss,0,logs
+2026-08-25 10:41:01 ERROR [auth] user='u1' code=201 path=/api/v1/auth?id=1 ok,0,logs
+2026-08-25 10:42:02 ERROR [auth] user='u2' code=202 path=/api/v1/auth?id=2 ok,0,logs
+2026-08-25 10:43:03 ERROR [auth] user='u3' code=203 path=/api/v1/auth?id=3 timeout,0,logs
+2026-08-25 10:44:04 ERROR [auth] user='u4' code=204 path=/api/v1/auth?id=4 retry,0,logs
+2026-08-25 10:45:05 ERROR [auth] user='u5' code=205 path=/api/v1/auth?id=5 timeout,0,logs
+2026-08-25 10:40:00 ERROR [db] user='u0' code=200 path=/api/v1/db?id=0 retry,0,logs
+2026-08-25 10:41:01 ERROR [db] user='u1' code=201 path=/api/v1/db?id=1 timeout,0,logs
+2026-08-25 10:42:02 ERROR [db] user='u2' code=202 path=/api/v1/db?id=2 miss,0,logs
+2026-08-25 10:43:03 ERROR [db] user='u3' code=203 path=/api/v1/db?id=3 ok,0,logs
+2026-08-25 10:44:04 ERROR [db] user='u4' code=204 path=/api/v1/db?id=4 timeout,0,logs
+2026-08-25 10:45:05 ERROR [db] user='u5' code=205 path=/api/v1/db?id=5 timeout,0,logs
+2026-08-25 10:40:00 ERROR [cache] user='u0' code=200 path=/api/v1/cache?id=0 timeout,0,logs
+2026-08-25 10:41:01 ERROR [cache] user='u1' code=201 path=/api/v1/cache?id=1 ok,0,logs
+2026-08-25 10:42:02 ERROR [cache] user='u2' code=202 path=/api/v1/cache?id=2 retry,0,logs
+2026-08-25 10:43:03 ERROR [cache] user='u3' code=203 path=/api/v1/cache?id=3 retry,0,logs
+2026-08-25 10:44:04 ERROR [cache] user='u4' code=204 path=/api/v1/cache?id=4 retry,0,logs
+2026-08-25 10:45:05 ERROR [cache] user='u5' code=205 path=/api/v1/cache?id=5 ok,0,logs
+2026-08-25 10:40:00 ERROR [http] user='u0' code=200 path=/api/v1/http?id=0 retry,0,logs
+2026-08-25 10:41:01 ERROR [http] user='u1' code=201 path=/api/v1/http?id=1 timeout,0,logs
+2026-08-25 10:42:02 ERROR [http] user='u2' code=202 path=/api/v1/http?id=2 retry,0,logs
+2026-08-25 10:43:03 ERROR [http] user='u3' code=203 path=/api/v1/http?id=3 timeout,0,logs
+2026-08-25 10:44:04 ERROR [http] user='u4' code=204 path=/api/v1/http?id=4 miss,0,logs
+2026-08-25 10:45:05 ERROR [http] user='u5' code=205 path=/api/v1/http?id=5 retry,0,logs
+2026-08-25 10:40:00 ERROR [worker] user='u0' code=200 path=/api/v1/worker?id=0 retry,0,logs
+2026-08-25 10:41:01 ERROR [worker] user='u1' code=201 path=/api/v1/worker?id=1 ok,0,logs
+2026-08-25 10:42:02 ERROR [worker] user='u2' code=202 path=/api/v1/worker?id=2 ok,0,logs
+2026-08-25 10:43:03 ERROR [worker] user='u3' code=203 path=/api/v1/worker?id=3 ok,0,logs
+2026-08-25 10:44:04 ERROR [worker] user='u4' code=204 path=/api/v1/worker?id=4 retry,0,logs
+2026-08-25 10:45:05 ERROR [worker] user='u5' code=205 path=/api/v1/worker?id=5 timeout,0,logs
+2026-08-25 10:40:00 DEBUG [auth] user='u0' code=200 path=/api/v1/auth?id=0 retry,0,logs
+2026-08-25 10:41:01 DEBUG [auth] user='u1' code=201 path=/api/v1/auth?id=1 retry,0,logs
+2026-08-25 10:42:02 DEBUG [auth] user='u2' code=202 path=/api/v1/auth?id=2 ok,0,logs
+2026-08-25 10:43:03 DEBUG [auth] user='u3' code=203 path=/api/v1/auth?id=3 miss,0,logs
+2026-08-25 10:44:04 DEBUG [auth] user='u4' code=204 path=/api/v1/auth?id=4 retry,0,logs
+2026-08-25 10:45:05 DEBUG [auth] user='u5' code=205 path=/api/v1/auth?id=5 miss,0,logs
+2026-08-25 10:40:00 DEBUG [db] user='u0' code=200 path=/api/v1/db?id=0 retry,0,logs
+2026-08-25 10:41:01 DEBUG [db] user='u1' code=201 path=/api/v1/db?id=1 miss,0,logs
+2026-08-25 10:42:02 DEBUG [db] user='u2' code=202 path=/api/v1/db?id=2 miss,0,logs
+2026-08-25 10:43:03 DEBUG [db] user='u3' code=203 path=/api/v1/db?id=3 timeout,0,logs
+2026-08-25 10:44:04 DEBUG [db] user='u4' code=204 path=/api/v1/db?id=4 retry,0,logs
+2026-08-25 10:45:05 DEBUG [db] user='u5' code=205 path=/api/v1/db?id=5 ok,0,logs
+2026-08-25 10:40:00 DEBUG [cache] user='u0' code=200 path=/api/v1/cache?id=0 miss,0,logs
+2026-08-25 10:41:01 DEBUG [cache] user='u1' code=201 path=/api/v1/cache?id=1 timeout,0,logs
+2026-08-25 10:42:02 DEBUG [cache] user='u2' code=202 path=/api/v1/cache?id=2 timeout,0,logs
+2026-08-25 10:43:03 DEBUG [cache] user='u3' code=203 path=/api/v1/cache?id=3 retry,0,logs
+2026-08-25 10:44:04 DEBUG [cache] user='u4' code=204 path=/api/v1/cache?id=4 retry,0,logs
+2026-08-25 10:45:05 DEBUG [cache] user='u5' code=205 path=/api/v1/cache?id=5 ok,0,logs
+2026-08-25 10:40:00 DEBUG [http] user='u0' code=200 path=/api/v1/http?id=0 timeout,0,logs
+2026-08-25 10:41:01 DEBUG [http] user='u1' code=201 path=/api/v1/http?id=1 retry,0,logs
+In the lecture we derived: P(A|B) = P(B|A)*P(A)/P(B).,0,math
+In the lecture we derived: f(x) = x^2 - 3x + 2.,0,math
+"In the lecture we derived: {1,2,3} ∪ {3,4} = {1,2,3,4}.",0,math
+In the lecture we derived: ∑_{i=1}^{n} i = n(n+1)/2.,0,math
+In the lecture we derived: 2x + 5 = 15 => x = 5.,0,math
+In the lecture we derived: a > b and b > c => a > c.,0,math
+In the lecture we derived: O(n log n) < O(n^2).,0,math
+Recall that: P(A|B) = P(B|A)*P(A)/P(B).,0,math
+Recall that: f(x) = x^2 - 3x + 2.,0,math
+"Recall that: {1,2,3} ∪ {3,4} = {1,2,3,4}.",0,math
+Recall that: ∑_{i=1}^{n} i = n(n+1)/2.,0,math
+Recall that: 2x + 5 = 15 => x = 5.,0,math
+Recall that: a > b and b > c => a > c.,0,math
+Recall that: O(n log n) < O(n^2).,0,math
+As shown: P(A|B) = P(B|A)*P(A)/P(B).,0,math
+As shown: f(x) = x^2 - 3x + 2.,0,math
+"As shown: {1,2,3} ∪ {3,4} = {1,2,3,4}.",0,math
+As shown: ∑_{i=1}^{n} i = n(n+1)/2.,0,math
+As shown: 2x + 5 = 15 => x = 5.,0,math
+As shown: a > b and b > c => a > c.,0,math
+As shown: O(n log n) < O(n^2).,0,math
+By induction: P(A|B) = P(B|A)*P(A)/P(B).,0,math
+By induction: f(x) = x^2 - 3x + 2.,0,math
+"By induction: {1,2,3} ∪ {3,4} = {1,2,3,4}.",0,math
+By induction: ∑_{i=1}^{n} i = n(n+1)/2.,0,math
+By induction: 2x + 5 = 15 => x = 5.,0,math
+By induction: a > b and b > c => a > c.,0,math
+By induction: O(n log n) < O(n^2).,0,math
+Note that: P(A|B) = P(B|A)*P(A)/P(B).,0,math
+Note that: f(x) = x^2 - 3x + 2.,0,math
+"Note that: {1,2,3} ∪ {3,4} = {1,2,3,4}.",0,math
+Note that: ∑_{i=1}^{n} i = n(n+1)/2.,0,math
+Note that: 2x + 5 = 15 => x = 5.,0,math
+Note that: a > b and b > c => a > c.,0,math
+Note that: O(n log n) < O(n^2).,0,math
+Theorem:: P(A|B) = P(B|A)*P(A)/P(B).,0,math
+Theorem:: f(x) = x^2 - 3x + 2.,0,math
+"Theorem:: {1,2,3} ∪ {3,4} = {1,2,3,4}.",0,math
+Theorem:: ∑_{i=1}^{n} i = n(n+1)/2.,0,math
+Theorem:: 2x + 5 = 15 => x = 5.,0,math
+Theorem:: a > b and b > c => a > c.,0,math
+Theorem:: O(n log n) < O(n^2).,0,math
+Re: Please DROP by the office; we'll SELECT a venue.,0,prose
+Re: contact O'Brien & Sons re: invoice #4471.,0,prose
+Re: review 5+ vendors where cost < budget AND quality = high.,0,prose
+"Re: the ""insert"" clause — please delete clause 3.",0,prose
+"Re: she said ""it's fine"" & moved on.",0,prose
+Re: SELECT the best option OR ask again.,0,prose
+"Re: Address: 42 O'Malley Ave, Apt #7.",0,prose
+"FYI, Please DROP by the office; we'll SELECT a venue.",0,prose
+"FYI, contact O'Brien & Sons re: invoice #4471.",0,prose
+"FYI, review 5+ vendors where cost < budget AND quality = high.",0,prose
+"FYI, the ""insert"" clause — please delete clause 3.",0,prose
+"FYI, she said ""it's fine"" & moved on.",0,prose
+"FYI, SELECT the best option OR ask again.",0,prose
+"FYI, Address: 42 O'Malley Ave, Apt #7.",0,prose
+Note: Please DROP by the office; we'll SELECT a venue.,0,prose
+Note: contact O'Brien & Sons re: invoice #4471.,0,prose
+Note: review 5+ vendors where cost < budget AND quality = high.,0,prose
+"Note: the ""insert"" clause — please delete clause 3.",0,prose
+"Note: she said ""it's fine"" & moved on.",0,prose
+Note: SELECT the best option OR ask again.,0,prose
+"Note: Address: 42 O'Malley Ave, Apt #7.",0,prose
+Reminder: Please DROP by the office; we'll SELECT a venue.,0,prose
+Reminder: contact O'Brien & Sons re: invoice #4471.,0,prose
+Reminder: review 5+ vendors where cost < budget AND quality = high.,0,prose
+"Reminder: the ""insert"" clause — please delete clause 3.",0,prose
+"Reminder: she said ""it's fine"" & moved on.",0,prose
+Reminder: SELECT the best option OR ask again.,0,prose
+"Reminder: Address: 42 O'Malley Ave, Apt #7.",0,prose
+"Team, Please DROP by the office; we'll SELECT a venue.",0,prose
+"Team, contact O'Brien & Sons re: invoice #4471.",0,prose
+"Team, review 5+ vendors where cost < budget AND quality = high.",0,prose
+"Team, the ""insert"" clause — please delete clause 3.",0,prose
+"Team, she said ""it's fine"" & moved on.",0,prose
+"Team, SELECT the best option OR ask again.",0,prose
+"Team, Address: 42 O'Malley Ave, Apt #7.",0,prose
+Update: Please DROP by the office; we'll SELECT a venue.,0,prose
+Update: contact O'Brien & Sons re: invoice #4471.,0,prose
+Update: review 5+ vendors where cost < budget AND quality = high.,0,prose
+"Update: the ""insert"" clause — please delete clause 3.",0,prose
+"Update: she said ""it's fine"" & moved on.",0,prose
+Update: SELECT the best option OR ask again.,0,prose
+"Update: Address: 42 O'Malley Ave, Apt #7.",0,prose

