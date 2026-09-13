@@ -2,36 +2,74 @@
 {% block title %}Dashboard — AI-GIS{% endblock %}
 {% block content %}
 <h1 class="page-title">AI-GIS Detection Pipeline</h1>
-<p class="page-sub">Live dashboard for the trained RF v2 + LSTM + meta-learner stacked system.</p>
+<p class="page-sub">
+  A honeypot-trained hybrid detector — Random Forest (319 features) + character-level LSTM,
+  combined by a logistic-regression meta-learner. The numbers below summarise the trained
+  system and its held-out evaluation.
+</p>
 
+<h2 class="section-title">Headline results</h2>
 <div class="grid-4">
-  <div class="card stat"><div class="n">{{ "{:,}".format(stats.total) }}</div><div class="l">Total entries</div></div>
-  <div class="card stat"><div class="n">1:1</div><div class="l">Malicious : benign</div></div>
-  <div class="card stat"><div class="n">1:1</div><div class="l">SQLi : XSS</div></div>
-  <div class="card stat"><div class="n">100%</div><div class="l">Zero duplicate payloads</div></div>
+  <div class="card stat"><div class="n">97.9%</div><div class="l">Attack detection (recall)</div></div>
+  <div class="card stat"><div class="n">0.925</div><div class="l">F1-Score · held-out</div></div>
+  <div class="card stat"><div class="n">0.993</div><div class="l">AUC-ROC</div></div>
+  <div class="card stat"><div class="n">19.6%</div><div class="l">False-positive rate</div></div>
 </div>
 
-<h2 class="section-title">Clean test set performance</h2>
+<h2 class="section-title">Corpus at a glance</h2>
+<div class="grid-4">
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.total) }}</div><div class="l">Total records</div></div>
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.malicious) }}</div><div class="l">Attack records</div></div>
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.benign) }}</div><div class="l">Benign records</div></div>
+  <div class="card stat"><div class="n">10</div><div class="l">Attack families</div></div>
+</div>
+
+<h2 class="section-title">Model comparison on the internal test set</h2>
 <div class="card">
-  <canvas id="cleanChart" height="90"></canvas>
+  <h3 class="chart-title">AUC-ROC — all four candidate models (n = 5,983)</h3>
+  <p class="chart-note">
+    Every model reaches near-ceiling AUC on the clean development split, because its attack
+    records share generation templates with the training data. This confirms the pipeline runs
+    correctly; the real test of evasion resistance is the stress set below and the held-out
+    benchmark. <em>(Bars start at 0.99 to make the small differences visible.)</em>
+  </p>
+  <div class="chart-box" style="height:230px;"><canvas id="cleanChart"></canvas></div>
 </div>
 
 <h2 class="section-title">Stress test — evasion attacks &amp; hard-benign text</h2>
 <div class="card">
-  <canvas id="stressChart" height="90"></canvas>
-  <p style="font-size:13px;color:var(--ink-soft);margin-top:14px;">
-    23 evasion-style attacks + 15 legitimate sentences the models never trained on.
+  <h3 class="chart-title">Detection vs false alarms on data the models never trained on</h3>
+  <p class="chart-note">
+    23 evasion-style attacks + 15 legitimate sentences shaped to look like attacks. The gap
+    between the teal (attacks caught) and red (false positives) bars is what separates a usable
+    detector from an over-eager one.
     <a href="/evasion" style="color:var(--teal);font-weight:600;">See full breakdown →</a>
   </p>
+  <div class="chart-box" style="height:250px;"><canvas id="stressChart"></canvas></div>
 </div>
 
 <h2 class="section-title">Dataset split</h2>
-<div class="grid-2">
-  <div class="card stat"><div class="n">{{ "{:,}".format(stats.train) }}</div><div class="l">Train rows</div></div>
-  <div class="card stat"><div class="n">{{ "{:,}".format(stats.val) }}</div><div class="l">Validation rows</div></div>
+<div class="grid-3">
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.train) }}</div><div class="l">Training rows · ~70%</div></div>
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.val) }}</div><div class="l">Validation rows · ~15%</div></div>
+  <div class="card stat"><div class="n">{{ "{:,}".format(stats.test) }}</div><div class="l">Test rows · ~15%</div></div>
 </div>
+<p class="metric-note">
+  Split by <b>session</b> (not by row) so no session appears in more than one partition — this
+  prevents near-duplicate payloads from leaking between training and testing.
+</p>
 
 <script>
+const C_INK='#5A6472', C_LINE='#E2DCCE';
+const barBase = {
+  responsive:true, maintainAspectRatio:false,
+  plugins:{legend:{labels:{font:{family:'Inter',size:12},color:C_INK,boxWidth:14,padding:16}}},
+  scales:{
+    x:{grid:{display:false},ticks:{color:C_INK,font:{family:'Inter',size:12,weight:'600'}}},
+    y:{grid:{color:C_LINE},ticks:{color:C_INK,font:{family:'Inter',size:11}}}
+  }
+};
+
 new Chart(document.getElementById('cleanChart'), {
   type: 'bar',
   data: {
@@ -40,10 +78,12 @@ new Chart(document.getElementById('cleanChart'), {
       label: 'AUC-ROC',
       data: [{{ clean_test['RF v1'].auc }}, {{ clean_test['RF v2'].auc }}, {{ clean_test['LSTM'].auc }}, {{ clean_test['Stacked'].auc }}],
       backgroundColor: ['#C0432C','#D9A441','#2A7F7E','#2E7D5B'],
-      borderRadius: 6,
+      borderRadius: 8, maxBarThickness: 130,
     }]
   },
-  options: { scales: { y: { min: 0.99, max: 1.001 } }, plugins: { legend: { display: false } } }
+  options: {...barBase, plugins:{...barBase.plugins, legend:{display:false}},
+    scales:{...barBase.scales, y:{...barBase.scales.y, min:0.99, max:1.0006,
+      ticks:{...barBase.scales.y.ticks, callback:v=>v.toFixed(3)}}}}
 });
 
 new Chart(document.getElementById('stressChart'), {
@@ -52,28 +92,29 @@ new Chart(document.getElementById('stressChart'), {
     labels: ['RF v1', 'RF v2', 'LSTM', 'Stacked'],
     datasets: [
       {
-        label: 'Evasion caught %',
+        label: 'Evasion attacks caught %',
         data: [
           {{ (stress_test['RF v1'].evasion_caught / stress_test['RF v1'].evasion_total * 100) | round(1) }},
           {{ (stress_test['RF v2'].evasion_caught / stress_test['RF v2'].evasion_total * 100) | round(1) }},
           {{ (stress_test['LSTM'].evasion_caught / stress_test['LSTM'].evasion_total * 100) | round(1) }},
           {{ (stress_test['Stacked'].evasion_caught / stress_test['Stacked'].evasion_total * 100) | round(1) }}
         ],
-        backgroundColor: '#2A7F7E', borderRadius: 6,
+        backgroundColor: '#2A7F7E', borderRadius: 7, maxBarThickness: 46,
       },
       {
-        label: 'False positive %',
+        label: 'False positives %',
         data: [
           {{ (stress_test['RF v1'].false_positives / stress_test['RF v1'].benign_total * 100) | round(1) }},
           {{ (stress_test['RF v2'].false_positives / stress_test['RF v2'].benign_total * 100) | round(1) }},
           {{ (stress_test['LSTM'].false_positives / stress_test['LSTM'].benign_total * 100) | round(1) }},
           {{ (stress_test['Stacked'].false_positives / stress_test['Stacked'].benign_total * 100) | round(1) }}
         ],
-        backgroundColor: '#C0432C', borderRadius: 6,
+        backgroundColor: '#C0432C', borderRadius: 7, maxBarThickness: 46,
       }
     ]
   },
-  options: { scales: { y: { min: 0, max: 100 } } }
+  options: {...barBase, scales:{...barBase.scales, y:{...barBase.scales.y, min:0, max:100,
+    ticks:{...barBase.scales.y.ticks, callback:v=>v+'%'}}}}
 });
 </script>
 {% endblock %}

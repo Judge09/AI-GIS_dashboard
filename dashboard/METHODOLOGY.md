@@ -62,12 +62,12 @@ This is the part most worth stating precisely, because the corpus is **neither
 fully real nor fully synthetic**. It is a *synthetic payload overlay on real
 flow metadata*.
 
-The converter is `scripts/webids23_to_honeypot_log_v9.py` (874 lines). Its own
+The converter is `scripts/stages/webids23_to_honeypot_log_v9.py` (934 lines). Its own
 docstring describes the arrangement as *"payload/IP content being a documented
 synthetic overlay on real WEB-IDS23 flow metadata."*
 
 **What comes from WEB-IDS23 (real).** The converter reads exactly six columns
-(`webids23_to_honeypot_log_v9.py:77`):
+(`webids23_to_honeypot_log_v9.py:139`):
 
 ```python
 USECOLS = ["uid", "ts", "id.orig_h", "id.resp_h", "service", "attack_type"]
@@ -172,7 +172,7 @@ literal `<script>` would fail most of this corpus.
 
 ### 2.4 The rows I added (271)
 
-`scripts/build_training_augmentation.py`, `SEED = 4242`, idempotent (strips
+`scripts/stages/build_training_augmentation.py`, `SEED = 4242`, idempotent (strips
 prior `"aug": true` rows before appending).
 
 **228 benign** — symbol-dense but harmless, six generator groups:
@@ -209,7 +209,7 @@ them into one split.
 
 ### 2.5 The evaluation set (the "ruler")
 
-`scripts/build_holdout_eval.py`, `SEED = 1234` → **396 rows, 198 attack / 198
+`scripts/stages/build_holdout_eval.py`, `SEED = 1234` → **396 rows, 198 attack / 198
 benign** at `data/eval/holdout_eval.csv`.
 
 Sources (`:44-125`): seeded from `EVASION_ATTACKS` and `HARD_BENIGN` in
@@ -347,7 +347,7 @@ behaviour.
 > "stratified as best-effort". With ~50/50 classes over 36k rows the drift is
 > negligible, but it is not a guarantee.
 
-### 4.2 Unicode normalisation (`scripts/text_normalize.py`)
+### 4.2 Unicode normalisation (`scripts/lib/text_normalize.py`)
 
 NFKC normalisation plus a 17-entry homoglyph table for curly quotes, primes, and
 dashes that NFKC leaves alone.
@@ -679,15 +679,15 @@ earlier one gave 2.5%/95.5%. See §9.6.
 
 ```bash
 cd dashboard
-python scripts/build_holdout_eval.py            # the 396-row ruler (seed 1234)
-python scripts/17_evaluate_csv.py               # BEFORE (pre-aug models)
-python scripts/build_training_augmentation.py   # +228 benign, +43 attack (seed 4242)
-python scripts/18_train_stacked.py --epochs 6   # retrain RF + LSTM + meta (seed 42)
-python scripts/17_evaluate_csv.py               # AFTER
-python scripts/16_claude_redteam.py             # independent red-team
-python scripts/13_statistical_significance.py   # bootstrap CIs + McNemar
-python scripts/14_ablation_study.py             # 6-condition ablation
-python scripts/15_evaluate_llm_corpus.py        # LLM evasion corpus
+python scripts/stages/build_holdout_eval.py            # the 396-row ruler (seed 1234)
+python scripts/stages/17_evaluate_csv.py               # BEFORE (pre-aug models)
+python scripts/stages/build_training_augmentation.py   # +228 benign, +43 attack (seed 4242)
+python scripts/stages/18_train_stacked.py --epochs 6   # retrain RF + LSTM + meta (seed 42)
+python scripts/stages/17_evaluate_csv.py               # AFTER
+python scripts/stages/16_claude_redteam.py             # independent red-team
+python scripts/stages/13_statistical_significance.py   # bootstrap CIs + McNemar
+python scripts/stages/14_ablation_study.py             # 6-condition ablation
+python scripts/stages/15_evaluate_llm_corpus.py        # LLM evasion corpus
 ```
 
 Steps 4–9 must run **in order**: the trainer rewrites `data/prepared/*`, and the

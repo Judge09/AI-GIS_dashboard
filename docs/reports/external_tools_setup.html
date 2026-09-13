@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-GIS: External Tools Setup Guide</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --primary-color: #3b82f6;
+            --secondary-color: #1e293b;
+            --accent-color: #10b981;
+            --danger-color: #ef4444;
+            --code-bg: #020617;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #f8fafc;
+            margin-top: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h1 { font-size: 2.25rem; border-bottom: 2px solid var(--primary-color); }
+        h2 { font-size: 1.5rem; color: #93c5fd; }
+        
+        .phase-box {
+            background-color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            color: #38bdf8;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #e2e8f0;
+        }
+
+        .note {
+            border-left: 4px solid var(--primary-color);
+            background-color: rgba(59, 130, 246, 0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .warning {
+            border-left: 4px solid var(--danger-color);
+            background-color: rgba(239, 68, 68, 0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .success-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AI-GIS External Tools Setup Guide</h1>
+    <p>This guide outlines the precise steps required to configure the external dependencies for the final phases of your thesis: generating the adversarial LLM payload corpus and establishing the ModSecurity baseline.</p>
+
+    <div class="note">
+        <strong>Correction Noted:</strong> The previously referenced <code>4.3.0</code> ModSecurity image was a hallucinated version number in the draft methodology. We will use the official latest stable OWASP Core Rule Set (CRS) v4 image (<code>owasp/modsecurity-crs:4-nginx</code>).
+    </div>
+
+    <!-- Phase 1: Ollama Setup -->
+    <div class="phase-box">
+        <h2>Phase 1: Ollama Setup (WSL2 Debian)</h2>
+        <p>You already have Ollama installed in WSL2. We need to ensure the correct models are pulled and that the API is accessible to your Windows-side Python pipeline.</p>
+
+        <h3>1. Pull the Required Models</h3>
+        <p>In your WSL2 Debian terminal, download the models specified in Chapter 3:</p>
+        <pre><code>ollama run codellama:13b
+ollama run deepseek-r1:14b</code></pre>
+        <p><em>(Press Ctrl+D to exit the prompt once downloaded).</em></p>
+
+        <h3>2. Configure API Access (Crucial)</h3>
+        <p>By default, Ollama in WSL2 binds to <code>127.0.0.1</code> inside the Linux VM, making it unreachable from your Windows host where the Python scripts run. We need to bind it to all interfaces.</p>
+        <p>Edit the Ollama service configuration in Debian:</p>
+        <pre><code>sudo mkdir -p /etc/systemd/system/ollama.service.d
+echo '[Service]' | sudo tee /etc/systemd/system/ollama.service.d/override.conf
+echo 'Environment="OLLAMA_HOST=0.0.0.0:11434"' | sudo tee -a /etc/systemd/system/ollama.service.d/override.conf
+
+sudo systemctl daemon-reload
+sudo systemctl restart ollama</code></pre>
+
+        <div class="success-step">
+            <span>✅</span>
+            <div><strong>Verification:</strong> Open PowerShell on Windows and run <code>curl http://localhost:11434/api/tags</code>. It should return a JSON list of your installed models.</div>
+        </div>
+    </div>
+
+    <!-- Phase 2: ModSecurity Setup -->
+    <div class="phase-box">
+        <h2>Phase 2: ModSecurity + OWASP CRS Baseline</h2>
+        <p>We will use Docker Desktop on Windows (using the WSL2 backend) to spin up the official OWASP CRS Nginx container. This ensures an air-gapped, reproducible environment.</p>
+
+        <h3>1. Pull the Official Stable Image</h3>
+        <p>In PowerShell, pull the stable v4 CRS image:</p>
+        <pre><code>docker pull owasp/modsecurity-crs:4-nginx</code></pre>
+
+        <h3>2. Prepare the Evaluation Script</h3>
+        <p>We need a Python script to throw the `rf_test_v2.csv` payloads at the ModSecurity container and record whether it returns a 200 OK (passed) or 403 Forbidden (blocked). Since ModSecurity is a WAF, it evaluates HTTP requests, not CSV rows. The script will format the payloads as HTTP GET/POST requests.</p>
+        
+        <h3>3. Run the Container in Anomaly Scoring Mode (Paranoia Level 2)</h3>
+        <p>Your Chapter 3 methodology specifies Paranoia Level 2 (PL2). Start the container with the required environment variables in PowerShell:</p>
+        <pre><code>docker run -d `
+  --name modsec-baseline `
+  -p 8080:80 `
+  -e PARANOIA=2 `
+  -e ANOMALY_INBOUND=5 `
+  -e ANOMALY_OUTBOUND=4 `
+  owasp/modsecurity-crs:4-nginx</code></pre>
+
+        <div class="warning">
+            <strong>Why Anomaly Scoring?</strong> Modern ModSecurity doesn't block on the first matched rule. It adds anomaly points. Setting <code>ANOMALY_INBOUND=5</code> ensures that if the score reaches 5 (usually 1 critical rule or 2 minor rules), the request is blocked (HTTP 403).
+        </div>
+
+        <div class="success-step">
+            <span>✅</span>
+            <div><strong>Verification:</strong> In PowerShell, test a benign request: <code>curl http://localhost:8080/</code> (Should return 200 OK or 502/404 depending on backend, but NOT 403). Then test an attack: <code>curl http://localhost:8080/?q=1%27%20OR%20%271%27%3D%271</code> (Should return 403 Forbidden).</div>
+        </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="phase-box">
+        <h2>What We Build Next</h2>
+        <p>Once you confirm the above tools are responding, I will write the following two tools to complete the thesis pipeline:</p>
+        <ol>
+            <li><strong><code>scripts/11_generate_evasion_corpus.py</code>:</strong> Connects to <code>localhost:11434</code> (Ollama) and prompts CodeLlama/DeepSeek to generate obfuscated variants of the test set, outputting <code>llm_evasion_corpus.csv</code>.</li>
+            <li><strong><code>scripts/12_evaluate_modsec_baseline.py</code>:</strong> Fires the test sets at <code>localhost:8080</code> (ModSecurity) and computes the exact same 5-metric suite (F1, FPR, etc.) so we can do a 1:1 comparison against your AI-GIS Stacked Ensemble.</li>
+        </ol>
+    </div>
+
+</body>
+</html>

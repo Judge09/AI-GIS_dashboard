@@ -40,13 +40,13 @@ dashboard/data/prepared/*.npz
 
 # ---- Local-only model backups (superseded architectures / pre-augmentation) ----
 # METHODOLOGY.md documents these as local-only. Do not commit.
-dashboard/models/_backup_pre_aug/
+dashboard/models/_backup_*/
 
 # ---- Thesis manuscript (large binary, tracked outside git) ----
 *.docx
 
+# ---- Large non-code artifacts ----
+artifacts/submission_resecurity.zip
+artifacts/handoff/honeypot_bundle.zip
+
 # ---- Superseded intermediate eval runs (1-layer; kept locally for reference) ----
-dashboard/reports/holdout_eval_verify.json
-dashboard/reports/holdout_eval_before_verify.json
-dashboard/reports/holdout_eval_after_verify.json
-dashboard/reports/holdout_eval_after.json

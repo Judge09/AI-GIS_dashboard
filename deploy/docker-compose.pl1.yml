@@ -1,0 +1,61 @@
+# docker-compose.pl1.yml
+# ModSecurity PL1 feedback WAF — for the DeepSeek Round-2 mutation loop only
+# (Chapter 3, Section 3.5). This is DELIBERATELY SEPARATE from the PL2
+# evaluation WAF in docker-compose.yml:
+#
+#   docker-compose.yml       PL2, port 8080, blocking on   -> the EVALUATION baseline
+#   docker-compose.pl1.yml   PL1, port 8081, DetectionOnly -> the GENERATION feedback source
+#
+# Keeping them on different ports means the two never collide, and the corpus
+# generator can talk to PL1 while a PL2 evaluation is (or later will be) running.
+#
+# It reuses the existing modsec-dummy-backend + modsec-net from the PL2 compose,
+# so bring the PL2 stack up first (which creates them), then this one.
+#
+# USAGE (from project root):
+#   docker network create modsec-net          # once, if not already created
+#   docker compose up -d                        # PL2 stack (creates the backend)
+#   docker compose -f docker-compose.pl1.yml up -d   # PL1 feedback WAF
+#   ...run scripts/26_generate_deepseek_corpus.py --modsec-port 8081 ...
+#   docker compose -f docker-compose.pl1.yml down
+
+services:
+
+  modsec-pl1-feedback:
+    image: owasp/modsecurity-crs:nginx
+    container_name: modsec-pl1-feedback
+    networks:
+      - modsec-net
+    ports:
+      - "8081:8080"
+    environment:
+      # Paranoia Level 1 — the feedback signal for DeepSeek Round 2. The
+      # thesis notes this is a LOWER paranoia level than the PL2 evaluation
+      # baseline, which is the source of the disclosed circularity: Round-2
+      # payloads see PL1 rule logic, but are scored against PL2.
+      PARANOIA: 1
+      BLOCKING_PARANOIA: 1
+      ANOMALY_INBOUND: 5
+      ANOMALY_OUTBOUND: 4
+      # Rule engine ON (blocking). The generator's feedback signal is the
+      # block decision itself: on a match the CRS image returns 403 and names
+      # the matched rule IDs, which 26_generate_deepseek_corpus.py reads and
+      # feeds back for the Round-2 mutation. A DetectionOnly engine returns 200
+      # and writes matches only to the stdout audit log, which the dependency-
+      # free HTTP client here cannot read — so blocking is used to expose the
+      # signal over HTTP. Section 3.5's "DetectionOnly" refers to the PL2
+      # EVALUATION baseline (docker-compose.yml), not this generation-time
+      # feedback source; the disclosed circularity (PL1 feedback, PL2 scoring)
+      # is unchanged.
+      MODSEC_RULE_ENGINE: "on"
+      # Reuse the same pass-through backend the PL2 stack created.
+      BACKEND: "http://modsec-dummy-backend:80"
+      MODSEC_AUDIT_LOG: "/dev/stdout"
+      MODSEC_AUDIT_ENGINE: "RelevantOnly"
+      LOGLEVEL: "warn"
+    restart: unless-stopped
+
+networks:
+  modsec-net:
+    name: modsec-net
+    external: true

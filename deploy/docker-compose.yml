@@ -1,0 +1,51 @@
+# docker-compose.yml
+# AI-GIS ModSecurity Baseline Evaluation Environment
+#
+# Two services:
+#   modsec-dummy-backend — plain nginx:alpine acting as the pass-through backend
+#   modsec-baseline      — OWASP CRS WAF (PL2) proxying to the backend
+#
+# USAGE (from project root):
+#   docker compose up -d
+#   docker compose down
+#   docker compose logs modsec-baseline --follow
+
+services:
+
+  modsec-dummy-backend:
+    image: nginx:alpine
+    container_name: modsec-dummy-backend
+    networks:
+      - modsec-net
+    ports:
+      - "9090:80"
+    restart: unless-stopped
+
+  modsec-baseline:
+    image: owasp/modsecurity-crs:nginx
+    container_name: modsec-baseline
+    depends_on:
+      - modsec-dummy-backend
+    networks:
+      - modsec-net
+    ports:
+      - "8080:8080"
+    environment:
+      # CRS Paranoia Level 2 (Chapter 3 methodology)
+      PARANOIA: 2
+      BLOCKING_PARANOIA: 2
+      ANOMALY_INBOUND: 5
+      ANOMALY_OUTBOUND: 4
+      # Route allowed requests to the plain nginx backend (internal container name)
+      BACKEND: "http://modsec-dummy-backend:80"
+      # Keep audit log on stdout for docker logs visibility
+      MODSEC_AUDIT_LOG: "/dev/stdout"
+      MODSEC_AUDIT_ENGINE: "RelevantOnly"
+      MODSEC_RULE_ENGINE: "on"
+      LOGLEVEL: "warn"
+    restart: unless-stopped
+
+networks:
+  modsec-net:
+    name: modsec-net
+    external: true
