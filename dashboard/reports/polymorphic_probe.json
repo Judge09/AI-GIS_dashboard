@@ -11,38 +11,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9956,
-      "min_stacked": 0.9924,
+      "mean_stacked": 0.9959,
+      "min_stacked": 0.9913,
       "worst_variants": [
         {
           "text": "1\" || \"7\"=\"7",
-          "stacked": 0.9924,
-          "rf": 0.7809,
-          "lstm": 0.9991
+          "stacked": 0.9913,
+          "rf": 0.7587,
+          "lstm": 0.9996
         },
         {
           "text": "1' || '2'='2",
-          "stacked": 0.9927,
-          "rf": 0.7909,
-          "lstm": 0.9964
+          "stacked": 0.9926,
+          "rf": 0.7837,
+          "lstm": 0.9986
         },
         {
           "text": "1' || '1'='1",
-          "stacked": 0.9928,
-          "rf": 0.7909,
-          "lstm": 0.997
+          "stacked": 0.9926,
+          "rf": 0.7837,
+          "lstm": 0.9987
         },
         {
-          "text": "1%27%0aOR%0a'1%27%3D'1",
-          "stacked": 0.9934,
-          "rf": 0.8036,
+          "text": "1' || '0x31'='0x31",
+          "stacked": 0.9931,
+          "rf": 0.7937,
+          "lstm": 0.9996
+        },
+        {
+          "text": "1'%0aOR%0a'1'='1",
+          "stacked": 0.994,
+          "rf": 0.8144,
           "lstm": 0.9999
-        },
-        {
-          "text": "1%27 ||%20'1'=%271",
-          "stacked": 0.9937,
-          "rf": 0.8094,
-          "lstm": 0.9998
         }
       ]
     },
@@ -53,38 +53,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9886,
-      "min_stacked": 0.6256,
+      "mean_stacked": 0.998,
+      "min_stacked": 0.9966,
       "worst_variants": [
         {
           "text": "1\"  uniOn  sELeCt  uSeRNAme,pAssWorD  fRoM  usERs--",
-          "stacked": 0.6256,
-          "rf": 0.94,
-          "lstm": 0.1128
+          "stacked": 0.9966,
+          "rf": 0.92,
+          "lstm": 0.9763
         },
         {
-          "text": "1%22  UNiON  seLECT%20 USernAME,pasSwOrd%20 fRoM %20userS--",
-          "stacked": 0.9968,
-          "rf": 0.9197,
-          "lstm": 0.9997
+          "text": "1'  UNION  SELECT  username,password  FROM  users--",
+          "stacked": 0.9971,
+          "rf": 0.995,
+          "lstm": 0.9228
         },
         {
-          "text": "1' uNIOn seLeCt uSErname,PAsSWOrd From USERs--",
+          "text": "1' uniOn SelecT useRNAmE,paSsworD fROm usErS--",
           "stacked": 0.9973,
-          "rf": 0.945,
-          "lstm": 0.9998
+          "rf": 0.935,
+          "lstm": 0.9988
         },
         {
-          "text": "1' UnION%20sELeCt%20USERNAME,pASSword fRoM USeRs--",
+          "text": "1' Union SElect UserNAME,PasSWOrd fRom uSeRs--",
+          "stacked": 0.9973,
+          "rf": 0.94,
+          "lstm": 0.996
+        },
+        {
+          "text": "1'/**/union/**/sELECt/**/uSernAMe,PassWOrD from USerS--",
           "stacked": 0.9974,
-          "rf": 0.95,
-          "lstm": 0.9998
-        },
-        {
-          "text": "1'/**/UNIon sELeCt USeRnAme,paSswoord fRom USers--",
-          "stacked": 0.9975,
-          "rf": 0.96,
-          "lstm": 0.9992
+          "rf": 0.94,
+          "lstm": 0.9994
         }
       ]
     },
@@ -95,38 +95,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9977,
-      "min_stacked": 0.9971,
+      "mean_stacked": 0.998,
+      "min_stacked": 0.9976,
       "worst_variants": [
         {
-          "text": "aDmin\"--",
-          "stacked": 0.9971,
+          "text": "admin%22--",
+          "stacked": 0.9976,
           "rf": 0.97,
-          "lstm": 0.9612
+          "lstm": 0.9799
+        },
+        {
+          "text": "admin%27--",
+          "stacked": 0.9976,
+          "rf": 0.97,
+          "lstm": 0.9813
         },
         {
           "text": "aDMin'--",
-          "stacked": 0.9973,
-          "rf": 0.975,
-          "lstm": 0.9683
+          "stacked": 0.9977,
+          "rf": 0.9899,
+          "lstm": 0.9641
         },
         {
-          "text": "aDMin\"--",
-          "stacked": 0.9973,
-          "rf": 0.975,
-          "lstm": 0.9685
+          "text": "AdMin%27--",
+          "stacked": 0.9977,
+          "rf": 0.965,
+          "lstm": 0.995
         },
         {
           "text": "admin'--",
-          "stacked": 0.9974,
-          "rf": 0.97,
-          "lstm": 0.9811
-        },
-        {
-          "text": "admin\"--",
-          "stacked": 0.9974,
-          "rf": 0.97,
-          "lstm": 0.9824
+          "stacked": 0.9977,
+          "rf": 0.9896,
+          "lstm": 0.9697
         }
       ]
     },
@@ -137,38 +137,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.998,
-      "min_stacked": 0.9978,
+      "mean_stacked": 0.9982,
+      "min_stacked": 0.9976,
       "worst_variants": [
         {
           "text": "1' aANd Sleep(5)--",
-          "stacked": 0.9978,
-          "rf": 0.98,
-          "lstm": 0.9957
-        },
-        {
-          "text": "1'%09anD%09SleEP(5)--",
-          "stacked": 0.9979,
-          "rf": 0.985,
-          "lstm": 0.9996
+          "stacked": 0.9976,
+          "rf": 0.9897,
+          "lstm": 0.962
         },
         {
           "text": "1\" aND sleeP(5)--",
-          "stacked": 0.9979,
-          "rf": 0.995,
-          "lstm": 0.9903
+          "stacked": 0.9978,
+          "rf": 0.9897,
+          "lstm": 0.9759
+        },
+        {
+          "text": "1'%09anD%09SleEP(5)--",
+          "stacked": 0.9978,
+          "rf": 0.9699,
+          "lstm": 0.9996
         },
         {
           "text": "1' aNd SlEeP(5)--",
           "stacked": 0.998,
-          "rf": 1.0,
-          "lstm": 0.9935
+          "rf": 0.9947,
+          "lstm": 0.9826
         },
         {
-          "text": "1' AND%20sleeP(5%29--",
+          "text": "1' aaNd sLEEP(5)--",
           "stacked": 0.998,
-          "rf": 0.995,
-          "lstm": 0.9994
+          "rf": 0.9847,
+          "lstm": 0.999
         }
       ]
     },
@@ -179,38 +179,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9814,
-      "min_stacked": 0.6021,
+      "mean_stacked": 0.9746,
+      "min_stacked": 0.5133,
       "worst_variants": [
         {
           "text": "1'; drop tABle USeRS--",
-          "stacked": 0.6021,
-          "rf": 0.88,
-          "lstm": 0.1587
+          "stacked": 0.5133,
+          "rf": 0.915,
+          "lstm": 0.0079
         },
         {
           "text": "1'; drop TAble uSeRS--",
-          "stacked": 0.7381,
-          "rf": 0.855,
-          "lstm": 0.2875
+          "stacked": 0.5598,
+          "rf": 0.905,
+          "lstm": 0.0518
         },
         {
           "text": "1'; DRoP tABle USERS--",
-          "stacked": 0.9947,
-          "rf": 0.865,
-          "lstm": 0.9728
-        },
-        {
-          "text": "1\";\tdROp\ttaBle\tuSeRS--",
-          "stacked": 0.9959,
-          "rf": 0.88,
-          "lstm": 0.9993
+          "stacked": 0.9877,
+          "rf": 0.89,
+          "lstm": 0.7884
         },
         {
           "text": "1'; DrOp TABLe UseRs--",
-          "stacked": 0.9964,
-          "rf": 0.9,
-          "lstm": 0.9985
+          "stacked": 0.995,
+          "rf": 0.875,
+          "lstm": 0.9635
+        },
+        {
+          "text": "1'; DrOP tABlE UsErS--",
+          "stacked": 0.9965,
+          "rf": 0.94,
+          "lstm": 0.9502
         }
       ]
     },
@@ -221,38 +221,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9979,
-      "min_stacked": 0.9969,
+      "mean_stacked": 0.998,
+      "min_stacked": 0.997,
       "worst_variants": [
         {
           "text": "<script>alert%281%29%3C/script>",
-          "stacked": 0.9969,
-          "rf": 0.9249,
-          "lstm": 0.9997
-        },
-        {
-          "text": "<script>alert%281)%3C/script%3E",
-          "stacked": 0.9977,
-          "rf": 0.9696,
+          "stacked": 0.997,
+          "rf": 0.92,
           "lstm": 0.9998
-        },
-        {
-          "text": "%3CSCrIPt%3EALERt%281)%3c/SCRiPt>",
-          "stacked": 0.9977,
-          "rf": 0.9699,
-          "lstm": 0.9999
         },
         {
           "text": "%3CSCriPT>ALeRt(1)%3C/sCrIPt>",
-          "stacked": 0.9977,
-          "rf": 0.9699,
+          "stacked": 0.9973,
+          "rf": 0.9348,
           "lstm": 0.9999
         },
         {
-          "text": "<script%3Ealert(1)%3C/script%3E",
+          "text": "%3CScRipT>AlERt(1)%3C/sCrIpT>",
+          "stacked": 0.9974,
+          "rf": 0.9448,
+          "lstm": 0.9999
+        },
+        {
+          "text": "%3CSCrIPt%3EALERt%281)%3c/SCRiPt>",
+          "stacked": 0.9974,
+          "rf": 0.9449,
+          "lstm": 0.9999
+        },
+        {
+          "text": "<SCrIpT>Alert(1)</sCriPT>",
           "stacked": 0.9977,
-          "rf": 0.975,
-          "lstm": 0.9998
+          "rf": 0.96,
+          "lstm": 0.9999
         }
       ]
     },
@@ -263,38 +263,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9908,
-      "min_stacked": 0.7317,
+      "mean_stacked": 0.9977,
+      "min_stacked": 0.9938,
       "worst_variants": [
         {
-          "text": "<img  src=x  onerror=alert(1)>",
-          "stacked": 0.7317,
-          "rf": 0.95,
-          "lstm": 0.1834
-        },
-        {
           "text": "<img src=x%20onerroor=alert%281%29>",
-          "stacked": 0.9926,
-          "rf": 0.785,
-          "lstm": 0.9997
+          "stacked": 0.9938,
+          "rf": 0.81,
+          "lstm": 0.9999
         },
         {
           "text": "<img%20src=x%20onerror=alert(1%29%3E",
-          "stacked": 0.9959,
-          "rf": 0.88,
-          "lstm": 0.9998
+          "stacked": 0.9953,
+          "rf": 0.8517,
+          "lstm": 0.9999
         },
         {
           "text": "<img%0asrc=x%0aonerror=alert(1)>",
-          "stacked": 0.9961,
-          "rf": 0.8871,
-          "lstm": 0.9998
+          "stacked": 0.9967,
+          "rf": 0.905,
+          "lstm": 0.9999
+        },
+        {
+          "text": "<IMG%20sRC=X%20OnerrOr=AlerT(1)%3e",
+          "stacked": 0.9969,
+          "rf": 0.9149,
+          "lstm": 0.9999
         },
         {
           "text": "<img\nsrc%3Dx\nonerroor%3Dalert(1)%3E",
-          "stacked": 0.9961,
-          "rf": 0.8891,
-          "lstm": 0.9998
+          "stacked": 0.997,
+          "rf": 0.9196,
+          "lstm": 0.9999
         }
       ]
     },
@@ -305,38 +305,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9974,
-      "min_stacked": 0.9941,
+      "mean_stacked": 0.9976,
+      "min_stacked": 0.996,
       "worst_variants": [
         {
-          "text": "<svg  onload=alert(1)>",
-          "stacked": 0.9941,
-          "rf": 0.9493,
-          "lstm": 0.8676
+          "text": "%3Csvg%20onload%3Dalert(1%29>",
+          "stacked": 0.996,
+          "rf": 0.8751,
+          "lstm": 0.9998
         },
         {
           "text": "<svg onload%3Dalert(1%29%3E",
-          "stacked": 0.9958,
-          "rf": 0.875,
-          "lstm": 0.9996
+          "stacked": 0.996,
+          "rf": 0.8752,
+          "lstm": 0.9998
+        },
+        {
+          "text": "<svg%20onload%3Dalert(1%29%3E",
+          "stacked": 0.9961,
+          "rf": 0.8801,
+          "lstm": 0.9999
         },
         {
           "text": "<svg onload%3Dalert(1%29>",
-          "stacked": 0.9961,
-          "rf": 0.89,
-          "lstm": 0.9991
-        },
-        {
-          "text": "<svg%09onload=alert(1)>",
           "stacked": 0.9963,
-          "rf": 0.8939,
-          "lstm": 0.9997
+          "rf": 0.89,
+          "lstm": 0.9995
         },
         {
-          "text": "%3Csvg%20onload%3Dalert(1%29>",
-          "stacked": 0.9964,
-          "rf": 0.9,
-          "lstm": 0.9997
+          "text": "<svg%0aonload=alert(1)>",
+          "stacked": 0.9967,
+          "rf": 0.9048,
+          "lstm": 0.9998
         }
       ]
     },
@@ -347,38 +347,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9978,
-      "min_stacked": 0.9969,
+      "mean_stacked": 0.9979,
+      "min_stacked": 0.9967,
       "worst_variants": [
         {
-          "text": "%3Ca href=javascript:alert%281%29%3Ex%3C/a%3E",
-          "stacked": 0.9969,
-          "rf": 0.9247,
+          "text": "%3ca hREf=jaVaSCRIPT:AlErt%281%29>X%3C/A>",
+          "stacked": 0.9967,
+          "rf": 0.9042,
           "lstm": 0.9999
         },
         {
-          "text": "<a href=javascript:alert%281)>x</a>",
-          "stacked": 0.9975,
-          "rf": 0.9596,
-          "lstm": 0.9997
-        },
-        {
-          "text": "<A%20hrEF=JAVaSCRiPt:alErT%281%29>X</A>",
-          "stacked": 0.9975,
-          "rf": 0.9597,
+          "text": "%3CA hrEf=jAvAscrIPT:aLert(1%29>x%3C/A>",
+          "stacked": 0.9968,
+          "rf": 0.91,
           "lstm": 0.9999
         },
         {
           "text": "<a HREF%3DJavaSCRiPt:AlErT(1%29%3EX%3C/A>",
-          "stacked": 0.9975,
-          "rf": 0.9599,
+          "stacked": 0.997,
+          "rf": 0.9191,
           "lstm": 0.9999
         },
         {
-          "text": "<a%09href=javascript:alert(1)>x</a>",
-          "stacked": 0.9975,
-          "rf": 0.9599,
-          "lstm": 0.9998
+          "text": "%3CA HreF=jaVAScRiPt:alErT(1)>X</a>",
+          "stacked": 0.9973,
+          "rf": 0.9349,
+          "lstm": 0.9999
+        },
+        {
+          "text": "%3Ca href=javascript:alert%281%29%3Ex%3C/a%3E",
+          "stacked": 0.9974,
+          "rf": 0.9396,
+          "lstm": 0.9999
         }
       ]
     },
@@ -389,38 +389,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9978,
+      "mean_stacked": 0.9979,
       "min_stacked": 0.9967,
       "worst_variants": [
         {
           "text": "<body\tonload=alert%28document.cookie%29>",
           "stacked": 0.9967,
-          "rf": 0.915,
-          "lstm": 0.9991
-        },
-        {
-          "text": "<body  onload=alert(document.cookie)>",
-          "stacked": 0.9968,
-          "rf": 0.985,
-          "lstm": 0.9298
+          "rf": 0.9042,
+          "lstm": 0.9998
         },
         {
           "text": "<body onload=alert(document.cookie%29>",
-          "stacked": 0.9972,
-          "rf": 0.94,
-          "lstm": 0.9986
+          "stacked": 0.997,
+          "rf": 0.9191,
+          "lstm": 0.9997
         },
         {
-          "text": "<Body onLoAd=AlErT(DoCumENt.cOokIe)>",
-          "stacked": 0.9972,
-          "rf": 0.9399,
+          "text": "%3Cbody%20onload%3Dalert(document.cookie)>",
+          "stacked": 0.9974,
+          "rf": 0.9449,
+          "lstm": 0.9998
+        },
+        {
+          "text": "<bodY onloAD=alerT(docUMENT.cOoKiE%29%3E",
+          "stacked": 0.9974,
+          "rf": 0.945,
           "lstm": 0.9999
         },
         {
-          "text": "<body%20onload%3Dalert%28document.cookie)%3E",
+          "text": "<body onlOaD=ALeRt(DoCUMeNT.CoOKiE%29>",
           "stacked": 0.9975,
-          "rf": 0.9596,
-          "lstm": 0.9996
+          "rf": 0.9492,
+          "lstm": 0.9999
         }
       ]
     }

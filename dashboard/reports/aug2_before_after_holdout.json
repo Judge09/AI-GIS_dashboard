@@ -1,0 +1,49 @@
+{
+  "dataset": "holdout_eval.csv (396 rows, untouched by aug2)",
+  "stacked_OLD_pre_aug2": {
+    "tp": 185,
+    "fp": 1,
+    "tn": 197,
+    "fn": 13,
+    "detection_rate": 0.9343,
+    "fpr": 0.0051,
+    "f1": 0.9635
+  },
+  "stacked_NEW_post_aug2": {
+    "tp": 194,
+    "fp": 7,
+    "tn": 191,
+    "fn": 4,
+    "detection_rate": 0.9798,
+    "fpr": 0.0354,
+    "f1": 0.9724
+  },
+  "mcnemar": {
+    "b_old_right_new_wrong": 8,
+    "c_old_wrong_new_right": 11,
+    "n_discordant": 19,
+    "p_value_exact": 0.647606,
+    "significant_at_0.05": false
+  },
+  "mcnemar_subgroups": {
+    "attacks_n198": {
+      "old_fn": 13,
+      "new_fn": 4,
+      "newly_missed_b1": 1,
+      "newly_caught_c1": 10,
+      "p_value_exact": 0.0117,
+      "significant_at_0.05": true,
+      "interpretation": "Detection improvement is statistically significant: 10 attacks newly caught vs only 1 newly missed."
+    },
+    "benign_n198": {
+      "old_fp": 1,
+      "new_fp": 7,
+      "newly_flagged_b2": 7,
+      "newly_cleared_c2": 1,
+      "p_value_exact": 0.0703,
+      "significant_at_0.05": false,
+      "interpretation": "FPR increase is real (1->7 false alarms) but just short of significance at n=198 (p=0.070)."
+    },
+    "note": "The overall (mixed) McNemar above is not significant because it nets two opposite, individually-diagnosable effects: a significant detection gain and a near-significant FPR cost. Reporting them separately, not just the net, is the honest picture."
+  }
+}
