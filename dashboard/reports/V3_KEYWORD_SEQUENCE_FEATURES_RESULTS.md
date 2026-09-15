@@ -92,30 +92,62 @@ Tier 1 (400 syntactic mutations) and `claude_evasion_probe.py`'s catch/false-ala
 counts were unchanged (10/15 attacks, 2/8 false alarms) — the new features
 didn't move those specific probe cases either way beyond the mechanism above.
 
-## Multi-seed validation
+## Multi-seed validation — the single-seed "+1 catch" does NOT hold up
 
-Placeholder — see the follow-up commit / conversation for the 3-seed,
-2-layer-LSTM result (`reports/multirun_variance_v3feat_2layer.json`),
-run with the same methodology as the aug2 validation, to confirm this
-holds beyond seed 42 before treating it as a real conclusion.
+`22_multirun_variance.py --two-layer`, 3 seeds (42, 43, 44), same
+methodology as the aug2 validation. Comparison is against the aug2-ONLY
+3-seed result (the immediately-prior state), not the original pre-aug2
+baseline, since this change is additive on top of aug2:
+
+| Metric | aug2-only (3-seed) | aug2+features (3-seed) | Δ |
+|---|---:|---:|---:|
+| Stacked detection | 97.98 ± 1.52% | 97.64 ± 1.54% | −0.34pp |
+| Stacked FPR | 3.20 ± 0.77% | 3.37 ± 1.05% | +0.17pp |
+| Stacked F1 | 0.9740 ± 0.0114 | 0.9715 ± 0.0130 | −0.0025 |
+
+**Every difference is well inside one standard deviation of the 3-seed
+noise floor (SD ≈ 1.0–1.5pp on detection/FPR).** This is not an
+improvement and not a regression — it is statistically indistinguishable
+from no change at all at the ensemble level.
+
+**This confirms the mechanism diagnosis above, precisely.** The single-seed
+"+1 attack caught" result reported earlier was noise, exactly as the
+meta-learner analysis predicted it would be: RF's new signal is real (0.6–
+0.7 confidence, up from ~0.1–0.3) but structurally can't cross the ~0.92
+bar the logistic combiner requires when LSTM is silent, so the shipped
+ensemble's headline numbers don't move either way. The value of this change
+is the diagnosis, not a score improvement — reporting that plainly rather
+than leaning on the single-seed number that looked positive.
 
 ## Honest bottom line
 
 - **The feature fix is real and verified at the level it targets (RF).**
   Not a placebo, not cherry-picked — directly measured before/after on the
-  exact evading cases, with a real mechanism identified for why the
-  ensemble doesn't yet reflect the full gain.
-- **`semantic_sqli` is NOT solved.** Still 1/10 on the aggressive tier.
-  Reporting this plainly rather than leading with the RF-level number, which
-  would overstate what the shipped model actually does.
-- **The real next fix, now identified precisely:** give the meta-learner
-  more than a bare probability from RF — e.g. also pass it 1-2 of these
-  semantic flags directly, or replace the linear logistic combiner with
-  something that can express "trust RF alone when it's confident AND a
-  semantic flag fired." Not implemented here — it changes the live
-  inference path (`app.py`) and every eval script's meta-learner input
-  shape, which is a larger, riskier change than this one and deserves its
-  own deliberate pass rather than being bundled in.
+  exact evading cases (RF confidence 0.6–0.7, up from ~0.1–0.3).
+- **It does NOT improve the shipped stacked model.** The multi-seed study
+  shows every headline metric moved by less than one noise SD — this is a
+  wash at the ensemble level, not an improvement. The single-seed result
+  that looked like a small gain (+1 attack caught) did not replicate under
+  proper seed-averaging, and I'm reporting that rather than the more
+  flattering single-seed number.
+- **`semantic_sqli` is NOT solved.** Still ~1/10 on the aggressive tier,
+  before and after this change.
+- **What this change actually is: a confirmed, precise diagnosis, not a
+  score improvement.** The bottleneck is now known exactly — the
+  meta-learner's logistic combiner requires RF alone to exceed ~0.92 to
+  override a silent LSTM, and RF's new signal (0.6–0.7) doesn't reach that
+  bar. The real next fix is giving the meta-learner more than a bare
+  probability from RF — e.g. also passing it 1–2 of these semantic flags
+  directly, or replacing the linear combiner with something that can
+  express "trust RF alone when it's confident AND a semantic flag fired."
+  Not implemented here — it changes the live inference path (`app.py`) and
+  every eval script's meta-learner input shape, a larger, riskier change
+  than this one, and deserves its own deliberate pass rather than being
+  bundled in on the strength of a single-seed result that didn't hold up.
+- **Recommendation: keep the features (they're free — zero measured cost,
+  zero measured benefit at the ensemble level, and available for the
+  meta-learner fix above to use), but do not claim this pass improved
+  detection.** It didn't, and the multi-seed data says so plainly.
 
 ## Reproduce
 
