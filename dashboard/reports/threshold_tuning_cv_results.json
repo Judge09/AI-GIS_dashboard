@@ -1,0 +1,147 @@
+{
+  "method": "5-fold stratified CV threshold tuning on the 396-row adversarial hold-out. In each fold the threshold is selected using only the other 4 folds, then applied to the held-out fold -- every reported prediction uses a threshold that never saw that row.",
+  "per_fold": [
+    {
+      "fold": 1,
+      "chosen_threshold": 0.13,
+      "held_out_rows": 80,
+      "before_thr0.5": {
+        "tp": 37,
+        "fp": 0,
+        "tn": 40,
+        "fn": 3,
+        "detection_rate": 0.925,
+        "fpr": 0.0,
+        "f1": 0.961
+      },
+      "after_tuned_thr": {
+        "tp": 37,
+        "fp": 0,
+        "tn": 40,
+        "fn": 3,
+        "detection_rate": 0.925,
+        "fpr": 0.0,
+        "f1": 0.961
+      }
+    },
+    {
+      "fold": 2,
+      "chosen_threshold": 0.13,
+      "held_out_rows": 79,
+      "before_thr0.5": {
+        "tp": 38,
+        "fp": 0,
+        "tn": 39,
+        "fn": 2,
+        "detection_rate": 0.95,
+        "fpr": 0.0,
+        "f1": 0.9744
+      },
+      "after_tuned_thr": {
+        "tp": 38,
+        "fp": 0,
+        "tn": 39,
+        "fn": 2,
+        "detection_rate": 0.95,
+        "fpr": 0.0,
+        "f1": 0.9744
+      }
+    },
+    {
+      "fold": 3,
+      "chosen_threshold": 0.11,
+      "held_out_rows": 79,
+      "before_thr0.5": {
+        "tp": 37,
+        "fp": 0,
+        "tn": 39,
+        "fn": 3,
+        "detection_rate": 0.925,
+        "fpr": 0.0,
+        "f1": 0.961
+      },
+      "after_tuned_thr": {
+        "tp": 37,
+        "fp": 1,
+        "tn": 38,
+        "fn": 3,
+        "detection_rate": 0.925,
+        "fpr": 0.0256,
+        "f1": 0.9487
+      }
+    },
+    {
+      "fold": 4,
+      "chosen_threshold": 0.13,
+      "held_out_rows": 79,
+      "before_thr0.5": {
+        "tp": 36,
+        "fp": 0,
+        "tn": 40,
+        "fn": 3,
+        "detection_rate": 0.9231,
+        "fpr": 0.0,
+        "f1": 0.96
+      },
+      "after_tuned_thr": {
+        "tp": 37,
+        "fp": 0,
+        "tn": 40,
+        "fn": 2,
+        "detection_rate": 0.9487,
+        "fpr": 0.0,
+        "f1": 0.9737
+      }
+    },
+    {
+      "fold": 5,
+      "chosen_threshold": 0.13,
+      "held_out_rows": 79,
+      "before_thr0.5": {
+        "tp": 37,
+        "fp": 1,
+        "tn": 39,
+        "fn": 2,
+        "detection_rate": 0.9487,
+        "fpr": 0.025,
+        "f1": 0.961
+      },
+      "after_tuned_thr": {
+        "tp": 38,
+        "fp": 1,
+        "tn": 39,
+        "fn": 1,
+        "detection_rate": 0.9744,
+        "fpr": 0.025,
+        "f1": 0.9744
+      }
+    }
+  ],
+  "pooled_across_all_5_held_out_folds": {
+    "stacked_thr_0.5_BEFORE": {
+      "tp": 185,
+      "fp": 1,
+      "tn": 197,
+      "fn": 13,
+      "detection_rate": 0.9343,
+      "fpr": 0.0051,
+      "f1": 0.9635
+    },
+    "stacked_thr_CV_tuned_AFTER": {
+      "tp": 187,
+      "fp": 2,
+      "tn": 196,
+      "fn": 11,
+      "detection_rate": 0.9444,
+      "fpr": 0.0101,
+      "f1": 0.9664
+    }
+  },
+  "mcnemar_before_vs_after": {
+    "b_before_right_after_wrong": 1,
+    "c_before_wrong_after_right": 2,
+    "n_discordant": 3,
+    "p_value_exact": 1.0,
+    "significant_at_0.05": false
+  }
+}
