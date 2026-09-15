@@ -63,7 +63,10 @@ RF_COLS = ["payload_len", "entropy", "num_special_chars", "num_digits",
            "has_tautology_pattern", "has_quote_before_sql_keyword",
            "has_comment_after_quote", "has_html_tag_open",
            "has_event_handler_pattern", "longest_special_run",
-           "special_char_ratio", "quote_ratio"]
+           "special_char_ratio", "quote_ratio",
+           "has_or_near_equals", "has_or_comparison_keyword",
+           "has_auth_bypass_phrase", "has_keyword_sequence_sqli",
+           "has_where_true_phrase"]
 NGRAM_N = 300
 MAXLEN = 200
 

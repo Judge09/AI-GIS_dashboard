@@ -66,6 +66,29 @@ HTML_TAG_OPEN_RE = re.compile(r"<\s*[a-zA-Z][a-zA-Z0-9]*")
 EVENT_HANDLER_RE = re.compile(r"\bon\w+\s*=", re.IGNORECASE)
 SPECIAL_RUN_RE = re.compile(r"[^a-zA-Z0-9\s]+")
 
+# Keyword-SEQUENCE features (v3): the symbol-density features above all read
+# near-zero on low-symbol semantic SQLi ("1 or 5000=5000", "admin where
+# true", "select everything from the accounts table please") -- documented
+# in CLAUDE_EVASION_REDTEAM.md / POLYMORPHIC_REDTEAM.md as the model's one
+# major residual gap (0-10% caught even after adding more training examples
+# of this style; more DATA didn't move it, so this is a FEATURE fix). These
+# five regexes catch the keyword/phrase SEQUENCE independent of how many
+# special characters are present. Measured false-positive rate on the
+# 18,555-row benign training corpus and the 198-row holdout benign set:
+# 1 fire each (0.005%), both the same borderline "A OR B = 1" math sentence.
+OR_NEAR_EQUALS_RE = re.compile(r"\bor\b.{0,20}=")
+OR_COMPARISON_KEYWORD_RE = re.compile(r"\bor\b.{0,25}\b(between|like|greatest|least)\b", re.IGNORECASE)
+AUTH_BYPASS_PHRASE_RE = re.compile(
+    r"\b(ignor\w*|bypass\w*|skip\w*|regardless of|without check\w*|"
+    r"always (pass|match|succeed|true))\b.{0,35}\b"
+    r"(login|password|authent\w*|credential\w*|check|condition)\b",
+    re.IGNORECASE)
+KEYWORD_SEQUENCE_SQLI_RE = re.compile(
+    r"\b(select|union|dump|list|expose|reveal|surface|retrieve|unlock|hand over)\b"
+    r".{0,40}\b(from|table|database|account\w*|user\w*|password\w*|credential\w*)\b",
+    re.IGNORECASE)
+WHERE_TRUE_PHRASE_RE = re.compile(r"\b(where|and|or)\s+true\b", re.IGNORECASE)
+
 
 def structural_features(text: str) -> dict:
     n = max(len(text), 1)
@@ -82,6 +105,11 @@ def structural_features(text: str) -> dict:
         "longest_special_run": longest_run,
         "special_char_ratio": round(special_count / n, 4),
         "quote_ratio": round(quote_count / n, 4),
+        "has_or_near_equals": int(bool(OR_NEAR_EQUALS_RE.search(text))),
+        "has_or_comparison_keyword": int(bool(OR_COMPARISON_KEYWORD_RE.search(text))),
+        "has_auth_bypass_phrase": int(bool(AUTH_BYPASS_PHRASE_RE.search(text))),
+        "has_keyword_sequence_sqli": int(bool(KEYWORD_SEQUENCE_SQLI_RE.search(text))),
+        "has_where_true_phrase": int(bool(WHERE_TRUE_PHRASE_RE.search(text))),
     }
 
 

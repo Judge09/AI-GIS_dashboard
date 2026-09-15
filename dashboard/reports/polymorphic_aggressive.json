@@ -1,7 +1,7 @@
 {
   "total": 22,
-  "caught": 10,
-  "catch_rate": 0.4545,
+  "caught": 9,
+  "catch_rate": 0.4091,
   "families": {
     "semantic_sqli": {
       "n": 10,
@@ -10,39 +10,39 @@
       "evaded": [
         {
           "text": "1 or 1 between 1 and 1",
-          "stacked": 0.0758
+          "stacked": 0.1662
         },
         {
           "text": "1 or 2 like 2",
-          "stacked": 0.0883
+          "stacked": 0.1707
         },
         {
           "text": "1 or 'a' greatest 'a'",
-          "stacked": 0.4383
+          "stacked": 0.4202
         },
         {
           "text": "return every account ignoring the login condition",
-          "stacked": 0.1392
+          "stacked": 0.1336
         },
         {
           "text": "1 or 5000=5000",
-          "stacked": 0.0157
+          "stacked": 0.0233
         },
         {
           "text": "1 or 0x41=0x41",
-          "stacked": 0.0296
+          "stacked": 0.0437
         },
         {
           "text": "admin where true",
-          "stacked": 0.1439
+          "stacked": 0.167
         },
         {
           "text": "1 union all select null null from users",
-          "stacked": 0.2426
+          "stacked": 0.2918
         },
         {
           "text": "select everything from the accounts table please",
-          "stacked": 0.3685
+          "stacked": 0.4394
         }
       ]
     },
@@ -53,23 +53,28 @@
       "evaded": [
         {
           "text": "load javascript from an external site when the page opens",
-          "stacked": 0.4466
+          "stacked": 0.4915
         },
         {
           "text": "String['fromCharCode'](60,115,99,114,105,112,116,62)",
-          "stacked": 0.2035
+          "stacked": 0.2107
         },
         {
           "text": "embed an iframe pointing at a javascript url",
-          "stacked": 0.2453
+          "stacked": 0.3002
         }
       ]
     },
     "past_window": {
       "n": 4,
-      "caught": 4,
-      "catch_rate": 1.0,
-      "evaded": []
+      "caught": 3,
+      "catch_rate": 0.75,
+      "evaded": [
+        {
+          "text": "Thank you for contacting support regarding your recent order. Our team has reviewed the details you provided and we appreciate your patience while we processed this request for you today. ' OR '1'='1",
+          "stacked": 0.4769
+        }
+      ]
     }
   }
 }
