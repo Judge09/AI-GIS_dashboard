@@ -33,7 +33,7 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from evasion_resistance_check import engineer_rf_features   # noqa: E402
-from build_rf_features_v2 import structural_features        # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
 import prepare_honeypot_for_training as _prep               # noqa: E402
 
@@ -150,9 +150,11 @@ def one_run(seed, epochs, two_layer, hold, log_df):
     lstm.fit(Etr, ytr, validation_data=(Eva, yva), epochs=epochs,
              batch_size=128, verbose=0)
 
+    sem_va = Xva[SEMANTIC_META_COLS].to_numpy()
     meta = LogisticRegression()
     meta.fit(np.column_stack([rf.predict_proba(Xva)[:, 1],
-                              lstm.predict(Eva, verbose=0).flatten()]), yva)
+                              lstm.predict(Eva, verbose=0).flatten(),
+                              sem_va]), yva)
 
     # evaluate on the hold-out
     h_txt = [normalize_text(t) for t in hold["text"].tolist()]
@@ -161,7 +163,8 @@ def one_run(seed, epochs, two_layer, hold, log_df):
     rf_p = rf.predict_proba(Xh)[:, 1]
     Eh = np.stack([ordinal_encode(t) for t in h_txt])
     ls_p = lstm.predict(Eh, verbose=0).flatten()
-    st_p = meta.predict_proba(np.column_stack([rf_p, ls_p]))[:, 1]
+    sem_h = Xh[SEMANTIC_META_COLS].to_numpy()
+    st_p = meta.predict_proba(np.column_stack([rf_p, ls_p, sem_h]))[:, 1]
 
     return {"rf": metrics(yh, rf_p), "lstm": metrics(yh, ls_p),
             "stacked": metrics(yh, st_p)}

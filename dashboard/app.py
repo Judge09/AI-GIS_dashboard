@@ -32,7 +32,7 @@ sys.path.insert(0, str(BASE / "scripts"))
 from evasion_resistance_check import (  # noqa: E402
     EVASION_ATTACKS, HARD_BENIGN, engineer_rf_features,
 )
-from build_rf_features_v2 import structural_features  # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 from text_normalize import normalize_text  # noqa: E402
 
 app = Flask(__name__)
@@ -110,7 +110,9 @@ def predict_one(text: str):
     Xlstm = np.stack([ordinal_encode(text)])
     rf_proba = float(RF.predict_proba(Xv2)[:, 1][0])
     lstm_proba = float(LSTM.predict(Xlstm, verbose=0).flatten()[0])
-    stacked_proba = float(META.predict_proba(np.array([[rf_proba, lstm_proba]]))[:, 1][0])
+    sem_feats = Xv2[SEMANTIC_META_COLS].to_numpy()[0]
+    stacked_proba = float(META.predict_proba(
+        np.array([[rf_proba, lstm_proba, *sem_feats]]))[:, 1][0])
     return {
         "rf_proba": round(rf_proba, 4),
         "lstm_proba": round(lstm_proba, 4),

@@ -53,7 +53,7 @@ def _load(path, name):
 
 
 _prep = _load(SCRIPTS / "prepare_honeypot_for_training.py", "prep")
-from build_rf_features_v2 import structural_features       # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 from evasion_resistance_check import engineer_rf_features   # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
 
@@ -180,11 +180,12 @@ def main():
              epochs=args.epochs, batch_size=128, callbacks=cbs, verbose=2)
     lstm = keras.models.load_model(ckpt)  # best checkpoint
 
-    print("[5/6] Training meta-learner on VAL probabilities ...")
+    print("[5/6] Training meta-learner on VAL probabilities + semantic flags ...")
     rf_va = rf.predict_proba(Xva)[:, 1]
     lstm_va = lstm.predict(Eva, verbose=0).flatten()
+    sem_va = Xva[SEMANTIC_META_COLS].to_numpy()
     meta = LogisticRegression()
-    meta.fit(np.column_stack([rf_va, lstm_va]), yva)
+    meta.fit(np.column_stack([rf_va, lstm_va, sem_va]), yva)
 
     print("[6/6] Saving models + quick test-set check ...")
     with open(MODELS / "rf2.pkl", "wb") as f:
@@ -210,7 +211,8 @@ def main():
 
     rf_te = rf.predict_proba(Xte)[:, 1]
     lstm_te = lstm.predict(Ete, verbose=0).flatten()
-    stack_te = meta.predict_proba(np.column_stack([rf_te, lstm_te]))[:, 1]
+    sem_te = Xte[SEMANTIC_META_COLS].to_numpy()
+    stack_te = meta.predict_proba(np.column_stack([rf_te, lstm_te, sem_te]))[:, 1]
     for name, p in [("RF", rf_te), ("LSTM", lstm_te), ("Stacked", stack_te)]:
         pred = (p >= 0.5).astype(int)
         print(f"      {name:8s} test F1={f1_score(yte, pred):.4f}")

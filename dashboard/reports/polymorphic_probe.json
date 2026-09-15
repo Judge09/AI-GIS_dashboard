@@ -1,8 +1,8 @@
 {
   "n_variants": 40,
   "total": 400,
-  "caught": 400,
-  "overall_catch_rate": 1.0,
+  "caught": 399,
+  "overall_catch_rate": 0.9975,
   "families": [
     {
       "name": "tautology",
@@ -11,36 +11,36 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9957,
-      "min_stacked": 0.9902,
+      "mean_stacked": 0.9956,
+      "min_stacked": 0.99,
       "worst_variants": [
         {
           "text": "1\" || \"7\"=\"7",
-          "stacked": 0.9902,
+          "stacked": 0.99,
           "rf": 0.7421,
           "lstm": 0.9996
         },
         {
           "text": "1' || '2'='2",
-          "stacked": 0.9919,
+          "stacked": 0.9917,
           "rf": 0.7721,
           "lstm": 0.9986
         },
         {
           "text": "1' || '1'='1",
-          "stacked": 0.9919,
+          "stacked": 0.9917,
           "rf": 0.7721,
           "lstm": 0.9987
         },
         {
           "text": "1' || '0x31'='0x31",
-          "stacked": 0.9925,
+          "stacked": 0.9923,
           "rf": 0.7822,
           "lstm": 0.9996
         },
         {
           "text": "1%27 ||%20'1'=%271",
-          "stacked": 0.9927,
+          "stacked": 0.9925,
           "rf": 0.7872,
           "lstm": 0.9998
         }
@@ -53,38 +53,38 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.998,
-      "min_stacked": 0.9968,
+      "mean_stacked": 0.9985,
+      "min_stacked": 0.9977,
       "worst_variants": [
         {
-          "text": "1\"  uniOn  sELeCt  uSeRNAme,pAssWorD  fRoM  usERs--",
-          "stacked": 0.9968,
-          "rf": 0.935,
-          "lstm": 0.9763
+          "text": "1\"%0AUNiOn%0ASelecT%0aUsErNamE,PaSswOrD%0aFRoM%0ausERS--",
+          "stacked": 0.9977,
+          "rf": 0.9696,
+          "lstm": 0.9999
         },
         {
-          "text": "1'  UNION  SELECT  username,password  FROM  users--",
-          "stacked": 0.9972,
-          "rf": 1.0,
-          "lstm": 0.9228
+          "text": "1'%09UNION%09SELECT%09username,password%09FROM%09users--",
+          "stacked": 0.9977,
+          "rf": 0.97,
+          "lstm": 0.9999
         },
         {
-          "text": "1'/**/union/**/sELECt/**/uSernAMe,PassWOrD from USerS--",
-          "stacked": 0.9973,
-          "rf": 0.94,
-          "lstm": 0.9994
+          "text": "1%27\nUNION\nSELECT\nusername,password\nFROM\nusers--",
+          "stacked": 0.9978,
+          "rf": 0.975,
+          "lstm": 0.9998
         },
         {
-          "text": "1'  UNION  SELECT  username,passwoord  FROM  users--",
-          "stacked": 0.9974,
-          "rf": 0.995,
-          "lstm": 0.9392
+          "text": "1%27 UNION SELECT%20username,passwoord%20FROM%20users--",
+          "stacked": 0.9978,
+          "rf": 0.975,
+          "lstm": 0.9999
         },
         {
-          "text": "1' Union SElect UserNAME,PasSWOrd fRom uSeRs--",
-          "stacked": 0.9975,
-          "rf": 0.955,
-          "lstm": 0.996
+          "text": "1'%0aUNION%0aSELECT%0ausername,password%0aFROM%0ausers--",
+          "stacked": 0.9978,
+          "rf": 0.975,
+          "lstm": 0.9999
         }
       ]
     },
@@ -95,36 +95,36 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.998,
-      "min_stacked": 0.9973,
+      "mean_stacked": 0.9979,
+      "min_stacked": 0.9972,
       "worst_variants": [
         {
           "text": "admin%22--",
-          "stacked": 0.9973,
+          "stacked": 0.9972,
           "rf": 0.955,
           "lstm": 0.9799
         },
         {
           "text": "admin%27--",
-          "stacked": 0.9973,
+          "stacked": 0.9972,
           "rf": 0.955,
           "lstm": 0.9813
         },
         {
           "text": "ADmin'--",
-          "stacked": 0.9977,
+          "stacked": 0.9976,
           "rf": 0.9748,
           "lstm": 0.9876
         },
         {
           "text": "aDMin'--",
-          "stacked": 0.9978,
+          "stacked": 0.9977,
           "rf": 0.9998,
           "lstm": 0.9641
         },
         {
           "text": "AdMin\"--",
-          "stacked": 0.9978,
+          "stacked": 0.9977,
           "rf": 0.9748,
           "lstm": 0.9947
         }
@@ -138,17 +138,17 @@
       "caught": 40,
       "catch_rate": 1.0,
       "mean_stacked": 0.9981,
-      "min_stacked": 0.9975,
+      "min_stacked": 0.9974,
       "worst_variants": [
         {
           "text": "1' aANd Sleep(5)--",
-          "stacked": 0.9975,
+          "stacked": 0.9974,
           "rf": 0.9849,
           "lstm": 0.962
         },
         {
           "text": "1'%09anD%09SleEP(5)--",
-          "stacked": 0.9979,
+          "stacked": 0.9978,
           "rf": 0.975,
           "lstm": 0.9996
         },
@@ -166,7 +166,7 @@
         },
         {
           "text": "1%27 AND%20SLEEP(5%29--",
-          "stacked": 0.9981,
+          "stacked": 0.998,
           "rf": 0.9899,
           "lstm": 0.9998
         }
@@ -177,38 +177,38 @@
       "type": "sqli",
       "base": "1'; DROP TABLE users--",
       "n": 40,
-      "caught": 40,
-      "catch_rate": 1.0,
-      "mean_stacked": 0.9744,
-      "min_stacked": 0.5001,
+      "caught": 39,
+      "catch_rate": 0.975,
+      "mean_stacked": 0.9739,
+      "min_stacked": 0.4919,
       "worst_variants": [
         {
           "text": "1'; drop tABle USeRS--",
-          "stacked": 0.5001,
+          "stacked": 0.4919,
           "rf": 0.9085,
           "lstm": 0.0079
         },
         {
           "text": "1'; drop TAble uSeRS--",
-          "stacked": 0.5629,
+          "stacked": 0.5548,
           "rf": 0.9085,
           "lstm": 0.0518
         },
         {
           "text": "1'; DRoP tABle USERS--",
-          "stacked": 0.9886,
+          "stacked": 0.9883,
           "rf": 0.9035,
           "lstm": 0.7884
         },
         {
           "text": "1'; DrOp TABLe UseRs--",
-          "stacked": 0.9957,
+          "stacked": 0.9955,
           "rf": 0.8985,
           "lstm": 0.9635
         },
         {
           "text": "1\";\tdROp\ttaBle\tuSeRS--",
-          "stacked": 0.9964,
+          "stacked": 0.9963,
           "rf": 0.8985,
           "lstm": 0.9972
         }
@@ -222,29 +222,29 @@
       "caught": 40,
       "catch_rate": 1.0,
       "mean_stacked": 0.998,
-      "min_stacked": 0.9971,
+      "min_stacked": 0.997,
       "worst_variants": [
         {
           "text": "<script>alert%281%29%3C/script>",
-          "stacked": 0.9971,
+          "stacked": 0.997,
           "rf": 0.925,
           "lstm": 0.9998
         },
         {
           "text": "%3Cscript>alert(1)</script>",
-          "stacked": 0.9978,
+          "stacked": 0.9977,
           "rf": 0.9699,
           "lstm": 0.9998
         },
         {
           "text": "%3CSCriPT>ALeRt(1)%3C/sCrIPt>",
-          "stacked": 0.9978,
+          "stacked": 0.9977,
           "rf": 0.97,
           "lstm": 0.9999
         },
         {
           "text": "%3CScRipT>AlERt(1)%3C/sCrIpT>",
-          "stacked": 0.9979,
+          "stacked": 0.9978,
           "rf": 0.9743,
           "lstm": 0.9999
         },
@@ -263,30 +263,30 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9978,
-      "min_stacked": 0.9941,
+      "mean_stacked": 0.9977,
+      "min_stacked": 0.9939,
       "worst_variants": [
         {
           "text": "<img src=x%20onerroor=alert%281%29>",
-          "stacked": 0.9941,
+          "stacked": 0.9939,
           "rf": 0.8181,
           "lstm": 0.9999
         },
         {
           "text": "<img%20src=x%20onerror=alert(1%29%3E",
-          "stacked": 0.9959,
+          "stacked": 0.9958,
           "rf": 0.8746,
           "lstm": 0.9999
         },
         {
           "text": "<IMG%20sRC=X%20OnerrOr=AlerT(1)%3e",
-          "stacked": 0.9964,
+          "stacked": 0.9963,
           "rf": 0.8943,
           "lstm": 0.9999
         },
         {
           "text": "<img%09src=x%09onerror=alert(1)>",
-          "stacked": 0.9971,
+          "stacked": 0.997,
           "rf": 0.928,
           "lstm": 0.9999
         },
@@ -305,36 +305,36 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9976,
-      "min_stacked": 0.9957,
+      "mean_stacked": 0.9975,
+      "min_stacked": 0.9955,
       "worst_variants": [
         {
           "text": "<svg onload%3Dalert(1%29>",
-          "stacked": 0.9957,
+          "stacked": 0.9955,
           "rf": 0.8663,
           "lstm": 0.9995
         },
         {
           "text": "<svg onload%3Dalert(1%29%3E",
-          "stacked": 0.9959,
+          "stacked": 0.9958,
           "rf": 0.875,
           "lstm": 0.9998
         },
         {
           "text": "<svg%20onload%3Dalert(1%29%3E",
-          "stacked": 0.9963,
+          "stacked": 0.9962,
           "rf": 0.89,
           "lstm": 0.9999
         },
         {
           "text": "%3Csvg%20onload%3Dalert(1%29>",
-          "stacked": 0.9964,
+          "stacked": 0.9963,
           "rf": 0.895,
           "lstm": 0.9998
         },
         {
           "text": "<svg\tonload%3Dalert%281)>",
-          "stacked": 0.9965,
+          "stacked": 0.9964,
           "rf": 0.8987,
           "lstm": 0.9996
         }
@@ -347,24 +347,24 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.998,
-      "min_stacked": 0.9975,
+      "mean_stacked": 0.9979,
+      "min_stacked": 0.9974,
       "worst_variants": [
         {
           "text": "%3Ca%20href=javascript:alert%281)>x</a>",
-          "stacked": 0.9975,
+          "stacked": 0.9974,
           "rf": 0.9498,
           "lstm": 0.9999
         },
         {
           "text": "<a HREF%3DJavaSCRiPt:AlErT(1%29%3EX%3C/A>",
-          "stacked": 0.9975,
+          "stacked": 0.9974,
           "rf": 0.9499,
           "lstm": 0.9999
         },
         {
           "text": "%3ca hREf=jaVaSCRIPT:AlErt%281%29>X%3C/A>",
-          "stacked": 0.9976,
+          "stacked": 0.9975,
           "rf": 0.9549,
           "lstm": 0.9999
         },
@@ -376,7 +376,7 @@
         },
         {
           "text": "%3CA hrEf=jAvAscrIPT:aLert(1%29>x%3C/A>",
-          "stacked": 0.9977,
+          "stacked": 0.9976,
           "rf": 0.9642,
           "lstm": 0.9999
         }
@@ -389,7 +389,7 @@
       "n": 40,
       "caught": 40,
       "catch_rate": 1.0,
-      "mean_stacked": 0.9979,
+      "mean_stacked": 0.9978,
       "min_stacked": 0.997,
       "worst_variants": [
         {
@@ -400,25 +400,25 @@
         },
         {
           "text": "<body onload=alert(document.cookie%29>",
-          "stacked": 0.9973,
+          "stacked": 0.9972,
           "rf": 0.9398,
           "lstm": 0.9997
         },
         {
           "text": "<body onlOaD=ALeRt(DoCUMeNT.CoOKiE%29>",
-          "stacked": 0.9974,
+          "stacked": 0.9973,
           "rf": 0.945,
           "lstm": 0.9999
         },
         {
           "text": "<bodY onloAD=alerT(docUMENT.cOoKiE%29%3E",
-          "stacked": 0.9975,
+          "stacked": 0.9974,
           "rf": 0.9499,
           "lstm": 0.9999
         },
         {
           "text": "<body%0aonload=alert(document.cookie)>",
-          "stacked": 0.9977,
+          "stacked": 0.9976,
           "rf": 0.9636,
           "lstm": 0.9998
         }

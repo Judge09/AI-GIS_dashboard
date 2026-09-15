@@ -12,7 +12,7 @@
       "predicted": 1,
       "rf": 0.8098,
       "lstm": 0.9859,
-      "stacked": 0.9932,
+      "stacked": 0.993,
       "outcome": "caught",
       "text": "1 OR 1 BETWEEN 1 AND 1",
       "theory": "BETWEEN tautology: no quotes, no comment tokens, minimal special chars"
@@ -23,7 +23,7 @@
       "predicted": 0,
       "rf": 0.3481,
       "lstm": 0.0001,
-      "stacked": 0.0233,
+      "stacked": 0.0237,
       "outcome": "EVADED",
       "text": "1 or 5000=5000",
       "theory": "numeric tautology with large equal numbers, no quotes"
@@ -34,7 +34,7 @@
       "predicted": 0,
       "rf": 0.6649,
       "lstm": 0.0072,
-      "stacked": 0.167,
+      "stacked": 0.1655,
       "outcome": "EVADED",
       "text": "admin where true",
       "theory": "natural WHERE TRUE, reads almost like English"
@@ -45,7 +45,7 @@
       "predicted": 0,
       "rf": 0.6476,
       "lstm": 0.0007,
-      "stacked": 0.1469,
+      "stacked": 0.1439,
       "outcome": "EVADED",
       "text": "1 || pg_sleep ( 10 )",
       "theory": "Postgres sleep with spaces breaking the SLEEP( token n-gram"
@@ -56,7 +56,7 @@
       "predicted": 0,
       "rf": 0.6201,
       "lstm": 0.0163,
-      "stacked": 0.1359,
+      "stacked": 0.1331,
       "outcome": "EVADED",
       "text": "1 union all select null null null",
       "theory": "UNION with word 'null' spelled out, no commas"
@@ -67,7 +67,7 @@
       "predicted": 1,
       "rf": 0.81,
       "lstm": 0.4101,
-      "stacked": 0.8415,
+      "stacked": 0.8375,
       "outcome": "caught",
       "text": "Thank you for your interest in our premium subscription service. We are delighted to confirm your recent order and appreciate your continued trust in our platform over the past several years of loyal membership with us here. ' OR '1'='1",
       "theory": "classic tautology pushed past character 200 to escape the LSTM window"
@@ -78,7 +78,7 @@
       "predicted": 1,
       "rf": 0.7497,
       "lstm": 0.4282,
-      "stacked": 0.7984,
+      "stacked": 0.794,
       "outcome": "caught",
       "text": "Our records indicate a pending update to your account preferences. Please review the attached summary at your earliest convenience and reply to confirm the changes you would like us to apply to the profile. <script>alert(1)</script>",
       "theory": "script tag pushed past character 200"
@@ -89,7 +89,7 @@
       "predicted": 1,
       "rf": 0.8649,
       "lstm": 0.9997,
-      "stacked": 0.9956,
+      "stacked": 0.9955,
       "outcome": "caught",
       "text": "1\u200d' OR '1'='1",
       "theory": "zero-width joiner inside the payload; NFKC keeps ZWJ, may split n-grams"
@@ -100,7 +100,7 @@
       "predicted": 1,
       "rf": 0.9899,
       "lstm": 0.9997,
-      "stacked": 0.9981,
+      "stacked": 0.998,
       "outcome": "caught",
       "text": "<script\u200b>alert(1)</script>",
       "theory": "zero-width space inside the tag name"
@@ -111,7 +111,7 @@
       "predicted": 1,
       "rf": 0.9496,
       "lstm": 0.9997,
-      "stacked": 0.9975,
+      "stacked": 0.9974,
       "outcome": "caught",
       "text": "<\udb40\udc73cript>alert(1)</script>",
       "theory": "Unicode TAG small-s (U+E0073) in place of 's' \u2014 invisible, NFKC-stable"
@@ -122,7 +122,7 @@
       "predicted": 1,
       "rf": 0.8952,
       "lstm": 0.9999,
-      "stacked": 0.9964,
+      "stacked": 0.9963,
       "outcome": "caught",
       "text": "&#x27;&#x20;OR&#x20;&#x27;1&#x27;&#x3d;&#x27;1",
       "theory": "HTML numeric entity encoding of ' OR '1'='1 \u2014 decodes in a browser"
@@ -133,7 +133,7 @@
       "predicted": 1,
       "rf": 0.9245,
       "lstm": 0.9995,
-      "stacked": 0.997,
+      "stacked": 0.9969,
       "outcome": "caught",
       "text": "\\x3cscript\\x3ealert(1)\\x3c/script\\x3e",
       "theory": "backslash-x hex escapes for angle brackets"
@@ -144,7 +144,7 @@
       "predicted": 0,
       "rf": 0.7147,
       "lstm": 0.0,
-      "stacked": 0.2107,
+      "stacked": 0.2063,
       "outcome": "EVADED",
       "text": "String['fromCharCode'](60,115,99,114,105,112,116,62)",
       "theory": "bracket-notation property access, novel token shape"
@@ -155,7 +155,7 @@
       "predicted": 1,
       "rf": 0.6702,
       "lstm": 0.9993,
-      "stacked": 0.9844,
+      "stacked": 0.984,
       "outcome": "caught",
       "text": "1'\tOoRr\t1=1",
       "theory": "doubled letters 'OoRr' defeat a literal 'or' n-gram after casefold fails"
@@ -166,7 +166,7 @@
       "predicted": 1,
       "rf": 0.8399,
       "lstm": 0.9999,
-      "stacked": 0.9949,
+      "stacked": 0.9947,
       "outcome": "caught",
       "text": "1'%0d%0aOR%0d%0a1=1",
       "theory": "CRLF url-encoded between tokens"
@@ -177,7 +177,7 @@
       "predicted": 0,
       "rf": 0.555,
       "lstm": 0.3644,
-      "stacked": 0.4323,
+      "stacked": 0.427,
       "outcome": "ok",
       "text": "SELECT the option that best describes your role, then click Continue.",
       "theory": "'SELECT' as an English verb in UI copy"
@@ -188,7 +188,7 @@
       "predicted": 0,
       "rf": 0.2829,
       "lstm": 0.395,
-      "stacked": 0.1316,
+      "stacked": 0.1301,
       "outcome": "ok",
       "text": "Drop the file here, or click to browse your computer for an image.",
       "theory": "'Drop' as a UI instruction"
@@ -199,7 +199,7 @@
       "predicted": 0,
       "rf": 0.3195,
       "lstm": 0.0017,
-      "stacked": 0.0196,
+      "stacked": 0.0193,
       "outcome": "ok",
       "text": "Union members receive a 15% discount on all orders over $50.",
       "theory": "'Union' as a noun"
@@ -210,7 +210,7 @@
       "predicted": 0,
       "rf": 0.5309,
       "lstm": 0.3962,
-      "stacked": 0.4382,
+      "stacked": 0.4331,
       "outcome": "ok",
       "text": "Use --verbose or -v to print each step; add --dry-run to preview.",
       "theory": "CLI documentation with -- comment-like tokens"
@@ -221,7 +221,7 @@
       "predicted": 0,
       "rf": 0.2711,
       "lstm": 0.4135,
-      "stacked": 0.1348,
+      "stacked": 0.1334,
       "outcome": "ok",
       "text": "The array is a[i] = b[i] * 2; for i in 0..n where n > 0 and i < n.",
       "theory": "dense code with =, <, > and a tautology-like i<n"
@@ -232,7 +232,7 @@
       "predicted": 0,
       "rf": 0.5158,
       "lstm": 0.0016,
-      "stacked": 0.0678,
+      "stacked": 0.0665,
       "outcome": "ok",
       "text": "Email o'brien@example.com or reply 'yes' to confirm; ref #A-1=B-2.",
       "theory": "apostrophes, quotes, equals, hash in one line"
@@ -243,7 +243,7 @@
       "predicted": 1,
       "rf": 0.7199,
       "lstm": 0.9999,
-      "stacked": 0.9887,
+      "stacked": 0.9884,
       "outcome": "FALSE-ALARM",
       "text": "<div class=\"card\"><span>Welcome back, user!</span></div>",
       "theory": "legitimate HTML markup, no script or handler"
@@ -254,7 +254,7 @@
       "predicted": 1,
       "rf": 0.6248,
       "lstm": 0.9963,
-      "stacked": 0.9787,
+      "stacked": 0.9782,
       "outcome": "FALSE-ALARM",
       "text": "Regex to validate: ^(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,}$ for passwords.",
       "theory": "password-policy regex, very high symbol density"

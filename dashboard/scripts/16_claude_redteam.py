@@ -18,7 +18,7 @@ import pandas as pd
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from evasion_resistance_check import engineer_rf_features  # noqa: E402
-from build_rf_features_v2 import structural_features       # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
 
 with open(ROOT / "models/rf2.pkl", "rb") as f:
@@ -51,7 +51,8 @@ def score(t):
     X = pd.concat([ag, st, ng], axis=1)[V2]
     rf = float(RF.predict_proba(X)[:, 1][0])
     ls = float(LSTM.predict(np.stack([enc(t)]), verbose=0).flatten()[0])
-    sk = float(META.predict_proba(np.array([[rf, ls]]))[:, 1][0])
+    sem = X[SEMANTIC_META_COLS].to_numpy()[0]
+    sk = float(META.predict_proba(np.array([[rf, ls, *sem]]))[:, 1][0])
     return rf, ls, sk
 
 

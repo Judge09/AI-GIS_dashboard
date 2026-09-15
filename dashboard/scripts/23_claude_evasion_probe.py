@@ -32,7 +32,7 @@ import pandas as pd
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from evasion_resistance_check import engineer_rf_features   # noqa: E402
-from build_rf_features_v2 import structural_features        # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
 
 
@@ -138,7 +138,8 @@ def score(text, rf, meta, vec, lstm, v2):
                    ng.reset_index(drop=True)], axis=1)[v2]
     rf_p = float(rf.predict_proba(X)[:, 1][0])
     ls_p = float(lstm.predict(np.stack([ordinal_encode(t)]), verbose=0).flatten()[0])
-    st_p = float(meta.predict_proba(np.array([[rf_p, ls_p]]))[:, 1][0])
+    sem_p = X[SEMANTIC_META_COLS].to_numpy()[0]
+    st_p = float(meta.predict_proba(np.array([[rf_p, ls_p, *sem_p]]))[:, 1][0])
     return rf_p, ls_p, st_p
 
 

@@ -28,7 +28,7 @@ import pandas as pd
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from evasion_resistance_check import engineer_rf_features  # noqa: E402
-from build_rf_features_v2 import structural_features       # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
 
 
@@ -66,7 +66,8 @@ def score_all(texts, rf, meta, vec, lstm, v2_cols):
     rf_p   = rf.predict_proba(X)[:, 1]
     lstm_p = lstm.predict(np.stack([ordinal_encode(t) for t in texts]),
                           verbose=0).flatten()
-    stack_p = meta.predict_proba(np.column_stack([rf_p, lstm_p]))[:, 1]
+    sem_p  = X[SEMANTIC_META_COLS].to_numpy()
+    stack_p = meta.predict_proba(np.column_stack([rf_p, lstm_p, sem_p]))[:, 1]
     return rf_p, lstm_p, stack_p
 
 

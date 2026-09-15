@@ -89,6 +89,23 @@ KEYWORD_SEQUENCE_SQLI_RE = re.compile(
     re.IGNORECASE)
 WHERE_TRUE_PHRASE_RE = re.compile(r"\b(where|and|or)\s+true\b", re.IGNORECASE)
 
+# The 5 keyword-sequence features, as a named group: fed to the STACKING
+# META-LEARNER directly (not just to RF) so it can trust a confident RF
+# semantic-flag hit even when the LSTM -- a pure character-sequence model
+# with no keyword features -- stays silent on low-symbol text. See
+# reports/V3_KEYWORD_SEQUENCE_FEATURES_RESULTS.md and
+# reports/V4_META_LEARNER_SEMANTIC_INPUT_RESULTS.md for why this exists:
+# adding these to RF alone raised RF's own confidence on semantic_sqli
+# cases (0.6-0.7, up from ~0.1-0.3) but the meta-learner's logistic
+# combiner on [rf_proba, lstm_proba] alone required RF > ~0.92 to
+# override a silent LSTM, so the ensemble didn't move. Every script that
+# calls meta.predict_proba() must pass these 5 flags alongside
+# [rf_proba, lstm_proba], in this exact order.
+SEMANTIC_META_COLS = [
+    "has_or_near_equals", "has_or_comparison_keyword", "has_auth_bypass_phrase",
+    "has_keyword_sequence_sqli", "has_where_true_phrase",
+]
+
 
 def structural_features(text: str) -> dict:
     n = max(len(text), 1)

@@ -38,7 +38,7 @@ OUTPUT_PATH = REPORTS_DIR / "llm_corpus_results.json"
 
 sys.path.insert(0, str(SCRIPTS_DIR))
 from evasion_resistance_check import engineer_rf_features  # noqa: E402
-from build_rf_features_v2 import structural_features       # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 
 
 def ordinal_encode(text, max_len=200):
@@ -90,7 +90,8 @@ def main():
     rf_proba   = rf.predict_proba(X)[:, 1]
     lstm_proba = lstm.predict(np.stack([ordinal_encode(t) for t in texts]),
                               verbose=0).flatten()
-    stack_proba = meta.predict_proba(np.column_stack([rf_proba, lstm_proba]))[:, 1]
+    sem_proba  = X[SEMANTIC_META_COLS].to_numpy()
+    stack_proba = meta.predict_proba(np.column_stack([rf_proba, lstm_proba, sem_proba]))[:, 1]
 
     print("[3/3] Aggregating ...")
     total = len(texts)

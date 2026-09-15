@@ -1,0 +1,45 @@
+{
+  "input": "holdout_eval.csv",
+  "rows": 396,
+  "rf": {
+    "attacks_total": 198,
+    "attacks_caught": 198,
+    "attacks_missed": 0,
+    "benign_total": 198,
+    "false_positives": 6,
+    "detection_rate": 1.0,
+    "fpr": 0.0303
+  },
+  "lstm": {
+    "attacks_total": 198,
+    "attacks_caught": 185,
+    "attacks_missed": 13,
+    "benign_total": 198,
+    "false_positives": 8,
+    "detection_rate": 0.9343,
+    "fpr": 0.0404
+  },
+  "stacked": {
+    "attacks_total": 198,
+    "attacks_caught": 195,
+    "attacks_missed": 3,
+    "benign_total": 198,
+    "false_positives": 7,
+    "detection_rate": 0.9848,
+    "fpr": 0.0354
+  },
+  "missed_attacks": [
+    "/*/**/String.fromCharCode(97,108,101,114,116,40,49,41)",
+    "admin'); drop table users('",
+    "drop the users table from the database"
+  ],
+  "false_alarms": [
+    "if (status == 200) { log.info('ok'); }",
+    "Product SKU# ABC-123; Category: Electronics & Gadgets (in stock).",
+    "if (user.role == 'admin') { log.info('ok'); }",
+    "if (user.role == 'admin') { queue.push(item); }",
+    "if (status == 200) { grantAccess(); }",
+    "if (user.role == 'admin') { throw new Error('x'); }",
+    "if (user.role == 'admin') { grantAccess(); }"
+  ]
+}

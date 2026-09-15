@@ -37,7 +37,7 @@ import pandas as pd
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from evasion_resistance_check import engineer_rf_features   # noqa: E402
-from build_rf_features_v2 import structural_features        # noqa: E402
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS  # noqa: E402
 from text_normalize import normalize_text                   # noqa: E402
 
 SEED = 4242
@@ -144,7 +144,8 @@ def score_batch(texts, rf, meta, vec, lstm, v2):
     rf_p = rf.predict_proba(X)[:, 1]
     E = np.stack([ordinal_encode(t) for t in norm])
     ls_p = lstm.predict(E, verbose=0).flatten()
-    st_p = meta.predict_proba(np.column_stack([rf_p, ls_p]))[:, 1]
+    sem_p = X[SEMANTIC_META_COLS].to_numpy()
+    st_p = meta.predict_proba(np.column_stack([rf_p, ls_p, sem_p]))[:, 1]
     return rf_p, ls_p, st_p
 
 
@@ -279,7 +280,8 @@ def run_aggressive():
         rf_p = rf.predict_proba(X)[:, 1]
         E = np.stack([ordinal_encode(t) for t in norm])
         ls_p = lstm.predict(E, verbose=0).flatten()
-        st_p = meta.predict_proba(np.column_stack([rf_p, ls_p]))[:, 1]
+        sem_p = X[SEMANTIC_META_COLS].to_numpy()
+        st_p = meta.predict_proba(np.column_stack([rf_p, ls_p, sem_p]))[:, 1]
         caught = int((st_p >= 0.5).sum())
         out[fam] = {"n": len(payloads), "caught": caught,
                     "catch_rate": round(caught/len(payloads), 4),

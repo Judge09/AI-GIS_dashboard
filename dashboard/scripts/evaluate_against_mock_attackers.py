@@ -33,7 +33,7 @@ from tensorflow import keras
 
 sys.path.insert(0, str(Path(__file__).parent))
 from evasion_resistance_check import engineer_rf_features
-from build_rf_features_v2 import structural_features
+from build_rf_features_v2 import structural_features, SEMANTIC_META_COLS
 
 
 def ordinal_encode(text, max_len=200):
@@ -65,7 +65,8 @@ def evaluate_profile(records, rf, lstm, meta, v2_cols, vectorizer):
 
     rf_proba = rf.predict_proba(Xv2)[:, 1]
     lstm_proba = lstm.predict(Xlstm, verbose=0).flatten()
-    stacked_proba = meta.predict_proba(np.column_stack([rf_proba, lstm_proba]))[:, 1]
+    sem_proba = Xv2[SEMANTIC_META_COLS].to_numpy()
+    stacked_proba = meta.predict_proba(np.column_stack([rf_proba, lstm_proba, sem_proba]))[:, 1]
 
     result = {
         "n": len(records),
