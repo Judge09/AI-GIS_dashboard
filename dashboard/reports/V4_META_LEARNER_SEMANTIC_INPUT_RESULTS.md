@@ -78,10 +78,46 @@ targeted class, paid for by a small, traceable loss on a previously-perfect
 one — both are boundary effects on individual cases, which is exactly what
 a single seed cannot distinguish from noise.
 
-## Multi-seed validation
+## Multi-seed validation — both the gain and the regression were noise
 
-See the follow-up in this same file / conversation for the 3-seed,
-2-layer-LSTM result (`reports/multirun_variance_v4meta_2layer.json`),
-compared against the v3-only 3-seed baseline
-(detection 97.64 ± 1.54%, FPR 3.37 ± 1.05%, F1 0.9715 ± 0.0130), before
-treating either the gain or the regression as real.
+`22_multirun_variance.py --two-layer`, 3 seeds (42, 43, 44):
+
+| Metric | v3-only (3-seed) | v4-meta (3-seed) | Δ |
+|---|---:|---:|---:|
+| Stacked detection | 97.64 ± 1.54% | 97.81 ± 1.27% | +0.17pp |
+| Stacked FPR | 3.37 ± 1.05% | 3.37 ± 1.05% | **0.00pp (identical)** |
+| Stacked F1 | 0.9715 ± 0.0130 | 0.9724 ± 0.0116 | +0.0009 |
+
+**Every difference is far smaller than one seed-SD.** This confirms, for
+the third time in this series (aug2's initial single-seed FPR "regression",
+v3's single-seed "+1 catch", and now v4's single-seed "+1 catch / -1 Tier-1
+case"): single-seed boundary flips on this 396-row hold-out are not
+reliable evidence of anything. The multi-seed picture says this change is,
+like v3, a wash at the ensemble level — not because the diagnosis was
+wrong, but because a plain logistic regression cannot express the
+conditional rule the diagnosis calls for.
+
+## Honest bottom line
+
+- **The mechanism diagnosis (v3) was correct and is now doubly confirmed**:
+  giving the meta-learner the raw semantic flags did *not* meaningfully
+  change its behavior (coefficients stayed near zero), which is exactly
+  what you'd expect if a linear model can't express "trust RF conditionally
+  on this flag." That's evidence *for* the diagnosis, not against it.
+- **Neither this change nor v3 improved the shipped model's real
+  performance.** Three multi-seed studies in a row (aug2, v3, v4) show only
+  aug2 (the dataset expansion) produced a real, reproducible gain. The two
+  subsequent attempts at the RF-feature and meta-learner level were
+  honestly negative results.
+- **What would actually work, if pursued further:** an explicit interaction
+  term (e.g. `has_keyword_sequence_sqli * rf_proba` as its own meta-learner
+  input) or replacing the linear combiner with a shallow decision tree /
+  small gradient-boosted model that can natively express conditional
+  overrides. Not attempted here — after two consecutive negative results
+  targeting this same residual gap, further architecture surgery on it
+  should be a deliberate, separately-scoped decision, not a third bundled
+  attempt.
+- **Recommendation:** keep this change (zero cost, matches the wash result)
+  since it's already merged into the live inference path and every eval
+  script, but do not claim it fixed `semantic_sqli` — it didn't, and the
+  data says so plainly.
