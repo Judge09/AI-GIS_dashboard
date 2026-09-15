@@ -266,25 +266,83 @@ not newly added text.
 This is the defensible headline. Architecture-matched to the methodology used for the
 previously published 5-seed baseline.
 
-| Metric | BEFORE (5-seed, published baseline) | AFTER (3-seed, current) | Δ |
-|---|---:|---:|---:|
-| **Stacked detection** | 96.16 ± 1.26% | **97.81 ± 1.27%** | **+1.65pp** |
-| **Stacked FNR** | 3.84 ± 1.26% | **2.19 ± 1.27%** | **−1.65pp** |
-| **Stacked FPR** | 3.64 ± 2.71% | **3.37 ± 1.05%** | **−0.27pp** |
-| **Stacked F1** | 0.9627 ± 0.0126 | **0.9724 ± 0.0116** | **+0.0097** |
-| **Stacked AUC** | 0.9971 ± 0.0023 | **0.9984 ± 0.0008** | +0.0013 |
-| RF detection | 100.00 ± 0.00% | 100.00 ± 0.00% | — |
-| RF FPR | 6.97 ± 0.66% | **4.55 ± 1.34%** | **−2.42pp** |
-| RF F1 | 0.9663 ± 0.0031 | **0.9778 ± 0.0064** | +0.0115 |
-| LSTM detection | 92.83 ± 0.23% | **95.96 ± 1.52%** | +3.13pp |
-| LSTM FPR | 4.14 ± 3.77% | 5.05 ± 1.01% | +0.91pp |
+**This is now a full 5-seed study (seeds 42, 43, 44, 45, 46) — the same seed set, same
+script (`22_multirun_variance.py --runs 5 --epochs 6 --two-layer`), same 2-layer
+architecture, and same 396-row hold-out as the published baseline.** Fully apples-to-apples.
+Paired significance tests are included because the two studies share the same five seeds.
 
-**Note on FPR variance:** stacked FPR standard deviation tightened from ±2.71% to ±1.05% —
-the false-alarm behaviour is now more predictable run-to-run, not just lower on average.
+### Stacked ensemble (the headline model)
 
-**Caveat for the write-up:** 3 seeds here vs 5 in the published baseline, and a different
-seed set (42–44 vs 42–46). Same script, same architecture, same eval set. Recommend
-re-running at 5 seeds before this goes in as the final headline number.
+| Metric | BEFORE (5-seed baseline) | AFTER (5-seed, current) | Δ | paired t-test |
+|---|---:|---:|---:|---|
+| **Detection** | 96.16 ± 1.26% | **96.97 ± 1.01%** | **+0.81pp** | p = 0.160 — not significant |
+| **FNR** | 3.84 ± 1.26% | **3.03 ± 1.01%** | **−0.81pp** | p = 0.160 — not significant |
+| **FPR** | 3.64 ± 2.71% | **1.62 ± 0.42%** | **−2.02pp** | p = 0.169 — not significant |
+| **F1** | 0.9627 ± 0.0126 | **0.9766 ± 0.0050** | **+0.0139** | p = 0.097 — not significant (closest) |
+| **AUC** | 0.9971 ± 0.0023 | **0.9989 ± 0.0003** | +0.0018 | p = 0.194 — not significant |
+
+Per-seed stacked detection — BEFORE: `[94.95, 95.96, 94.95, 97.47, 97.47]`,
+AFTER: `[95.96, 97.47, 96.46, 98.48, 96.46]`
+Per-seed stacked FPR — BEFORE: `[2.02, 8.08, 1.01, 3.54, 3.54]`,
+AFTER: `[2.02, 1.52, 1.01, 2.02, 1.52]`
+
+### Random Forest branch — the statistically significant improvement
+
+| Metric | BEFORE (5-seed) | AFTER (5-seed) | Δ | paired t-test |
+|---|---:|---:|---:|---|
+| Detection | 100.00 ± 0.00% | 100.00 ± 0.00% | — | identical (perfect both) |
+| **FPR** | 6.97 ± 0.66% | **4.45 ± 1.10%** | **−2.53pp** | **p = 0.0021 — SIGNIFICANT** |
+| **F1** | 0.9663 ± 0.0031 | **0.9783 ± 0.0052** | **+0.0120** | **p = 0.0021 — SIGNIFICANT** |
+| **AUC** | 0.9994 ± 0.0001 | **0.9997 ± 0.0001** | +0.0003 | **p = 0.0054 — SIGNIFICANT** |
+
+### LSTM branch — no significant change
+
+| Metric | BEFORE (5-seed) | AFTER (5-seed) | Δ | paired t-test |
+|---|---:|---:|---:|---|
+| Detection | 92.83 ± 0.23% | 91.82 ± 2.80% | −1.01pp | p = 0.466 — not significant |
+| FPR | 4.14 ± 3.77% | 2.12 ± 0.97% | −2.02pp | p = 0.266 — not significant |
+| F1 | 0.9428 ± 0.0176 | 0.9467 ± 0.0139 | +0.0039 | p = 0.771 — not significant |
+| AUC | 0.9782 ± 0.0089 | 0.9783 ± 0.0109 | +0.0002 | p = 0.981 — not significant |
+
+### How to state this honestly
+
+1. **The Random Forest branch improved significantly** — FPR down 2.53pp, F1 up 0.0120,
+   AUC up, all at p < 0.01 on a paired test across five seeds. This is the defensible,
+   statistically-supported claim.
+2. **The stacked ensemble improved on every single metric directionally, but no metric
+   reaches p < 0.05.** F1 is closest (p = 0.097). With only n = 5 seeds the paired t-test
+   has very low power, so "not significant" here means *underpowered*, not *no effect* —
+   but it must not be written up as a proven improvement.
+3. **Stacked FPR variance collapsed from ±2.71% to ±0.42% — a 6.5× tightening.** Even
+   where the mean shift isn't significant, the run-to-run predictability of the false-alarm
+   rate improved substantially, which matters operationally. The old study's ±2.71% was
+   driven by one bad seed (8.08% FPR); no seed in the new study exceeds 2.02%.
+4. **Do not reuse the earlier 3-seed figures.** A previous 3-seed run reported stacked
+   detection 97.81% / FPR 3.37%. Those are superseded by this 5-seed study. See the
+   non-determinism note below for why they differed.
+
+### ⚠ Reproducibility finding — same seed does NOT give identical results
+
+Running the same script, same data, and the **same seeds** twice produced different results:
+
+| Seed | 3-seed run (stacked det / FPR) | 5-seed run (stacked det / FPR) |
+|---|---:|---:|
+| 42 | 98.0% / 3.0% | 95.96% / 2.02% |
+| 43 | 99.0% / 2.5% | 97.47% / 1.52% |
+| 44 | 96.5% / 4.5% | 96.46% / 1.01% |
+
+**Cause:** TensorFlow CPU training is not bit-for-bit deterministic even with
+`random.seed`, `np.random.seed`, and `tf.random.set_seed` all set — multi-threaded
+floating-point reduction order varies between runs. The Random Forest branch *is*
+deterministic (its per-seed values reproduce exactly); the variation comes from the LSTM.
+
+**Consequence for the document:** the existing Table 16 integrity row stating
+*"Repeated training with the same seed → Identical scores"* is **not accurate for the
+LSTM/stacked branches** and should be corrected to something like *"Random Forest
+reproduces exactly; LSTM and stacked results vary slightly between runs due to
+non-deterministic TensorFlow CPU kernels, which is why results are reported as a
+mean ± SD across seeds rather than as a single run."* This is a correction to make, not
+a defect in the results — it is precisely why multi-seed reporting is used.
 
 ## 2.7 Ablation study (6 conditions, freshly computed on the same hold-out)
 
@@ -392,7 +450,8 @@ being caught at **0.888 / 0.857** — a direct, clean confirmation that Change A
 | Shuffled-label sanity check | Test AUC = **0.5503** | Near-random when labels are permuted — no label shortcut |
 | Largest single RF feature importance | **0.1002** | No single feature dominates (324 features total) |
 | Hold-out file integrity | byte-identical to pre-work state | Verified via `git diff` |
-| Repeated training, same seed | identical scores | Reproducible |
+| Repeated training, same seed — **Random Forest** | identical scores | RF is fully deterministic |
+| Repeated training, same seed — **LSTM / stacked** | **NOT identical** (see §2.6) | TensorFlow CPU kernels are non-deterministic; this is why results are reported as mean ± SD across seeds, never as a single run |
 
 ---
 
@@ -400,13 +459,22 @@ being caught at **0.888 / 0.857** — a direct, clean confirmation that Change A
 
 Stated plainly because it matters for how the chapters are written.
 
-| Change | Multi-seed verdict |
-|---|---|
-| **A — dataset expansion (aug2)** | ✅ **Real, reproducible improvement.** Detection +1.65pp, FPR −0.27pp, F1 +0.0097, FPR variance tightened 2.71→1.05. Fixed `past_window` 0/4 → 4/4 and `semantic_xss` 2/8 → 5/8. |
-| **B — RF keyword-sequence features** | ⚠️ **Wash at ensemble level.** Verified to work at the RF branch (confidence 0.1–0.3 → 0.60–0.71 on target cases) but every headline metric moved less than one seed-SD. Kept: zero measured cost, and the meta-learner fix needs them. |
-| **C — meta-learner semantic inputs** | ⚠️ **Wash.** Every metric within one noise SD (detection +0.17pp, FPR +0.00pp, F1 +0.0009). Coefficients stayed near zero — confirms the diagnosis rather than refuting it. |
+Verdicts below reflect the **full 5-seed study with paired significance tests** (§2.6).
 
-**Do not claim B or C improved detection.** They did not. Their value is the diagnosis.
+| Change | Verdict |
+|---|---|
+| **A — dataset expansion (aug2)** | ✅ **Real improvement, statistically significant at the RF branch.** RF FPR −2.53pp (p=0.0021), RF F1 +0.0120 (p=0.0021), RF AUC +0.0003 (p=0.0054). Stacked metrics all improved directionally (detection +0.81pp, FPR −2.02pp, F1 +0.0139) but none reach p<0.05 at n=5 seeds. Also fixed `past_window` 0/4 → 4/4 and `semantic_xss` 2/8 → 5/8 on the red-team tier. |
+| **B — RF keyword-sequence features** | ⚠️ **Wash at ensemble level.** Verified to work at the RF branch (confidence 0.1–0.3 → 0.60–0.71 on target cases) but headline metrics moved less than one seed-SD. Kept: zero measured cost, and the meta-learner fix needs them. |
+| **C — meta-learner semantic inputs** | ⚠️ **Wash.** Every metric within one noise SD. Coefficients stayed near zero — confirms the diagnosis rather than refuting it. |
+
+**Safest claims to put in the document:**
+- ✅ "The Random Forest branch's false-positive rate fell significantly, from 6.97 ± 0.66%
+  to 4.45 ± 1.10% (paired t-test across five seeds, p = 0.0021)."
+- ✅ "Stacked false-positive rate fell from 3.64 ± 2.71% to 1.62 ± 0.42%, with run-to-run
+  variance reduced 6.5-fold."  *(state the variance reduction, which is unambiguous)*
+- ⚠️ For stacked mean improvements, say "improved directionally on all metrics; not
+  statistically significant at n = 5 seeds (F1 p = 0.097)" — do **not** state it as proven.
+- ❌ Do not claim B or C improved detection. They did not.
 
 ## The one unresolved gap, precisely stated
 
@@ -455,6 +523,12 @@ input shape, so it deserves its own scoped validation pass.
 - **Do not** claim the LLM-specific research questions (RQ1/RO1) are answered — the planned
   Code Llama / DeepSeek-R1 ~2,200-record corpus has not been generated. This hold-out is an
   adversarially curated set, not a confirmed LLM-generated corpus.
+- **Correct Table 16's repeatability row** — same-seed retraining does *not* reproduce
+  identically for the LSTM/stacked branches (§2.6). State the multi-seed mean ± SD as the
+  reason, not as a workaround.
+- **Report the paired significance tests** (§2.6). The previous draft had no formal test;
+  this now supplies one for every metric, with the honest result that only the RF-branch
+  improvements clear p < 0.05.
 
 ---
 
@@ -468,8 +542,17 @@ python scripts/17_evaluate_csv.py                       # headline numbers
 python scripts/24_polymorphic_probe.py --aggressive     # Tier 1 + Tier 2
 python scripts/23_claude_evasion_probe.py               # hand-authored red-team
 python scripts/22_multirun_variance.py --runs 5 --epochs 6 --two-layer \
-       --out reports/multirun_final.json                # multi-seed (use 5 for final)
+       --out reports/multirun_variance_final_5seed.json # 5-seed study (§2.6)
 ```
+
+Raw result files:
+- `reports/multirun_variance.json` — published 5-seed BEFORE baseline (unmodified)
+- `reports/multirun_variance_final_5seed.json` — 5-seed AFTER results used in §2.6
+- `reports/holdout_eval_after_v4meta.json` — single-seed shipped-model detail
+
+Note: because LSTM training is non-deterministic on CPU (§2.6), re-running the multi-seed
+script will produce slightly different per-seed values. The mean ± SD and the qualitative
+conclusions are stable; exact per-seed digits are not.
 
 Prior model states are backed up in `dashboard/models/_backup_pre_aug2/`,
 `_backup_pre_v3feat/`, and `_backup_pre_v4meta/`.
