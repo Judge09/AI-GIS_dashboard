@@ -1,0 +1,31 @@
+{
+  "generator": "deepseek-r1",
+  "model_tag": "huihui_ai/deepseek-r1-abliterated:14b-qwen-distill",
+  "model_digest": "6b2209ffd7582e8310a4b3a99691b7e7253be608fe38b3d6d97cd3b9b1844ff4",
+  "abliterated_build": true,
+  "backend": "google-colab",
+  "round2_enabled": false,
+  "round2_note": "ModSecurity PL1 feedback requires Docker, unavailable in Colab; run 26_* locally for Round 2.",
+  "controlled_generation": {
+    "temperature": 0.0,
+    "top_k": 1,
+    "top_p": 1.0,
+    "num_predict": 1536
+  },
+  "target_per_type": 20,
+  "batch_size": 10,
+  "accepted": {
+    "sqli": 20,
+    "xss": 18,
+    "total": 38
+  },
+  "rejected_total": 339,
+  "target_met": {
+    "sqli": true,
+    "xss": false
+  },
+  "acceptance_rate": 0.1008,
+  "elapsed_seconds": 1655.0,
+  "generated_utc": "2026-08-24T06:06:06.058424+00:00",
+  "note": "Held-out only. Never used for training, tuning, or threshold selection."
+}

@@ -1,0 +1,28 @@
+{
+  "generator": "codellama",
+  "model_tag": "codellama:13b",
+  "model_digest": "9f438cb9cd581fc025612d27f7c1a6669ff83a8bb0ed86c94fcf4c5440555697",
+  "backend": "google-colab",
+  "controlled_generation": {
+    "temperature": 0.0,
+    "top_k": 1,
+    "top_p": 1.0,
+    "num_predict": 1536
+  },
+  "target_per_type": 20,
+  "batch_size": 10,
+  "accepted": {
+    "sqli": 20,
+    "xss": 20,
+    "total": 40
+  },
+  "rejected_total": 11,
+  "target_met": {
+    "sqli": true,
+    "xss": true
+  },
+  "acceptance_rate": 0.7843,
+  "elapsed_seconds": 152.5,
+  "generated_utc": "2026-08-24T05:34:53.483721+00:00",
+  "note": "Held-out only. Never used for training, tuning, or threshold selection."
+}

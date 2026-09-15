@@ -1,0 +1,340 @@
+payload,attack_type,attack_family,seed,round,reject_reason
+OR =1,sqli,boolean_blind,42,1,no_sqli_signature
+"Okay, so I need to come up with 10 distinct reflected XSS payloads. Reflected XSS occurs when the user input is reflected back in the HTML without proper escaping. I should think of different ways to structure the payloads to cover various scenarios.",xss,reflected,42,1,no_xss_signature
+"Starting with the classic examples, like ""Hello"" and ""world"". Then, I can vary the quotes and structure. Maybe include some with single quotes, some with double quotes, and some with different combinations. Also, think about using different HTML elements or attributes where these payloads can appear.",xss,reflected,42,1,no_xss_signature
+"I should make sure each payload is unique and covers different aspects of reflected XSS. Let me list them out one by one, ensuring variety in the structure and the way they are presented.",xss,reflected,42,1,no_xss_signature
+</think>,xss,reflected,42,1,no_xss_signature
+John',xss,stored,43,1,no_xss_signature
+"Mary""",xss,stored,43,1,no_xss_signature
+Alice & Bob,xss,stored,43,1,no_xss_signature
+1' OR '1'='1,xss,stored,43,1,no_xss_signature
+1' AND '1'='1,xss,stored,43,1,no_xss_signature
+1' OR '1'='1,xss,stored,43,1,no_xss_signature
+1' AND '1'='1,xss,stored,43,1,no_xss_signature
+1' OR '1'='1,xss,stored,43,1,no_xss_signature
+1' AND '1'='1,xss,stored,43,1,no_xss_signature
+1' OR '1'='1,xss,stored,43,1,no_xss_signature
+<script>alert('XSS');</script>,xss,dom_based,44,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,44,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,44,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,44,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,44,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,44,1,duplicate
+<think>,xss,attribute_based,45,1,duplicate
+"Okay, so I need to come up with 10 distinct attribute-based payloads for the attribute-injection XSS with an event handler. Let me think about how to approach this.",xss,attribute_based,45,1,no_xss_signature
+"First, I remember that attribute-based XSS occurs when user input is placed inside an HTML attribute. The value of the attribute can be enclosed in quotes, and if the input contains characters like single or double quotes, it can break the structure and lead to XSS.",xss,attribute_based,45,1,no_xss_signature
+"For event handlers, the classic example is the onclick event. So, I can use that. The payload should be something that, when placed inside the event handler, will execute JavaScript.",xss,attribute_based,45,1,no_xss_signature
+"I should make sure each payload is unique and covers different aspects, like using single quotes, double quotes, and different HTML elements. Maybe I can use different event handlers like onmouseover or onblur as well.",xss,attribute_based,45,1,no_xss_signature
+"I also need to ensure that each payload is a functional example, so they should be varied in their structure. Let me list them out one by one.",xss,attribute_based,45,1,no_xss_signature
+"I think these cover different variations, including different event handlers, quote types, and HTML elements. Each should be a functional example of attribute-injection XSS with an event handler.",xss,attribute_based,45,1,no_xss_signature
+</think>,xss,attribute_based,45,1,no_xss_signature
+Hello,xss,reflected,46,1,no_xss_signature
+world,xss,reflected,46,1,no_xss_signature
+Hello,xss,reflected,46,1,no_xss_signature
+world,xss,reflected,46,1,no_xss_signature
+Hello,xss,reflected,46,1,no_xss_signature
+world,xss,reflected,46,1,no_xss_signature
+Hello,xss,reflected,46,1,no_xss_signature
+world,xss,reflected,46,1,no_xss_signature
+Hello,xss,reflected,46,1,no_xss_signature
+world,xss,reflected,46,1,no_xss_signature
+John',xss,stored,47,1,no_xss_signature
+"Mary""",xss,stored,47,1,no_xss_signature
+Alice & Bob,xss,stored,47,1,no_xss_signature
+1' OR '1'='1,xss,stored,47,1,no_xss_signature
+1' AND '1'='1,xss,stored,47,1,no_xss_signature
+1' OR '1'='1,xss,stored,47,1,no_xss_signature
+1' AND '1'='1,xss,stored,47,1,no_xss_signature
+1' OR '1'='1,xss,stored,47,1,no_xss_signature
+1' AND '1'='1,xss,stored,47,1,no_xss_signature
+1' OR '1'='1,xss,stored,47,1,no_xss_signature
+<script>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<scr<script>ipt>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<script type='text/javascript'>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<script>location.href='//example.com/';</script>,xss,dom_based,48,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,48,1,duplicate
+<think>,xss,attribute_based,49,1,duplicate
+"Okay, so I need to come up with 10 distinct attribute-based payloads for the attribute-injection XSS with an event handler. Let me think about how to approach this.",xss,attribute_based,49,1,no_xss_signature
+"First, I remember that attribute-based XSS occurs when user input is placed inside an HTML attribute. The value of the attribute can be enclosed in quotes, and if the input contains characters like single or double quotes, it can break the structure and lead to XSS.",xss,attribute_based,49,1,no_xss_signature
+"For event handlers, the classic example is the onclick event. So, I can use that. The payload should be something that, when placed inside the event handler, will execute JavaScript.",xss,attribute_based,49,1,no_xss_signature
+"Let me start by recalling the basic structure. For example, using ' onclick=""alert('XSS')"";' as a payload. That's a good one. I can vary the quotes and the structure to create different examples.",xss,attribute_based,49,1,duplicate
+"I should make sure each payload is unique and covers different aspects, like using single quotes, double quotes, and different HTML elements. Maybe I can use different event handlers like onmouseover or onblur as well.",xss,attribute_based,49,1,no_xss_signature
+"I also need to ensure that each payload is a functional example, so they should be varied in their structure. Let me list them out one by one.",xss,attribute_based,49,1,no_xss_signature
+"The first one could be ' onclick=""alert('XSS')"";' which is straightforward.",xss,attribute_based,49,1,duplicate
+"Next, I can vary the quote type, so maybe "" onclick='alert(""XSS"")';"".",xss,attribute_based,49,1,duplicate
+"Then, I can use a different event, like onmouseover, so ' onmouseover=""alert('XSS')"";'.",xss,attribute_based,49,1,duplicate
+"Another one could be using a different HTML element, like span: ' <span onclick=""alert('XSS')"";>'.",xss,attribute_based,49,1,duplicate
+"I can also include a self-closing tag: ' <img src=""test"" onclick=""alert('XSS')""/>;'.",xss,attribute_based,49,1,duplicate
+"Maybe using a different quote structure: ' onclick='alert(""XSS"");'.",xss,attribute_based,49,1,duplicate
+"Another one could be using a different event, like onfocus: ' onfocus=""alert('XSS')"";'.",xss,attribute_based,49,1,duplicate
+"I can vary the quote types again: "" onclick=alert('XSS')"".",xss,attribute_based,49,1,duplicate
+"Let me think of another one, perhaps using a different HTML element: ' <a onclick=""alert('XSS')""; href=""#"">'.",xss,attribute_based,49,1,duplicate
+"Lastly, I can use a different event like oninput: ' oninput=""alert('XSS')"";'.",xss,attribute_based,49,1,duplicate
+"I think these cover different variations, including different event handlers, quote types, and HTML elements. Each should be a functional example of attribute-injection XSS with an event handler.",xss,attribute_based,49,1,no_xss_signature
+</think>,xss,attribute_based,49,1,no_xss_signature
+"[""' onclick='alert('XSS')'"", "" onclick='alert('XSS')';"", ' onmouseover=""alert('XSS')"";', ' <span onclick=""alert('XSS')"";>', ' <img src=""test"" onclick=""alert('XSS')""/>;', ' onclick='alert(""XSS"");', ' onfocus=""alert('XSS')"";', "" onclick=alert('XSS')"", ' <a onclick=""alert('XSS')""; href=""#"">', ' oninput=""alert('XSS')"";']",xss,attribute_based,49,1,duplicate
+Hello,xss,reflected,50,1,no_xss_signature
+world,xss,reflected,50,1,no_xss_signature
+Hello,xss,reflected,50,1,no_xss_signature
+world,xss,reflected,50,1,no_xss_signature
+Hello,xss,reflected,50,1,no_xss_signature
+world,xss,reflected,50,1,no_xss_signature
+Hello,xss,reflected,50,1,no_xss_signature
+world,xss,reflected,50,1,no_xss_signature
+Hello,xss,reflected,50,1,no_xss_signature
+world,xss,reflected,50,1,no_xss_signature
+John',xss,stored,51,1,no_xss_signature
+"Mary""",xss,stored,51,1,no_xss_signature
+Alice & Bob,xss,stored,51,1,no_xss_signature
+1' OR '1'='1,xss,stored,51,1,no_xss_signature
+1' AND '1'='1,xss,stored,51,1,no_xss_signature
+1' OR '1'='1,xss,stored,51,1,no_xss_signature
+1' AND '1'='1,xss,stored,51,1,no_xss_signature
+1' OR '1'='1,xss,stored,51,1,no_xss_signature
+1' AND '1'='1,xss,stored,51,1,no_xss_signature
+1' OR '1'='1,xss,stored,51,1,no_xss_signature
+<script>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<scr<script>ipt>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<script type='text/javascript'>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<script>location.href='//example.com/';</script>,xss,dom_based,52,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,52,1,duplicate
+<think>,xss,attribute_based,53,1,duplicate
+"Okay, so I need to come up with 10 distinct attribute-based payloads for the attribute-injection XSS with an event handler. Let me think about how to approach this.",xss,attribute_based,53,1,no_xss_signature
+"First, I remember that attribute-based XSS occurs when user input is placed inside an HTML attribute. The value of the attribute can be enclosed in quotes, and if the input contains characters like single or double quotes, it can break the structure and lead to XSS.",xss,attribute_based,53,1,no_xss_signature
+"For event handlers, the classic example is the onclick event. So, I can use that. The payload should be something that, when placed inside the event handler, will execute JavaScript.",xss,attribute_based,53,1,no_xss_signature
+"Let me start by recalling the basic structure. For example, using ' onclick=""alert('XSS')"";' as a payload. That's a good one. I can vary the quotes and the structure to create different examples.",xss,attribute_based,53,1,duplicate
+"I should make sure each payload is unique and covers different aspects, like using single quotes, double quotes, and different HTML elements. Maybe I can use different event handlers like onmouseover or onblur as well.",xss,attribute_based,53,1,no_xss_signature
+"I also need to ensure that each payload is a functional example, so they should be varied in their structure. Let me list them out one by one.",xss,attribute_based,53,1,no_xss_signature
+"The first one could be ' onclick=""alert('XSS')"";' which is straightforward.",xss,attribute_based,53,1,duplicate
+"Next, I can vary the quote type, so maybe "" onclick='alert(""XSS"")';"".",xss,attribute_based,53,1,duplicate
+"Then, I can use a different event, like onmouseover, so ' onmouseover=""alert('XSS')"";'.",xss,attribute_based,53,1,duplicate
+"Another one could be using a different HTML element, like span: ' <span onclick=""alert('XSS')"";>'.",xss,attribute_based,53,1,duplicate
+"I can also include a self-closing tag: ' <img src=""test"" onclick=""alert('XSS')""/>;'.",xss,attribute_based,53,1,duplicate
+"Maybe using a different quote structure: ' onclick='alert(""XSS"");'.",xss,attribute_based,53,1,duplicate
+"Another one could be using a different event, like onfocus: ' onfocus=""alert('XSS')"";'.",xss,attribute_based,53,1,duplicate
+"I can vary the quote types again: "" onclick=alert('XSS')"".",xss,attribute_based,53,1,duplicate
+"Let me think of another one, perhaps using a different HTML element: ' <a onclick=""alert('XSS')""; href=""#"">'.",xss,attribute_based,53,1,duplicate
+"Lastly, I can use a different event like oninput: ' oninput=""alert('XSS')"";'.",xss,attribute_based,53,1,duplicate
+"I think these cover different variations, including different event handlers, quote types, and HTML elements. Each should be a functional example of attribute-injection XSS with an event handler.",xss,attribute_based,53,1,no_xss_signature
+</think>,xss,attribute_based,53,1,no_xss_signature
+"[""' onclick='alert('XSS')'"", "" onclick='alert('XSS')';"", ' onmouseover=""alert('XSS')"";', ' <span onclick=""alert('XSS')"";>', ' <img src=""test"" onclick=""alert('XSS')""/>;', ' onclick='alert(""XSS"");', ' onfocus=""alert('XSS')"";', "" onclick=alert('XSS')"", ' <a onclick=""alert('XSS')""; href=""#"">', ' oninput=""alert('XSS')"";']",xss,attribute_based,53,1,duplicate
+Hello,xss,reflected,54,1,no_xss_signature
+world,xss,reflected,54,1,no_xss_signature
+Hello,xss,reflected,54,1,no_xss_signature
+world,xss,reflected,54,1,no_xss_signature
+Hello,xss,reflected,54,1,no_xss_signature
+world,xss,reflected,54,1,no_xss_signature
+Hello,xss,reflected,54,1,no_xss_signature
+world,xss,reflected,54,1,no_xss_signature
+Hello,xss,reflected,54,1,no_xss_signature
+world,xss,reflected,54,1,no_xss_signature
+John',xss,stored,55,1,no_xss_signature
+"Mary""",xss,stored,55,1,no_xss_signature
+Alice & Bob,xss,stored,55,1,no_xss_signature
+1' OR '1'='1,xss,stored,55,1,no_xss_signature
+1' AND '1'='1,xss,stored,55,1,no_xss_signature
+1' OR '1'='1,xss,stored,55,1,no_xss_signature
+1' AND '1'='1,xss,stored,55,1,no_xss_signature
+1' OR '1'='1,xss,stored,55,1,no_xss_signature
+1' AND '1'='1,xss,stored,55,1,no_xss_signature
+1' OR '1'='1,xss,stored,55,1,no_xss_signature
+<script>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<scr<script>ipt>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<script type='text/javascript'>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<script>location.href='//example.com/';</script>,xss,dom_based,56,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,56,1,duplicate
+<think>,xss,attribute_based,57,1,duplicate
+"Okay, so I need to come up with 10 distinct attribute-based payloads for the attribute-injection XSS with an event handler. Let me think about how to approach this.",xss,attribute_based,57,1,no_xss_signature
+"First, I remember that attribute-based XSS occurs when user input is placed inside an HTML attribute. The value of the attribute can be enclosed in quotes, and if the input contains characters like single or double quotes, it can break the structure and lead to XSS.",xss,attribute_based,57,1,no_xss_signature
+"For event handlers, the classic example is the onclick event. So, I can use that. The payload should be something that, when placed inside the event handler, will execute JavaScript.",xss,attribute_based,57,1,no_xss_signature
+"Let me start by recalling the basic structure. For example, using ' onclick=""alert('XSS')"";' as a payload. That's a good one. I can vary the quotes and the structure to create different examples.",xss,attribute_based,57,1,duplicate
+"I should make sure each payload is unique and covers different aspects, like using single quotes, double quotes, and different HTML elements. Maybe I can use different event handlers like onmouseover or onblur as well.",xss,attribute_based,57,1,no_xss_signature
+"I also need to ensure that each payload is a functional example, so they should be varied in their structure. Let me list them out one by one.",xss,attribute_based,57,1,no_xss_signature
+"The first one could be ' onclick=""alert('XSS')"";' which is straightforward.",xss,attribute_based,57,1,duplicate
+"Next, I can vary the quote type, so maybe "" onclick='alert(""XSS"")';"".",xss,attribute_based,57,1,duplicate
+"Then, I can use a different event, like onmouseover, so ' onmouseover=""alert('XSS')"";'.",xss,attribute_based,57,1,duplicate
+"Another one could be using a different HTML element, like span: ' <span onclick=""alert('XSS')"";>'.",xss,attribute_based,57,1,duplicate
+"I can also include a self-closing tag: ' <img src=""test"" onclick=""alert('XSS')""/>;'.",xss,attribute_based,57,1,duplicate
+"Maybe using a different quote structure: ' onclick='alert(""XSS"");'.",xss,attribute_based,57,1,duplicate
+"Another one could be using a different event, like onfocus: ' onfocus=""alert('XSS')"";'.",xss,attribute_based,57,1,duplicate
+"I can vary the quote types again: "" onclick=alert('XSS')"".",xss,attribute_based,57,1,duplicate
+"Let me think of another one, perhaps using a different HTML element: ' <a onclick=""alert('XSS')""; href=""#"">'.",xss,attribute_based,57,1,duplicate
+"Lastly, I can use a different event like oninput: ' oninput=""alert('XSS')"";'.",xss,attribute_based,57,1,duplicate
+"I think these cover different variations, including different event handlers, quote types, and HTML elements. Each should be a functional example of attribute-injection XSS with an event handler.",xss,attribute_based,57,1,no_xss_signature
+</think>,xss,attribute_based,57,1,no_xss_signature
+"[""' onclick='alert('XSS')'"", "" onclick='alert('XSS')';"", ' onmouseover=""alert('XSS')"";', ' <span onclick=""alert('XSS')"";>', ' <img src=""test"" onclick=""alert('XSS')""/>;', ' onclick='alert(""XSS"");', ' onfocus=""alert('XSS')"";', "" onclick=alert('XSS')"", ' <a onclick=""alert('XSS')""; href=""#"">', ' oninput=""alert('XSS')"";']",xss,attribute_based,57,1,duplicate
+Hello,xss,reflected,58,1,no_xss_signature
+world,xss,reflected,58,1,no_xss_signature
+Hello,xss,reflected,58,1,no_xss_signature
+world,xss,reflected,58,1,no_xss_signature
+Hello,xss,reflected,58,1,no_xss_signature
+world,xss,reflected,58,1,no_xss_signature
+Hello,xss,reflected,58,1,no_xss_signature
+world,xss,reflected,58,1,no_xss_signature
+Hello,xss,reflected,58,1,no_xss_signature
+world,xss,reflected,58,1,no_xss_signature
+John',xss,stored,59,1,no_xss_signature
+"Mary""",xss,stored,59,1,no_xss_signature
+Alice & Bob,xss,stored,59,1,no_xss_signature
+1' OR '1'='1,xss,stored,59,1,no_xss_signature
+1' AND '1'='1,xss,stored,59,1,no_xss_signature
+1' OR '1'='1,xss,stored,59,1,no_xss_signature
+1' AND '1'='1,xss,stored,59,1,no_xss_signature
+1' OR '1'='1,xss,stored,59,1,no_xss_signature
+1' AND '1'='1,xss,stored,59,1,no_xss_signature
+1' OR '1'='1,xss,stored,59,1,no_xss_signature
+<script>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<scr<script>ipt>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<script type='text/javascript'>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<script>location.href='//example.com/';</script>,xss,dom_based,60,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,60,1,duplicate
+<think>,xss,attribute_based,61,1,duplicate
+"Okay, so I need to come up with 10 distinct attribute-based payloads for the attribute-injection XSS with an event handler. Let me think about how to approach this.",xss,attribute_based,61,1,no_xss_signature
+"First, I remember that attribute-based XSS occurs when user input is placed inside an HTML attribute. The value of the attribute can be enclosed in quotes, and if the input contains characters like single or double quotes, it can break the structure and lead to XSS.",xss,attribute_based,61,1,no_xss_signature
+"For event handlers, the classic example is the onclick event. So, I can use that. The payload should be something that, when placed inside the event handler, will execute JavaScript.",xss,attribute_based,61,1,no_xss_signature
+"Let me start by recalling the basic structure. For example, using ' onclick=""alert('XSS')"";' as a payload. That's a good one. I can vary the quotes and the structure to create different examples.",xss,attribute_based,61,1,duplicate
+"I should make sure each payload is unique and covers different aspects, like using single quotes, double quotes, and different HTML elements. Maybe I can use different event handlers like onmouseover or onblur as well.",xss,attribute_based,61,1,no_xss_signature
+"I also need to ensure that each payload is a functional example, so they should be varied in their structure. Let me list them out one by one.",xss,attribute_based,61,1,no_xss_signature
+"The first one could be ' onclick=""alert('XSS')"";' which is straightforward.",xss,attribute_based,61,1,duplicate
+"Next, I can vary the quote type, so maybe "" onclick='alert(""XSS"")';"".",xss,attribute_based,61,1,duplicate
+"Then, I can use a different event, like onmouseover, so ' onmouseover=""alert('XSS')"";'.",xss,attribute_based,61,1,duplicate
+"Another one could be using a different HTML element, like span: ' <span onclick=""alert('XSS')"";>'.",xss,attribute_based,61,1,duplicate
+"I can also include a self-closing tag: ' <img src=""test"" onclick=""alert('XSS')""/>;'.",xss,attribute_based,61,1,duplicate
+"Maybe using a different quote structure: ' onclick='alert(""XSS"");'.",xss,attribute_based,61,1,duplicate
+"Another one could be using a different event, like onfocus: ' onfocus=""alert('XSS')"";'.",xss,attribute_based,61,1,duplicate
+"I can vary the quote types again: "" onclick=alert('XSS')"".",xss,attribute_based,61,1,duplicate
+"Let me think of another one, perhaps using a different HTML element: ' <a onclick=""alert('XSS')""; href=""#"">'.",xss,attribute_based,61,1,duplicate
+"Lastly, I can use a different event like oninput: ' oninput=""alert('XSS')"";'.",xss,attribute_based,61,1,duplicate
+"I think these cover different variations, including different event handlers, quote types, and HTML elements. Each should be a functional example of attribute-injection XSS with an event handler.",xss,attribute_based,61,1,no_xss_signature
+</think>,xss,attribute_based,61,1,no_xss_signature
+"[""' onclick='alert('XSS')'"", "" onclick='alert('XSS')';"", ' onmouseover=""alert('XSS')"";', ' <span onclick=""alert('XSS')"";>', ' <img src=""test"" onclick=""alert('XSS')""/>;', ' onclick='alert(""XSS"");', ' onfocus=""alert('XSS')"";', "" onclick=alert('XSS')"", ' <a onclick=""alert('XSS')""; href=""#"">', ' oninput=""alert('XSS')"";']",xss,attribute_based,61,1,duplicate
+Hello,xss,reflected,62,1,no_xss_signature
+world,xss,reflected,62,1,no_xss_signature
+Hello,xss,reflected,62,1,no_xss_signature
+world,xss,reflected,62,1,no_xss_signature
+Hello,xss,reflected,62,1,no_xss_signature
+world,xss,reflected,62,1,no_xss_signature
+Hello,xss,reflected,62,1,no_xss_signature
+world,xss,reflected,62,1,no_xss_signature
+Hello,xss,reflected,62,1,no_xss_signature
+world,xss,reflected,62,1,no_xss_signature
+John',xss,stored,63,1,no_xss_signature
+"Mary""",xss,stored,63,1,no_xss_signature
+Alice & Bob,xss,stored,63,1,no_xss_signature
+1' OR '1'='1,xss,stored,63,1,no_xss_signature
+1' AND '1'='1,xss,stored,63,1,no_xss_signature
+1' OR '1'='1,xss,stored,63,1,no_xss_signature
+1' AND '1'='1,xss,stored,63,1,no_xss_signature
+1' OR '1'='1,xss,stored,63,1,no_xss_signature
+1' AND '1'='1,xss,stored,63,1,no_xss_signature
+1' OR '1'='1,xss,stored,63,1,no_xss_signature
+<script>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<scr<script>ipt>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<script type='text/javascript'>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<script>location.href='//example.com/';</script>,xss,dom_based,64,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,64,1,duplicate
+<think>,xss,attribute_based,65,1,duplicate
+"Okay, so I need to come up with 10 distinct attribute-based payloads for the attribute-injection XSS with an event handler. Let me think about how to approach this.",xss,attribute_based,65,1,no_xss_signature
+"First, I remember that attribute-based XSS occurs when user input is placed inside an HTML attribute. The value of the attribute can be enclosed in quotes, and if the input contains characters like single or double quotes, it can break the structure and lead to XSS.",xss,attribute_based,65,1,no_xss_signature
+"For event handlers, the classic example is the onclick event. So, I can use that. The payload should be something that, when placed inside the event handler, will execute JavaScript.",xss,attribute_based,65,1,no_xss_signature
+"Let me start by recalling the basic structure. For example, using ' onclick=""alert('XSS')"";' as a payload. That's a good one. I can vary the quotes and the structure to create different examples.",xss,attribute_based,65,1,duplicate
+"I should make sure each payload is unique and covers different aspects, like using single quotes, double quotes, and different HTML elements. Maybe I can use different event handlers like onmouseover or onblur as well.",xss,attribute_based,65,1,no_xss_signature
+"I also need to ensure that each payload is a functional example, so they should be varied in their structure. Let me list them out one by one.",xss,attribute_based,65,1,no_xss_signature
+"The first one could be ' onclick=""alert('XSS')"";' which is straightforward.",xss,attribute_based,65,1,duplicate
+"Next, I can vary the quote type, so maybe "" onclick='alert(""XSS"")';"".",xss,attribute_based,65,1,duplicate
+"Then, I can use a different event, like onmouseover, so ' onmouseover=""alert('XSS')"";'.",xss,attribute_based,65,1,duplicate
+"Another one could be using a different HTML element, like span: ' <span onclick=""alert('XSS')"";>'.",xss,attribute_based,65,1,duplicate
+"I can also include a self-closing tag: ' <img src=""test"" onclick=""alert('XSS')""/>;'.",xss,attribute_based,65,1,duplicate
+"Maybe using a different quote structure: ' onclick='alert(""XSS"");'.",xss,attribute_based,65,1,duplicate
+"Another one could be using a different event, like onfocus: ' onfocus=""alert('XSS')"";'.",xss,attribute_based,65,1,duplicate
+"I can vary the quote types again: "" onclick=alert('XSS')"".",xss,attribute_based,65,1,duplicate
+"Let me think of another one, perhaps using a different HTML element: ' <a onclick=""alert('XSS')""; href=""#"">'.",xss,attribute_based,65,1,duplicate
+"Lastly, I can use a different event like oninput: ' oninput=""alert('XSS')"";'.",xss,attribute_based,65,1,duplicate
+"I think these cover different variations, including different event handlers, quote types, and HTML elements. Each should be a functional example of attribute-injection XSS with an event handler.",xss,attribute_based,65,1,no_xss_signature
+</think>,xss,attribute_based,65,1,no_xss_signature
+"[""' onclick='alert('XSS')'"", "" onclick='alert('XSS')';"", ' onmouseover=""alert('XSS')"";', ' <span onclick=""alert('XSS')"";>', ' <img src=""test"" onclick=""alert('XSS')""/>;', ' onclick='alert(""XSS"");', ' onfocus=""alert('XSS')"";', "" onclick=alert('XSS')"", ' <a onclick=""alert('XSS')""; href=""#"">', ' oninput=""alert('XSS')"";']",xss,attribute_based,65,1,duplicate
+Hello,xss,reflected,66,1,no_xss_signature
+world,xss,reflected,66,1,no_xss_signature
+Hello,xss,reflected,66,1,no_xss_signature
+world,xss,reflected,66,1,no_xss_signature
+Hello,xss,reflected,66,1,no_xss_signature
+world,xss,reflected,66,1,no_xss_signature
+Hello,xss,reflected,66,1,no_xss_signature
+world,xss,reflected,66,1,no_xss_signature
+Hello,xss,reflected,66,1,no_xss_signature
+world,xss,reflected,66,1,no_xss_signature
+John',xss,stored,67,1,no_xss_signature
+"Mary""",xss,stored,67,1,no_xss_signature
+Alice & Bob,xss,stored,67,1,no_xss_signature
+1' OR '1'='1,xss,stored,67,1,no_xss_signature
+1' AND '1'='1,xss,stored,67,1,no_xss_signature
+1' OR '1'='1,xss,stored,67,1,no_xss_signature
+1' AND '1'='1,xss,stored,67,1,no_xss_signature
+1' OR '1'='1,xss,stored,67,1,no_xss_signature
+1' AND '1'='1,xss,stored,67,1,no_xss_signature
+1' OR '1'='1,xss,stored,67,1,no_xss_signature
+<script>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<scr<script>ipt>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<script type='text/javascript'>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<script>location.href='//example.com/';</script>,xss,dom_based,68,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<script>alert('XSS');</script>,xss,dom_based,68,1,duplicate
+<think>,xss,attribute_based,69,1,duplicate
+"Okay, so I need to come up with 10 distinct attribute-based payloads for the attribute-injection XSS with an event handler. Let me think about how to approach this.",xss,attribute_based,69,1,no_xss_signature
+"First, I remember that attribute-based XSS occurs when user input is placed inside an HTML attribute. The value of the attribute can be enclosed in quotes, and if the input contains characters like single or double quotes, it can break the structure and lead to XSS.",xss,attribute_based,69,1,no_xss_signature
+"For event handlers, the classic example is the onclick event. So, I can use that. The payload should be something that, when placed inside the event handler, will execute JavaScript.",xss,attribute_based,69,1,no_xss_signature
+"Let me start by recalling the basic structure. For example, using ' onclick=""alert('XSS')"";' as a payload. That's a good one. I can vary the quotes and the structure to create different examples.",xss,attribute_based,69,1,duplicate
+"I should make sure each payload is unique and covers different aspects, like using single quotes, double quotes, and different HTML elements. Maybe I can use different event handlers like onmouseover or onblur as well.",xss,attribute_based,69,1,no_xss_signature
+"I also need to ensure that each payload is a functional example, so they should be varied in their structure. Let me list them out one by one.",xss,attribute_based,69,1,no_xss_signature
+"The first one could be ' onclick=""alert('XSS')"";' which is straightforward.",xss,attribute_based,69,1,duplicate
+"Next, I can vary the quote type, so maybe "" onclick='alert(""XSS"")';"".",xss,attribute_based,69,1,duplicate
+"Then, I can use a different event, like onmouseover, so ' onmouseover=""alert('XSS')"";'.",xss,attribute_based,69,1,duplicate
+"Another one could be using a different HTML element, like span: ' <span onclick=""alert('XSS')"";>'.",xss,attribute_based,69,1,duplicate
+"I can also include a self-closing tag: ' <img src=""test"" onclick=""alert('XSS')""/>;'.",xss,attribute_based,69,1,duplicate
+"Maybe using a different quote structure: ' onclick='alert(""XSS"");'.",xss,attribute_based,69,1,duplicate
+"Another one could be using a different event, like onfocus: ' onfocus=""alert('XSS')"";'.",xss,attribute_based,69,1,duplicate
+"I can vary the quote types again: "" onclick=alert('XSS')"".",xss,attribute_based,69,1,duplicate
+"Let me think of another one, perhaps using a different HTML element: ' <a onclick=""alert('XSS')""; href=""#"">'.",xss,attribute_based,69,1,duplicate
+"Lastly, I can use a different event like oninput: ' oninput=""alert('XSS')"";'.",xss,attribute_based,69,1,duplicate
+"I think these cover different variations, including different event handlers, quote types, and HTML elements. Each should be a functional example of attribute-injection XSS with an event handler.",xss,attribute_based,69,1,no_xss_signature
+</think>,xss,attribute_based,69,1,no_xss_signature
+"[""' onclick='alert('XSS')'"", "" onclick='alert('XSS')';"", ' onmouseover=""alert('XSS')"";', ' <span onclick=""alert('XSS')"";>', ' <img src=""test"" onclick=""alert('XSS')""/>;', ' onclick='alert(""XSS"");', ' onfocus=""alert('XSS')"";', "" onclick=alert('XSS')"", ' <a onclick=""alert('XSS')""; href=""#"">', ' oninput=""alert('XSS')"";']",xss,attribute_based,69,1,duplicate
+Hello,xss,reflected,70,1,no_xss_signature
+world,xss,reflected,70,1,no_xss_signature
+Hello,xss,reflected,70,1,no_xss_signature
+world,xss,reflected,70,1,no_xss_signature
+Hello,xss,reflected,70,1,no_xss_signature
+world,xss,reflected,70,1,no_xss_signature
+Hello,xss,reflected,70,1,no_xss_signature
+world,xss,reflected,70,1,no_xss_signature
+Hello,xss,reflected,70,1,no_xss_signature
+world,xss,reflected,70,1,no_xss_signature

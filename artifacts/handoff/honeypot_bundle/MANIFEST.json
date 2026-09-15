@@ -1,0 +1,70 @@
+{
+  "corpus_rows": 36792,
+  "unique_uri_body_pairs": 36792,
+  "labels": {
+    "1": 18182,
+    "0": 18610
+  },
+  "families": {
+    "union_based": 1223,
+    "tautology": 1484,
+    "auth_bypass": 1169,
+    "time_based_blind": 1261,
+    "error_based": 1113,
+    "boolean_blind": 1498,
+    "stacked_query": 1343,
+    "dom_based": 2546,
+    "reflected": 2772,
+    "stored": 3773,
+    "benign": 18610
+  },
+  "obfuscated_rows": 12906,
+  "synthetic_duplicate_rows": 0,
+  "forced_unique_nonce_rows": 605,
+  "files": {
+    "BUNDLE_README.md": {
+      "bytes": 6400,
+      "sha256": "56777ac7bdbdb259e76c6b0f9c0d7c3db2b022cdea6b05445053e70e939b3615"
+    },
+    "MANIFEST.json": {
+      "bytes": 1919,
+      "sha256": "6a61a450334318fa9944f307fa6a2aaf0903bb6bd32a4ef59395c1c1dc99960e"
+    },
+    "data/honeypot_corpus.csv": {
+      "bytes": 10907015,
+      "sha256": "4d60d13bb4dabdd0cf2b1c9f8d297dbd26c9ee15c253964371eb511fe9276e38"
+    },
+    "data/rf_test_v2.csv": {
+      "bytes": 10099853,
+      "sha256": "6da80992cd196468d3627c58a327c758504a5b1f675cc44c57ab9b7f830fe960"
+    },
+    "data/rf_train_v2.csv": {
+      "bytes": 45898193,
+      "sha256": "999e43786460d4f184aea65ef7924e4c4ad8127bd938909525e4b6c355c31326"
+    },
+    "data/rf_val_v2.csv": {
+      "bytes": 10065562,
+      "sha256": "18d3db2f1f339b0f23f1e9cce914498b643fd2f497c6dc181d9aea795821fb12"
+    },
+    "scripts/build_rf_features_v2.py": {
+      "bytes": 9080,
+      "sha256": "1752842c951b3962223392d3d82026d4c6777a6f0aea6702232a54d721e97ccf"
+    },
+    "scripts/prepare_honeypot_for_training.py": {
+      "bytes": 12772,
+      "sha256": "933cd9ed92c7d0c9ac9837ade1aa359f04756565cc66f7caf67979af242503e8"
+    },
+    "scripts/run_honeypot.py": {
+      "bytes": 47630,
+      "sha256": "3be0b5418d3ef600dae3f6becf6499ab9b521f26a854cfa7de5d4521bb77a316"
+    },
+    "scripts/text_normalize.py": {
+      "bytes": 3626,
+      "sha256": "ece8bfab510f0d390170b31b9746ac6f6f43e3e840c634e27d10a30e570921f3"
+    },
+    "scripts/webids23_to_honeypot_log_v9.py": {
+      "bytes": 44901,
+      "sha256": "1069dbac85924b8ec44fd4fb8638fc5834ffbcf04757b9d288c9324604edad59"
+    }
+  }
+}

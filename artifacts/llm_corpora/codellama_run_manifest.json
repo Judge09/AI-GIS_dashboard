@@ -1,0 +1,33 @@
+{
+  "generator": "codellama",
+  "model_tag": "codellama:13b",
+  "model_digest": "9f438cb9cd581fc025612d27f7c1a6669ff83a8bb0ed86c94fcf4c5440555697",
+  "backend_host": "localhost:11434",
+  "base_seed": 42,
+  "batches_per_type": 3,
+  "batch_size": 20,
+  "controlled_generation": {
+    "temperature": 0.0,
+    "top_k": 1,
+    "top_p": 1.0
+  },
+  "target_per_type": 20,
+  "accepted": {
+    "sqli": 20,
+    "xss": 20,
+    "total": 40
+  },
+  "rejected_total": 0,
+  "acceptance_rate": 1.0,
+  "family_counts": {
+    "sqli": {
+      "boolean_blind": 20
+    },
+    "xss": {
+      "reflected": 20
+    }
+  },
+  "elapsed_seconds": 103.8,
+  "generated_utc": "2026-08-25T02:58:39.787723+00:00",
+  "note": "Held-out only. Never used for training, tuning, or threshold selection."
+}

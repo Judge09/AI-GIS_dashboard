@@ -1,0 +1,66 @@
+payload,attack_type,attack_family,seed,round,reject_reason
+<think>,sqli,boolean_blind,42,1,reasoning_think_tag
+"Okay, so I need to come up with 20 distinct boolean-based blind SQL injection payloads. I remember that boolean-based blind SQL injection occurs when the database returns a different number of records based on the boolean value in the query. This means that the presence of a specific boolean expression in the query can change the output, allowing us to determine if the injection is successful.",sqli,boolean_blind,42,1,reasoning_prose
+"I should start by recalling the common techniques used for boolean-based blind SQL injection. The most common ones are using ""AND"" and ""OR"" with true or false conditions. For example, using ""AND 1=1"" is a standard way to check for the presence of the keyword. Then, I can vary the structure by using different boolean expressions like ""AND (SELECT 1)=1"" or ""AND 1=1 UNION ..."".",sqli,boolean_blind,42,1,reasoning_prose
+"I should also consider using different operators and structures to ensure each payload is distinct. Maybe I can include some that use ""OR"" instead of ""AND"" and vary the order of the clauses. Additionally, I can incorporate different boolean expressions like ""1=1"" or ""1=2"" to see how the database responds.",sqli,boolean_blind,42,1,reasoning_prose
+Let me list out some variations I can use:,sqli,boolean_blind,42,1,reasoning_prose
+<think>,sqli,union_based,43,1,reasoning_think_tag
+"Okay, so I need to come up with 20 distinct UNION-based SQL injection payloads. I remember that UNION-based SQLi occurs when the UNION operator is used in the query, and the user input is part of the SQL query. The idea is that the attacker can add their own value to the query by using the UNION operator.",sqli,union_based,43,1,reasoning_prose
+Let me think about the structure. The basic form is something like 'value' UNION ('SELECT ...').,sqli,union_based,43,1,reasoning_prose
+I should vary the structure to make each payload unique. Maybe I can use different numbers of quotes or different parts of the SELECT statement.,sqli,union_based,43,1,reasoning_prose
+"I'll start with the first one: 'test' UNION ('SELECT * FROM users'). Wait, but I need to make sure each is a functional example. Maybe I can use single quotes and double quotes to vary them.",sqli,union_based,43,1,reasoning_prose
+"Let me list them out, making sure each one is distinct and properly formatted. I'll try to include different table names and column names to add variety.",sqli,union_based,43,1,reasoning_prose
+I should also check that each payload is correctly using the UNION operator and that the values are enclosed in quotes to form valid SQL statements.,sqli,union_based,43,1,reasoning_prose
+"Alright, I think I have 20 different ones now. Let me make sure they are all unique and correctly formatted.",sqli,union_based,43,1,reasoning_prose
+</think>,sqli,union_based,43,1,reasoning_think_tag
+Here is a JSON array of 20 distinct UNION-based SQL injection payloads:,sqli,union_based,43,1,reasoning_prose
+```json,sqli,union_based,43,1,no_sqli_signature
+<think>,xss,reflected,42,1,reasoning_think_tag
+"Okay, so I need to come up with 20 distinct reflected XSS payloads. Reflected XSS occurs when user input is reflected in the HTML output without proper escaping. I should think of different ways to represent the same characters, like &quot; for "", &amp; for &, and use various quotes and combinations. I'll start with the basic ones like &quot; and &amp; and then vary them, maybe using single quotes and other entities. I should make sure each payload is unique and covers different variations to test the detector thoroughly.",xss,reflected,42,1,reasoning_prose
+</think>,xss,reflected,42,1,reasoning_think_tag
+Here is a JSON array of 20 distinct reflected XSS payloads:,xss,reflected,42,1,reasoning_prose
+```json,xss,reflected,42,1,no_xss_signature
+&quot;hello&quot;,xss,reflected,42,1,no_xss_signature
+&amp;quot;hello&amp;quot;,xss,reflected,42,1,no_xss_signature
+hello&quot;,xss,reflected,42,1,no_xss_signature
+&quot;hello,xss,reflected,42,1,no_xss_signature
+hello&quot;,xss,reflected,42,1,no_xss_signature
+&amp;quot;hello&amp;quot;,xss,reflected,42,1,no_xss_signature
+hello,xss,reflected,42,1,no_xss_signature
+&quot;hello&quot;,xss,reflected,42,1,no_xss_signature
+&amp;hello&amp;,xss,reflected,42,1,no_xss_signature
+hello,xss,reflected,42,1,no_xss_signature
+&quot;hello&quot;,xss,reflected,42,1,no_xss_signature
+&amp;quot;hello&amp;quot;,xss,reflected,42,1,no_xss_signature
+hello,xss,reflected,42,1,no_xss_signature
+&quot;hello,xss,reflected,42,1,no_xss_signature
+hello&quot;,xss,reflected,42,1,no_xss_signature
+&amp;hello&amp;,xss,reflected,42,1,no_xss_signature
+hello,xss,reflected,42,1,no_xss_signature
+&quot;hello&quot;,xss,reflected,42,1,no_xss_signature
+&amp;quot;hello&amp;quot;,xss,reflected,42,1,no_xss_signature
+hello,xss,reflected,42,1,no_xss_signature
+`,xss,reflected,42,1,too_short(1)
+<think>,xss,stored,43,1,reasoning_think_tag
+"Okay, so I need to come up with 20 distinct stored XSS payloads. Stored XSS means that the user input is stored and displayed later, so the payload should be valid and varied to test the detector.",xss,stored,43,1,reasoning_prose
+"I'll start by recalling common stored XSS examples. The first one is usually ""<script>alert('XSS');</script>"". That's a good one. Then, I can think of variations like using quotes, maybe single quotes inside. For example, ""‘<script>alert('XSS');</script>’"".",xss,stored,43,1,reasoning_prose
+"I should include different quotes and maybe some with double quotes inside. Also, I can vary the structure by using different tags, like using ""onclick"" events. For instance, ""onmouseover=’alert('XSS');’"".",xss,stored,43,1,reasoning_prose
+"I need to make sure each payload is unique and covers different ways to trigger the XSS. Let me list them out, making sure each one is distinct and functional. I'll include a mix of single and double quotes, different attributes, and maybe some with special characters to see how the detector handles them.",xss,stored,43,1,reasoning_prose
+"I should also consider varying the tags, like using ""img"" with ""src"" attributes. For example, ""src='javascript:alert('XSS');'"". That's a good one.",xss,stored,43,1,reasoning_prose
+"I'll make sure each payload is a valid example and that they are all different from each other. Let me count them as I go to ensure I reach 20. I think I have enough variations, but I'll double-check to make sure there's no repetition and each one is unique in its structure.",xss,stored,43,1,reasoning_prose
+</think>,xss,stored,43,1,reasoning_think_tag
+Here is a JSON array of 20 distinct stored XSS payloads:,xss,stored,43,1,reasoning_prose
+```json,xss,stored,43,1,no_xss_signature
+onmouseover=alert('XSS');,xss,stored,43,1,duplicate
+src='javascript:alert('XSS');',xss,stored,43,1,duplicate
+"""",xss,stored,43,1,too_short(1)
+<think>,xss,dom_based,44,1,reasoning_think_tag
+"Okay, so I need to come up with 20 distinct DOM-based XSS payloads. I remember that DOM-based XSS occurs when the browser evaluates JavaScript after the HTML is rendered. So, the payloads should be in JavaScript expressions, often within quotes.",xss,dom_based,44,1,reasoning_prose
+"I think the common ones are things like <script>alert('xss');</script>, but since they need to be in JavaScript expressions, maybe they are inside functions like confirm or inside the src attribute.",xss,dom_based,44,1,reasoning_sentence_shape
+"Let me think of different ways to structure these. Maybe using different JavaScript functions like alert, prompt, confirm, or using the value of attributes.",xss,dom_based,44,1,reasoning_prose
+"I should vary the structures to cover different scenarios. For example, using single quotes, double quotes, and different function calls. Also, I can include some that have the value in the attributes, like <img src=""x"" onerror=""alert('xss')"">.",xss,dom_based,44,1,reasoning_prose
+"I need to make sure each payload is unique and functional. Let me list them out, making sure each one is a valid example of a DOM-based XSS payload.",xss,dom_based,44,1,reasoning_prose
+</think>,xss,dom_based,44,1,reasoning_think_tag
+Here is a JSON array of 20 distinct DOM-based XSS payloads:,xss,dom_based,44,1,reasoning_prose
+```json,xss,dom_based,44,1,no_xss_signature
+<script>alert('xss');</script>,xss,dom_based,44,1,duplicate

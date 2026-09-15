@@ -1,0 +1,12 @@
+payload,attack_type,attack_family,seed,reject_reason
+<script>alert(1)</script>,xss,stored,43,duplicate
+<script>alert(2)</script>,xss,stored,43,duplicate
+<script>alert(3)</script>,xss,stored,43,duplicate
+<script>alert(4)</script>,xss,stored,43,duplicate
+<script>alert(5)</script>,xss,stored,43,duplicate
+<script>alert(6)</script>,xss,stored,43,duplicate
+<script>alert(7)</script>,xss,stored,43,duplicate
+<script>alert(8)</script>,xss,stored,43,duplicate
+<script>alert(9)</script>,xss,stored,43,duplicate
+<script>alert(10)</script>,xss,stored,43,duplicate
+<script>alert(1)</script>,xss,dom_based,44,duplicate

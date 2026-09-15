@@ -1,0 +1,39 @@
+Validating inputs...
+  [ok] --sqli-http: 2,000 usable rows in web-ids23_sql_injection_http_3.csv
+  [ok] --sqli-https: 2,000 usable rows in web-ids23_sql_injection_https_2.csv
+  [ok] --xss-http: 2,000 usable rows in web-ids23_xss_http_1.csv
+  [ok] --xss-https: 2,000 usable rows in web-ids23_xss_https_1.csv
+  [ok] --benign: 9,000 usable rows in web-ids23_benign_1.csv
+Counting natural row counts...
+  SQLi natural total: 4000
+  XSS natural total:  4000
+Targets -> SQLi: 4000 | XSS: 4000 | Benign: 8000 (strategy=match_min, benign_ratio=1.0)
+[ok] sqli_http: 2000 entries (2000 unique flows + 0 oversampled) from web-ids23_sql_injection_http_3.csv
+[ok] sqli_https: 2000 entries (2000 unique flows + 0 oversampled) from web-ids23_sql_injection_https_2.csv
+[ok] xss_http: 2000 entries (2000 unique flows + 0 oversampled) from web-ids23_xss_http_1.csv
+[ok] xss_https: 2000 entries (2000 unique flows + 0 oversampled) from web-ids23_xss_https_1.csv
+[ok] benign: 8000 entries (8000 unique flows + 0 oversampled) from web-ids23_benign_1.csv
+
+=== Distribution report ===
+Total entries: 16000
+label=1 (attack): 8000  |  label=0 (benign): 8000
+malicious:benign ratio = 8000:8000 (1.00:1)
+attack_family breakdown:
+       auth_bypass: 465
+            benign: 8000
+     boolean_blind: 658
+         dom_based: 993
+       error_based: 516
+         reflected: 1185
+     stacked_query: 573
+            stored: 1822
+         tautology: 631
+  time_based_blind: 604
+       union_based: 553
+flow-level (oversampled) duplicates: 0 (0.0% of total)
+forced-unique-nonce fallback fired: 1535 times (9.59% of total)
+distinct attack payload strings: SQLi=4000  XSS=4000
+distinct benign payload values: 8000
+
+Output: output\sample_output.log
+Elapsed: 42.1s | Peak RSS: nan MB

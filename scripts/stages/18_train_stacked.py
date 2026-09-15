@@ -67,11 +67,12 @@ RF_COLS = ["payload_len", "entropy", "num_special_chars", "num_digits",
            "special_char_ratio", "quote_ratio"]
 NGRAM_N = 300
 WORD_N = 200
-# Character window the LSTM reads. Raised 200 -> 400 because late-injection
-# payloads (benign prose with the attack appended past index 200) truncated to
-# harmless text and scored ~0.0008. app.py reads this length off the saved
-# model rather than hardcoding it, so the two cannot drift apart.
-MAXLEN = 400
+# Character window the LSTM reads. Rolled back 400 -> 200: the 400-wide LSTM
+# overfit and fired ~1.0 on ordinary benign text (app.js paths, addresses),
+# driving benchmark FPR to ~49%, while 400 never actually caught the late-
+# injection cases it was meant to. app.py reads this length off the saved model
+# rather than hardcoding it, so the two cannot drift apart.
+MAXLEN = 200
 
 
 def ordinal_encode(text, max_len=MAXLEN):
@@ -168,6 +169,8 @@ def main():
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--arch", choices=["lstm", "bilstm"], default="lstm",
                     help="sequence model to train (default: lstm, the thesis baseline)")
+    ap.add_argument("--no-word-features", action="store_true",
+                    help="isolation experiment: RF on 319 char features only")
     ap.add_argument("--out-dir", default=None,
                     help="write models here instead of models/ (use for A/B runs "
                          "so the live models/ dir is not overwritten)")
@@ -211,11 +214,15 @@ def main():
     # Word-level TF-IDF ADDED alongside the char n-grams (not replacing them).
     # Char features key on symbol shapes, so word-shaped payloads with no
     # punctuation ("admin where true") give them almost nothing to fire on.
-    print("[2b/6] Fitting word-level TF-IDF on train text only ...")
-    word_vec = TfidfVectorizer(analyzer="word", ngram_range=(1, 2),
-                               max_features=WORD_N, lowercase=True,
-                               sublinear_tf=True, token_pattern=r"(?u)\b\w+\b")
-    word_vec.fit(tr_txt)
+    if args.no_word_features:
+        print("[2b/6] --no-word-features: RF on char features only (319)")
+        word_vec = None
+    else:
+        print("[2b/6] Fitting word-level TF-IDF on train text only ...")
+        word_vec = TfidfVectorizer(analyzer="word", ngram_range=(1, 2),
+                                   max_features=WORD_N, lowercase=True,
+                                   sublinear_tf=True, token_pattern=r"(?u)\b\w+\b")
+        word_vec.fit(tr_txt)
 
     Xtr = rf_matrix(tr_txt, vec, word_vec)
     Xva = rf_matrix(va_txt, vec, word_vec)
@@ -256,8 +263,9 @@ def main():
         pickle.dump(meta, f)
     with open(MODELS / "ngram_vectorizer.pkl", "wb") as f:
         pickle.dump(vec, f)
-    with open(MODELS / "word_vectorizer.pkl", "wb") as f:
-        pickle.dump(word_vec, f)
+    if word_vec is not None:
+        with open(MODELS / "word_vectorizer.pkl", "wb") as f:
+            pickle.dump(word_vec, f)
     # data/prepared/ is SHARED state that the app and eval scripts 13/14 read.
     # An --out-dir run is a side experiment, so it must not touch it, or an A/B
     # comparison silently overwrites the baseline's splits and vectorizer.

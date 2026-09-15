@@ -1,0 +1,80 @@
+{
+  "threshold": 0.55,
+  "environment": {
+    "python": "3.13.12",
+    "sklearn": "1.9.0",
+    "tensorflow": "2.21.0"
+  },
+  "model_dir": "models\\current",
+  "lstm_input_width": 200,
+  "rf_features": 319,
+  "word_vectorizer_present": false,
+  "model_sha256": {
+    "rf2.pkl": "08aff449c01470bd",
+    "lstm_best.keras": "3216f0b91767379a",
+    "meta.pkl": "49fdec026e05bda6",
+    "ngram_vectorizer.pkl": "2b74ed700968c032"
+  },
+  "eval_sets": {
+    "paper_benchmark.csv": {
+      "sha256": "a93382ca220c6b31",
+      "rows": 1700,
+      "attacks": 1000,
+      "benign": 700,
+      "accuracy": 0.9071,
+      "detection_recall": 0.979,
+      "precision": 0.8772,
+      "fpr": 0.1957,
+      "f1": 0.9253,
+      "auc": 0.9926,
+      "false_negatives": 21,
+      "false_positives": 137,
+      "confusion_TN_FP_FN_TP": [
+        563,
+        137,
+        21,
+        979
+      ]
+    },
+    "holdout_eval.csv": {
+      "sha256": "2112d2e51f3a725e",
+      "rows": 396,
+      "attacks": 198,
+      "benign": 198,
+      "accuracy": 0.9596,
+      "detection_recall": 0.9192,
+      "precision": 1.0,
+      "fpr": 0.0,
+      "f1": 0.9579,
+      "auc": 0.9748,
+      "false_negatives": 16,
+      "false_positives": 0,
+      "confusion_TN_FP_FN_TP": [
+        198,
+        0,
+        16,
+        182
+      ]
+    },
+    "llm_holdout_full.csv": {
+      "sha256": "cc89fa1e14c91d83",
+      "rows": 276,
+      "attacks": 78,
+      "benign": 198,
+      "accuracy": 0.9855,
+      "detection_recall": 0.9487,
+      "precision": 1.0,
+      "fpr": 0.0,
+      "f1": 0.9737,
+      "auc": 0.9988,
+      "false_negatives": 4,
+      "false_positives": 0,
+      "confusion_TN_FP_FN_TP": [
+        198,
+        0,
+        4,
+        74
+      ]
+    }
+  }
+}

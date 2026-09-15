@@ -1,0 +1,41 @@
+payload,attack_type,attack_family,seed,label,generator,model_tag,payload_sha256
+AND 1=1,sqli,boolean_blind,42,1,codellama,codellama:13b,03269be5799ba7c45133416a6a4b22f096839bc4ea3b7a0a981927d37d6ff2e1
+AND 1=2,sqli,boolean_blind,42,1,codellama,codellama:13b,8875508721451315267a40d9539ffd474d2017be9e89a12f26a37abc70c3e4da
+AND 1=3,sqli,boolean_blind,42,1,codellama,codellama:13b,7ca7f966802040b7ff2dc8d88b0d8607dd64fd0a4e204632cf25cbea5b9105d6
+AND 1=4,sqli,boolean_blind,42,1,codellama,codellama:13b,03fa77cd8fe5645d142b40cbdd66ce1ab17b128551f04dcdbc9c75b61c75314f
+AND 1=5,sqli,boolean_blind,42,1,codellama,codellama:13b,5ede99143dc5a73e28e16a671927537397fbc5e030658aefb63aa53cc7fcb17b
+AND 1=6,sqli,boolean_blind,42,1,codellama,codellama:13b,709aef5a97723bc54f2a520deeb88d0c683859e83fa9f884dd7edb74c37ef240
+AND 1=7,sqli,boolean_blind,42,1,codellama,codellama:13b,8379a4c9a52b31a9b37aaade3c29915db45854f4aad11e92618a916d208a7315
+AND 1=8,sqli,boolean_blind,42,1,codellama,codellama:13b,ead281a579bdc5f8ef6e2caed6b72ee3c260c3d7b337a33fcbc43b1d60b957ce
+AND 1=9,sqli,boolean_blind,42,1,codellama,codellama:13b,fded25aa67c63d053128333cc1e34f9b898b9e3a1b550d5dd695c80417da79a1
+AND 1=10,sqli,boolean_blind,42,1,codellama,codellama:13b,fcb467e722056dd5281adcde85336124854346a4a8dcd41e861327dfa38e58ba
+AND 1=11,sqli,boolean_blind,42,1,codellama,codellama:13b,c387e6cc2fdf7932bceaf1aa2ac2f34c351d570d7facb7b56e2346b3f8c48b73
+AND 1=12,sqli,boolean_blind,42,1,codellama,codellama:13b,1ae967456fcac2ff538e19b7226a8618e186675befe071a64b60b8e232e20812
+AND 1=13,sqli,boolean_blind,42,1,codellama,codellama:13b,24fa1402163891cb4ba57539764136ff7f6cabe06f521329863f994b51416fe9
+AND 1=14,sqli,boolean_blind,42,1,codellama,codellama:13b,2c67be4ef1bd6a5b0e44ba42f1331cd333f5f333f592b1f8ffda10af9c5e69a9
+AND 1=15,sqli,boolean_blind,42,1,codellama,codellama:13b,e9cc6ae74fb3af706d0d7937428bce08c48c1e796394c8649500a32a80f0f156
+AND 1=16,sqli,boolean_blind,42,1,codellama,codellama:13b,7a3820900c59a9474e31e04a875a38f6d91ae02c49d6f7ff1f29061efe4bda62
+AND 1=17,sqli,boolean_blind,42,1,codellama,codellama:13b,03abefe34de44c36f520ac7adf37bda1dd828a71b911953393efdd657528655f
+AND 1=18,sqli,boolean_blind,42,1,codellama,codellama:13b,122330b4402fc43eede355297f3c2d4a7382fcdaf6a88201417d85ab7d765040
+AND 1=19,sqli,boolean_blind,42,1,codellama,codellama:13b,3d61260a2d402b3c6b70fa764b86cb9afacb925c297a3ae9559bf5b58f659f81
+AND 1=20,sqli,boolean_blind,42,1,codellama,codellama:13b,1aa069ee10b4ec9601db7a741f5f97b0558dc510481cd53cb025fc027e8d46bf
+<script>alert(1)</script>,xss,reflected,42,1,codellama,codellama:13b,5c140d35dcb46a622e2cedf5ef5cc3638cdffd1c118c9331f8c84669f0b74783
+<script>alert(2)</script>,xss,reflected,42,1,codellama,codellama:13b,141ce7a938b5973dd71c90bcdd7e4097317ee7374259cf6d8774fdfd86c1f8ea
+<script>alert(3)</script>,xss,reflected,42,1,codellama,codellama:13b,21a39046c56ea189a066b2a783951e16684488e32b239b2a62a0d5cd63fd6b43
+<script>alert(4)</script>,xss,reflected,42,1,codellama,codellama:13b,19ca54d7e700913dafb619698732ebf1efee7bdb8b319012d10facd4accafac0
+<script>alert(5)</script>,xss,reflected,42,1,codellama,codellama:13b,68514ce5ef5f81cbf9b5954c0f35b471c5b9e184ed23942f8b3b9db12838e123
+<script>alert(6)</script>,xss,reflected,42,1,codellama,codellama:13b,b8ac5cb5ec978ffb6e7784a99fb82ef84a7e02827db21bb1552b348351d59c5b
+<script>alert(7)</script>,xss,reflected,42,1,codellama,codellama:13b,44becf147552e0c66f649562b19f799b4a6acb5a59ccb894f76a60b39e9cdb96
+<script>alert(8)</script>,xss,reflected,42,1,codellama,codellama:13b,86abb8b2845d1bd7ab42d30c877b9fce9f741255adeb89f5f176789b8fc11798
+<script>alert(9)</script>,xss,reflected,42,1,codellama,codellama:13b,348efcc7a52013b4a5ff3b402cbe391079cc729acfb9fdc4e57d941aec8d9149
+<script>alert(10)</script>,xss,reflected,42,1,codellama,codellama:13b,35d879544ad0dc7ac6d6d9c597d06bd03e38bc38f91307bd805e432722ff5a47
+<script>alert(11)</script>,xss,reflected,42,1,codellama,codellama:13b,469ef1d36049fdddaedf268748e707d1d7c5bd5807eb0500e41b129a4938b08d
+<script>alert(12)</script>,xss,reflected,42,1,codellama,codellama:13b,95750378b34532f86732a6f6b6243912bb593ef6b8728fa03b095b4221688bd3
+<script>alert(13)</script>,xss,reflected,42,1,codellama,codellama:13b,4a2c000aa89b1b170c6cf129f998a18f119a2a4bdc4f06fac32486c5ba2d2682
+<script>alert(14)</script>,xss,reflected,42,1,codellama,codellama:13b,487a766c045d56423c7be302ef0c608b601a2e18ec3dd4eb98a3ace7d3b8e408
+<script>alert(15)</script>,xss,reflected,42,1,codellama,codellama:13b,0fda019052f188276ba7b87f4c61f69bb08f3603d4f74b6c3a10e9b87c340f4e
+<script>alert(16)</script>,xss,reflected,42,1,codellama,codellama:13b,23b7365f1ac94a304a7d34cdf7ae3a70e5b69d117f8fecc857ecc682890ba1ec
+<script>alert(17)</script>,xss,reflected,42,1,codellama,codellama:13b,5e53f5807a5da8e96df9f4063ee2ad208d2c432fd0e48c1fa8aea309bfbeba8c
+<script>alert(18)</script>,xss,reflected,42,1,codellama,codellama:13b,ee54fb99b08c4af9c6f4a14cfedb9dac54b44a1d5a1675354cdf45386798f5d4
+<script>alert(19)</script>,xss,reflected,42,1,codellama,codellama:13b,3e3fbe6fe1b7c54eca50b94b5b03b9b26223b00a09b67f87bc58237cc4c88094
+<script>alert(20)</script>,xss,reflected,42,1,codellama,codellama:13b,ecedc0091e60e14651d6f33e39af5be732ed9a0ae730d6b57c651c1904f4fd03

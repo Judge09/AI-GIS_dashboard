@@ -1,0 +1,28 @@
+{
+  "generator": "deepseek-r1",
+  "model_tag": "huihui_ai/deepseek-r1-abliterated:14b-qwen-distill",
+  "model_digest": "6b2209ffd7582e8310a4b3a99691b7e7253be608fe38b3d6d97cd3b9b1844ff4",
+  "abliterated_build": true,
+  "backend_host": "localhost:11434",
+  "round2_enabled": false,
+  "round2_feedback_waf": null,
+  "round2_mutations_applied": 0,
+  "controlled_generation": {
+    "temperature": 0.0,
+    "top_k": 1,
+    "top_p": 1.0
+  },
+  "base_seed": 42,
+  "target_per_type": 20,
+  "accepted": {
+    "sqli": 20,
+    "xss": 20,
+    "total": 40
+  },
+  "rejected_total": 65,
+  "acceptance_rate": 0.381,
+  "elapsed_seconds": 274.3,
+  "generated_utc": "2026-08-25T03:03:14.371463+00:00",
+  "disclosed_circularity": "Round-2 payloads were partially optimised against ModSecurity PL1 rule logic; evaluation uses PL2. Report Code Llama and DeepSeek results separately (Section 3.5).",
+  "note": "Held-out only. Never used for training, tuning, or threshold selection."
+}
