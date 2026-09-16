@@ -2,78 +2,280 @@
 {% block title %}Dashboard — AI-GIS{% endblock %}
 {% block content %}
 <h1 class="page-title">AI-GIS Detection Pipeline</h1>
-<p class="page-sub">Live dashboard for the trained RF v2 + LSTM + meta-learner stacked system.</p>
 
+{% if not cur %}
+  <div class="notice">
+    <h3>Current results not generated yet</h3>
+    <p>This page reads <code>data/current_results.json</code>. Run the evaluation pipeline
+       to produce it; nothing below is hardcoded in the template.</p>
+  </div>
+{% else %}
+<p class="page-sub">
+  Random Forest + LSTM + logistic-regression meta-learner, current build.
+  Model version: <strong>{{ cur.model_version }}</strong> ·
+  commit <span class="mono">{{ cur.git_commit }}</span> ·
+  evaluated {{ cur.generated }}.
+</p>
+
+{% set b = cur.multiseed.before.stacked %}
+{% set a = cur.multiseed.after.stacked %}
+{% set sig = cur.multiseed.significance.stacked %}
+
+<h2 class="section-title">Headline: stacked ensemble over {{ cur.multiseed.seeds | length }} training seeds</h2>
 <div class="grid-4">
-  <div class="card stat"><div class="n">{{ "{:,}".format(stats.total) }}</div><div class="l">Total entries</div></div>
-  <div class="card stat"><div class="n">1:1</div><div class="l">Malicious : benign</div></div>
-  <div class="card stat"><div class="n">1:1</div><div class="l">SQLi : XSS</div></div>
-  <div class="card stat"><div class="n">100%</div><div class="l">Zero duplicate payloads</div></div>
+  <div class="card stat">
+    <div class="n">{{ (a.detection_rate.mean * 100) | round(2) }}%</div>
+    <div class="l">Detection rate</div>
+    <div class="sub">± {{ (a.detection_rate.sd * 100) | round(2) }} pp</div>
+    <div class="delta up">was {{ (b.detection_rate.mean * 100) | round(2) }}% (p = {{ sig.detection_p }})</div>
+  </div>
+  <div class="card stat">
+    <div class="n">{{ (a.fpr.mean * 100) | round(2) }}%</div>
+    <div class="l">False positive rate</div>
+    <div class="sub">± {{ (a.fpr.sd * 100) | round(2) }} pp</div>
+    <div class="delta up">was {{ (b.fpr.mean * 100) | round(2) }}% (p = {{ sig.fpr_p }})</div>
+  </div>
+  <div class="card stat">
+    <div class="n">{{ a.f1.mean }}</div>
+    <div class="l">F1</div>
+    <div class="sub">± {{ a.f1.sd }}</div>
+    <div class="delta up">was {{ b.f1.mean }} (p = {{ sig.f1_p }})</div>
+  </div>
+  <div class="card stat">
+    <div class="n">{{ (100 - a.detection_rate.mean * 100) | round(2) }}%</div>
+    <div class="l">False negative rate</div>
+    <div class="sub">± {{ (a.detection_rate.sd * 100) | round(2) }} pp</div>
+    <div class="delta up">was {{ (100 - b.detection_rate.mean * 100) | round(2) }}%</div>
+  </div>
 </div>
 
-<h2 class="section-title">Clean test set performance</h2>
-<div class="card">
-  <canvas id="cleanChart" height="90"></canvas>
-</div>
-
-<h2 class="section-title">Stress test — evasion attacks &amp; hard-benign text</h2>
-<div class="card">
-  <canvas id="stressChart" height="90"></canvas>
-  <p style="font-size:13px;color:var(--ink-soft);margin-top:14px;">
-    23 evasion-style attacks + 15 legitimate sentences the models never trained on.
-    <a href="/evasion" style="color:var(--teal);font-weight:600;">See full breakdown →</a>
+<div class="notice">
+  <h3>How to read these numbers</h3>
+  <p>
+    Every stacked metric moved in the right direction, but <strong>none of them clears
+    p &lt; 0.05</strong> on a paired test across the {{ cur.multiseed.seeds | length }} seeds
+    ({{ cur.multiseed.seeds | join(", ") }}) — the best is F1 at p = {{ sig.f1_p }}. The LSTM
+    branch is non-deterministic on CPU, so the stacked ensemble carries that variance.
+  </p>
+  <p>
+    The <strong>Random Forest branch improvements are significant</strong>:
+    FPR p = {{ cur.multiseed.significance.rf.fpr_p }},
+    F1 p = {{ cur.multiseed.significance.rf.f1_p }},
+    AUC p = {{ cur.multiseed.significance.rf.auc_p }}. That is the defensible claim from this
+    cycle: the corpus expansion and the keyword-sequence features measurably improved the RF,
+    and the ensemble improved directionally without statistical confirmation.
   </p>
 </div>
 
-<h2 class="section-title">Dataset split</h2>
+<h2 class="section-title">Before vs after, per branch ({{ cur.multiseed.seeds | length }}-seed means)</h2>
 <div class="grid-2">
-  <div class="card stat"><div class="n">{{ "{:,}".format(stats.train) }}</div><div class="l">Train rows</div></div>
-  <div class="card stat"><div class="n">{{ "{:,}".format(stats.val) }}</div><div class="l">Validation rows</div></div>
+  <div class="card"><canvas id="detChart" height="150"></canvas></div>
+  <div class="card"><canvas id="fprChart" height="150"></canvas></div>
+</div>
+<p class="metric-note">
+    {{ cur.multiseed.epochs }} epochs, {{ cur.multiseed.architecture }} LSTM, identical
+    architecture on both sides — only the corpus and the RF/meta feature set differ.
+    Error bars are not drawn; standard deviations are in the table below.
+</p>
+
+<div class="table-scroll card">
+  <table>
+    <tr><th>Branch</th><th>Metric</th><th>Before</th><th>After</th><th>p</th><th>Verdict</th></tr>
+    {% for branch in ["rf", "lstm", "stacked"] %}
+      {% set bb = cur.multiseed.before[branch] %}
+      {% set aa = cur.multiseed.after[branch] %}
+      {% set ss = cur.multiseed.significance[branch] %}
+      {% for metric, key in [("Detection rate", "detection_rate"), ("FPR", "fpr"), ("F1", "f1"), ("AUC", "auc")] %}
+      <tr>
+        <td>{% if loop.first %}<strong>{{ branch | upper }}</strong>{% endif %}</td>
+        <td>{{ metric }}</td>
+        <td class="mono">{{ bb[key].mean }} ± {{ bb[key].sd }}</td>
+        <td class="mono">{{ aa[key].mean }} ± {{ aa[key].sd }}</td>
+        {% set pkey = key.replace("detection_rate", "detection") ~ "_p" %}
+        <td class="mono">{{ ss[pkey] if pkey in ss else "—" }}</td>
+        <td>
+          {% if pkey in ss and ss[pkey] < 0.05 %}
+            <span class="pill pill-good">significant</span>
+          {% elif pkey in ss %}
+            <span class="pill pill-neutral">not significant</span>
+          {% else %}
+            <span class="pill pill-neutral">no variance</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    {% endfor %}
+  </table>
+  <p class="metric-note">
+    RF detection rate is 1.0 with zero standard deviation on both sides, so no paired test is
+    defined for it. The Random Forest is deterministic under a fixed seed; the LSTM is not.
+  </p>
+</div>
+
+{% set h = cur.holdout.overall.stacked %}
+<h2 class="section-title">Single evaluation run — {{ cur.holdout.n }}-row adversarial hold-out</h2>
+<div class="grid-2">
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">Stacked ensemble confusion matrix</h3>
+    <div class="cm">
+      <div class="cm-hd"></div>
+      <div class="cm-hd">Predicted attack</div>
+      <div class="cm-hd">Predicted benign</div>
+      <div class="cm-hd row">Actually attack</div>
+      <div class="cm-cell hit"><div class="n">{{ h.confusion.tp }}</div><div class="k">true positives</div></div>
+      <div class="cm-cell fn"><div class="n">{{ h.confusion.fn }}</div><div class="k">false negatives</div></div>
+      <div class="cm-hd row">Actually benign</div>
+      <div class="cm-cell miss"><div class="n">{{ h.confusion.fp }}</div><div class="k">false positives</div></div>
+      <div class="cm-cell hit"><div class="n">{{ h.confusion.tn }}</div><div class="k">true negatives</div></div>
+    </div>
+    <p class="metric-note">
+      {{ cur.holdout.attack }} attacks + {{ cur.holdout.benign }} benign, none of which appear
+      anywhere in training. <a href="/holdout" style="color:var(--teal);font-weight:600;">Per-type
+      matrices and every individual error →</a>
+    </p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">Rates on this run</h3>
+    <div class="kv">
+      <div>Recall (detection rate)</div><div class="v">{{ (h.rates.recall * 100) | round(2) }}%</div>
+      <div>False negative rate</div><div class="v">{{ (100 - h.rates.recall * 100) | round(2) }}%</div>
+      <div>Precision</div><div class="v">{{ h.rates.precision }}</div>
+      <div>F1</div><div class="v">{{ h.rates.f1 }}</div>
+      <div>F1 95% CI (bootstrap)</div><div class="v">[{{ cur.holdout.f1_95ci[0] }}, {{ cur.holdout.f1_95ci[1] }}]</div>
+      <div>False positive rate</div><div class="v">{{ (h.rates.fpr * 100) | round(2) }}%</div>
+      <div>AUC-ROC</div><div class="v">{{ h.auc }}</div>
+    </div>
+    <p class="metric-note">
+      This is one training run, not the {{ cur.multiseed.seeds | length }}-seed mean above.
+      Quote the multi-seed figures for any claim about the model; quote this one when pointing
+      at a specific misclassified payload.
+    </p>
+  </div>
+</div>
+
+<h2 class="section-title">What changed in this cycle</h2>
+<div class="grid-3">
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">Corpus</h3>
+    <div class="kv">
+      <div>Total entries</div><div class="v">{{ "{:,}".format(cur.corpus.total) }}</div>
+      <div>Benign</div><div class="v">{{ "{:,}".format(cur.corpus.benign) }}</div>
+      <div>Attack</div><div class="v">{{ "{:,}".format(cur.corpus.attack) }}</div>
+      <div>Train / val / test</div><div class="v">{{ "{:,}".format(cur.corpus.train) }} / {{ "{:,}".format(cur.corpus.val) }} / {{ "{:,}".format(cur.corpus.internal_test) }}</div>
+      <div>Added this cycle</div><div class="v">+{{ cur.corpus.added_this_cycle.benign }} benign / +{{ cur.corpus.added_this_cycle.attack }} attack</div>
+    </div>
+    <p class="metric-note">
+      The additions are balanced by construction: {{ cur.corpus.added_this_cycle.semantic_sqli_aug }}
+      semantic SQLi, {{ cur.corpus.added_this_cycle.semantic_xss_aug }} semantic XSS and
+      {{ cur.corpus.added_this_cycle.past_window_aug }} past-window attacks, matched 1:1 by benign rows.
+      Splits are session-grouped, so no session straddles train and test.
+    </p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">Random Forest features</h3>
+    <div class="kv">
+      <div>Total features</div><div class="v">{{ cur.architecture.rf_features }}</div>
+      <div>Aggregate</div><div class="v">{{ cur.architecture.rf_breakdown.aggregate }}</div>
+      <div>Structural</div><div class="v">{{ cur.architecture.rf_breakdown.structural }}</div>
+      <div>Keyword-sequence (new)</div><div class="v">{{ cur.architecture.rf_breakdown.keyword_sequence }}</div>
+      <div>Char n-gram TF-IDF</div><div class="v">{{ cur.architecture.rf_breakdown.ngram_tfidf }}</div>
+    </div>
+    <p class="metric-note">
+      The five keyword-sequence features are regex flags for intent expressed in prose
+      (&ldquo;drop the users table&rdquo;) rather than in SQL syntax.
+    </p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">Meta-learner</h3>
+    <div class="kv">
+      {% for name, coef in cur.architecture.meta_coefficients.items() %}
+      <div class="mono" style="font-size:12px;">{{ name }}</div><div class="v">{{ coef }}</div>
+      {% endfor %}
+      <div><strong>intercept</strong></div><div class="v">{{ cur.architecture.meta_intercept }}</div>
+    </div>
+    <p class="metric-note">
+      Now {{ cur.architecture.meta_inputs }} inputs, not 2: the semantic flags are fed to the
+      meta-learner directly as well as through the RF. Their fitted weights are small, which is
+      the honest reading — the decision is still dominated by the two branch probabilities.
+      The LSTM architecture is unchanged this cycle.
+    </p>
+  </div>
+</div>
+
+<h2 class="section-title">Integrity checks</h2>
+<div class="card">
+  <div class="table-scroll">
+    <table>
+      <tr><th>Check</th><th>Result</th><th>Reading</th></tr>
+      <tr>
+        <td>Train/eval overlap</td>
+        <td class="mono">{{ cur.integrity.leakage_rows }} / {{ "{:,}".format(cur.integrity.leakage_checked) }} rows</td>
+        <td>No evaluation payload appears in training. A {{ cur.integrity.banned_set_size }}-string
+            exclusion set is enforced when new rows are generated.</td>
+      </tr>
+      <tr>
+        <td>Shuffled-label AUC</td>
+        <td class="mono">{{ cur.integrity.shuffled_label_auc }}</td>
+        <td>Near 0.5 — the pipeline cannot learn from destroyed labels, so it is not memorising an artifact.</td>
+      </tr>
+      <tr>
+        <td>Largest single RF feature importance</td>
+        <td class="mono">{{ cur.integrity.largest_rf_importance }}</td>
+        <td>No single feature dominates, so the model is not riding one giveaway column.</td>
+      </tr>
+      <tr>
+        <td>Reproducibility — Random Forest</td>
+        <td><span class="pill pill-good">deterministic</span></td>
+        <td>Same seed reproduces identical scores.</td>
+      </tr>
+      <tr class="fn-row">
+        <td>Reproducibility — LSTM</td>
+        <td><span class="pill pill-bad">not deterministic</span></td>
+        <td>TensorFlow CPU kernels are non-deterministic; the same seed gives different scores
+            across runs. This is why every headline figure is reported as a
+            {{ cur.multiseed.seeds | length }}-seed mean ± SD rather than a single number.</td>
+      </tr>
+    </table>
+  </div>
 </div>
 
 <script>
-new Chart(document.getElementById('cleanChart'), {
-  type: 'bar',
-  data: {
-    labels: ['RF v1', 'RF v2', 'LSTM', 'Stacked'],
-    datasets: [{
-      label: 'AUC-ROC',
-      data: [{{ clean_test['RF v1'].auc }}, {{ clean_test['RF v2'].auc }}, {{ clean_test['LSTM'].auc }}, {{ clean_test['Stacked'].auc }}],
-      backgroundColor: ['#C0432C','#D9A441','#2A7F7E','#2E7D5B'],
-      borderRadius: 6,
-    }]
-  },
-  options: { scales: { y: { min: 0.99, max: 1.001 } }, plugins: { legend: { display: false } } }
-});
+const seedData = {{ cur.multiseed | tojson }};
+const pct = v => +(v * 100).toFixed(2);
+const branches = ['rf', 'lstm', 'stacked'];
+const branchLabels = ['Random Forest', 'LSTM', 'Stacked'];
 
-new Chart(document.getElementById('stressChart'), {
+// Detection rate and FPR live on very different scales (~96% vs ~2%), so they get
+// their own axes instead of a shared 0-100 chart where the FPR bars vanish.
+new Chart(document.getElementById('detChart'), {
   type: 'bar',
   data: {
-    labels: ['RF v1', 'RF v2', 'LSTM', 'Stacked'],
+    labels: branchLabels,
     datasets: [
-      {
-        label: 'Evasion caught %',
-        data: [
-          {{ (stress_test['RF v1'].evasion_caught / stress_test['RF v1'].evasion_total * 100) | round(1) }},
-          {{ (stress_test['RF v2'].evasion_caught / stress_test['RF v2'].evasion_total * 100) | round(1) }},
-          {{ (stress_test['LSTM'].evasion_caught / stress_test['LSTM'].evasion_total * 100) | round(1) }},
-          {{ (stress_test['Stacked'].evasion_caught / stress_test['Stacked'].evasion_total * 100) | round(1) }}
-        ],
-        backgroundColor: '#2A7F7E', borderRadius: 6,
-      },
-      {
-        label: 'False positive %',
-        data: [
-          {{ (stress_test['RF v1'].false_positives / stress_test['RF v1'].benign_total * 100) | round(1) }},
-          {{ (stress_test['RF v2'].false_positives / stress_test['RF v2'].benign_total * 100) | round(1) }},
-          {{ (stress_test['LSTM'].false_positives / stress_test['LSTM'].benign_total * 100) | round(1) }},
-          {{ (stress_test['Stacked'].false_positives / stress_test['Stacked'].benign_total * 100) | round(1) }}
-        ],
-        backgroundColor: '#C0432C', borderRadius: 6,
-      }
+      { label: 'Before', data: branches.map(b => pct(seedData.before[b].detection_rate.mean)),
+        backgroundColor: '#B8BFC9', borderRadius: 6 },
+      { label: 'After', data: branches.map(b => pct(seedData.after[b].detection_rate.mean)),
+        backgroundColor: '#2E7D5B', borderRadius: 6 }
     ]
   },
-  options: { scales: { y: { min: 0, max: 100 } } }
+  options: { plugins: { title: { display: true, text: 'Detection rate (%) — higher is better' } },
+             scales: { y: { min: 85, max: 101 } } }
+});
+
+new Chart(document.getElementById('fprChart'), {
+  type: 'bar',
+  data: {
+    labels: branchLabels,
+    datasets: [
+      { label: 'Before', data: branches.map(b => pct(seedData.before[b].fpr.mean)),
+        backgroundColor: '#B8BFC9', borderRadius: 6 },
+      { label: 'After', data: branches.map(b => pct(seedData.after[b].fpr.mean)),
+        backgroundColor: '#C0432C', borderRadius: 6 }
+    ]
+  },
+  options: { plugins: { title: { display: true, text: 'False positive rate (%) — lower is better' } },
+             scales: { y: { min: 0, max: 8 } } }
 });
 </script>
+{% endif %}
 {% endblock %}

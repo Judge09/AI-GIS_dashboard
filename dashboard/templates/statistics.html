@@ -7,6 +7,66 @@
   with the committed models.
 </p>
 
+{% if cur %}
+<h2 class="section-title">Current benchmark — {{ cur.holdout.n }}-row adversarial hold-out</h2>
+<div class="grid-3">
+  <div class="card stat">
+    <div class="n">{{ cur.holdout.overall.stacked.rates.f1 }}</div>
+    <div class="l">F1 (stacked)</div>
+    <div class="sub">95% CI [{{ cur.holdout.f1_95ci[0] }} – {{ cur.holdout.f1_95ci[1] }}]</div>
+  </div>
+  <div class="card stat">
+    <div class="n">{{ cur.multiseed.after.stacked.f1.mean }}</div>
+    <div class="l">F1, {{ cur.multiseed.seeds | length }}-seed mean</div>
+    <div class="sub">± {{ cur.multiseed.after.stacked.f1.sd }} SD</div>
+  </div>
+  <div class="card stat">
+    <div class="n">{{ cur.multiseed.significance.stacked.f1_p }}</div>
+    <div class="l">Paired p, before vs after</div>
+    <div class="sub">stacked F1, {{ cur.multiseed.seeds | length }} seeds</div>
+  </div>
+</div>
+<div class="table-scroll card">
+  <table>
+    <tr><th>Comparison</th><th>Metric</th><th>p-value</th><th>Verdict</th></tr>
+    {% for branch, label in [("rf", "Random Forest branch"), ("lstm", "LSTM branch"), ("stacked", "Stacked ensemble")] %}
+      {% for key, mlabel in [("detection_p", "Detection rate"), ("fpr_p", "FPR"), ("f1_p", "F1"), ("auc_p", "AUC")] %}
+        {% set ss = cur.multiseed.significance[branch] %}
+        {% if key in ss %}
+        <tr>
+          <td>{{ label }}, before vs after</td>
+          <td>{{ mlabel }}</td>
+          <td class="mono">{{ ss[key] }}</td>
+          <td>{% if ss[key] < 0.05 %}<span class="pill pill-good">significant</span>
+              {% else %}<span class="pill pill-neutral">not significant</span>{% endif %}</td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    <tr>
+      <td>AI-GIS vs ModSecurity CRS PL2</td>
+      <td>McNemar (paired)</td>
+      <td class="mono">not computed</td>
+      <td><span class="pill pill-warn">data incomplete</span></td>
+    </tr>
+  </table>
+  <p class="metric-note">
+    Paired tests across the {{ cur.multiseed.seeds | length }} training seeds
+    ({{ cur.multiseed.seeds | join(", ") }}), each side retrained from scratch on its own
+    corpus and feature set. The ModSecurity row is deliberately blank: the stored baseline
+    keeps only {{ cur.modsecurity.false_alarms_list_len }} of its
+    {{ cur.modsecurity.false_alarms_stated_fp }} false alarms as individual rows, and a paired
+    test needs per-row agreement. It is reported as not computed rather than estimated.
+  </p>
+</div>
+
+<h2 class="section-title">Earlier analysis on the clean test split (superseded)</h2>
+<p class="page-sub">
+  Retained for continuity. The intervals below are zero-width because that split is saturated —
+  they cannot separate models, which is why the hold-out figures above replaced them.
+</p>
+{% endif %}
+
 {% if not stats %}
   <div class="notice">
     <h3>Not generated yet</h3>

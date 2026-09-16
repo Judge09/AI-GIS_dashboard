@@ -7,6 +7,75 @@
   on the held-out test set.
 </p>
 
+{% if cur %}
+<h2 class="section-title">Current ablation — {{ cur.holdout.n }}-row adversarial hold-out</h2>
+<div class="card">
+  <canvas id="currentAblationChart" height="110"></canvas>
+</div>
+<div class="table-scroll card">
+  <table>
+    <tr><th>Condition</th><th>Recall</th><th>F1</th><th>FPR</th><th>AUC-ROC</th></tr>
+    {% for c in cur.ablation %}
+    <tr {% if loop.last %}style="background:#F1EEE5;font-weight:600;"{% endif %}>
+      <td>{{ c.condition }}</td>
+      <td class="mono">{{ (c.recall * 100) | round(2) }}%</td>
+      <td class="mono">{{ c.f1 }}</td>
+      <td class="mono">{{ (c.fpr * 100) | round(2) }}%</td>
+      <td class="mono">{{ c.auc }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p class="metric-note">
+    All conditions at the default 0.5 threshold on the same untouched hold-out rows. Unlike the
+    clean test split below, this benchmark is not saturated, so the conditions actually separate.
+  </p>
+</div>
+<div class="notice">
+  <h3>The finding this ablation produces</h3>
+  <p>
+    {% set rf_meta = cur.ablation[3] %}
+    <strong>{{ rf_meta.condition }}</strong> collapses to {{ (rf_meta.recall * 100) | round(2) }}%
+    recall while its AUC stays at {{ rf_meta.auc }} — the same Random Forest that reaches
+    {{ (cur.ablation[0].recall * 100) | round(2) }}% recall on its own. The ranking is intact;
+    the fixed threshold is what fails.
+  </p>
+  <p>
+    The cause is visible in the fitted meta-learner: with coefficients
+    RF = {{ cur.architecture.meta_coefficients.rf_proba }},
+    LSTM = {{ cur.architecture.meta_coefficients.lstm_proba }} and intercept
+    {{ cur.architecture.meta_intercept }}, the RF probability must exceed roughly 0.92 to cross
+    0.5 on its own. Any attack the LSTM reads as benign therefore needs a near-certain RF
+    verdict to survive the meta-learner. That is the single mechanism behind every false
+    negative on this benchmark, and the concrete target for the next cycle — an interaction
+    term or a non-linear meta-learner rather than more features.
+  </p>
+</div>
+
+<h2 class="section-title">Earlier ablation on the clean test split (superseded)</h2>
+<p class="page-sub">
+  Retained for continuity. This split is saturated, so most conditions tie at AUC 1.0 and the
+  study separates little.
+</p>
+<script>
+const abl = {{ cur.ablation | tojson }};
+new Chart(document.getElementById('currentAblationChart'), {
+  type: 'bar',
+  data: {
+    labels: abl.map(c => c.condition.length > 34 ? c.condition.slice(0, 32) + '…' : c.condition),
+    datasets: [
+      { label: 'Recall %', data: abl.map(c => +(c.recall * 100).toFixed(2)),
+        backgroundColor: '#2E7D5B', borderRadius: 6 },
+      { label: 'F1 x100', data: abl.map(c => +(c.f1 * 100).toFixed(2)),
+        backgroundColor: '#2A7F7E', borderRadius: 6 },
+      { label: 'AUC x100', data: abl.map(c => +(c.auc * 100).toFixed(2)),
+        backgroundColor: '#D9A441', borderRadius: 6 }
+    ]
+  },
+  options: { scales: { y: { min: 0, max: 105 }, x: { ticks: { font: { size: 9 } } } } }
+});
+</script>
+{% endif %}
+
 {% if not conditions %}
   <div class="notice">
     <h3>Not generated yet</h3>

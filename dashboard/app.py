@@ -6,7 +6,8 @@ Run: python3 app.py
 Then open http://127.0.0.1:5050 in a browser.
 
 Routes:
-  /            dashboard: dataset stats + model performance charts
+  /            dashboard: current model state, hold-out headline, 5-seed study
+  /holdout     396-row adversarial hold-out: per-type confusion matrices, every FN/FP
   /tester      paste any text, get live RF v2 / LSTM / Stacked predictions
   /predict     POST endpoint used by the tester (JSON in, JSON out)
   /evasion     browse the real (23+15) and mock (150+150) evasion results
@@ -58,6 +59,16 @@ with open(BASE / "data" / "results.json") as f:
     RESULTS = json.load(f)
 with open(BASE / "data" / "mock_attacker_results.json") as f:
     MOCK_RESULTS = json.load(f)
+
+# Single source of truth for every number the reporting pages display. Written by
+# the evaluation scripts; nothing on those pages is hardcoded in a template.
+CURRENT_PATH = BASE / "data" / "current_results.json"
+CURRENT = None
+if CURRENT_PATH.exists():
+    with open(CURRENT_PATH, encoding="utf-8") as f:
+        CURRENT = json.load(f)
+else:
+    print("[warn] data/current_results.json missing - reporting pages will show a notice")
 
 # ---------------------------------------------------------------------------
 # Evaluation artifacts produced by scripts/11-14.
@@ -127,15 +138,13 @@ def predict_one(text: str):
 
 @app.route("/")
 def dashboard():
-    dataset_stats = {
-        "total": 36364, "malicious": 18182, "benign": 18182,
-        "sqli": 9091, "xss": 9091,
-        "train": 24819, "val": 5562, "test": 5983,
-    }
-    clean_test = RESULTS["clean_test"]
-    stress_test = RESULTS["stress_test"]
-    return render_template("dashboard.html", stats=dataset_stats,
-                            clean_test=clean_test, stress_test=stress_test, active="dashboard")
+    return render_template("dashboard.html", cur=CURRENT, active="dashboard")
+
+
+@app.route("/holdout")
+def holdout():
+    """The 396-row adversarial hold-out: per-type confusion matrices and every error."""
+    return render_template("holdout.html", cur=CURRENT, active="holdout")
 
 
 @app.route("/tester")
@@ -197,6 +206,7 @@ def baseline():
         modsec=modsec,
         ai_clean=RESULTS["clean_test"]["Stacked"],
         ai_stress=RESULTS["stress_test"]["Stacked"],
+        cur=CURRENT,
         active="baseline",
     )
 
@@ -207,6 +217,7 @@ def statistics():
     return render_template(
         "statistics.html",
         stats=load_report("statistical_significance.json"),
+        cur=CURRENT,
         active="statistics",
     )
 
@@ -224,7 +235,8 @@ def ablation():
              "metrics": v.get("Combined", {})}
             for k, v in raw.items()
         ]
-    return render_template("ablation.html", conditions=conditions, active="ablation")
+    return render_template("ablation.html", conditions=conditions, cur=CURRENT,
+                            active="ablation")
 
 
 @app.route("/llm")

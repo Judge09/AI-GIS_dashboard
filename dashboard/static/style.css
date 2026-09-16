@@ -9,7 +9,7 @@ h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;line-height:1.15;margin:0;
 code, .mono{font-family:'JetBrains Mono',monospace;}
 a{color:inherit;}
 
-.topnav{background:var(--ink);position:sticky;top:0;z-index:10;}
+.topnav{background:var(--ink);position:sticky;top:env(safe-area-inset-top,0px);z-index:10;}
 .topnav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
 .brand{font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:18px;text-decoration:none;}
 .navlinks{display:flex;gap:18px;flex-wrap:wrap;}
@@ -26,6 +26,7 @@ a{color:inherit;}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 @media(max-width:700px){.grid-2,.grid-4{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.grid-2,.grid-4,.grid-3{grid-template-columns:1fr;}}
 
 .stat{text-align:center;padding:20px 12px;}
 .stat .n{font-family:'Fraunces',serif;font-weight:700;font-size:32px;color:var(--ink);}
@@ -108,3 +109,44 @@ button.primary:disabled{opacity:0.5;cursor:not-allowed;}
 
 .metric-note{font-size:13px;color:var(--ink-soft);margin-top:14px;}
 .mono{font-family:'JetBrains Mono',monospace;font-size:13px;}
+
+
+/* ---- Added for the current-results pages (dashboard / hold-out) ---- */
+
+/* 2x2 confusion matrix rendered as a grid rather than a table, so the
+   false-negative cell can be visually isolated. */
+.cm{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;margin:14px 0 6px;}
+.cm-hd{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 4px;}
+.cm-hd.row{justify-content:flex-end;text-align:right;padding-right:10px;}
+.cm-cell{border-radius:12px;padding:16px 10px;text-align:center;border:1px solid var(--line);background:#fff;}
+.cm-cell .n{font-family:'Fraunces',serif;font-weight:700;font-size:28px;line-height:1;}
+.cm-cell .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;}
+.cm-cell.hit{background:#EAF4EE;border-color:#BFDCCB;}
+.cm-cell.hit .n{color:var(--good);}
+.cm-cell.miss{background:#FBEAE5;border-color:#E8BFB4;}
+.cm-cell.miss .n{color:var(--bad);}
+/* False negatives are the number this project is judged on — always outlined. */
+.cm-cell.fn{background:#FBEAE5;border:2px solid var(--bad);}
+.cm-cell.fn .n{color:var(--bad);}
+.cm-cell.zero{background:#EAF4EE;border:2px solid var(--good);}
+.cm-cell.zero .n{color:var(--good);}
+
+tr.fn-row{background:#FBEAE5;}
+tr.fn-row td:first-child{border-left:3px solid var(--bad);}
+
+.delta{font-size:12px;font-weight:700;margin-top:4px;}
+.delta.up{color:var(--good);}
+.delta.down{color:var(--bad);}
+.delta.flat{color:var(--ink-soft);}
+
+.stat .sub{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+
+.kv{display:grid;grid-template-columns:1fr auto;gap:0 16px;font-size:13.5px;}
+.kv > div{padding:8px 0;border-bottom:1px solid var(--line);}
+.kv > div:nth-last-child(-n+2){border-bottom:none;}
+.kv .v{font-family:'JetBrains Mono',monospace;text-align:right;}
+
+.headline{background:var(--ink);color:#fff;border:none;}
+.headline .page-sub, .headline .l, .headline .sub{color:#B8BFC9;}
+.headline .n{color:#fff;}

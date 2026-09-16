@@ -7,6 +7,84 @@
   measured against the stacked ensemble on the same inputs.
 </p>
 
+{% if cur %}
+{% set ms = cur.modsecurity %}
+{% set ai = cur.holdout.overall.stacked %}
+<h2 class="section-title">Current benchmark — the same {{ cur.holdout.n }} adversarial hold-out rows</h2>
+<div class="grid-2">
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">ModSecurity + OWASP CRS PL2</h3>
+    <div class="kv">
+      <div>Recall</div><div class="v">{{ (ms.rates.recall * 100) | round(2) }}%</div>
+      <div>Precision</div><div class="v">{{ ms.rates.precision }}</div>
+      <div>F1</div><div class="v">{{ ms.rates.f1 }}</div>
+      <div>False positive rate</div><div class="v lose">{{ (ms.rates.fpr * 100) | round(2) }}%</div>
+      <div>Confusion (TP/FN/FP/TN)</div><div class="v">{{ ms.confusion.tp }} / {{ ms.confusion.fn }} / {{ ms.confusion.fp }} / {{ ms.confusion.tn }}</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">AI-GIS stacked ensemble</h3>
+    <div class="kv">
+      <div>Recall</div><div class="v">{{ (ai.rates.recall * 100) | round(2) }}%</div>
+      <div>Precision</div><div class="v">{{ ai.rates.precision }}</div>
+      <div>F1</div><div class="v win">{{ ai.rates.f1 }}</div>
+      <div>False positive rate</div><div class="v win">{{ (ai.rates.fpr * 100) | round(2) }}%</div>
+      <div>Confusion (TP/FN/FP/TN)</div><div class="v">{{ ai.confusion.tp }} / {{ ai.confusion.fn }} / {{ ai.confusion.fp }} / {{ ai.confusion.tn }}</div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <canvas id="currentBaselineChart" height="100"></canvas>
+  <p class="metric-note">
+    On this benchmark the rule set catches slightly more attacks
+    ({{ ms.confusion.fn }} misses vs {{ ai.confusion.fn }}) but flags
+    <strong>{{ ms.confusion.fp }} of {{ cur.holdout.benign }}</strong> legitimate inputs as
+    attacks — a {{ (ms.rates.fpr * 100) | round(1) }}% false-positive rate against
+    {{ (ai.rates.fpr * 100) | round(2) }}% for the ensemble. That gap, not raw recall, is the
+    result this project rests on.
+  </p>
+</div>
+<div class="notice">
+  <h3>What is <em>not</em> claimed here</h3>
+  <p>
+    A paired McNemar test between the two systems on these rows is
+    <strong>not computed</strong>. The stored ModSecurity report retains only
+    {{ ms.false_alarms_list_len }} of its {{ ms.false_alarms_stated_fp }} false alarms as
+    individual rows, and the WAF container was not available to regenerate the full per-row
+    record. A paired test needs per-row agreement, so the comparison above is reported as
+    aggregate rates only. Fabricating the missing rows would produce a p-value with no
+    measurement behind it.
+  </p>
+</div>
+<script>
+new Chart(document.getElementById('currentBaselineChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Recall %', 'Precision %', 'F1 x100', 'False positive rate %'],
+    datasets: [
+      { label: 'ModSecurity CRS PL2',
+        data: [{{ (ms.rates.recall * 100) | round(2) }}, {{ (ms.rates.precision * 100) | round(2) }},
+               {{ (ms.rates.f1 * 100) | round(2) }}, {{ (ms.rates.fpr * 100) | round(2) }}],
+        backgroundColor: '#C0432C', borderRadius: 6 },
+      { label: 'AI-GIS stacked',
+        data: [{{ (ai.rates.recall * 100) | round(2) }}, {{ (ai.rates.precision * 100) | round(2) }},
+               {{ (ai.rates.f1 * 100) | round(2) }}, {{ (ai.rates.fpr * 100) | round(2) }}],
+        backgroundColor: '#2E7D5B', borderRadius: 6 }
+    ]
+  },
+  options: { scales: { y: { min: 0, max: 105 } } }
+});
+</script>
+
+{% if modsec %}
+<h2 class="section-title">Earlier benchmark (superseded)</h2>
+<p class="page-sub">
+  Kept for continuity. These figures come from the saturated clean test split, where the
+  ensemble scores perfectly and the comparison carries little information.
+</p>
+{% endif %}
+{% endif %}
+
 {% if not modsec %}
   <div class="notice">
     <h3>Baseline not generated yet</h3>

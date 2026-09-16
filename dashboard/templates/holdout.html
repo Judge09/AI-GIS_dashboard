@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+{% block title %}Hold-out Results — AI-GIS{% endblock %}
+{% block content %}
+<h1 class="page-title">Adversarial hold-out benchmark</h1>
+
+{% if not cur %}
+  <div class="notice">
+    <h3>Current results not generated yet</h3>
+    <p>This page reads <code>data/current_results.json</code>.</p>
+  </div>
+{% else %}
+<p class="page-sub">
+  {{ cur.holdout.n }} rows — {{ cur.holdout.attack }} attacks and {{ cur.holdout.benign }} benign —
+  none of which appear anywhere in the {{ "{:,}".format(cur.corpus.total) }}-row training corpus.
+  Single evaluation run at commit <span class="mono">{{ cur.git_commit }}</span>, decision threshold 0.5.
+</p>
+
+<h2 class="section-title">All three branches on the same rows</h2>
+<div class="table-scroll card">
+  <table>
+    <tr><th>Model</th><th>TP</th><th>FN</th><th>FP</th><th>TN</th>
+        <th>Recall</th><th>FNR</th><th>Precision</th><th>F1</th><th>FPR</th><th>AUC</th></tr>
+    {% for key, label in [("rf", "Random Forest"), ("lstm", "LSTM"), ("stacked", "Stacked ensemble")] %}
+      {% set m = cur.holdout.overall[key] %}
+      <tr {% if key == "stacked" %}style="background:#F1EEE5;"{% endif %}>
+        <td><strong>{{ label }}</strong></td>
+        <td class="mono">{{ m.confusion.tp }}</td>
+        <td class="mono" style="color:var(--bad);font-weight:700;">{{ m.confusion.fn }}</td>
+        <td class="mono">{{ m.confusion.fp }}</td>
+        <td class="mono">{{ m.confusion.tn }}</td>
+        <td class="mono">{{ (m.rates.recall * 100) | round(2) }}%</td>
+        <td class="mono" style="color:var(--bad);">{{ (100 - m.rates.recall * 100) | round(2) }}%</td>
+        <td class="mono">{{ m.rates.precision }}</td>
+        <td class="mono">{{ m.rates.f1 }}</td>
+        <td class="mono">{{ (m.rates.fpr * 100) | round(2) }}%</td>
+        <td class="mono">{{ m.auc }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <p class="metric-note">
+    The Random Forest misses nothing on this set but raises {{ cur.holdout.overall.rf.confusion.fp }}
+    false alarms; the LSTM misses {{ cur.holdout.overall.lstm.confusion.fn }}. The stacked
+    ensemble sits between them — it trades
+    {{ cur.holdout.overall.stacked.confusion.fn }} false negatives for a better precision/recall
+    balance than either branch alone. Which of those trades is right is a deployment decision,
+    not a modelling one.
+  </p>
+</div>
+
+<h2 class="section-title">SQLi vs XSS — stacked ensemble, false negatives highlighted</h2>
+{% set sq = cur.holdout.per_type.SQLi %}
+{% set xs = cur.holdout.per_type.XSS %}
+<div class="grid-2">
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">SQL injection — {{ sq.n }} attacks</h3>
+    <div class="cm">
+      <div class="cm-hd"></div>
+      <div class="cm-hd">Predicted attack</div>
+      <div class="cm-hd">Predicted benign</div>
+      <div class="cm-hd row">Actually SQLi</div>
+      <div class="cm-cell hit"><div class="n">{{ sq.tp }}</div><div class="k">caught</div></div>
+      <div class="cm-cell fn"><div class="n">{{ sq.fn }}</div><div class="k">missed (FN)</div></div>
+      <div class="cm-hd row">Actually benign</div>
+      <div class="cm-cell miss"><div class="n">{{ sq.fp_shared_benign }}</div><div class="k">false alarms</div></div>
+      <div class="cm-cell hit"><div class="n">{{ sq.tn_shared_benign }}</div><div class="k">cleared</div></div>
+    </div>
+    <div class="kv" style="margin-top:12px;">
+      <div>Recall</div><div class="v">{{ (sq.recall * 100) | round(2) }}%</div>
+      <div><strong>False negative rate</strong></div><div class="v" style="color:var(--bad);font-weight:700;">{{ (100 - sq.recall * 100) | round(2) }}%</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;font-size:15px;">Cross-site scripting — {{ xs.n }} attacks</h3>
+    <div class="cm">
+      <div class="cm-hd"></div>
+      <div class="cm-hd">Predicted attack</div>
+      <div class="cm-hd">Predicted benign</div>
+      <div class="cm-hd row">Actually XSS</div>
+      <div class="cm-cell hit"><div class="n">{{ xs.tp }}</div><div class="k">caught</div></div>
+      <div class="cm-cell zero"><div class="n">{{ xs.fn }}</div><div class="k">missed (FN)</div></div>
+      <div class="cm-hd row">Actually benign</div>
+      <div class="cm-cell miss"><div class="n">{{ xs.fp_shared_benign }}</div><div class="k">false alarms</div></div>
+      <div class="cm-cell hit"><div class="n">{{ xs.tn_shared_benign }}</div><div class="k">cleared</div></div>
+    </div>
+    <div class="kv" style="margin-top:12px;">
+      <div>Recall</div><div class="v">{{ (xs.recall * 100) | round(2) }}%</div>
+      <div><strong>False negative rate</strong></div><div class="v" style="color:var(--good);font-weight:700;">{{ (100 - xs.recall * 100) | round(2) }}%</div>
+    </div>
+  </div>
+</div>
+<div class="notice">
+  <h3>Why the benign row is identical in both matrices</h3>
+  <p>
+    The {{ cur.holdout.benign }} benign rows are a single shared pool, not split by attack type —
+    a legitimate sentence is not &ldquo;a benign SQLi&rdquo;. The
+    {{ sq.fp_shared_benign }} false alarms and {{ sq.tn_shared_benign }} cleared rows therefore
+    appear in both panels and must not be added together. Only the attack row differs by type.
+  </p>
+</div>
+
+<h2 class="section-title">Recall by attack type</h2>
+<div class="card">
+  <canvas id="typeChart" height="90"></canvas>
+  <div class="table-scroll" style="margin-top:18px;">
+    <table>
+      <tr><th>Attack type</th><th>n</th><th>Caught</th><th>Missed (FN)</th><th>Recall</th><th>FNR</th></tr>
+      {% for t, v in cur.holdout.per_type.items() %}
+      <tr {% if v.fn > 0 %}class="fn-row"{% endif %}>
+        <td><strong>{{ t }}</strong></td>
+        <td class="mono">{{ v.n }}</td>
+        <td class="mono">{{ v.tp }}</td>
+        <td class="mono" style="font-weight:700;{% if v.fn > 0 %}color:var(--bad);{% else %}color:var(--good);{% endif %}">{{ v.fn }}</td>
+        <td class="mono">{{ (v.recall * 100) | round(2) }}%</td>
+        <td class="mono">{{ (100 - v.recall * 100) | round(2) }}%</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <p class="metric-note">
+    Every false negative on this benchmark is SQLi. The <em>nl_intent</em> rows are
+    natural-language attack intent with no SQL or HTML syntax at all; the keyword-sequence
+    features added this cycle target exactly that category.
+  </p>
+</div>
+
+<h2 class="section-title">Every false negative, individually</h2>
+<div class="table-scroll card">
+  <table>
+    <tr><th>#</th><th>Payload</th><th>Type</th><th>RF</th><th>LSTM</th><th>Stacked</th></tr>
+    {% for fn in cur.holdout.false_negatives %}
+    <tr class="fn-row">
+      <td class="mono">{{ loop.index }}</td>
+      <td class="mono">{{ fn.text }}</td>
+      <td>{{ fn.type }}</td>
+      <td class="mono">{{ fn.rf_proba }}</td>
+      <td class="mono">{{ fn.lstm_proba }}</td>
+      <td class="mono" style="color:var(--bad);font-weight:700;">{{ fn.stacked_proba }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p class="metric-note">
+    All {{ cur.holdout.false_negatives | length }} misses follow one pattern: the Random Forest
+    flags the payload (0.60–0.92) but the LSTM reads it as benign (≤ 0.11), and the meta-learner
+    cannot recover the attack on the RF signal alone. With fitted coefficients
+    RF = {{ cur.architecture.meta_coefficients.rf_proba }},
+    LSTM = {{ cur.architecture.meta_coefficients.lstm_proba }} and intercept
+    {{ cur.architecture.meta_intercept }}, an RF probability of roughly 0.92 is needed to cross
+    0.5 when the LSTM reads near zero. Row 1 lands at
+    {{ cur.holdout.false_negatives[0].stacked_proba }} — it misses the threshold by
+    {{ (0.5 - cur.holdout.false_negatives[0].stacked_proba) | round(4) }}.
+  </p>
+</div>
+
+<h2 class="section-title">Every false positive, individually</h2>
+<div class="table-scroll card">
+  <table>
+    <tr><th>#</th><th>Legitimate text flagged as an attack</th><th>RF</th><th>LSTM</th><th>Stacked</th></tr>
+    {% for fp in cur.holdout.false_positives %}
+    <tr>
+      <td class="mono">{{ loop.index }}</td>
+      <td class="mono">{{ fp.text }}</td>
+      <td class="mono">{{ fp.rf_proba }}</td>
+      <td class="mono">{{ fp.lstm_proba }}</td>
+      <td class="mono">{{ fp.stacked_proba }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p class="metric-note">
+    The mirror image of the false negatives: {{ cur.holdout.false_positives | length - 1 }} of
+    {{ cur.holdout.false_positives | length }} are source-code snippets where the RF is
+    unconvinced (0.17–0.48) but the LSTM is near-certain (≥ 0.95). Code that contains a quoted
+    string and a comparison operator looks, at the character level, like an injection attempt.
+  </p>
+</div>
+
+<h2 class="section-title">Red-team probes</h2>
+<div class="table-scroll card">
+  <table>
+    <tr><th>Probe</th><th>Before this cycle</th><th>After</th></tr>
+    <tr>
+      <td>Tier-1 polymorphic (syntactic mutation)</td>
+      <td class="mono">—</td>
+      <td class="mono">{{ cur.redteam.polymorphic_tier1.caught }} / {{ cur.redteam.polymorphic_tier1.total }}</td>
+    </tr>
+    {% for k, label in [("semantic_sqli", "Aggressive semantic SQLi"), ("semantic_xss", "Aggressive semantic XSS"), ("past_window", "Past-200-character window"), ("overall", "Aggressive probe, overall")] %}
+    <tr {% if k == "overall" %}style="background:#F1EEE5;font-weight:600;"{% endif %}>
+      <td>{{ label }}</td>
+      <td class="mono">{{ cur.redteam.aggressive_baseline[k][0] }} / {{ cur.redteam.aggressive_baseline[k][1] }}</td>
+      <td class="mono">{{ cur.redteam.aggressive[k][0] }} / {{ cur.redteam.aggressive[k][1] }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td>Hand-written evasion probe — caught</td>
+      <td class="mono">{{ cur.redteam.claude_probe_baseline.caught }} / {{ cur.redteam.claude_probe_baseline.total }}</td>
+      <td class="mono">{{ cur.redteam.claude_probe.caught }} / {{ cur.redteam.claude_probe.total }}</td>
+    </tr>
+    <tr>
+      <td>Hand-written evasion probe — false alarms</td>
+      <td class="mono">{{ cur.redteam.claude_probe_baseline.false_alarms }} / {{ cur.redteam.claude_probe_baseline.benign_total }}</td>
+      <td class="mono">{{ cur.redteam.claude_probe.false_alarms }} / {{ cur.redteam.claude_probe.benign_total }}</td>
+    </tr>
+  </table>
+  <p class="metric-note">
+    Syntactic polymorphism is close to solved
+    ({{ cur.redteam.polymorphic_tier1.caught }} / {{ cur.redteam.polymorphic_tier1.total }}).
+    Semantic polymorphism — attack intent written as ordinary English — is not: the aggressive
+    probe still gets {{ cur.redteam.aggressive.overall[1] - cur.redteam.aggressive.overall[0] }}
+    of {{ cur.redteam.aggressive.overall[1] }} payloads past the ensemble, though that is an
+    improvement on {{ cur.redteam.aggressive_baseline.overall[1] - cur.redteam.aggressive_baseline.overall[0] }}
+    before this cycle. These probes are small, adversarially authored sets designed to fail the
+    model; they are a stress indicator, not a performance estimate.
+  </p>
+</div>
+
+<script>
+const perType = {{ cur.holdout.per_type | tojson }};
+const labels = Object.keys(perType);
+new Chart(document.getElementById('typeChart'), {
+  type: 'bar',
+  data: {
+    labels: labels,
+    datasets: [
+      { label: 'Recall %',
+        data: labels.map(k => +(perType[k].recall * 100).toFixed(2)),
+        backgroundColor: '#2E7D5B', borderRadius: 6 },
+      { label: 'False negatives (count)',
+        data: labels.map(k => perType[k].fn),
+        backgroundColor: '#C0432C', borderRadius: 6, yAxisID: 'y2' }
+    ]
+  },
+  options: {
+    scales: {
+      y: { min: 90, max: 101, title: { display: true, text: 'recall %' } },
+      y2: { position: 'right', min: 0, max: 5, grid: { drawOnChartArea: false },
+            title: { display: true, text: 'false negatives' } }
+    }
+  }
+});
+</script>
+{% endif %}
+{% endblock %}

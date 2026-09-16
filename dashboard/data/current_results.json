@@ -1,0 +1,649 @@
+{
+  "generated": "2026-09-15",
+  "model_version": "aug2 + keyword-sequence RF features + 7-input meta-learner",
+  "git_commit": "8c61343",
+  "corpus": {
+    "total": 36884,
+    "benign": 18555,
+    "attack": 18329,
+    "train": 25478,
+    "val": 5463,
+    "internal_test": 5943,
+    "added_this_cycle": {
+      "benign": 145,
+      "attack": 145,
+      "semantic_sqli_aug": 49,
+      "semantic_xss_aug": 48,
+      "past_window_aug": 48
+    }
+  },
+  "architecture": {
+    "rf_features": 324,
+    "rf_breakdown": {
+      "aggregate": 11,
+      "structural": 8,
+      "keyword_sequence": 5,
+      "ngram_tfidf": 300
+    },
+    "lstm": "Embedding(128,32) mask_zero -> LSTM(64) -> Dropout(.3) -> LSTM(32) -> Dropout(.3) -> Dense(1)",
+    "lstm_changed": false,
+    "meta_inputs": 7,
+    "meta_input_names": [
+      "rf_proba",
+      "lstm_proba",
+      "has_or_near_equals",
+      "has_or_comparison_keyword",
+      "has_auth_bypass_phrase",
+      "has_keyword_sequence_sqli",
+      "has_where_true_phrase"
+    ],
+    "meta_coefficients": {
+      "rf_proba": 6.5509,
+      "lstm_proba": 5.7625,
+      "has_or_near_equals": 0.0291,
+      "has_or_comparison_keyword": 0.0,
+      "has_auth_bypass_phrase": 0.2003,
+      "has_keyword_sequence_sqli": 0.4267,
+      "has_where_true_phrase": 0.0146
+    },
+    "meta_intercept": -6.0297
+  },
+  "holdout": {
+    "n": 396,
+    "attack": 198,
+    "benign": 198,
+    "types": {
+      "SQLi": 102,
+      "XSS": 77,
+      "nl_intent": 4,
+      "other": 15
+    },
+    "overall": {
+      "rf": {
+        "confusion": {
+          "tp": 198,
+          "fp": 6,
+          "tn": 192,
+          "fn": 0
+        },
+        "rates": {
+          "recall": 1.0,
+          "precision": 0.9706,
+          "f1": 0.9851,
+          "fpr": 0.0303
+        },
+        "auc": 0.9998
+      },
+      "lstm": {
+        "confusion": {
+          "tp": 185,
+          "fp": 8,
+          "tn": 190,
+          "fn": 13
+        },
+        "rates": {
+          "recall": 0.9343,
+          "precision": 0.9585,
+          "f1": 0.9463,
+          "fpr": 0.0404
+        },
+        "auc": 0.9812
+      },
+      "stacked": {
+        "confusion": {
+          "tp": 195,
+          "fp": 7,
+          "tn": 191,
+          "fn": 3
+        },
+        "rates": {
+          "recall": 0.9848,
+          "precision": 0.9653,
+          "f1": 0.975,
+          "fpr": 0.0354
+        },
+        "auc": 0.998
+      }
+    },
+    "f1_95ci": [
+      0.9588,
+      0.9896
+    ],
+    "per_type": {
+      "SQLi": {
+        "n": 102,
+        "tp": 99,
+        "fn": 3,
+        "fp_shared_benign": 7,
+        "tn_shared_benign": 191,
+        "recall": 0.9706
+      },
+      "XSS": {
+        "n": 77,
+        "tp": 77,
+        "fn": 0,
+        "fp_shared_benign": 7,
+        "tn_shared_benign": 191,
+        "recall": 1.0
+      },
+      "nl_intent": {
+        "n": 4,
+        "tp": 4,
+        "fn": 0,
+        "fp_shared_benign": 7,
+        "tn_shared_benign": 191,
+        "recall": 1.0
+      },
+      "other": {
+        "n": 15,
+        "tp": 15,
+        "fn": 0,
+        "fp_shared_benign": 7,
+        "tn_shared_benign": 191,
+        "recall": 1.0
+      }
+    },
+    "false_negatives": [
+      {
+        "text": "/*/**/String.fromCharCode(97,108,101,114,116,40,49,41)",
+        "type": "SQLi",
+        "stacked_proba": 0.4992,
+        "rf_proba": 0.9199,
+        "lstm_proba": 0.0001
+      },
+      {
+        "text": "admin'); drop table users('",
+        "type": "SQLi",
+        "stacked_proba": 0.1612,
+        "rf_proba": 0.6001,
+        "lstm_proba": 0.078
+      },
+      {
+        "text": "drop the users table from the database",
+        "type": "SQLi",
+        "stacked_proba": 0.4462,
+        "rf_proba": 0.7948,
+        "lstm_proba": 0.1053
+      }
+    ],
+    "false_positives": [
+      {
+        "text": "if (status == 200) { log.info('ok'); }",
+        "stacked_proba": 0.8019,
+        "rf_proba": 0.2604,
+        "lstm_proba": 0.993
+      },
+      {
+        "text": "Product SKU# ABC-123; Category: Electronics & Gadgets (in stock).",
+        "stacked_proba": 0.6395,
+        "rf_proba": 0.5053,
+        "lstm_proba": 0.5715
+      },
+      {
+        "text": "if (user.role == 'admin') { log.info('ok'); }",
+        "stacked_proba": 0.8139,
+        "rf_proba": 0.2676,
+        "lstm_proba": 0.9982
+      },
+      {
+        "text": "if (user.role == 'admin') { queue.push(item); }",
+        "stacked_proba": 0.848,
+        "rf_proba": 0.3409,
+        "lstm_proba": 0.9571
+      },
+      {
+        "text": "if (status == 200) { grantAccess(); }",
+        "stacked_proba": 0.6537,
+        "rf_proba": 0.1701,
+        "lstm_proba": 0.9632
+      },
+      {
+        "text": "if (user.role == 'admin') { throw new Error('x'); }",
+        "stacked_proba": 0.9454,
+        "rf_proba": 0.4838,
+        "lstm_proba": 0.9911
+      },
+      {
+        "text": "if (user.role == 'admin') { grantAccess(); }",
+        "stacked_proba": 0.7768,
+        "rf_proba": 0.2339,
+        "lstm_proba": 0.9969
+      }
+    ]
+  },
+  "modsecurity": {
+    "confusion": {
+      "tp": 189,
+      "fp": 139,
+      "tn": 59,
+      "fn": 9
+    },
+    "rates": {
+      "recall": 0.9545,
+      "precision": 0.5762,
+      "f1": 0.7186,
+      "fpr": 0.702
+    },
+    "false_alarms_list_is_sample_only": true,
+    "false_alarms_list_len": 25,
+    "false_alarms_stated_fp": 139,
+    "paired_mcnemar_vs_aigis": "NOT COMPUTED -- full per-row ModSecurity false-alarm data unavailable (see note above); reporting aggregate comparison only"
+  },
+  "ablation": [
+    {
+      "condition": "RF alone",
+      "f1": 0.9851,
+      "fpr": 0.0303,
+      "recall": 1.0,
+      "auc": 0.9998
+    },
+    {
+      "condition": "LSTM alone",
+      "f1": 0.9463,
+      "fpr": 0.0404,
+      "recall": 0.9343,
+      "auc": 0.9812
+    },
+    {
+      "condition": "Logistic Regression on engineered features (no RF/LSTM)",
+      "f1": 0.9474,
+      "fpr": 0.0606,
+      "recall": 0.9545,
+      "auc": 0.9735
+    },
+    {
+      "condition": "RF + meta-learner (LSTM zeroed)",
+      "f1": 0.7815,
+      "fpr": 0.0,
+      "recall": 0.6414,
+      "auc": 0.9998
+    },
+    {
+      "condition": "LSTM + meta-learner (RF zeroed)",
+      "f1": 0.0962,
+      "fpr": 0.0,
+      "recall": 0.0505,
+      "auc": 0.9818
+    },
+    {
+      "condition": "Full RF + LSTM + meta-learner (shipped)",
+      "f1": 0.975,
+      "fpr": 0.0354,
+      "recall": 0.9848,
+      "auc": 0.998
+    }
+  ],
+  "integrity": {
+    "largest_rf_importance": 0.1002,
+    "shuffled_label_auc": 0.5503,
+    "leakage_rows": 0,
+    "leakage_checked": 36884,
+    "banned_set_size": 556,
+    "rf_deterministic": true,
+    "lstm_deterministic": false
+  },
+  "multiseed": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "epochs": 6,
+    "architecture": "2-layer",
+    "before": {
+      "rf": {
+        "detection_rate": {
+          "mean": 1.0,
+          "sd": 0.0,
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "fpr": {
+          "mean": 0.0697,
+          "sd": 0.0066,
+          "per_seed": [
+            0.0606,
+            0.0758,
+            0.0657,
+            0.0758,
+            0.0707
+          ]
+        },
+        "f1": {
+          "mean": 0.9663,
+          "sd": 0.0031,
+          "per_seed": [
+            0.9706,
+            0.9635,
+            0.9682,
+            0.9635,
+            0.9659
+          ]
+        },
+        "auc": {
+          "mean": 0.9994,
+          "sd": 0.0001,
+          "per_seed": [
+            0.9994,
+            0.9992,
+            0.9994,
+            0.9995,
+            0.9994
+          ]
+        }
+      },
+      "lstm": {
+        "detection_rate": {
+          "mean": 0.9283,
+          "sd": 0.0023,
+          "per_seed": [
+            0.9293,
+            0.9293,
+            0.9293,
+            0.9293,
+            0.9242
+          ]
+        },
+        "fpr": {
+          "mean": 0.0414,
+          "sd": 0.0377,
+          "per_seed": [
+            0.0202,
+            0.1061,
+            0.0101,
+            0.0354,
+            0.0354
+          ]
+        },
+        "f1": {
+          "mean": 0.9428,
+          "sd": 0.0176,
+          "per_seed": [
+            0.9534,
+            0.9132,
+            0.9583,
+            0.946,
+            0.9433
+          ]
+        },
+        "auc": {
+          "mean": 0.9782,
+          "sd": 0.0089,
+          "per_seed": [
+            0.9817,
+            0.9627,
+            0.9792,
+            0.9852,
+            0.982
+          ]
+        }
+      },
+      "stacked": {
+        "detection_rate": {
+          "mean": 0.9616,
+          "sd": 0.0126,
+          "per_seed": [
+            0.9495,
+            0.9596,
+            0.9495,
+            0.9747,
+            0.9747
+          ]
+        },
+        "fpr": {
+          "mean": 0.0364,
+          "sd": 0.0271,
+          "per_seed": [
+            0.0202,
+            0.0808,
+            0.0101,
+            0.0354,
+            0.0354
+          ]
+        },
+        "f1": {
+          "mean": 0.9627,
+          "sd": 0.0126,
+          "per_seed": [
+            0.9641,
+            0.9406,
+            0.9691,
+            0.9698,
+            0.9698
+          ]
+        },
+        "auc": {
+          "mean": 0.9971,
+          "sd": 0.0023,
+          "per_seed": [
+            0.9986,
+            0.9931,
+            0.9989,
+            0.9977,
+            0.9973
+          ]
+        }
+      }
+    },
+    "after": {
+      "rf": {
+        "detection_rate": {
+          "mean": 1.0,
+          "sd": 0.0,
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "fpr": {
+          "mean": 0.0445,
+          "sd": 0.011,
+          "per_seed": [
+            0.0303,
+            0.0556,
+            0.0505,
+            0.0505,
+            0.0354
+          ]
+        },
+        "f1": {
+          "mean": 0.9783,
+          "sd": 0.0052,
+          "per_seed": [
+            0.9851,
+            0.973,
+            0.9754,
+            0.9754,
+            0.9826
+          ]
+        },
+        "auc": {
+          "mean": 0.9997,
+          "sd": 0.0001,
+          "per_seed": [
+            0.9998,
+            0.9996,
+            0.9995,
+            0.9998,
+            0.9997
+          ]
+        }
+      },
+      "lstm": {
+        "detection_rate": {
+          "mean": 0.9182,
+          "sd": 0.028,
+          "per_seed": [
+            0.8737,
+            0.9444,
+            0.9141,
+            0.9394,
+            0.9192
+          ]
+        },
+        "fpr": {
+          "mean": 0.0212,
+          "sd": 0.0097,
+          "per_seed": [
+            0.0202,
+            0.0253,
+            0.0101,
+            0.0354,
+            0.0152
+          ]
+        },
+        "f1": {
+          "mean": 0.9467,
+          "sd": 0.0139,
+          "per_seed": [
+            0.9227,
+            0.959,
+            0.9501,
+            0.9514,
+            0.9504
+          ]
+        },
+        "auc": {
+          "mean": 0.9783,
+          "sd": 0.0109,
+          "per_seed": [
+            0.9596,
+            0.9861,
+            0.9784,
+            0.9836,
+            0.984
+          ]
+        }
+      },
+      "stacked": {
+        "detection_rate": {
+          "mean": 0.9697,
+          "sd": 0.0101,
+          "per_seed": [
+            0.9596,
+            0.9747,
+            0.9646,
+            0.9848,
+            0.9646
+          ]
+        },
+        "fpr": {
+          "mean": 0.0162,
+          "sd": 0.0042,
+          "per_seed": [
+            0.0202,
+            0.0152,
+            0.0101,
+            0.0202,
+            0.0152
+          ]
+        },
+        "f1": {
+          "mean": 0.9766,
+          "sd": 0.005,
+          "per_seed": [
+            0.9694,
+            0.9797,
+            0.977,
+            0.9824,
+            0.9745
+          ]
+        },
+        "auc": {
+          "mean": 0.9989,
+          "sd": 0.0003,
+          "per_seed": [
+            0.9987,
+            0.9994,
+            0.999,
+            0.9989,
+            0.9986
+          ]
+        }
+      }
+    },
+    "significance": {
+      "stacked": {
+        "detection_p": 0.16,
+        "fpr_p": 0.169,
+        "f1_p": 0.097,
+        "auc_p": 0.194
+      },
+      "rf": {
+        "fpr_p": 0.0021,
+        "f1_p": 0.0021,
+        "auc_p": 0.0054
+      },
+      "lstm": {
+        "detection_p": 0.466,
+        "fpr_p": 0.266,
+        "f1_p": 0.771,
+        "auc_p": 0.981
+      }
+    }
+  },
+  "redteam": {
+    "polymorphic_tier1": {
+      "caught": 399,
+      "total": 400
+    },
+    "aggressive": {
+      "semantic_sqli": [
+        2,
+        10
+      ],
+      "semantic_xss": [
+        5,
+        8
+      ],
+      "past_window": [
+        3,
+        4
+      ],
+      "overall": [
+        10,
+        22
+      ]
+    },
+    "aggressive_baseline": {
+      "semantic_sqli": [
+        0,
+        10
+      ],
+      "semantic_xss": [
+        2,
+        8
+      ],
+      "past_window": [
+        0,
+        4
+      ],
+      "overall": [
+        2,
+        22
+      ]
+    },
+    "claude_probe": {
+      "caught": 10,
+      "total": 15,
+      "false_alarms": 2,
+      "benign_total": 8
+    },
+    "claude_probe_baseline": {
+      "caught": 8,
+      "total": 15,
+      "false_alarms": 1,
+      "benign_total": 8
+    }
+  }
+}
